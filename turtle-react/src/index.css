@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+
+@layer base{
+
+h1 {
+  @apply text-neutral-100 text-4xl font-[Times]
+}
+h2 {
+  @apply text-neutral-100 text-3xl font-[Times]
+}
+h3 {
+  @apply text-neutral-100 text-2xl font-[Times]
+}
+h4 {
+  @apply text-neutral-100 text-xl font-[Times]
+}
+
+
+}
