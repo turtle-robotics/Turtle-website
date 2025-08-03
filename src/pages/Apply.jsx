@@ -45,7 +45,7 @@ const Apply = () => {
           </h1>
           
           <p className="hero-subtitle text-xl md:text-2xl font-light tracking-wide text-gray-600 dark:text-gray-400 mb-12 max-w-3xl mx-auto">
-            Join our team of robotics innovators and help shape the future of automation technology.
+            Fill out this form to join Hatchlings or Advanced Project teams at Turtle Robotics.
           </p>
         </div>
       </section>
@@ -54,24 +54,24 @@ const Apply = () => {
       <section className="py-24 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-20 text-gray-800 dark:text-gray-200">
-            JOIN OUR <span className="text-accent">TEAM</span>
+            JOIN TURTLE <span className="text-accent">ROBOTICS</span>
           </h2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             <div className="glass-card p-10 rounded-2xl text-center hover:scale-105 transition-all duration-300">
               <div className="text-5xl mb-6">📝</div>
               <h3 className="text-xl font-light mb-4 text-gray-800 dark:text-gray-200">Submit Application</h3>
-              <p className="text-gray-600 dark:text-gray-400 font-light leading-relaxed">Complete our online application form with your background, skills, and interests in robotics.</p>
+              <p className="text-gray-600 dark:text-gray-400 font-light leading-relaxed">Complete our online application form to join Hatchlings or Advanced Project teams.</p>
             </div>
             <div className="glass-card p-10 rounded-2xl text-center hover:scale-105 transition-all duration-300">
               <div className="text-5xl mb-6">🤝</div>
               <h3 className="text-xl font-light mb-4 text-gray-800 dark:text-gray-200">Interview Process</h3>
-              <p className="text-gray-600 dark:text-gray-400 font-light leading-relaxed">Meet with our team leaders to discuss your goals and how you can contribute to our projects.</p>
+              <p className="text-gray-600 dark:text-gray-400 font-light leading-relaxed">Meet with our team leaders to discuss your goals and project preferences.</p>
             </div>
             <div className="glass-card p-10 rounded-2xl text-center hover:scale-105 transition-all duration-300">
               <div className="text-5xl mb-6">🚀</div>
               <h3 className="text-xl font-light mb-4 text-gray-800 dark:text-gray-200">Start Contributing</h3>
-              <p className="text-gray-600 dark:text-gray-400 font-light leading-relaxed">Begin working on exciting robotics projects and develop your skills with our team.</p>
+              <p className="text-gray-600 dark:text-gray-400 font-light leading-relaxed">Begin working on exciting robotics projects with Turtle Robotics.</p>
             </div>
           </div>
         </div>
@@ -172,7 +172,7 @@ const Apply = () => {
           </h2>
           
           <p className="text-xl font-light text-gray-600 dark:text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed">
-            Take the first step towards joining our robotics research team. We're excited to see what you can contribute to our innovative projects.
+            Fill out this form to join Hatchlings or Advanced Project teams. For any general questions, email us at turtle.robotics@tamu.edu
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
