@@ -89,7 +89,7 @@ src/
    ```
 
 4. **Open your browser**
-   Navigate to `http://localhost:3000`
+   The browser should open automatically, or navigate to `http://localhost:5173/` (or the port shown in terminal)
 
 ### Build for Production
 

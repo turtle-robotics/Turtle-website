@@ -95,7 +95,26 @@ const Hatchling = () => {
           </h2>
           
           <div style={{ height: '900px', position: 'relative' }}>    
-            <CircularGallery bend={3} textColor="#ffffff" borderRadius={0.05} scrollEase={0.02}/>
+            <CircularGallery 
+              items={[
+                { image: 'https://picsum.photos/seed/1/800/600', text: 'Pic 1' },
+                { image: 'https://picsum.photos/seed/2/800/600', text: 'Pic 2' },
+                { image: 'https://picsum.photos/seed/3/800/600', text: 'Pic 3' },
+                { image: 'https://picsum.photos/seed/4/800/600', text: 'Pic 4' },
+                { image: 'https://picsum.photos/seed/5/800/600', text: 'Pic 5' },
+                { image: 'https://picsum.photos/seed/6/800/600', text: 'Pic 6' },
+                { image: 'https://picsum.photos/seed/7/800/600', text: 'Pic 7' },
+                { image: 'https://picsum.photos/seed/8/800/600', text: 'Pic 8' },
+                { image: 'https://picsum.photos/seed/9/800/600', text: 'Pic 9' },
+                { image: 'https://picsum.photos/seed/10/800/600', text: 'Pic 10' },
+                { image: 'https://picsum.photos/seed/11/800/600', text: 'Pic 11' },
+                { image: 'https://picsum.photos/seed/12/800/600', text: 'Pic 12' }
+              ]}
+              bend={3} 
+              textColor="#ffffff" 
+              borderRadius={0.05} 
+              scrollEase={0.02}
+            />
           </div>
         </div>
       </section>
@@ -133,61 +152,11 @@ const Hatchling = () => {
         </div>
       </section>
 
-      {/* Program Overview */}
-      <section className="py-16 px-4 bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-12 text-gray-800 dark:text-gray-200">
-            JOIN <span className="text-accent">HATCHLING</span>
-          </h2>
-          
-          <div className="grid md:grid-cols-2 gap-12">
-            <div className="glass-card p-10 rounded-2xl">
-              <h3 className="text-2xl font-light text-gray-800 dark:text-gray-200 mb-6">Program Overview</h3>
-              <p className="text-gray-600 dark:text-gray-400 font-light leading-relaxed mb-6">
-                The Hatchling Program is our comprehensive leadership development initiative designed to nurture 
-                the next generation of robotics innovators. Through hands-on project work, mentorship, and 
-                structured learning experiences, participants develop both technical skills and leadership abilities.
-              </p>
-              <p className="text-gray-600 dark:text-gray-400 font-light leading-relaxed">
-                Our program emphasizes collaborative learning, real-world problem solving, and the development 
-                of communication and teamwork skills essential for success in robotics and engineering.
-              </p>
-            </div>
-            
-            <div className="glass-card p-10 rounded-2xl">
-              <h3 className="text-2xl font-light text-gray-800 dark:text-gray-200 mb-6">What You'll Gain</h3>
-              <ul className="space-y-4">
-                <li className="flex items-start">
-                  <span className="text-accent mr-3">•</span>
-                  <span className="text-gray-600 dark:text-gray-400 font-light">Hands-on experience with cutting-edge robotics technology</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-accent mr-3">•</span>
-                  <span className="text-gray-600 dark:text-gray-400 font-light">Mentorship from experienced robotics researchers</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-accent mr-3">•</span>
-                  <span className="text-gray-600 dark:text-gray-400 font-light">Leadership development and team management skills</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-accent mr-3">•</span>
-                  <span className="text-gray-600 dark:text-gray-400 font-light">Networking opportunities with industry professionals</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-accent mr-3">•</span>
-                  <span className="text-gray-600 dark:text-gray-400 font-light">Portfolio of real robotics projects for your career</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Success Stories */}
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-12 text-gray-800 dark:text-gray-200">
-            SUCCESS <span className="text-accent">STORIES</span>
+            DON'T BELIEVE US? <span className="text-accent">LISTEN TO EXPERIENCE</span>
           </h2>
           
           <div className="grid md:grid-cols-2 gap-8">
@@ -197,22 +166,6 @@ const Hatchling = () => {
               <p className="text-gray-600 dark:text-gray-400 font-light leading-relaxed">
                 "The Hatchling Program gave me the foundation I needed to lead robotics projects and develop 
                 innovative solutions. The mentorship and hands-on experience were invaluable to my growth."
-              </p>
-            </div>
-            <div className="glass-card p-8 rounded-2xl">
-              <h3 className="text-xl font-light text-gray-800 dark:text-gray-200 mb-4">Krishna Vamsi</h3>
-              <p className="text-sm font-light text-accent mb-3">Hatchling Graduate → President</p>
-              <p className="text-gray-600 dark:text-gray-400 font-light leading-relaxed">
-                "Through the Hatchling Program, I developed both technical skills and leadership abilities. 
-                The program's emphasis on real-world projects prepared me for success in robotics engineering."
-              </p>
-            </div>
-            <div className="glass-card p-8 rounded-2xl">
-              <h3 className="text-xl font-light text-gray-800 dark:text-gray-200 mb-4">Zachary Bucknor-Smartt</h3>
-              <p className="text-sm font-light text-accent mb-3">Hatchling Graduate → President</p>
-              <p className="text-gray-600 dark:text-gray-400 font-light leading-relaxed">
-                "The Hatchling Program transformed my understanding of robotics and leadership. The collaborative 
-                environment and mentorship opportunities were key to my development as a robotics leader."
               </p>
             </div>
             <div className="glass-card p-8 rounded-2xl">
@@ -231,7 +184,7 @@ const Hatchling = () => {
       <section className="py-16 px-4 bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight mb-12 text-gray-800 dark:text-gray-200">
-            START YOUR <span className="text-accent">JOURNEY</span>
+            WHY WAIT? <span className="text-accent">JOIN TODAY</span>
           </h2>
           
           <p className="text-xl font-light text-gray-600 dark:text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed">
@@ -255,6 +208,7 @@ const Hatchling = () => {
           </div>
         </div>
       </section>
+
     </div>
   )
 }
