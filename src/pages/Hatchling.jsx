@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
+import Carousel from '../components/Carousel'
+import CircularGallery from '../components/CircularGallery'
 
 const Hatchling = () => {
   const heroRef = useRef(null)
@@ -50,10 +52,91 @@ const Hatchling = () => {
         </div>
       </section>
 
-      {/* Program Overview */}
+      {/* TURTLE Hatchling Program Section */}
       <section className="py-24 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-20 text-gray-800 dark:text-gray-200">
+            TURTLE <span className="text-accent">HATCHLING</span> PROGRAM
+          </h2>
+          
+          <div className="glass-card p-12 rounded-2xl mb-16">
+            <p className="text-xl font-light text-gray-600 dark:text-gray-400 leading-relaxed text-center max-w-4xl mx-auto">
+              Our intensive accelerator program is designed to fast-track students' robotics skills through hands-on projects, expert mentorship, and cutting-edge resources.
+            </p>
+          </div>
+
+          {/* Skills Checklist */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="glass-card p-8 rounded-2xl text-center hover:scale-105 transition-all duration-300">
+              <div className="text-4xl mb-4">✔</div>
+              <h3 className="text-lg font-light text-gray-800 dark:text-gray-200">Robotics Programming</h3>
+            </div>
+            <div className="glass-card p-8 rounded-2xl text-center hover:scale-105 transition-all duration-300">
+              <div className="text-4xl mb-4">✔</div>
+              <h3 className="text-lg font-light text-gray-800 dark:text-gray-200">Electronics</h3>
+            </div>
+            <div className="glass-card p-8 rounded-2xl text-center hover:scale-105 transition-all duration-300">
+              <div className="text-4xl mb-4">✔</div>
+              <h3 className="text-lg font-light text-gray-800 dark:text-gray-200">Soldering</h3>
+            </div>
+            <div className="glass-card p-8 rounded-2xl text-center hover:scale-105 transition-all duration-300">
+              <div className="text-4xl mb-4">✔</div>
+              <h3 className="text-lg font-light text-gray-800 dark:text-gray-200">Solidworks</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Circular Gallery Section */}
+      <section className="py-12 px-4 bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-8 text-gray-800 dark:text-gray-200">
+            OUR <span className="text-accent">GALLERY</span>
+          </h2>
+          
+          <div style={{ height: '900px', position: 'relative' }}>    
+            <CircularGallery bend={3} textColor="#ffffff" borderRadius={0.05} scrollEase={0.02}/>
+          </div>
+        </div>
+      </section>
+
+      {/* Program Timeline Carousel */}
+      <section className="py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-12 text-gray-800 dark:text-gray-200">
+            PROGRAM <span className="text-accent">TIMELINE</span>
+          </h2>
+          
+          <div className="text-center mb-6">
+            <p className="text-lg font-light text-gray-600 dark:text-gray-400 mb-3">
+              Scroll through to explore our program phases
+            </p>
+            <div className="flex justify-center items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
+              <span>←</span>
+              <span>Drag or click to navigate</span>
+              <span>→</span>
+            </div>
+          </div>
+          
+          <div className="flex justify-center">
+            <div style={{ height: '600px', position: 'relative' }}>
+              <Carousel
+                baseWidth={1200}  
+                autoplay={true}
+                autoplayDelay={3000}
+                pauseOnHover={true}
+                loop={true}
+                round={false}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Program Overview */}
+      <section className="py-16 px-4 bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-12 text-gray-800 dark:text-gray-200">
             JOIN <span className="text-accent">HATCHLING</span>
           </h2>
           
@@ -100,43 +183,10 @@ const Hatchling = () => {
         </div>
       </section>
 
-      {/* Program Structure */}
-      <section className="py-24 px-4 bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-20 text-gray-800 dark:text-gray-200">
-            PROGRAM <span className="text-accent">STRUCTURE</span>
-          </h2>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="glass-card p-8 rounded-2xl text-center hover:scale-105 transition-all duration-300">
-              <div className="text-5xl mb-6">🎯</div>
-              <h3 className="text-xl font-light mb-4 text-gray-800 dark:text-gray-200">Phase 1: Foundation</h3>
-              <p className="text-gray-600 dark:text-gray-400 font-light leading-relaxed">
-                Learn robotics fundamentals, programming basics, and team collaboration skills through structured workshops and introductory projects.
-              </p>
-            </div>
-            <div className="glass-card p-8 rounded-2xl text-center hover:scale-105 transition-all duration-300">
-              <div className="text-5xl mb-6">🚀</div>
-              <h3 className="text-xl font-light mb-4 text-gray-800 dark:text-gray-200">Phase 2: Development</h3>
-              <p className="text-gray-600 dark:text-gray-400 font-light leading-relaxed">
-                Work on real robotics projects, develop technical skills, and begin taking on leadership roles within project teams.
-              </p>
-            </div>
-            <div className="glass-card p-8 rounded-2xl text-center hover:scale-105 transition-all duration-300">
-              <div className="text-5xl mb-6">🏆</div>
-              <h3 className="text-xl font-light mb-4 text-gray-800 dark:text-gray-200">Phase 3: Leadership</h3>
-              <p className="text-gray-600 dark:text-gray-400 font-light leading-relaxed">
-                Lead project teams, mentor new members, and develop advanced robotics solutions while building your professional network.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Success Stories */}
-      <section className="py-24 px-4">
+      <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-20 text-gray-800 dark:text-gray-200">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-12 text-gray-800 dark:text-gray-200">
             SUCCESS <span className="text-accent">STORIES</span>
           </h2>
           
@@ -178,7 +228,7 @@ const Hatchling = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-24 px-4 bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900">
+      <section className="py-16 px-4 bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight mb-12 text-gray-800 dark:text-gray-200">
             START YOUR <span className="text-accent">JOURNEY</span>

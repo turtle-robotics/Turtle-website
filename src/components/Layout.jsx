@@ -59,7 +59,7 @@ const Layout = ({ children }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <p className="text-sm font-light text-gray-600 dark:text-gray-400">
-              © 2024 Turtle Robotics. All rights reserved.
+              2025 Turtle Robotics All rights reserved.
             </p>
             <p className="text-xs font-light text-gray-500 dark:text-gray-500 mt-2">
               Student Robotics Research Lab at Texas A&M University

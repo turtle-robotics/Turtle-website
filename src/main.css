@@ -82,31 +82,6 @@
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   }
 
-  .spotlight {
-    position: relative;
-    overflow: hidden;
-  }
-
-  .spotlight::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), 
-                rgba(166, 0, 0, 0.08) 0%, 
-                transparent 50%);
-    pointer-events: none;
-    transition: opacity 0.3s ease;
-  }
-
-  .dark .spotlight::before {
-    background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), 
-                rgba(166, 0, 0, 0.15) 0%, 
-                transparent 50%);
-  }
-
   .hero-gradient {
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
     backdrop-filter: blur(10px);

@@ -280,32 +280,6 @@ const Projects = () => {
           </div>
         </div>
       )}
-
-      {/* Call to Action */}
-      <section className="py-24 px-4 bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight mb-12 text-gray-800 dark:text-gray-200">
-            START YOUR <span className="text-accent">PROJECT</span>
-          </h2>
-          <p className="text-xl font-light text-gray-600 dark:text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed">
-            Ready to join our team and work on the next generation of robotics technology?
-          </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <Link 
-              to="/apply" 
-              className="bg-gradient-turtle text-white px-12 py-5 rounded-xl text-lg font-light tracking-wide hover:scale-105 transition-all duration-300 shadow-premium"
-            >
-              START PROJECT
-            </Link>
-            <Link 
-              to="/about" 
-              className="glass-card text-gray-800 dark:text-gray-200 px-12 py-5 rounded-xl text-lg font-light tracking-wide hover:scale-105 transition-all duration-300"
-            >
-              VIEW PORTFOLIO
-            </Link>
-          </div>
-        </div>
-      </section>
     </div>
   )
 }
