@@ -1,6 +1,7 @@
 import { Link, useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
 import ThemeToggleButton from './ThemeToggleButton'
+import Footer from './Footer'
 
 const Layout = ({ children }) => {
   const location = useLocation()
@@ -17,6 +18,8 @@ const Layout = ({ children }) => {
     { path: '/hatchling', label: 'Hatchling' },
     { path: '/apply', label: 'Apply' }
   ]
+
+  const sponsorItem = { path: '/sponsorship', label: 'Looking to Sponsor?' }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-white via-gray-50 to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
@@ -42,6 +45,18 @@ const Layout = ({ children }) => {
                   {item.label}
                 </Link>
               ))}
+              
+              {/* Special Sponsor Link */}
+              <Link
+                to={sponsorItem.path}
+                className={`text-sm font-medium tracking-wide transition-all duration-300 px-4 py-2 rounded-lg ${
+                  location.pathname === sponsorItem.path
+                    ? 'bg-gradient-to-r from-yellow-500 to-amber-500 text-white shadow-lg'
+                    : 'bg-gradient-to-r from-yellow-400 to-amber-400 text-white hover:from-yellow-500 hover:to-amber-500 shadow-md hover:shadow-lg'
+                }`}
+              >
+                {sponsorItem.label}
+              </Link>
             </div>
 
             <ThemeToggleButton />
@@ -55,18 +70,7 @@ const Layout = ({ children }) => {
       </main>
 
       {/* Footer */}
-      <footer className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl border-t border-gray-200/50 dark:border-gray-700/50 py-12 mt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <p className="text-sm font-light text-gray-600 dark:text-gray-400">
-              2025 Turtle Robotics All rights reserved.
-            </p>
-            <p className="text-xs font-light text-gray-500 dark:text-gray-500 mt-2">
-              Student Robotics Research Lab at Texas A&M University
-            </p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }

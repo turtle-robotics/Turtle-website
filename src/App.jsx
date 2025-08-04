@@ -4,8 +4,10 @@ import Layout from './components/Layout'
 import Home from './pages/Home'
 import About from './pages/About'
 import Projects from './pages/Projects'
+import ProjectDetail from './pages/ProjectDetail'
 import Hatchling from './pages/Hatchling'
 import Apply from './pages/Apply'
+import Sponsorship from './pages/Sponsorship'
 
 function App() {
   return (
@@ -15,8 +17,10 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/projects/:projectId" element={<ProjectDetail />} />
           <Route path="/hatchling" element={<Hatchling />} />
           <Route path="/apply" element={<Apply />} />
+          <Route path="/sponsorship" element={<Sponsorship />} />
         </Routes>
       </Layout>
     </ThemeProvider>

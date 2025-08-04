@@ -36,7 +36,21 @@ const Projects = () => {
 
   const projects = [
     {
-      id: 1,
+      id: 'snout',
+      image: "https://picsum.photos/seed/snout/300/300",
+      title: "SNOUT",
+      subtitle: "Olfactory Sensing Robot",
+      description: "A robotic vehicle equipped with advanced olfactory sensors for detecting and identifying scents in various applications.",
+      category: "Robotics",
+      fullDescription: "SNOUT will design a robotic vehicle equipped with advanced olfactory sensors. The robot will use its 'sense of smell' to detect and identify scents for applications ranging from harmful drugs, environmental monitoring, gas leak detection, and search and rescue operations.",
+      technologies: ["IMS Sensors", "Machine Learning", "Robotics", "Embedded Systems", "Circuit Design"],
+      team: "5-8 members",
+      duration: "2 semesters",
+      status: "Active",
+      lead: "Anirudh Subramanian"
+    },
+    {
+      id: 'project-1',
       image: "https://picsum.photos/seed/1/300/300",
       title: "Project 1",
       subtitle: "Placeholder Subtitle",
@@ -46,10 +60,11 @@ const Projects = () => {
       technologies: ["Technology 1", "Technology 2", "Technology 3", "Technology 4", "Technology 5"],
       team: "Placeholder team size",
       duration: "Placeholder duration",
-      status: "Active"
+      status: "Active",
+      lead: "John Doe"
     },
     {
-      id: 2,
+      id: 'project-2',
       image: "https://picsum.photos/seed/2/300/300",
       title: "Project 2",
       subtitle: "Placeholder Subtitle",
@@ -59,10 +74,11 @@ const Projects = () => {
       technologies: ["Technology 1", "Technology 2", "Technology 3", "Technology 4", "Technology 5"],
       team: "Placeholder team size",
       duration: "Placeholder duration",
-      status: "Active"
+      status: "Active",
+      lead: "Jane Smith"
     },
     {
-      id: 3,
+      id: 'project-3',
       image: "https://picsum.photos/seed/3/300/300",
       title: "Project 3",
       subtitle: "Placeholder Subtitle",
@@ -72,10 +88,11 @@ const Projects = () => {
       technologies: ["Technology 1", "Technology 2", "Technology 3", "Technology 4", "Technology 5"],
       team: "Placeholder team size",
       duration: "Placeholder duration",
-      status: "Active"
+      status: "Active",
+      lead: "Bob Johnson"
     },
     {
-      id: 4,
+      id: 'project-4',
       image: "https://picsum.photos/seed/4/300/300",
       title: "Project 4",
       subtitle: "Placeholder Subtitle",
@@ -85,10 +102,11 @@ const Projects = () => {
       technologies: ["Technology 1", "Technology 2", "Technology 3", "Technology 4", "Technology 5"],
       team: "Placeholder team size",
       duration: "Placeholder duration",
-      status: "Active"
+      status: "Active",
+      lead: "Alice Brown"
     },
     {
-      id: 5,
+      id: 'project-5',
       image: "https://picsum.photos/seed/5/300/300",
       title: "Project 5",
       subtitle: "Placeholder Subtitle",
@@ -98,20 +116,8 @@ const Projects = () => {
       technologies: ["Technology 1", "Technology 2", "Technology 3", "Technology 4", "Technology 5"],
       team: "Placeholder team size",
       duration: "Placeholder duration",
-      status: "Active"
-    },
-    {
-      id: 6,
-      image: "https://picsum.photos/seed/6/300/300",
-      title: "Project 6",
-      subtitle: "Placeholder Subtitle",
-      description: "This is a placeholder description for Project 6",
-      category: "Category 6",
-      fullDescription: "This is a placeholder full description for Project 6. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      technologies: ["Technology 1", "Technology 2", "Technology 3", "Technology 4", "Technology 5"],
-      team: "Placeholder team size",
-      duration: "Placeholder duration",
-      status: "Active"
+      status: "Active",
+      lead: "Charlie Wilson"
     }
   ]
 
@@ -148,7 +154,6 @@ const Projects = () => {
               <div 
                 key={index}
                 className="group glass-card rounded-2xl overflow-hidden hover:scale-105 transition-all duration-300 shadow-soft cursor-pointer"
-                onClick={() => handleProjectClick(project)}
               >
                 {/* Image */}
                 <div className="relative h-48 overflow-hidden">
@@ -165,7 +170,7 @@ const Projects = () => {
                   </div>
                   <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <span className="text-xs font-light text-white bg-black/50 px-2 py-1 rounded">
-                      Click for details
+                      View details
                     </span>
                   </div>
                 </div>
@@ -174,7 +179,20 @@ const Projects = () => {
                 <div className="p-8">
                   <h3 className="text-xl font-light text-gray-800 dark:text-gray-200 mb-2">{project.title}</h3>
                   <p className="text-sm font-light text-accent mb-4">{project.subtitle}</p>
-                  <p className="text-sm font-light text-gray-600 dark:text-gray-400 leading-relaxed">{project.description}</p>
+                  <p className="text-sm font-light text-gray-600 dark:text-gray-400 leading-relaxed mb-4">{project.description}</p>
+                  
+                  {/* Project Lead */}
+                  <p className="text-xs font-light text-gray-500 dark:text-gray-400 mb-4">
+                    Lead: {project.lead}
+                  </p>
+                  
+                  {/* View Details Button */}
+                  <Link 
+                    to={`/projects/${project.id}`}
+                    className="inline-block text-accent hover:text-accent/80 transition-colors duration-200 text-sm font-light"
+                  >
+                    View Project Details →
+                  </Link>
                 </div>
               </div>
             ))}
