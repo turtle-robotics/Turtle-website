@@ -2,5 +2,10 @@
   "buildCommand": "npm ci && npm run build",
   "outputDirectory": "dist",
   "installCommand": "npm ci",
-  "framework": "vite"
+  "framework": "vite",
+  "functions": {
+    "app/api/**/*.js": {
+      "maxDuration": 10
+    }
+  }
 } 
