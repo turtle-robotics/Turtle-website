@@ -1,4 +1,4 @@
-# Turtle Robotics Website
+# T.U.R.T.L.E Robotics Website
 
 A modern React website for Turtle Robotics, a student robotics research lab at Texas A&M University. This website showcases their 13 advanced research projects, competition teams, and student leadership development programs.
 
