@@ -27,9 +27,9 @@ const Layout = ({ children }) => {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl border-b border-gray-200/50 dark:border-gray-700/50 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <Link to="/" className="text-2xl font-extralight tracking-tight text-gray-800 dark:text-gray-200">
-              <span className="text-accent">TURTLE</span> ROBOTICS
-            </Link>
+                         <Link to="/" className="text-2xl font-extralight tracking-tight text-gray-800 dark:text-gray-200">
+               <span className="text-yellow-600 dark:text-yellow-400">TURTLE</span> ROBOTICS
+             </Link>
             
             <div className="hidden md:flex space-x-8">
               {navItems.map((item) => (
@@ -38,8 +38,8 @@ const Layout = ({ children }) => {
                   to={item.path}
                   className={`text-sm font-light tracking-wide transition-all duration-300 ${
                     location.pathname === item.path
-                      ? 'text-accent border-b-2 border-accent'
-                      : 'text-gray-600 dark:text-gray-300 hover:text-accent hover:border-b-2 hover:border-accent/50'
+                      ? 'text-yellow-600 dark:text-yellow-400 border-b-2 border-yellow-600 dark:border-yellow-400'
+                      : 'text-gray-600 dark:text-gray-300 hover:text-yellow-600 dark:hover:text-yellow-400 hover:border-b-2 hover:border-yellow-600/50 dark:hover:border-yellow-400/50'
                   }`}
                 >
                   {item.label}

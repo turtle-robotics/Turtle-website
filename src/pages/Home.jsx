@@ -52,10 +52,10 @@ const Home = () => {
       <section ref={heroRef} className="relative min-h-screen flex items-center justify-center px-4">
         <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900"></div>
         <div className="relative text-center max-w-6xl mx-auto z-10">
-          <h1 className="text-6xl md:text-8xl lg:text-9xl font-extralight tracking-tight text-gray-800 dark:text-gray-200 mb-8">
-            <span className="block">TURTLE</span>
-            <span className="block text-accent">ROBOTICS</span>
-          </h1>
+                     <h1 className="text-6xl md:text-8xl lg:text-9xl font-extralight tracking-tight text-gray-800 dark:text-gray-200 mb-8">
+             <span className="block">TURTLE</span>
+             <span className="block text-yellow-600 dark:text-yellow-400">ROBOTICS</span>
+           </h1>
           
           <p className="hero-subtitle text-xl md:text-2xl font-light tracking-wide text-gray-600 dark:text-gray-400 mb-12 max-w-3xl mx-auto">
             Pioneering robotics solutions and student leadership development at Texas A&M University
@@ -64,7 +64,7 @@ const Home = () => {
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <Link 
               to="/projects" 
-              className="hero-button bg-gradient-turtle text-white px-10 py-5 rounded-xl font-light tracking-wide hover:scale-105 transition-all duration-300 shadow-premium"
+              className="hero-button bg-gradient-to-r from-yellow-500 to-amber-500 text-white px-10 py-5 rounded-xl font-light tracking-wide hover:scale-105 transition-all duration-300 shadow-premium"
             >
               EXPLORE PROJECTS
             </Link>
@@ -86,9 +86,9 @@ const Home = () => {
       {/* About Section */}
       <section className="py-24 px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-20 text-gray-800 dark:text-gray-200">
-            ABOUT <span className="text-accent">TURTLE</span>
-          </h2>
+                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-20 text-gray-800 dark:text-gray-200">
+             ABOUT <span className="text-yellow-600 dark:text-yellow-400">TURTLE</span>
+           </h2>
           
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             <div className="glass-card p-10 rounded-2xl text-center hover:scale-105 transition-all duration-300">
@@ -113,9 +113,9 @@ const Home = () => {
       {/* Solutions Section */}
       <section className="py-24 px-4 bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-20 text-gray-800 dark:text-gray-200">
-            OUR <span className="text-accent">PROGRAMS</span>
-          </h2>
+                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-20 text-gray-800 dark:text-gray-200">
+             OUR <span className="text-yellow-600 dark:text-yellow-400">PROGRAMS</span>
+           </h2>
           
           <div className="grid md:grid-cols-3 gap-8">
             <div className="glass-card p-10 rounded-2xl hover:scale-105 transition-all duration-300">
@@ -140,13 +140,13 @@ const Home = () => {
       {/* Contact Section */}
       <section className="py-24 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight mb-12 text-gray-800 dark:text-gray-200">
-            READY TO <span className="text-accent">JOIN US</span>
-          </h2>
+                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight mb-12 text-gray-800 dark:text-gray-200">
+             READY TO <span className="text-yellow-600 dark:text-yellow-400">JOIN US</span>
+           </h2>
           
           <Link 
             to="/apply" 
-            className="inline-block bg-gradient-turtle text-white px-16 py-6 rounded-xl text-xl font-light tracking-wide hover:scale-105 transition-all duration-300 shadow-premium"
+            className="inline-block bg-gradient-to-r from-yellow-500 to-amber-500 text-white px-16 py-6 rounded-xl text-xl font-light tracking-wide hover:scale-105 transition-all duration-300 shadow-premium"
           >
             APPLY NOW
           </Link>

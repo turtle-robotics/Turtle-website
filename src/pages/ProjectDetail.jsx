@@ -1,68 +1,13 @@
 import { useParams, Link } from 'react-router-dom'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { gsap } from 'gsap'
+import { getProjectById } from '../data/projects'
 
 const ProjectDetail = () => {
   const { projectId } = useParams()
+  const [activeImageIndex, setActiveImageIndex] = useState(0)
 
-  // Sample project data - this would typically come from a database or API
-  const projectData = {
-    'snout': {
-      title: 'SNOUT',
-      lead: 'Anirudh Subramanian',
-      email: 'asubramanian@tamu.edu',
-      description: 'SNOUT will design a robotic vehicle equipped with advanced olfactory sensors. The robot will use its "sense of smell" to detect and identify scents for applications ranging from harmful drugs, environmental monitoring, gas leak detection, and search and rescue operations. This robot will pick up new smells and classify them independently. This adaptability, combined with integrated navigation, will enable it to operate in harsh conditions autonomously.',
-      goals: [
-        'Develop a functional IMS sensor module that converts airborne chemicals into electrical signals.',
-        'Prototype the SNOUT robotic platform, such as the intake, drift tube, detector, and electronics, onto a mobile chassis.',
-        'Begin training a machine learning model (Random Forest Classifier) to identify and classify chemical compounds based on IMS data such as drift time and ion intensity.',
-        'Test SNOUT in controlled environments with known chemicals to evaluate detection accuracy.'
-      ],
-             lookingFor: [
-         'Embedded Systems',
-         'Circuit Design',
-         'CAD Designing',
-         'Machine Learning',
-         'Students in CHEN, ECEN, ESET, CSCE, or related majors'
-       ]
-    },
-    'project-1': {
-      title: 'PROJECT 1',
-      lead: 'John Doe',
-      email: 'jdoe@tamu.edu',
-      description: 'This is a placeholder project description for Project 1. It will be replaced with actual project details when available.',
-      goals: [
-        'Complete initial research phase',
-        'Develop prototype components',
-        'Test core functionality',
-        'Document findings and results'
-      ],
-      lookingFor: [
-        'Software Development',
-        'Hardware Design',
-        'Data Analysis'
-      ]
-    },
-    'project-2': {
-      title: 'PROJECT 2',
-      lead: 'Jane Smith',
-      email: 'jsmith@tamu.edu',
-      description: 'This is a placeholder project description for Project 2. It will be replaced with actual project details when available.',
-      goals: [
-        'Define project scope and requirements',
-        'Create initial design concepts',
-        'Build proof of concept',
-        'Validate technical approach'
-      ],
-      lookingFor: [
-        'Mechanical Engineering',
-        'Control Systems',
-        'Machine Learning'
-      ]
-    }
-  }
-
-  const project = projectData[projectId] || projectData['project-1']
+  const project = getProjectById(projectId)
 
   useEffect(() => {
     // GSAP animations
@@ -82,13 +27,22 @@ const ProjectDetail = () => {
     )
   }, [projectId])
 
+  const formatDate = (dateString) => {
+    const date = new Date(dateString)
+    return date.toLocaleDateString('en-US', { 
+      year: 'numeric', 
+      month: 'long', 
+      day: 'numeric' 
+    })
+  }
+
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900">
-      <div className="max-w-4xl mx-auto px-4 py-16">
+      <div className="max-w-6xl mx-auto px-4 py-16">
         {/* Back Button */}
         <Link 
           to="/projects" 
-          className="inline-flex items-center text-accent hover:text-accent/80 transition-colors duration-200 mb-8"
+          className="inline-flex items-center text-yellow-600 dark:text-yellow-400 hover:text-yellow-500 dark:hover:text-yellow-300 transition-colors duration-200 mb-8"
         >
           <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -96,18 +50,63 @@ const ProjectDetail = () => {
           Back to Projects
         </Link>
 
-        {/* Project Title */}
-        <h1 className="project-title text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-          {project.title}
-        </h1>
-
-        {/* Project Lead */}
-        <div className="project-lead mb-12">
-          <p className="text-lg text-gray-700 dark:text-gray-300">
-            Project Lead: {project.lead} 
-            <span className="text-accent ml-2">({project.email})</span>
+        {/* Project Header */}
+        <div className="mb-12">
+          <h1 className="project-title text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+            {project.title}
+          </h1>
+          <p className="text-xl text-yellow-600 dark:text-yellow-400 mb-6">
+            {project.subtitle}
           </p>
+
+          {/* Project Lead */}
+          <div className="project-lead mb-8">
+            <p className="text-lg text-gray-700 dark:text-gray-300">
+              Project Lead: {project.lead} 
+              <span className="text-yellow-600 dark:text-yellow-400 ml-2">({project.email})</span>
+            </p>
+          </div>
         </div>
+
+        {/* Project Images Gallery */}
+        {project.images && project.images.length > 0 && (
+          <div className="project-section mb-12">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+              Project Gallery
+            </h2>
+            <div className="space-y-4">
+              {/* Main Image */}
+              <div className="relative h-96 rounded-xl overflow-hidden">
+                <img
+                  src={project.images[activeImageIndex]}
+                  alt={`${project.title} - Image ${activeImageIndex + 1}`}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              
+              {/* Thumbnail Navigation */}
+              {project.images.length > 1 && (
+                <div className="flex space-x-2 overflow-x-auto">
+                  {project.images.map((image, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setActiveImageIndex(index)}
+                      className={`flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden ${
+                        index === activeImageIndex ? 'ring-2 ring-yellow-500' : ''
+                      }`}
+                    >
+                      <img
+                        src={image}
+                        alt={`Thumbnail ${index + 1}`}
+                        className="w-full h-full object-cover"
+                      />
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
+        )}
 
         {/* Project Description */}
         <div className="project-section mb-12">
@@ -127,7 +126,7 @@ const ProjectDetail = () => {
           <ul className="space-y-3">
             {project.goals.map((goal, index) => (
               <li key={index} className="flex items-start">
-                <span className="text-accent mr-3 mt-1">✓</span>
+                <span className="text-yellow-600 dark:text-yellow-400 mr-3 mt-1">✓</span>
                 <span className="text-gray-700 dark:text-gray-300">{goal}</span>
               </li>
             ))}
@@ -135,25 +134,51 @@ const ProjectDetail = () => {
         </div>
 
         {/* Looking For */}
-        <div className="project-section">
+        <div className="project-section mb-12">
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
             Looking For
           </h2>
           <ul className="space-y-3">
             {project.lookingFor.map((skill, index) => (
               <li key={index} className="flex items-start">
-                <span className="text-accent mr-3 mt-1">•</span>
+                <span className="text-yellow-600 dark:text-yellow-400 mr-3 mt-1">•</span>
                 <span className="text-gray-700 dark:text-gray-300">{skill}</span>
               </li>
             ))}
           </ul>
         </div>
 
+        {/* Project Updates */}
+        {project.updates && project.updates.length > 0 && (
+          <div className="project-section mb-12">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+              Project Updates
+            </h2>
+            <div className="space-y-6">
+              {project.updates.map((update, index) => (
+                <div key={index} className="border-l-4 border-yellow-500 pl-6">
+                  <div className="flex items-center mb-2">
+                    <span className="text-sm text-gray-500 dark:text-gray-400">
+                      {formatDate(update.date)}
+                    </span>
+                  </div>
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                    {update.title}
+                  </h3>
+                  <p className="text-gray-700 dark:text-gray-300">
+                    {update.content}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
         {/* Apply Button */}
         <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
           <Link 
             to="/apply" 
-            className="inline-block bg-gradient-turtle text-white px-8 py-3 rounded-lg font-medium hover:scale-105 transition-all duration-300"
+            className="inline-block bg-gradient-to-r from-yellow-500 to-amber-500 text-white px-8 py-3 rounded-lg font-medium hover:scale-105 transition-all duration-300"
           >
             Apply to Join This Project
           </Link>

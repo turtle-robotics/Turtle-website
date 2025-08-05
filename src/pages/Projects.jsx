@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useState, useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
+import { projects } from '../data/projects'
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null)
@@ -34,92 +35,7 @@ const Projects = () => {
     )
   }, [])
 
-  const projects = [
-    {
-      id: 'snout',
-      image: "https://picsum.photos/seed/snout/300/300",
-      title: "SNOUT",
-      subtitle: "Olfactory Sensing Robot",
-      description: "A robotic vehicle equipped with advanced olfactory sensors for detecting and identifying scents in various applications.",
-      category: "Robotics",
-      fullDescription: "SNOUT will design a robotic vehicle equipped with advanced olfactory sensors. The robot will use its 'sense of smell' to detect and identify scents for applications ranging from harmful drugs, environmental monitoring, gas leak detection, and search and rescue operations.",
-      technologies: ["IMS Sensors", "Machine Learning", "Robotics", "Embedded Systems", "Circuit Design"],
-      team: "5-8 members",
-      duration: "2 semesters",
-      status: "Active",
-      lead: "Anirudh Subramanian"
-    },
-    {
-      id: 'project-1',
-      image: "https://picsum.photos/seed/1/300/300",
-      title: "Project 1",
-      subtitle: "Placeholder Subtitle",
-      description: "This is a placeholder description for Project 1",
-      category: "Category 1",
-      fullDescription: "This is a placeholder full description for Project 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      technologies: ["Technology 1", "Technology 2", "Technology 3", "Technology 4", "Technology 5"],
-      team: "Placeholder team size",
-      duration: "Placeholder duration",
-      status: "Active",
-      lead: "John Doe"
-    },
-    {
-      id: 'project-2',
-      image: "https://picsum.photos/seed/2/300/300",
-      title: "Project 2",
-      subtitle: "Placeholder Subtitle",
-      description: "This is a placeholder description for Project 2",
-      category: "Category 2",
-      fullDescription: "This is a placeholder full description for Project 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      technologies: ["Technology 1", "Technology 2", "Technology 3", "Technology 4", "Technology 5"],
-      team: "Placeholder team size",
-      duration: "Placeholder duration",
-      status: "Active",
-      lead: "Jane Smith"
-    },
-    {
-      id: 'project-3',
-      image: "https://picsum.photos/seed/3/300/300",
-      title: "Project 3",
-      subtitle: "Placeholder Subtitle",
-      description: "This is a placeholder description for Project 3",
-      category: "Category 3",
-      fullDescription: "This is a placeholder full description for Project 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      technologies: ["Technology 1", "Technology 2", "Technology 3", "Technology 4", "Technology 5"],
-      team: "Placeholder team size",
-      duration: "Placeholder duration",
-      status: "Active",
-      lead: "Bob Johnson"
-    },
-    {
-      id: 'project-4',
-      image: "https://picsum.photos/seed/4/300/300",
-      title: "Project 4",
-      subtitle: "Placeholder Subtitle",
-      description: "This is a placeholder description for Project 4",
-      category: "Category 4",
-      fullDescription: "This is a placeholder full description for Project 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      technologies: ["Technology 1", "Technology 2", "Technology 3", "Technology 4", "Technology 5"],
-      team: "Placeholder team size",
-      duration: "Placeholder duration",
-      status: "Active",
-      lead: "Alice Brown"
-    },
-    {
-      id: 'project-5',
-      image: "https://picsum.photos/seed/5/300/300",
-      title: "Project 5",
-      subtitle: "Placeholder Subtitle",
-      description: "This is a placeholder description for Project 5",
-      category: "Category 5",
-      fullDescription: "This is a placeholder full description for Project 5. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      technologies: ["Technology 1", "Technology 2", "Technology 3", "Technology 4", "Technology 5"],
-      team: "Placeholder team size",
-      duration: "Placeholder duration",
-      status: "Active",
-      lead: "Charlie Wilson"
-    }
-  ]
+
 
   const handleProjectClick = (project) => {
     setSelectedProject(project)
@@ -137,7 +53,7 @@ const Projects = () => {
         <div className="relative text-center max-w-6xl mx-auto z-10">
           <h1 className="text-6xl md:text-8xl lg:text-9xl font-extralight tracking-tight text-gray-800 dark:text-gray-200 mb-8">
             <span className="block">OUR</span>
-            <span className="block text-accent">PROJECTS</span>
+            <span className="block text-yellow-600 dark:text-yellow-400">PROJECTS</span>
           </h1>
           
           <p className="hero-subtitle text-xl md:text-2xl font-light tracking-wide text-gray-600 dark:text-gray-400 mb-12 max-w-3xl mx-auto">
@@ -164,7 +80,7 @@ const Projects = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                   <div className="absolute bottom-4 left-4">
-                    <span className="text-xs font-light text-white bg-accent/80 px-3 py-1 rounded-full">
+                    <span className="text-xs font-light text-white bg-yellow-600/80 dark:bg-yellow-500/80 px-3 py-1 rounded-full">
                       {project.category}
                     </span>
                   </div>
@@ -178,7 +94,7 @@ const Projects = () => {
                 {/* Content */}
                 <div className="p-8">
                   <h3 className="text-xl font-light text-gray-800 dark:text-gray-200 mb-2">{project.title}</h3>
-                  <p className="text-sm font-light text-accent mb-4">{project.subtitle}</p>
+                  <p className="text-sm font-light text-yellow-600 dark:text-yellow-400 mb-4">{project.subtitle}</p>
                   <p className="text-sm font-light text-gray-600 dark:text-gray-400 leading-relaxed mb-4">{project.description}</p>
                   
                   {/* Project Lead */}
@@ -189,7 +105,7 @@ const Projects = () => {
                   {/* View Details Button */}
                   <Link 
                     to={`/projects/${project.id}`}
-                    className="inline-block text-accent hover:text-accent/80 transition-colors duration-200 text-sm font-light"
+                    className="inline-block text-yellow-600 dark:text-yellow-400 hover:text-yellow-500 dark:hover:text-yellow-300 transition-colors duration-200 text-sm font-light"
                   >
                     View Project Details →
                   </Link>
@@ -209,8 +125,8 @@ const Projects = () => {
               <div className="flex justify-between items-start">
                 <div>
                   <h2 className="text-3xl font-extralight text-gray-800 dark:text-gray-200 mb-2">{selectedProject.title}</h2>
-                  <p className="text-lg font-light text-accent mb-4">{selectedProject.subtitle}</p>
-                  <span className="text-sm font-light text-white bg-accent px-3 py-1 rounded-full">
+                  <p className="text-lg font-light text-yellow-600 dark:text-yellow-400 mb-4">{selectedProject.subtitle}</p>
+                  <span className="text-sm font-light text-white bg-yellow-600 dark:bg-yellow-500 px-3 py-1 rounded-full">
                     {selectedProject.category}
                   </span>
                 </div>
@@ -252,7 +168,7 @@ const Projects = () => {
                       {selectedProject.technologies.map((tech, index) => (
                         <span
                           key={index}
-                          className="text-xs font-light text-accent bg-accent/10 px-3 py-1 rounded-full"
+                          className="text-xs font-light text-yellow-600 dark:text-yellow-400 bg-yellow-100 dark:bg-yellow-900/20 px-3 py-1 rounded-full"
                         >
                           {tech}
                         </span>
@@ -288,10 +204,10 @@ const Projects = () => {
                   Close
                 </button>
                 <Link
-                  to="/apply"
-                  className="bg-gradient-turtle text-white px-6 py-3 rounded-xl font-light tracking-wide hover:scale-105 transition-all duration-300"
+                  to={`/projects/${selectedProject.id}`}
+                  className="bg-gradient-to-r from-yellow-500 to-amber-500 text-white px-6 py-3 rounded-xl font-light tracking-wide hover:scale-105 transition-all duration-300"
                 >
-                  Join This Project
+                  View Full Details
                 </Link>
               </div>
             </div>
