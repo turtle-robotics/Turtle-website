@@ -41,42 +41,56 @@ const About = () => {
   ]
 
   const currentLeadership = [
-    {
-      role: "President",
-      name: "Ian Lansdowne",
-      period: "Fall 2025 - Present",
-      description: "Leading Turtle Robotics into its next chapter of innovation and growth"
-    },
-    {
-      role: "Internal Vice President",
-      name: "Ian Wilhite",
-      period: "Fall 2025 - Present",
-      description: "Managing internal operations and team coordination"
-    },
-    {
-      role: "External Vice President",
-      name: "Malcolm Ferguson",
-      period: "Fall 2025 - Present",
-      description: "Overseeing external relations and partnerships"
-    },
-    {
-      role: "Project Vice President",
-      name: "Samantha Woravka",
-      period: "Fall 2025 - Present",
-      description: "Leading project development and technical initiatives"
-    },
-    {
-      role: "Development Vice President",
-      name: "Kalen Jaroszewski",
-      period: "Fall 2025 - Present",
-      description: "Driving innovation and research advancement"
-    },
-    {
-      role: "Treasurer",
-      name: "Raquel Garcia",
-      period: "Fall 2024 - Present",
-      description: "Managing financial operations and budgeting"
-    }
+    // Executive roles
+    { role: 'President', name: 'Ian Lansdowne', period: 'Fall 2025 - Spring 2026', description: 'Leading Turtle Robotics into its next chapter of innovation and growth' },
+    { role: 'External Vice President', name: 'Malcolm Ferguson', period: 'Fall 2025 - Spring 2026', description: 'Overseeing external relations and partnerships' },
+    { role: 'Internal Vice President', name: 'Ian Wilhite', period: 'Fall 2025 - Spring 2026', description: 'Managing internal operations and team coordination' },
+    { role: 'Project Vice President', name: 'Sam Woravka', period: 'Fall 2025 - Spring 2026', description: 'Leading project development and technical initiatives' },
+    { role: 'Development Vice President', name: 'Kalen Jaroszewski', period: 'Fall 2025 - Spring 2026', description: 'Driving innovation and research advancement' },
+    { role: 'Treasurer', name: 'Raquel Garcia', period: 'Fall 2025 - Spring 2026', description: 'Managing financial operations and budgeting' },
+
+    // External org
+    { role: 'Corporate Relations Officer', name: 'James Lee', period: 'Fall 2025 - Spring 2026', description: 'Building and maintaining corporate partnerships' },
+    { role: 'Public Relations Officer', name: 'Isaac Cabello', period: 'Fall 2025 - Spring 2026', description: 'Managing club communications and public presence' },
+    { role: 'Sponsorship Committee', name: 'Jacob Fuerst', period: 'Fall 2025 - Spring 2026', description: 'Sponsorship strategy and outreach' },
+    { role: 'Sponsorship Committee', name: 'Julia Sopala', period: 'Fall 2025 - Spring 2026', description: 'Sponsorship strategy and outreach' },
+    { role: 'Sponsorship Committee', name: 'Preston Nguyen', period: 'Fall 2025 - Spring 2026', description: 'Sponsorship strategy and outreach' },
+    { role: 'Sponsorship Committee', name: 'Yousuf Shafiu', period: 'Fall 2025 - Spring 2026', description: 'Sponsorship strategy and outreach' },
+    { role: 'Public Relations Committee', name: 'Alexis Bunta', period: 'Fall 2025 - Spring 2026', description: 'Content and media support' },
+    { role: 'Public Relations Committee', name: 'Noah Sherman', period: 'Fall 2025 - Spring 2026', description: 'Content and media support' },
+    { role: 'Public Relations Committee', name: 'Renee Zhu', period: 'Fall 2025 - Spring 2026', description: 'Content and media support' },
+
+    // Web
+    { role: 'Webmaster', name: 'Saksham Mohan', period: 'Fall 2025 - Spring 2026', description: 'Maintaining and developing the organization\'s web presence' },
+    { role: 'Web Development Committee', name: 'Jackson Marshall', period: 'Fall 2025 - Spring 2026', description: 'Full-stack development and site maintenance' },
+
+    // Internal org
+    { role: 'Logistics Officer', name: 'Ryo Kato', period: 'Fall 2025 - Spring 2026', description: 'Events, scheduling, and operations' },
+    { role: 'Finance Officer', name: 'Eddy Silva', period: 'Fall 2025 - Spring 2026', description: 'Financial planning and reimbursements' },
+    { role: 'Lab Quality Officer', name: 'Haider Mahdi', period: 'Fall 2025 - Spring 2026', description: 'Safety and quality standards in the lab' },
+    { role: 'Lab Quality Committee', name: 'Caleb Santiago', period: 'Fall 2025 - Spring 2026', description: 'Lab quality and safety support' },
+    { role: 'Lab Quality Committee', name: 'Dalys Guajardo', period: 'Fall 2025 - Spring 2026', description: 'Lab quality and safety support' },
+    { role: 'Lab Quality Committee', name: 'Mya Tinsay', period: 'Fall 2025 - Spring 2026', description: 'Lab quality and safety support' },
+    { role: 'Lab Quality Committee', name: 'Thomas Lopez', period: 'Fall 2025 - Spring 2026', description: 'Lab quality and safety support' },
+    { role: 'Lab Quality Committee', name: 'Victor Cardona', period: 'Fall 2025 - Spring 2026', description: 'Lab quality and safety support' },
+
+    // Projects org
+    { role: 'Documentation Officer', name: 'Emily Tredemeyer', period: 'Fall 2025 - Spring 2026', description: 'Documentation standards and archives' },
+    { role: 'Design Review Officer', name: 'Aidan Briggs', period: 'Fall 2025 - Spring 2026', description: 'Project design reviews and guidance' },
+    { role: 'Design Review Officer', name: 'Evan Chan', period: 'Fall 2025 - Spring 2026', description: 'Project design reviews and guidance' },
+    { role: 'Design Review Officer', name: 'Jonathon Foltyn', period: 'Fall 2025 - Spring 2026', description: 'Project design reviews and guidance' },
+    { role: 'Design Review Officer', name: 'Micah Guttman', period: 'Fall 2025 - Spring 2026', description: 'Project design reviews and guidance' },
+    { role: 'Design Review Officer', name: 'Will McGarity', period: 'Fall 2025 - Spring 2026', description: 'Project design reviews and guidance' },
+
+    // Development org
+    { role: 'Workshop Officer', name: 'Vedant Soni', period: 'Fall 2025 - Spring 2026', description: 'Workshops and technical training' },
+    { role: 'Hatchling Director', name: 'Alejandro Avila', period: 'Fall 2025 - Spring 2026', description: 'Hatchling leadership and mentorship' },
+    { role: 'Hatchling Director', name: 'Ethan Real', period: 'Fall 2025 - Spring 2026', description: 'Hatchling leadership and mentorship' },
+    { role: 'Hatchling Director', name: 'Gael Mamenta', period: 'Fall 2025 - Spring 2026', description: 'Hatchling leadership and mentorship' },
+    { role: 'Hatchling Director', name: 'Karthik Jayakumar', period: 'Fall 2025 - Spring 2026', description: 'Hatchling leadership and mentorship' },
+    { role: 'Hatchling Director', name: 'Mohid Ismail', period: 'Fall 2025 - Spring 2026', description: 'Hatchling leadership and mentorship' },
+    { role: 'Hatchling Director', name: 'Nathan Mersino', period: 'Fall 2025 - Spring 2026', description: 'Hatchling leadership and mentorship' },
+    { role: 'Hatchling Director', name: 'William Shan', period: 'Fall 2025 - Spring 2026', description: 'Hatchling leadership and mentorship' }
   ]
 
   const historicalLeadership = {
@@ -185,13 +199,13 @@ const About = () => {
             <h3 className="text-2xl font-light text-gray-800 dark:text-gray-200 mb-4">Current Leadership</h3>
             <p className="text-lg font-light text-accent">Class Year 2025-26</p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {currentLeadership.map((leader, index) => (
-              <div key={index} className="glass-card p-8 rounded-2xl hover:scale-105 transition-all duration-300">
-                <h3 className="text-xl font-light text-accent mb-2">{leader.role}</h3>
-                <h4 className="text-lg font-light text-gray-800 dark:text-gray-200 mb-2">{leader.name}</h4>
-                <p className="text-sm font-light text-gray-600 dark:text-gray-400 mb-4">{leader.period}</p>
-                <p className="text-sm font-light text-gray-600 dark:text-gray-400 leading-relaxed">{leader.description}</p>
+              <div key={index} className="glass-card p-6 rounded-2xl hover:scale-105 transition-all duration-300">
+                <h3 className="text-lg font-light text-accent mb-2">{leader.role}</h3>
+                <h4 className="text-base font-light text-gray-800 dark:text-gray-200 mb-2">{leader.name}</h4>
+                <p className="text-xs font-light text-gray-600 dark:text-gray-400 mb-3">{leader.period}</p>
+                <p className="text-xs font-light text-gray-600 dark:text-gray-400 leading-relaxed">{leader.description}</p>
               </div>
             ))}
           </div>
@@ -296,6 +310,57 @@ const About = () => {
                   </div>
                 ))}
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Research Success Section */}
+      <section className="py-24 px-4 bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-20 text-gray-800 dark:text-gray-200">
+            RESEARCH <span className="text-accent">SUCCESS</span>
+          </h2>
+          
+          <div className="grid md:grid-cols-2 gap-12">
+            <div className="glass-card p-8 rounded-2xl">
+              <h3 className="text-2xl font-light text-gray-800 dark:text-gray-200 mb-6">Undergraduate Research Placements</h3>
+              <p className="text-gray-600 dark:text-gray-400 font-light leading-relaxed mb-6">
+                Turtle Robotics has successfully placed over 50 students in research labs across Texas A&M University, 
+                spanning departments from Mechanical Engineering to Computer Science and beyond.
+              </p>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="text-center">
+                  <div className="text-3xl font-light text-accent mb-2">50+</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-400">Students Placed</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-light text-accent mb-2">12</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-400">Departments</div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="glass-card p-8 rounded-2xl">
+              <h3 className="text-2xl font-light text-gray-800 dark:text-gray-200 mb-6">Research Outcomes</h3>
+              <ul className="space-y-3 text-gray-600 dark:text-gray-400 font-light">
+                <li className="flex items-start">
+                  <span className="text-accent mr-3 mt-1">•</span>
+                  <span>Students have co-authored papers in top robotics conferences</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-accent mr-3 mt-1">•</span>
+                  <span>Multiple students have received research grants and scholarships</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-accent mr-3 mt-1">•</span>
+                  <span>Strong pipeline to graduate programs at top universities</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-accent mr-3 mt-1">•</span>
+                  <span>Faculty connections lead to internship and job opportunities</span>
+                </li>
+              </ul>
             </div>
           </div>
         </div>

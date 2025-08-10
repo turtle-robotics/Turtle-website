@@ -67,19 +67,19 @@ const Hatchling = () => {
 
           {/* Skills Checklist */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="glass-card p-8 rounded-2xl text-center hover:scale-105 transition-all duration-300">
+            <div className="glass-card pop-card p-8 rounded-2xl text-center hover:scale-[1.03] transition-all duration-300">
               <div className="text-4xl mb-4">✔</div>
               <h3 className="text-lg font-light text-gray-800 dark:text-gray-200">Robotics Programming</h3>
             </div>
-            <div className="glass-card p-8 rounded-2xl text-center hover:scale-105 transition-all duration-300">
+            <div className="glass-card pop-card p-8 rounded-2xl text-center hover:scale-[1.03] transition-all duration-300">
               <div className="text-4xl mb-4">✔</div>
               <h3 className="text-lg font-light text-gray-800 dark:text-gray-200">Electronics</h3>
             </div>
-            <div className="glass-card p-8 rounded-2xl text-center hover:scale-105 transition-all duration-300">
+            <div className="glass-card pop-card p-8 rounded-2xl text-center hover:scale-[1.03] transition-all duration-300">
               <div className="text-4xl mb-4">✔</div>
               <h3 className="text-lg font-light text-gray-800 dark:text-gray-200">Soldering</h3>
             </div>
-            <div className="glass-card p-8 rounded-2xl text-center hover:scale-105 transition-all duration-300">
+            <div className="glass-card pop-card p-8 rounded-2xl text-center hover:scale-[1.03] transition-all duration-300">
               <div className="text-4xl mb-4">✔</div>
               <h3 className="text-lg font-light text-gray-800 dark:text-gray-200">Solidworks</h3>
             </div>
@@ -87,40 +87,99 @@ const Hatchling = () => {
         </div>
       </section>
 
+      {/* Embedded Videos Section */}
+      <section className="py-16 px-4 bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-12 text-gray-800 dark:text-gray-200">
+            HATCHLING <span className="text-accent">VIDEOS</span>
+          </h2>
+          
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <div className="glass-card p-6 rounded-2xl">
+              <h3 className="text-xl font-light text-gray-800 dark:text-gray-200 mb-4">Program Overview</h3>
+              <div className="relative aspect-video rounded-xl overflow-hidden">
+                <iframe
+                  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                  title="Hatchling Program Overview"
+                  className="w-full h-full"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+            </div>
+            
+            <div className="glass-card p-6 rounded-2xl">
+              <h3 className="text-xl font-light text-gray-800 dark:text-gray-200 mb-4">Student Testimonials</h3>
+              <div className="relative aspect-video rounded-xl overflow-hidden">
+                <iframe
+                  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                  title="Student Testimonials"
+                  className="w-full h-full"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+
+          {/* Slides Section */}
+          <div className="glass-card p-6 rounded-2xl">
+            <h3 className="text-xl font-light text-gray-800 dark:text-gray-200 mb-4">Program Slides</h3>
+            <div className="relative aspect-video rounded-xl overflow-hidden">
+              <iframe 
+                src="https://docs.google.com/presentation/d/e/2PACX-1vQPlaceholder/embed?start=false&loop=false&delayms=3000" 
+                title="Hatchling Program Slides" 
+                frameBorder="0" 
+                className="w-full h-full"
+                allowFullScreen
+              ></iframe>
+            </div>
+            <p className="text-xs text-gray-500 dark:text-gray-400 mt-2 text-center">
+              Replace with your Google Slides embed URL
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Circular Gallery Section */}
-      <section className="py-12 px-4 bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900">
+      <section className="py-12 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-8 text-gray-800 dark:text-gray-200">
             OUR <span className="text-accent">GALLERY</span>
           </h2>
           
-          <div style={{ height: '900px', position: 'relative' }}>    
-            <CircularGallery 
-              items={[
-                { image: 'https://picsum.photos/seed/1/800/600', text: 'Pic 1' },
-                { image: 'https://picsum.photos/seed/2/800/600', text: 'Pic 2' },
-                { image: 'https://picsum.photos/seed/3/800/600', text: 'Pic 3' },
-                { image: 'https://picsum.photos/seed/4/800/600', text: 'Pic 4' },
-                { image: 'https://picsum.photos/seed/5/800/600', text: 'Pic 5' },
-                { image: 'https://picsum.photos/seed/6/800/600', text: 'Pic 6' },
-                { image: 'https://picsum.photos/seed/7/800/600', text: 'Pic 7' },
-                { image: 'https://picsum.photos/seed/8/800/600', text: 'Pic 8' },
-                { image: 'https://picsum.photos/seed/9/800/600', text: 'Pic 9' },
-                { image: 'https://picsum.photos/seed/10/800/600', text: 'Pic 10' },
-                { image: 'https://picsum.photos/seed/11/800/600', text: 'Pic 11' },
-                { image: 'https://picsum.photos/seed/12/800/600', text: 'Pic 12' }
-              ]}
-              bend={3} 
-              textColor="#ffffff" 
-              borderRadius={0.05} 
-              scrollEase={0.02}
-            />
+          <div className="flex justify-center">
+            <div style={{ height: '400px', width: '600px', position: 'relative' }}>     
+              <CircularGallery 
+                items={[
+                  { image: 'https://picsum.photos/seed/1/800/600', text: 'Workshop Session' },
+                  { image: 'https://picsum.photos/seed/2/800/600', text: 'Team Building' },
+                  { image: 'https://picsum.photos/seed/3/800/600', text: 'Project Work' },
+                  { image: 'https://picsum.photos/seed/4/800/600', text: 'Competition Prep' },
+                  { image: 'https://picsum.photos/seed/5/800/600', text: 'Mentorship' },
+                  { image: 'https://picsum.photos/seed/6/800/600', text: 'Lab Sessions' },
+                  { image: 'https://picsum.photos/seed/7/800/600', text: 'Presentations' },
+                  { image: 'https://picsum.photos/seed/8/800/600', text: 'Field Trips' },
+                  { image: 'https://picsum.photos/seed/9/800/600', text: 'Research' },
+                  { image: 'https://picsum.photos/seed/10/800/600', text: 'Innovation' },
+                  { image: 'https://picsum.photos/seed/11/800/600', text: 'Collaboration' },
+                  { image: 'https://picsum.photos/seed/12/800/600', text: 'Success Stories' }
+                ]}
+                bend={2} 
+                textColor="#ffffff" 
+                borderRadius={0.05} 
+                scrollEase={0.02}
+                scrollSpeed={1.5}
+              />
+            </div>
           </div>
         </div>
       </section>
 
       {/* Program Timeline Carousel */}
-      <section className="py-16 px-4">
+      <section className="py-16 px-4 bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-12 text-gray-800 dark:text-gray-200">
             PROGRAM <span className="text-accent">TIMELINE</span>

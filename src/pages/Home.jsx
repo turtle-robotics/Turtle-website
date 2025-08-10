@@ -52,10 +52,10 @@ const Home = () => {
       <section ref={heroRef} className="relative min-h-screen flex items-center justify-center px-4">
         <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900"></div>
         <div className="relative text-center max-w-6xl mx-auto z-10">
-                     <h1 className="text-6xl md:text-8xl lg:text-9xl font-extralight tracking-tight text-gray-800 dark:text-gray-200 mb-8">
-             <span className="block">TURTLE</span>
-             <span className="block text-yellow-600 dark:text-yellow-400">ROBOTICS</span>
-           </h1>
+          <h1 className="text-6xl md:text-8xl lg:text-9xl font-extralight tracking-tight text-gray-800 dark:text-gray-200 mb-8">
+            <span className="block">TURTLE</span>
+            <span className="block text-yellow-600 dark:text-yellow-400">ROBOTICS</span>
+          </h1>
           
           <p className="hero-subtitle text-xl md:text-2xl font-light tracking-wide text-gray-600 dark:text-gray-400 mb-12 max-w-3xl mx-auto">
             Pioneering robotics solutions and student leadership development at Texas A&M University
@@ -86,22 +86,22 @@ const Home = () => {
       {/* About Section */}
       <section className="py-24 px-4">
         <div className="max-w-6xl mx-auto">
-                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-20 text-gray-800 dark:text-gray-200">
-             ABOUT <span className="text-yellow-600 dark:text-yellow-400">TURTLE</span>
-           </h2>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-20 text-gray-800 dark:text-gray-200">
+            ABOUT <span className="text-yellow-600 dark:text-yellow-400">TURTLE</span>
+          </h2>
           
           <div className="grid md:grid-cols-3 gap-8 mb-16">
-            <div className="glass-card p-10 rounded-2xl text-center hover:scale-105 transition-all duration-300">
+            <div className="glass-card pop-card p-10 rounded-2xl text-center hover:scale-[1.03] transition-all duration-300">
               <div className="text-5xl mb-6">🎓</div>
               <h3 className="text-xl font-light mb-4 text-gray-800 dark:text-gray-200">Student Leadership</h3>
               <p className="text-gray-600 dark:text-gray-400 font-light leading-relaxed">Developing the next generation of robotics leaders through hands-on experience and mentorship.</p>
             </div>
-            <div className="glass-card p-10 rounded-2xl text-center hover:scale-105 transition-all duration-300">
+            <div className="glass-card pop-card p-10 rounded-2xl text-center hover:scale-[1.03] transition-all duration-300">
               <div className="text-5xl mb-6">🔬</div>
               <h3 className="text-xl font-light mb-4 text-gray-800 dark:text-gray-200">Research Excellence</h3>
               <p className="text-gray-600 dark:text-gray-400 font-light leading-relaxed">Cutting-edge robotics research across multiple domains and applications.</p>
             </div>
-            <div className="glass-card p-10 rounded-2xl text-center hover:scale-105 transition-all duration-300">
+            <div className="glass-card pop-card p-10 rounded-2xl text-center hover:scale-[1.03] transition-all duration-300">
               <div className="text-5xl mb-6">🏆</div>
               <h3 className="text-xl font-light mb-4 text-gray-800 dark:text-gray-200">Competition Success</h3>
               <p className="text-gray-600 dark:text-gray-400 font-light leading-relaxed">Competing and winning in prestigious robotics competitions worldwide.</p>
@@ -113,9 +113,9 @@ const Home = () => {
       {/* Solutions Section */}
       <section className="py-24 px-4 bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900">
         <div className="max-w-6xl mx-auto">
-                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-20 text-gray-800 dark:text-gray-200">
-             OUR <span className="text-yellow-600 dark:text-yellow-400">PROGRAMS</span>
-           </h2>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-20 text-gray-800 dark:text-gray-200">
+            OUR <span className="text-yellow-600 dark:text-yellow-400">PROGRAMS</span>
+          </h2>
           
           <div className="grid md:grid-cols-3 gap-8">
             <div className="glass-card p-10 rounded-2xl hover:scale-105 transition-all duration-300">
@@ -140,9 +140,9 @@ const Home = () => {
       {/* Contact Section */}
       <section className="py-24 px-4">
         <div className="max-w-4xl mx-auto text-center">
-                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight mb-12 text-gray-800 dark:text-gray-200">
-             READY TO <span className="text-yellow-600 dark:text-yellow-400">JOIN US</span>
-           </h2>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight mb-12 text-gray-800 dark:text-gray-200">
+            READY TO <span className="text-yellow-600 dark:text-yellow-400">JOIN US</span>
+          </h2>
           
           <Link 
             to="/apply" 

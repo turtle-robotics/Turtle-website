@@ -1,6 +1,6 @@
 .circular-gallery {
-  width: 100%;
-  height: 100%;
+  width: 100%; /* Change this to specific width like 800px or 90vw */
+  height: 600px; /* Change this to your desired height */
   overflow: hidden;
   cursor: grab;
 }

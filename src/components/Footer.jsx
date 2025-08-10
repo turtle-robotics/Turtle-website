@@ -99,9 +99,9 @@ const Footer = () => {
               <p>Texas A&M University</p>
               <p>College Station, TX 77845</p>
               <p>
-                                 Email: <a href="mailto:TurtleRobotics@tamu.edu" className="text-yellow-600 dark:text-yellow-400 hover:text-yellow-500 dark:hover:text-yellow-300 transition-colors duration-200">
-                   TurtleRobotics@tamu.edu
-                 </a>
+                Email: <a href="mailto:turtlerobotics@gmail.com" className="text-yellow-600 dark:text-yellow-400 hover:text-yellow-500 dark:hover:text-yellow-300 transition-colors duration-200">
+                  turtlerobotics@gmail.com
+                </a>
               </p>
             </div>
           </div>

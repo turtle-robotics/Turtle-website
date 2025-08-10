@@ -27,9 +27,13 @@ const Layout = ({ children }) => {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl border-b border-gray-200/50 dark:border-gray-700/50 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-                         <Link to="/" className="text-2xl font-extralight tracking-tight text-gray-800 dark:text-gray-200">
-               <span className="text-yellow-600 dark:text-yellow-400">TURTLE</span> ROBOTICS
-             </Link>
+            <Link to="/" className="flex items-center gap-3 text-gray-800 dark:text-gray-200">
+              <span className="text-base md:text-lg font-light hidden sm:inline">TAMU</span>
+              <span className="hidden sm:inline">|</span>
+              <span className="text-2xl font-extralight tracking-tight">
+                <span className="text-yellow-600 dark:text-yellow-400">TURTLE</span> ROBOTICS
+              </span>
+            </Link>
             
             <div className="hidden md:flex space-x-8">
               {navItems.map((item) => (
@@ -64,8 +68,27 @@ const Layout = ({ children }) => {
         </div>
       </nav>
 
+      {/* Mobile Navigation */}
+      <nav className="fixed bottom-0 left-0 right-0 z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur-xl border-t border-gray-200/50 dark:border-gray-700/50 shadow-lg md:hidden">
+        <div className="flex justify-around items-center h-16 px-4">
+          {navItems.map((item) => (
+            <Link
+              key={item.path}
+              to={item.path}
+              className={`flex flex-col items-center justify-center w-12 h-12 rounded-lg transition-all duration-300 ${
+                location.pathname === item.path
+                  ? 'bg-yellow-600 dark:bg-yellow-500 text-white'
+                  : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
+              }`}
+            >
+              <span className="text-xs font-light">{item.label}</span>
+            </Link>
+          ))}
+        </div>
+      </nav>
+
       {/* Main Content */}
-      <main className="pt-16">
+      <main className="pt-16 pb-16 md:pb-0">
         {children}
       </main>
 
