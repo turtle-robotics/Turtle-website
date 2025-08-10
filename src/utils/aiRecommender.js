@@ -122,58 +122,26 @@ function localHeuristic(query, projects) {
 
 export async function recommendProjects(projects, query) {
   const messages = buildPrompt(query, projects)
-  const openrouterKey = getEnv('VITE_OPENROUTER_API_KEY')
-  const openrouterModel = getEnv('VITE_OPENROUTER_MODEL', 'openrouter/auto')
-  const hfKey = getEnv('VITE_HF_TOKEN')
-  const hfModel = getEnv('VITE_HF_MODEL')
-  const geminiKey = getEnv('VITE_GEMINI_API_KEY')
-  const geminiModel = getEnv('VITE_GEMINI_MODEL', 'gemini-1.5-flash-latest')
+  const openrouterKey = null // disabled: using serverless Gemini proxy
+  const hfKey = null // disabled
+  const geminiKey = null // disabled client-side
 
-  // Try OpenRouter
-  if (openrouterKey) {
-    try {
-      const content = await callOpenRouter(messages, openrouterModel, openrouterKey)
-      const recs = safeParseRecommendations(content)
-      if (recs.length) return { source: 'openrouter', recommendations: recs }
-    } catch (e) {
-      // fall through
-    }
-  }
-
-  // Try Google Gemini
-  async function callGemini(messages, model, apiKey) {
-    // Convert to Gemini contents format
-    const contents = messages.map((m) => ({ role: m.role === 'system' ? 'user' : m.role, parts: [{ text: m.content }] }))
-    const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`, {
+  // Call secure serverless Gemini proxy
+  try {
+    const catalog = buildCatalog(projects)
+    const resp = await fetch('/api/recommend/route', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ contents, generationConfig: { temperature: 0.2 } }),
+      body: JSON.stringify({ query, catalog })
     })
-    if (!res.ok) throw new Error(`Gemini error ${res.status}`)
-    const data = await res.json()
-    const text = data?.candidates?.[0]?.content?.parts?.map((p) => p.text).join('\n') || ''
-    return text
-  }
-
-  if (geminiKey) {
-    try {
-      const content = await callGemini(messages, geminiModel, geminiKey)
-      const recs = safeParseRecommendations(content)
-      if (recs.length) return { source: 'gemini', recommendations: recs }
-    } catch (e) {
-      // fall through
+    if (resp.ok) {
+      const data = await resp.json()
+      if (Array.isArray(data?.recommendations) && data.recommendations.length) {
+        return { source: data.source || 'gemini', recommendations: data.recommendations }
+      }
     }
-  }
-
-  // Try HuggingFace
-  if (hfKey && hfModel) {
-    try {
-      const content = await callHuggingFace(messages, hfModel, hfKey)
-      const recs = safeParseRecommendations(content)
-      if (recs.length) return { source: 'huggingface', recommendations: recs }
-    } catch (e) {
-      // fall through
-    }
+  } catch (e) {
+    // fall through to local heuristic
   }
 
   // Fallback heuristic
