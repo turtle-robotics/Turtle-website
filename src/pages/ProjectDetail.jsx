@@ -1,7 +1,8 @@
 import { useParams, Link } from 'react-router-dom'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useMemo } from 'react'
 import { gsap } from 'gsap'
 import { getProjectById } from '../data/projects'
+import ImageCarousel from '../components/ImageCarousel'
 
 const ProjectDetail = () => {
   const { projectId } = useParams()
@@ -36,9 +37,16 @@ const ProjectDetail = () => {
     })
   }
 
+  const slides = useMemo(() => {
+    const imgs = project.images && project.images.length ? project.images : [project.image]
+    return imgs
+  }, [project])
+
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900">
-      <div className="max-w-6xl mx-auto px-4 py-16">
+      {/* Removed top gallery per request */}
+
+      <div className="max-w-6xl mx-auto px-4 py-10">
         {/* Back Button */}
         <Link 
           to="/projects" 
@@ -51,78 +59,46 @@ const ProjectDetail = () => {
         </Link>
 
         {/* Project Header */}
-        <div className="mb-12">
-          <h1 className="project-title text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+        <div className="mb-12 text-center">
+          <h1 className="project-title text-4xl md:text-6xl font-extralight tracking-tight text-gray-900 dark:text-white mb-3">
             {project.title}
           </h1>
-          <p className="text-xl text-yellow-600 dark:text-yellow-400 mb-6">
+          <p className="text-lg md:text-xl font-light text-yellow-600 dark:text-yellow-400 mb-4">
             {project.subtitle}
           </p>
-
-          {/* Project Lead */}
-          <div className="project-lead mb-8">
-            <p className="text-lg text-gray-700 dark:text-gray-300">
-              Project Lead: {project.lead} 
-              <span className="text-yellow-600 dark:text-yellow-400 ml-2">({project.leadEmail || project.email})</span>
+          <div className="flex flex-wrap items-center justify-center gap-3">
+            <span className="text-xs font-light text-white bg-yellow-600 dark:bg-yellow-500 px-3 py-1 rounded-full">{project.category}</span>
+            {project.tags?.slice(0,4).map((tag, i) => (
+              <span key={i} className="text-xs font-light text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-full">{tag}</span>
+            ))}
+          </div>
+          <div className="project-lead mt-6">
+            <p className="text-base md:text-lg text-gray-700 dark:text-gray-300">
+              Lead: {project.lead} <span className="text-yellow-600 dark:text-yellow-400 ml-2">({project.leadEmail || project.email})</span>
             </p>
           </div>
         </div>
 
-        {/* Project Images Gallery */}
-        {project.images && project.images.length > 0 && (
+        {/* Project Images Gallery under header */}
+        {slides && slides.length > 0 && (
           <div className="project-section mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-              Project Gallery
-            </h2>
-            <div className="space-y-4">
-              {/* Main Image */}
-              <div className="relative h-96 rounded-xl overflow-hidden">
-                <img
-                  src={project.images[activeImageIndex]}
-                  alt={`${project.title} - Image ${activeImageIndex + 1}`}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              
-              {/* Thumbnail Navigation */}
-              {project.images.length > 1 && (
-                <div className="flex space-x-2 overflow-x-auto">
-                  {project.images.map((image, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setActiveImageIndex(index)}
-                      className={`flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden ${
-                        index === activeImageIndex ? 'ring-2 ring-yellow-500' : ''
-                      }`}
-                    >
-                      <img
-                        src={image}
-                        alt={`Thumbnail ${index + 1}`}
-                        className="w-full h-full object-cover"
-                      />
-                    </button>
-                  ))}
-                </div>
-              )}
+            <div className="rounded-2xl overflow-hidden border border-gray-200/50 dark:border-gray-700/50 glass-card" style={{ height: '360px' }}>
+              <ImageCarousel images={slides} autoPlay={true} intervalMs={4500} />
             </div>
           </div>
         )}
 
-        {/* Project Description */}
-        <div className="project-section mb-12">
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-            Project Description
-          </h2>
+        {/* Project Overview */}
+        <div className="project-section mb-12 glass-card rounded-2xl p-8">
+          <h2 className="text-2xl font-light text-gray-900 dark:text-white mb-4">Overview</h2>
           <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-            {project.description}
+            {project.fullDescription || project.description}
           </p>
         </div>
 
-        {/* Fall 2025 Goals */}
-        <div className="project-section mb-12">
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-            Fall 2025 Goals
-          </h2>
+        {/* Goals */}
+        <div className="project-section mb-12 glass-card rounded-2xl p-8">
+          <h2 className="text-2xl font-light text-gray-900 dark:text-white mb-6">Goals</h2>
           <ul className="space-y-3">
             {project.goals.map((goal, index) => (
               <li key={index} className="flex items-start">
@@ -134,10 +110,8 @@ const ProjectDetail = () => {
         </div>
 
         {/* Looking For */}
-        <div className="project-section mb-12">
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-            Looking For
-          </h2>
+        <div className="project-section mb-12 glass-card rounded-2xl p-8">
+          <h2 className="text-2xl font-light text-gray-900 dark:text-white mb-6">Looking For</h2>
           <ul className="space-y-3">
             {project.lookingFor.map((skill, index) => (
               <li key={index} className="flex items-start">
@@ -149,30 +123,33 @@ const ProjectDetail = () => {
         </div>
 
         {/* Project Updates */}
-        {project.updates && project.updates.length > 0 && (
-          <div className="project-section mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-              Project Updates
-            </h2>
+        <div className="project-section mb-12">
+          <h2 className="text-2xl font-light text-gray-900 dark:text-white mb-6 text-center">Project Updates</h2>
+          {project.updates && project.updates.length > 0 ? (
             <div className="space-y-6">
               {project.updates.map((update, index) => (
-                <div key={index} className="border-l-4 border-yellow-500 pl-6">
-                  <div className="flex items-center mb-2">
-                    <span className="text-sm text-gray-500 dark:text-gray-400">
-                      {formatDate(update.date)}
-                    </span>
+                <div key={index} className="glass-card rounded-2xl p-6">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-sm text-gray-500 dark:text-gray-400">{formatDate(update.date)}</span>
+                    <span className="text-xs font-light text-white bg-yellow-600 dark:bg-yellow-500 px-3 py-1 rounded-full">Update</span>
                   </div>
-                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                    {update.title}
-                  </h3>
-                  <p className="text-gray-700 dark:text-gray-300">
-                    {update.content}
-                  </p>
+                  <h3 className="text-lg font-light text-gray-900 dark:text-white mb-2">{update.title}</h3>
+                  <p className="text-gray-700 dark:text-gray-300">{update.content}</p>
                 </div>
               ))}
             </div>
-          </div>
-        )}
+          ) : (
+            <div className="glass-card rounded-2xl p-6 text-center">
+              <p className="text-gray-700 dark:text-gray-300 mb-3">No updates have been posted yet.</p>
+              <a
+                href={`mailto:turtlerobotics@gmail.com?subject=Project%20Update%20-%20${encodeURIComponent(project.title)}&body=Title:%20%0ADate:%20YYYY-MM-DD%0ADescription:%20`}
+                className="inline-block text-accent hover:text-accent/80 border border-accent/30 hover:border-accent rounded-lg px-4 py-2 text-sm"
+              >
+                Submit an update
+              </a>
+            </div>
+          )}
+        </div>
 
         {/* Apply Button */}
         <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">

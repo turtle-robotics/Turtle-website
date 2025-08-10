@@ -49,7 +49,11 @@ export const projects = [
       'CAD for prototyping',
       'AC→DC conversion and management, programming/simulation (C, Matlab)'
     ],
-    images: ['https://picsum.photos/seed/amps1/800/600']
+    images: [
+      'https://picsum.photos/seed/amps1/1200/600',
+      'https://picsum.photos/seed/amps2/1200/600',
+      'https://picsum.photos/seed/amps3/1200/600'
+    ]
   },
   {
     id: 'ankl',
