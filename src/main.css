@@ -7,8 +7,9 @@
     /* Light Theme */
     --color-bg: #FFFFFF;
     --color-text: #1F2937;
-    --color-accent: #A60000;
-    --color-secondary: #FFD700;
+    /* In light mode, accent becomes red */
+    --color-accent: #A60000; /* red */
+    --color-secondary: #A60000;
     --color-gradient-start: #7B0000;
     --color-gradient-end: #A60000;
   }
@@ -17,10 +18,11 @@
     /* Dark Theme */
     --color-bg: #111218;
     --color-text: #E5E7EB;
-    --color-accent: #FF6B6B;
+    /* In dark mode, accent becomes yellow */
+    --color-accent: #FFD700; /* yellow */
     --color-secondary: #FFD700;
-    --color-gradient-start: #FF5252;
-    --color-gradient-end: #FF6B6B;
+    --color-gradient-start: #F59E0B; /* amber-500 */
+    --color-gradient-end: #FBBF24;   /* amber-400 */
   }
 
   * {
@@ -80,7 +82,7 @@
   }
 
   .text-accent {
-    color: var(--color-accent);
+    color: var(--color-accent) !important;
   }
 
   .bg-gradient-turtle {
@@ -103,6 +105,21 @@
 }
 
 @layer utilities {
+  /* Dynamic accent overrides to swap yellow/red by theme */
+  .text-yellow-400, .text-yellow-500, .text-yellow-600 { color: var(--color-accent) !important; }
+  .dark .text-yellow-400, .dark .text-yellow-500, .dark .text-yellow-600 { color: var(--color-accent) !important; }
+  .bg-yellow-400, .bg-yellow-500, .bg-yellow-600 { background-color: var(--color-accent) !important; }
+  .dark .bg-yellow-400, .dark .bg-yellow-500, .dark .bg-yellow-600 { background-color: var(--color-accent) !important; }
+  .border-yellow-400, .border-yellow-500, .border-yellow-600 { border-color: var(--color-accent) !important; }
+  .dark .border-yellow-400, .dark .border-yellow-500, .dark .border-yellow-600 { border-color: var(--color-accent) !important; }
+
+  .from-yellow-400, .from-yellow-500 { --tw-gradient-from: var(--color-gradient-start) !important; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(2 6 23 / 0)); }
+  .to-amber-400, .to-amber-500 { --tw-gradient-to: var(--color-gradient-end) !important; }
+  .dark .from-yellow-400, .dark .from-yellow-500 { --tw-gradient-from: var(--color-gradient-start) !important; }
+  .dark .to-amber-400, .dark .to-amber-500 { --tw-gradient-to: var(--color-gradient-end) !important; }
+
+  .ring-yellow-400\/25, .ring-yellow-500\/25 { --tw-ring-color: color-mix(in srgb, var(--color-accent) 25%, transparent) !important; }
+
   .text-shadow {
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
