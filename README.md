@@ -231,4 +231,4 @@ For questions or support, contact the Turtle Robotics team at Texas A&M Universi
 
 ---
 
-Built with ❤️ for Turtle Robotics
+Built with ❤️ for T.U.R.T.L.E Robotics
