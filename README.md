@@ -227,7 +227,7 @@ This project is licensed under the MIT License.
 
 ## 📞 Contact
 
-For questions or support, contact the Turtle Robotics team at Texas A&M University.
+For questions or support, contact the TURTLE Robotics team at Texas A&M University.
 
 ---
 
