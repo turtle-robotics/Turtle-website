@@ -129,11 +129,20 @@ export async function recommendProjects(projects, query) {
   // Call secure serverless Gemini proxy
   try {
     const catalog = buildCatalog(projects)
-    const resp = await fetch('/api/recommend/route', {
+    // Try route.js path (app router style)
+    let resp = await fetch('/api/recommend/route', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ query, catalog })
     })
+    if (!resp.ok) {
+      // Fallback to classic /api/recommend
+      resp = await fetch('/api/recommend', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ query, catalog })
+      })
+    }
     if (resp.ok) {
       const data = await resp.json()
       if (Array.isArray(data?.recommendations) && data.recommendations.length) {

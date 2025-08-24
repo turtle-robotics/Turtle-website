@@ -15,7 +15,13 @@ const Layout = ({ children }) => {
     { path: '/', label: 'Home' },
     { path: '/about', label: 'About' },
     { path: '/projects', label: 'Projects' },
-    { path: '/hatchling', label: 'Hatchling' },
+    { 
+      label: 'Development Programs',
+      dropdown: [
+        { path: '/hatchling', label: 'Hatchling' },
+        { path: '/workshop-series', label: 'Workshop Series' }
+      ]
+    },
     { path: '/apply', label: 'Apply' }
   ]
 
@@ -37,17 +43,40 @@ const Layout = ({ children }) => {
             
             <div className="hidden md:flex space-x-8">
               {navItems.map((item) => (
-                <Link
-                  key={item.path}
-                  to={item.path}
-                  className={`text-sm font-light tracking-wide transition-all duration-300 ${
-                    location.pathname === item.path
-                      ? 'text-yellow-600 dark:text-yellow-400 border-b-2 border-yellow-600 dark:border-yellow-400'
-                      : 'text-gray-600 dark:text-gray-300 hover:text-yellow-600 dark:hover:text-yellow-400 hover:border-b-2 hover:border-yellow-600/50 dark:hover:border-yellow-400/50'
-                  }`}
-                >
-                  {item.label}
-                </Link>
+                item.dropdown ? (
+                  <div key={item.label} className="relative group">
+                    <button className="text-sm font-light tracking-wide transition-all duration-300 text-gray-600 dark:text-gray-300 hover:text-yellow-600 dark:hover:text-yellow-400 hover:border-b-2 hover:border-yellow-600/50 dark:hover:border-yellow-400/50">
+                      {item.label}
+                    </button>
+                    <div className="absolute top-full left-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                      {item.dropdown.map((dropdownItem) => (
+                        <Link
+                          key={dropdownItem.path}
+                          to={dropdownItem.path}
+                          className={`block px-4 py-3 text-sm font-light transition-all duration-300 ${
+                            location.pathname === dropdownItem.path
+                              ? 'text-yellow-600 dark:text-yellow-400 bg-yellow-50 dark:bg-yellow-900/20'
+                              : 'text-gray-600 dark:text-gray-300 hover:text-yellow-600 dark:hover:text-yellow-400 hover:bg-gray-50 dark:hover:bg-gray-700'
+                          }`}
+                        >
+                          {dropdownItem.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                ) : (
+                  <Link
+                    key={item.path}
+                    to={item.path}
+                    className={`text-sm font-light tracking-wide transition-all duration-300 ${
+                      location.pathname === item.path
+                        ? 'text-yellow-600 dark:text-yellow-400 border-b-2 border-yellow-600 dark:border-yellow-400'
+                        : 'text-gray-600 dark:text-gray-300 hover:text-yellow-600 dark:hover:text-yellow-400 hover:border-b-2 hover:border-yellow-600/50 dark:hover:border-yellow-400/50'
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
+                )
               ))}
               
               {/* Special Sponsor Link */}
@@ -72,17 +101,33 @@ const Layout = ({ children }) => {
       <nav className="fixed bottom-0 left-0 right-0 z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur-xl border-t border-gray-200/50 dark:border-gray-700/50 shadow-lg md:hidden">
         <div className="flex justify-around items-center h-16 px-4">
           {navItems.map((item) => (
-            <Link
-              key={item.path}
-              to={item.path}
-              className={`flex flex-col items-center justify-center w-12 h-12 rounded-lg transition-all duration-300 ${
-                location.pathname === item.path
-                  ? 'bg-yellow-600 dark:bg-yellow-500 text-white'
-                  : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
-              }`}
-            >
-              <span className="text-xs font-light">{item.label}</span>
-            </Link>
+            item.dropdown ? (
+              // For dropdown items, show the first dropdown item as the main link
+              <Link
+                key={item.dropdown[0].path}
+                to={item.dropdown[0].path}
+                className={`flex flex-col items-center justify-center w-12 h-12 rounded-lg transition-all duration-300 ${
+                  location.pathname === item.dropdown[0].path
+                    ? 'bg-yellow-600 dark:bg-yellow-500 text-white'
+                    : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
+                }`}
+                title={`${item.label}: ${item.dropdown.map(d => d.label).join(', ')}`}
+              >
+                <span className="text-xs font-light">DP</span>
+              </Link>
+            ) : (
+              <Link
+                key={item.path}
+                to={item.path}
+                className={`flex flex-col items-center justify-center w-12 h-12 rounded-lg transition-all duration-300 ${
+                  location.pathname === item.path
+                    ? 'bg-yellow-600 dark:bg-yellow-500 text-white'
+                    : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
+                }`}
+              >
+                <span className="text-xs font-light">{item.label}</span>
+              </Link>
+            )
           ))}
         </div>
       </nav>

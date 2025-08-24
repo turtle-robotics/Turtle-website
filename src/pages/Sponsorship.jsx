@@ -131,12 +131,12 @@ const Sponsorship = () => {
             >
               View Sponsorship Tiers
             </Link>
-            <Link 
-              to="/apply"
-              className="border-2 border-yellow-500 text-yellow-600 dark:text-yellow-400 px-8 py-4 rounded-xl font-medium hover:bg-yellow-500 hover:text-white transition-all duration-300"
-            >
-              Contact Us
-            </Link>
+                         <a 
+               href="mailto:turtlerobotics@gmail.com?subject=Sponsorship%20Inquiry&body=Hello,%20I'm%20interested%20in%20sponsoring%20TURTLE%20Robotics.%20Please%20provide%20more%20information%20about%20sponsorship%20opportunities%20and%20benefits."
+               className="border-2 border-yellow-500 text-yellow-600 dark:text-yellow-400 px-8 py-4 rounded-xl font-medium hover:bg-yellow-500 hover:text-white transition-all duration-300"
+             >
+               Contact Us
+             </a>
           </div>
         </div>
       </section>
@@ -295,12 +295,12 @@ const Sponsorship = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/apply"
-              className="bg-gradient-to-r from-yellow-500 to-amber-500 text-white px-8 py-4 rounded-xl font-medium hover:scale-105 transition-all duration-300 shadow-lg"
-            >
-              Contact Our Team
-            </Link>
+                         <a 
+               href="mailto:turtlerobotics@gmail.com?subject=Partnership%20Discussion&body=Hello,%20I'd%20like%20to%20discuss%20how%20our%20organization%20can%20support%20TURTLE%20Robotics%20innovation%20while%20gaining%20valuable%20benefits.%20Please%20contact%20me%20to%20schedule%20a%20discussion."
+               className="bg-gradient-to-r from-yellow-500 to-amber-500 text-white px-8 py-4 rounded-xl font-medium hover:scale-105 transition-all duration-300 shadow-lg"
+             >
+               Contact Our Team
+             </a>
             <a 
               href="mailto:turtle.robotics@tamu.edu"
               className="border-2 border-yellow-500 text-yellow-600 dark:text-yellow-400 px-8 py-4 rounded-xl font-medium hover:bg-yellow-500 hover:text-white transition-all duration-300"

@@ -6,6 +6,7 @@ import About from './pages/About'
 import Projects from './pages/Projects'
 import ProjectDetail from './pages/ProjectDetail'
 import Hatchling from './pages/Hatchling'
+import WorkshopSeries from './pages/WorkshopSeries'
 import Apply from './pages/Apply'
 import Sponsorship from './pages/Sponsorship'
 
@@ -19,6 +20,7 @@ function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/projects/:projectId" element={<ProjectDetail />} />
           <Route path="/hatchling" element={<Hatchling />} />
+          <Route path="/workshop-series" element={<WorkshopSeries />} />
           <Route path="/apply" element={<Apply />} />
           <Route path="/sponsorship" element={<Sponsorship />} />
         </Routes>
