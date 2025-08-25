@@ -158,10 +158,10 @@ const Home = () => {
           </h2>
           
           <a 
-            href="mailto:turtlerobotics@gmail.com?subject=Join%20TURTLE%20Robotics&body=Hello,%20I'm%20interested%20in%20joining%20TURTLE%20Robotics.%20Please%20provide%20more%20information%20about%20how%20to%20get%20involved%20and%20application%20processes."
+            href="https://forms.gle/8md4HbE4LCMRBf6UA"
             className="inline-block bg-gradient-to-r from-yellow-500 to-amber-500 text-white px-16 py-6 rounded-xl text-xl font-light tracking-wide hover:scale-105 transition-all duration-300 shadow-premium"
           >
-            CONTACT US
+            APPLY NOW
           </a>
         </div>
       </section>
