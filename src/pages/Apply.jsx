@@ -178,8 +178,7 @@ const Apply = () => {
           
           <ContactForm />
         </div>
-      </section>
-    </div> */}
+      </section> */}
       {/* Contact Section */}
       <section className="py-24 px-4">
         <div className="max-w-4xl mx-auto text-center">
@@ -195,6 +194,7 @@ const Apply = () => {
           </a>
         </div>
       </section>
+    </div>
   )
 }
 
