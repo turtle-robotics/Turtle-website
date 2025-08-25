@@ -166,7 +166,7 @@ const Apply = () => {
       </section>
 
       {/* Contact Form Section */}
-      <section className="py-24 px-4 bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900">
+      {/* <section className="py-24 px-4 bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-12 text-gray-800 dark:text-gray-200">
             READY TO <span className="text-accent">APPLY</span>
@@ -179,7 +179,22 @@ const Apply = () => {
           <ContactForm />
         </div>
       </section>
-    </div>
+    </div> */}
+      {/* Contact Section */}
+      <section className="py-24 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight mb-12 text-gray-800 dark:text-gray-200">
+            READY TO <span className="text-yellow-600 dark:text-yellow-400">JOIN US</span>
+          </h2>
+          
+          <a 
+            href="https://forms.gle/8md4HbE4LCMRBf6UA"
+            className="inline-block bg-gradient-to-r from-yellow-500 to-amber-500 text-white px-16 py-6 rounded-xl text-xl font-light tracking-wide hover:scale-105 transition-all duration-300 shadow-premium"
+          >
+            APPLY NOW
+          </a>
+        </div>
+      </section>
   )
 }
 
