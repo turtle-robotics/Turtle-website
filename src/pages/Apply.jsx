@@ -66,7 +66,7 @@ const Apply = () => {
             </div>
             <div className="glass-card pop-card p-10 rounded-2xl text-center hover:scale-[1.03] transition-all duration-300">
               <div className="text-5xl mb-6">🤝</div>
-              <h3 className="text-xl font-light mb-4 text-gray-800 dark:text-gray-200">Interview Process</h3>
+              <h3 className="text-xl font-light mb-4 text-gray-800 dark:text-gray-200">Open House</h3>
               <p className="text-gray-600 dark:text-gray-400 font-light leading-relaxed">Meet with our team leaders to discuss your goals and project preferences.</p>
             </div>
             <div className="glass-card pop-card p-10 rounded-2xl text-center hover:scale-[1.03] transition-all duration-300">
