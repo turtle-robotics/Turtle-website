@@ -77,7 +77,7 @@ const Hatchling = () => {
           
                      <div className="glass-card p-12 rounded-2xl text-center">
              <p className="text-xl md:text-2xl font-light text-gray-600 dark:text-gray-400 leading-relaxed max-w-4xl mx-auto">
-               Fostering growth in underclassmen engineers by providing the tools, support, and real-world experience they need to build strong communication, problem-solving, and engineering skills. We achieve this through carefully designed technical lectures paired with a collaborative, hands-on, semester-long project that encourages teamwork and practical application of knowledge.
+               Fostering growth in undergraduate engineers by providing the tools, support, and real-world experience they need to build strong communication, problem-solving, and engineering skills. We achieve this through carefully designed technical lectures paired with a collaborative, hands-on, semester-long project that encourages teamwork and practical application of knowledge.
             </p>
           </div>
         </div>
@@ -235,7 +235,7 @@ const Hatchling = () => {
                  <ul className="space-y-3 text-gray-600 dark:text-gray-400 font-light">
                    <li className="flex items-start">
                      <span className="text-accent mr-3 mt-1">•</span>
-                     <span>Teams go through the design process from concept creation to creation</span>
+                     <span>Teams go through the design process from concept creation to testing</span>
                    </li>
                  </ul>
             </div>
@@ -521,9 +521,9 @@ const Hatchling = () => {
              </div>
              
              <div className="glass-card p-8 rounded-2xl text-center hover:scale-105 transition-all duration-300">
-               <div className="text-4xl font-light text-accent mb-2">60%</div>
-               <div className="text-lg font-light text-gray-800 dark:text-gray-200 mb-2">Project Completion</div>
-               <div className="text-sm text-gray-600 dark:text-gray-400">16 teams completed their project</div>
+               <div className="text-4xl font-light text-accent mb-2">70%</div>
+               <div className="text-lg font-light text-gray-800 dark:text-gray-200 mb-2">New Engineers</div>
+               <div className="text-sm text-gray-600 dark:text-gray-400">70% of members enter without prior engineering skills</div>
              </div>
              
              <div className="glass-card p-8 rounded-2xl text-center hover:scale-105 transition-all duration-300">
