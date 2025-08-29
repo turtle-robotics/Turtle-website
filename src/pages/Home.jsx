@@ -117,7 +117,7 @@ const Home = () => {
             <div className="glass-card pop-card p-10 rounded-2xl text-center hover:scale-[1.03] transition-all duration-300">
               <div className="text-5xl mb-6">🏆</div>
               <h3 className="text-xl font-light mb-4 text-gray-800 dark:text-gray-200">Competition Success</h3>
-              <p className="text-gray-600 dark:text-gray-400 font-light leading-relaxed">Competing and winning in prestigious robotics competitions worldwide.</p>
+              <p className="text-gray-600 dark:text-gray-400 font-light leading-relaxed">Competing and winning in prestigious robotics competitions.</p>
             </div>
           </div>
         </div>
@@ -134,7 +134,7 @@ const Home = () => {
             <div className="glass-card p-10 rounded-2xl hover:scale-105 transition-all duration-300">
               <div className="text-5xl mb-6">🤖</div>
               <h3 className="text-xl font-light mb-4 text-gray-800 dark:text-gray-200">Research Projects</h3>
-              <p className="text-gray-600 dark:text-gray-400 font-light leading-relaxed">13 advanced robotics research projects spanning industrial automation, medical robotics, and more.</p>
+              <p className="text-gray-600 dark:text-gray-400 font-light leading-relaxed">22 advanced robotics research projects spanning industrial automation, medical robotics, and more.</p>
             </div>
             <div className="glass-card p-10 rounded-2xl hover:scale-105 transition-all duration-300">
               <div className="text-5xl mb-6">🏁</div>
