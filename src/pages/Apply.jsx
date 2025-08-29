@@ -152,9 +152,9 @@ const Apply = () => {
               <p className="text-sm font-light text-gray-600 dark:text-gray-400">Learn from experienced researchers and fellow students</p>
             </div>
             <div className="glass-card pop-card p-8 rounded-2xl text-center hover:scale-[1.03] transition-all duration-300">
-              <div className="text-4xl mb-4">🏆</div>
-              <h3 className="text-lg font-light mb-3 text-gray-800 dark:text-gray-200">Competition Success</h3>
-              <p className="text-sm font-light text-gray-600 dark:text-gray-400">Compete in prestigious robotics competitions worldwide</p>
+              <div className="text-4xl mb-4">💡</div>
+              <h3 className="text-lg font-light mb-3 text-gray-800 dark:text-gray-200">Innovation & Creativity</h3>
+              <p className="text-sm font-light text-gray-600 dark:text-gray-400">Bring bold ideas to life and design cutting-edge robotics solutions.</p>
             </div>
             <div className="glass-card pop-card p-8 rounded-2xl text-center hover:scale-[1.03] transition-all duration-300">
               <div className="text-4xl mb-4">💼</div>
