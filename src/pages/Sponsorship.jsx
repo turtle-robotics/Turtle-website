@@ -103,10 +103,10 @@ const Sponsorship = () => {
   ]
 
   const impactStats = [
-    { number: "50+", label: "Students Impacted" },
-    { number: "15+", label: "Projects Completed" },
-    { number: "8", label: "Industry Partners" },
-    { number: "3", label: "Years of Innovation" }
+    { number: "250+", label: "Students Impacted" },
+    { number: "22+", label: "Active Projects" },
+    { number: "150+", label: "Alumni in Industry" },
+    { number: "12", label: "Years of Innovation" }
   ]
 
   return (
@@ -121,7 +121,7 @@ const Sponsorship = () => {
            </h1>
           
           <p className="hero-subtitle text-xl md:text-2xl font-light tracking-wide text-gray-600 dark:text-gray-400 mb-12 max-w-3xl mx-auto">
-            Partner with the next generation of robotics innovators. Support cutting-edge research and shape the future of autonomous systems.
+         Partner with us to advance robotics technology while gaining access to top engineering talent, diverse perspectives, and innovative research opportunities that shape the future of the industry.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -270,13 +270,13 @@ const Sponsorship = () => {
             </div>
 
             <div className="sponsor-section p-8 rounded-2xl bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700 dark:to-gray-600">
-              <h3 className="text-2xl font-light text-gray-800 dark:text-gray-200 mb-4">Autonomous Navigation Systems</h3>
+              <h3 className="text-2xl font-light text-gray-800 dark:text-gray-200 mb-4">OLSN - Custom Pediatric Prosthetic Hand</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-4">
-                Development of advanced pathfinding and obstacle avoidance algorithms for mobile robots.
+                Design of a custom pediatric prosthetic hand to provide affordable, functional, and personalized solutions for children.
               </p>
               <div className="flex flex-wrap gap-2">
-                                 <span className="text-xs bg-yellow-200 text-yellow-800 px-3 py-1 rounded-full">Computer Vision</span>
-                 <span className="text-xs bg-yellow-200 text-yellow-800 px-3 py-1 rounded-full">SLAM</span>
+                                 <span className="text-xs bg-yellow-200 text-yellow-800 px-3 py-1 rounded-full">Prosthetic</span>
+                 <span className="text-xs bg-yellow-200 text-yellow-800 px-3 py-1 rounded-full">Biomedical Robotics</span>
                  <span className="text-xs bg-yellow-200 text-yellow-800 px-3 py-1 rounded-full">Control Systems</span>
               </div>
             </div>
