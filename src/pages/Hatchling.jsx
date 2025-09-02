@@ -93,7 +93,7 @@ const Hatchling = () => {
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-8">
             <div className="glass-card p-8 rounded-2xl text-center hover:scale-105 transition-all duration-300 bg-gradient-to-br from-yellow-400/20 to-amber-400/20 dark:from-yellow-500/20 dark:to-amber-500/20 border-2 border-yellow-400/30 dark:border-yellow-500/30">
               <div className="text-5xl mb-4">🏢</div>
-              <h3 className="text-3xl font-light text-gray-800 dark:text-gray-200 mb-2">15</h3>
+              <h3 className="text-3xl font-light text-gray-800 dark:text-gray-200 mb-2">4</h3>
               <p className="text-lg font-light text-gray-600 dark:text-gray-400">Organizations</p>
             </div>
             
@@ -101,7 +101,7 @@ const Hatchling = () => {
             
             <div className="glass-card p-8 rounded-2xl text-center hover:scale-105 transition-all duration-300 bg-gradient-to-br from-yellow-400/20 to-amber-400/20 dark:from-yellow-500/20 dark:to-amber-500/20 border-2 border-yellow-400/30 dark:border-yellow-500/30">
               <div className="text-5xl mb-4">🎓</div>
-              <h3 className="text-3xl font-light text-gray-800 dark:text-gray-200 mb-2">4</h3>
+              <h3 className="text-3xl font-light text-gray-800 dark:text-gray-200 mb-2">2</h3>
               <p className="text-lg font-light text-gray-600 dark:text-gray-400">Universities</p>
             </div>
             </div>
