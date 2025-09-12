@@ -358,7 +358,7 @@ const Hatchling = () => {
                      <li>• Microcontroller (MCU) vs Single-Board Controller (SBC)</li>
                      <li>• Linux</li>
                      <li>• Communication Protocols</li>
-                     <li>• Soldering and multimeter usage</li>
+                     <li>• Soldering, Crimping and multimeter usage</li>
                      <li>• Documentation navigation</li>
                    </ul>
                  </div>
