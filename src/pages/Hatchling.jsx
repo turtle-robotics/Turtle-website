@@ -143,7 +143,7 @@ const Hatchling = () => {
             <ImageCarousel 
               images={[
                 '<img src={"./assets/20250426_155351.jpg" alt= "image"}/>',
-                'https://ibb.co/Ldw2tkGd',
+                './assets/20250426_155351.jpg',
                 'https://picsum.photos/seed/hatchling4/1200/600',
                 'https://picsum.photos/seed/hatchling5/1200/600',
                 'https://picsum.photos/seed/hatchling6/1200/600'
