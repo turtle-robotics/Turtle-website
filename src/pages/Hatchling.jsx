@@ -141,13 +141,13 @@ const Hatchling = () => {
           
           <div className="rounded-2xl overflow-hidden border border-gray-200/50 dark:border-gray-700/50 glass-card" style={{ height: '400px' }}>
             <ImageCarousel 
-              images={[
-                './assets/20250427_202459_BFD66E.JPEG',
-                './assets/20250426_155351.jpg',
-                'https://picsum.photos/seed/hatchling4/1200/600',
-                'https://picsum.photos/seed/hatchling5/1200/600',
-                'https://picsum.photos/seed/hatchling6/1200/600'
-              ]} 
+             images={[
+      './assets/20250427_202459_BFD66E.JPEG',
+      './assets/20250426_155351.jpg',
+      'https://picsum.photos/seed/hatchling4/1200/600',
+      'https://picsum.photos/seed/hatchling5/1200/600',
+      'https://picsum.photos/seed/hatchling6/1200/600'
+    ]}
               autoPlay={true} 
               intervalMs={4000} 
             />
