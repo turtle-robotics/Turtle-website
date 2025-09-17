@@ -142,9 +142,9 @@ const Hatchling = () => {
           <div className="rounded-2xl overflow-hidden border border-gray-200/50 dark:border-gray-700/50 glass-card" style={{ height: '400px' }}>
             <ImageCarousel 
               images={[
-                'https://imgur.com/OFjrpq6',
-                'https://picsum.photos/seed/hatchling2/1200/600',
-                'https://picsum.photos/seed/hatchling3/1200/600',
+                'https://ibb.co/3m2YCFrN',
+                'https://ibb.co/v6tV72vP',
+                'https://ibb.co/Ldw2tkGd',
                 'https://picsum.photos/seed/hatchling4/1200/600',
                 'https://picsum.photos/seed/hatchling5/1200/600',
                 'https://picsum.photos/seed/hatchling6/1200/600'
