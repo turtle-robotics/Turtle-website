@@ -142,7 +142,7 @@ const Hatchling = () => {
           <div className="rounded-2xl overflow-hidden border border-gray-200/50 dark:border-gray-700/50 glass-card" style={{ height: '400px' }}>
             <ImageCarousel 
               images={[
-                'https://ibb.co/3m2YCFrN',
+               <blockquote class="imgur-embed-pub" lang="en" data-id="OFjrpq6"><a href="https://imgur.com/OFjrpq6">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>,
                 'https://ibb.co/v6tV72vP',
                 'https://ibb.co/Ldw2tkGd',
                 'https://picsum.photos/seed/hatchling4/1200/600',
