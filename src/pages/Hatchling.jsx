@@ -171,9 +171,9 @@ const Hatchling = () => {
               images={[
                 "/assets/20250427_202459_BFD66E.JPEG",
                 "/assets/20250426_155351.jpg",
-                "https://picsum.photos/seed/hatchling4/1200/600",
-                "https://picsum.photos/seed/hatchling5/1200/600",
-                "https://picsum.photos/seed/hatchling6/1200/600",
+                "/assets/image_2025-09-30_002708253.png",
+                "/assets/image_2025-09-30_002910095.png",
+                "/assets/image_2025-09-30_002458601.png",
               ]}
               autoPlay={true}
               intervalMs={4000}
