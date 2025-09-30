@@ -592,13 +592,13 @@ const Hatchling = () => {
             <div className="glass-card p-8 rounded-2xl text-center hover:scale-105 transition-all duration-300">
               <div className="text-5xl mb-6">📝</div>
               <h3 className="text-xl font-light text-gray-800 dark:text-gray-200 mb-4">
-                Hatchling Notes
+                Hatchling Syllabus
               </h3>
               <p className="text-gray-600 dark:text-gray-400 font-light leading-relaxed mb-4">
                 Comprehensive program notes and reference materials
               </p>
               <a
-                href="/pdfs/hatchling-notes.pdf"
+                href="/pdfs/Hatchling_Syllabus.pdf"
                 download
                 className="inline-block bg-gradient-to-r from-yellow-500 to-amber-500 text-white px-6 py-3 rounded-lg text-sm font-light hover:from-yellow-600 hover:to-amber-600 transition-all duration-300"
               >
