@@ -615,7 +615,7 @@ const Hatchling = () => {
                 Sample SolidWorks models and design examples
               </p>
               <a
-                href="/pdfs/cad-examples.pdf"
+                href="/pdfs/Hatchling CAD Examples.zip"
                 download
                 className="inline-block bg-gradient-to-r from-yellow-500 to-amber-500 text-white px-6 py-3 rounded-lg text-sm font-light hover:from-yellow-600 hover:to-amber-600 transition-all duration-300"
               >
