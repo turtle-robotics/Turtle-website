@@ -687,7 +687,7 @@ const Hatchling = () => {
                 Social Connection
               </div>
               <div className="text-sm text-gray-600 dark:text-gray-400">
-                Peers and mentors
+                Peers & Mentors
               </div>
             </div>
           </div>
