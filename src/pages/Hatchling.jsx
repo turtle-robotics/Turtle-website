@@ -69,8 +69,6 @@ const Hatchling = () => {
           </div>
 
           <p className="hero-subtitle text-xl md:text-2xl font-light tracking-wide text-gray-600 dark:text-gray-400 mb-12 max-w-3xl mx-auto">
-            Our innovative robotics program designed to develop the next
-            generation of robotics leaders and innovators.
           </p>
         </div>
       </section>
