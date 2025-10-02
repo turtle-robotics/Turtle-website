@@ -20,22 +20,44 @@ const Footer = () => {
               Advancing the future of robotics through cutting-edge research and innovation at Texas A&M University.
             </p>
             
-            {/* Social Media Icons */}
-            <div className="flex space-x-4">
-                             <a href="#" className="w-10 h-10 bg-gradient-to-r from-yellow-500 to-amber-500 rounded-full flex items-center justify-center text-white hover:scale-110 transition-all duration-300">
-                 <span className="text-sm font-bold">f</span>
-               </a>
-               <a href="#" className="w-10 h-10 bg-gradient-to-r from-yellow-500 to-amber-500 rounded-full flex items-center justify-center text-white hover:scale-110 transition-all duration-300">
-                 <span className="text-sm">📷</span>
-               </a>
-               <a href="#" className="w-10 h-10 bg-gradient-to-r from-yellow-500 to-amber-500 rounded-lg flex items-center justify-center text-white hover:scale-110 transition-all duration-300">
-                 <span className="text-sm font-bold">in</span>
-               </a>
-               <a href="#" className="w-10 h-10 bg-gradient-to-r from-yellow-500 to-amber-500 rounded-lg flex items-center justify-center text-white hover:scale-110 transition-all duration-300">
-                 <span className="text-sm">🐦</span>
-               </a>
-            </div>
-          </div>
+           {/* Social Media Icons */}
+<div className="flex space-x-4">
+  <a
+    href="https://www.facebook.com/turtlerobotics"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-10 h-10 bg-gradient-to-r from-yellow-500 to-amber-500 rounded-full flex items-center justify-center text-white hover:scale-110 transition-all duration-300"
+  >
+    <span className="text-sm font-bold">f</span>
+  </a>
+
+  <a
+    href="https://www.instagram.com/turtle_robotics/?hl=en"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-10 h-10 bg-gradient-to-r from-yellow-500 to-amber-500 rounded-full flex items-center justify-center text-white hover:scale-110 transition-all duration-300"
+  >
+    <span className="text-sm">📷</span>
+  </a>
+
+  <a
+    href="www.linkedin.com/company/tamu-turtle"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-10 h-10 bg-gradient-to-r from-yellow-500 to-amber-500 rounded-lg flex items-center justify-center text-white hover:scale-110 transition-all duration-300"
+  >
+    <span className="text-sm font-bold">in</span>
+  </a>
+
+  <a
+    href="https://x.com/turtle_robotics"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-10 h-10 bg-gradient-to-r from-yellow-500 to-amber-500 rounded-lg flex items-center justify-center text-white hover:scale-110 transition-all duration-300"
+  >
+    <span className="text-sm">🐦</span>
+  </a>
+</div>
           
           {/* Second Column - Quick Links */}
           <div className="space-y-4">
