@@ -55,12 +55,13 @@ const Hatchling = () => {
         ref={heroRef}
         className="relative min-h-screen flex items-center justify-center px-4"
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900"></div>
-        <div className="relative text-center max-w-6xl mx-auto z-10">
-          <h1 className="text-6xl md:text-8xl lg:text-9xl font-extralight tracking-tight text-gray-800 dark:text-gray-200 mb-8">
-            <span className="block">HATCHLING</span>
-            <span className="block text-accent">PROGRAM</span>
-          </h1>
+       <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900"></div>
+<div className="relative text-center max-w-6xl mx-auto z-10">
+  <h1 className="text-6xl md:text-8xl lg:text-9xl font-extralight tracking-tight text-gray-800 dark:text-gray-200 mb-8">
+    <span className="block">HATCHLING</span>
+    <span className="block">DEVELOPMENT</span>
+    <span className="block text-accent">PROGRAM</span>
+  </h1>
 
           <div className="founding-info mb-8">
             <p className="text-lg md:text-xl font-light text-gray-600 dark:text-gray-400">
