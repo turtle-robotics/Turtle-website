@@ -548,13 +548,14 @@ const Hatchling = () => {
                       className="glass-card border border-gray-200 dark:border-gray-700 px-4 py-3 rounded-lg text-gray-800 dark:text-gray-200 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
                       onChange={(e) => {
                         const selectedWeek = e.target.value;
-                        const downloadBtn =
-                          document.getElementById("downloadBtn");
+                        const downloadBtn = document.getElementById("downloadBtn");
                         if (selectedWeek && downloadBtn) {
-                          downloadBtn.href = pdfMap[selectedWeek];
+                          const filePath = pdfMap[selectedWeek];
+                          downloadBtn.href = encodeURI(filePath); // 👈 Encodes spaces and '+'
                           downloadBtn.style.display = "inline-block";
                         }
                       }}
+
                     >
                       <option value="">Select a week...</option>
                       <option value="1">Week 1: Introductions</option>
