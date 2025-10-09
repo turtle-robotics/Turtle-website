@@ -535,7 +535,7 @@ const Hatchling = () => {
                   2: "/pdfs/Hatchling Week 2 - SolidWorks (CAD) Foundation.pptx.pdf",
                   3: "/pdfs/Hatchling Week 3 - SolidWorks 3D.pptx.pdf",
                   4: "/pdfs/Hatchling Week 4 -Tools, Project and Process.pptx.pdf",
-                  5: "public/pdfs/Hatchling Week 5 - Design Review and C++.pptx.pdf",
+                  5: "/pdfs/Hatchling Week 5 - Design Review and C++.pptx.pdf",
                   6: "/pdfs/Hatchling Week 6 - SolidWorks Assembly.pptx.pdf",
                   7: "/pdfs/Hatchling Week 7 - Programming and GitHub.pptx.pdf",
                   8: "/pdfs/Hatchling Week 8 - Electronics and Soldering.pptx.pdf",
