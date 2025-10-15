@@ -57,7 +57,7 @@ const Hatchling = () => {
       >
         {/* Background Image */}
         <img
-          src="/assets/your-photo-file-name.png" // 👈 Replace this with your actual image file path
+          src="/assets/hatchling.jpg" // 👈 Replace this with your actual image file path
           alt="Hatchling Team"
           className="absolute inset-0 w-full h-full object-cover object-center brightness-90 dark:brightness-75"
         />
