@@ -57,18 +57,18 @@ const Hatchling = () => {
       >
         {/* Background Image */}
         <img
-          src="/assets/hatchling.jpg" // 👈 Replace this with your actual image file path
-          alt="Hatchling Team"
+          src="/assets/hatchling.jpg" // 👈 Replace with your photo file
+          alt="Hatchling Program Background"
           className="absolute inset-0 w-full h-full object-cover object-center brightness-90 dark:brightness-75"
         />
 
         {/* Semi-transparent overlay */}
         <div className="absolute inset-0 bg-black/40 dark:bg-black/50"></div>
 
-        {/* Text + Logo Overlay */}
-        <div className="relative text-center z-10 max-w-6xl mx-auto">
-          <div className="inline-block bg-[#0b214f]/90 dark:bg-[#132c66]/90 px-12 py-6 rounded-xl shadow-xl">
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-extralight tracking-tight text-white">
+        {/* Transparent text box */}
+        <div className="relative text-center z-10 max-w-6xl mx-auto -translate-y-16">
+          <div className="inline-block bg-white/20 dark:bg-white/10 backdrop-blur-md px-12 py-6 rounded-2xl shadow-lg border border-white/30">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-extralight tracking-tight text-white drop-shadow-md">
               <span className="block">HATCHLING</span>
               <span className="block">DEVELOPMENT</span>
               <span className="block">PROGRAM</span>
@@ -76,7 +76,7 @@ const Hatchling = () => {
           </div>
 
           <div className="founding-info mt-8">
-            <p className="text-lg md:text-xl font-light text-gray-100">
+            <p className="text-lg md:text-xl font-light text-gray-100 drop-shadow-md">
               Founded 2015 • External Expansion 2025
             </p>
           </div>
@@ -189,6 +189,10 @@ const Hatchling = () => {
           </div>
         </div>
       </section>
+
+      {/* Learning Objectives and Schedule Section */}
+      {/* ... keep all the rest of your original sections unchanged here ... */}
+
     </div>
   );
 };
