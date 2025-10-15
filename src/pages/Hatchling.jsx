@@ -57,23 +57,22 @@ const Hatchling = () => {
       >
         {/* Background Image */}
         <img
-          src="/assets/hatchling.jpg" // 👈 Replace with your photo file
+          src="/assets/hatchling.jpg" // 👈 Replace with your actual image
           alt="Hatchling Program Background"
           className="absolute inset-0 w-full h-full object-cover object-center brightness-90 dark:brightness-75"
         />
 
-        {/* Semi-transparent overlay */}
+        {/* Overlay for readability */}
         <div className="absolute inset-0 bg-black/40 dark:bg-black/50"></div>
 
-        {/* Transparent text box */}
-        <div className="relative text-center z-10 max-w-6xl mx-auto -translate-y-16">
-          <div className="inline-block bg-white/20 dark:bg-white/10 backdrop-blur-md px-12 py-6 rounded-2xl shadow-lg border border-white/30">
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-extralight tracking-tight text-white drop-shadow-md">
-              <span className="block">HATCHLING</span>
-              <span className="block">DEVELOPMENT</span>
-              <span className="block">PROGRAM</span>
-            </h1>
-          </div>
+        {/* Text only (no box) */}
+        <div className="relative text-center z-10 max-w-6xl mx-auto -translate-y-32">
+          {/* 👆 moves text higher */}
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-extralight tracking-tight text-white drop-shadow-2xl">
+            <span className="block">HATCHLING</span>
+            <span className="block">DEVELOPMENT</span>
+            <span className="block text-accent">PROGRAM</span>
+          </h1>
 
           <div className="founding-info mt-8">
             <p className="text-lg md:text-xl font-light text-gray-100 drop-shadow-md">
@@ -190,9 +189,8 @@ const Hatchling = () => {
         </div>
       </section>
 
-      {/* Learning Objectives and Schedule Section */}
-      {/* ... keep all the rest of your original sections unchanged here ... */}
-
+      {/* Learning Objectives, Schedule, Published Materials, Stats, CTA — all your original sections remain unchanged */}
+      {/* ... keep full rest of original content here ... */}
     </div>
   );
 };
