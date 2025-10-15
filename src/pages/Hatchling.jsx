@@ -59,7 +59,7 @@ const Hatchling = () => {
         <img
           src="/assets/hatchling.jpg" // 👈 Replace with your actual image
           alt="Hatchling Program Background"
-          className="absolute inset-0 w-full h-full object-cover object-center brightness-110 dark:brightness-95"
+          className="absolute inset-0 w-full h-full object-cover object-center brightness-111 dark:brightness-96"
         />
 
         {/* Overlay for readability */}
