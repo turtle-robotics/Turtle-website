@@ -63,7 +63,7 @@ const Hatchling = () => {
   />
 
   {/* Overlay for light contrast */}
-  <div className="absolute inset-0 bg-black/45 dark:bg-black/45"></div>
+  <div className="absolute inset-0 bg-black/55 dark:bg-black/55"></div>
 
   {/* Text only — no box */}
   <div className="relative text-center z-10 max-w-6xl mx-auto -translate-y-36">
