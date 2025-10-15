@@ -50,37 +50,37 @@ const Hatchling = () => {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section
-        ref={heroRef}
-        className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden"
-      >
-        {/* Background Image */}
-        <img
-          src="/assets/hatchling.jpg" // 👈 Replace with your actual image
-          alt="Hatchling Program Background"
-          className="absolute inset-0 w-full h-full object-cover object-center brightness-111 dark:brightness-96"
-        />
+     {/* Hero Section */}
+<section
+  ref={heroRef}
+  className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden"
+>
+  {/* Background Image */}
+  <img
+    src="/assets/your-photo-file-name.png" // 👈 Replace with your image
+    alt="Hatchling Program Background"
+    className="absolute inset-0 w-full h-full object-cover object-center brightness-110 dark:brightness-95"
+  />
 
-        {/* Overlay for readability */}
-        <div className="absolute inset-0 bg-black/40 dark:bg-black/50"></div>
+  {/* Overlay for light contrast */}
+  <div className="absolute inset-0 bg-black/25 dark:bg-black/40"></div>
 
-        {/* Text only (no box) */}
-        <div className="relative text-center z-10 max-w-6xl mx-auto -translate-y-32">
-          {/* 👆 moves text higher */}
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-extralight tracking-tight text-white drop-shadow-2xl">
-            <span className="block">HATCHLING</span>
-            <span className="block">DEVELOPMENT</span>
-            <span className="block text-accent">PROGRAM</span>
-          </h1>
+  {/* Text only — no box */}
+  <div className="relative text-center z-10 max-w-6xl mx-auto -translate-y-36">
+    <h1 className="text-5xl md:text-7xl lg:text-8xl font-extralight tracking-tight text-white drop-shadow-2xl">
+      <span className="block">HATCHLING</span>
+      <span className="block">DEVELOPMENT</span>
+      <span className="block text-accent">PROGRAM</span>
+    </h1>
 
-          <div className="founding-info mt-8">
-            <p className="text-lg md:text-xl font-light text-gray-100 drop-shadow-md">
-              Founded 2015 • External Expansion 2025
-            </p>
-          </div>
-        </div>
-      </section>
+    <div className="founding-info mt-8">
+      <p className="text-lg md:text-xl font-light text-gray-100 drop-shadow-md">
+        Founded 2015 • External Expansion 2025
+      </p>
+    </div>
+  </div>
+</section>
+
 
       {/* Mission Statement Section */}
       <section className="py-24 px-4">
