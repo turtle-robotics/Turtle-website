@@ -226,7 +226,7 @@ const About = () => {
             <button onClick={() => toggleSection('executive')} className="w-full text-left font-light text-xl text-gray-800 dark:text-gray-200 mb-4">
               Executive Roles {openSection.executive ? '▲' : '▼'}
             </button>
-            {openSection.executive && <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">{renderLeadership(['President','External Vice President','Internal Vice President','Project Vice President','Development Vice President','Treasurer'])}</div>}
+            {openSection.executive && <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">{renderLeadership(['President','External Vice President','Internal Vice President','Project Vice President','Development Vice President'])}</div>}
           </div>
 
           {/* External Branch Accordion */}
@@ -242,7 +242,7 @@ const About = () => {
             <button onClick={() => toggleSection('internal')} className="w-full text-left font-light text-xl text-gray-800 dark:text-gray-200 mb-4">
               Internal Branch {openSection.internal ? '▲' : '▼'}
             </button>
-            {openSection.internal && <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">{renderLeadership(['Logistics Officer','Finance Officer','Lab Quality Officer','Lab Quality Committee'])}</div>}
+            {openSection.internal && <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">{renderLeadership(['Logistics Officer','Finance Officer','Treasurer','Lab Quality Officer','Lab Quality Committee'])}</div>}
           </div>
 
           {/* Webdevelopment Branch Accordion */}
