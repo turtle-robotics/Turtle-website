@@ -137,9 +137,7 @@ const Hatchling = () => {
 
           <div className="text-center">
             <p className="text-lg font-light text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-12">
-              Partnering with leading companies, research institutions, and
-              academic partners to expand our robotics education program across
-              multiple universities and organizations.
+
             </p>
 
             {/* Bring Hatchling to Your Organization */}

@@ -131,9 +131,24 @@ const About = () => {
       'Fall 2024 - Spring 2025: Willem Bannick -> Hatchling',
       'Fall 2025 - : Samantha Woravka',
     ],
-    developmentVP: ['Past Development VP 1', 'Past Development VP 2'],
-    treasurer: ['Past Treasurer 1', 'Past Treasurer 2'],
-    facultyAdvisor: ['Past Faculty Advisor 1', 'Past Faculty Advisor 2']
+    developmentVP: [
+      'Fall 2025: Kalen Jaroszewski -> Hatchling',
+    ],
+    treasurer: [
+      'Spring 2013 - Spring 2015: Deepak Dhankani',
+      'Fall 2015: Ivan Cortez',
+      'Spring 2016 - Spring 2017: Spencer Capps -> Hatchling',
+      'Fall 2017 - Spring 2018: Kurtis Davis -> Hatchling',
+      'Fall 2018 - Spring 2020: Nicholas Arackal -> Hatchling',
+      'Fall 2020 - Spring 2021: Osmani Perez -> Hatchling',
+      'Fall 2021 - Spring 2024: Thomas Dawson -> Hatchling',
+      'Fall 2024 - : Raquel Garcia -> Hatchling',
+    ],
+    facultyAdvisor: [
+      'Aaron Ames: Fall 2013 - Fall 2014',
+      'Pilwon Hur: Spring 2015 - Fall 2020',
+      'Sivakumar Rathinam: Spring 2021 - Present',
+    ]
   }
 
   const [openSection, setOpenSection] = useState({
