@@ -4,8 +4,6 @@ import StatisticsCard from '../components/StatisticsCard'
 
 const About = () => {
   const heroRef = useRef(null)
-  const [openCurrent, setOpenCurrent] = useState(null) // Current Leadership accordion
-  const [openHistorical, setOpenHistorical] = useState(null) // Historical Leadership accordion
 
   useEffect(() => {
     const hero = heroRef.current
@@ -14,67 +12,121 @@ const About = () => {
     gsap.fromTo(
       hero.querySelectorAll('h1 span'),
       { y: 100, opacity: 0 },
-      { y: 0, opacity: 1, duration: 1.2, stagger: 0.2, ease: "power3.out" }
+      { y: 0, opacity: 1, duration: 1.2, stagger: 0.2, ease: 'power3.out' }
     )
 
     gsap.fromTo(
       hero.querySelector('.hero-subtitle'),
       { y: 50, opacity: 0 },
-      { y: 0, opacity: 1, duration: 1, delay: 0.8, ease: "power3.out" }
+      { y: 0, opacity: 1, duration: 1, delay: 0.8, ease: 'power3.out' }
     )
   }, [])
 
   const statistics = [
-    { count: 22, label: "Advanced Research Projects", description: "Cutting-edge robotics initiatives" },
-    { count: 2, label: "Competition Teams", description: "Robotics competition teams" },
-    { count: 250, label: "Student Researchers", description: "250+ active researchers" },
-    { count: 110, label: "Hatchling Members", description: "Program participants" }
+    { count: 22, label: 'Advanced Research Projects', description: 'Cutting-edge robotics initiatives' },
+    { count: 2, label: 'Competition Teams', description: 'Robotics competition teams' },
+    { count: 250, label: 'Student Researchers', description: '250+ active researchers' },
+    { count: 110, label: 'Hatchling Members', description: 'Program participants' },
   ]
 
   const currentLeadership = [
+    // Executive roles
     { role: 'President', name: 'Ian Lansdowne', period: 'Fall 2025 - Spring 2026', description: 'Leading Turtle Robotics into its next chapter of innovation and growth' },
     { role: 'External Vice President', name: 'Yousuf Shafiu', period: 'Fall 2025 - Spring 2026', description: 'Overseeing external relations and partnerships' },
     { role: 'Internal Vice President', name: 'Ian Wilhite', period: 'Fall 2025 - Spring 2026', description: 'Managing internal operations and team coordination' },
     { role: 'Project Vice President', name: 'Sam Woravka', period: 'Fall 2025 - Spring 2026', description: 'Leading project development and technical initiatives' },
     { role: 'Development Vice President', name: 'Kalen Jaroszewski', period: 'Fall 2025 - Spring 2026', description: 'Driving innovation and research advancement' },
     { role: 'Treasurer', name: 'Raquel Garcia', period: 'Fall 2025 - Spring 2026', description: 'Managing financial operations and budgeting' },
-    // ...other current leaders
+
+    // External org
+    { role: 'Corporate Relations Officer', name: 'James Lee', period: 'Fall 2025 - Spring 2026', description: 'Building and maintaining corporate partnerships' },
+    { role: 'Public Relations Officer', name: 'Isaac Cabello', period: 'Fall 2025 - Spring 2026', description: 'Managing club communications and public presence' },
+    { role: 'Sponsorship Committee', name: 'Jacob Fuerst', period: 'Fall 2025 - Spring 2026', description: 'Sponsorship strategy and outreach' },
+    { role: 'Sponsorship Committee', name: 'Julia Sopala', period: 'Fall 2025 - Spring 2026', description: 'Sponsorship strategy and outreach' },
+    { role: 'Sponsorship Committee', name: 'Preston Nguyen', period: 'Fall 2025 - Spring 2026', description: 'Sponsorship strategy and outreach' },
+    { role: 'Sponsorship Committee', name: 'Yousuf Shafiu', period: 'Fall 2025 - Spring 2026', description: 'Sponsorship strategy and outreach' },
+    { role: 'Public Relations Committee', name: 'Alexis Bunta', period: 'Fall 2025 - Spring 2026', description: 'Content and media support' },
+    { role: 'Public Relations Committee', name: 'Noah Sherman', period: 'Fall 2025 - Spring 2026', description: 'Content and media support' },
+    { role: 'Public Relations Committee', name: 'Renee Zhu', period: 'Fall 2025 - Spring 2026', description: 'Content and media support' },
+
+    // Web org
+    { role: 'Webmaster', name: 'Saksham Mohan', period: 'Fall 2025 - Spring 2026', description: 'Maintaining and developing the organization\'s web presence' },
+    { role: 'Web Development Committee', name: 'Jackson Marshall', period: 'Fall 2025 - Spring 2026', description: 'Full-stack development and site maintenance' },
+
+    // Internal org
+    { role: 'Logistics Officer', name: 'Ryo Kato', period: 'Fall 2025 - Spring 2026', description: 'Events, scheduling, and operations' },
+    { role: 'Finance Officer', name: 'Eddy Silva', period: 'Fall 2025 - Spring 2026', description: 'Financial planning and reimbursements' },
+    { role: 'Lab Quality Officer', name: 'Haider Mahdi', period: 'Fall 2025 - Spring 2026', description: 'Safety and quality standards in the lab' },
+    { role: 'Lab Quality Committee', name: 'Caleb Santiago', period: 'Fall 2025 - Spring 2026', description: 'Lab quality and safety support' },
+    { role: 'Lab Quality Committee', name: 'Dalys Guajardo', period: 'Fall 2025 - Spring 2026', description: 'Lab quality and safety support' },
+    { role: 'Lab Quality Committee', name: 'Mya Tinsay', period: 'Fall 2025 - Spring 2026', description: 'Lab quality and safety support' },
+    { role: 'Lab Quality Committee', name: 'Thomas Lopez', period: 'Fall 2025 - Spring 2026', description: 'Lab quality and safety support' },
+    { role: 'Lab Quality Committee', name: 'Victor Cardona', period: 'Fall 2025 - Spring 2026', description: 'Lab quality and safety support' },
+
+    // Projects org
+    { role: 'Documentation Officer', name: 'Emily Tredemeyer', period: 'Fall 2025 - Spring 2026', description: 'Documentation standards and archives' },
+    { role: 'Design Review Officer', name: 'Aidan Briggs', period: 'Fall 2025 - Spring 2026', description: 'Project design reviews and guidance' },
+    { role: 'Design Review Officer', name: 'Evan Chan', period: 'Fall 2025 - Spring 2026', description: 'Project design reviews and guidance' },
+    { role: 'Design Review Officer', name: 'Jonathon Foltyn', period: 'Fall 2025 - Spring 2026', description: 'Project design reviews and guidance' },
+    { role: 'Design Review Officer', name: 'Micah Guttman', period: 'Fall 2025 - Spring 2026', description: 'Project design reviews and guidance' },
+    { role: 'Design Review Officer', name: 'Will McGarity', period: 'Fall 2025 - Spring 2026', description: 'Project design reviews and guidance' },
+
+    // Development org
+    { role: 'Workshop Officer', name: 'Vedant Soni', period: 'Fall 2025 - Spring 2026', description: 'Workshops and technical training' },
+    { role: 'Hatchling Director', name: 'Alejandro Avila', period: 'Fall 2025 - Spring 2026', description: 'Hatchling leadership and mentorship' },
+    { role: 'Hatchling Director', name: 'Ethan Real', period: 'Fall 2025 - Spring 2026', description: 'Hatchling leadership and mentorship' },
+    { role: 'Hatchling Director', name: 'Gael Mamenta', period: 'Fall 2025 - Spring 2026', description: 'Hatchling leadership and mentorship' },
+    { role: 'Hatchling Director', name: 'Karthik Jayakumar', period: 'Fall 2025 - Spring 2026', description: 'Hatchling leadership and mentorship' },
+    { role: 'Hatchling Director', name: 'Mohid Ismail', period: 'Fall 2025 - Spring 2026', description: 'Hatchling leadership and mentorship' },
+    { role: 'Hatchling Director', name: 'Nathan Mersino', period: 'Fall 2025 - Spring 2026', description: 'Hatchling leadership and mentorship' },
+    { role: 'Hatchling Director', name: 'William Shan', period: 'Fall 2025 - Spring 2026', description: 'Hatchling leadership and mentorship' },
   ]
 
   const historicalLeadership = {
-    President: [
-      { period: "Fall 2013 - Spring 2015", name: "Kenny Chour" },
-      { period: "Fall 2015 - Spring 2016", name: "Mark Wager" },
-      { period: "Fall 2016 - Spring 2017", name: "Sam Terrill" },
-      { period: "Fall 2017", name: "Josh Vancura → Hatchling" },
-      { period: "Spring 2018", name: "Ahmad Jawad" },
-      { period: "Fall 2018 - Spring 2020", name: "Krishna Vamsi → Hatchling" },
-      { period: "Fall 2020 - Spring 2023", name: "Bret Topham" },
-      { period: "Fall 2023 - Spring 2025", name: "Zachary Bucknor-Smartt → Hatchling" },
-      { period: "Fall 2025 - Present", name: "Ian Lansdowne" }
-    ],
-    "Internal VP": [
-      { period: "Fall 2013 - Spring 2015", name: "Ivan Cortes" },
-      { period: "Fall 2015 - Spring 2016", name: "Jim McCabe" },
-      { period: "Fall 2016 - Spring 2017", name: "Abigail Dowd → Hatchling" },
-      { period: "Fall 2017", name: "Ahmad Jawad" },
-      { period: "Spring 2018", name: "Olawale Salaudeen" },
-      { period: "Fall 2018", name: "Joanna Steele" },
-      { period: "Spring 2019 - Spring 2020", name: "Chris Geisheker" },
-      { period: "Fall 2020 - Spring 2022", name: "Jordan Nunn → Hatchling" },
-      { period: "Fall 2022 - Spring 2023", name: "Rishi Jangale → Hatchling" },
-      { period: "Fall 2023 - Spring 2024", name: "Brendan Wyatt" },
-      { period: "Fall 2024 - Spring 2025", name: "Ian Lansdowne" },
-      { period: "Fall 2025 - Present", name: "Ian Wilhite → Hatchling" }
-    ],
-    // ...other historical roles
+    president: ['Past President 1', 'Past President 2'],
+    internalVP: ['Past Internal VP 1', 'Past Internal VP 2'],
+    externalVP: ['Past External VP 1', 'Past External VP 2'],
+    projectVP: ['Past Project VP 1', 'Past Project VP 2'],
+    developmentVP: ['Past Development VP 1', 'Past Development VP 2'],
+    treasurer: ['Past Treasurer 1', 'Past Treasurer 2'],
+    facultyAdvisor: ['Past Faculty Advisor 1', 'Past Faculty Advisor 2']
   }
 
-  const toggleCurrent = (index) => setOpenCurrent(openCurrent === index ? null : index)
-  const toggleHistorical = (role) => setOpenHistorical(openHistorical === role ? null : role)
+  const [openSection, setOpenSection] = useState({
+    executive: true,
+    external: true,
+    internal: true,
+    web: true,
+    projects: true,
+    development: true,
+    presidentHistory: true,
+    internalVPHistory: true,
+    externalVPHistory: true,
+    projectVPHistory: true,
+    developmentVPHistory: true,
+    treasurerHistory: true,
+    facultyAdvisorHistory: true,
+  })
+
+  const toggleSection = (section) => {
+    setOpenSection(prev => ({ ...prev, [section]: !prev[section] }))
+  }
+
+  const renderLeadership = (roles) =>
+    currentLeadership
+      .filter(l => roles.includes(l.role))
+      .map((leader, index) => (
+        <div key={index} className="glass-card p-6 rounded-2xl hover:scale-105 transition-all duration-300">
+          <h3 className="text-lg font-light text-accent mb-2">{leader.role}</h3>
+          <h4 className="text-base font-light text-gray-800 dark:text-gray-200 mb-2">{leader.name}</h4>
+          <p className="text-xs font-light text-gray-600 dark:text-gray-400 mb-3">{leader.period}</p>
+          <p className="text-xs font-light text-gray-600 dark:text-gray-400 leading-relaxed">{leader.description}</p>
+        </div>
+      ))
 
   return (
     <div className="min-h-screen">
+
       {/* Hero Section */}
       <section ref={heroRef} className="relative min-h-screen flex items-center justify-center px-4">
         <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900"></div>
@@ -103,76 +155,84 @@ const About = () => {
         </div>
       </section>
 
-      {/* Current Leadership Accordion */}
+      {/* Leadership Section */}
       <section className="py-24 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-20 text-gray-800 dark:text-gray-200">
             OUR <span className="text-accent">TEAM</span>
           </h2>
 
-          {currentLeadership.map((leader, index) => (
-            <div key={index} className="glass-card rounded-2xl mb-4">
-              <button
-                onClick={() => toggleCurrent(index)}
-                className="w-full flex justify-between items-center p-6"
-              >
-                <div>
-                  <h3 className="text-lg font-light text-accent">{leader.role}</h3>
-                  <h4 className="text-base font-light text-gray-800 dark:text-gray-200">{leader.name}</h4>
-                  <p className="text-xs font-light text-gray-600 dark:text-gray-400">{leader.period}</p>
-                </div>
-                <span className="text-accent font-bold text-2xl">{openCurrent === index ? '−' : '+'}</span>
-              </button>
-              {openCurrent === index && (
-                <div className="px-6 pb-6 text-gray-600 dark:text-gray-400 text-sm font-light">
-                  {leader.description}
-                </div>
-              )}
-            </div>
-          ))}
+          {/* Executive Roles Accordion */}
+          <div className="mb-12">
+            <button onClick={() => toggleSection('executive')} className="w-full text-left font-light text-xl text-gray-800 dark:text-gray-200 mb-4">
+              Executive Roles {openSection.executive ? '▲' : '▼'}
+            </button>
+            {openSection.executive && <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">{renderLeadership(['President','External Vice President','Internal Vice President','Project Vice President','Development Vice President','Treasurer'])}</div>}
+          </div>
+
+          {/* External Org Accordion */}
+          <div className="mb-12">
+            <button onClick={() => toggleSection('external')} className="w-full text-left font-light text-xl text-gray-800 dark:text-gray-200 mb-4">
+              External Org {openSection.external ? '▲' : '▼'}
+            </button>
+            {openSection.external && <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">{renderLeadership(['Corporate Relations Officer','Public Relations Officer','Sponsorship Committee','Public Relations Committee'])}</div>}
+          </div>
+
+          {/* Internal Org Accordion */}
+          <div className="mb-12">
+            <button onClick={() => toggleSection('internal')} className="w-full text-left font-light text-xl text-gray-800 dark:text-gray-200 mb-4">
+              Internal Org {openSection.internal ? '▲' : '▼'}
+            </button>
+            {openSection.internal && <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">{renderLeadership(['Logistics Officer','Finance Officer','Lab Quality Officer','Lab Quality Committee'])}</div>}
+          </div>
+
+          {/* Web Org Accordion */}
+          <div className="mb-12">
+            <button onClick={() => toggleSection('web')} className="w-full text-left font-light text-xl text-gray-800 dark:text-gray-200 mb-4">
+              Web Org {openSection.web ? '▲' : '▼'}
+            </button>
+            {openSection.web && <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">{renderLeadership(['Webmaster','Web Development Committee'])}</div>}
+          </div>
+
+          {/* Projects Org Accordion */}
+          <div className="mb-12">
+            <button onClick={() => toggleSection('projects')} className="w-full text-left font-light text-xl text-gray-800 dark:text-gray-200 mb-4">
+              Projects Org {openSection.projects ? '▲' : '▼'}
+            </button>
+            {openSection.projects && <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">{renderLeadership(['Documentation Officer','Design Review Officer'])}</div>}
+          </div>
+
+          {/* Development Org Accordion */}
+          <div className="mb-12">
+            <button onClick={() => toggleSection('development')} className="w-full text-left font-light text-xl text-gray-800 dark:text-gray-200 mb-4">
+              Development Org {openSection.development ? '▲' : '▼'}
+            </button>
+            {openSection.development && <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">{renderLeadership(['Workshop Officer','Hatchling Director'])}</div>}
+          </div>
         </div>
       </section>
 
       {/* Historical Leadership Accordion */}
-      <section className="py-24 px-4 bg-gray-50 dark:bg-gray-900">
+      <section className="py-24 px-4">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-12 text-gray-800 dark:text-gray-200">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-20 text-gray-800 dark:text-gray-200">
             HISTORICAL <span className="text-accent">LEADERSHIP</span>
           </h2>
-          {Object.entries(historicalLeadership).map(([role, records], idx) => (
-            <div key={idx} className="glass-card rounded-2xl mb-4">
-              <button
-                onClick={() => toggleHistorical(role)}
-                className="w-full flex justify-between items-center p-6"
-              >
-                <h3 className="text-lg font-light text-accent">{role}</h3>
-                <span className="text-accent font-bold text-2xl">{openHistorical === role ? '−' : '+'}</span>
+
+          {Object.entries(historicalLeadership).map(([key, officers]) => (
+            <div key={key} className="mb-12">
+              <button onClick={() => toggleSection(key + 'History')} className="w-full text-left font-light text-xl text-gray-800 dark:text-gray-200 mb-4">
+                {`Past ${key.charAt(0).toUpperCase() + key.slice(1)}`} {openSection[key + 'History'] ? '▲' : '▼'}
               </button>
-              {openHistorical === role && (
-                <div className="px-6 pb-6 text-gray-600 dark:text-gray-400 text-sm font-light">
-                  <ul>
-                    {records.map((record, rIdx) => (
-                      <li key={rIdx} className="mb-2">
-                        <span className="font-semibold">{record.period}:</span> {record.name}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+              {openSection[key + 'History'] && (
+                <ul className="list-disc ml-6">
+                  {officers.map((officer, i) => (
+                    <li key={i} className="mb-2">{officer}</li>
+                  ))}
+                </ul>
               )}
             </div>
           ))}
-        </div>
-      </section>
-
-      {/* Mission Section */}
-      <section className="py-24 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight mb-8 text-gray-800 dark:text-gray-200">
-            OUR <span className="text-accent">MISSION</span>
-          </h2>
-          <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 font-light leading-relaxed">
-            Turtle Robotics exists to provide students at Texas A&M University the resources, mentorship, and opportunities to explore advanced robotics projects, compete at a high level, and grow as future engineers and innovators.
-          </p>
         </div>
       </section>
 
