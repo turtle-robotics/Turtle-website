@@ -36,9 +36,8 @@ const About = () => {
     { role: 'Internal Vice President', name: 'Ian Wilhite', period: 'Fall 2025 - Spring 2026', description: 'Managing internal operations and team coordination' },
     { role: 'Project Vice President', name: 'Sam Woravka', period: 'Fall 2025 - Spring 2026', description: 'Leading project development and technical initiatives' },
     { role: 'Development Vice President', name: 'Kalen Jaroszewski', period: 'Fall 2025 - Spring 2026', description: 'Driving innovation and research advancement' },
-    { role: 'Treasurer', name: 'Raquel Garcia', period: 'Fall 2025 - Spring 2026', description: 'Managing financial operations and budgeting' },
 
-    // External Branch
+    // External Branch — officers then committee members
     { role: 'Corporate Relations Officer', name: 'James Lee', period: 'Fall 2025 - Spring 2026', description: 'Building and maintaining corporate partnerships' },
     { role: 'Public Relations Officer', name: 'Isaac Cabello', period: 'Fall 2025 - Spring 2026', description: 'Managing club communications and public presence' },
     { role: 'Sponsorship Committee', name: 'Jacob Fuerst', period: 'Fall 2025 - Spring 2026', description: 'Sponsorship strategy and outreach' },
@@ -49,13 +48,14 @@ const About = () => {
     { role: 'Public Relations Committee', name: 'Noah Sherman', period: 'Fall 2025 - Spring 2026', description: 'Content and media support' },
     { role: 'Public Relations Committee', nameExternal: 'Renee Zhu', period: 'Fall 2025 - Spring 2026', description: 'Content and media support' },
 
-    // Web Branch
-    { role: 'Webmaster', name: 'Saksham Mohan', period: 'Fall 2025 - Spring 2026', description: 'Maintaining and developing the Branchanization\'s web presence' },
+    // Web Branch — officer then committee
+    { role: 'Webmaster', name: 'Saksham Mohan', period: 'Fall 2025 - Spring 2026', description: "Maintaining and developing the organization's web presence" },
     { role: 'Web Development Committee', name: 'Jackson Marshall', period: 'Fall 2025 - Spring 2026', description: 'Full-stack development and site maintenance' },
 
-    // Internal Branch
+    // Internal Branch — officers then committees
     { role: 'Logistics Officer', name: 'Ryo Kato', period: 'Fall 2025 - Spring 2026', description: 'Events, scheduling, and operations' },
     { role: 'Finance Officer', name: 'Eddy Silva', period: 'Fall 2025 - Spring 2026', description: 'Financial planning and reimbursements' },
+    { role: 'Treasurer', name: 'Raquel Garcia', period: 'Fall 2025 - Spring 2026', description: 'Managing financial operations and budgeting' },
     { role: 'Lab Quality Officer', name: 'Haider Mahdi', period: 'Fall 2025 - Spring 2026', description: 'Safety and quality standards in the lab' },
     { role: 'Lab Quality Committee', name: 'Caleb Santiago', period: 'Fall 2025 - Spring 2026', description: 'Lab quality and safety support' },
     { role: 'Lab Quality Committee', name: 'Dalys Guajardo', period: 'Fall 2025 - Spring 2026', description: 'Lab quality and safety support' },
@@ -63,7 +63,7 @@ const About = () => {
     { role: 'Lab Quality Committee', name: 'Thomas Lopez', period: 'Fall 2025 - Spring 2026', description: 'Lab quality and safety support' },
     { role: 'Lab Quality Committee', name: 'Victor Cardona', period: 'Fall 2025 - Spring 2026', description: 'Lab quality and safety support' },
 
-    // Projects Branch
+    // Projects Branch — officers then committees
     { role: 'Documentation Officer', name: 'Emily Tredemeyer', period: 'Fall 2025 - Spring 2026', description: 'Documentation standards and archives' },
     { role: 'Design Review Officer', name: 'Aidan Briggs', period: 'Fall 2025 - Spring 2026', description: 'Project design reviews and guidance' },
     { role: 'Design Review Officer', name: 'Evan Chan', period: 'Fall 2025 - Spring 2026', description: 'Project design reviews and guidance' },
@@ -71,7 +71,7 @@ const About = () => {
     { role: 'Design Review Officer', name: 'Micah Guttman', period: 'Fall 2025 - Spring 2026', description: 'Project design reviews and guidance' },
     { role: 'Design Review Officer', name: 'Will McGarity', period: 'Fall 2025 - Spring 2026', description: 'Project design reviews and guidance' },
 
-    // Development Branch
+    // Development Branch — officers then directors
     { role: 'Workshop Officer', name: 'Vedant Soni', period: 'Fall 2025 - Spring 2026', description: 'Workshops and technical training' },
     { role: 'Hatchling Director', name: 'Alejandro Avila', period: 'Fall 2025 - Spring 2026', description: 'Hatchling leadership and mentorship' },
     { role: 'Hatchling Director', name: 'Ethan Real', period: 'Fall 2025 - Spring 2026', description: 'Hatchling leadership and mentorship' },
@@ -158,13 +158,13 @@ const About = () => {
     web: true,
     projects: true,
     development: true,
-    presidentHistory: true,
-    internalVPHistory: true,
-    externalVPHistory: true,
-    projectVPHistory: true,
-    developmentVPHistory: true,
-    treasurerHistory: true,
-    facultyAdvisorHistory: true,
+    presidentHistory: false,
+    internalVPHistory: false,
+    externalVPHistory: false,
+    projectVPHistory: false,
+    developmentVPHistory: false,
+    treasurerHistory: false,
+    facultyAdvisorHistory: false,
   })
 
   const toggleSection = (section) => {
