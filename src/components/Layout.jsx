@@ -34,7 +34,12 @@ const Layout = ({ children }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <Link to="/" className="flex items-center gap-3 text-gray-800 dark:text-gray-200">
-              <span className="text-base md:text-lg font-light hidden sm:inline">TAMU</span>
+              {/* Logo spot */}
+              <img
+                src="public/assets/White Logo Single - Edited.png" 
+                alt="Logo"
+                className="h-7 w-auto hidden sm:inline"
+              />
               <span className="hidden sm:inline">|</span>
               <span className="text-2xl font-extralight tracking-tight">
                 <span className="text-yellow-600 dark:text-yellow-400">TURTLE</span> ROBOTICS
@@ -143,4 +148,4 @@ const Layout = ({ children }) => {
   )
 }
 
-export default Layout 
+export default Layout
