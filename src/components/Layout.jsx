@@ -35,8 +35,8 @@ const Layout = ({ children }) => {
           <div className="flex justify-between items-center h-16">
             <Link to="/" className="flex items-center gap-3 text-gray-800 dark:text-gray-200">
               {/* Logo spot */}
-              <img
-                src="public/assets/White Logo Single - Edited.png" 
+                  <img
+                    src="/assets/White Logo Single - Edited.png"
                 alt="Logo"
                 className="h-7 w-auto hidden sm:inline"
               />
