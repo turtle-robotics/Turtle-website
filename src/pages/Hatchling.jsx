@@ -665,7 +665,7 @@ const Hatchling = () => {
                 Weekly Attendance
               </div>
               <div className="text-sm text-gray-600 dark:text-gray-400">
-                Average of 75 members weekly
+                Through 8 weeks of lecture
               </div>
             </div>
 
@@ -690,12 +690,12 @@ const Hatchling = () => {
             </div>
 
             <div className="glass-card p-8 rounded-2xl text-center hover:scale-105 transition-all duration-300">
-              <div className="text-4xl font-light text-accent mb-2">100%</div>
+              <div className="text-4xl font-light text-accent mb-2">782</div>
               <div className="text-lg font-light text-gray-800 dark:text-gray-200 mb-2">
                 Social Connection
               </div>
               <div className="text-sm text-gray-600 dark:text-gray-400">
-                Peers & Mentors
+                All time Members
               </div>
             </div>
           </div>
@@ -717,7 +717,7 @@ const Hatchling = () => {
                 </li>
                 <li className="flex items-start">
                   <span className="text-accent mr-3 mt-1">•</span>
-                  <span>Advanced Project Leads and Sub-Team Leads</span>
+                  <span>Project Leads and Sub-Team Leads</span>
                 </li>
               </ul>
             </div>
@@ -729,11 +729,11 @@ const Hatchling = () => {
               <ul className="space-y-3 text-gray-600 dark:text-gray-400 font-light">
                 <li className="flex items-start">
                   <span className="text-accent mr-3 mt-1">•</span>
-                  <span>Hatchling Directors</span>
+                  <span>Student Orginization Presidents & Officers</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-accent mr-3 mt-1">•</span>
-                  <span>PhD candidates</span>
+                  <span>Hatchling Directors</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-accent mr-3 mt-1">•</span>
