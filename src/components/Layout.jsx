@@ -5,7 +5,7 @@ import Footer from './Footer'
 
 const Layout = ({ children }) => {
   const location = useLocation()
-np
+
   // Scroll to top when location changes
   useEffect(() => {
     window.scrollTo(0, 0)
