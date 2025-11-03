@@ -9,9 +9,8 @@ import Hatchling from './pages/Hatchling'
 import WorkshopSeries from './pages/WorkshopSeries'
 import Apply from './pages/Apply'
 import Sponsorship from './pages/Sponsorship'
-import { inject } from '@vercel/analytics' // ✅ import this
 
-function App(Component, pageProps) {
+function App() {
   return (
     <ThemeProvider>
       <Layout>
@@ -30,7 +29,4 @@ function App(Component, pageProps) {
   )
 }
 
-// ✅ Initialize Vercel Analytics (place this after your component)
-inject()
-
-export default App
+export default App 
