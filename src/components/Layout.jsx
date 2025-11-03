@@ -32,20 +32,16 @@ const Layout = ({ children }) => {
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl border-b border-gray-200/50 dark:border-gray-700/50 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
-            <Link to="/" className="flex items-center gap-3 text-gray-800 dark:text-gray-200 h-full">
+          <div className="flex justify-between items-center h-16">
+            <Link to="/" className="flex items-center gap-3 text-gray-800 dark:text-gray-200">
               {/* Logo spot */}
-              <img
-                src="/assets/turtle%20black%20logo%20new.png"
+                  <img
+                    src="/assets/White Logo Single - Edited.png"
                 alt="Logo"
-                className="h-12 w-auto hidden sm:inline dark:hidden align-middle"
+                className="h-7 w-auto hidden sm:inline"
               />
-              <img
-                src="/assets/White Logo Single - Edited.png"
-                alt="Logo"
-                className="h-12 w-auto hidden sm:dark:inline sm:hidden align-middle"
-              />
-              <span className="hidden sm:inline text-2xl font-extralight tracking-tight align-middle leading-none ml-2">
+              <span className="hidden sm:inline">|</span>
+              <span className="text-2xl font-extralight tracking-tight">
                 <span className="text-yellow-600 dark:text-yellow-400">TURTLE</span> ROBOTICS
               </span>
             </Link>
@@ -53,8 +49,8 @@ const Layout = ({ children }) => {
             <div className="hidden md:flex space-x-8">
               {navItems.map((item) => (
                 item.dropdown ? (
-                  <div key={item.label} className="relative group flex items-center">
-                    <button className="flex items-center text-sm font-light tracking-wide transition-all duration-300 text-gray-600 dark:text-gray-300 hover:text-yellow-600 dark:hover:text-yellow-400 hover:border-b-2 hover:border-yellow-600/50 dark:hover:border-yellow-400/50">
+                  <div key={item.label} className="relative group">
+                    <button className="text-sm font-light tracking-wide transition-all duration-300 text-gray-600 dark:text-gray-300 hover:text-yellow-600 dark:hover:text-yellow-400 hover:border-b-2 hover:border-yellow-600/50 dark:hover:border-yellow-400/50">
                       {item.label}
                     </button>
                     <div className="absolute top-full left-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
@@ -77,7 +73,7 @@ const Layout = ({ children }) => {
                   <Link
                     key={item.path}
                     to={item.path}
-                    className={`flex items-center text-sm font-light tracking-wide transition-all duration-300 ${
+                    className={`text-sm font-light tracking-wide transition-all duration-300 ${
                       location.pathname === item.path
                         ? 'text-yellow-600 dark:text-yellow-400 border-b-2 border-yellow-600 dark:border-yellow-400'
                         : 'text-gray-600 dark:text-gray-300 hover:text-yellow-600 dark:hover:text-yellow-400 hover:border-b-2 hover:border-yellow-600/50 dark:hover:border-yellow-400/50'
