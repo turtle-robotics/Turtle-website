@@ -11,7 +11,7 @@ import Apply from './pages/Apply'
 import Sponsorship from './pages/Sponsorship'
 import { inject } from '@vercel/analytics' // ✅ import this
 
-function App() {
+function App(Component, pageProps) {
   return (
     <ThemeProvider>
       <Layout>
@@ -30,4 +30,7 @@ function App() {
   )
 }
 
-export default App 
+// ✅ Initialize Vercel Analytics (place this after your component)
+inject()
+
+export default App
