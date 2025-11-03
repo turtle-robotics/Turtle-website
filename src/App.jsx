@@ -9,6 +9,7 @@ import Hatchling from './pages/Hatchling'
 import WorkshopSeries from './pages/WorkshopSeries'
 import Apply from './pages/Apply'
 import Sponsorship from './pages/Sponsorship'
+import { Analytics } from "@vercel/analytics/next"
 
 function App() {
   return (
