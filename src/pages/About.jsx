@@ -38,19 +38,26 @@ const About = () => {
     { role: 'Development Vice President', name: 'Kalen Jaroszewski', period: 'Fall 2025 - Spring 2026', description: 'Driving innovation and research advancement' },
 
     // External Branch — officers then committee members
-    { role: 'Corporate Relations Officer', name: 'James Lee', period: 'Fall 2025 - Spring 2026', description: 'Building and maintaining corporate partnerships' },
+    { role: 'Corporate Relations Officer', name: 'TBA', period: 'Fall 2025 - Spring 2026', description: 'Building and maintaining corporate partnerships' },
     { role: 'Public Relations Officer', name: 'Isaac Cabello', period: 'Fall 2025 - Spring 2026', description: 'Managing club communications and public presence' },
     { role: 'Sponsorship Committee', name: 'Jacob Fuerst', period: 'Fall 2025 - Spring 2026', description: 'Sponsorship strategy and outreach' },
     { role: 'Sponsorship Committee', name: 'Julia Sopala', period: 'Fall 2025 - Spring 2026', description: 'Sponsorship strategy and outreach' },
     { role: 'Sponsorship Committee', name: 'Preston Nguyen', period: 'Fall 2025 - Spring 2026', description: 'Sponsorship strategy and outreach' },
-    { role: 'Sponsorship Committee', name: 'Yousuf Shafiu', period: 'Fall 2025 - Spring 2026', description: 'Sponsorship strategy and outreach' },
     { role: 'Public Relations Committee', name: 'Alexis Bunta', period: 'Fall 2025 - Spring 2026', description: 'Content and media support' },
     { role: 'Public Relations Committee', name: 'Noah Sherman', period: 'Fall 2025 - Spring 2026', description: 'Content and media support' },
+     { role: 'Public Relations Committee', name: 'Ibraheem Razouki', period: 'Fall 2025 - Spring 2026', description: 'Content and media support' },
+     { role: 'Public Relations Committee', nameExternal: 'Som Datta', period: 'Fall 2025 - Spring 2026', description: 'Content and media support' },
+     { role: 'Public Relations Committee', nameExternal: 'Saksham Mohan', period: 'Fall 2025 - Spring 2026', description: 'Content and media support' },
+     { role: 'Public Relations Committee', nameExternal: 'Wenrui Xu', period: 'Fall 2025 - Spring 2026', description: 'Content and media support' },
+     { role: 'Public Relations Committee', nameExternal: 'Matthew Elizalde', period: 'Fall 2025 - Spring 2026', description: 'Content and media support' },
     { role: 'Public Relations Committee', nameExternal: 'Renee Zhu', period: 'Fall 2025 - Spring 2026', description: 'Content and media support' },
+    
 
     // Web Branch — officer then committee
     { role: 'Webmaster', name: 'Saksham Mohan', period: 'Fall 2025 - Spring 2026', description: "Maintaining and developing the organization's web presence" },
     { role: 'Web Development Committee', name: 'Jackson Marshall', period: 'Fall 2025 - Spring 2026', description: 'Full-stack development and site maintenance' },
+    { role: 'Web Development Committee', name: 'Zhengye Chen', period: 'Fall 2025 - Spring 2026', description: 'Full-stack development and site maintenance' },
+    { role: 'Web Development Committee', name: 'Yann Deshpande', period: 'Fall 2025 - Spring 2026', description: 'Full-stack development and site maintenance' },
 
     // Internal Branch — officers then committees
     { role: 'Logistics Officer', name: 'Ryo Kato', period: 'Fall 2025 - Spring 2026', description: 'Events, scheduling, and operations' },
@@ -76,10 +83,12 @@ const About = () => {
     { role: 'Hatchling Director', name: 'Alejandro Avila', period: 'Fall 2025 - Spring 2026', description: 'Hatchling leadership and mentorship' },
     { role: 'Hatchling Director', name: 'Ethan Real', period: 'Fall 2025 - Spring 2026', description: 'Hatchling leadership and mentorship' },
     { role: 'Hatchling Director', name: 'Gael Mamenta', period: 'Fall 2025 - Spring 2026', description: 'Hatchling leadership and mentorship' },
+    { role: 'Hatchling Director', name: 'Thomas Lopez', period: 'Fall 2025 - Spring 2026', description: 'Hatchling leadership and mentorship' },
     { role: 'Hatchling Director', name: 'Karthik Jayakumar', period: 'Fall 2025 - Spring 2026', description: 'Hatchling leadership and mentorship' },
     { role: 'Hatchling Director', name: 'Mohid Ismail', period: 'Fall 2025 - Spring 2026', description: 'Hatchling leadership and mentorship' },
     { role: 'Hatchling Director', name: 'Nathan Mersino', period: 'Fall 2025 - Spring 2026', description: 'Hatchling leadership and mentorship' },
     { role: 'Hatchling Director', name: 'William Shan', period: 'Fall 2025 - Spring 2026', description: 'Hatchling leadership and mentorship' },
+    { role: 'Hatchling Director', name: 'McKenzie McCain', period: 'Fall 2025 - Spring 2026', description: 'Hatchling leadership and mentorship' },
   ]
 
   const historicalLeadership = {
