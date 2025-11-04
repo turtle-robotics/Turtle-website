@@ -38,7 +38,7 @@ const About = () => {
     { role: 'Development Vice President', name: 'Kalen Jaroszewski', period: 'Fall 2025 - Spring 2026', description: 'Driving innovation and research advancement' },
 
     // External Branch — officers then committee members
-    { role: 'Corporate Relations Officer', name: 'TBA', period: 'Fall 2025 - Spring 2026', description: 'Building and maintaining corporate partnerships' },
+    //{ role: 'Corporate Relations Officer', name: 'TBA', period: 'Fall 2025 - Spring 2026', description: 'Building and maintaining corporate partnerships' },
     { role: 'Public Relations Officer', name: 'Isaac Cabello', period: 'Fall 2025 - Spring 2026', description: 'Managing club communications and public presence' },
     { role: 'Sponsorship Committee', name: 'Jacob Fuerst', period: 'Fall 2025 - Spring 2026', description: 'Sponsorship strategy and outreach' },
     { role: 'Sponsorship Committee', name: 'Julia Sopala', period: 'Fall 2025 - Spring 2026', description: 'Sponsorship strategy and outreach' },
