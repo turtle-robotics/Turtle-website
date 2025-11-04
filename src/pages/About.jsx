@@ -46,11 +46,11 @@ const About = () => {
     { role: 'Public Relations Committee', name: 'Alexis Bunta', period: 'Fall 2025 - Spring 2026', description: 'Content and media support' },
     { role: 'Public Relations Committee', name: 'Noah Sherman', period: 'Fall 2025 - Spring 2026', description: 'Content and media support' },
      { role: 'Public Relations Committee', name: 'Ibraheem Razouki', period: 'Fall 2025 - Spring 2026', description: 'Content and media support' },
-     { role: 'Public Relations Committee', nameExternal: 'Som Datta', period: 'Fall 2025 - Spring 2026', description: 'Content and media support' },
-     { role: 'Public Relations Committee', nameExternal: 'Saksham Mohan', period: 'Fall 2025 - Spring 2026', description: 'Content and media support' },
-     { role: 'Public Relations Committee', nameExternal: 'Wenrui Xu', period: 'Fall 2025 - Spring 2026', description: 'Content and media support' },
-     { role: 'Public Relations Committee', nameExternal: 'Matthew Elizalde', period: 'Fall 2025 - Spring 2026', description: 'Content and media support' },
-    { role: 'Public Relations Committee', nameExternal: 'Renee Zhu', period: 'Fall 2025 - Spring 2026', description: 'Content and media support' },
+     { role: 'Public Relations Committee', name: 'Som Datta', period: 'Fall 2025 - Spring 2026', description: 'Content and media support' },
+     { role: 'Public Relations Committee', name: 'Saksham Mohan', period: 'Fall 2025 - Spring 2026', description: 'Content and media support' },
+     { role: 'Public Relations Committee', name: 'Wenrui Xu', period: 'Fall 2025 - Spring 2026', description: 'Content and media support' },
+     { role: 'Public Relations Committee', name: 'Matthew Elizalde', period: 'Fall 2025 - Spring 2026', description: 'Content and media support' },
+    { role: 'Public Relations Committee', name: 'Renee Zhu', period: 'Fall 2025 - Spring 2026', description: 'Content and media support' },
     
 
     // Web Branch — officer then committee
