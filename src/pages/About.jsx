@@ -43,6 +43,8 @@ const About = () => {
     { role: 'Sponsorship Committee', name: 'Jacob Fuerst', period: 'Fall 2025 - Spring 2026', description: 'Sponsorship strategy and outreach' },
     { role: 'Sponsorship Committee', name: 'Julia Sopala', period: 'Fall 2025 - Spring 2026', description: 'Sponsorship strategy and outreach' },
     { role: 'Sponsorship Committee', name: 'Preston Nguyen', period: 'Fall 2025 - Spring 2026', description: 'Sponsorship strategy and outreach' },
+        { role: 'Sponsorship Committee', name: 'Om Bhatt', period: 'Fall 2025 - Spring 2026', description: 'Sponsorship strategy and outreach' },
+            { role: 'Sponsorship Committee', name: 'William Donaldson', period: 'Fall 2025 - Spring 2026', description: 'Sponsorship strategy and outreach' },
     { role: 'Public Relations Committee', name: 'Alexis Bunta', period: 'Fall 2025 - Spring 2026', description: 'Content and media support' },
     { role: 'Public Relations Committee', name: 'Noah Sherman', period: 'Fall 2025 - Spring 2026', description: 'Content and media support' },
      { role: 'Public Relations Committee', name: 'Ibraheem Razouki', period: 'Fall 2025 - Spring 2026', description: 'Content and media support' },
