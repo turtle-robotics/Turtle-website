@@ -22,6 +22,7 @@ const Layout = ({ children }) => {
         { path: '/workshop-series', label: 'Workshop Series' }
       ]
     },
+    { path: '/showcase', label: 'Showcase' }, // ✅ Add this line
     { path: '/apply', label: 'Apply' }
   ]
 

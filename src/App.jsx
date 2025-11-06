@@ -9,7 +9,7 @@ import Hatchling from './pages/Hatchling'
 import WorkshopSeries from './pages/WorkshopSeries'
 import Apply from './pages/Apply'
 import Sponsorship from './pages/Sponsorship'
-import { inject } from '@vercel/analytics' // ✅ import this
+import Showcase from './pages/Showcase'
 
 function App(Component, pageProps) {
   return (
@@ -22,6 +22,7 @@ function App(Component, pageProps) {
           <Route path="/projects/:projectId" element={<ProjectDetail />} />
           <Route path="/hatchling" element={<Hatchling />} />
           <Route path="/workshop-series" element={<WorkshopSeries />} />
+          <Route path="/showcase" element={<Showcase />} />
           <Route path="/apply" element={<Apply />} />
           <Route path="/sponsorship" element={<Sponsorship />} />
         </Routes>
@@ -29,8 +30,5 @@ function App(Component, pageProps) {
     </ThemeProvider>
   )
 }
-
-// ✅ Initialize Vercel Analytics (place this after your component)
-inject()
 
 export default App
