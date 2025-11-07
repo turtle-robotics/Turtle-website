@@ -60,6 +60,7 @@ const About = () => {
     { role: 'Web Development Committee', name: 'Jackson Marshall', period: 'Fall 2025 - Spring 2026', description: 'Full-stack development and site maintenance' },
     { role: 'Web Development Committee', name: 'Zhengye Chen', period: 'Fall 2025 - Spring 2026', description: 'Full-stack development and site maintenance' },
     { role: 'Web Development Committee', name: 'Yann Deshpande', period: 'Fall 2025 - Spring 2026', description: 'Full-stack development and site maintenance' },
+    { role: 'Web Development Committee', name: 'Dhruv Bhambhani', period: 'Fall 2025 - Spring 2026', description: 'Full-stack development and site maintenance' },
 
     // Internal Branch — officers then committees
     { role: 'Logistics Officer', name: 'Ryo Kato', period: 'Fall 2025 - Spring 2026', description: 'Events, scheduling, and operations' },
