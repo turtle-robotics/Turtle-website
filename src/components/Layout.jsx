@@ -22,7 +22,7 @@ const Layout = ({ children }) => {
         { path: '/workshop-series', label: 'Workshop Series' }
       ]
     },
-    { path: '/showcase', label: 'Showcase' }, // ✅ Add this line
+    { path: '/showcase', label: 'Showcase' },
     { path: '/apply', label: 'Apply' }
   ]
 
@@ -37,12 +37,12 @@ const Layout = ({ children }) => {
             <Link to="/" className="flex items-center gap-3 text-gray-800 dark:text-gray-200 h-full">
               {/* Logo spot */}
               <img
-                src="/assets/turtle%20black%20logo%20new.png"
+                src="/assets/black_logo.png"
                 alt="Logo"
                 className="h-12 w-auto hidden sm:inline dark:hidden align-middle"
               />
               <img
-                src="/assets/White Logo Single - Edited.png"
+                src="/assets/white_logo.png"
                 alt="Logo"
                 className="h-12 w-auto hidden sm:dark:inline sm:hidden align-middle"
               />
