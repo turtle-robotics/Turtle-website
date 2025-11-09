@@ -24,7 +24,7 @@ export default async function handler(req, res) {
     }
 
     const apiKey = process.env.GEMINI_API_KEY || process.env.GOOGLE_GEMINI_API_KEY;
-    const model = process.env.GEMINI_MODEL || 'gemini-1.5-flash';
+    const model = process.env.GEMINI_MODEL || 'gemini-2.5-flash';
     
     if (!apiKey) {
       res.status(500).json({ error: 'Server not configured' });
