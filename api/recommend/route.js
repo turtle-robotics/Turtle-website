@@ -1,4 +1,6 @@
-// Vercel Serverless Function: /api/recommend
+// Vercel Edge/Node serverless route for secure Gemini recommendations
+// Expects POST { query: string, catalog: Project[] }
+
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
     res.status(405).json({ error: 'Method not allowed' })
@@ -10,7 +12,7 @@ export default async function handler(req, res) {
       res.status(400).json({ error: 'Missing query or catalog' })
       return
     }
-    const apiKey = process.env.GEMINI_API_KEY || process.env.GOOGLE_GEMINI_API_KEY
+    const apiKey = process.env.GOOGLE_GEMINI_API_KEY || process.env.GEMINI_API_KEY
     const model = process.env.GEMINI_MODEL || 'gemini-1.5-flash-latest'
     if (!apiKey) {
       res.status(500).json({ error: 'Server not configured' })
