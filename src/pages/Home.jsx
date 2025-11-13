@@ -165,6 +165,25 @@ const Home = () => {
           </a>
         </div>
       </section>
+      {/* Showcase Sticky Note */}
+{/* Showcase Sticky Note */}
+<a 
+  href="/showcase"
+  className="fixed bottom-8 right-8 z-50 group"
+>
+  <div className="relative bg-gradient-to-br from-yellow-50 to-amber-50 dark:from-gray-800 dark:to-gray-700 p-6 rounded-xl shadow-2xl hover:shadow-3xl transition-all duration-300 rotate-2 hover:rotate-0 max-w-xs border-2 border-yellow-400 dark:border-yellow-600">
+    {/* Pin */}
+    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 w-6 h-6 bg-red-900 dark:bg-yellow-600 rounded-full shadow-md"></div>
+    
+    <div className="text-xs font-bold text-yellow-600 dark:text-yellow-400 mb-2 uppercase tracking-wide">📌 Don't Miss!</div>
+    <div className="text-xl font-extralight text-gray-800 dark:text-gray-200 mb-1">TURTLE Showcase</div>
+    <div className="text-sm font-light text-gray-600 dark:text-gray-400 mb-1">November 21, 2025</div>
+    <div className="text-sm font-light text-gray-600 dark:text-gray-400 mb-3">1:00-5:00 PM</div>
+    <div className="text-xs text-yellow-600 dark:text-yellow-400 underline group-hover:text-yellow-700 dark:group-hover:text-yellow-300 font-medium">Click for more info →</div>
+  </div>
+</a>
+
+
     </div>
   )
 }
