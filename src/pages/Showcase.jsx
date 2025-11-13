@@ -140,10 +140,10 @@ function Showcase() {
               </p>
             </details>
 
-            {/* Q2 */}
+            {/* Q2 - Who goes */}
             <details className="group bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700 dark:to-gray-600 rounded-2xl p-6 cursor-pointer">
               <summary className="flex justify-between items-center font-light text-xl text-gray-800 dark:text-gray-200 list-none">
-                <span>What do I wear?</span>
+                <span>Who can attend Project Showcase?</span>
                 <span className="transition group-open:rotate-180">
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -151,26 +151,11 @@ function Showcase() {
                 </span>
               </summary>
               <p className="mt-4 text-gray-600 dark:text-gray-400 font-light leading-relaxed">
-                We recommend business casual attire and TURTLE apparel if you have it, but we understand that it is during the school day, so it is not strictly required.
+                Everyone is welcome! Project Showcase is a public event open to all — students, professors, families, friends, and anyone interested in robotics or engineering. Come see what TURTLE has been building this semester!
               </p>
             </details>
 
             {/* Q3 */}
-            <details className="group bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700 dark:to-gray-600 rounded-2xl p-6 cursor-pointer">
-              <summary className="flex justify-between items-center font-light text-xl text-gray-800 dark:text-gray-200 list-none">
-                <span>Who goes to Project Showcase?</span>
-                <span className="transition group-open:rotate-180">
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </span>
-              </summary>
-              <p className="mt-4 text-gray-600 dark:text-gray-400 font-light leading-relaxed">
-                You! All TURTLE members are encouraged to attend Project Showcase. In addition, we invite professors and industry to come see and encourage you to invite your favorite professors and your friends who are interested in robotics.
-              </p>
-            </details>
-
-            {/* Q4 */}
             <details className="group bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700 dark:to-gray-600 rounded-2xl p-6 cursor-pointer">
               <summary className="flex justify-between items-center font-light text-xl text-gray-800 dark:text-gray-200 list-none">
                 <span>Where is the Virginia Brown Atrium?</span>
