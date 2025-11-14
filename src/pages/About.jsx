@@ -21,7 +21,7 @@ const About = () => {
       { y: 0, opacity: 1, duration: 1, delay: 0.8, ease: 'power3.out' }
     )
   }, [])
-
+np
   const statistics = [
     { count: 21, label: 'Advanced Research Projects', description: 'Cutting-edge robotics initiatives' },
     { count: 2, label: 'Competition Teams', description: 'Robotics competition teams' },

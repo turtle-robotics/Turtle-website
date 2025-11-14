@@ -12,36 +12,52 @@ function Showcase() {
     seconds: 0
   });
 
-  useEffect(() => {
-    gsap.fromTo(
-      '.showcase-hero',
-      { opacity: 0, y: 50 },
-      { opacity: 1, y: 0, duration: 1, ease: 'power3.out' }
+useEffect(() => {
+  gsap.fromTo(
+    '.showcase-hero',
+    { opacity: 0, y: 50 },
+    { opacity: 1, y: 0, duration: 1, ease: 'power3.out' }
+  );
+
+  // Local time: Nov 21, 2025 at 1 PM
+  const showcaseYear = 2025;
+  const showcaseMonth = 10; // November (0-indexed)
+  const showcaseDay = 21;
+  const showcaseHour = 13;
+  const showcaseMinute = 0;
+  const showcaseSecond = 0;
+
+  const updateCountdown = () => {
+    const now = new Date();
+    const showcaseDate = new Date(
+      showcaseYear,
+      showcaseMonth,
+      showcaseDay,
+      showcaseHour,
+      showcaseMinute,
+      showcaseSecond
     );
+    const distance = showcaseDate.getTime() - now.getTime();
 
-    const showcaseDate = new Date('2025-11-21T13:00:00').getTime();
+    if (distance > 0) {
+      setTimeLeft({
+        days: Math.floor(distance / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)-10),
+        minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
+        seconds: Math.floor((distance % (1000 * 60)) / 1000)
+      });
+    } else {
+      setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+    }
+  };
 
-    const updateCountdown = () => {
-      const now = new Date().getTime();
-      const distance = showcaseDate - now;
+  updateCountdown();
+  const interval = setInterval(updateCountdown, 1000);
 
-      if (distance > 0) {
-        setTimeLeft({
-          days: Math.floor(distance / (1000 * 60 * 60 * 24)),
-          hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-          minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
-          seconds: Math.floor((distance % (1000 * 60)) / 1000)
-        });
-      } else {
-        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-      }
-    };
+  return () => clearInterval(interval);
+}, []);
 
-    updateCountdown();
-    const interval = setInterval(updateCountdown, 1000);
 
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <div className="min-h-screen">
