@@ -93,7 +93,7 @@ useEffect(() => {
 
 
           {/* Time */}
-          <p className="text-2xl md:text-3xl font-light text-white dark:text-gray-400 mb-4">
+          <p className="text-2xl md:text-3xl font-light text-white dark:white mb-4">
             1:00 PM - 5:00 PM
           </p>
 
