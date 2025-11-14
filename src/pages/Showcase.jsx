@@ -86,31 +86,33 @@ useEffect(() => {
             TURTLE Showcase
           </h1>
 
-          {/* Date with tight black box */}
-          <p className="inline-block text-3xl md:text-4xl font-light text-yellow-500 dark:text-yellow-400 mb-4 px-2 py-1 bg-black/30 rounded">
-            November 21, 2025
-          </p>
+         {/* Date with tight white box in light mode */}
+<p className="inline-block text-3xl md:text-4xl font-light text-yellow-500 dark:text-yellow-400 mb-4 px-1 py-0.5 bg-white/50 dark:bg-black/30 rounded">
+  November 21, 2025
+</p>
+
 
           {/* Time */}
           <p className="text-2xl md:text-3xl font-light text-white dark:text-gray-400 mb-4">
             1:00 PM - 5:00 PM
           </p>
 
-          {/* Location - same yellow as date, no shadow */}
-          <p className="text-xl md:text-2xl font-light text-yellow-500 dark:text-yellow-400 mb-10 flex items-center justify-center gap-2 px-2 py-1 rounded bg-black/20">
-            <svg className="w-6 h-6 text-yellow-500 dark:text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-            </svg>
-            <a 
-              href="https://maps.app.goo.gl/r3EgEtRvYB727rX6A"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-yellow-400 dark:hover:text-yellow-400 transition-colors underline decoration-yellow-400"
-            >
-              Zachry Engineering Education Complex, Virginia C Brown Atrium
-            </a>
-          </p>
+         {/* Location - tighter box with more opaque background */}
+<p className="inline-flex items-center justify-center text-xl md:text-2xl font-light text-yellow-500 dark:text-yellow-400 mb-10 px-1 py-0.5 bg-white/50  dark:bg-black/70 rounded mx-auto gap-1">
+  <svg className="w-5 h-5 text-yellow-500 dark:text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+  </svg>
+  <a 
+    href="https://maps.app.goo.gl/r3EgEtRvYB727rX6A"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:text-yellow-400 dark:hover:text-yellow-400 transition-colors underline decoration-yellow-400"
+  >
+    Zachry Engineering Education Complex, Virginia C Brown Atrium
+  </a>
+</p>
+
 
           {/* Countdown */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto mb-8">
