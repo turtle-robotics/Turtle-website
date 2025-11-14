@@ -168,22 +168,21 @@ const Hatchling = () => {
             HATCHLING <span className="text-accent">GALLERY</span>
           </h2>
 
-          <div
-            className="rounded-2xl overflow-hidden border border-gray-200/50 dark:border-gray-700/50 glass-card"
-            style={{ height: "400px" }}
-          >
-            <ImageCarousel
-              images={[
-                "/assets/20250427_202459_BFD66E.JPEG",
-                "/assets/20250426_155351.jpg",
-                "/assets/image_2025-09-30_002708253.png",
-                "/assets/image_2025-09-30_002910095.png",
-                "/assets/image_2025-09-30_002458601.png",
-              ]}
-              autoPlay={true}
-              intervalMs={4000}
-            />
-          </div>
+        <div className="rounded-2xl overflow-hidden border border-gray-200/50 dark:border-gray-700/50 glass-card w-full max-w-6xl mx-auto" style={{ aspectRatio: '16/9' }}>
+  <ImageCarousel
+    images={[
+      "/assets/20250427_202459_BFD66E.JPEG",
+      "/assets/20250426_155351.jpg",
+      "/assets/image_2025-09-30_002708253.png",
+      "/assets/image_2025-09-30_002910095.png",
+      "/assets/image_2025-09-30_002458601.png",
+    ]}
+    autoPlay={true}
+    intervalMs={4000}
+  />
+</div>
+
+
         </div>
       </section>
 
