@@ -467,35 +467,6 @@ export const projects = [
     ]
   },
   {
-    id: 'star',
-    image: 'https://picsum.photos/seed/star/300/300',
-    title: 'STAR',
-    subtitle: 'Survey and Terrain Analysis Robot',
-    description: 'Advanced object-avoidance robot navigating challenging terrain using stereo vision and embedded compute.',
-    category: 'Computer Vision',
-    tags: ['Stereo Vision', 'TDA4VM', 'RTOS', 'PCB', 'Object Avoidance', 'CV/ML', 'C'],
-    status: 'Active',
-    duration: 'Fall 2025',
-    lead: 'Brighton Sikarskie',
-    leadEmail: 'brighton.sikarskie@tamu.edu',
-    goals: [
-      'Design and verify PWBs, order/solder PCBs, and test PCBAs',
-      'Write low-level libraries for SK-TDA4VM board',
-      'Begin CV model development'
-    ],
-    lookingFor: [
-      'ESET, CPEN, ECEN, CSCP, MXET',
-      'Power engineers (430W total system)',
-      'PCB designers (6V and 5V lines pending)',
-      'RTOS developers for low-level C libraries',
-      'CV/ML engineers for stereo cameras',
-      'Soldering help for complex boards',
-      'EE review and PID control',
-      'Comprehensive testing and validation'
-    ],
-    images: ['https://picsum.photos/seed/star1/800/600']
-  },
-  {
     id: 'swrm',
     image: 'https://picsum.photos/seed/swrm/300/300',
     title: 'SWRM',
