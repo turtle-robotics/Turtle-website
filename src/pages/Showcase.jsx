@@ -111,7 +111,7 @@ function Showcase() {
           </div>
 
           {/* Description */}
-          <p className="text-xl font-light text-white dark:text-gray-400 mt-4 max-w-2xl mx-auto">
+          <p className="text-xl font-light text-white dark:text-white mt-4 max-w-2xl mx-auto">
             The biggest TURTLE event of the semester is right around the corner! Join us to see the amazing robotics projects our teams have accomplished this semester!
           </p>
         </section>
