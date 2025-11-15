@@ -166,10 +166,10 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Showcase Sticky Note - Responsive */}
+      {/* Showcase Sticky Note - Top on mobile, bottom-right on desktop */}
       <a 
         href="/showcase"
-        className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 md:bottom-8 md:right-8 z-50 group"
+        className="fixed top-20 right-4 md:top-auto md:bottom-8 md:right-8 z-40 group"
       >
         <div className="relative bg-gradient-to-br from-yellow-50 to-amber-50 dark:from-gray-800 dark:to-gray-700 p-3 sm:p-4 md:p-6 rounded-lg sm:rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 rotate-2 hover:rotate-0 w-44 sm:w-52 md:w-64 border-2 border-yellow-400 dark:border-yellow-600">
           {/* Pin */}
