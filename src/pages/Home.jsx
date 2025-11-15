@@ -167,38 +167,43 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Showcase Sticky Note - Closeable popup on mobile, fixed on desktop */}
+      {/* Showcase Popup - Full screen overlay on mobile, fixed sticky on desktop */}
       {/* Mobile popup version */}
       {showMobilePopup && (
-        <div className="md:hidden fixed top-20 right-4 z-40 group">
-          <a 
-            href="/showcase"
-            className="block"
-          >
-            <div className="relative bg-gradient-to-br from-yellow-50 to-amber-50 dark:from-gray-800 dark:to-gray-700 p-3 rounded-lg shadow-xl border-2 border-yellow-400 dark:border-yellow-600 w-44">
-              {/* Close button */}
-              <button
-                onClick={(e) => {
-                  e.preventDefault()
-                  e.stopPropagation()
-                  setShowMobilePopup(false)
-                }}
-                className="absolute -top-2 -right-2 w-6 h-6 bg-gray-800 dark:bg-gray-200 text-white dark:text-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 dark:hover:bg-gray-300 transition-colors shadow-md z-10"
-                aria-label="Close"
-              >
-                ×
-              </button>
-              
+        <div className="md:hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+          <div className="relative bg-gradient-to-br from-yellow-50 to-amber-50 dark:from-gray-800 dark:to-gray-700 p-8 rounded-2xl shadow-2xl border-2 border-yellow-400 dark:border-yellow-600 max-w-sm w-full">
+            {/* Close button */}
+            <button
+              onClick={(e) => {
+                e.preventDefault()
+                e.stopPropagation()
+                setShowMobilePopup(false)
+              }}
+              className="absolute top-4 right-4 w-8 h-8 bg-gray-800 dark:bg-gray-200 text-white dark:text-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 dark:hover:bg-gray-300 transition-colors shadow-lg text-xl font-light"
+              aria-label="Close"
+            >
+              ×
+            </button>
+            
+            <a 
+              href="/showcase"
+              className="block text-center"
+              onClick={() => setShowMobilePopup(false)}
+            >
               {/* Pin */}
-              <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-5 h-5 bg-red-900 dark:bg-yellow-600 rounded-full shadow-md"></div>
+              <div className="mx-auto mb-4 w-8 h-8 bg-red-900 dark:bg-yellow-600 rounded-full shadow-md"></div>
               
-              <div className="text-[10px] font-bold text-yellow-600 dark:text-yellow-400 mb-1 uppercase tracking-wide">📌 Don't Miss!</div>
-              <div className="text-lg font-extralight text-gray-800 dark:text-gray-200 mb-1 leading-tight">TURTLE Showcase</div>
-              <div className="text-xs font-light text-gray-600 dark:text-gray-400 mb-0.5">Nov 21, 2025</div>
-              <div className="text-xs font-light text-gray-600 dark:text-gray-400 mb-2">1:00-5:00 PM</div>
-              <div className="text-[10px] text-yellow-600 dark:text-yellow-400 underline font-medium">Click for info →</div>
-            </div>
-          </a>
+              <div className="text-sm font-bold text-yellow-600 dark:text-yellow-400 mb-3 uppercase tracking-wide">📌 Don't Miss This Event!</div>
+              <div className="text-4xl font-extralight text-gray-800 dark:text-gray-200 mb-4 leading-tight">TURTLE Showcase</div>
+              <div className="text-xl font-light text-gray-600 dark:text-gray-400 mb-2">November 21, 2025</div>
+              <div className="text-xl font-light text-gray-600 dark:text-gray-400 mb-2">1:00 PM - 5:00 PM</div>
+              <div className="text-base font-light text-gray-600 dark:text-gray-400 mb-6">Zachry Engineering Building<br/>Virginia C Brown Atrium</div>
+              
+              <div className="bg-gradient-to-r from-yellow-500 to-amber-500 text-white px-8 py-3 rounded-xl font-light tracking-wide inline-block">
+                Learn More →
+              </div>
+            </a>
+          </div>
         </div>
       )}
       
