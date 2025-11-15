@@ -1,10 +1,11 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { gsap } from 'gsap'
 import SponsorTicker from '../components/SponsorTicker'
 
 const Home = () => {
   const heroRef = useRef(null)
+  const [showMobilePopup, setShowMobilePopup] = useState(true)
 
   useEffect(() => {
     const hero = heroRef.current
@@ -166,20 +167,55 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Showcase Sticky Note - Top on mobile, bottom-right on desktop */}
+      {/* Showcase Sticky Note - Closeable popup on mobile, fixed on desktop */}
+      {/* Mobile popup version */}
+      {showMobilePopup && (
+        <div className="md:hidden fixed top-20 right-4 z-40 group">
+          <a 
+            href="/showcase"
+            className="block"
+          >
+            <div className="relative bg-gradient-to-br from-yellow-50 to-amber-50 dark:from-gray-800 dark:to-gray-700 p-3 rounded-lg shadow-xl border-2 border-yellow-400 dark:border-yellow-600 w-44">
+              {/* Close button */}
+              <button
+                onClick={(e) => {
+                  e.preventDefault()
+                  e.stopPropagation()
+                  setShowMobilePopup(false)
+                }}
+                className="absolute -top-2 -right-2 w-6 h-6 bg-gray-800 dark:bg-gray-200 text-white dark:text-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 dark:hover:bg-gray-300 transition-colors shadow-md z-10"
+                aria-label="Close"
+              >
+                ×
+              </button>
+              
+              {/* Pin */}
+              <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-5 h-5 bg-red-900 dark:bg-yellow-600 rounded-full shadow-md"></div>
+              
+              <div className="text-[10px] font-bold text-yellow-600 dark:text-yellow-400 mb-1 uppercase tracking-wide">📌 Don't Miss!</div>
+              <div className="text-lg font-extralight text-gray-800 dark:text-gray-200 mb-1 leading-tight">TURTLE Showcase</div>
+              <div className="text-xs font-light text-gray-600 dark:text-gray-400 mb-0.5">Nov 21, 2025</div>
+              <div className="text-xs font-light text-gray-600 dark:text-gray-400 mb-2">1:00-5:00 PM</div>
+              <div className="text-[10px] text-yellow-600 dark:text-yellow-400 underline font-medium">Click for info →</div>
+            </div>
+          </a>
+        </div>
+      )}
+      
+      {/* Desktop sticky note version */}
       <a 
         href="/showcase"
-        className="fixed top-20 right-4 md:top-auto md:bottom-8 md:right-8 z-40 group"
+        className="hidden md:block fixed bottom-8 right-8 z-40 group"
       >
-        <div className="relative bg-gradient-to-br from-yellow-50 to-amber-50 dark:from-gray-800 dark:to-gray-700 p-3 sm:p-4 md:p-6 rounded-lg sm:rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 rotate-2 hover:rotate-0 w-44 sm:w-52 md:w-64 border-2 border-yellow-400 dark:border-yellow-600">
+        <div className="relative bg-gradient-to-br from-yellow-50 to-amber-50 dark:from-gray-800 dark:to-gray-700 p-6 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 rotate-2 hover:rotate-0 w-64 border-2 border-yellow-400 dark:border-yellow-600">
           {/* Pin */}
-          <div className="absolute -top-2 sm:-top-3 left-1/2 transform -translate-x-1/2 w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 bg-red-900 dark:bg-yellow-600 rounded-full shadow-md"></div>
+          <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 w-7 h-7 bg-red-900 dark:bg-yellow-600 rounded-full shadow-md"></div>
           
-          <div className="text-[10px] sm:text-xs font-bold text-yellow-600 dark:text-yellow-400 mb-1 sm:mb-2 uppercase tracking-wide">📌 Don't Miss!</div>
-          <div className="text-lg sm:text-xl md:text-2xl font-extralight text-gray-800 dark:text-gray-200 mb-1 sm:mb-2 leading-tight">TURTLE Showcase</div>
-          <div className="text-xs sm:text-sm md:text-base font-light text-gray-600 dark:text-gray-400 mb-0.5 sm:mb-1">Nov 21, 2025</div>
-          <div className="text-xs sm:text-sm md:text-base font-light text-gray-600 dark:text-gray-400 mb-2 sm:mb-3">1:00-5:00 PM</div>
-          <div className="text-[10px] sm:text-xs text-yellow-600 dark:text-yellow-400 underline group-hover:text-yellow-700 dark:group-hover:text-yellow-300 font-medium">Click for info →</div>
+          <div className="text-xs font-bold text-yellow-600 dark:text-yellow-400 mb-2 uppercase tracking-wide">📌 Don't Miss!</div>
+          <div className="text-2xl font-extralight text-gray-800 dark:text-gray-200 mb-2">TURTLE Showcase</div>
+          <div className="text-base font-light text-gray-600 dark:text-gray-400 mb-1">November 21, 2025</div>
+          <div className="text-base font-light text-gray-600 dark:text-gray-400 mb-3">1:00-5:00 PM</div>
+          <div className="text-xs text-yellow-600 dark:text-yellow-400 underline group-hover:text-yellow-700 dark:group-hover:text-yellow-300 font-medium">Click for more info →</div>
         </div>
       </a>
 
