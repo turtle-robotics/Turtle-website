@@ -50,22 +50,9 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section ref={heroRef} className="relative min-h-screen flex items-center justify-center px-4">
+     <section ref={heroRef} className="relative min-h-[70vh] flex items-center justify-center px-4">
         <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900"></div>
         <div className="relative text-center max-w-6xl mx-auto z-10">
-          {/* AI Announcement Badge */}
-          <div className="mb-6 flex justify-center">
-            <div className="relative w-full max-w-xl px-2">
-              <div className="absolute -inset-px rounded-2xl bg-gradient-to-r from-yellow-500/35 via-amber-400/25 to-yellow-500/35 blur-lg opacity-40"></div>
-              <div className="relative mx-auto flex items-center justify-center gap-3 rounded-2xl px-4 py-2 bg-gradient-to-r from-yellow-500/10 via-amber-500/10 to-yellow-500/10 ring-1 ring-yellow-500/25 shadow-soft backdrop-blur">
-                <span className="text-lg leading-none select-none">⚡</span>
-                <p className="m-0 text-center text-sm md:text-base font-light text-gray-800 dark:text-gray-100">
-                  <span className="bg-gradient-to-r from-yellow-500 to-amber-500 bg-clip-text text-transparent font-medium">Now with AI-powered project matching!</span>
-                </p>
-                <span className="text-lg leading-none animate-pulse select-none">✨</span>
-              </div>
-            </div>
-          </div>
           <h1 className="text-6xl md:text-8xl lg:text-9xl font-extralight tracking-tight text-gray-800 dark:text-gray-200 mb-8">
             <span className="block">TURTLE</span>
             <span className="block text-yellow-600 dark:text-yellow-400">ROBOTICS</span>
