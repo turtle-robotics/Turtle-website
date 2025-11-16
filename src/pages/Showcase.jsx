@@ -64,7 +64,7 @@ function Showcase() {
       <div
         className="relative w-full aspect-[5/4] bg-contain bg-top bg-no-repeat flex items-center justify-center"
         style={{
-          backgroundImage: "url('/assets/turtlegraphicshowcase.png')",
+          backgroundImage: "url('/assets/turtlerobotcollage.png')",
         }}
       >
         {/* Stronger gradient overlay for better readability */}
@@ -155,7 +155,7 @@ function Showcase() {
 
             <details className="group bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700 dark:to-gray-600 rounded-2xl p-6 cursor-pointer">
               <summary className="flex justify-between items-center font-light text-xl text-gray-800 dark:text-gray-200 list-none">
-                <span>Who is invited to Project Showcase?</span>
+                <span>Who can attend Project Showcase?</span>
                 <span className="transition group-open:rotate-180">
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
