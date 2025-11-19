@@ -37,7 +37,7 @@ const Layout = ({ children }) => {
             <Link to="/" className="flex items-center gap-3 text-gray-800 dark:text-gray-200 h-full">
               {/* Logo spot */}
               <img
-                src="/assets/black_logo.png"
+                src="/assets/black_logo-removebg-preview.png"
                 alt="Logo"
                 className="h-12 w-auto hidden sm:inline dark:hidden align-middle"
               />
