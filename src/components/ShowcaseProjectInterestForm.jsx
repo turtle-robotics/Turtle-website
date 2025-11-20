@@ -116,7 +116,7 @@ const ShowcaseProjectInterestForm = () => {
                 required
                 rows="5"
                 className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 dark:focus:ring-yellow-800 transition-all outline-none resize-none"
-                placeholder="Tell us which projects you're most excited to see and why..."
+                placeholder="Tell us which projects you're excited to join..."
               />
             </div>
 
