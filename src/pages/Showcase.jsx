@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import ShowcaseProjectInterestForm from '../components/ShowcaseProjectInterestForm';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -183,6 +184,9 @@ function Showcase() {
           </div>
         </div>
       </section>
+
+      {/* SHOWCASE PROJECT INTEREST FORM SECTION */}
+      <ShowcaseProjectInterestForm />
     </div>
   );
 }
