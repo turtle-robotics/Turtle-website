@@ -1,4 +1,9 @@
 import { useEffect, useState } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import ShowcaseProjectInterestForm from '../components/ShowcaseProjectInterestForm';
+
+gsap.registerPlugin(ScrollTrigger);
 
 function Showcase() {
   const [timeLeft, setTimeLeft] = useState({
@@ -10,6 +15,12 @@ function Showcase() {
   const [showConfetti, setShowConfetti] = useState(false);
 
   useEffect(() => {
+    gsap.fromTo(
+      '.showcase-hero',
+      { opacity: 0, y: 50 },
+      { opacity: 1, y: 0, duration: 1, ease: 'power3.out' }
+    );
+
     // Local time: Nov 21, 2025 at 1 PM
     const showcaseYear = 2025;
     const showcaseMonth = 10; // November (0-indexed)
@@ -51,7 +62,7 @@ function Showcase() {
   }, []);
 
   return (
-    <div className="min-h-screen relative">
+    <div className="min-h-screen">
       {/* Confetti Effect */}
       {showConfetti && (
         <div className="fixed inset-0 pointer-events-none z-50 overflow-hidden">
@@ -77,35 +88,50 @@ function Showcase() {
           backgroundImage: "url('/assets/turtlerobotcollage.png')",
         }}
       >
-        {/* Gradient overlay */}
+        {/* Stronger gradient overlay for better readability */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60 pointer-events-none rounded-3xl"></div>
 
-        <section className="showcase-hero relative px-6 py-8 md:py-12 text-center w-[90%] sm:w-[80%] md:w-[65%] lg:w-[55%] mx-auto">
-          {/* Title */}
+        <section className="
+          showcase-hero 
+          relative
+          px-6 py-8 md:py-12 
+          text-center 
+          w-[90%] sm:w-[80%] md:w-[65%] lg:w-[55%] 
+          mx-auto
+        ">
+
+          {/* Title with text shadow for better readability */}
           <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-extralight tracking-tight mb-6 text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">
             TURTLE Showcase
           </h1>
 
-          {/* Date */}
+          {/* Date with better contrast */}
           <p className="inline-block text-2xl sm:text-3xl md:text-4xl font-light text-yellow-400 mb-4 px-3 py-1 bg-black/70 rounded-lg drop-shadow-lg">
             November 21, 2025
           </p>
 
-          {/* Time */}
+          {/* Time with text shadow */}
           <p className="text-xl sm:text-2xl md:text-3xl font-light text-white mb-4 drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
             1:00 PM - 5:00 PM
           </p>
 
-          {/* Location */}
+          {/* Location with better contrast */}
           <p className="inline-flex items-center justify-center text-lg sm:text-xl md:text-2xl font-light text-yellow-400 mb-10 px-3 py-1 bg-black/70 rounded-lg mx-auto gap-2 drop-shadow-lg">
             <svg className="w-5 h-5 text-yellow-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
             </svg>
-            Zachry Engineering Education Complex, Virginia C Brown Atrium
+            <a 
+              href="https://maps.app.goo.gl/r3EgEtRvYB727rX6A"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-yellow-300 transition-colors underline decoration-yellow-400"
+            >
+              Zachry Engineering Education Complex, Virginia C Brown Atrium
+            </a>
           </p>
 
-          {/* Countdown */}
+          {/* Countdown with better mobile handling */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 md:gap-6 max-w-3xl mx-auto mb-8">
             {['Days', 'Hours', 'Minutes', 'Seconds'].map((label, index) => (
               <div key={label} className="bg-black/60 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-6 border border-yellow-500/30 shadow-2xl">
@@ -119,7 +145,7 @@ function Showcase() {
             ))}
           </div>
 
-          {/* Description */}
+          {/* Description with better readability */}
           <p className="text-base sm:text-lg md:text-xl font-light text-white mt-4 max-w-2xl mx-auto drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] leading-relaxed px-4 py-2 bg-black/40 rounded-lg">
             The biggest TURTLE event of the semester is right around the corner! Join us to see the amazing robotics projects our teams have accomplished this semester!
           </p>
@@ -179,7 +205,10 @@ function Showcase() {
         </div>
       </section>
 
-      <style>{`
+      {/* SHOWCASE PROJECT INTEREST FORM SECTION */}
+      <ShowcaseProjectInterestForm />
+
+      <style jsx>{`
         @keyframes confetti-fall {
           0% {
             transform: translateY(-100vh) rotate(0deg);
