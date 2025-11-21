@@ -2,6 +2,8 @@ import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { gsap } from 'gsap'
 import SponsorTicker from '../components/SponsorTicker'
+import ProjectTicker from '../components/ProjectTicker'
+import { projects } from '../data/projects'
 
 const Home = () => {
   const heroRef = useRef(null)
@@ -50,39 +52,40 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-     <section ref={heroRef} className="relative min-h-[70vh] flex items-center justify-center px-4">
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900"></div>
-        <div className="relative text-center max-w-6xl mx-auto z-10">
-          <h1 className="text-6xl md:text-8xl lg:text-9xl font-extralight tracking-tight text-gray-800 dark:text-gray-200 mb-8">
-            <span className="block">TURTLE</span>
-            <span className="block text-yellow-600 dark:text-yellow-400">ROBOTICS</span>
-          </h1>
-          
-          <p className="hero-subtitle text-xl md:text-2xl font-light tracking-wide text-gray-600 dark:text-gray-400 mb-12 max-w-3xl mx-auto">
-            Pioneering robotics solutions and student leadership development at Texas A&M University
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <Link 
-              to="/projects" 
-              className="hero-button bg-gradient-to-r from-yellow-500 to-amber-500 text-white px-10 py-5 rounded-xl font-light tracking-wide hover:scale-105 transition-all duration-300 shadow-premium"
-            >
-              EXPLORE PROJECTS
-            </Link>
-            <Link 
-              to="/about" 
-              className="hero-button glass-card text-gray-800 dark:text-gray-200 px-10 py-5 rounded-xl font-light tracking-wide hover:scale-105 transition-all duration-300"
-            >
-              LEARN MORE
-            </Link>
-          </div>
-        </div>
-        
-        {/* Sponsor Ticker */}
-        <div className="absolute bottom-16 left-0 right-0">
-          <SponsorTicker />
-        </div>
-      </section>
+<section ref={heroRef} className="relative min-h-screen flex items-center justify-center px-4">
+  <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900"></div>
+  
+  <div className="relative text-center max-w-6xl mx-auto z-10">
+    <h1 className="text-6xl md:text-8xl lg:text-9xl font-extralight tracking-tight text-gray-800 dark:text-gray-200 mb-8">
+      <span className="block">TURTLE</span>
+      <span className="block text-yellow-600 dark:text-yellow-400">ROBOTICS</span>
+    </h1>
+    
+    <p className="hero-subtitle text-xl md:text-2xl font-light tracking-wide text-gray-600 dark:text-gray-400 mb-12 max-w-3xl mx-auto">
+      Pioneering robotics solutions and student leadership development at Texas A&M University
+    </p>
+    
+    <div className="flex flex-col sm:flex-row gap-6 justify-center items-center relative z-50">
+      <Link 
+        to="/projects" 
+        className="hero-button bg-gradient-to-r from-yellow-500 to-amber-500 text-white px-10 py-5 rounded-xl font-light tracking-wide hover:scale-105 transition-all duration-300 shadow-premium relative z-50"
+      >
+        EXPLORE PROJECTS
+      </Link>
+      <Link 
+        to="/about" 
+        className="hero-button glass-card text-gray-800 dark:text-gray-200 px-10 py-5 rounded-xl font-light tracking-wide hover:scale-105 transition-all duration-300 relative z-50"
+      >
+        LEARN MORE
+      </Link>
+    </div>
+  </div>
+  
+{/* Project Ticker - positioned at bottom */}
+<div className="absolute bottom-0 left-0 right-0 z-10">
+  <ProjectTicker projects={projects} />
+</div>
+</section>
 
       {/* About Section */}
       <section className="py-24 px-4">
@@ -111,35 +114,8 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Solutions Section */}
-      <section className="py-24 px-4 bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-20 text-gray-800 dark:text-gray-200">
-            OUR <span className="text-yellow-600 dark:text-yellow-400">PROGRAMS</span>
-          </h2>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="glass-card p-10 rounded-2xl hover:scale-105 transition-all duration-300">
-              <div className="text-5xl mb-6">🤖</div>
-              <h3 className="text-xl font-light mb-4 text-gray-800 dark:text-gray-200">Research Projects</h3>
-              <p className="text-gray-600 dark:text-gray-400 font-light leading-relaxed">22 advanced robotics research projects spanning industrial automation, medical robotics, and more.</p>
-            </div>
-            <div className="glass-card p-10 rounded-2xl hover:scale-105 transition-all duration-300">
-              <div className="text-5xl mb-6">🏁</div>
-              <h3 className="text-xl font-light mb-4 text-gray-800 dark:text-gray-200">Competition Teams</h3>
-              <p className="text-gray-600 dark:text-gray-400 font-light leading-relaxed">Two competitive robotics teams representing Texas A&M in national and international competitions.</p>
-            </div>
-            <div className="glass-card p-10 rounded-2xl hover:scale-105 transition-all duration-300">
-              <div className="text-5xl mb-6">👥</div>
-              <h3 className="text-xl font-light mb-4 text-gray-800 dark:text-gray-200">Leadership Training</h3>
-              <p className="text-gray-600 dark:text-gray-400 font-light leading-relaxed">Comprehensive leadership development program for 110+ Hatchling members.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Contact Section */}
-      <section className="py-24 px-4">
+      <section className="py-24 px-4 bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight mb-12 text-gray-800 dark:text-gray-200">
             READY TO <span className="text-yellow-600 dark:text-yellow-400">JOIN US</span>
@@ -154,12 +130,10 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Showcase Popup - Full screen overlay on mobile, fixed sticky on desktop */}
-      {/* Mobile popup version */}
+      {/* Showcase Popup - Mobile */}
       {showMobilePopup && (
         <div className="md:hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
           <div className="relative bg-gradient-to-br from-yellow-50 to-amber-50 dark:from-gray-800 dark:to-gray-700 p-8 rounded-2xl shadow-2xl border-2 border-yellow-400 dark:border-yellow-600 max-w-sm w-full">
-            {/* Close button */}
             <button
               onClick={(e) => {
                 e.preventDefault()
@@ -177,15 +151,12 @@ const Home = () => {
               className="block text-center"
               onClick={() => setShowMobilePopup(false)}
             >
-              {/* Pin */}
               <div className="mx-auto mb-4 w-8 h-8 bg-red-900 dark:bg-yellow-600 rounded-full shadow-md"></div>
-              
               <div className="text-sm font-bold text-yellow-600 dark:text-yellow-400 mb-3 uppercase tracking-wide">📌 Don't Miss This Event!</div>
               <div className="text-4xl font-extralight text-gray-800 dark:text-gray-200 mb-4 leading-tight">TURTLE Showcase</div>
               <div className="text-xl font-light text-gray-600 dark:text-gray-400 mb-2">November 21, 2025</div>
               <div className="text-xl font-light text-gray-600 dark:text-gray-400 mb-2">1:00 PM - 5:00 PM</div>
               <div className="text-base font-light text-gray-600 dark:text-gray-400 mb-6">Zachry Engineering Building<br/>Virginia C Brown Atrium</div>
-              
               <div className="bg-gradient-to-r from-yellow-500 to-amber-500 text-white px-8 py-3 rounded-xl font-light tracking-wide inline-block">
                 Learn More →
               </div>
@@ -194,15 +165,13 @@ const Home = () => {
         </div>
       )}
       
-      {/* Desktop sticky note version */}
+      {/* Showcase Popup - Desktop */}
       <a 
         href="/showcase"
         className="hidden md:block fixed bottom-8 right-8 z-40 group"
       >
         <div className="relative bg-gradient-to-br from-yellow-50 to-amber-50 dark:from-gray-800 dark:to-gray-700 p-6 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 rotate-2 hover:rotate-0 w-64 border-2 border-yellow-400 dark:border-yellow-600">
-          {/* Pin */}
           <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 w-7 h-7 bg-red-900 dark:bg-yellow-600 rounded-full shadow-md"></div>
-          
           <div className="text-xs font-bold text-yellow-600 dark:text-yellow-400 mb-2 uppercase tracking-wide">📌 Don't Miss!</div>
           <div className="text-2xl font-extralight text-gray-800 dark:text-gray-200 mb-2">TURTLE Showcase</div>
           <div className="text-base font-light text-gray-600 dark:text-gray-400 mb-1">November 21, 2025</div>
@@ -210,7 +179,6 @@ const Home = () => {
           <div className="text-xs text-yellow-600 dark:text-yellow-400 underline group-hover:text-yellow-700 dark:group-hover:text-yellow-300 font-medium">Click for more info →</div>
         </div>
       </a>
-
     </div>
   )
 }
