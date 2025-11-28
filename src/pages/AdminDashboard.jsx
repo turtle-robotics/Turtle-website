@@ -6,37 +6,63 @@ const AdminDashboard = () => {
   const [sponsorContacts, setSponsorContacts] = useState([]);
   const [showcaseRegistrations, setShowcaseRegistrations] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [user, setUser] = useState(null);
   const [searchTerm, setSearchTerm] = useState('');
-  const [activeTab, setActiveTab] = useState('sponsors'); // 'sponsors' or 'showcase'
+  const [activeTab, setActiveTab] = useState('sponsors');
+  const [loginError, setLoginError] = useState('');
+  const [loggingIn, setLoggingIn] = useState(false);
 
-  // IMPORTANT: Change this password!
-  const ADMIN_PASSWORD = 'turtle2024';
+  useEffect(() => {
+    // Check if user is already logged in
+    checkUser();
+  }, []);
 
-  const handleLogin = (e) => {
-    e.preventDefault();
-    if (password === ADMIN_PASSWORD) {
-      setIsAuthenticated(true);
-      localStorage.setItem('admin_auth', 'true');
+  const checkUser = async () => {
+    const { data: { user } } = await supabase.auth.getUser();
+    if (user) {
+      setUser(user);
       fetchAllData();
-    } else {
-      alert('Incorrect password!');
+    }
+    setLoading(false);
+  };
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    setLoginError('');
+    setLoggingIn(true);
+
+    try {
+      const { data, error } = await supabase.auth.signInWithPassword({
+        email,
+        password,
+      });
+
+      if (error) throw error;
+
+      setUser(data.user);
+      fetchAllData();
+    } catch (error) {
+      console.error('Login error:', error);
+      setLoginError('Invalid email or password. Please try again.');
+    } finally {
+      setLoggingIn(false);
     }
   };
 
-  useEffect(() => {
-    const isAuth = localStorage.getItem('admin_auth') === 'true';
-    setIsAuthenticated(isAuth);
-    if (isAuth) {
-      fetchAllData();
-    }
-  }, []);
+  const handleLogout = async () => {
+    await supabase.auth.signOut();
+    setUser(null);
+    setEmail('');
+    setPassword('');
+    setSponsorContacts([]);
+    setShowcaseRegistrations([]);
+  };
 
   const fetchAllData = async () => {
     setLoading(true);
     try {
-      // Fetch sponsor contacts
       const { data: sponsors, error: sponsorError } = await supabase
         .from('sponsor_contacts')
         .select('*')
@@ -44,7 +70,6 @@ const AdminDashboard = () => {
 
       if (sponsorError) throw sponsorError;
 
-      // Fetch showcase registrations
       const { data: showcase, error: showcaseError } = await supabase
         .from('showcase_project_interest')
         .select('*')
@@ -60,12 +85,6 @@ const AdminDashboard = () => {
     } finally {
       setLoading(false);
     }
-  };
-
-  const handleLogout = () => {
-    setIsAuthenticated(false);
-    localStorage.removeItem('admin_auth');
-    setPassword('');
   };
 
   const handleDeleteSponsor = async (id) => {
@@ -122,7 +141,6 @@ const AdminDashboard = () => {
     a.click();
   };
 
-  // Filter data based on search
   const filteredSponsors = sponsorContacts.filter(contact =>
     Object.values(contact).some(val =>
       String(val).toLowerCase().includes(searchTerm.toLowerCase())
@@ -137,14 +155,13 @@ const AdminDashboard = () => {
 
   const currentData = activeTab === 'sponsors' ? filteredSponsors : filteredShowcase;
 
-  // Calculate stats
   const getTodayCount = (data) => {
     const today = new Date().toDateString();
     return data.filter(item => new Date(item.created_at).toDateString() === today).length;
   };
 
   // Login screen
-  if (!isAuthenticated) {
+  if (!user) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 flex items-center justify-center px-4">
         <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-2xl max-w-md w-full">
@@ -158,10 +175,30 @@ const AdminDashboard = () => {
               TURTLE Admin Portal
             </h1>
             <p className="text-gray-600 dark:text-gray-400 font-light">
-              Enter password to access dashboard
+              Sign in with your admin account
             </p>
           </div>
+
+          {loginError && (
+            <div className="mb-4 p-4 bg-red-50 dark:bg-red-900/30 border-2 border-red-200 dark:border-red-700 rounded-xl">
+              <p className="text-red-800 dark:text-red-200 text-sm">{loginError}</p>
+            </div>
+          )}
+
           <form onSubmit={handleLogin} className="space-y-4">
+            <div>
+              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                Email Address
+              </label>
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 transition-all outline-none"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
             <div>
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                 Password
@@ -171,15 +208,26 @@ const AdminDashboard = () => {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 transition-all outline-none"
-                placeholder="Enter admin password"
+                placeholder="Enter your password"
                 required
               />
             </div>
             <button
               type="submit"
-              className="w-full bg-gradient-to-r from-yellow-500 to-amber-500 text-white px-6 py-3 rounded-xl font-medium hover:scale-105 transition-all duration-300 shadow-lg"
+              disabled={loggingIn}
+              className="w-full bg-gradient-to-r from-yellow-500 to-amber-500 text-white px-6 py-3 rounded-xl font-medium hover:scale-105 transition-all duration-300 shadow-lg disabled:opacity-50 disabled:hover:scale-100 flex items-center justify-center gap-2"
             >
-              Login
+              {loggingIn ? (
+                <>
+                  <svg className="animate-spin h-5 w-5" fill="none" viewBox="0 0 24 24">
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                  </svg>
+                  Signing in...
+                </>
+              ) : (
+                'Sign In'
+              )}
             </button>
           </form>
         </div>
@@ -187,7 +235,7 @@ const AdminDashboard = () => {
     );
   }
 
-  // Admin dashboard
+  // Admin dashboard (same as before)
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-8 px-4">
       <div className="max-w-7xl mx-auto">
@@ -198,7 +246,7 @@ const AdminDashboard = () => {
               TURTLE Admin Dashboard
             </h1>
             <p className="text-gray-600 dark:text-gray-400 font-light">
-              Manage form submissions and registrations
+              Signed in as: {user.email}
             </p>
           </div>
           <button
@@ -339,7 +387,6 @@ const AdminDashboard = () => {
             ) : (
               <div className="space-y-4">
                 {activeTab === 'sponsors' ? (
-                  // Sponsor contacts
                   filteredSponsors.map((contact) => (
                     <div
                       key={contact.id}
@@ -357,7 +404,6 @@ const AdminDashboard = () => {
                         <button
                           onClick={() => handleDeleteSponsor(contact.id)}
                           className="text-red-500 hover:text-red-700 transition-colors"
-                          title="Delete"
                         >
                           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
@@ -393,7 +439,6 @@ const AdminDashboard = () => {
                     </div>
                   ))
                 ) : (
-                  // Showcase registrations
                   filteredShowcase.map((reg) => (
                     <div
                       key={reg.id}
@@ -411,7 +456,6 @@ const AdminDashboard = () => {
                         <button
                           onClick={() => handleDeleteShowcase(reg.id)}
                           className="text-red-500 hover:text-red-700 transition-colors"
-                          title="Delete"
                         >
                           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
@@ -419,11 +463,9 @@ const AdminDashboard = () => {
                         </button>
                       </div>
 
-                      <div className="grid md:grid-cols-2 gap-4 mb-4">
-                        <div>
-                          <span className="text-sm font-medium text-gray-600 dark:text-gray-400">Email:</span>
-                          <p className="text-gray-800 dark:text-gray-200">{reg.email}</p>
-                        </div>
+                      <div className="mb-4">
+                        <span className="text-sm font-medium text-gray-600 dark:text-gray-400">Email:</span>
+                        <p className="text-gray-800 dark:text-gray-200">{reg.email}</p>
                       </div>
 
                       <div>
