@@ -31,10 +31,10 @@ const About = () => {
 
   const currentLeadership = [
     // Executive roles
-    { role: 'President', name: 'Ian Lansdowne', period: 'Fall 2025 - Spring 2026', description: 'Leading Turtle Robotics into its next chapter of innovation and growth' },
+    { role: 'President', name: 'Sam Woravka', period: 'Fall 2025 - Spring 2026', description: 'Leading Turtle Robotics into its next chapter of innovation and growth' },
     { role: 'External Vice President', name: 'Yousuf Shafiu', period: 'Fall 2025 - Spring 2026', description: 'Overseeing external relations and partnerships' },
     { role: 'Internal Vice President', name: 'Ian Wilhite', period: 'Fall 2025 - Spring 2026', description: 'Managing internal operations and team coordination' },
-    { role: 'Project Vice President', name: 'Sam Woravka', period: 'Fall 2025 - Spring 2026', description: 'Leading project development and technical initiatives' },
+    { role: 'Project Vice President', name: 'Emily Tredemeyer', period: 'Fall 2025 - Spring 2026', description: 'Leading project development and technical initiatives' },
     { role: 'Development Vice President', name: 'Kalen Jaroszewski', period: 'Fall 2025 - Spring 2026', description: 'Driving innovation and research advancement' },
 
     // External Branch — officers then committee members
@@ -47,7 +47,6 @@ const About = () => {
     { role: 'Sponsorship Committee', name: 'William Donaldson', period: 'Fall 2025 - Spring 2026', description: 'Sponsorship strategy and outreach' },
     { role: 'Public Relations Committee', name: 'Alexis Bunta', period: 'Fall 2025 - Spring 2026', description: 'Content and media support' },
     { role: 'Public Relations Committee', name: 'Noah Sherman', period: 'Fall 2025 - Spring 2026', description: 'Content and media support' },
-    { role: 'Public Relations Committee', name: 'Ibraheem Razouki', period: 'Fall 2025 - Spring 2026', description: 'Content and media support' },
     { role: 'Public Relations Committee', name: 'Som Datta', period: 'Fall 2025 - Spring 2026', description: 'Content and media support' },
     { role: 'Public Relations Committee', name: 'Saksham Mohan', period: 'Fall 2025 - Spring 2026', description: 'Content and media support' },
     { role: 'Public Relations Committee', name: 'Wenrui Xu', period: 'Fall 2025 - Spring 2026', description: 'Content and media support' },
@@ -74,7 +73,7 @@ const About = () => {
     { role: 'Lab Quality Committee', name: 'Victor Cardona', period: 'Fall 2025 - Spring 2026', description: 'Lab quality and safety support' },
 
     // Projects Branch — officers then committees
-    { role: 'Documentation Officer', name: 'Emily Tredemeyer', period: 'Fall 2025 - Spring 2026', description: 'Documentation standards and archives' },
+    { role: 'Documentation Officer', name: 'N/A', period: 'Fall 2025 - Spring 2026', description: 'Documentation standards and archives' },
     { role: 'Design Review Officer', name: 'Aidan Briggs', period: 'Fall 2025 - Spring 2026', description: 'Project design reviews and guidance' },
     { role: 'Design Review Officer', name: 'Evan Chan', period: 'Fall 2025 - Spring 2026', description: 'Project design reviews and guidance' },
     { role: 'Design Review Officer', name: 'Jonathon Foltyn', period: 'Fall 2025 - Spring 2026', description: 'Project design reviews and guidance' },
