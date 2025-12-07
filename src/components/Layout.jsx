@@ -37,7 +37,7 @@ const Layout = ({ children }) => {
             <Link to="/" className="flex items-center gap-3 text-gray-800 dark:text-gray-200 h-full">
               {/* Logo spot */}
               <img
-                src="/assets/black_logo.png"
+                src="/assets/black_logo-removebg-preview.png"
                 alt="Logo"
                 className="h-12 w-auto hidden sm:inline dark:hidden align-middle"
               />
@@ -51,7 +51,7 @@ const Layout = ({ children }) => {
               </span>
             </Link>
             
-            <div className="hidden md:flex space-x-8">
+            <div className="hidden md:flex items-center space-x-8">
               {navItems.map((item) => (
                 item.dropdown ? (
                   <div key={item.label} className="relative group flex items-center">
@@ -100,6 +100,21 @@ const Layout = ({ children }) => {
               >
                 {sponsorItem.label}
               </Link>
+
+              {/* Admin Link */}
+              <Link
+                to="/admin"
+                className={`flex items-center gap-1 text-sm font-light tracking-wide transition-all duration-300 ${
+                  location.pathname === '/admin'
+                    ? 'text-yellow-600 dark:text-yellow-400'
+                    : 'text-gray-500 dark:text-gray-400 hover:text-yellow-600 dark:hover:text-yellow-400'
+                }`}
+                title="Admin Dashboard"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                </svg>
+              </Link>
             </div>
 
             <ThemeToggleButton />
@@ -139,6 +154,21 @@ const Layout = ({ children }) => {
               </Link>
             )
           ))}
+          
+          {/* Admin Link for Mobile */}
+          <Link
+            to="/admin"
+            className={`flex flex-col items-center justify-center w-12 h-12 rounded-lg transition-all duration-300 ${
+              location.pathname === '/admin'
+                ? 'bg-yellow-600 dark:bg-yellow-500 text-white'
+                : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
+            }`}
+            title="Admin"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+            </svg>
+          </Link>
         </div>
       </nav>
 

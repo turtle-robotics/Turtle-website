@@ -1,8 +1,11 @@
 import { useEffect, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import ShowcaseProjectInterestForm from '../components/ShowcaseProjectInterestForm';
 
 gsap.registerPlugin(ScrollTrigger);
+
+const ENABLE_SHOWCASE_COUNTDOWN = false;
 
 function Showcase() {
   const [timeLeft, setTimeLeft] = useState({
@@ -11,6 +14,7 @@ function Showcase() {
     minutes: 0,
     seconds: 0
   });
+  const [showConfetti, setShowConfetti] = useState(false);
 
   useEffect(() => {
     gsap.fromTo(
@@ -46,8 +50,10 @@ function Showcase() {
           minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
           seconds: Math.floor((distance % (1000 * 60)) / 1000)
         });
+        setShowConfetti(false);
       } else {
         setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+        setShowConfetti(true);
       }
     };
 
@@ -59,6 +65,23 @@ function Showcase() {
 
   return (
     <div className="min-h-screen">
+      {/* Confetti Effect */}
+      {ENABLE_SHOWCASE_COUNTDOWN && showConfetti && (
+        <div className="fixed inset-0 pointer-events-none z-50 overflow-hidden">
+          {[...Array(100)].map((_, i) => (
+            <div
+              key={i}
+              className="confetti"
+              style={{
+                left: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 3}s`,
+                animationDuration: `${3 + Math.random() * 2}s`,
+                backgroundColor: ['#fbbf24', '#ef4444', '#3b82f6', '#10b981', '#8b5cf6'][Math.floor(Math.random() * 5)]
+              }}
+            />
+          ))}
+        </div>
+      )}
 
       {/* BACKGROUND SECTION WRAPPER */}
       <div
@@ -84,50 +107,59 @@ function Showcase() {
             TURTLE Showcase
           </h1>
 
-          {/* Date with better contrast */}
-          <p className="inline-block text-2xl sm:text-3xl md:text-4xl font-light text-yellow-400 mb-4 px-3 py-1 bg-black/70 rounded-lg drop-shadow-lg">
-            November 21, 2025
-          </p>
+          {ENABLE_SHOWCASE_COUNTDOWN ? (
+            <>
+              {/* Date with better contrast */}
+              <p className="inline-block text-2xl sm:text-3xl md:text-4xl font-light text-yellow-400 mb-4 px-3 py-1 bg-black/70 rounded-lg drop-shadow-lg">
+                November 21, 2025
+              </p>
 
-          {/* Time with text shadow */}
-          <p className="text-xl sm:text-2xl md:text-3xl font-light text-white mb-4 drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
-            1:00 PM - 5:00 PM
-          </p>
+              {/* Time with text shadow */}
+              <p className="text-xl sm:text-2xl md:text-3xl font-light text-white mb-4 drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
+                1:00 PM - 5:00 PM
+              </p>
 
-          {/* Location with better contrast */}
-          <p className="inline-flex items-center justify-center text-lg sm:text-xl md:text-2xl font-light text-yellow-400 mb-10 px-3 py-1 bg-black/70 rounded-lg mx-auto gap-2 drop-shadow-lg">
-            <svg className="w-5 h-5 text-yellow-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-            </svg>
-            <a 
-              href="https://maps.app.goo.gl/r3EgEtRvYB727rX6A"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-yellow-300 transition-colors underline decoration-yellow-400"
-            >
-              Zachry Engineering Education Complex, Virginia C Brown Atrium
-            </a>
-          </p>
+              {/* Location with better contrast */}
+              <p className="inline-flex items-center justify-center text-lg sm:text-xl md:text-2xl font-light text-yellow-400 mb-10 px-3 py-1 bg-black/70 rounded-lg mx-auto gap-2 drop-shadow-lg">
+                <svg className="w-5 h-5 text-yellow-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <a 
+                  href="https://maps.app.goo.gl/r3EgEtRvYB727rX6A"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-yellow-300 transition-colors underline decoration-yellow-400"
+                >
+                  Zachry Engineering Education Complex, Virginia C Brown Atrium
+                </a>
+              </p>
 
-          {/* Countdown with better mobile handling */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 md:gap-6 max-w-3xl mx-auto mb-8">
-            {['Days', 'Hours', 'Minutes', 'Seconds'].map((label, index) => (
-              <div key={label} className="bg-black/60 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-6 border border-yellow-500/30 shadow-2xl">
-                <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extralight text-yellow-400 mb-1 sm:mb-2">
-                  {String(Object.values(timeLeft)[index]).padStart(2, '0')}
-                </div>
-                <div className="text-xs sm:text-sm font-light text-white uppercase tracking-wide">
-                  {label}
-                </div>
+              {/* Countdown with better mobile handling */}
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 md:gap-6 max-w-3xl mx-auto mb-8">
+                {['Days', 'Hours', 'Minutes', 'Seconds'].map((label, index) => (
+                  <div key={label} className="bg-black/60 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-6 border border-yellow-500/30 shadow-2xl">
+                    <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extralight text-yellow-400 mb-1 sm:mb-2">
+                      {String(Object.values(timeLeft)[index]).padStart(2, '0')}
+                    </div>
+                    <div className="text-xs sm:text-sm font-light text-white uppercase tracking-wide">
+                      {label}
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-
-          {/* Description with better readability */}
-          <p className="text-base sm:text-lg md:text-xl font-light text-white mt-4 max-w-2xl mx-auto drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] leading-relaxed px-4 py-2 bg-black/40 rounded-lg">
-            The biggest TURTLE event of the semester is right around the corner! Join us to see the amazing robotics projects our teams have accomplished this semester!
-          </p>
+              
+              {/* Description with better readability */}
+              <p className="text-base sm:text-lg md:text-xl font-light text-white mt-4 max-w-2xl mx-auto drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] leading-relaxed px-4 py-2 bg-black/40 rounded-lg">
+                The biggest TURTLE event of the semester is right around the corner! Join us to see the amazing robotics projects our teams have accomplished this semester!
+              </p>
+            </>
+          ) : (
+            <p className="text-3xl sm:text-4xl md:text-5xl font-light text-yellow-400 mb-10 drop-shadow-lg">
+              Tune in next semester!
+            </p>
+          )}
+          
         </section>
       </div>
 
@@ -167,22 +199,50 @@ function Showcase() {
               </p>
             </details>
 
-            <details className="group bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700 dark:to-gray-600 rounded-2xl p-6 cursor-pointer">
-              <summary className="flex justify-between items-center font-light text-xl text-gray-800 dark:text-gray-200 list-none">
-                <span>Where is the Virginia Brown Atrium?</span>
-                <span className="transition group-open:rotate-180">
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </span>
-              </summary>
-              <p className="mt-4 text-gray-600 dark:text-gray-400 font-light leading-relaxed">
-                This is the seating area just inside the first floor Zachry entrance, across from the E-Quad.
-              </p>
-            </details>
+            {/* FAQ about where showcase location is */}
+            {ENABLE_SHOWCASE_COUNTDOWN && (
+              <details className="group bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700 dark:to-gray-600 rounded-2xl p-6 cursor-pointer">
+                <summary className="flex justify-between items-center font-light text-xl text-gray-800 dark:text-gray-200 list-none">
+                  <span>Where is the Virginia Brown Atrium?</span>
+                  <span className="transition group-open:rotate-180">
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </span>
+                </summary>
+                <p className="mt-4 text-gray-600 dark:text-gray-400 font-light leading-relaxed">
+                  This is the seating area just inside the first floor Zachry entrance, across from the E-Quad.
+                </p>
+              </details>
+            )}
+            
           </div>
         </div>
       </section>
+
+      {/* SHOWCASE PROJECT INTEREST FORM SECTION */}
+      <ShowcaseProjectInterestForm />
+
+      <style jsx>{`
+        @keyframes confetti-fall {
+          0% {
+            transform: translateY(-100vh) rotate(0deg);
+            opacity: 1;
+          }
+          100% {
+            transform: translateY(100vh) rotate(720deg);
+            opacity: 0;
+          }
+        }
+
+        .confetti {
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          top: -10px;
+          animation: confetti-fall linear infinite;
+        }
+      `}</style>
     </div>
   );
 }

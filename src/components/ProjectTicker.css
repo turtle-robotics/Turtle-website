@@ -1,0 +1,125 @@
+/* ENHANCED GLASSMORPHISM TICKER STYLES */
+.project-ticker-wrapper {
+  position: absolute;
+  bottom: -4rem;
+  left: 0;
+  right: 0;
+  width: 100%;
+  overflow: hidden;
+  padding: 2rem 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.project-ticker-container {
+  position: relative;
+  width: 100%;
+  overflow: visible;
+}
+
+.project-ticker-track {
+  display: flex;
+  gap: 1.5rem;
+  width: fit-content;
+  animation: scroll-left 90s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-25%); }
+}
+
+.project-ticker-block {
+  position: relative;
+  flex-shrink: 0;
+  width: 160px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+  pointer-events: auto;
+  border-radius: 1.5rem;
+  
+  /* Enhanced glassmorphism matching DesktopWindow */
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-ticker-block:hover {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(32px);
+  -webkit-backdrop-filter: blur(32px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.6),
+              0 0 40px rgba(251, 146, 60, 0.3);
+  transform: translateY(-6px) scale(1.05);
+  z-index: 5;
+}
+
+.project-ticker-block:active {
+  transform: translateY(-3px) scale(1.02);
+}
+
+.glass-border {
+  position: absolute;
+  inset: 0;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  pointer-events: none;
+}
+
+.project-ticker-acronym {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  pointer-events: none;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 2;
+}
+
+.project-ticker-block:hover .project-ticker-acronym {
+  color: #ffffff;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+/* LIGHT MODE STYLES */
+:root:not(.dark) .project-ticker-acronym {
+  color: #000000;
+  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.3);
+}
+
+:root:not(.dark) .project-ticker-block:hover {
+  box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.6),
+              0 0 40px rgba(128, 0, 32, 0.4);
+}
+
+:root:not(.dark) .project-ticker-block:hover .project-ticker-acronym {
+  color: #000000;
+  text-shadow: 0 0 20px rgba(128, 0, 32, 0.3);
+}
+
+/* DARK MODE STYLES (explicit for clarity) */
+:root.dark .project-ticker-acronym {
+  color: #ffffff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+:root.dark .project-ticker-block:hover {
+  box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.6),
+              0 0 40px rgba(251, 146, 60, 0.3);
+}
+
+:root.dark .project-ticker-block:hover .project-ticker-acronym {
+  color: #ffffff;
+  text-shadow: 0 0 20px rgba(251, 146, 60, 0.5);
+}
