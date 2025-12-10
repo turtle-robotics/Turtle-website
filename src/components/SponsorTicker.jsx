@@ -1,43 +1,31 @@
 import { motion } from 'framer-motion'
 
 const SponsorTicker = () => {
-  // Sample sponsor logos - white logos on black background
+  // Sponsor logos - white logos on black background
   const logos = [
     {
       id: 1,
-      name: "Discord",
-      url: "https://picsum.photos/seed/discord/200/100",
-      alt: "Discord Logo"
+      name: "Williams",
+      url: "assets/sponsors/williamslogo.png",
+      alt: "Williams Logo"
     },
     {
       id: 2,
-      name: "TAMU", 
-      url: "https://picsum.photos/seed/tamu/200/100",
-      alt: "TAMU Logo"
+      name: "L3 Harris", 
+      url: "assets/sponsors/l3harrislogo.png",
+      alt: "L3 Harris Logo"
     },
     {
       id: 3,
-      name: "Instagram",
-      url: "https://picsum.photos/seed/instagram/200/100", 
-      alt: "Instagram Logo"
+      name: "Phillips 66",
+      url: "assets/sponsors/phillips66logo.png", 
+      alt: "Phillips 66 Logo"
     },
     {
       id: 4,
-      name: "LinkedIn",
-      url: "https://picsum.photos/seed/linkedin/200/100",
-      alt: "LinkedIn Logo"
-    },
-    {
-      id: 5,
-      name: "GitHub",
-      url: "https://picsum.photos/seed/github/200/100",
-      alt: "GitHub Logo"
-    },
-    {
-      id: 6,
-      name: "YouTube",
-      url: "https://picsum.photos/seed/youtube/200/100",
-      alt: "YouTube Logo"
+      name: "TC Energy",
+      url: "assets/sponsors/tcenergylogo.png",
+      alt: "TC Energy Logo"
     }
   ]
 
@@ -45,23 +33,24 @@ const SponsorTicker = () => {
   const duplicatedLogos = [...logos, ...logos, ...logos, ...logos, ...logos, ...logos]
 
   return (
-    <div className="w-full py-4 overflow-hidden">
+    <div className="w-full py-8 overflow-hidden">
       <motion.div
-        className="flex items-center"
-        style={{ width: `${duplicatedLogos.length * 200}px` }}
+        className="flex items-center gap-6"
+        style={{ width: `${duplicatedLogos.length * 280}px` }}
         animate={{ x: ['0%', '-100%'] }}
         transition={{ repeat: Infinity, duration: 250, ease: 'linear' }}  // Adjust duration as needed
       >
         {duplicatedLogos.map((logo, index) => (
           <div
             key={`${logo.id}-${index}`}
-            className="flex-shrink-0 px-8"
+            className="flex-shrink-0"
           >
-            <div className="h-9 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300">
+            <div className="glass-card p-6 rounded-2xl h-32 w-48 flex items-center justify-center hover:scale-105 transition-transform duration-300" style={{backgroundColor: 'var(--color-gray-300)'}}>
               <img
                 src={logo.url}
                 alt={logo.alt}
-                className="h-full w-auto object-contain filter brightness-0 dark:invert"
+                style={!["L3 Harris", "Williams"].includes(logo.name) ? { maxWidth: '80%', maxHeight: '80%' } : {}}
+                className="object-contain"
               />
             </div>
           </div>

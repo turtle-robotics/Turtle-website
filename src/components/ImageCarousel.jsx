@@ -79,7 +79,7 @@ export default function ImageCarousel({ images = [], autoPlay = true, intervalMs
             aria-label={`Go to slide ${i + 1}`}
             onClick={() => setIndex(i)}
             className={`w-2.5 h-2.5 rounded-full transition-all ${
-              i === index ? 'bg-white shadow ring-2 ring-white/50 w-4' : 'bg-white/50 hover:bg-white/70'
+              i === index ? 'bg-accent shadow ring-2 ring-accent/50 w-4' : 'bg-accent/50 hover:bg-accent/70'
             }`}
           />)
         )}

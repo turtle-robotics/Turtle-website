@@ -30,7 +30,7 @@ const StatisticsCard = ({ count, label, description }) => {
 
     // Animated counter
     gsap.to({}, {
-      duration: 2,
+      duration: 1,
       onUpdate: function() {
         const progress = this.progress()
         const currentCount = Math.floor(count * progress)
@@ -48,7 +48,7 @@ const StatisticsCard = ({ count, label, description }) => {
   return (
     <div
       ref={cardRef}
-      className="group relative p-10 rounded-2xl glass-card border border-gray-200/50 hover:border-accent/30 transition-all duration-300 hover:scale-105 spotlight"
+      className="group relative p-10 rounded-2xl glass-card border border-border hover:border-accent/30 transition-all duration-300 hover:scale-105 spotlight"
     >
       {/* Spotlight effect */}
       <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-br from-accent/5 to-transparent" />
@@ -58,8 +58,8 @@ const StatisticsCard = ({ count, label, description }) => {
         <div className="text-5xl font-extralight text-accent mb-6" ref={counterRef}>
           {displayCount}+
         </div>
-        <h3 className="text-xl font-light text-gray-800 mb-3">{label}</h3>
-        <p className="text-sm font-light text-gray-600 leading-relaxed">{description}</p>
+        <h3 className="text-xl font-light text-text mb-3">{label}</h3>
+        <p className="text-sm font-light text-muted leading-relaxed">{description}</p>
       </div>
       
       {/* Border glow on hover */}

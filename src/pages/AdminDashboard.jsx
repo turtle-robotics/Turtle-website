@@ -164,17 +164,17 @@ const AdminDashboard = () => {
   if (!user) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 flex items-center justify-center px-4">
-        <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-2xl max-w-md w-full">
+        <div className="bg-surface p-8 rounded-2xl shadow-2xl max-w-md w-full">
           <div className="text-center mb-6">
-            <div className="w-20 h-20 bg-gradient-to-r from-yellow-500 to-amber-500 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="w-20 h-20 bg-gradient-turtle rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg className="w-10 h-10 text-gradient-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
               </svg>
             </div>
-            <h1 className="text-3xl font-extralight text-gray-800 dark:text-gray-200 mb-2">
+            <h1 className="text-3xl font-extralight text-text mb-2">
               TURTLE Admin Portal
             </h1>
-            <p className="text-gray-600 dark:text-gray-400 font-light">
+            <p className="text-muted font-light">
               Sign in with your admin account
             </p>
           </div>
@@ -187,27 +187,27 @@ const AdminDashboard = () => {
 
           <form onSubmit={handleLogin} className="space-y-4">
             <div>
-              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              <label className="block text-sm font-medium text-text mb-2\">
                 Email Address
               </label>
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 transition-all outline-none"
+                className="w-full px-4 py-3 rounded-xl border-2 border-border bg-background text-text focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all outline-none\"
                 placeholder="Enter your email"
                 required
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              <label className="block text-sm font-medium text-text mb-2">
                 Password
               </label>
               <input
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 transition-all outline-none"
+                className="w-full px-4 py-3 rounded-xl border-2 border-border bg-background text-text focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all outline-none"
                 placeholder="Enter your password"
                 required
               />
@@ -215,7 +215,7 @@ const AdminDashboard = () => {
             <button
               type="submit"
               disabled={loggingIn}
-              className="w-full bg-gradient-to-r from-yellow-500 to-amber-500 text-white px-6 py-3 rounded-xl font-medium hover:scale-105 transition-all duration-300 shadow-lg disabled:opacity-50 disabled:hover:scale-100 flex items-center justify-center gap-2"
+              className="w-full bg-gradient-turtle text-gradient-foreground px-6 py-3 rounded-xl font-medium hover:scale-105 transition-all duration-300 shadow-lg disabled:opacity-50 disabled:hover:scale-100 flex items-center justify-center gap-2"
             >
               {loggingIn ? (
                 <>
@@ -242,10 +242,10 @@ const AdminDashboard = () => {
         {/* Header */}
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8">
           <div>
-            <h1 className="text-4xl font-extralight text-gray-800 dark:text-gray-200 mb-2">
+            <h1 className="text-4xl font-extralight text-text mb-2">
               TURTLE Admin Dashboard
             </h1>
-            <p className="text-gray-600 dark:text-gray-400 font-light">
+            <p className="text-muted font-light">
               Signed in as: {user.email}
             </p>
           </div>
@@ -350,7 +350,7 @@ const AdminDashboard = () => {
                 <button
                   onClick={fetchAllData}
                   disabled={loading}
-                  className="bg-gradient-to-r from-yellow-500 to-amber-500 text-white px-6 py-3 rounded-xl font-medium hover:scale-105 transition-all duration-300 shadow-lg disabled:opacity-50 flex items-center gap-2"
+                  className="bg-gradient-turtle text-gradient-foreground px-6 py-3 rounded-xl font-medium hover:scale-105 transition-all duration-300 shadow-lg disabled:opacity-50 flex items-center gap-2"
                 >
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />

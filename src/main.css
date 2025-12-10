@@ -1,28 +1,132 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('/assets/fonts/OpenSans-300.woff2') format('woff2')
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/assets/fonts/OpenSans-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/assets/fonts/OpenSans-500.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/assets/fonts/OpenSans-600.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/assets/fonts/Oswald-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/assets/fonts/Oswald-500.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/assets/fonts/Oswald-700.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/assets/fonts/OpenSans-700.woff2') format('woff2');
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    /* Light Theme */
-    --color-bg: #FFFFFF;
-    --color-text: #1F2937;
-    /* In light mode, accent becomes red */
-    --color-accent: #A60000; /* red */
-    --color-secondary: #A60000;
-    --color-gradient-start: #7B0000;
-    --color-gradient-end: #A60000;
+    
+    /* Fonts */
+    --font-sans: 'Open Sans', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
+    --font-heading: 'Oswald', 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
+    
+    /* Light Theme - TAMU */
+    /* TAMU Brand Colors */
+    --color-brand-primary: #500000;   /* Maroon - Primary brand */
+    --color-brand-secondary: #ffffff; /* White - Secondary brand */
+    --color-brand-dark: #3c001c;      /* Dark maroon */
+    --color-brand-light: #732f2f;     /* Light maroon */
+    
+    --color-bg: #d1d1d1;
+    --color-surface: #f9f9f9;
+    --color-text: #000000;
+    --color-muted: #666666;
+    --color-border: #e0e0e0;
+    --color-accent: #500000;
+    --color-secondary: #732f2f;
+    
+    /* Gradients */
+    --color-gradient-start: #500000;
+    --color-gradient-end: #732f2f;
+    --color-gradient-foreground: #e0e0e0;
+    
+    --color-gray-100: #f6f6f6;
+    --color-gray-200: #eaeaea;
+    --color-gray-300: #d1d1d1;
+    --color-gray-400: #a7a7a7;
+    --color-gray-500: #707070;
+    --color-gray-600: #626262;
+    --color-gray-700: #535353;
+    --color-gray-800: #3e3e3e;
+    --color-gray-900: #202020;
   }
 
   .dark {
-    /* Dark Theme */
-    --color-bg: #111218;
-    --color-text: #E5E7EB;
-    /* In dark mode, accent becomes yellow */
-    --color-accent: #FFD700; /* yellow */
-    --color-secondary: #FFD700;
-    --color-gradient-start: #F59E0B; /* amber-500 */
-    --color-gradient-end: #FBBF24;   /* amber-400 */
+    /* Dark Theme - TURTLE */
+    --color-bg: #0a0f1a;
+    --color-surface: #111a2b;
+    --color-text: #f5f7fb;
+    --color-muted: #c7d2e5;
+    --color-border: #22314a;
+    --color-accent: #f2c14f;
+    --color-secondary: #1f3b73;
+
+    --color-gradient-start: #f6d365;
+    --color-gradient-end: #f2c14f;
+    --color-gradient-foreground: #0d1f3b;
+
+    --color-gray-100: #e8edf7;
+    --color-gray-200: #cfd9ed;
+    --color-gray-300: #a6b9da;
+    --color-gray-400: #7e99c5;
+    --color-gray-500: #5c7eaf;
+    --color-gray-600: #456698;
+    --color-gray-700: #344d76;
+    --color-gray-800: #23365a;
+    --color-gray-900: #141f36;
   }
 
   * {
@@ -36,49 +140,52 @@
   }
 
   body {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-sans);
     background-color: var(--color-bg);
     color: var(--color-text);
     transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
   }
 }
 
 @layer components {
   .glass {
-    background: rgba(255, 255, 255, 0.95);
+    background: color-mix(in srgb, var(--color-surface) 94%, transparent);
     backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid color-mix(in srgb, var(--color-border) 60%, transparent);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
   }
 
   .dark .glass {
-    background: rgba(17, 18, 24, 0.95);
+    background: color-mix(in srgb, var(--color-surface) 94%, transparent);
     backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border: 1px solid color-mix(in srgb, var(--color-border) 70%, transparent);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.32);
   }
 
   .glass-card {
-    background: rgba(255, 255, 255, 0.9);
+    background: color-mix(in srgb, var(--color-surface) 92%, transparent);
     backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+    border: 1px solid color-mix(in srgb, var(--color-border) 60%, transparent);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
     transform: translateZ(0);
     transition: transform 250ms cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 250ms ease, border-color 250ms ease;
   }
 
   .dark .glass-card {
-    background: rgba(17, 18, 24, 0.9);
+    background: color-mix(in srgb, var(--color-surface) 92%, transparent);
     backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.25);
+    border: 1px solid color-mix(in srgb, var(--color-border) 70%, transparent);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.28);
   }
 
-  /* Elevated pop on hover */
   .pop-card:hover {
     transform: translateY(-6px) scale(1.03);
     box-shadow: 0 18px 50px rgba(0,0,0,0.18);
-    border-color: rgba(255, 107, 107, 0.35);
+    border-color: color-mix(in srgb, var(--color-accent) 40%, transparent);
   }
 
   .text-accent {
@@ -87,6 +194,22 @@
 
   .bg-gradient-turtle {
     background: linear-gradient(135deg, var(--color-gradient-start), var(--color-gradient-end));
+  }
+
+  .text-gradient-foreground {
+    color: var(--color-gradient-foreground) !important;
+  }
+
+  .nav-shell {
+    background: color-mix(in srgb, var(--color-surface) 92%, transparent);
+    border-bottom: 1px solid color-mix(in srgb, var(--color-border) 80%, transparent);
+    backdrop-filter: blur(14px);
+  }
+
+  .nav-shell-bottom {
+    background: color-mix(in srgb, var(--color-surface) 94%, transparent);
+    border-top: 1px solid color-mix(in srgb, var(--color-border) 80%, transparent);
+    backdrop-filter: blur(12px);
   }
 
   .bg-gradient-premium {
@@ -105,18 +228,31 @@
 }
 
 @layer utilities {
-  /* Dynamic accent overrides to swap yellow/red by theme */
-  .text-yellow-400, .text-yellow-500, .text-yellow-600 { color: var(--color-accent) !important; }
+  /* Yellow/Amber accent overrides */
+  .text-yellow-400, .text-yellow-500, .text-yellow-600,
   .dark .text-yellow-400, .dark .text-yellow-500, .dark .text-yellow-600 { color: var(--color-accent) !important; }
-  .bg-yellow-400, .bg-yellow-500, .bg-yellow-600 { background-color: var(--color-accent) !important; }
+  .bg-yellow-400, .bg-yellow-500, .bg-yellow-600,
   .dark .bg-yellow-400, .dark .bg-yellow-500, .dark .bg-yellow-600 { background-color: var(--color-accent) !important; }
-  .border-yellow-400, .border-yellow-500, .border-yellow-600 { border-color: var(--color-accent) !important; }
+  .border-yellow-400, .border-yellow-500, .border-yellow-600,
   .dark .border-yellow-400, .dark .border-yellow-500, .dark .border-yellow-600 { border-color: var(--color-accent) !important; }
-
-  .from-yellow-400, .from-yellow-500 { --tw-gradient-from: var(--color-gradient-start) !important; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(2 6 23 / 0)); }
-  .to-amber-400, .to-amber-500 { --tw-gradient-to: var(--color-gradient-end) !important; }
-  .dark .from-yellow-400, .dark .from-yellow-500 { --tw-gradient-from: var(--color-gradient-start) !important; }
+  .from-yellow-400, .from-yellow-500,
+  .dark .from-yellow-400, .dark .from-yellow-500 { --tw-gradient-from: var(--color-gradient-start) !important; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(2 6 23 / 0)); }
+  .to-amber-400, .to-amber-500,
   .dark .to-amber-400, .dark .to-amber-500 { --tw-gradient-to: var(--color-gradient-end) !important; }
+
+  /* Sponsorship tier colors */
+  .from-amber-700, .from-amber-800 { --tw-gradient-from: rgb(180 83 9 / 1) !important; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(180 83 9 / 0)) !important; }
+  .to-amber-800 { --tw-gradient-to: rgb(120 53 15 / 1) !important; }
+  .from-yellow-500.to-yellow-500 { --tw-gradient-from: rgb(234 179 8 / 1) !important; --tw-gradient-to: rgb(234 179 8 / 1) !important; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(234 179 8 / 0)) !important; }
+  .from-orange-600 { --tw-gradient-from: rgb(234 88 12 / 1) !important; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(234 88 12 / 0)) !important; }
+  .to-orange-700 { --tw-gradient-to: rgb(194 65 12 / 1) !important; }
+  .from-gray-400 { --tw-gradient-from: rgb(156 163 175 / 1) !important; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(156 163 175 / 0)) !important; }
+  .to-gray-500 { --tw-gradient-to: rgb(107 114 128 / 1) !important; }
+  .from-slate-300 { --tw-gradient-from: rgb(203 213 225 / 1) !important; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(203 213 225 / 0)) !important; }
+  .to-slate-400 { --tw-gradient-to: rgb(148 163 184 / 1) !important; }
+
+  /* Sponsorship tier text color */
+  .sponsor-section div { color: var(--color-gray-900) !important; }
 
   .ring-yellow-400\/25, .ring-yellow-500\/25 { --tw-ring-color: color-mix(in srgb, var(--color-accent) 25%, transparent) !important; }
 
@@ -165,4 +301,4 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
-} 
+}

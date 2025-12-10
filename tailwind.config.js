@@ -9,15 +9,43 @@ export default {
     extend: {
       fontFamily: {
         'inter': ['Inter', 'sans-serif'],
+        'sans': ['var(--font-sans)'],
+        'heading': ['var(--font-heading)'],
       },
       colors: {
-        accent: '#A60000',
-        secondary: '#FFD700',
-        'turtle-red': '#A60000',
-        'turtle-gold': '#FFD700',
+        /* Semantic tokens wired to CSS variables (light/dark runtime theming) */
+        background: 'var(--color-bg)',
+        surface: 'var(--color-surface)',
+        text: 'var(--color-text)',
+        muted: 'var(--color-muted)',
+        border: 'var(--color-border)',
+
+        brand: {
+          primary: 'var(--color-brand-primary)',
+          secondary: 'var(--color-brand-secondary)',
+          dark: 'var(--color-brand-dark)',
+          light: 'var(--color-brand-light)',
+        },
+
+        /* Accent/secondary keep semantic names for utilities */
+        accent: 'var(--color-accent)',
+        secondary: 'var(--color-secondary)',
+
+        gray: {
+          100: 'var(--color-gray-100)',
+          200: 'var(--color-gray-200)',
+          300: 'var(--color-gray-300)',
+          400: 'var(--color-gray-400)',
+          500: 'var(--color-gray-500)',
+          600: 'var(--color-gray-600)',
+          700: 'var(--color-gray-700)',
+          800: 'var(--color-gray-800)',
+          900: 'var(--color-gray-900)',
+        },
+
         gradients: {
-          turtle: 'linear-gradient(135deg, #7B0000, #A60000)',
-        }
+          turtle: 'linear-gradient(135deg, var(--color-gradient-start), var(--color-gradient-end))',
+        },
       },
       fontSize: {
         'hero': ['clamp(3rem, 8vw, 8rem)', { lineHeight: '0.9', letterSpacing: '-0.02em' }],

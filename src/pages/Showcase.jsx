@@ -93,35 +93,26 @@ function Showcase() {
         {/* Stronger gradient overlay for better readability */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60 pointer-events-none rounded-3xl"></div>
 
-        <section className="
-          showcase-hero 
-          relative
-          px-6 py-8 md:py-12 
-          text-center 
-          w-[90%] sm:w-[80%] md:w-[65%] lg:w-[55%] 
-          mx-auto
-        ">
-
-          {/* Title with text shadow for better readability */}
-          <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-extralight tracking-tight mb-6 text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">
-            TURTLE Showcase
-          </h1>
+        <section className="showcase-hero relative w-[90%] sm:w-[80%] md:w-[65%] lg:w-[55%] mx-auto">
+          <div className="glass-card rounded-3xl p-8 md:p-12 text-center">
+            <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-extralight tracking-tight mb-6 text-text drop-shadow-lg">
+              TURTLE Showcase
+            </h1>
 
           {ENABLE_SHOWCASE_COUNTDOWN ? (
             <>
-              {/* Date with better contrast */}
-              <p className="inline-block text-2xl sm:text-3xl md:text-4xl font-light text-yellow-400 mb-4 px-3 py-1 bg-black/70 rounded-lg drop-shadow-lg">
+              <p className="inline-block text-2xl sm:text-3xl md:text-4xl font-light text-accent mb-4 px-3 py-1 bg-black/70 rounded-lg drop-shadow-lg">
                 November 21, 2025
               </p>
 
               {/* Time with text shadow */}
-              <p className="text-xl sm:text-2xl md:text-3xl font-light text-white mb-4 drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
+              <p className="text-xl sm:text-2xl md:text-3xl font-light text-white mb-4 drop-shadow-md">
                 1:00 PM - 5:00 PM
               </p>
 
               {/* Location with better contrast */}
-              <p className="inline-flex items-center justify-center text-lg sm:text-xl md:text-2xl font-light text-yellow-400 mb-10 px-3 py-1 bg-black/70 rounded-lg mx-auto gap-2 drop-shadow-lg">
-                <svg className="w-5 h-5 text-yellow-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <p className="inline-flex items-center justify-center text-lg sm:text-xl md:text-2xl font-light text-accent mb-10 px-3 py-1 bg-black/70 rounded-lg mx-auto gap-2 drop-shadow-lg">
+                <svg className="w-5 h-5 text-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
@@ -129,7 +120,7 @@ function Showcase() {
                   href="https://maps.app.goo.gl/r3EgEtRvYB727rX6A"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-yellow-300 transition-colors underline decoration-yellow-400"
+                  className="hover:text-accent/80 transition-colors underline decoration-accent"
                 >
                   Zachry Engineering Education Complex, Virginia C Brown Atrium
                 </a>
@@ -138,8 +129,8 @@ function Showcase() {
               {/* Countdown with better mobile handling */}
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 md:gap-6 max-w-3xl mx-auto mb-8">
                 {['Days', 'Hours', 'Minutes', 'Seconds'].map((label, index) => (
-                  <div key={label} className="bg-black/60 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-6 border border-yellow-500/30 shadow-2xl">
-                    <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extralight text-yellow-400 mb-1 sm:mb-2">
+                  <div key={label} className="bg-black/60 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-6 border border-accent/30 shadow-lg">
+                    <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extralight text-accent mb-1 sm:mb-2">
                       {String(Object.values(timeLeft)[index]).padStart(2, '0')}
                     </div>
                     <div className="text-xs sm:text-sm font-light text-white uppercase tracking-wide">
@@ -150,29 +141,29 @@ function Showcase() {
               </div>
               
               {/* Description with better readability */}
-              <p className="text-base sm:text-lg md:text-xl font-light text-white mt-4 max-w-2xl mx-auto drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] leading-relaxed px-4 py-2 bg-black/40 rounded-lg">
+              <p className="text-base sm:text-lg md:text-xl font-light text-white mt-4 max-w-2xl mx-auto drop-shadow-md leading-relaxed px-4 py-2 bg-black/40 rounded-lg">
                 The biggest TURTLE event of the semester is right around the corner! Join us to see the amazing robotics projects our teams have accomplished this semester!
               </p>
             </>
           ) : (
-            <p className="text-3xl sm:text-4xl md:text-5xl font-light text-yellow-400 mb-10 drop-shadow-lg">
+            <p className="text-3xl sm:text-4xl md:text-5xl font-light text-accent mb-10 drop-shadow-lg">
               Tune in next semester!
             </p>
           )}
-          
+          </div>
         </section>
       </div>
 
       {/* FAQ SECTION */}
-      <section className="py-10 px-4 bg-white dark:bg-gray-800">
+      <section className="py-10 px-4 bg-surface">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-extralight text-center mb-10 text-gray-800 dark:text-gray-200">
-            Frequently Asked <span className="text-yellow-600 dark:text-yellow-400">Questions</span>
+          <h2 className="text-4xl md:text-5xl font-extralight text-center mb-10 text-text">
+            Frequently Asked <span className="text-accent">Questions</span>
           </h2>
 
           <div className="space-y-4">
             <details className="group bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700 dark:to-gray-600 rounded-2xl p-6 cursor-pointer">
-              <summary className="flex justify-between items-center font-light text-xl text-gray-800 dark:text-gray-200 list-none">
+              <summary className="flex justify-between items-center font-light text-xl text-text list-none">
                 <span>What is Showcase?</span>
                 <span className="transition group-open:rotate-180">
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -180,13 +171,13 @@ function Showcase() {
                   </svg>
                 </span>
               </summary>
-              <p className="mt-4 text-gray-600 dark:text-gray-400 font-light leading-relaxed">
+              <p className="mt-4 text-muted font-light leading-relaxed">
                 Project Showcase is a several hour come-and-go event for presenting what TURTLE has accomplished this semester. At showcase all 21 advanced projects as well as HATCHLING set up tables to present their projects, progress, and plans for the future.
               </p>
             </details>
 
             <details className="group bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700 dark:to-gray-600 rounded-2xl p-6 cursor-pointer">
-              <summary className="flex justify-between items-center font-light text-xl text-gray-800 dark:text-gray-200 list-none">
+              <summary className="flex justify-between items-center font-light text-xl text-text list-none">
                 <span>Who is invited to Project Showcase?</span>
                 <span className="transition group-open:rotate-180">
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -194,7 +185,7 @@ function Showcase() {
                   </svg>
                 </span>
               </summary>
-              <p className="mt-4 text-gray-600 dark:text-gray-400 font-light leading-relaxed">
+              <p className="mt-4 text-muted font-light leading-relaxed">
                 Everyone is welcome! Project Showcase is a public event open to all — students, professors, families, friends, and anyone interested in robotics or engineering.
               </p>
             </details>
@@ -202,7 +193,7 @@ function Showcase() {
             {/* FAQ about where showcase location is */}
             {ENABLE_SHOWCASE_COUNTDOWN && (
               <details className="group bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700 dark:to-gray-600 rounded-2xl p-6 cursor-pointer">
-                <summary className="flex justify-between items-center font-light text-xl text-gray-800 dark:text-gray-200 list-none">
+                <summary className="flex justify-between items-center font-light text-xl text-text list-none">
                   <span>Where is the Virginia Brown Atrium?</span>
                   <span className="transition group-open:rotate-180">
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -210,7 +201,7 @@ function Showcase() {
                     </svg>
                   </span>
                 </summary>
-                <p className="mt-4 text-gray-600 dark:text-gray-400 font-light leading-relaxed">
+                <p className="mt-4 text-muted font-light leading-relaxed">
                   This is the seating area just inside the first floor Zachry entrance, across from the E-Quad.
                 </p>
               </details>

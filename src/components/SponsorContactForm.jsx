@@ -74,7 +74,7 @@ const SponsorContactForm = ({ onClose }) => {
       <form onSubmit={handleSubmit} className="space-y-6">
         <div className="grid md:grid-cols-2 gap-6">
           <div>
-            <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label htmlFor="name" className="block text-sm font-medium text-text mb-2">
               Full Name *
             </label>
             <input
@@ -84,13 +84,13 @@ const SponsorContactForm = ({ onClose }) => {
               value={formData.name}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 dark:focus:ring-yellow-800 transition-all outline-none"
+              className="w-full px-4 py-3 rounded-xl border-2 border-border bg-background text-text placeholder:text-muted focus:border-accent focus:ring-accent transition-all outline-none"
               placeholder="John Doe"
             />
           </div>
 
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label htmlFor="email" className="block text-sm font-medium text-text mb-2">
               Email Address *
             </label>
             <input
@@ -100,7 +100,7 @@ const SponsorContactForm = ({ onClose }) => {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 dark:focus:ring-yellow-800 transition-all outline-none"
+              className="w-full px-4 py-3 rounded-xl border-2 border-border bg-background text-text placeholder:text-muted focus:border-accent focus:ring-accent transition-all outline-none"
               placeholder="john@company.com"
             />
           </div>
@@ -108,7 +108,7 @@ const SponsorContactForm = ({ onClose }) => {
 
         <div className="grid md:grid-cols-2 gap-6">
           <div>
-            <label htmlFor="company" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label htmlFor="company" className="block text-sm font-medium text-text mb-2">
               Company/Organization
             </label>
             <input
@@ -117,13 +117,13 @@ const SponsorContactForm = ({ onClose }) => {
               name="company"
               value={formData.company}
               onChange={handleChange}
-              className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 dark:focus:ring-yellow-800 transition-all outline-none"
+              className="w-full px-4 py-3 rounded-xl border-2 border-border bg-background text-text placeholder:text-muted focus:border-accent focus:ring-accent transition-all outline-none"
               placeholder="Tech Corp Inc."
             />
           </div>
 
           <div>
-            <label htmlFor="phone" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label htmlFor="phone" className="block text-sm font-medium text-text mb-2">
               Phone Number
             </label>
             <input
@@ -132,14 +132,14 @@ const SponsorContactForm = ({ onClose }) => {
               name="phone"
               value={formData.phone}
               onChange={handleChange}
-              className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 dark:focus:ring-yellow-800 transition-all outline-none"
+              className="w-full px-4 py-3 rounded-xl border-2 border-border bg-background text-text placeholder:text-muted focus:border-accent focus:ring-accent transition-all outline-none"
               placeholder="(123) 456-7890"
             />
           </div>
         </div>
 
         <div>
-          <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label htmlFor="message" className="block text-sm font-medium text-text mb-2">
             Message *
           </label>
           <textarea
@@ -149,7 +149,7 @@ const SponsorContactForm = ({ onClose }) => {
             onChange={handleChange}
             required
             rows="5"
-            className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 dark:focus:ring-yellow-800 transition-all outline-none resize-none"
+            className="w-full px-4 py-3 rounded-xl border-2 border-border bg-background text-text placeholder:text-muted focus:border-accent focus:ring-accent transition-all outline-none resize-none"
             placeholder="Tell us about your interest in sponsoring TURTLE Robotics..."
           />
         </div>
@@ -178,7 +178,7 @@ const SponsorContactForm = ({ onClose }) => {
         <button
           type="submit"
           disabled={loading}
-          className="w-full bg-gradient-to-r from-yellow-500 to-amber-500 text-white px-8 py-4 rounded-xl font-medium hover:scale-105 transition-all duration-300 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center gap-2"
+          className="w-full bg-gradient-turtle text-gradient-foreground px-8 py-4 rounded-xl font-medium hover:scale-105 transition-all duration-300 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center gap-2"
         >
           {loading ? (
             <>

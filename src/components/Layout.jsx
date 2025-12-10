@@ -29,12 +29,12 @@ const Layout = ({ children }) => {
   const sponsorItem = { path: '/sponsorship', label: 'Looking to Sponsor?' }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-white via-gray-50 to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+    <div className="min-h-screen bg-background text-text">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl border-b border-gray-200/50 dark:border-gray-700/50 shadow-sm">
+      <nav className="nav-shell fixed top-0 left-0 right-0 z-50 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
-            <Link to="/" className="flex items-center gap-3 text-gray-800 dark:text-gray-200 h-full">
+            <Link to="/" className="flex items-center gap-3 text-text h-full">
               {/* Logo spot */}
               <img
                 src="/assets/black_logo-removebg-preview.png"
@@ -46,8 +46,8 @@ const Layout = ({ children }) => {
                 alt="Logo"
                 className="h-12 w-auto hidden sm:dark:inline sm:hidden align-middle"
               />
-              <span className="hidden sm:inline text-2xl font-extralight tracking-tight align-middle leading-none ml-2">
-                <span className="text-yellow-600 dark:text-yellow-400">TURTLE</span> ROBOTICS
+              <span className="hidden sm:inline text-2xl font-normal tracking-tight align-middle leading-none ml-2">
+                <span className="text-accent">TURTLE</span> ROBOTICS
               </span>
             </Link>
             
@@ -55,18 +55,18 @@ const Layout = ({ children }) => {
               {navItems.map((item) => (
                 item.dropdown ? (
                   <div key={item.label} className="relative group flex items-center">
-                    <button className="flex items-center text-sm font-light tracking-wide transition-all duration-300 text-gray-600 dark:text-gray-300 hover:text-yellow-600 dark:hover:text-yellow-400 hover:border-b-2 hover:border-yellow-600/50 dark:hover:border-yellow-400/50">
+                    <button className="flex items-center text-sm font-normal tracking-wide transition-all duration-300 text-muted hover:text-accent hover:border-b-2 hover:border-accent/70">
                       {item.label}
                     </button>
-                    <div className="absolute top-full left-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                    <div className="absolute top-full left-0 mt-2 w-48 bg-surface rounded-lg shadow-lg border border-border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                       {item.dropdown.map((dropdownItem) => (
                         <Link
                           key={dropdownItem.path}
                           to={dropdownItem.path}
-                          className={`block px-4 py-3 text-sm font-light transition-all duration-300 ${
+                          className={`block px-4 py-3 text-sm font-normal transition-all duration-300 ${
                             location.pathname === dropdownItem.path
-                              ? 'text-yellow-600 dark:text-yellow-400 bg-yellow-50 dark:bg-yellow-900/20'
-                              : 'text-gray-600 dark:text-gray-300 hover:text-yellow-600 dark:hover:text-yellow-400 hover:bg-gray-50 dark:hover:bg-gray-700'
+                              ? 'text-accent bg-surface'
+                              : 'text-muted hover:text-accent hover:bg-surface'
                           }`}
                         >
                           {dropdownItem.label}
@@ -78,10 +78,10 @@ const Layout = ({ children }) => {
                   <Link
                     key={item.path}
                     to={item.path}
-                    className={`flex items-center text-sm font-light tracking-wide transition-all duration-300 ${
+                    className={`flex items-center text-sm font-normal tracking-wide transition-all duration-300 ${
                       location.pathname === item.path
-                        ? 'text-yellow-600 dark:text-yellow-400 border-b-2 border-yellow-600 dark:border-yellow-400'
-                        : 'text-gray-600 dark:text-gray-300 hover:text-yellow-600 dark:hover:text-yellow-400 hover:border-b-2 hover:border-yellow-600/50 dark:hover:border-yellow-400/50'
+                        ? 'text-accent border-b-2 border-accent'
+                        : 'text-muted hover:text-accent hover:border-b-2 hover:border-accent/70'
                     }`}
                   >
                     {item.label}
@@ -92,10 +92,10 @@ const Layout = ({ children }) => {
               {/* Special Sponsor Link */}
               <Link
                 to={sponsorItem.path}
-                className={`text-sm font-medium tracking-wide transition-all duration-300 px-4 py-2 rounded-lg ${
+                className={`text-sm font-medium tracking-wide transition-all duration-300 px-4 py-2 rounded-lg text-gradient-foreground ${
                   location.pathname === sponsorItem.path
-                    ? 'bg-gradient-to-r from-yellow-500 to-amber-500 text-white shadow-lg'
-                    : 'bg-gradient-to-r from-yellow-400 to-amber-400 text-white hover:from-yellow-500 hover:to-amber-500 shadow-md hover:shadow-lg'
+                    ? 'bg-gradient-turtle shadow-lg'
+                    : 'bg-gradient-turtle shadow-md hover:shadow-lg'
                 }`}
               >
                 {sponsorItem.label}
@@ -106,8 +106,8 @@ const Layout = ({ children }) => {
                 to="/admin"
                 className={`flex items-center gap-1 text-sm font-light tracking-wide transition-all duration-300 ${
                   location.pathname === '/admin'
-                    ? 'text-yellow-600 dark:text-yellow-400'
-                    : 'text-gray-500 dark:text-gray-400 hover:text-yellow-600 dark:hover:text-yellow-400'
+                    ? 'text-accent'
+                    : 'text-muted hover:text-accent'
                 }`}
                 title="Admin Dashboard"
               >
@@ -123,7 +123,7 @@ const Layout = ({ children }) => {
       </nav>
 
       {/* Mobile Navigation */}
-      <nav className="fixed bottom-0 left-0 right-0 z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur-xl border-t border-gray-200/50 dark:border-gray-700/50 shadow-lg md:hidden">
+      <nav className="nav-shell-bottom fixed bottom-0 left-0 right-0 z-50 shadow-lg md:hidden">
         <div className="flex justify-around items-center h-16 px-4">
           {navItems.map((item) => (
             item.dropdown ? (
@@ -133,8 +133,8 @@ const Layout = ({ children }) => {
                 to={item.dropdown[0].path}
                 className={`flex flex-col items-center justify-center w-12 h-12 rounded-lg transition-all duration-300 ${
                   location.pathname === item.dropdown[0].path
-                    ? 'bg-yellow-600 dark:bg-yellow-500 text-white'
-                    : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
+                    ? 'bg-accent text-gradient-foreground'
+                    : 'text-muted hover:bg-gray-100'
                 }`}
                 title={`${item.label}: ${item.dropdown.map(d => d.label).join(', ')}`}
               >
@@ -146,8 +146,8 @@ const Layout = ({ children }) => {
                 to={item.path}
                 className={`flex flex-col items-center justify-center w-12 h-12 rounded-lg transition-all duration-300 ${
                   location.pathname === item.path
-                    ? 'bg-yellow-600 dark:bg-yellow-500 text-white'
-                    : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
+                    ? 'bg-accent text-gradient-foreground'
+                    : 'text-muted hover:bg-surface'
                 }`}
               >
                 <span className="text-xs font-light">{item.label}</span>
@@ -160,8 +160,8 @@ const Layout = ({ children }) => {
             to="/admin"
             className={`flex flex-col items-center justify-center w-12 h-12 rounded-lg transition-all duration-300 ${
               location.pathname === '/admin'
-                ? 'bg-yellow-600 dark:bg-yellow-500 text-white'
-                : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
+                ? 'bg-accent text-gradient-foreground'
+                : 'text-muted hover:bg-surface'
             }`}
             title="Admin"
           >

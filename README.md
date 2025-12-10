@@ -1,8 +1,8 @@
 # The T.U.R.T.L.E Robotics Website
 
-A modern React website for T.U.R.T.L.E Robotics, a student robotics research lab at Texas A&M University. This website showcases their 13+ advanced research projects, competition teams, and student leadership development programs.
+A website for T.U.R.T.L.E Robotics, a student robotics research lab at Texas A&M University. This website showcases our 21 advanced research projects and development programs.
 
-## 🚀 Features
+## Features
 
 - **Modern React 18** with Vite for fast development
 - **Responsive Design** with mobile-first approach
@@ -14,7 +14,7 @@ A modern React website for T.U.R.T.L.E Robotics, a student robotics research lab
 - **Tailwind CSS** with custom design system
 - **React Router** for seamless navigation
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Framework**: React 18 with Vite
 - **Routing**: React Router DOM
@@ -23,7 +23,7 @@ A modern React website for T.U.R.T.L.E Robotics, a student robotics research lab
 - **Font**: Inter (Google Fonts) - weights 100-900
 - **Package Manager**: npm
 
-## 🎨 Design System
+## Design System
 
 ### Color Scheme
 - **Light Theme**: Clean white background with Turtle Red (#A60000) accents
@@ -36,7 +36,7 @@ A modern React website for T.U.R.T.L.E Robotics, a student robotics research lab
 - **Section Headers**: 5xl-6xl, font-extralight
 - **Body Text**: font-light, tracking-wide
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 src/
@@ -64,7 +64,7 @@ src/
 └── main.css                    # Global styles and CSS variables
 ```
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - Node.js (v16 or higher)
@@ -75,7 +75,7 @@ src/
 1. **Clone the repository**
    ```bash
    git clone <repository-url>
-   cd turtle-robotics-website
+   cd Turtle-website
    ```
 
 2. **Install dependencies**
@@ -103,7 +103,7 @@ npm run build
 npm run preview
 ```
 
-## 🎯 Key Components
+## Key Components
 
 ### ChromaGrid
 Interactive grid component with:
@@ -124,7 +124,7 @@ Theme management with:
 - Local storage persistence
 - System preference detection
 
-## 🎨 Customization
+## Customization
 
 ### Colors
 Edit CSS variables in `src/main.css`:
@@ -163,7 +163,7 @@ export const roboticsProjects = [
 ]
 ```
 
-## 📱 Responsive Design
+## Responsive Design
 
 The website is fully responsive with:
 - Mobile-first approach
@@ -171,7 +171,7 @@ The website is fully responsive with:
 - Flexible grid layouts
 - Touch-friendly interactions
 
-## 🎭 Animations
+## Animations
 
 ### GSAP Animations
 - Hero text staggered animations
@@ -185,7 +185,7 @@ The website is fully responsive with:
 - Hover transforms
 - Custom keyframes
 
-## 🔧 Development
+## Development
 
 ### Code Quality
 - ESLint configuration
@@ -199,7 +199,7 @@ The website is fully responsive with:
 - Efficient re-renders with React.memo
 - Minimal bundle size
 
-## 🚀 Deployment
+## Deployment
 
 ### Vercel (Recommended)
 1. Connect your GitHub repository
@@ -213,11 +213,11 @@ The website is fully responsive with:
 ### Other Platforms
 The project uses Vite, so it's compatible with any static hosting platform.
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License.
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create a feature branch
@@ -225,10 +225,7 @@ This project is licensed under the MIT License.
 4. Test thoroughly
 5. Submit a pull request
 
-## 📞 Contact
+## Contact
 
-For questions or support, contact the TURTLE Robotics team at Texas A&M University.
+For questions or support, contact TURTLE at Texas A&M University.
 
----
-
-Built with ❤️ for T.U.R.T.L.E Robotics

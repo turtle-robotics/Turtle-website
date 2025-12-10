@@ -65,7 +65,7 @@ const ContactForm = () => {
       <form onSubmit={handleSubmit} className="space-y-6">
         <div className="grid md:grid-cols-2 gap-6">
           <div>
-            <label htmlFor="name" className="block text-sm font-light text-gray-700 dark:text-gray-300 mb-2">
+            <label htmlFor="name" className="block text-sm font-light text-text mb-2">
               Name *
             </label>
             <input
@@ -75,13 +75,13 @@ const ContactForm = () => {
               value={formData.name}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-200"
+              className="w-full px-4 py-3 border border-border rounded-xl bg-surface text-text focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-200"
               placeholder="Your full name"
             />
           </div>
           
           <div>
-            <label htmlFor="email" className="block text-sm font-light text-gray-700 dark:text-gray-300 mb-2">
+            <label htmlFor="email" className="block text-sm font-light text-text mb-2">
               Email *
             </label>
             <input
@@ -91,14 +91,14 @@ const ContactForm = () => {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-200"
+              className="w-full px-4 py-3 border border-border rounded-xl bg-surface text-text focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-200"
               placeholder="your.email@example.com"
             />
           </div>
         </div>
         
         <div>
-          <label htmlFor="subject" className="block text-sm font-light text-gray-700 dark:text-gray-300 mb-2">
+          <label htmlFor="subject" className="block text-sm font-light text-text mb-2">
             Subject *
           </label>
           <input
@@ -108,13 +108,13 @@ const ContactForm = () => {
             value={formData.subject}
             onChange={handleChange}
             required
-            className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-200"
+            className="w-full px-4 py-3 border border-border rounded-xl bg-surface text-text focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-200"
             placeholder="What is this regarding?"
           />
         </div>
         
         <div>
-          <label htmlFor="message" className="block text-sm font-light text-gray-700 dark:text-gray-300 mb-2">
+          <label htmlFor="message" className="block text-sm font-light text-text mb-2">
             Message *
           </label>
           <textarea
@@ -124,7 +124,7 @@ const ContactForm = () => {
             onChange={handleChange}
             required
             rows={6}
-            className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-200 resize-none"
+            className="w-full px-4 py-3 border border-border rounded-xl bg-surface text-text focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-200 resize-none"
             placeholder="Tell us more about your inquiry..."
           />
         </div>
@@ -133,12 +133,12 @@ const ContactForm = () => {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="bg-gradient-turtle text-white px-8 py-4 rounded-xl font-light tracking-wide hover:scale-105 transition-all duration-300 shadow-premium disabled:opacity-50 disabled:cursor-not-allowed"
+            className="bg-gradient-turtle text-gradient-foreground px-8 py-4 rounded-xl font-light tracking-wide hover:scale-105 transition-all duration-300 shadow-premium disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {isSubmitting ? 'Sending...' : 'Send Message'}
           </button>
           
-          <div className="text-sm text-gray-600 dark:text-gray-400">
+          <div className="text-sm text-muted">
             Or email us directly at{' '}
             <a 
               href="mailto:turtlerobotics@gmail.com" 

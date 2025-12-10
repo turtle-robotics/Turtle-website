@@ -43,8 +43,9 @@ const Apply = () => {
       <section ref={heroRef} className="relative min-h-screen flex items-center justify-center px-4">
         <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900"></div>
         <div className="relative text-center max-w-6xl mx-auto z-10">
+          <div className="glass-card p-16 rounded-3xl">
           {applicationsOpen ? (
-            <h1 className="text-6xl md:text-8xl lg:text-9xl font-extralight tracking-tight text-gray-800 dark:text-gray-200 mb-8">
+            <h1 className="text-6xl md:text-8xl lg:text-9xl font-extralight tracking-tight text-text mb-8">
               <span className="block">APPLY</span>
               <span className="block text-accent">NOW</span>
             </h1>
@@ -54,36 +55,37 @@ const Apply = () => {
             </h1>
           )}
 
-          <p className="hero-subtitle text-xl md:text-2xl font-light tracking-wide text-gray-600 dark:text-gray-400 mb-12 max-w-3xl mx-auto">
+          <p className="hero-subtitle text-xl md:text-2xl font-light tracking-wide text-muted mb-12 max-w-3xl mx-auto">
             {applicationsOpen
               ? "Fill out this form to join Hatchlings or Advanced Project teams at Turtle Robotics."
               : "Applications are currently closed. Please check back soon for future openings."}
           </p>
+        </div>
         </div>
       </section>
 
       {/* Application Process */}
       <section className="py-24 px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-20 text-gray-800 dark:text-gray-200">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-20 text-text">
             JOIN TURTLE <span className="text-accent">ROBOTICS</span>
           </h2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             <div className="glass-card pop-card p-10 rounded-2xl text-center hover:scale-[1.03] transition-all duration-300">
               <div className="text-5xl mb-6">📝</div>
-              <h3 className="text-xl font-light mb-4 text-gray-800 dark:text-gray-200">Submit Application</h3>
-              <p className="text-gray-600 dark:text-gray-400 font-light leading-relaxed">Complete our online application form to join Hatchlings or Advanced Project teams.</p>
+              <h3 className="text-xl font-light mb-4 text-text">Submit Application</h3>
+              <p className="text-muted font-light leading-relaxed">Complete our online application form to join Hatchlings or Advanced Project teams.</p>
             </div>
             <div className="glass-card pop-card p-10 rounded-2xl text-center hover:scale-[1.03] transition-all duration-300">
               <div className="text-5xl mb-6">🤝</div>
-              <h3 className="text-xl font-light mb-4 text-gray-800 dark:text-gray-200">Open House</h3>
-              <p className="text-gray-600 dark:text-gray-400 font-light leading-relaxed">Meet with our team leaders to discuss your goals and project preferences.</p>
+              <h3 className="text-xl font-light mb-4 text-text">Open House</h3>
+              <p className="text-muted font-light leading-relaxed">Meet with our team leaders to discuss your goals and project preferences.</p>
             </div>
             <div className="glass-card pop-card p-10 rounded-2xl text-center hover:scale-[1.03] transition-all duration-300">
               <div className="text-5xl mb-6">🚀</div>
-              <h3 className="text-xl font-light mb-4 text-gray-800 dark:text-gray-200">Start Contributing</h3>
-              <p className="text-gray-600 dark:text-gray-400 font-light leading-relaxed">Begin working on exciting robotics projects with Turtle Robotics.</p>
+              <h3 className="text-xl font-light mb-4 text-text">Start Contributing</h3>
+              <p className="text-muted font-light leading-relaxed">Begin working on exciting robotics projects with Turtle Robotics.</p>
             </div>
           </div>
         </div>
@@ -92,27 +94,58 @@ const Apply = () => {
       {/* Requirements Section */}
       <section className="py-24 px-4 bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-20 text-gray-800 dark:text-gray-200">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-20 text-text">
             WHAT WE <span className="text-accent">LOOK FOR</span>
           </h2>
           
-          <div className="grid md:grid-cols-2 gap-12">
-            <div>
-              <h3 className="text-2xl font-light text-gray-800 dark:text-gray-200 mb-6">Technical Skills</h3>
-              <ul className="space-y-4">
-                <li className="flex items-start"><span className="text-accent mr-3">•</span><span className="text-gray-600 dark:text-gray-400 font-light">Programming experience (Python, C++, ROS)</span></li>
-                <li className="flex items-start"><span className="text-accent mr-3">•</span><span className="text-gray-600 dark:text-gray-400 font-light">Understanding of robotics fundamentals</span></li>
-                <li className="flex items-start"><span className="text-accent mr-3">•</span><span className="text-gray-600 dark:text-gray-400 font-light">Experience with hardware and electronics</span></li>
-                <li className="flex items-start"><span className="text-accent mr-3">•</span><span className="text-gray-600 dark:text-gray-400 font-light">Knowledge of control systems and algorithms</span></li>
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Technical Skills Card */}
+            <div className="glass-card pop-card p-8 rounded-2xl hover:scale-[1.02] transition-all duration-300">
+              <div className="flex items-center justify-center gap-4 mb-8">
+                <h3 className="text-3xl font-light text-text ">Technical Skills</h3>
+              </div>
+              <ul className="space-y-5">
+                <li className="flex items-start gap-3 group">
+                  <span className="text-accent text-xl mt-0.5 group-hover:scale-125 transition-transform">✓</span>
+                  <span className="text-muted font-light text-lg">Programming experience (Python, C++, ROS)</span>
+                </li>
+                <li className="flex items-start gap-3 group">
+                  <span className="text-accent text-xl mt-0.5 group-hover:scale-125 transition-transform">✓</span>
+                  <span className="text-muted font-light text-lg">Understanding of robotics fundamentals</span>
+                </li>
+                <li className="flex items-start gap-3 group">
+                  <span className="text-accent text-xl mt-0.5 group-hover:scale-125 transition-transform">✓</span>
+                  <span className="text-muted font-light text-lg">Experience with hardware and electronics</span>
+                </li>
+                <li className="flex items-start gap-3 group">
+                  <span className="text-accent text-xl mt-0.5 group-hover:scale-125 transition-transform">✓</span>
+                  <span className="text-muted font-light text-lg">Knowledge of control systems and algorithms</span>
+                </li>
               </ul>
             </div>
-            <div>
-              <h3 className="text-2xl font-light text-gray-800 dark:text-gray-200 mb-6">Personal Qualities</h3>
-              <ul className="space-y-4">
-                <li className="flex items-start"><span className="text-accent mr-3">•</span><span className="text-gray-600 dark:text-gray-400 font-light">Strong problem-solving abilities</span></li>
-                <li className="flex items-start"><span className="text-accent mr-3">•</span><span className="text-gray-600 dark:text-gray-400 font-light">Excellent teamwork and communication</span></li>
-                <li className="flex items-start"><span className="text-accent mr-3">•</span><span className="text-gray-600 dark:text-gray-400 font-light">Passion for robotics and innovation</span></li>
-                <li className="flex items-start"><span className="text-accent mr-3">•</span><span className="text-gray-600 dark:text-gray-400 font-light">Commitment to learning and growth</span></li>
+
+            {/* Personal Qualities Card */}
+            <div className="glass-card pop-card p-8 rounded-2xl hover:scale-[1.02] transition-all duration-300">
+              <div className="flex items-center justify-center gap-4 mb-8">
+                <h3 className="text-3xl font-light text-text">Personal Qualities</h3>
+              </div>
+              <ul className="space-y-5">
+                <li className="flex items-start gap-3 group">
+                  <span className="text-accent text-xl mt-0.5 group-hover:scale-125 transition-transform">✓</span>
+                  <span className="text-muted font-light text-lg">Strong problem-solving abilities</span>
+                </li>
+                <li className="flex items-start gap-3 group">
+                  <span className="text-accent text-xl mt-0.5 group-hover:scale-125 transition-transform">✓</span>
+                  <span className="text-muted font-light text-lg">Excellent teamwork and communication</span>
+                </li>
+                <li className="flex items-start gap-3 group">
+                  <span className="text-accent text-xl mt-0.5 group-hover:scale-125 transition-transform">✓</span>
+                  <span className="text-muted font-light text-lg">Passion for robotics and innovation</span>
+                </li>
+                <li className="flex items-start gap-3 group">
+                  <span className="text-accent text-xl mt-0.5 group-hover:scale-125 transition-transform">✓</span>
+                  <span className="text-muted font-light text-lg">Commitment to learning and growth</span>
+                </li>
               </ul>
             </div>
           </div>
@@ -122,19 +155,19 @@ const Apply = () => {
       {/* Contact Section */}
       <section className="py-24 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight mb-12 text-gray-800 dark:text-gray-200">
-            READY TO <span className="text-yellow-600 dark:text-yellow-400">JOIN US</span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight mb-12 text-text">
+            READY TO <span className="text-accent">JOIN US</span>
           </h2>
 
           {applicationsOpen ? (
             <a 
               href="https://forms.gle/8md4HbE4LCMRBf6UA"
-              className="inline-block bg-gradient-to-r from-yellow-500 to-amber-500 text-white px-16 py-6 rounded-xl text-xl font-light tracking-wide hover:scale-105 transition-all duration-300 shadow-premium"
+              className="inline-block bg-gradient-turtle text-gradient-foreground px-16 py-6 rounded-xl text-xl font-light tracking-wide hover:scale-105 transition-all duration-300 shadow-premium"
             >
               APPLY NOW
             </a>
           ) : (
-            <div className="inline-block bg-gray-300 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-16 py-6 rounded-xl text-xl font-light tracking-wide cursor-not-allowed shadow-inner">
+            <div className="inline-block bg-surface text-muted px-16 py-6 rounded-xl text-xl font-light tracking-wide cursor-not-allowed shadow-inner border border-border">
               APPLICATIONS CLOSED
             </div>
           )}
