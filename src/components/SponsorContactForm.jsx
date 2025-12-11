@@ -1,57 +1,66 @@
-// src/components/SponsorContactForm.jsx
-import { useState } from 'react';
-import { supabase } from '../utils/supabaseClient';
+/**
+ * SponsorContactForm Component
+ *
+ * Form for potential sponsors to contact TURTLE Robotics.
+ * Collects contact details and message, stores in Supabase database.
+ * Modal form with close callback and success/error handling.
+ *
+ * @param {Object} props
+ * @param {Function} props.onClose - Callback to close the modal
+ */
+import { useState } from "react";
+import { supabase } from "../utils/supabaseClient";
 
 const SponsorContactForm = ({ onClose }) => {
+  // Form state
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    message: ''
+    name: "",
+    email: "",
+    company: "",
+    phone: "",
+    message: "",
   });
   const [loading, setLoading] = useState(false);
-  const [status, setStatus] = useState({ type: '', message: '' });
+  const [status, setStatus] = useState({ type: "", message: "" });
 
   const handleChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    setStatus({ type: '', message: '' });
+    setStatus({ type: "", message: "" });
 
     try {
-      const { error } = await supabase
-        .from('sponsor_contacts')
-        .insert([
-          {
-            name: formData.name,
-            email: formData.email,
-            company: formData.company,
-            phone: formData.phone,
-            message: formData.message
-          }
-        ]);
+      const { error } = await supabase.from("sponsor_contacts").insert([
+        {
+          name: formData.name,
+          email: formData.email,
+          company: formData.company,
+          phone: formData.phone,
+          message: formData.message,
+        },
+      ]);
 
       if (error) throw error;
 
       setStatus({
-        type: 'success',
-        message: 'Thank you! Your message has been sent successfully. We\'ll get back to you soon!'
+        type: "success",
+        message:
+          "Thank you! Your message has been sent successfully. We'll get back to you soon!",
       });
-      
+
       // Reset form
       setFormData({
-        name: '',
-        email: '',
-        company: '',
-        phone: '',
-        message: ''
+        name: "",
+        email: "",
+        company: "",
+        phone: "",
+        message: "",
       });
 
       // Close modal after 3 seconds
@@ -60,10 +69,11 @@ const SponsorContactForm = ({ onClose }) => {
       }, 3000);
     } catch (error) {
       setStatus({
-        type: 'error',
-        message: 'Oops! Something went wrong. Please try again or email us directly.'
+        type: "error",
+        message:
+          "Oops! Something went wrong. Please try again or email us directly.",
       });
-      console.error('Error submitting form:', error);
+      console.error("Error submitting form:", error);
     } finally {
       setLoading(false);
     }
@@ -74,7 +84,10 @@ const SponsorContactForm = ({ onClose }) => {
       <form onSubmit={handleSubmit} className="space-y-6">
         <div className="grid md:grid-cols-2 gap-6">
           <div>
-            <label htmlFor="name" className="block text-sm font-medium text-text mb-2">
+            <label
+              htmlFor="name"
+              className="block text-sm font-medium text-text mb-2"
+            >
               Full Name *
             </label>
             <input
@@ -84,13 +97,16 @@ const SponsorContactForm = ({ onClose }) => {
               value={formData.name}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 rounded-xl border-2 border-border bg-background text-text placeholder:text-muted focus:border-accent focus:ring-accent transition-all outline-none"
-              placeholder="John Doe"
+              className="w-full px-4 py-3 rounded-xl border-2 border-border bg-background text-text placeholder:text-muted focus:border-accent focus:ring-accent transition-colors outline-none"
+              placeholder="Timmy Turtleson"
             />
           </div>
 
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-text mb-2">
+            <label
+              htmlFor="email"
+              className="block text-sm font-medium text-text mb-2"
+            >
               Email Address *
             </label>
             <input
@@ -100,15 +116,18 @@ const SponsorContactForm = ({ onClose }) => {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 rounded-xl border-2 border-border bg-background text-text placeholder:text-muted focus:border-accent focus:ring-accent transition-all outline-none"
-              placeholder="john@company.com"
+              className="w-full px-4 py-3 rounded-xl border-2 border-border bg-background text-text placeholder:text-muted focus:border-accent focus:ring-accent transition-colors outline-none"
+              placeholder="timmyturtleson@tamu.edu"
             />
           </div>
         </div>
 
         <div className="grid md:grid-cols-2 gap-6">
           <div>
-            <label htmlFor="company" className="block text-sm font-medium text-text mb-2">
+            <label
+              htmlFor="company"
+              className="block text-sm font-medium text-text mb-2"
+            >
               Company/Organization
             </label>
             <input
@@ -117,13 +136,16 @@ const SponsorContactForm = ({ onClose }) => {
               name="company"
               value={formData.company}
               onChange={handleChange}
-              className="w-full px-4 py-3 rounded-xl border-2 border-border bg-background text-text placeholder:text-muted focus:border-accent focus:ring-accent transition-all outline-none"
-              placeholder="Tech Corp Inc."
+              className="w-full px-4 py-3 rounded-xl border-2 border-border bg-background text-text placeholder:text-muted focus:border-accent focus:ring-accent transition-colors outline-none"
+              placeholder="Turtle Corp Inc."
             />
           </div>
 
           <div>
-            <label htmlFor="phone" className="block text-sm font-medium text-text mb-2">
+            <label
+              htmlFor="phone"
+              className="block text-sm font-medium text-text mb-2"
+            >
               Phone Number
             </label>
             <input
@@ -132,14 +154,17 @@ const SponsorContactForm = ({ onClose }) => {
               name="phone"
               value={formData.phone}
               onChange={handleChange}
-              className="w-full px-4 py-3 rounded-xl border-2 border-border bg-background text-text placeholder:text-muted focus:border-accent focus:ring-accent transition-all outline-none"
+              className="w-full px-4 py-3 rounded-xl border-2 border-border bg-background text-text placeholder:text-muted focus:border-accent focus:ring-accent transition-colors outline-none"
               placeholder="(123) 456-7890"
             />
           </div>
         </div>
 
         <div>
-          <label htmlFor="message" className="block text-sm font-medium text-text mb-2">
+          <label
+            htmlFor="message"
+            className="block text-sm font-medium text-text mb-2"
+          >
             Message *
           </label>
           <textarea
@@ -149,25 +174,47 @@ const SponsorContactForm = ({ onClose }) => {
             onChange={handleChange}
             required
             rows="5"
-            className="w-full px-4 py-3 rounded-xl border-2 border-border bg-background text-text placeholder:text-muted focus:border-accent focus:ring-accent transition-all outline-none resize-none"
+            className="w-full px-4 py-3 rounded-xl border-2 border-border bg-background text-text placeholder:text-muted focus:border-accent focus:ring-accent transition-colors outline-none resize-none"
             placeholder="Tell us about your interest in sponsoring TURTLE Robotics..."
           />
         </div>
 
         {status.message && (
-          <div className={`p-4 rounded-xl ${
-            status.type === 'success' 
-              ? 'bg-green-50 dark:bg-green-900/30 border-2 border-green-200 dark:border-green-700 text-green-800 dark:text-green-200' 
-              : 'bg-red-50 dark:bg-red-900/30 border-2 border-red-200 dark:border-red-700 text-red-800 dark:text-red-200'
-          }`}>
+          <div
+            className={`p-4 rounded-xl ${
+              status.type === "success"
+                ? "bg-green-50 dark:bg-green-900/30 border-2 border-green-200 dark:border-green-700 text-green-800 dark:text-green-200"
+                : "bg-red-50 dark:bg-red-900/30 border-2 border-red-200 dark:border-red-700 text-red-800 dark:text-red-200"
+            }`}
+          >
             <div className="flex items-center gap-2">
-              {status.type === 'success' ? (
-                <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              {status.type === "success" ? (
+                <svg
+                  className="w-5 h-5 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M5 13l4 4L19 7"
+                  />
                 </svg>
               ) : (
-                <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                <svg
+                  className="w-5 h-5 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
                 </svg>
               )}
               <p className="font-medium">{status.message}</p>
@@ -178,20 +225,45 @@ const SponsorContactForm = ({ onClose }) => {
         <button
           type="submit"
           disabled={loading}
-          className="w-full bg-gradient-turtle text-gradient-foreground px-8 py-4 rounded-xl font-medium hover:scale-105 transition-all duration-300 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center gap-2"
+          className="w-full bg-gradient-turtle text-gradient-foreground px-8 py-4 rounded-xl font-medium hover:scale-105 transition-transform duration-300 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center gap-2"
         >
           {loading ? (
             <>
-              <svg className="animate-spin h-5 w-5" fill="none" viewBox="0 0 24 24">
-                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+              <svg
+                className="animate-spin h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <circle
+                  className="opacity-25"
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  strokeWidth="4"
+                ></circle>
+                <path
+                  className="opacity-75"
+                  fill="currentColor"
+                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                ></path>
               </svg>
               Sending...
             </>
           ) : (
             <>
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+              <svg
+                className="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
+                />
               </svg>
               Send Message
             </>

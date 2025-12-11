@@ -1,26 +1,38 @@
+/**
+ * ProjectTicker Component
+ *
+ * Displays a horizontal scrolling ticker of project titles that loops infinitely.
+ * Pauses on hover to allow user interaction. Clicking a project navigates to its detail page.
+ *
+ * @param {Array} projects - Array of project objects with id and title properties
+ */
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import './ProjectTicker.css';
+import "./ProjectTicker.css";
 
 export default function ProjectTicker({ projects }) {
   const navigate = useNavigate();
-  const [animationPlayState, setAnimationPlayState] = useState('running');
 
-  // Quadruple for ultra-smooth loop
-  const multipliedProjects = [...projects, ...projects, ...projects, ...projects];
+  // Track animation state for pause/play on hover
+  const [animationPlayState, setAnimationPlayState] = useState("running");
+
+  // Quadruple project array for seamless infinite loop without visible gaps
+  const multipliedProjects = [
+    ...projects,
+    ...projects,
+    ...projects,
+    ...projects,
+  ];
 
   return (
-    <div 
+    <div
       className="project-ticker-wrapper"
-      onMouseEnter={() => setAnimationPlayState('paused')}
-      onMouseLeave={() => setAnimationPlayState('running')}
+      onMouseEnter={() => setAnimationPlayState("paused")}
+      onMouseLeave={() => setAnimationPlayState("running")}
     >
       <div className="project-ticker-container">
-        <div 
-          className="project-ticker-track"
-          style={{ animationPlayState }}
-        >
+        <div className="project-ticker-track" style={{ animationPlayState }}>
           {multipliedProjects.map((project, index) => (
             <div
               key={`${project.id}-${index}`}

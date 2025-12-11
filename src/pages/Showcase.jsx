@@ -1,26 +1,40 @@
-import { useEffect, useState } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import ShowcaseProjectInterestForm from '../components/ShowcaseProjectInterestForm';
+/**
+ * Showcase Page Component
+ *
+ * Landing page for the annual TURTLE Robotics project showcase event.
+ * Features:
+ * - Live countdown to showcase date (toggleable via ENABLE_SHOWCASE_COUNTDOWN)
+ * - Event details (date, time, location)
+ * - What to expect at the showcase
+ * - Interest form for RSVPs
+ * - Confetti animation when countdown reaches zero
+ * - Event highlights and past showcase information
+ */
+import { useEffect, useState } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import ShowcaseProjectInterestForm from "../components/ShowcaseProjectInterestForm";
 
 gsap.registerPlugin(ScrollTrigger);
 
+// Feature flag: Toggle countdown display
 const ENABLE_SHOWCASE_COUNTDOWN = false;
 
 function Showcase() {
+  // Countdown state
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
     minutes: 0,
-    seconds: 0
+    seconds: 0,
   });
   const [showConfetti, setShowConfetti] = useState(false);
 
   useEffect(() => {
     gsap.fromTo(
-      '.showcase-hero h1',
+      ".showcase-hero h1",
       { opacity: 0, y: 50 },
-      { opacity: 1, y: 0, duration: 1, ease: 'power3.out' }
+      { opacity: 1, y: 0, duration: 1, ease: "power3.out" },
     );
 
     // Local time: Nov 21, 2025 at 1 PM
@@ -39,16 +53,18 @@ function Showcase() {
         showcaseDay,
         showcaseHour,
         showcaseMinute,
-        showcaseSecond
+        showcaseSecond,
       );
       const distance = showcaseDate.getTime() - now.getTime();
 
       if (distance > 0) {
         setTimeLeft({
           days: Math.floor(distance / (1000 * 60 * 60 * 24)),
-          hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+          hours: Math.floor(
+            (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+          ),
           minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
-          seconds: Math.floor((distance % (1000 * 60)) / 1000)
+          seconds: Math.floor((distance % (1000 * 60)) / 1000),
         });
         setShowConfetti(false);
       } else {
@@ -78,7 +94,13 @@ function Showcase() {
                 left: `${Math.random() * 100}%`,
                 animationDelay: `${Math.random() * 3}s`,
                 animationDuration: `${3 + Math.random() * 2}s`,
-                backgroundColor: ['#fbbf24', '#ef4444', '#3b82f6', '#10b981', '#8b5cf6'][Math.floor(Math.random() * 5)]
+                backgroundColor: [
+                  "#fbbf24",
+                  "#ef4444",
+                  "#3b82f6",
+                  "#10b981",
+                  "#8b5cf6",
+                ][Math.floor(Math.random() * 5)],
               }}
             />
           ))}
@@ -101,51 +123,77 @@ function Showcase() {
             </h1>
 
             {ENABLE_SHOWCASE_COUNTDOWN ? (
-            <>
-              <p className="inline-block text-2xl sm:text-3xl md:text-4xl font-light text-accent mb-4 px-3 py-1 bg-black/70 rounded-lg drop-shadow-lg">
-                November 21, 2025
-              </p>
+              <>
+                <p className="inline-block text-2xl sm:text-3xl md:text-4xl font-light text-accent mb-4 px-3 py-1 bg-black/70 rounded-lg drop-shadow-lg">
+                  November 21, 2025
+                </p>
 
-              <p className="text-xl sm:text-2xl md:text-3xl font-normal text-text mb-4 drop-shadow-md" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.4)' }}>
-                1:00 PM - 5:00 PM
-              </p>
+                <p className="text-xl sm:text-2xl md:text-3xl font-normal text-text mb-4 drop-shadow-md text-shadow">
+                  1:00 PM - 5:00 PM
+                </p>
 
-              <p className="inline-flex items-center justify-center text-lg sm:text-xl md:text-2xl font-normal text-accent mb-10 px-3 py-1 bg-black/70 rounded-lg mx-auto gap-2 drop-shadow-lg" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.4)' }}>
-                <svg className="w-5 h-5 text-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-                <a 
-                  href="https://maps.app.goo.gl/r3EgEtRvYB727rX6A"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-accent/80 transition-colors underline decoration-accent"
-                >
-                  Zachry Engineering Education Complex, Virginia C Brown Atrium
-                </a>
-              </p>
+                <p className="inline-flex items-center justify-center text-lg sm:text-xl md:text-2xl font-normal text-accent mb-10 px-3 py-1 bg-black/70 rounded-lg mx-auto gap-2 drop-shadow-lg text-shadow">
+                  <svg
+                    className="w-5 h-5 text-accent flex-shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                    />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                    />
+                  </svg>
+                  <a
+                    href="https://maps.app.goo.gl/r3EgEtRvYB727rX6A"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-accent/80 transition-colors underline decoration-accent"
+                  >
+                    Zachry Engineering Education Complex, Virginia C Brown
+                    Atrium
+                  </a>
+                </p>
 
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 md:gap-6 max-w-3xl mx-auto mb-8">
-                {['Days', 'Hours', 'Minutes', 'Seconds'].map((label, index) => (
-                  <div key={label} className="bg-black/60 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-6 border border-accent/30 shadow-lg">
-                    <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extralight text-accent mb-1 sm:mb-2">
-                      {String(Object.values(timeLeft)[index]).padStart(2, '0')}
-                    </div>
-                    <div className="text-xs sm:text-sm font-light text-text uppercase tracking-wide">
-                      {label}
-                    </div>
-                  </div>
-                ))}
-              </div>
-              
-              <p className="text-base sm:text-lg md:text-xl font-normal text-text mt-4 max-w-2xl mx-auto drop-shadow-md leading-relaxed px-4 py-2 bg-black/40 rounded-lg">
-                The biggest TURTLE event of the semester is right around the corner! Join us to see the amazing robotics projects our teams have accomplished this semester!
-              </p>
-            </>
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 md:gap-6 max-w-3xl mx-auto mb-8">
+                  {["Days", "Hours", "Minutes", "Seconds"].map(
+                    (label, index) => (
+                      <div
+                        key={label}
+                        className="bg-black/60 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-6 border border-accent/30 shadow-lg"
+                      >
+                        <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extralight text-accent mb-1 sm:mb-2">
+                          {String(Object.values(timeLeft)[index]).padStart(
+                            2,
+                            "0",
+                          )}
+                        </div>
+                        <div className="text-xs sm:text-sm font-light text-text uppercase tracking-wide">
+                          {label}
+                        </div>
+                      </div>
+                    ),
+                  )}
+                </div>
+
+                <p className="text-base sm:text-lg md:text-xl font-normal text-text mt-4 max-w-2xl mx-auto drop-shadow-md leading-relaxed px-4 py-2 bg-black/40 rounded-lg">
+                  The biggest TURTLE event of the semester is right around the
+                  corner! Join us to see the amazing robotics projects our teams
+                  have accomplished this semester!
+                </p>
+              </>
             ) : (
-            <p className="text-3xl sm:text-4xl md:text-5xl font-light text-text mb-10 drop-shadow-lg">
-              Tune in next semester!
-            </p>
+              <p className="text-3xl sm:text-4xl md:text-5xl font-light text-text mb-10 drop-shadow-lg">
+                Tune in next semester!
+              </p>
             )}
           </div>
         </section>
@@ -163,13 +211,27 @@ function Showcase() {
               <summary className="flex justify-between items-center font-light text-xl text-text list-none">
                 <span>What is Showcase?</span>
                 <span className="transition group-open:rotate-180">
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  <svg
+                    className="w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M19 9l-7 7-7-7"
+                    />
                   </svg>
                 </span>
               </summary>
               <p className="mt-4 text-muted font-light leading-relaxed">
-                Project Showcase is a several hour come-and-go event for presenting what TURTLE has accomplished this semester. At showcase all 21 advanced projects as well as HATCHLING set up tables to present their projects, progress, and plans for the future.
+                Project Showcase is a several hour come-and-go event for
+                presenting what TURTLE has accomplished this semester. At
+                showcase all 21 advanced projects as well as HATCHLING set up
+                tables to present their projects, progress, and plans for the
+                future.
               </p>
             </details>
 
@@ -177,13 +239,25 @@ function Showcase() {
               <summary className="flex justify-between items-center font-light text-xl text-text list-none">
                 <span>Who is invited to Project Showcase?</span>
                 <span className="transition group-open:rotate-180">
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  <svg
+                    className="w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M19 9l-7 7-7-7"
+                    />
                   </svg>
                 </span>
               </summary>
               <p className="mt-4 text-muted font-light leading-relaxed">
-                Everyone is welcome! Project Showcase is a public event open to all — students, professors, families, friends, and anyone interested in robotics or engineering.
+                Everyone is welcome! Project Showcase is a public event open to
+                all — students, professors, families, friends, and anyone
+                interested in robotics or engineering.
               </p>
             </details>
 
@@ -193,17 +267,27 @@ function Showcase() {
                 <summary className="flex justify-between items-center font-light text-xl text-text list-none">
                   <span>Where is the Virginia Brown Atrium?</span>
                   <span className="transition group-open:rotate-180">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    <svg
+                      className="w-6 h-6"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19 9l-7 7-7-7"
+                      />
                     </svg>
                   </span>
                 </summary>
                 <p className="mt-4 text-muted font-light leading-relaxed">
-                  This is the seating area just inside the first floor Zachry entrance, across from the E-Quad.
+                  This is the seating area just inside the first floor Zachry
+                  entrance, across from the E-Quad.
                 </p>
               </details>
             )}
-            
           </div>
         </div>
       </section>

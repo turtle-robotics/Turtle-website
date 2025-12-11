@@ -26,11 +26,13 @@ A website for T.U.R.T.L.E Robotics, a student robotics research lab at Texas A&M
 ## Design System
 
 ### Color Scheme
+
 - **Light Theme**: Clean white background with Turtle Red (#A60000) accents
 - **Dark Theme**: Deep dark background with the same accent colors
 - **Gradients**: Turtle Red gradient from #7B0000 to #A60000
 
 ### Typography
+
 - **Primary Font**: Inter with weights 100-900
 - **Hero Text**: 8xl-9xl, font-extralight, tracking-tight
 - **Section Headers**: 5xl-6xl, font-extralight
@@ -67,23 +69,27 @@ src/
 ## Getting Started
 
 ### Prerequisites
+
 - Node.js (v16 or higher)
 - npm or yarn
 
 ### Installation
 
 1. **Clone the repository**
+
    ```bash
    git clone <repository-url>
    cd Turtle-website
    ```
 
 2. **Install dependencies**
+
    ```bash
    npm install
    ```
 
 3. **Start the development server**
+
    ```bash
    npm run dev
    ```
@@ -106,20 +112,26 @@ npm run preview
 ## Key Components
 
 ### ChromaGrid
+
 Interactive grid component with:
+
 - Mouse-following spotlight effects
 - GSAP animations for smooth interactions
 - Custom gradients for each project card
 - Responsive grid layout
 
 ### StatisticsCard
+
 Animated statistics with:
+
 - Scroll-triggered counter animations
 - Spotlight hover effects
 - Glass morphism design
 
 ### ThemeToggleButton
+
 Theme management with:
+
 - Sun/moon icon transitions
 - Local storage persistence
 - System preference detection
@@ -127,29 +139,35 @@ Theme management with:
 ## Customization
 
 ### Colors
+
 Edit CSS variables in `src/main.css`:
+
 ```css
 :root {
-  --color-bg: #F5F5F5;
-  --color-text: #1F1F1F;
-  --color-accent: #A60000;
-  --color-secondary: #FFD700;
+  --color-bg: #f5f5f5;
+  --color-text: #1f1f1f;
+  --color-accent: #a60000;
+  --color-secondary: #ffd700;
 }
 ```
 
 ### Animations
+
 Modify GSAP animations in components or use the `useScrollAnimation` hook:
+
 ```javascript
 const elementRef = useScrollAnimation({
   trigger: "top 80%",
   y: 50,
   opacity: 0,
-  duration: 1
-})
+  duration: 1,
+});
 ```
 
 ### Projects Data
+
 Update project information in `src/data/projects.js`:
+
 ```javascript
 export const roboticsProjects = [
   {
@@ -158,14 +176,15 @@ export const roboticsProjects = [
     subtitle: "Project Subtitle",
     handle: "@project_handle",
     borderColor: "#3B82F6",
-    gradient: "linear-gradient(145deg, #3B82F6, #000)"
-  }
-]
+    gradient: "linear-gradient(145deg, #3B82F6, #000)",
+  },
+];
 ```
 
 ## Responsive Design
 
 The website is fully responsive with:
+
 - Mobile-first approach
 - Breakpoints: sm (640px), md (768px), lg (1024px), xl (1280px)
 - Flexible grid layouts
@@ -174,12 +193,14 @@ The website is fully responsive with:
 ## Animations
 
 ### GSAP Animations
+
 - Hero text staggered animations
 - Scroll-triggered fade-in-up effects
 - Counter animations
 - Smooth theme transitions
 
 ### CSS Animations
+
 - Pulse glow effects
 - Bounce animations
 - Hover transforms
@@ -188,12 +209,14 @@ The website is fully responsive with:
 ## Development
 
 ### Code Quality
+
 - ESLint configuration
 - Prettier formatting
 - React best practices
 - Component-based architecture
 
 ### Performance
+
 - Lazy loading for images
 - Optimized GSAP animations
 - Efficient re-renders with React.memo
@@ -202,15 +225,18 @@ The website is fully responsive with:
 ## Deployment
 
 ### Vercel (Recommended)
+
 1. Connect your GitHub repository
 2. Install Vercel CLI: `npm i -g vercel`
 3. Deploy: `vercel`
 
 ### Netlify
+
 1. Build the project: `npm run build`
 2. Drag the `dist` folder to Netlify
 
 ### Other Platforms
+
 The project uses Vite, so it's compatible with any static hosting platform.
 
 ## License
@@ -228,4 +254,3 @@ This project is licensed under the MIT License.
 ## Contact
 
 For questions or support, contact TURTLE at Texas A&M University.
-

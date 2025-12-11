@@ -1,17 +1,24 @@
-import { useTheme } from '../contexts/ThemeContext'
+/**
+ * ThemeToggleButton Component
+ *
+ * Animated button to switch between light and dark themes.
+ * Displays sun icon for light mode, moon icon for dark mode.
+ * Icons animate with rotation and scale transitions.
+ */
+import { useTheme } from "../contexts/ThemeContext";
 
 const ThemeToggleButton = () => {
-  const { isDark, toggleTheme } = useTheme()
+  const { isDark, toggleTheme } = useTheme();
 
   return (
     <button
       onClick={toggleTheme}
       className="relative p-2 rounded-lg bg-surface hover:bg-surface/90 transition-colors duration-200"
-      aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+      aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
     >
       {/* Sun Icon */}
       <svg
-        className={`w-5 h-5 transition-all duration-300 ${isDark ? 'opacity-0 rotate-90 scale-0' : 'opacity-100 rotate-0 scale-100'}`}
+        className={`w-5 h-5 transition-all duration-300 ${isDark ? "opacity-0 rotate-90 scale-0" : "opacity-100 rotate-0 scale-100"}`}
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
@@ -26,7 +33,7 @@ const ThemeToggleButton = () => {
 
       {/* Moon Icon */}
       <svg
-        className={`absolute top-2 left-2 w-5 h-5 transition-all duration-300 ${isDark ? 'opacity-100 rotate-0 scale-100' : 'opacity-0 -rotate-90 scale-0'}`}
+        className={`absolute top-2 left-2 w-5 h-5 transition-all duration-300 ${isDark ? "opacity-100 rotate-0 scale-100" : "opacity-0 -rotate-90 scale-0"}`}
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
@@ -39,7 +46,7 @@ const ThemeToggleButton = () => {
         />
       </svg>
     </button>
-  )
-}
+  );
+};
 
-export default ThemeToggleButton 
+export default ThemeToggleButton;

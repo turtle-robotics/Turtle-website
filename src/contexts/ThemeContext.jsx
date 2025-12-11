@@ -1,49 +1,62 @@
-import { createContext, useContext, useState, useEffect } from 'react'
+/**
+ * Theme Context - Manages dark/light mode across the application
+ *
+ * Provides theme state and toggle function to all child components.
+ * Persists theme preference to localStorage and respects system preferences.
+ */
+import { createContext, useContext, useState, useEffect } from "react";
 
-const ThemeContext = createContext()
+const ThemeContext = createContext();
 
+/**
+ * Hook to access theme context
+ * Must be used within ThemeProvider
+ * @returns {Object} { isDark: boolean, toggleTheme: function }
+ */
 export const useTheme = () => {
-  const context = useContext(ThemeContext)
+  const context = useContext(ThemeContext);
   if (!context) {
-    throw new Error('useTheme must be used within a ThemeProvider')
+    throw new Error("useTheme must be used within a ThemeProvider");
   }
-  return context
-}
+  return context;
+};
 
+/**
+ * ThemeProvider Component
+ * Wraps app to provide theme functionality
+ */
 export const ThemeProvider = ({ children }) => {
+  // Initialize theme from localStorage or system preference
   const [isDark, setIsDark] = useState(() => {
-    // Check localStorage first, then system preference
-    const saved = localStorage.getItem('theme')
+    const saved = localStorage.getItem("theme");
     if (saved) {
-      return saved === 'dark'
+      return saved === "dark";
     }
-    return window.matchMedia('(prefers-color-scheme: dark)').matches
-  })
+    return window.matchMedia("(prefers-color-scheme: dark)").matches;
+  });
 
   useEffect(() => {
     // Update localStorage
-    localStorage.setItem('theme', isDark ? 'dark' : 'light')
-    
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+
     // Update document class
     if (isDark) {
-      document.documentElement.classList.add('dark')
+      document.documentElement.classList.add("dark");
     } else {
-      document.documentElement.classList.remove('dark')
+      document.documentElement.classList.remove("dark");
     }
-  }, [isDark])
+  }, [isDark]);
 
   const toggleTheme = () => {
-    setIsDark(!isDark)
-  }
+    setIsDark(!isDark);
+  };
 
   const value = {
     isDark,
-    toggleTheme
-  }
+    toggleTheme,
+  };
 
   return (
-    <ThemeContext.Provider value={value}>
-      {children}
-    </ThemeContext.Provider>
-  )
-} 
+    <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
+  );
+};

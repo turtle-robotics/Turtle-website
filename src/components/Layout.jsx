@@ -1,32 +1,47 @@
-import { Link, useLocation } from 'react-router-dom'
-import { useEffect } from 'react'
-import ThemeToggleButton from './ThemeToggleButton'
-import Footer from './Footer'
+/**
+ * Layout Component
+ *
+ * Main application layout wrapper providing:
+ * - Fixed navigation bar with logo, menu items, and theme toggle
+ * - Responsive mobile menu with hamburger toggle
+ * - Dropdown navigation for Development Programs section
+ * - Footer with social links and contact info
+ * - Auto-scroll to top on route changes
+ *
+ * @param {Object} props
+ * @param {React.ReactNode} props.children - Page content to render
+ */
+import { Link, useLocation } from "react-router-dom";
+import { useEffect } from "react";
+import ThemeToggleButton from "./ThemeToggleButton";
+import Footer from "./Footer";
 
 const Layout = ({ children }) => {
-  const location = useLocation()
+  const location = useLocation();
 
-  // Scroll to top when location changes
+  // Scroll to top when navigating between pages
   useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [location.pathname])
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
+  // Main navigation structure
   const navItems = [
-    { path: '/', label: 'Home' },
-    { path: '/about', label: 'About' },
-    { path: '/projects', label: 'Projects' },
-    { 
-      label: 'Development Programs',
+    { path: "/", label: "Home" },
+    { path: "/about", label: "About" },
+    { path: "/projects", label: "Projects" },
+    {
+      label: "Development Programs",
       dropdown: [
-        { path: '/hatchling', label: 'Hatchling' },
-        { path: '/workshop-series', label: 'Workshop Series' }
-      ]
+        { path: "/hatchling", label: "Hatchling" },
+        { path: "/workshop-series", label: "Workshop Series" },
+      ],
     },
-    { path: '/showcase', label: 'Showcase' },
-    { path: '/apply', label: 'Apply' }
-  ]
+    { path: "/showcase", label: "Showcase" },
+    { path: "/apply", label: "Apply" },
+  ];
 
-  const sponsorItem = { path: '/sponsorship', label: 'Looking to Sponsor?' }
+  // Special sponsor CTA link
+  const sponsorItem = { path: "/sponsorship", label: "Looking to Sponsor?" };
 
   return (
     <div className="min-h-screen bg-background text-text">
@@ -50,16 +65,19 @@ const Layout = ({ children }) => {
                 <span className="text-accent">TURTLE</span>
               </span>
             </Link>
-            
+
             <span className="md:hidden absolute left-1/2 transform -translate-x-1/2 text-xl sm:text-2xl font-normal tracking-tight">
               <span className="text-accent">TURTLE</span>
             </span>
-            
+
             <div className="hidden md:flex items-center space-x-4 lg:space-x-6 xl:space-x-8">
-              {navItems.map((item) => (
+              {navItems.map((item) =>
                 item.dropdown ? (
-                  <div key={item.label} className="relative group flex items-center">
-                    <button className="flex items-center text-sm font-normal tracking-wide transition-all duration-300 text-muted hover:text-accent hover:border-b-2 hover:border-accent/70">
+                  <div
+                    key={item.label}
+                    className="relative group flex items-center"
+                  >
+                    <button className="flex items-center text-sm font-normal tracking-wide transition-colors duration-300 text-muted hover:text-accent hover:border-b-2 hover:border-accent/70">
                       {item.label}
                     </button>
                     <div className="absolute top-full left-0 mt-2 w-48 bg-surface rounded-lg shadow-lg border border-border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
@@ -69,8 +87,8 @@ const Layout = ({ children }) => {
                           to={dropdownItem.path}
                           className={`block px-4 py-3 text-sm font-normal transition-all duration-300 ${
                             location.pathname === dropdownItem.path
-                              ? 'text-accent bg-surface'
-                              : 'text-muted hover:text-accent hover:bg-surface'
+                              ? "text-accent bg-surface"
+                              : "text-muted hover:text-accent hover:bg-surface"
                           }`}
                         >
                           {dropdownItem.label}
@@ -84,22 +102,22 @@ const Layout = ({ children }) => {
                     to={item.path}
                     className={`flex items-center text-sm font-normal tracking-wide transition-all duration-300 ${
                       location.pathname === item.path
-                        ? 'text-accent border-b-2 border-accent'
-                        : 'text-muted hover:text-accent hover:border-b-2 hover:border-accent/70'
+                        ? "text-accent border-b-2 border-accent"
+                        : "text-muted hover:text-accent hover:border-b-2 hover:border-accent/70"
                     }`}
                   >
                     {item.label}
                   </Link>
-                )
-              ))}
-              
+                ),
+              )}
+
               {/* Special Sponsor Link */}
               <Link
                 to={sponsorItem.path}
-                className={`text-sm font-medium tracking-wide transition-all duration-300 px-4 py-2 rounded-lg text-gradient-foreground ${
+                className={`text-sm font-medium tracking-wide transition-all duration-300 px-4 py-2 rounded-lg text-gradient-foreground hover:scale-110 hover:px-6 ${
                   location.pathname === sponsorItem.path
-                    ? 'bg-gradient-turtle shadow-lg'
-                    : 'bg-gradient-turtle shadow-md hover:shadow-lg'
+                    ? "bg-gradient-turtle shadow-lg scale-110"
+                    : "bg-gradient-turtle shadow-md hover:shadow-lg"
                 }`}
               >
                 {sponsorItem.label}
@@ -109,14 +127,24 @@ const Layout = ({ children }) => {
               <Link
                 to="/admin"
                 className={`flex items-center gap-1 text-sm font-light tracking-wide transition-all duration-300 ${
-                  location.pathname === '/admin'
-                    ? 'text-accent'
-                    : 'text-muted hover:text-accent'
+                  location.pathname === "/admin"
+                    ? "text-accent"
+                    : "text-muted hover:text-accent"
                 }`}
                 title="Admin Dashboard"
               >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                <svg
+                  className="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                  />
                 </svg>
               </Link>
             </div>
@@ -129,7 +157,7 @@ const Layout = ({ children }) => {
       {/* Mobile Navigation */}
       <nav className="nav-shell-bottom fixed bottom-0 left-0 right-0 z-50 shadow-lg md:hidden">
         <div className="flex justify-around items-center h-16 px-2">
-          {navItems.map((item) => (
+          {navItems.map((item) =>
             item.dropdown ? (
               // For dropdown items, show the first dropdown item as the main link
               <Link
@@ -137,10 +165,10 @@ const Layout = ({ children }) => {
                 to={item.dropdown[0].path}
                 className={`flex flex-col items-center justify-center w-12 h-12 rounded-lg transition-all duration-300 ${
                   location.pathname === item.dropdown[0].path
-                    ? 'bg-accent text-gradient-foreground'
-                    : 'text-muted hover:bg-gray-100'
+                    ? "bg-accent text-gradient-foreground"
+                    : "text-muted hover:bg-gray-100"
                 }`}
-                title={`${item.label}: ${item.dropdown.map(d => d.label).join(', ')}`}
+                title={`${item.label}: ${item.dropdown.map((d) => d.label).join(", ")}`}
               >
                 <span className="text-xs font-light">DP</span>
               </Link>
@@ -150,41 +178,49 @@ const Layout = ({ children }) => {
                 to={item.path}
                 className={`flex flex-col items-center justify-center w-12 h-12 rounded-lg transition-all duration-300 ${
                   location.pathname === item.path
-                    ? 'bg-accent text-gradient-foreground'
-                    : 'text-muted hover:bg-surface'
+                    ? "bg-accent text-gradient-foreground"
+                    : "text-muted hover:bg-surface"
                 }`}
               >
                 <span className="text-xs font-light">{item.label}</span>
               </Link>
-            )
-          ))}
-          
+            ),
+          )}
+
           {/* Admin Link for Mobile */}
           <Link
             to="/admin"
             className={`flex flex-col items-center justify-center w-12 h-12 rounded-lg transition-all duration-300 ${
-              location.pathname === '/admin'
-                ? 'bg-accent text-gradient-foreground'
-                : 'text-muted hover:bg-surface'
+              location.pathname === "/admin"
+                ? "bg-accent text-gradient-foreground"
+                : "text-muted hover:bg-surface"
             }`}
             title="Admin"
           >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+            <svg
+              className="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+              />
             </svg>
           </Link>
         </div>
       </nav>
 
       {/* Main Content */}
-      <main className="pt-16 pb-16 md:pb-0">
-        {children}
-      </main>
+      <main className="pt-16 pb-16 md:pb-0">{children}</main>
 
       {/* Footer */}
       <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

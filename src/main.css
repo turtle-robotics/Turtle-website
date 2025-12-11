@@ -1,65 +1,80 @@
+/**
+ * Global Styles for TURTLE Robotics Website
+ * 
+ * Structure:
+ * 1. Font definitions (Open Sans, Oswald)
+ * 2. CSS custom properties for theming (light/dark mode)
+ * 3. Tailwind directives
+ * 4. Global utility classes
+ * 5. Component-specific styles
+ * 6. Animation keyframes
+ *
+ * Theme system uses CSS variables for runtime switching between light and dark modes.
+ * See ThemeContext.jsx for implementation details.
+ */
+
 @font-face {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 300;
   font-display: swap;
-  src: url('/assets/fonts/OpenSans-300.woff2') format('woff2')
+  src: url("/assets/fonts/OpenSans-300.woff2") format("woff2");
 }
 
 @font-face {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('/assets/fonts/OpenSans-Regular.woff2') format('woff2');
+  src: url("/assets/fonts/OpenSans-400.woff2") format("woff2");
 }
 
 @font-face {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url('/assets/fonts/OpenSans-500.woff2') format('woff2');
+  src: url("/assets/fonts/OpenSans-500.woff2") format("woff2");
 }
 
 @font-face {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url('/assets/fonts/OpenSans-600.woff2') format('woff2');
+  src: url("/assets/fonts/OpenSans-600.woff2") format("woff2");
 }
 
 @font-face {
-  font-family: 'Oswald';
+  font-family: "Oswald";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('/assets/fonts/Oswald-Regular.woff2') format('woff2');
+  src: url("/assets/fonts/Oswald-400.woff2") format("woff2");
 }
 
 @font-face {
-  font-family: 'Oswald';
+  font-family: "Oswald";
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url('/assets/fonts/Oswald-500.woff2') format('woff2');
+  src: url("/assets/fonts/Oswald-500.woff2") format("woff2");
 }
 
 @font-face {
-  font-family: 'Oswald';
+  font-family: "Oswald";
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url('/assets/fonts/Oswald-700.woff2') format('woff2');
+  src: url("/assets/fonts/Oswald-700.woff2") format("woff2");
 }
 
 @font-face {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url('/assets/fonts/OpenSans-700.woff2') format('woff2');
+  src: url("/assets/fonts/OpenSans-700.woff2") format("woff2");
 }
 
 @tailwind base;
@@ -68,18 +83,21 @@
 
 @layer base {
   :root {
-    
     /* Fonts */
-    --font-sans: 'Open Sans', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
-    --font-heading: 'Oswald', 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
-    
+    --font-sans:
+      "Open Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+      "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+    --font-heading:
+      "Oswald", "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans",
+      sans-serif;
+
     /* Light Theme - TAMU */
     /* TAMU Brand Colors */
-    --color-brand-primary: #500000;   /* Maroon - Primary brand */
+    --color-brand-primary: #500000; /* Maroon - Primary brand */
     --color-brand-secondary: #ffffff; /* White - Secondary brand */
-    --color-brand-dark: #3c001c;      /* Dark maroon */
-    --color-brand-light: #732f2f;     /* Light maroon */
-    
+    --color-brand-dark: #3c001c; /* Dark maroon */
+    --color-brand-light: #732f2f; /* Light maroon */
+
     --color-bg: #d1d1d1;
     --color-surface: #f9f9f9;
     --color-text: #000000;
@@ -87,12 +105,12 @@
     --color-border: #e0e0e0;
     --color-accent: #500000;
     --color-secondary: #732f2f;
-    
+
     /* Gradients */
     --color-gradient-start: #500000;
     --color-gradient-end: #732f2f;
     --color-gradient-foreground: #e0e0e0;
-    
+
     --color-gray-100: #f6f6f6;
     --color-gray-200: #eaeaea;
     --color-gray-300: #d1d1d1;
@@ -133,6 +151,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   html {
@@ -143,53 +163,41 @@
     font-family: var(--font-sans);
     background-color: var(--color-bg);
     color: var(--color-text);
-    transition: background-color 0.3s ease, color 0.3s ease;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease;
   }
-  
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: var(--font-heading);
   }
 }
 
 @layer components {
-  .glass {
-    background: color-mix(in srgb, var(--color-surface) 94%, transparent);
-    backdrop-filter: blur(20px);
-    border: 1px solid color-mix(in srgb, var(--color-border) 60%, transparent);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
-  }
-
-  .dark .glass {
-    background: color-mix(in srgb, var(--color-surface) 94%, transparent);
-    backdrop-filter: blur(20px);
-    border: 1px solid color-mix(in srgb, var(--color-border) 70%, transparent);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.32);
-  }
-
   .glass-card {
     background: color-mix(in srgb, var(--color-surface) 35%, transparent);
     backdrop-filter: blur(10px) brightness(1.5);
     -webkit-backdrop-filter: blur(10px) brightness(1.1);
     border-radius: 0.5rem;
     box-shadow: 0 4px 12px var(--color-accent);
-    
+
     transform: translateZ(0);
-    transition: transform 250ms cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 250ms ease, border-color 250ms ease;
-    will-change: transform, box-shadow;
-  }
-  
-  .pop-card:hover {
-    transform: translateY(-6px) scale(1.03);
-    box-shadow: 0 18px 50px rgba(0,0,0,0.18);
-    border-color: color-mix(in srgb, var(--color-accent) 40%, transparent);
+    transition:
+      transform 250ms cubic-bezier(0.2, 0.8, 0.2, 1),
+      box-shadow 250ms ease,
+      border-color 250ms ease;
   }
 
   .text-accent {
     color: var(--color-accent) !important;
-  }
-
-  .bg-gradient-turtle {
-    background: linear-gradient(135deg, var(--color-gradient-start), var(--color-gradient-end));
   }
 
   .text-gradient-foreground {
@@ -198,90 +206,113 @@
 
   .nav-shell {
     background: color-mix(in srgb, var(--color-surface) 92%, transparent);
-    border-bottom: 1px solid color-mix(in srgb, var(--color-border) 80%, transparent);
+    border-bottom: 1px solid
+      color-mix(in srgb, var(--color-border) 80%, transparent);
     backdrop-filter: blur(14px);
   }
 
   .nav-shell-bottom {
     background: color-mix(in srgb, var(--color-surface) 94%, transparent);
-    border-top: 1px solid color-mix(in srgb, var(--color-border) 80%, transparent);
+    border-top: 1px solid
+      color-mix(in srgb, var(--color-border) 80%, transparent);
     backdrop-filter: blur(12px);
-  }
-
-  .bg-gradient-premium {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  }
-
-  .hero-gradient {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
-    backdrop-filter: blur(10px);
-  }
-
-  .dark .hero-gradient {
-    background: linear-gradient(135deg, rgba(17, 18, 24, 0.1) 0%, rgba(17, 18, 24, 0.05) 100%);
-    backdrop-filter: blur(10px);
   }
 }
 
 @layer utilities {
   /* Yellow/Amber accent overrides */
-  .text-yellow-400, .text-yellow-500, .text-yellow-600,
-  .dark .text-yellow-400, .dark .text-yellow-500, .dark .text-yellow-600 { color: var(--color-accent) !important; }
-  .bg-yellow-400, .bg-yellow-500, .bg-yellow-600,
-  .dark .bg-yellow-400, .dark .bg-yellow-500, .dark .bg-yellow-600 { background-color: var(--color-accent) !important; }
-  .border-yellow-400, .border-yellow-500, .border-yellow-600,
-  .dark .border-yellow-400, .dark .border-yellow-500, .dark .border-yellow-600 { border-color: var(--color-accent) !important; }
-  .from-yellow-400, .from-yellow-500,
-  .dark .from-yellow-400, .dark .from-yellow-500 { --tw-gradient-from: var(--color-gradient-start) !important; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(2 6 23 / 0)); }
-  .to-amber-400, .to-amber-500,
-  .dark .to-amber-400, .dark .to-amber-500 { --tw-gradient-to: var(--color-gradient-end) !important; }
+  .text-yellow-400,
+  .text-yellow-500,
+  .text-yellow-600,
+  .dark .text-yellow-400,
+  .dark .text-yellow-500,
+  .dark .text-yellow-600 {
+    color: var(--color-accent) !important;
+  }
+  .bg-yellow-400,
+  .bg-yellow-500,
+  .bg-yellow-600,
+  .dark .bg-yellow-400,
+  .dark .bg-yellow-500,
+  .dark .bg-yellow-600 {
+    background-color: var(--color-accent) !important;
+  }
+  .border-yellow-400,
+  .border-yellow-500,
+  .border-yellow-600,
+  .dark .border-yellow-400,
+  .dark .border-yellow-500,
+  .dark .border-yellow-600 {
+    border-color: var(--color-accent) !important;
+  }
+  .from-yellow-400,
+  .from-yellow-500,
+  .dark .from-yellow-400,
+  .dark .from-yellow-500 {
+    --tw-gradient-from: var(--color-gradient-start) !important;
+    --tw-gradient-stops:
+      var(--tw-gradient-from), var(--tw-gradient-to, rgba(2 6 23 / 0));
+  }
+  .to-amber-400,
+  .to-amber-500,
+  .dark .to-amber-400,
+  .dark .to-amber-500 {
+    --tw-gradient-to: var(--color-gradient-end) !important;
+  }
 
   /* Sponsorship tier colors */
-  .from-amber-700, .from-amber-800 { --tw-gradient-from: rgb(180 83 9 / 1) !important; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(180 83 9 / 0)) !important; }
-  .to-amber-800 { --tw-gradient-to: rgb(120 53 15 / 1) !important; }
-  .from-yellow-500.to-yellow-500 { --tw-gradient-from: rgb(234 179 8 / 1) !important; --tw-gradient-to: rgb(234 179 8 / 1) !important; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(234 179 8 / 0)) !important; }
-  .from-orange-600 { --tw-gradient-from: rgb(234 88 12 / 1) !important; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(234 88 12 / 0)) !important; }
-  .to-orange-700 { --tw-gradient-to: rgb(194 65 12 / 1) !important; }
-  .from-gray-400 { --tw-gradient-from: rgb(156 163 175 / 1) !important; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(156 163 175 / 0)) !important; }
-  .to-gray-500 { --tw-gradient-to: rgb(107 114 128 / 1) !important; }
-  .from-slate-300 { --tw-gradient-from: rgb(203 213 225 / 1) !important; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(203 213 225 / 0)) !important; }
-  .to-slate-400 { --tw-gradient-to: rgb(148 163 184 / 1) !important; }
+  .from-amber-700,
+  .from-amber-800 {
+    --tw-gradient-from: rgb(180 83 9 / 1) !important;
+    --tw-gradient-stops:
+      var(--tw-gradient-from), var(--tw-gradient-to, rgb(180 83 9 / 0)) !important;
+  }
+  .to-amber-800 {
+    --tw-gradient-to: rgb(120 53 15 / 1) !important;
+  }
+  .from-yellow-500.to-yellow-500 {
+    --tw-gradient-from: rgb(234 179 8 / 1) !important;
+    --tw-gradient-to: rgb(234 179 8 / 1) !important;
+    --tw-gradient-stops:
+      var(--tw-gradient-from), var(--tw-gradient-to, rgb(234 179 8 / 0)) !important;
+  }
+  .from-orange-600 {
+    --tw-gradient-from: rgb(234 88 12 / 1) !important;
+    --tw-gradient-stops:
+      var(--tw-gradient-from), var(--tw-gradient-to, rgb(234 88 12 / 0)) !important;
+  }
+  .to-orange-700 {
+    --tw-gradient-to: rgb(194 65 12 / 1) !important;
+  }
+  .from-gray-400 {
+    --tw-gradient-from: rgb(156 163 175 / 1) !important;
+    --tw-gradient-stops:
+      var(--tw-gradient-from), var(--tw-gradient-to, rgb(156 163 175 / 0)) !important;
+  }
+  .to-gray-500 {
+    --tw-gradient-to: rgb(107 114 128 / 1) !important;
+  }
+  .from-slate-300 {
+    --tw-gradient-from: rgb(203 213 225 / 1) !important;
+    --tw-gradient-stops:
+      var(--tw-gradient-from), var(--tw-gradient-to, rgb(203 213 225 / 0)) !important;
+  }
+  .to-slate-400 {
+    --tw-gradient-to: rgb(148 163 184 / 1) !important;
+  }
 
   /* Sponsorship tier text color */
-  .sponsor-section div { color: var(--color-gray-900) !important; }
-
-  .ring-yellow-400\/25, .ring-yellow-500\/25 { --tw-ring-color: color-mix(in srgb, var(--color-accent) 25%, transparent) !important; }
-
-  .text-shadow {
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  .sponsor-section div {
+    color: var(--color-gray-900) !important;
   }
 
-  .dark .text-shadow {
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-  }
-
-  .text-shadow-lg {
-    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-  }
-
-  .dark .text-shadow-lg {
-    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-  }
-
-  .shadow-premium {
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-  }
-
-  .dark .shadow-premium {
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-  }
-
-  .shadow-soft {
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  }
-
-  .dark .shadow-soft {
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  .ring-yellow-400\/25,
+  .ring-yellow-500\/25 {
+    --tw-ring-color: color-mix(
+      in srgb,
+      var(--color-accent) 25%,
+      transparent
+    ) !important;
   }
 
   .line-clamp-3 {
@@ -316,8 +347,35 @@
     background: var(--color-secondary);
   }
 
+  /* Text rendering optimization */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  span,
+  a {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Prevent blur during transforms */
+  *,
+  *::before,
+  *::after {
+    backface-visibility: hidden;
+  }
+
+  /* Accent shadow for interactive elements */
+  .accent-shadow:hover {
+    box-shadow: 0 12px 24px var(--color-accent, rgba(80, 0, 0, 0.2));
+  }
+
   /* Firefox scrollbar */
-  * {
+  :root {
     scrollbar-color: var(--color-accent) var(--color-bg);
     scrollbar-width: thin;
   }
