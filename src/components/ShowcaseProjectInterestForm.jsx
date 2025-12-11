@@ -94,7 +94,7 @@ const ShowcaseProjectInterestForm = () => {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 rounded-xl border border-border bg-surface text-text focus:ring-2 focus:ring-accent focus:border-transparent transition-colors outline-none"
+                className="w-full px-4 py-3 rounded-xl border border-accent-2 bg-primary-2 text-text focus:ring-2 focus:ring-accent-1 focus:border-transparent transition-colors outline-none"
                 placeholder="Timmy Turtleson"
               />
             </div>
@@ -113,7 +113,7 @@ const ShowcaseProjectInterestForm = () => {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 rounded-xl border border-border bg-surface text-text focus:ring-2 focus:ring-accent focus:border-transparent transition-colors outline-none"
+                className="w-full px-4 py-3 rounded-xl border border-accent-2 bg-primary-2 text-text focus:ring-2 focus:ring-accent-1 focus:border-transparent transition-colors outline-none"
                 placeholder="timmyturtleson@tamu.edu"
               />
             </div>
@@ -132,7 +132,7 @@ const ShowcaseProjectInterestForm = () => {
                 onChange={handleChange}
                 required
                 rows="5"
-                className="w-full px-4 py-3 rounded-xl border border-border bg-surface text-text focus:ring-2 focus:ring-accent focus:border-transparent transition-colors outline-none resize-none"
+                className="w-full px-4 py-3 rounded-xl border border-accent-2 bg-primary-2 text-text focus:ring-2 focus:ring-accent-1 focus:border-transparent transition-colors outline-none resize-none"
                 placeholder="Tell us which projects you're excited to join..."
               />
             </div>
@@ -183,7 +183,7 @@ const ShowcaseProjectInterestForm = () => {
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-gradient-turtle text-gradient-foreground px-8 py-4 rounded-xl font-medium hover:scale-105 transition-transform duration-300 shadow-premium disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center gap-2"
+              className="w-full bg-gradient-basic text-gradient-foreground px-8 py-4 rounded-xl font-medium hover:scale-105 transition-transform duration-300 shadow-premium disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center gap-2"
             >
               {loading ? (
                 <>

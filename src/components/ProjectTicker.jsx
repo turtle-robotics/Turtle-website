@@ -36,7 +36,7 @@ export default function ProjectTicker({ projects }) {
           {multipliedProjects.map((project, index) => (
             <div
               key={`${project.id}-${index}`}
-              className="project-ticker-block glass-effect"
+              className="project-ticker-block cursor-pointer"
               onClick={(e) => {
                 e.preventDefault();
                 e.stopPropagation();

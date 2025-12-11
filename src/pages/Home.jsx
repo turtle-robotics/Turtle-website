@@ -85,32 +85,29 @@ const Home = () => {
         ref={heroRef}
         className="relative min-h-screen flex items-center justify-center px-4"
       >
-        <div className="absolute inset-0 bg-background"></div>
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900"></div>
+        <div className="absolute inset-0 bg-primary-2 opacity-40"></div>
         <div className="relative text-center max-w-6xl mx-auto z-10">
           <div className="glass-card p-16 rounded-3xl">
-            <h1 className="text-6xl md:text-8xl lg:text-9xl font-extralight tracking-tight text-text mb-8">
+            <h1 className="text-6xl md:text-8xl lg:text-9xl font-extralight tracking-tight text-secondary-3 mb-8">
               <span className="block">TURTLE</span>
-              <span className="block text-accent">ROBOTICS</span>
+              <span className="block text-primary-1">ROBOTICS</span>
             </h1>
 
-            <p className="hero-subtitle text-xl md:text-2xl font-light tracking-wide text-muted mb-12 max-w-3xl mx-auto">
+            <p className="hero-subtitle text-xl md:text-2xl font-normal tracking-wide text-secondary-2 mb-12 max-w-3xl mx-auto">
               Pioneering robotics solutions and student leadership development
               at Texas A&M University
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center relative z-50">
-              <Link
-                to="/projects"
-                className="inline-flex bg-gradient-turtle text-gradient-foreground px-10 py-5 rounded-xl font-normal tracking-wide hover:scale-105 transition-transform duration-300"
-              >
-                EXPLORE PROJECTS
+              <Link to="/projects" className="hero-button inline-block">
+                <div className="glass-card bg-secondary-1 text-primary-2 px-10 py-5 rounded-xl font-normal tracking-wide hover:scale-105 transition-transform duration-300 shadow-lg">
+                  EXPLORE PROJECTS
+                </div>
               </Link>
-              <Link
-                to="/about"
-                className="inline-flex glass-card text-accent px-10 py-5 rounded-xl font-normal tracking-wide hover:scale-105 transition-transform duration-300 bg-surface"
-              >
-                LEARN MORE
+              <Link to="/about" className="hero-button inline-block">
+                <div className="glass-card bg-secondary-3 text-primary-2 px-10 py-5 rounded-xl font-normal tracking-wide hover:scale-105 transition-transform duration-300 shadow-md">
+                  LEARN MORE
+                </div>
               </Link>
             </div>
           </div>
@@ -123,10 +120,10 @@ const Home = () => {
       </section>
 
       {/* About Section */}
-      <section className="py-24 px-4">
+      <section className="py-24 px-4 bg-background">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-20 text-text">
-            ABOUT <span className="text-accent">TURTLE</span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-20 text-secondary-3">
+            ABOUT <span className="text-primary-1">TURTLE</span>
           </h2>
 
           <div ref={cardsRef} className="grid md:grid-cols-3 gap-8 mb-16">
@@ -137,12 +134,12 @@ const Home = () => {
               blur="3"
               brightness="1.4"
             >
-              <div className="glass-card p-10 rounded-2xl text-center transition-shadow duration-300 h-full flex flex-col">
+              <div className="glass-card p-10 rounded-2xl text-center transition-shadow duration-300 h-full flex flex-col bg-primary-1 border border-secondary-3">
                 <div className="text-5xl mb-6">🎓</div>
-                <h3 className="text-xl font-light mb-4 text-text">
+                <h3 className="text-xl font-normal mb-4 text-secondary-5">
                   Student Leadership
                 </h3>
-                <p className="text-muted font-light leading-relaxed flex-grow">
+                <p className="text-primary-2 font-normal leading-relaxed flex-grow">
                   Developing the next generation of robotics leaders through
                   hands-on experience and mentorship.
                 </p>
@@ -155,12 +152,12 @@ const Home = () => {
               blur="3"
               brightness="1.4"
             >
-              <div className="glass-card p-10 rounded-2xl text-center transition-shadow duration-300 h-full flex flex-col">
+              <div className="glass-card p-10 rounded-2xl text-center transition-shadow duration-300 h-full flex flex-col bg-primary-1 border border-secondary-3">
                 <div className="text-5xl mb-6">🔬</div>
-                <h3 className="text-xl font-light mb-4 text-text">
+                <h3 className="text-xl font-normal mb-4 text-secondary-5">
                   Research Excellence
                 </h3>
-                <p className="text-muted font-light leading-relaxed flex-grow">
+                <p className="text-primary-2 font-normal leading-relaxed flex-grow">
                   Cutting-edge robotics research across multiple domains and
                   applications.
                 </p>
@@ -173,12 +170,12 @@ const Home = () => {
               blur="3"
               brightness="1.4"
             >
-              <div className="glass-card p-10 rounded-2xl text-center transition-shadow duration-300 h-full flex flex-col">
+              <div className="glass-card p-10 rounded-2xl text-center transition-shadow duration-300 h-full flex flex-col bg-primary-1 border border-secondary-3">
                 <div className="text-5xl mb-6">🏆</div>
-                <h3 className="text-xl font-light mb-4 text-text">
+                <h3 className="text-xl font-normal mb-4 text-secondary-5">
                   Competition Success
                 </h3>
-                <p className="text-muted font-light leading-relaxed flex-grow">
+                <p className="text-primary-2 font-normal leading-relaxed flex-grow">
                   Competing and winning in prestigious robotics competitions.
                 </p>
               </div>
@@ -190,13 +187,13 @@ const Home = () => {
       {/* Contact Section */}
       <section className="py-24 px-4 bg-background">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight mb-12 text-text">
-            READY TO <span className="text-accent">JOIN US</span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight mb-12 text-secondary-3">
+            READY TO <span className="text-primary-1">JOIN US</span>
           </h2>
 
           <a
             href="https://forms.gle/8md4HbE4LCMRBf6UA"
-            className="inline-block bg-gradient-turtle text-gradient-foreground px-16 py-6 rounded-xl text-xl font-light tracking-wide hover:scale-105 transition-transform duration-300 shadow-premium"
+            className="inline-block bg-secondary-5 text-gradient-foreground px-16 py-6 rounded-xl text-xl font-normal tracking-wide hover:scale-105 transition-transform duration-300 shadow-premium"
           >
             APPLY NOW
           </a>
@@ -206,14 +203,14 @@ const Home = () => {
       {/* Showcase Popup - Mobile */}
       {ENABLE_SHOWCASE_POPUPS && showMobilePopup && (
         <div className="md:hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-          <div className="relative bg-gradient-to-br from-surface to-background p-8 rounded-2xl shadow-2xl border-2 border-accent max-w-sm w-full">
+          <div className="relative bg-background p-8 rounded-2xl shadow-2xl border-2 border-accent-1 max-w-sm w-full">
             <button
               onClick={(e) => {
                 e.preventDefault();
                 e.stopPropagation();
                 setShowMobilePopup(false);
               }}
-              className="absolute top-4 right-4 w-8 h-8 bg-text text-background rounded-full flex items-center justify-center hover:opacity-80 transition-opacity shadow-lg text-xl font-light"
+              className="absolute top-4 right-4 w-8 h-8 bg-secondary-1 text-primary-2 rounded-full flex items-center justify-center hover:opacity-80 transition-opacity shadow-lg text-xl font-normal"
               aria-label="Close"
             >
               ×
@@ -224,25 +221,25 @@ const Home = () => {
               className="block text-center"
               onClick={() => setShowMobilePopup(false)}
             >
-              <div className="mx-auto mb-4 w-8 h-8 bg-accent rounded-full shadow-md"></div>
-              <div className="text-sm font-bold text-accent mb-3 uppercase tracking-wide">
+              <div className="mx-auto mb-4 w-8 h-8 bg-primary-1 rounded-full shadow-md"></div>
+              <div className="text-sm font-bold text-primary-1 mb-3 uppercase tracking-wide">
                 📌 Don't Miss This Event!
               </div>
-              <div className="text-4xl font-extralight text-text mb-4 leading-tight">
+              <div className="text-4xl font-extralight text-primary-1 mb-4 leading-tight">
                 TURTLE Showcase
               </div>
-              <div className="text-xl font-light text-muted mb-2">
+              <div className="text-xl font-normal text-secondary-2 mb-2">
                 November 21, 2025
               </div>
-              <div className="text-xl font-light text-muted mb-2">
+              <div className="text-xl font-normal text-secondary-2 mb-2">
                 1:00 PM - 5:00 PM
               </div>
-              <div className="text-base font-light text-muted mb-6">
+              <div className="text-base font-normal text-secondary-2 mb-6">
                 Zachry Engineering Building
                 <br />
                 Virginia C Brown Atrium
               </div>
-              <div className="bg-gradient-turtle text-gradient-foreground px-8 py-3 rounded-xl font-light tracking-wide inline-block">
+              <div className="bg-gradient-basic text-gradient-foreground px-8 py-3 rounded-xl font-normal tracking-wide inline-block">
                 Learn More →
               </div>
             </a>
@@ -256,18 +253,18 @@ const Home = () => {
           href="/showcase"
           className="hidden md:block fixed bottom-8 right-8 z-40 group"
         >
-          <div className="relative bg-gradient-to-br from-surface to-background p-6 rounded-xl shadow-xl transition-shadow duration-300 rotate-2 w-64 border-2 border-accent">
-            <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 w-7 h-7 bg-accent rounded-full shadow-md"></div>
-            <div className="text-xs font-bold text-accent mb-2 uppercase tracking-wide">
+          <div className="relative bg-background p-6 rounded-xl shadow-xl transition-shadow duration-300 rotate-2 w-64 border-2 border-accent-1">
+            <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 w-7 h-7 bg-accent-1 rounded-full shadow-md"></div>
+            <div className="text-xs font-bold text-accent-1 mb-2 uppercase tracking-wide">
               📌 Don't Miss!
             </div>
-            <div className="text-2xl font-extralight text-text mb-2">
+            <div className="text-2xl font-extralight text-primary-1 mb-2">
               TURTLE Showcase
             </div>
-            <div className="text-base font-light text-muted mb-1">
+            <div className="text-base font-light text-secondary-2 mb-1">
               November 21, 2025
             </div>
-            <div className="text-base font-light text-muted mb-3">
+            <div className="text-base font-light text-secondary-2 mb-3">
               1:00-5:00 PM
             </div>
             <div className="text-xs text-accent underline group-hover:brightness-110 font-medium">

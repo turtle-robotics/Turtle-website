@@ -91,60 +91,15 @@
       "Oswald", "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans",
       sans-serif;
 
-    /* Light Theme - TAMU */
-    /* TAMU Brand Colors */
-    --color-brand-primary: #500000; /* Maroon - Primary brand */
-    --color-brand-secondary: #ffffff; /* White - Secondary brand */
-    --color-brand-dark: #3c001c; /* Dark maroon */
-    --color-brand-light: #732f2f; /* Light maroon */
-
-    --color-bg: #d1d1d1;
-    --color-surface: #f9f9f9;
-    --color-text: #000000;
-    --color-muted: #666666;
-    --color-border: #e0e0e0;
-    --color-accent: #500000;
-    --color-secondary: #732f2f;
-
-    /* Gradients */
-    --color-gradient-start: #500000;
-    --color-gradient-end: #732f2f;
-    --color-gradient-foreground: #e0e0e0;
-
-    --color-gray-100: #f6f6f6;
-    --color-gray-200: #eaeaea;
-    --color-gray-300: #d1d1d1;
-    --color-gray-400: #a7a7a7;
-    --color-gray-500: #707070;
-    --color-gray-600: #626262;
-    --color-gray-700: #535353;
-    --color-gray-800: #3e3e3e;
-    --color-gray-900: #202020;
+    /* 
+      Palette values are injected at runtime by applyPalette (ThemeContext).
+      Keep this block free of hardcoded colors so a single palette file
+      controls the entire theme.
+    */
   }
 
   .dark {
-    /* Dark Theme - TURTLE */
-    --color-bg: #0a0f1a;
-    --color-surface: #111a2b;
-    --color-text: #f5f7fb;
-    --color-muted: #c7d2e5;
-    --color-border: #22314a;
-    --color-accent: #f2c14f;
-    --color-secondary: #1f3b73;
-
-    --color-gradient-start: #f6d365;
-    --color-gradient-end: #f2c14f;
-    --color-gradient-foreground: #0d1f3b;
-
-    --color-gray-100: #e8edf7;
-    --color-gray-200: #cfd9ed;
-    --color-gray-300: #a6b9da;
-    --color-gray-400: #7e99c5;
-    --color-gray-500: #5c7eaf;
-    --color-gray-600: #456698;
-    --color-gray-700: #344d76;
-    --color-gray-800: #23365a;
-    --color-gray-900: #141f36;
+    /* Dark mode toggle is still driven by the class; colors come from palette. */
   }
 
   * {
@@ -183,7 +138,7 @@
 
 @layer components {
   .glass-card {
-    background: color-mix(in srgb, var(--color-surface) 35%, transparent);
+    background: color-mix(in srgb, var(--color-secondary-4) 45%, transparent);
     backdrop-filter: blur(10px) brightness(1.5);
     -webkit-backdrop-filter: blur(10px) brightness(1.1);
     border-radius: 0.5rem;
@@ -196,6 +151,51 @@
       border-color 250ms ease;
   }
 
+  /* Fixed sponsorship tier backgrounds (non-themable) */
+  .tier-bronze {
+    background: linear-gradient(135deg, #b45309, #92400e);
+    color: #fef3c7;
+  }
+
+  .tier-silver {
+    background: linear-gradient(135deg, #9ca3af, #6b7280);
+    color: #f9fafb;
+  }
+
+  .tier-gold {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    color: #fff7ed;
+  }
+
+  .tier-platinum {
+    background: linear-gradient(135deg, #e5e7eb, #9ca3af);
+    color: #111827;
+  }
+
+  /* Ensure child text inherits contrasting color */
+  .tier-bronze a,
+  .tier-bronze p,
+  .tier-bronze li,
+  .tier-bronze h3,
+  .tier-bronze div,
+  .tier-silver a,
+  .tier-silver p,
+  .tier-silver li,
+  .tier-silver h3,
+  .tier-silver div,
+  .tier-gold a,
+  .tier-gold p,
+  .tier-gold li,
+  .tier-gold h3,
+  .tier-gold div,
+  .tier-platinum a,
+  .tier-platinum p,
+  .tier-platinum li,
+  .tier-platinum h3,
+  .tier-platinum div {
+    color: inherit;
+  }
+
   .text-accent {
     color: var(--color-accent) !important;
   }
@@ -205,14 +205,14 @@
   }
 
   .nav-shell {
-    background: color-mix(in srgb, var(--color-surface) 92%, transparent);
+    background: color-mix(in srgb, var(--color-secondary-4) 92%, transparent);
     border-bottom: 1px solid
       color-mix(in srgb, var(--color-border) 80%, transparent);
     backdrop-filter: blur(14px);
   }
 
   .nav-shell-bottom {
-    background: color-mix(in srgb, var(--color-surface) 94%, transparent);
+    background: color-mix(in srgb, var(--color-secondary-4) 94%, transparent);
     border-top: 1px solid
       color-mix(in srgb, var(--color-border) 80%, transparent);
     backdrop-filter: blur(12px);

@@ -6,7 +6,7 @@
  * - CSS variable-based theming for dark/light mode switching
  * - Custom color palette (brand colors, semantic tokens)
  * - Extended spacing, typography, and animation utilities
- * - Gradient utilities (gradient-turtle)
+ * - Gradient utilities (gradient-basic)
  * - Custom plugins for aspect ratios and scrollbar styling\n * All colors use CSS variables (--color-*) for runtime theme switching.
  * See main.css for CSS variable definitions.
  */
@@ -24,40 +24,23 @@ export default {
         heading: ["var(--font-heading)"],
       },
       colors: {
-        /* Semantic tokens wired to CSS variables (light/dark runtime theming) */
-        background: "var(--color-bg)",
-        surface: "var(--color-surface)",
-        text: "var(--color-text)",
-        muted: "var(--color-muted)",
-        border: "var(--color-border)",
+        /* 9 core input colors */
+        "primary-1": "var(--color-primary-1)",
+        "primary-2": "var(--color-primary-2)",
+        "secondary-1": "var(--color-secondary-1)",
+        "secondary-2": "var(--color-secondary-2)",
+        "secondary-3": "var(--color-secondary-3)",
+        "secondary-4": "var(--color-secondary-4)",
+        "secondary-5": "var(--color-secondary-5)",
+        "accent-1": "var(--color-accent-1)",
+        "accent-2": "var(--color-accent-2)",
 
-        brand: {
-          primary: "var(--color-brand-primary)",
-          secondary: "var(--color-brand-secondary)",
-          dark: "var(--color-brand-dark)",
-          light: "var(--color-brand-light)",
-        },
-
-        /* Accent/secondary keep semantic names for utilities */
-        accent: "var(--color-accent)",
-        secondary: "var(--color-secondary)",
-
-        gray: {
-          100: "var(--color-gray-100)",
-          200: "var(--color-gray-200)",
-          300: "var(--color-gray-300)",
-          400: "var(--color-gray-400)",
-          500: "var(--color-gray-500)",
-          600: "var(--color-gray-600)",
-          700: "var(--color-gray-700)",
-          800: "var(--color-gray-800)",
-          900: "var(--color-gray-900)",
-        },
-
-        gradients: {
-          turtle:
-            "linear-gradient(135deg, var(--color-gradient-start), var(--color-gradient-end))",
-        },
+        /* Convenience aliases for common uses */
+        background: "var(--color-primary-2)",
+        text: "var(--color-primary-1)",
+        border: "var(--color-secondary-3)",
+        accent: "var(--color-accent-1)",
+        "gradient-foreground": "var(--color-primary-2)",
       },
       fontSize: {
         hero: [
@@ -70,7 +53,7 @@ export default {
         soft: "0 4px 20px rgba(0, 0, 0, 0.08)",
       },
       backgroundImage: {
-        "gradient-turtle":
+        "gradient-basic":
           "linear-gradient(135deg, var(--color-gradient-start), var(--color-gradient-end))",
         "gradient-premium": "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
       },

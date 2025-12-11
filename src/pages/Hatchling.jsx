@@ -79,20 +79,15 @@ const Hatchling = () => {
           className="absolute inset-0 w-full h-full object-cover object-center"
         />
 
-        {/* Overlay for light contrast */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60 pointer-events-none"></div>
-
-        {/* Text only — no box */}
         <div className="relative text-center z-10 max-w-6xl mx-auto -translate-y-36">
           <div className="glass-card rounded-3xl p-8 md:p-12">
-            <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-extralight tracking-tight text-text drop-shadow-2xl">
+            <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-extralight tracking-tight text-secondary-3 drop-shadow-2xl">
               <span className="block">HATCHLING</span>
-              <span className="block">DEVELOPMENT</span>
-              <span className="block text-accent">PROGRAM</span>
+              <span className="block text-primary-1">PROGRAM</span>
             </h1>
 
             <div className="founding-info mt-8">
-              <p className="text-lg md:text-xl font-normal text-text drop-shadow-md text-shadow">
+              <p className="text-lg md:text-xl font-bold text-secondary-2 drop-shadow-md text-shadow">
                 Founded 2015 • External Expansion 2025
               </p>
             </div>
@@ -101,14 +96,14 @@ const Hatchling = () => {
       </section>
 
       {/* Mission Statement Section */}
-      <section className="py-24 px-4">
+      <section className="py-24 px-4 bg-background">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-20 text-text">
-            OUR <span className="text-accent">MISSION</span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-20 text-secondary-3">
+            OUR <span className="text-primary-1">MISSION</span>
           </h2>
 
           <div className="glass-card p-12 rounded-2xl text-center">
-            <p className="text-xl md:text-2xl font-normal text-muted leading-relaxed max-w-4xl mx-auto">
+            <p className="text-xl md:text-2xl font-normal text-secondary-2 leading-relaxed max-w-4xl mx-auto">
               Fostering growth in undergraduate engineers by providing the
               tools, support, and real-world experience they need to build
               strong communication, problem-solving, and engineering skills. We
@@ -121,10 +116,10 @@ const Hatchling = () => {
       </section>
 
       {/* Trusted Organizations Section */}
-      <section className="py-24 px-4 bg-gradient-to-br from-gray-50 to-white dark:to-gray-900">
+      <section className="py-24 px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-20 text-text">
-            CURRENTLY <span className="text-accent">TRUSTED AT</span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-20 text-secondary-3">
+            CURRENTLY <span className="text-primary-1">TRUSTED AT</span>
           </h2>
 
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-8">
@@ -158,7 +153,7 @@ const Hatchling = () => {
               </p>
               <a
                 href="mailto:turtlerobotics@gmail.com?subject=Hatchling%20Program%20Inquiry&body=Hello,%20I'm%20interested%20in%20bringing%20the%20Hatchling%20program%20to%20my%20student%20organization.%20Please%20provide%20more%20information%20about%20partnership%20opportunities."
-                className="inline-block bg-gradient-turtle text-gradient-foreground px-8 py-3 rounded-xl text-lg font-light tracking-wide hover:scale-105 transition-transform duration-300 shadow-lg"
+                className="inline-block bg-gradient-basic text-gradient-foreground px-8 py-3 rounded-xl text-lg font-light tracking-wide hover:scale-105 transition-transform duration-300 shadow-lg"
               >
                 Inquire Now
               </a>
@@ -168,10 +163,10 @@ const Hatchling = () => {
       </section>
 
       {/* Scrolling Pictures Section */}
-      <section className="py-24 px-4">
+      <section className="py-24 px-4 bg-background">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-20 text-text">
-            HATCHLING <span className="text-accent">GALLERY</span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-20 text-secondary-3">
+            HATCHLING <span className="text-primary-1">GALLERY</span>
           </h2>
 
           <div className="rounded-2xl overflow-hidden border border-border glass-card w-full max-w-6xl mx-auto aspect-video">
@@ -191,10 +186,11 @@ const Hatchling = () => {
       </section>
 
       {/* Learning Objectives and Schedule Section */}
-      <section className="py-24 px-4 bg-gradient-to-br from-gray-50 to-white dark:to-gray-900">
+      <section className="py-24 px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-20 text-text">
-            LEARNING <span className="text-accent">OBJECTIVES</span> & SCHEDULE
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-20 text-secondary-3">
+            LEARNING <span className="text-primary-1">OBJECTIVES</span> &
+            SCHEDULE
           </h2>
 
           {/* Learning Objectives - Full Width on Top */}
@@ -515,10 +511,10 @@ const Hatchling = () => {
       </section>
 
       {/* Published Materials Section */}
-      <section className="py-24 px-4">
+      <section className="py-24 px-4 bg-background">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-20 text-text">
-            PUBLISHED <span className="text-accent">MATERIALS</span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-20 text-secondary-3">
+            PUBLISHED <span className="text-primary-1">MATERIALS</span>
           </h2>
 
           {/* Weekly Content PDFs */}
@@ -581,7 +577,7 @@ const Hatchling = () => {
                       id="downloadBtn"
                       href="#"
                       download
-                      className="bg-gradient-turtle text-gradient-foreground px-6 py-3 rounded-lg text-sm font-light hover:scale-105 transition-opacity duration-300 hidden"
+                      className="bg-gradient-basic text-gradient-foreground px-6 py-3 rounded-lg text-sm font-light hover:scale-105 transition-opacity duration-300 hidden"
                     >
                       Download PDF
                     </a>
@@ -611,7 +607,7 @@ const Hatchling = () => {
               <a
                 href="/pdfs/Hatchling_Syllabus.pdf"
                 download
-                className="inline-block bg-gradient-turtle text-gradient-foreground px-6 py-3 rounded-lg text-sm font-light hover:scale-105 transition-opacity duration-300"
+                className="inline-block bg-gradient-basic text-gradient-foreground px-6 py-3 rounded-lg text-sm font-light hover:scale-105 transition-opacity duration-300"
               >
                 Download Notes
               </a>
@@ -627,7 +623,7 @@ const Hatchling = () => {
               <a
                 href="/pdfs/Hatchling CAD Examples.zip"
                 download
-                className="inline-block bg-gradient-turtle text-gradient-foreground px-6 py-3 rounded-lg text-sm font-light hover:scale-105 transition-opacity duration-300"
+                className="inline-block bg-gradient-basic text-gradient-foreground px-6 py-3 rounded-lg text-sm font-light hover:scale-105 transition-opacity duration-300"
               >
                 Download Examples
               </a>
@@ -644,7 +640,7 @@ const Hatchling = () => {
               <a
                 href="/pdfs/controller-info-code.pdf"
                 download
-                className="inline-block bg-gradient-turtle text-gradient-foreground px-6 py-3 rounded-lg text-sm font-light hover:scale-105 transition-opacity duration-300"
+                className="inline-block bg-gradient-basic text-gradient-foreground px-6 py-3 rounded-lg text-sm font-light hover:scale-105 transition-opacity duration-300"
               >
                 Download Guide
               </a>
@@ -654,10 +650,10 @@ const Hatchling = () => {
       </section>
 
       {/* Stats and Impact Section */}
-      <section className="py-24 px-4 bg-gradient-to-br from-gray-50 to-white dark:to-gray-900">
+      <section className="py-24 px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-20 text-text">
-            STATS & <span className="text-accent">IMPACT</span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-20 text-secondary-3">
+            STATS & <span className="text-primary-1">IMPACT</span>
           </h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
@@ -782,7 +778,7 @@ const Hatchling = () => {
                 <a
                   href="/pdfs/hatchling-impact-report.pdf"
                   download
-                  className="inline-block bg-gradient-turtle text-gradient-foreground px-6 py-3 rounded-lg text-sm font-light hover:opacity-90 transition-opacity duration-300"
+                  className="inline-block bg-gradient-basic text-gradient-foreground px-6 py-3 rounded-lg text-sm font-light hover:opacity-90 transition-opacity duration-300"
                 >
                   Download Full Report
                 </a>
@@ -793,13 +789,13 @@ const Hatchling = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-24 px-4">
+      <section className="py-24 px-4 bg-background">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight mb-12 text-text">
-            READY TO <span className="text-accent">JOIN</span>?
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight mb-12 text-secondary-3">
+            READY TO <span className="text-primary-1">JOIN?</span>
           </h2>
 
-          <p className="text-xl font-light text-muted mb-12 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xl font-normal text-secondary-2 mb-12 max-w-2xl mx-auto leading-relaxed">
             Become part of the next generation of robotics innovators. Apply now
             to join the Hatchling Program and accelerate your robotics journey.
           </p>
@@ -807,7 +803,7 @@ const Hatchling = () => {
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <Link
               to="/apply"
-              className="glass-card bg-gradient-turtle text-gradient-foreground px-12 py-5 rounded-xl text-lg font-light tracking-wide hover:scale-105 transition-transform duration-300 shadow-premium"
+              className="glass-card bg-gradient-basic text-gradient-foreground px-12 py-5 rounded-xl text-lg font-light tracking-wide hover:scale-105 transition-transform duration-300 shadow-premium"
             >
               APPLY NOW
             </Link>

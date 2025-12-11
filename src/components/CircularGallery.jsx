@@ -92,13 +92,21 @@ function createTextTexture(
   return { texture, width: canvas.width, height: canvas.height };
 }
 
+const getCssVar = (name, fallback) => {
+  if (typeof window === "undefined") return fallback;
+  const value = getComputedStyle(document.documentElement).getPropertyValue(
+    name,
+  );
+  return value?.trim() || fallback;
+};
+
 class Title {
   constructor({
     gl,
     plane,
     renderer,
     text,
-    textColor = "#545050",
+    textColor = getCssVar("--color-text", "#545050"),
     font = "30px sans-serif",
   }) {
     autoBind(this);
@@ -355,7 +363,7 @@ class App {
     {
       items,
       bend,
-      textColor = "#ffffff",
+      textColor = getCssVar("--color-text", "#ffffff"),
       borderRadius = 0,
       font = "bold 30px Figtree",
       scrollSpeed = 2,

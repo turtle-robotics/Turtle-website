@@ -19,7 +19,7 @@ const Footer = () => {
           <div className="space-y-6">
             <Link
               to="/hatchling"
-              className="inline-block bg-gradient-turtle text-gradient-foreground px-6 py-3 rounded-xl font-medium hover:scale-105 transition-transform duration-300"
+              className="inline-block bg-secondary-4 text-primary-1 px-6 py-3 rounded-xl font-medium hover:scale-105 transition-transform duration-300"
             >
               Explore Program
             </Link>
@@ -35,7 +35,7 @@ const Footer = () => {
                 href="https://www.facebook.com/turtlerobotics"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-gradient-turtle rounded-full flex items-center justify-center text-gradient-foreground hover:scale-110 transition-transform duration-300"
+                className="w-10 h-10 bg-secondary-5 rounded-full flex items-center justify-center text-gradient-foreground hover:scale-110 transition-transform duration-300"
               >
                 <span className="text-sm font-bold">f</span>
               </a>
@@ -44,7 +44,7 @@ const Footer = () => {
                 href="https://www.instagram.com/turtle_robotics/?hl=en"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-gradient-turtle rounded-full flex items-center justify-center text-gradient-foreground hover:scale-110 transition-transform duration-300"
+                className="w-10 h-10 bg-secondary-5 rounded-full flex items-center justify-center text-gradient-foreground hover:scale-110 transition-transform duration-300"
               >
                 <span className="text-sm">📷</span>
               </a>
@@ -53,7 +53,7 @@ const Footer = () => {
                 href="https://www.linkedin.com/company/tamu-turtle"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-gradient-turtle rounded-full flex items-center justify-center text-gradient-foreground hover:scale-110 transition-transform duration-300"
+                className="w-10 h-10 bg-secondary-5 rounded-full flex items-center justify-center text-gradient-foreground hover:scale-110 transition-transform duration-300"
               >
                 <span className="text-sm font-bold">in</span>
               </a>
@@ -62,7 +62,7 @@ const Footer = () => {
                 href="https://x.com/turtle_robotics"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-gradient-turtle rounded-full flex items-center justify-center text-gradient-foreground hover:scale-110 transition-transform duration-300"
+                className="w-10 h-10 bg-secondary-5 rounded-full flex items-center justify-center text-gradient-foreground hover:scale-110 transition-transform duration-300"
               >
                 <span className="text-sm">🐦</span>
               </a>

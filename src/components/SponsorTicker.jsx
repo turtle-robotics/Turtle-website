@@ -70,7 +70,7 @@ const SponsorTicker = () => {
       >
         {duplicatedLogos.map((logo, index) => (
           <div key={`${logo.id}-${index}`} className="flex-shrink-0">
-            <div className="glass-card p-6 rounded-2xl h-32 w-48 flex items-center justify-center bg-brand-secondary">
+            <div className="glass-card p-6 rounded-2xl h-32 w-48 flex items-center justify-center bg-white">
               <img
                 src={logo.url}
                 alt={logo.alt}

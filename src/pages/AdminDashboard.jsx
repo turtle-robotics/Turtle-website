@@ -193,9 +193,9 @@ const AdminDashboard = () => {
   if (!user) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 flex items-center justify-center px-4">
-        <div className="bg-surface p-8 rounded-2xl shadow-2xl max-w-md w-full">
+        <div className="bg-background p-8 rounded-2xl shadow-2xl max-w-md w-full">
           <div className="text-center mb-6">
-            <div className="w-20 h-20 bg-gradient-turtle rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="w-20 h-20 bg-gradient-basic rounded-full flex items-center justify-center mx-auto mb-4">
               <svg
                 className="w-10 h-10 text-gradient-foreground"
                 fill="none"
@@ -210,10 +210,10 @@ const AdminDashboard = () => {
                 />
               </svg>
             </div>
-            <h1 className="text-3xl font-extralight text-text mb-2">
+            <h1 className="text-3xl font-extralight text-secondary-3 mb-2">
               TURTLE Admin Portal
             </h1>
-            <p className="text-muted font-light">
+            <p className="text-secondary-2 font-light">
               Sign in with your admin account
             </p>
           </div>
@@ -228,27 +228,27 @@ const AdminDashboard = () => {
 
           <form onSubmit={handleLogin} className="space-y-4">
             <div>
-              <label className="block text-sm font-medium text-text mb-2\">
+              <label className="block text-sm font-medium text-secondary-3 mb-2\">
                 Email Address
               </label>
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full px-4 py-3 rounded-xl border-2 border-border bg-background text-text focus:border-accent focus:ring-2 focus:ring-accent/20 transition-colors outline-none"
+                className="w-full px-4 py-3 rounded-xl border-2 border-border bg-background text-secondary-3 focus:border-accent focus:ring-2 focus:ring-accent/20 transition-colors outline-none"
                 placeholder="Enter your email"
                 required
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-text mb-2">
+              <label className="block text-sm font-medium text-secondary-3 mb-2">
                 Password
               </label>
               <input
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full px-4 py-3 rounded-xl border-2 border-border bg-background text-text focus:border-accent focus:ring-2 focus:ring-accent/20 transition-colors outline-none"
+                className="w-full px-4 py-3 rounded-xl border-2 border-border bg-background text-secondary-3 focus:border-accent focus:ring-2 focus:ring-accent/20 transition-colors outline-none"
                 placeholder="Enter your password"
                 required
               />
@@ -256,7 +256,7 @@ const AdminDashboard = () => {
             <button
               type="submit"
               disabled={loggingIn}
-              className="w-full bg-gradient-turtle text-gradient-foreground px-6 py-3 rounded-xl font-medium hover:scale-105 transition-transform duration-300 shadow-lg disabled:opacity-50 disabled:hover:scale-100 flex items-center justify-center gap-2"
+              className="w-full bg-gradient-basic text-gradient-foreground px-6 py-3 rounded-xl font-medium hover:scale-105 transition-transform duration-300 shadow-lg disabled:opacity-50 disabled:hover:scale-100 flex items-center justify-center gap-2"
             >
               {loggingIn ? (
                 <>
@@ -298,10 +298,12 @@ const AdminDashboard = () => {
         {/* Header */}
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8">
           <div>
-            <h1 className="text-4xl font-extralight text-text mb-2">
+            <h1 className="text-4xl font-extralight text-secondary-3 mb-2">
               TURTLE Admin Dashboard
             </h1>
-            <p className="text-muted font-light">Signed in as: {user.email}</p>
+            <p className="text-secondary-2 font-light">
+              Signed in as: {user.email}
+            </p>
           </div>
           <button
             onClick={handleLogout}
@@ -462,7 +464,7 @@ const AdminDashboard = () => {
                 <button
                   onClick={fetchAllData}
                   disabled={loading}
-                  className="bg-gradient-turtle text-gradient-foreground px-6 py-3 rounded-xl font-medium hover:scale-105 transition-transform duration-300 shadow-lg disabled:opacity-50 flex items-center gap-2"
+                  className="bg-gradient-basic text-gradient-foreground px-6 py-3 rounded-xl font-medium hover:scale-105 transition-transform duration-300 shadow-lg disabled:opacity-50 flex items-center gap-2"
                 >
                   <svg
                     className="w-5 h-5"

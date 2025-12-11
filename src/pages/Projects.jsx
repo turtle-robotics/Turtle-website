@@ -139,15 +139,15 @@ const Projects = () => {
         ref={heroRef}
         className="relative min-h-screen flex items-center justify-center px-4"
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900"></div>
-        <div className="glass-card p-16 rounded-3xl">
-          <div className="relative text-center max-w-6xl mx-auto z-10">
-            <h1 className="text-6xl md:text-8xl lg:text-9xl font-extralight tracking-tight text-text mb-8">
+        <div className="absolute inset-0 bg-primary-2 opacity-40"></div>
+        <div className="relative text-center max-w-6xl mx-auto z-10">
+          <div className="glass-card p-16 rounded-3xl">
+            <h1 className="text-6xl md:text-8xl lg:text-9xl font-extralight tracking-tight text-secondary-3 mb-8">
               <span className="block">OUR</span>
-              <span className="block text-accent">PROJECTS</span>
+              <span className="block text-primary-1">PROJECTS</span>
             </h1>
 
-            <p className="hero-subtitle text-xl md:text-2xl font-light tracking-wide text-muted mb-12 max-w-3xl mx-auto">
+            <p className="hero-subtitle text-xl md:text-2xl font-normal tracking-wide text-secondary-2 mb-12 max-w-3xl mx-auto">
               Explore our cutting-edge robotics research projects that are
               pushing the boundaries of innovation and technology.
             </p>
@@ -156,7 +156,7 @@ const Projects = () => {
       </section>
 
       {/* Search Section */}
-      <section className="py-8 px-4 bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900">
+      <section className="py-8 px-4 bg-background">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col items-center gap-4 mb-8">
             <div className="flex-1 max-w-md">
@@ -167,10 +167,10 @@ const Projects = () => {
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                   onKeyDown={onSearchKeyDown}
-                  className="w-full px-4 py-3 pl-12 border border-border rounded-xl bg-surface text-text focus:ring-2 focus:ring-accent focus:border-transparent transition-colors duration-200"
+                  className="w-full px-4 py-3 pl-12 border border-secondary-3 rounded-xl bg-secondary-4 text-secondary-2 focus:ring-2 focus:ring-accent focus:border-transparent transition-colors duration-200"
                 />
                 <svg
-                  className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-muted"
+                  className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-secondary-4"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -196,9 +196,7 @@ const Projects = () => {
                   ⚡
                 </span>
                 <p className="m-0 text-center text-sm md:text-base font-light text-text">
-                  <span className="bg-gradient-turtle bg-clip-text text-transparent font-medium">
-                    Powered by AI
-                  </span>
+                  <span className="font-medium">Powered by AI</span>
                   <span>
                     {" "}
                     — type what you enjoy and we'll match a project for you.
@@ -222,7 +220,7 @@ const Projects = () => {
             <div className="flex items-center gap-3">
               <button
                 onClick={handleAIRecommend}
-                className="bg-gradient-turtle text-gradient-foreground px-4 py-2 rounded-lg text-sm font-light tracking-wide hover:scale-105 transition-transform duration-300 shadow-premium disabled:opacity-60"
+                className="bg-gradient-basic text-gradient-foreground px-4 py-2 rounded-lg text-sm font-light tracking-wide hover:scale-105 transition-transform duration-300 shadow-premium disabled:opacity-60"
                 disabled={isLoadingAI}
               >
                 {isLoadingAI ? "Thinking…" : "Ask AI to Match Me"}
@@ -255,7 +253,7 @@ const Projects = () => {
             </div>
             {aiAutoMode && aiResult && (
               <div className="glass-card rounded-2xl p-4 max-w-3xl w-full">
-                <div className="text-sm text-muted mb-2">
+                <div className="text-sm text-secondary-4 mb-2">
                   Recommendation Source: {aiResult.source}
                 </div>
                 {aiResult.recommendations &&
@@ -276,10 +274,12 @@ const Projects = () => {
                             >
                               {p.title}
                             </Link>
-                            <div className="text-xs text-muted">{r.reason}</div>
+                            <div className="text-xs text-secondary-4">
+                              {r.reason}
+                            </div>
                           </div>
                           {typeof r.confidence === "number" && (
-                            <span className="text-xs text-muted">
+                            <span className="text-xs text-secondary-4">
                               {Math.round(r.confidence * 100)}% match
                             </span>
                           )}
@@ -288,7 +288,7 @@ const Projects = () => {
                     })}
                   </div>
                 ) : (
-                  <div className="text-sm text-muted">
+                  <div className="text-sm text-secondary-4">
                     No AI recommendation. Try different keywords.
                   </div>
                 )}
@@ -359,13 +359,13 @@ const Projects = () => {
 
                   {/* Tags */}
                   <div className="flex flex-wrap gap-2">
-                    <span className="text-xs font-light text-accent border border-accent/40 px-3 py-1.5 rounded-full">
+                    <span className="text-xs font-light text-accent border border-accent-2 px-3 py-1.5 rounded-full">
                       {project.category}
                     </span>
                     {project.tags?.slice(0, 2).map((tag, tagIndex) => (
                       <span
                         key={tagIndex}
-                        className="text-xs font-light text-accent border border-accent/40 px-3 py-1.5 rounded-full"
+                        className="text-xs font-light text-accent border border-accent-2 px-3 py-1.5 rounded-full"
                       >
                         {tag}
                       </span>

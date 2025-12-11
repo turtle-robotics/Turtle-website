@@ -7,95 +7,74 @@
  *
  * How to add your own palette in <60 seconds:
  * 1) Duplicate `defaultPalette` and rename it (e.g., `sunsetPalette`).
- * 2) Replace the hex values with your palette's colors (light + dark variants).
+ * 2) Replace the hex values with your palette's 9 colors (light + dark variants).
  * 3) In ThemeContext, swap `activePalette` to your new palette name.
  *
- * Required keys (match CSS vars):
- * - bg, surface, text, muted, border
- * - accent, secondary
- * - brandPrimary, brandSecondary, brandDark, brandLight
- * - gradientStart, gradientEnd, gradientForeground
- * - gray100 ... gray900
+ * Exact input: 9 colors per mode (light/dark):
+ * - primary1, primary2             (2 primary colors)
+ * - secondary1 through secondary5  (5 secondary colors)
+ * - accent1, accent2               (2 accent colors)
  */
 
-export const defaultPalette = {
-  light: {
-    bg: "#d1d1d1",
-    surface: "#f9f9f9",
-    text: "#000000",
-    muted: "#666666",
-    border: "#e0e0e0",
-    accent: "#500000",
-    secondary: "#732f2f",
-    brandPrimary: "#500000",
-    brandSecondary: "#ffffff",
-    brandDark: "#3c001c",
-    brandLight: "#732f2f",
-    gradientStart: "#500000",
-    gradientEnd: "#732f2f",
-    gradientForeground: "#e0e0e0",
-    gray100: "#f6f6f6",
-    gray200: "#eaeaea",
-    gray300: "#d1d1d1",
-    gray400: "#a7a7a7",
-    gray500: "#707070",
-    gray600: "#626262",
-    gray700: "#535353",
-    gray800: "#3e3e3e",
-    gray900: "#202020",
-  },
-  dark: {
-    bg: "#0a0f1a",
-    surface: "#111a2b",
-    text: "#f5f7fb",
-    muted: "#c7d2e5",
-    border: "#22314a",
-    accent: "#f2c14f",
-    secondary: "#1f3b73",
-    brandPrimary: "#f2c14f",
-    brandSecondary: "#0d1f3b",
-    brandDark: "#0a0f1a",
-    brandLight: "#456698",
-    gradientStart: "#f6d365",
-    gradientEnd: "#f2c14f",
-    gradientForeground: "#0d1f3b",
-    gray100: "#e8edf7",
-    gray200: "#cfd9ed",
-    gray300: "#a6b9da",
-    gray400: "#7e99c5",
-    gray500: "#5c7eaf",
-    gray600: "#456698",
-    gray700: "#344d76",
-    gray800: "#23365a",
-    gray900: "#141f36",
-  },
+// Build a full palette from 9 core colors per mode
+const buildPalette = ({ light, dark }) => {
+  const buildMode = (core) => {
+    return {
+      primary1: core.primary1,
+      primary2: core.primary2,
+      secondary1: core.secondary1,
+      secondary2: core.secondary2,
+      secondary3: core.secondary3,
+      secondary4: core.secondary4,
+      secondary5: core.secondary5,
+      accent1: core.accent1,
+      accent2: core.accent2,
+    };
+  };
+
+  return {
+    light: buildMode(light),
+    dark: buildMode(dark),
+  };
 };
 
-// Map palette keys to CSS custom properties used across the site
+// Default palette using 9 inputs per mode (2 primary, 5 secondary, 2 accent)
+export const defaultPalette = buildPalette({
+  light: {
+    primary1: "#500000",
+    primary2: "#ffffff",
+    secondary1: "#202020",
+    secondary2: "#3e3e3e",
+    secondary3: "#707070",
+    secondary4: "#d1d1d1",
+    secondary5: "#d6d3c4",
+    accent1: "#3c0000",
+    accent2: "#732f2f",
+  },
+  dark: {
+    primary1: "#ffffff",
+    primary2: "#500000",
+    secondary1: "#d6d3c4",
+    secondary2: "#d1d1d1",
+    secondary3: "#707070",
+    secondary4: "#3e3e3e",
+    secondary5: "#202020",
+    accent1: "#732f2f",
+    accent2: "#3c0000",
+  },
+});
+
+// Map palette keys to CSS custom properties
 const CSS_VAR_MAP = {
-  bg: "--color-bg",
-  surface: "--color-surface",
-  text: "--color-text",
-  muted: "--color-muted",
-  border: "--color-border",
-  accent: "--color-accent",
-  secondary: "--color-secondary",
-  brandPrimary: "--color-brand-primary",
-  brandSecondary: "--color-brand-secondary",
-  brandDark: "--color-brand-dark",
-  brandLight: "--color-brand-light",
-  gradientStart: "--color-gradient-start",
-  gradientEnd: "--color-gradient-end",
-  gradientForeground: "--color-gradient-foreground",
-  gray100: "--color-gray-100",
-  gray200: "--color-gray-200",
-  gray300: "--color-gray-300",
-  gray400: "--color-gray-400",
-  gray500: "--color-gray-500",
-  gray600: "--color-gray-600",
-  gray700: "--color-gray-700",
-  gray800: "--color-gray-800",
-  gray900: "--color-gray-900",
+  primary1: "--color-primary-1",
+  primary2: "--color-primary-2",
+  secondary1: "--color-secondary-1",
+  secondary2: "--color-secondary-2",
+  secondary3: "--color-secondary-3",
+  secondary4: "--color-secondary-4",
+  secondary5: "--color-secondary-5",
+  accent1: "--color-accent-1",
+  accent2: "--color-accent-2",
 };
 
 /**

@@ -78,7 +78,7 @@ const ProjectDetail = () => {
         {/* Back Button */}
         <Link
           to="/projects"
-          className="inline-flex items-center text-accent hover:text-accent/80 transition-colors duration-200 mb-8"
+          className="inline-flex items-center text-primary-1 hover:text-primary-1/80 transition-colors duration-200 mb-8"
         >
           <svg
             className="w-4 h-4 mr-2"
@@ -98,10 +98,10 @@ const ProjectDetail = () => {
 
         {/* Project Header */}
         <div className="mb-12 text-center">
-          <h1 className="project-title text-4xl md:text-6xl font-extralight tracking-tight text-text mb-3">
+          <h1 className="project-title text-4xl md:text-6xl font-extralight tracking-tight text-secondary-3 mb-3">
             {project.title}
           </h1>
-          <p className="text-lg md:text-xl font-light text-accent mb-4">
+          <p className="text-lg md:text-xl font-light text-primary-1 mb-4">
             {project.subtitle}
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3">
@@ -111,16 +111,16 @@ const ProjectDetail = () => {
             {project.tags?.slice(0, 4).map((tag, i) => (
               <span
                 key={i}
-                className="text-xs font-light text-text bg-surface border border-border px-3 py-1 rounded-full"
+                className="text-xs font-light text-secondary-3 bg-background border border-border px-3 py-1 rounded-full"
               >
                 {tag}
               </span>
             ))}
           </div>
           <div className="project-lead mt-6">
-            <p className="text-base md:text-lg text-text">
+            <p className="text-base md:text-lg text-secondary-3">
               Lead: {project.lead}{" "}
-              <span className="text-accent ml-2">
+              <span className="text-primary-1 ml-2">
                 ({project.leadEmail || project.email})
               </span>
             </p>
@@ -142,20 +142,22 @@ const ProjectDetail = () => {
 
         {/* Project Overview */}
         <div className="project-section mb-12 glass-card rounded-2xl p-8">
-          <h2 className="text-2xl font-light text-text mb-4">Overview</h2>
-          <p className="text-muted leading-relaxed">
+          <h2 className="text-2xl font-light text-secondary-3 mb-4">
+            Overview
+          </h2>
+          <p className="text-secondary-2 leading-relaxed">
             {project.fullDescription || project.description}
           </p>
         </div>
 
         {/* Goals */}
         <div className="project-section mb-12 glass-card rounded-2xl p-8">
-          <h2 className="text-2xl font-light text-text mb-6">Goals</h2>
+          <h2 className="text-2xl font-light text-secondary-3 mb-6">Goals</h2>
           <ul className="space-y-3">
             {project.goals.map((goal, index) => (
               <li key={index} className="flex items-start">
-                <span className="text-accent mr-3 mt-1">✓</span>
-                <span className="text-muted">{goal}</span>
+                <span className="text-primary-1 mr-3 mt-1">✓</span>
+                <span className="text-secondary-2">{goal}</span>
               </li>
             ))}
           </ul>
@@ -163,12 +165,14 @@ const ProjectDetail = () => {
 
         {/* Looking For */}
         <div className="project-section mb-12 glass-card rounded-2xl p-8">
-          <h2 className="text-2xl font-light text-text mb-6">Looking For</h2>
+          <h2 className="text-2xl font-light text-secondary-3 mb-6">
+            Looking For
+          </h2>
           <ul className="space-y-3">
             {project.lookingFor.map((skill, index) => (
               <li key={index} className="flex items-start">
-                <span className="text-accent mr-3 mt-1">•</span>
-                <span className="text-muted">{skill}</span>
+                <span className="text-primary-1 mr-3 mt-1">•</span>
+                <span className="text-secondary-2">{skill}</span>
               </li>
             ))}
           </ul>
@@ -176,7 +180,7 @@ const ProjectDetail = () => {
 
         {/* Project Updates */}
         <div className="project-section mb-12">
-          <h2 className="text-2xl font-light text-text mb-6 text-center">
+          <h2 className="text-2xl font-light text-secondary-3 mb-6 text-center">
             Project Updates
           </h2>
           {project.updates && project.updates.length > 0 ? (
@@ -184,28 +188,28 @@ const ProjectDetail = () => {
               {project.updates.map((update, index) => (
                 <div key={index} className="glass-card rounded-2xl p-6">
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-sm text-muted">
+                    <span className="text-sm text-secondary-2">
                       {formatDate(update.date)}
                     </span>
                     <span className="text-xs font-light text-gradient-foreground bg-accent px-3 py-1 rounded-full">
                       Update
                     </span>
                   </div>
-                  <h3 className="text-lg font-light text-text mb-2">
+                  <h3 className="text-lg font-light text-secondary-3 mb-2">
                     {update.title}
                   </h3>
-                  <p className="text-muted">{update.content}</p>
+                  <p className="text-secondary-2">{update.content}</p>
                 </div>
               ))}
             </div>
           ) : (
             <div className="glass-card rounded-2xl p-6 text-center">
-              <p className="text-muted mb-3">
+              <p className="text-secondary-2 mb-3">
                 No updates have been posted yet.
               </p>
               <a
                 href={`mailto:turtlerobotics@gmail.com?subject=Project%20Update%20-%20${encodeURIComponent(project.title)}&body=Title:%20%0ADate:%20YYYY-MM-DD%0ADescription:%20`}
-                className="inline-block text-accent hover:text-accent/80 border border-accent/30 hover:border-accent rounded-lg px-4 py-2 text-sm"
+                className="inline-block text-primary-1 hover:text-primary-1/80 border border-primary-1/30 hover:border-primary-1 rounded-lg px-4 py-2 text-sm"
               >
                 Submit an update
               </a>
@@ -217,7 +221,7 @@ const ProjectDetail = () => {
         <div className="mt-12 pt-8 border-t border-border">
           <Link
             to="/apply"
-            className="inline-block bg-gradient-turtle text-gradient-foreground px-8 py-3 rounded-lg font-medium hover:scale-105 transition-transform duration-300"
+            className="inline-block bg-gradient-basic text-gradient-foreground px-8 py-3 rounded-lg font-medium hover:scale-105 transition-transform duration-300"
           >
             Apply to Join This Project
           </Link>

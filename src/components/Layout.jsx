@@ -77,18 +77,18 @@ const Layout = ({ children }) => {
                     key={item.label}
                     className="relative group flex items-center"
                   >
-                    <button className="flex items-center text-sm font-normal tracking-wide transition-colors duration-300 text-muted hover:text-accent hover:border-b-2 hover:border-accent/70">
+                    <button className="flex items-center text-sm font-normal tracking-wide transition-colors duration-300 text-secondary-2 hover:text-primary-1 hover:border-b-2 hover:border-primary-1/70">
                       {item.label}
                     </button>
-                    <div className="absolute top-full left-0 mt-2 w-48 bg-surface rounded-lg shadow-lg border border-border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                    <div className="absolute top-full left-0 mt-2 w-48 nav-shell rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                       {item.dropdown.map((dropdownItem) => (
                         <Link
                           key={dropdownItem.path}
                           to={dropdownItem.path}
                           className={`block px-4 py-3 text-sm font-normal transition-all duration-300 ${
                             location.pathname === dropdownItem.path
-                              ? "text-accent bg-surface"
-                              : "text-muted hover:text-accent hover:bg-surface"
+                              ? "text-primary-1"
+                              : "text-secondary-2 hover:text-primary-1"
                           }`}
                         >
                           {dropdownItem.label}
@@ -102,8 +102,8 @@ const Layout = ({ children }) => {
                     to={item.path}
                     className={`flex items-center text-sm font-normal tracking-wide transition-all duration-300 ${
                       location.pathname === item.path
-                        ? "text-accent border-b-2 border-accent"
-                        : "text-muted hover:text-accent hover:border-b-2 hover:border-accent/70"
+                        ? "text-primary-1 border-b-2 border-primary-1"
+                        : "text-secondary-2 hover:text-primary-1 hover:border-b-2 hover:border-primary-1/70"
                     }`}
                   >
                     {item.label}
@@ -114,10 +114,10 @@ const Layout = ({ children }) => {
               {/* Special Sponsor Link */}
               <Link
                 to={sponsorItem.path}
-                className={`text-sm font-medium tracking-wide transition-all duration-300 px-4 py-2 rounded-lg text-gradient-foreground hover:scale-110 hover:px-6 ${
+                className={`text-sm font-medium tracking-wide transition-all duration-300 px-4 py-2 rounded-lg text-white hover:scale-110 hover:px-6 ${
                   location.pathname === sponsorItem.path
-                    ? "bg-gradient-turtle shadow-lg scale-110"
-                    : "bg-gradient-turtle shadow-md hover:shadow-lg"
+                    ? "bg-accent-1 shadow-lg scale-110"
+                    : "bg-accent-1 shadow-md hover:shadow-lg"
                 }`}
               >
                 {sponsorItem.label}
@@ -128,8 +128,8 @@ const Layout = ({ children }) => {
                 to="/admin"
                 className={`flex items-center gap-1 text-sm font-light tracking-wide transition-all duration-300 ${
                   location.pathname === "/admin"
-                    ? "text-accent"
-                    : "text-muted hover:text-accent"
+                    ? "text-primary-1"
+                    : "text-secondary-2 hover:text-primary-1"
                 }`}
                 title="Admin Dashboard"
               >

@@ -416,7 +416,6 @@ const About = () => {
       "Spring 2020 - Spring 2022: Colin Sander*",
       "Fall 2022 - Spring 2023: Amrit Nanda",
       "Fall 2023 - Spring 2025: Ian Farrar*",
-      "Fall 2025: Malcolm Ferguson",
     ],
     "Project VP": [
       "Fall 2022: Brendan Wyatt",
@@ -444,12 +443,11 @@ const About = () => {
   };
 
   const [openSection, setOpenSection] = useState({
-    executive: true,
-    external: true,
-    internal: true,
-    web: true,
-    projects: true,
-    development: true,
+    executive: false,
+    external: false,
+    internal: false,
+    projects: false,
+    development: false,
     presidentHistory: false,
     internalVPHistory: false,
     externalVPHistory: false,
@@ -473,8 +471,10 @@ const About = () => {
         >
           <h3 className="text-lg font-light text-accent mb-2">{leader.role}</h3>
           <h4 className="text-base font-light text-text mb-2">{leader.name}</h4>
-          <p className="text-xs font-light text-muted mb-3">{leader.period}</p>
-          <p className="text-xs font-light text-muted leading-relaxed">
+          <p className="text-xs font-normal text-secondary-2 mb-3">
+            {leader.period}
+          </p>
+          <p className="text-xs font-normal text-secondary-2 leading-relaxed">
             {leader.description}
           </p>
         </div>
@@ -487,14 +487,14 @@ const About = () => {
         ref={heroRef}
         className="relative min-h-screen flex items-center justify-center px-4"
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900"></div>
+        <div className="absolute inset-0 bg-primary-2 opacity-40"></div>
         <div className="relative text-center max-w-6xl mx-auto z-10">
           <div className="glass-card p-16 rounded-3xl">
-            <h1 className="text-6xl md:text-8xl lg:text-9xl font-extralight tracking-tight text-text mb-8">
+            <h1 className="text-6xl md:text-8xl lg:text-9xl font-extralight tracking-tight text-secondary-3 mb-8">
               <span className="block">ABOUT</span>
-              <span className="block text-accent">TURTLE</span>
+              <span className="block text-primary-1">TURTLE</span>
             </h1>
-            <p className="hero-subtitle text-xl md:text-2xl font-normal tracking-wide text-muted mb-12 max-w-3xl mx-auto">
+            <p className="hero-subtitle text-xl md:text-2xl font-normal tracking-wide text-secondary-2 mb-12 max-w-3xl mx-auto">
               Turtle Robotics is a student-led research lab at Texas A&M
               University, pioneering innovative robotics solutions and
               developing the next generation of robotics leaders.
@@ -510,8 +510,8 @@ const About = () => {
       {/* Statistics Section */}
       <section className="py-24 px-4 bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-20 text-text">
-            OUR <span className="text-accent">IMPACT</span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-20 text-secondary-3">
+            OUR <span className="text-primary-1">IMPACT</span>
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {statistics.map((stat, index) => (
@@ -524,8 +524,8 @@ const About = () => {
       {/* Leadership Section */}
       <section className="py-24 px-4">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-20 text-text">
-            OUR <span className="text-accent">TEAM</span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-20 text-secondary-3">
+            OUR <span className="text-primary-1">TEAM</span>
           </h2>
 
           {/* Executive Roles Accordion */}
@@ -630,8 +630,8 @@ const About = () => {
       {/* Historical Leadership Accordion */}
       <section className="py-24 px-4">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-20 text-text">
-            HISTORICAL <span className="text-accent">LEADERSHIP</span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-20 text-secondary-3">
+            HISTORICAL <span className="text-primary-1">LEADERSHIP</span>
           </h2>
           {Object.entries(historicalLeadership).map(([key, officers]) => (
             <div key={key} className="mb-12">

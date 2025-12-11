@@ -157,7 +157,7 @@ const ContactForm = () => {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="bg-gradient-turtle text-gradient-foreground px-8 py-4 rounded-xl font-light tracking-wide hover:scale-105 transition-transform duration-300 shadow-premium disabled:opacity-50 disabled:cursor-not-allowed"
+            className="bg-gradient-basic text-gradient-foreground px-8 py-4 rounded-xl font-light tracking-wide hover:scale-105 transition-transform duration-300 shadow-premium disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {isSubmitting ? "Sending..." : "Send Message"}
           </button>

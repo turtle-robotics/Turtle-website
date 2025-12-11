@@ -45,10 +45,9 @@
   pointer-events: auto;
   border-radius: 1.5rem;
 
-  background: var(--color-bg);
+  background: var(--color-secondary-5);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  border: 1px solid var(--color-border);
   box-shadow: 0 25px 50px -12px
     color-mix(in srgb, var(--color-gray-500) 60%, transparent);
 
@@ -56,13 +55,12 @@
 }
 
 .project-ticker-block:hover {
-  background: var(--color-bg);
+  background: var(--color-secondary-5);
   backdrop-filter: blur(32px);
   -webkit-backdrop-filter: blur(32px);
-  border: 1px solid var(--color-border);
   box-shadow:
     0 30px 60px -15px rgba(0, 0, 0, 0.6),
-    0 0 40px color-mix(in srgb, var(--color-accent) 30%, transparent);
+    0 0 40px var(--color-primary-1);
   transform: translateY(-6px) scale(1.05);
   z-index: 5;
 }
@@ -75,14 +73,13 @@
   position: absolute;
   inset: 0;
   border-radius: 1.5rem;
-  border: 1px solid var(--color-border);
   pointer-events: none;
 }
 
 .project-ticker-acronym {
   font-size: 1.4rem;
   font-weight: 700;
-  color: var(--color-text);
+  color: var(--color-secondary-2);
   text-transform: uppercase;
   letter-spacing: 0.08em;
   pointer-events: none;
@@ -93,6 +90,5 @@
 }
 
 .project-ticker-block:hover .project-ticker-acronym {
-  color: var(--color-accent);
-  text-shadow: 0 0 20px color-mix(in srgb, var(--color-accent) 40%, transparent);
+  color: var(--color-primary-1);
 }

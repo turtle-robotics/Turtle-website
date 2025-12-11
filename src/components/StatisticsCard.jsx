@@ -62,7 +62,7 @@ const StatisticsCard = ({ count, label, description }) => {
   return (
     <div
       ref={cardRef}
-      className="group relative p-10 rounded-2xl glass-card border border-border hover:border-accent/30 transition-colors duration-300"
+      className="group relative p-10 rounded-2xl glass-card duration-300"
     >
       <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-br from-accent/5 to-transparent" />
 
