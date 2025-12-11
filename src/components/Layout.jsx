@@ -32,26 +32,30 @@ const Layout = ({ children }) => {
     <div className="min-h-screen bg-background text-text">
       {/* Navigation */}
       <nav className="nav-shell fixed top-0 left-0 right-0 z-50 shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
+        <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-16 sm:h-20 relative">
             <Link to="/" className="flex items-center gap-3 text-text h-full">
               {/* Logo spot */}
               <img
                 src="/assets/black_logo-removebg-preview.png"
                 alt="Logo"
-                className="h-12 w-auto hidden sm:inline dark:hidden align-middle"
+                className="h-8 sm:h-12 w-auto dark:hidden align-middle"
               />
               <img
                 src="/assets/white_logo.png"
                 alt="Logo"
-                className="h-12 w-auto hidden sm:dark:inline sm:hidden align-middle"
+                className="h-8 sm:h-12 w-auto hidden dark:inline align-middle"
               />
-              <span className="hidden sm:inline text-2xl font-normal tracking-tight align-middle leading-none ml-2">
-                <span className="text-accent">TURTLE</span> ROBOTICS
+              <span className="text-sm sm:text-2xl font-normal tracking-tight align-middle leading-none ml-1 sm:ml-2 lg:inline hidden">
+                <span className="text-accent">TURTLE</span>
               </span>
             </Link>
             
-            <div className="hidden md:flex items-center space-x-8">
+            <span className="md:hidden absolute left-1/2 transform -translate-x-1/2 text-xl sm:text-2xl font-normal tracking-tight">
+              <span className="text-accent">TURTLE</span>
+            </span>
+            
+            <div className="hidden md:flex items-center space-x-4 lg:space-x-6 xl:space-x-8">
               {navItems.map((item) => (
                 item.dropdown ? (
                   <div key={item.label} className="relative group flex items-center">
@@ -124,7 +128,7 @@ const Layout = ({ children }) => {
 
       {/* Mobile Navigation */}
       <nav className="nav-shell-bottom fixed bottom-0 left-0 right-0 z-50 shadow-lg md:hidden">
-        <div className="flex justify-around items-center h-16 px-4">
+        <div className="flex justify-around items-center h-16 px-2">
           {navItems.map((item) => (
             item.dropdown ? (
               // For dropdown items, show the first dropdown item as the main link

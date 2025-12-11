@@ -9,46 +9,52 @@ const ENABLE_SHOWCASE_POPUPS = false;
 
 const Home = () => {
   const heroRef = useRef(null)
+  const cardsRef = useRef(null)
   const [showMobilePopup, setShowMobilePopup] = useState(true)
 
   useEffect(() => {
     const hero = heroRef.current
     if (!hero) return
 
-    // Hero animations
-    gsap.fromTo(hero.querySelectorAll('h1 span'),
-      { y: 100, opacity: 0 },
-      { 
-        y: 0, 
-        opacity: 1, 
-        duration: 1.2, 
-        stagger: 0.2, 
-        ease: "power3.out" 
-      }
-    )
+    // Defer animations to let browser finish initial render and layout
+    const animationTimeout = requestAnimationFrame(() => {
+      // Hero animations
+      gsap.fromTo(hero.querySelectorAll('h1 span'),
+        { y: 100, opacity: 0 },
+        { 
+          y: 0, 
+          opacity: 1, 
+          duration: 1.2, 
+          stagger: 0.2, 
+          ease: "power3.out" 
+        }
+      )
 
-    gsap.fromTo(hero.querySelector('.hero-subtitle'),
-      { y: 50, opacity: 0 },
-      { 
-        y: 0, 
-        opacity: 1, 
-        duration: 1, 
-        delay: 0.8, 
-        ease: "power3.out" 
-      }
-    )
+      gsap.fromTo(hero.querySelector('.hero-subtitle'),
+        { y: 50, opacity: 0 },
+        { 
+          y: 0, 
+          opacity: 1, 
+          duration: 1, 
+          delay: 0.8, 
+          ease: "power3.out" 
+        }
+      )
 
-    gsap.fromTo(hero.querySelectorAll('.hero-button'),
-      { y: 30, opacity: 0 },
-      { 
-        y: 0, 
-        opacity: 1, 
-        duration: 0.8, 
-        stagger: 0.2, 
-        delay: 1.2, 
-        ease: "power3.out" 
-      }
-    )
+      gsap.fromTo(hero.querySelectorAll('.hero-button'),
+        { y: 30, opacity: 0 },
+        { 
+          y: 0, 
+          opacity: 1, 
+          duration: 0.8, 
+          stagger: 0.2, 
+          delay: 1.2, 
+          ease: "power3.out" 
+        }
+      )
+    })
+
+    return () => cancelAnimationFrame(animationTimeout)
   }, [])
 
   return (
@@ -98,22 +104,28 @@ const Home = () => {
             ABOUT <span className="text-accent">TURTLE</span>
           </h2>
           
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            <div className="glass-card pop-card p-10 rounded-2xl text-center hover:scale-[1.03] transition-all duration-300">
-              <div className="text-5xl mb-6">🎓</div>
-              <h3 className="text-xl font-light mb-4 text-text">Student Leadership</h3>
-              <p className="text-muted font-light leading-relaxed">Developing the next generation of robotics leaders through hands-on experience and mentorship.</p>
-            </div>
-            <div className="glass-card pop-card p-10 rounded-2xl text-center hover:scale-[1.03] transition-all duration-300">
-              <div className="text-5xl mb-6">🔬</div>
-              <h3 className="text-xl font-light mb-4 text-text">Research Excellence</h3>
-              <p className="text-muted font-light leading-relaxed">Cutting-edge robotics research across multiple domains and applications.</p>
-            </div>
-            <div className="glass-card pop-card p-10 rounded-2xl text-center hover:scale-[1.03] transition-all duration-300">
-              <div className="text-5xl mb-6">🏆</div>
-              <h3 className="text-xl font-light mb-4 text-text">Competition Success</h3>
-              <p className="text-muted font-light leading-relaxed">Competing and winning in prestigious robotics competitions.</p>
-            </div>
+          <div ref={cardsRef} className="grid md:grid-cols-3 gap-8 mb-16">
+            <glassify frequency="0.01" octaves="3" scale="45" blur="3" brightness="1.4">
+              <div className="glass-card pop-card p-10 rounded-2xl text-center hover:scale-[1.03] transition-all duration-300">
+                <div className="text-5xl mb-6">🎓</div>
+                <h3 className="text-xl font-light mb-4 text-text">Student Leadership</h3>
+                <p className="text-muted font-light leading-relaxed">Developing the next generation of robotics leaders through hands-on experience and mentorship.</p>
+              </div>
+            </glassify>
+            <glassify frequency="0.01" octaves="3" scale="45" blur="3" brightness="1.4">
+              <div className="glass-card pop-card p-10 rounded-2xl text-center hover:scale-[1.03] transition-all duration-300">
+                <div className="text-5xl mb-6">🔬</div>
+                <h3 className="text-xl font-light mb-4 text-text">Research Excellence</h3>
+                <p className="text-muted font-light leading-relaxed">Cutting-edge robotics research across multiple domains and applications.</p>
+              </div>
+            </glassify>
+            <glassify frequency="0.01" octaves="3" scale="45" blur="3" brightness="1.4">
+              <div className="glass-card pop-card p-10 rounded-2xl text-center hover:scale-[1.03] transition-all duration-300">
+                <div className="text-5xl mb-6">🏆</div>
+                <h3 className="text-xl font-light mb-4 text-text">Competition Success</h3>
+                <p className="text-muted font-light leading-relaxed">Competing and winning in prestigious robotics competitions.</p>
+              </div>
+            </glassify>
           </div>
         </div>
       </section>

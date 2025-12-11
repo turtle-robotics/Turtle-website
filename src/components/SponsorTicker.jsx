@@ -26,7 +26,19 @@ const SponsorTicker = () => {
       name: "TC Energy",
       url: "assets/sponsors/tcenergylogo.png",
       alt: "TC Energy Logo"
-    }
+    },
+    {
+      id: 5,
+      name: '14ELMT',
+      url: 'assets/sponsors/14elmtlogo.png',
+      alt: '14ELMT Logo'
+    },
+    {
+      id: 6,
+      name: "Polymaker",
+      url: "assets/sponsors/polymakerlogo.svg",
+      alt: "Polymaker Logo"
+    },
   ]
 
   // Duplicate the logos array multiple times for seamless infinite scrolling
@@ -38,19 +50,19 @@ const SponsorTicker = () => {
         className="flex items-center gap-6"
         style={{ width: `${duplicatedLogos.length * 280}px` }}
         animate={{ x: ['0%', '-100%'] }}
-        transition={{ repeat: Infinity, duration: 250, ease: 'linear' }}  // Adjust duration as needed
+        transition={{ repeat: Infinity, duration: 250, ease: 'linear' }}
       >
         {duplicatedLogos.map((logo, index) => (
           <div
             key={`${logo.id}-${index}`}
             className="flex-shrink-0"
           >
-            <div className="glass-card p-6 rounded-2xl h-32 w-48 flex items-center justify-center hover:scale-105 transition-transform duration-300" style={{backgroundColor: 'var(--color-gray-300)'}}>
+            <div className="glass-card p-6 rounded-2xl h-32 w-48 flex items-center justify-center hover:scale-105 transition-transform duration-300" style={{backgroundColor: 'var(--color-brand-secondary)'}}>
               <img
                 src={logo.url}
                 alt={logo.alt}
-                style={!["L3 Harris", "Williams"].includes(logo.name) ? { maxWidth: '80%', maxHeight: '80%' } : {}}
                 className="object-contain"
+                style={!["Phillips 66"].includes(logo.name) ? {} : {maxWidth: '120%', maxHeight: '120%'}}
               />
             </div>
           </div>

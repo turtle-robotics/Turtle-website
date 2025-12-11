@@ -27,7 +27,7 @@ const About = () => {
     { count: 21, label: 'Advanced Research Projects', description: 'Cutting-edge robotics initiatives' },
     { count: 2, label: 'Competition Teams', description: 'Robotics competition teams' },
     { count: 250, label: 'Student Researchers', description: '250+ active researchers' },
-    { count: 110, label: 'Hatchling Members', description: 'Program participants' },
+    { count: 200, label: 'Hatchling Members', description: 'Development members' },
   ]
 
   const currentLeadership = [
@@ -39,8 +39,9 @@ const About = () => {
     { role: 'Development Vice President', name: 'Kalen Jaroszewski', period: 'Fall 2025 - Spring 2026', description: 'Driving innovation and research advancement' },
 
     // External Branch — officers then committee members
-    //{ role: 'Corporate Relations Officer', name: 'TBA', period: 'Fall 2025 - Spring 2026', description: 'Building and maintaining corporate partnerships' },
+    { role: 'Corporate Relations Officer', name: 'TBA', period: 'Fall 2025 - Spring 2026', description: 'Building and maintaining corporate partnerships' },
     { role: 'Public Relations Officer', name: 'Isaac Cabello', period: 'Fall 2025 - Spring 2026', description: 'Managing club communications and public presence' },
+    { role: 'Webmaster', name: 'Saksham Mohan', period: 'Fall 2025 - Spring 2026', description: "Maintaining and developing the organization's web presence" },
     { role: 'Sponsorship Committee', name: 'Jacob Fuerst', period: 'Fall 2025 - Spring 2026', description: 'Sponsorship strategy and outreach' },
     { role: 'Sponsorship Committee', name: 'Julia Sopala', period: 'Fall 2025 - Spring 2026', description: 'Sponsorship strategy and outreach' },
     { role: 'Sponsorship Committee', name: 'Preston Nguyen', period: 'Fall 2025 - Spring 2026', description: 'Sponsorship strategy and outreach' },
@@ -53,10 +54,6 @@ const About = () => {
     { role: 'Public Relations Committee', name: 'Wenrui Xu', period: 'Fall 2025 - Spring 2026', description: 'Content and media support' },
     { role: 'Public Relations Committee', name: 'Matthew Elizalde', period: 'Fall 2025 - Spring 2026', description: 'Content and media support' },
     { role: 'Public Relations Committee', name: 'Renee Zhu', period: 'Fall 2025 - Spring 2026', description: 'Content and media support' },
-    
-
-    // Web Branch — officer then committee
-    { role: 'Webmaster', name: 'Saksham Mohan', period: 'Fall 2025 - Spring 2026', description: "Maintaining and developing the organization's web presence" },
     { role: 'Web Development Committee', name: 'Jackson Marshall', period: 'Fall 2025 - Spring 2026', description: 'Full-stack development and site maintenance' },
     { role: 'Web Development Committee', name: 'Zhengye Chen', period: 'Fall 2025 - Spring 2026', description: 'Full-stack development and site maintenance' },
     { role: 'Web Development Committee', name: 'Yann Deshpande', period: 'Fall 2025 - Spring 2026', description: 'Full-stack development and site maintenance' },
@@ -208,7 +205,7 @@ const About = () => {
               <span className="block">ABOUT</span>
               <span className="block text-accent">TURTLE</span>
             </h1>
-            <p className="hero-subtitle text-xl md:text-2xl font-light tracking-wide text-muted mb-12 max-w-3xl mx-auto">
+            <p className="hero-subtitle text-xl md:text-2xl font-normal tracking-wide text-muted mb-12 max-w-3xl mx-auto">
               Turtle Robotics is a student-led research lab at Texas A&M University, pioneering innovative robotics solutions and developing the next generation of robotics leaders.
             </p>
           </div>
@@ -253,7 +250,7 @@ const About = () => {
             <button onClick={() => toggleSection('external')} className="w-full text-left font-light text-xl text-text mb-4">
               External Branch {openSection.external ? '▲' : '▼'}
             </button>
-            {openSection.external && <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">{renderLeadership(['Corporate Relations Officer','Public Relations Officer','Sponsorship Committee','Public Relations Committee'])}</div>}
+            {openSection.external && <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">{renderLeadership(['Corporate Relations Officer','Public Relations Officer','Webmaster','Sponsorship Committee','Public Relations Committee','Web Development Committee'])}</div>}
           </div>
 
           {/* Internal Branch Accordion */}
@@ -262,14 +259,6 @@ const About = () => {
               Internal Branch {openSection.internal ? '▲' : '▼'}
             </button>
             {openSection.internal && <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">{renderLeadership(['Documentation Officer', 'Finance Officer', 'Treasurer', 'Lab Quality Officer', 'Lab Quality Committee'])}</div>}
-          </div>
-
-          {/* Webdevelopment Branch Accordion */}
-          <div className="mb-12">
-            <button onClick={() => toggleSection('web')} className="w-full text-left font-light text-xl text-text mb-4">
-              Web Branch {openSection.web ? '▲' : '▼'}
-            </button>
-            {openSection.web && <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">{renderLeadership(['Webmaster','Web Development Committee'])}</div>}
           </div>
 
           {/* Projects Branch Accordion */}

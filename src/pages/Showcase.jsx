@@ -18,7 +18,7 @@ function Showcase() {
 
   useEffect(() => {
     gsap.fromTo(
-      '.showcase-hero',
+      '.showcase-hero h1',
       { opacity: 0, y: 50 },
       { opacity: 1, y: 0, duration: 1, ease: 'power3.out' }
     );
@@ -60,7 +60,9 @@ function Showcase() {
     updateCountdown();
     const interval = setInterval(updateCountdown, 1000);
 
-    return () => clearInterval(interval);
+    return () => {
+      clearInterval(interval);
+    };
   }, []);
 
   return (
@@ -83,35 +85,32 @@ function Showcase() {
         </div>
       )}
 
-      {/* BACKGROUND SECTION WRAPPER */}
       <div
         className="relative w-full aspect-[5/4] bg-contain bg-top bg-no-repeat flex items-center justify-center"
         style={{
           backgroundImage: "url('/assets/turtlerobotcollage.png')",
         }}
       >
-        {/* Stronger gradient overlay for better readability */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60 pointer-events-none rounded-3xl"></div>
 
-        <section className="showcase-hero relative w-[90%] sm:w-[80%] md:w-[65%] lg:w-[55%] mx-auto">
+        <section className="showcase-hero relative w-[95%] sm:w-[90%] md:w-[75%] lg:w-[65%] mx-auto">
           <div className="glass-card rounded-3xl p-8 md:p-12 text-center">
-            <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-extralight tracking-tight mb-6 text-text drop-shadow-lg">
-              TURTLE Showcase
+            <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-extralight tracking-tight text-text mb-8">
+              <span className="block">PROJECT</span>
+              <span className="block text-accent">SHOWCASE</span>
             </h1>
 
-          {ENABLE_SHOWCASE_COUNTDOWN ? (
+            {ENABLE_SHOWCASE_COUNTDOWN ? (
             <>
               <p className="inline-block text-2xl sm:text-3xl md:text-4xl font-light text-accent mb-4 px-3 py-1 bg-black/70 rounded-lg drop-shadow-lg">
                 November 21, 2025
               </p>
 
-              {/* Time with text shadow */}
-              <p className="text-xl sm:text-2xl md:text-3xl font-light text-white mb-4 drop-shadow-md">
+              <p className="text-xl sm:text-2xl md:text-3xl font-normal text-text mb-4 drop-shadow-md" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.4)' }}>
                 1:00 PM - 5:00 PM
               </p>
 
-              {/* Location with better contrast */}
-              <p className="inline-flex items-center justify-center text-lg sm:text-xl md:text-2xl font-light text-accent mb-10 px-3 py-1 bg-black/70 rounded-lg mx-auto gap-2 drop-shadow-lg">
+              <p className="inline-flex items-center justify-center text-lg sm:text-xl md:text-2xl font-normal text-accent mb-10 px-3 py-1 bg-black/70 rounded-lg mx-auto gap-2 drop-shadow-lg" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.4)' }}>
                 <svg className="w-5 h-5 text-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -126,30 +125,28 @@ function Showcase() {
                 </a>
               </p>
 
-              {/* Countdown with better mobile handling */}
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 md:gap-6 max-w-3xl mx-auto mb-8">
                 {['Days', 'Hours', 'Minutes', 'Seconds'].map((label, index) => (
                   <div key={label} className="bg-black/60 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-6 border border-accent/30 shadow-lg">
                     <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extralight text-accent mb-1 sm:mb-2">
                       {String(Object.values(timeLeft)[index]).padStart(2, '0')}
                     </div>
-                    <div className="text-xs sm:text-sm font-light text-white uppercase tracking-wide">
+                    <div className="text-xs sm:text-sm font-light text-text uppercase tracking-wide">
                       {label}
                     </div>
                   </div>
                 ))}
               </div>
               
-              {/* Description with better readability */}
-              <p className="text-base sm:text-lg md:text-xl font-light text-white mt-4 max-w-2xl mx-auto drop-shadow-md leading-relaxed px-4 py-2 bg-black/40 rounded-lg">
+              <p className="text-base sm:text-lg md:text-xl font-normal text-text mt-4 max-w-2xl mx-auto drop-shadow-md leading-relaxed px-4 py-2 bg-black/40 rounded-lg">
                 The biggest TURTLE event of the semester is right around the corner! Join us to see the amazing robotics projects our teams have accomplished this semester!
               </p>
             </>
-          ) : (
-            <p className="text-3xl sm:text-4xl md:text-5xl font-light text-accent mb-10 drop-shadow-lg">
+            ) : (
+            <p className="text-3xl sm:text-4xl md:text-5xl font-light text-text mb-10 drop-shadow-lg">
               Tune in next semester!
             </p>
-          )}
+            )}
           </div>
         </section>
       </div>

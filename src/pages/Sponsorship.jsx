@@ -112,9 +112,9 @@ const Sponsorship = () => {
 
   const impactStats = [
     { number: "350++", label: "Annual Members" },
-    { number: "15+", label: "Projects Completed" },
-    { number: "8", label: "Industry Partners" },
-    { number: "3", label: "Years of Innovation" }
+    { number: "20+", label: "Projects Running" },
+    { number: "4", label: "Industry Partners" },
+    { number: "12", label: "Years of Innovation" }
   ]
 
   const copyEmailToClipboard = () => {
@@ -134,7 +134,7 @@ const Sponsorship = () => {
               <span className="block text-accent">TURTLE</span>
             </h1>
             
-            <p className="hero-subtitle text-xl md:text-2xl font-light tracking-wide text-muted mb-12 max-w-3xl mx-auto">
+            <p className="hero-subtitle text-xl md:text-2xl font-normal tracking-wide text-muted mb-12 max-w-3xl mx-auto">
               Partner with the next generation of robotics innovators. Support cutting-edge research and shape the future of autonomous systems.
             </p>
 
