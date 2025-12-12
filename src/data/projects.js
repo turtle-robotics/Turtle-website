@@ -24,7 +24,10 @@ export const projects = [
       'Fluid dynamics and simulation (ANSYS)'
     ],
     images: [
-      'https://picsum.photos/seed/ache1/2500/1875',
+      '/assets/ACHE/Copy of DSC07408.JPG',
+      '/assets/ACHE/Copy of DSC07522.JPG',
+      '/assets/ACHE/Copy of DSC07526.JPG',
+      '/assets/ACHE/Cover.jpg',
       '/SCPosters/ACHE_SC_25_11.pptx.jpg'
     ]
   },
@@ -53,9 +56,10 @@ export const projects = [
       'AC→DC conversion and management, programming/simulation (C, Matlab)'
     ],
     images: [
-      'https://picsum.photos/seed/amps1/2500/1875',
-      'https://picsum.photos/seed/amps2/2500/1875',
-      'https://picsum.photos/seed/amps3/2500/1875',
+      '/assets/AMPS/Copy of DSC07404.JPG',
+      '/assets/AMPS/Copy of DSC_0083.JPG',
+      '/assets/AMPS/Copy of DSC_0089.JPG',
+      '/assets/AMPS/Cover.jpg',
       '/SCPosters/AMPS_SC_25_11.pptx.jpg'
     ]
   },
@@ -85,7 +89,9 @@ export const projects = [
       'Dynamic systems and controls'
     ],
     images: [
-      'https://picsum.photos/seed/ankl1/2500/1875',
+      '/assets/ANKL/Copy of DSC07463.JPG',
+      '/assets/ANKL/Copy of DSC_0014.JPG',
+      '/assets/ANKL/Copy of DSC_0056.JPG',
       '/SCPosters/ANKL_SC_25_11.pptx.jpg'
     ]
   },
@@ -113,7 +119,10 @@ export const projects = [
       '3D printing and laser cutting'
     ],
     images: [
-      'https://picsum.photos/seed/beest1/2500/1875',
+      '/assets/BEEST/Copy of DSC07416.JPG',
+      '/assets/BEEST/Copy of DSC_0015 (1).JPG',
+      '/assets/BEEST/Copy of DSC_0030.JPG',
+      '/assets/BEEST/Cover.jpg',
       '/SCPosters/BEEST_SC_25_11.pptx.jpg'
     ]
   },
@@ -140,7 +149,10 @@ export const projects = [
       'Robotics programming with Python'
     ],
     images: [
-      'https://picsum.photos/seed/blnc1/2500/1875',
+      '/assets/BLNC/Copy of DSC07435.JPG',
+      '/assets/BLNC/Copy of DSC07438.JPG',
+      '/assets/BLNC/Copy of DSC_0016 (1).JPG',
+      '/assets/BLNC/Cover.jpg',
       '/SCPosters/BLNC_SC_25_11.pptx.jpg'
     ]
   },
@@ -167,7 +179,10 @@ export const projects = [
       'Passion for combat robotics'
     ],
     images: [
-      'https://picsum.photos/seed/cmbt1/2500/1875',
+      '/assets/CMBT/Copy of DSC07387.JPG',
+      '/assets/CMBT/Copy of DSC07531.JPG',
+      '/assets/CMBT/Copy of DSC_0050.JPG',
+      '/assets/CMBT/Copy of DSC_0080.JPG',
       '/SCPosters/CMBT_SC_25_11.pptx.jpg'
     ]
   },
@@ -195,7 +210,8 @@ export const projects = [
       'Unity experience for VR control (nice to have)'
     ],
     images: [
-      'https://picsum.photos/seed/cntr1/2500/1875',
+      '/assets/CNTR/Copy of DSC07462.JPG',
+      '/assets/CNTR/Cover.jpg',
       '/SCPosters/CNTR_SC_25_11.pptx.jpg'
     ]
   },
@@ -223,7 +239,8 @@ export const projects = [
       'SolidWorks assembly experience'
     ],
     images: [
-      'https://picsum.photos/seed/dron1/2500/1875',
+      '/assets/DRON/Copy of DSC07431.JPG',
+      '/assets/DRON/Copy of DSC07721.JPG',
       '/SCPosters/DRON_SC_25_11.pptx.jpg'
     ]
   },
@@ -252,7 +269,6 @@ export const projects = [
       'RL implementation and control theory'
     ],
     images: [
-      'https://picsum.photos/seed/eden1/2500/1875',
       '/SCPosters/EDEN_SC_25_11.pptx.jpg'
     ]
   },
@@ -281,7 +297,6 @@ export const projects = [
       'Python or C++ experience'
     ],
     images: [
-      'https://picsum.photos/seed/fash1/2500/1875',
       '/SCPosters/FASH_SC_25_11.pptx.jpg'
     ]
   },
@@ -308,7 +323,9 @@ export const projects = [
       'Controls & algorithms for lighting, fan, and pump'
     ],
     images: [
-      'https://picsum.photos/seed/germ1/2500/1875',
+      '/assets/GERM/Copy of DSC07449.JPG',
+      '/assets/GERM/Copy of DSC_0019.JPG',
+      '/assets/GERM/Copy of DSC_0081 (1).JPG',
       '/SCPosters/GERM_SC_25_11.pptx.jpg'
     ]
   },
@@ -337,7 +354,10 @@ export const projects = [
       'Interest in medical/lab applications'
     ],
     images: [
-      'https://picsum.photos/seed/larm1/2500/1875',
+      '/assets/LARM/Copy of DSC07516.JPG',
+      '/assets/LARM/Copy of DSC_0042.JPG',
+      '/assets/LARM/Copy of DSC_0062 (1).JPG',
+      '/assets/LARM/Copy of DSC_0074 (1).JPG',
       '/SCPosters/LARM_SC_25_11.pptx.jpg'
     ]
   },
@@ -365,7 +385,9 @@ export const projects = [
       'Lidar, microcontrollers, and robotics hardware'
     ],
     images: [
-      'https://picsum.photos/seed/maze1/2500/1875',
+      '/assets/MAZE/Copy of DSC07447.JPG',
+      '/assets/MAZE/Copy of DSC_0076.JPG',
+      '/assets/MAZE/Copy of DSC_0079 (1).JPG',
       '/SCPosters/MAZE_SC_25_11.jpg'
     ]
   },
@@ -394,7 +416,6 @@ export const projects = [
       'Electrical knowledge of EMG sensors'
     ],
     images: [
-      'https://picsum.photos/seed/olsn1/2500/1875',
       '/SCPosters/OLSN_SC_25_11.pptx.jpg'
     ]
   },
@@ -423,7 +444,10 @@ export const projects = [
       'Stepper motor knowledge'
     ],
     images: [
-      'https://picsum.photos/seed/orio1/2500/1875',
+      '/assets/ORIO/Copy of DSC07480.JPG',
+      '/assets/ORIO/Copy of DSC07493.JPG',
+      '/assets/ORIO/Copy of DSC_0018.JPG',
+      '/assets/ORIO/Copy of DSC_0035.JPG',
       '/SCPosters/ORIO_SC_25_11.pptx.jpg'
     ]
   },
@@ -453,7 +477,10 @@ export const projects = [
       'Fluid simulation experience (Ansys, etc.)'
     ],
     images: [
-      'https://picsum.photos/seed/pobs1/2500/1875',
+      '/assets/POBS/Copy of DSC07470.JPG',
+      '/assets/POBS/Copy of DSC07471.JPG',
+      '/assets/POBS/Copy of DSC_0007 (1).JPG',
+      '/assets/POBS/Copy of DSC_0048 (1).JPG',
       '/SCPosters/POBS_SC_25_11.pptx.jpg'
     ]
   },
@@ -480,7 +507,14 @@ export const projects = [
       'Robotics programming (Python)'
     ],
     images: [
-      'https://picsum.photos/seed/quad1/2500/1875',
+      '/assets/QUAD/Copy of DSC07414.JPG',
+      '/assets/QUAD/Copy of DSC_0030 (1).JPG',
+      '/assets/QUAD/Copy of DSC_0058 (1).JPG',
+      '/assets/QUAD/Copy of DSC_0095.JPG',
+      '/assets/QUAD/DSC07414.JPG',
+      '/assets/QUAD/DSC_0030 (1).JPG',
+      '/assets/QUAD/DSC_0058 (1).JPG',
+      '/assets/QUAD/DSC_0095.JPG',
       '/SCPosters/QUAD Poster Fall 2025_page-0001.jpg'
     ]
   },
@@ -511,8 +545,9 @@ export const projects = [
       'Students in CHEN, ECEN, ESET, CSCE, or related majors'
     ],
     images: [
-      'https://picsum.photos/seed/snout1/2500/1875',
-      'https://picsum.photos/seed/snout2/2500/1875',
+      '/assets/SNOUT/Copy of DSC07426.JPG',
+      '/assets/SNOUT/Copy of DSC07482.JPG',
+      '/assets/SNOUT/Copy of DSC_0011.JPG',
       '/SCPosters/SNOUT_SC_25_11.pptx.jpg'
     ]
   },
@@ -539,7 +574,6 @@ export const projects = [
       'Interest and willingness to learn'
     ],
     images: [
-      'https://picsum.photos/seed/swrm1/2500/1875',
       '/SCPosters/SWRM_SC_25_11.pptx.jpg'
     ]
   },
@@ -570,7 +604,6 @@ export const projects = [
       'Signal processing and data filtering'
     ],
     images: [
-      'https://picsum.photos/seed/vest1/2500/1875',
       '/SCPosters/REVISED_VEST_POSTER.pptx.jpg'
     ]
   },
@@ -597,7 +630,6 @@ export const projects = [
       'Motor controls'
     ],
     images: [
-      'https://picsum.photos/seed/virt1/2500/1875',
       '/SCPosters/VIRT_SC_25_11_v2_PRINT_THIS.jpg'
     ]
   }
