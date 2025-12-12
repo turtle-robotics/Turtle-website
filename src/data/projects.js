@@ -297,7 +297,7 @@ export const projects = [
       'Python or C++ experience'
     ],
     images: [
-      '/SCPosters/FASH_SC_25_11.pptx.jpg'
+      '/SCPosters/FASH_SC_25_11.jpg'
     ]
   },
   {
@@ -604,7 +604,7 @@ export const projects = [
       'Signal processing and data filtering'
     ],
     images: [
-      '/SCPosters/REVISED_VEST_POSTER.pptx.jpg'
+      '/SCPosters/REVISDED_VEST_POSTER.pptx.jpg'
     ]
   },
   {
@@ -630,7 +630,7 @@ export const projects = [
       'Motor controls'
     ],
     images: [
-      '/SCPosters/VIRT_SC_25_11_v2_PRINT_THIS.jpg'
+      '/SCPosters/VIRT_SC_25_11_v2_PRINT_THIS.pptx.jpg'
     ]
   }
 ]
