@@ -168,7 +168,7 @@ const Hatchling = () => {
             HATCHLING <span className="text-accent">GALLERY</span>
           </h2>
 
-        <div className="rounded-2xl overflow-hidden border border-gray-200/50 dark:border-gray-700/50 glass-card w-full max-w-6xl mx-auto" style={{ aspectRatio: '16/9' }}>
+        <div className="rounded-2xl overflow-hidden border border-gray-200/50 dark:border-gray-700/50 glass-card w-full max-w-7xl mx-auto">
   <ImageCarousel
     images={[
       "/assets/20250427_202459_BFD66E.JPEG",
@@ -179,6 +179,8 @@ const Hatchling = () => {
     ]}
     autoPlay={true}
     intervalMs={4000}
+    aspectRatio="4/3"
+    maxHeight="98vh"
   />
 </div>
 

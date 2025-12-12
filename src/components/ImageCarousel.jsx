@@ -19,7 +19,7 @@ const ArrowButton = ({ onClick, direction = 'left' }) => (
   </button>
 )
 
-export default function ImageCarousel({ images = [], autoPlay = true, intervalMs = 4000, className = '' }) {
+export default function ImageCarousel({ images = [], autoPlay = true, intervalMs = 4000, className = '', aspectRatio = '4/3', maxHeight = '98vh' }) {
   const slides = useMemo(() => (images && images.length ? images : []), [images])
   const [index, setIndex] = useState(0)
   const timerRef = useRef(null)
@@ -48,15 +48,18 @@ export default function ImageCarousel({ images = [], autoPlay = true, intervalMs
   if (!slides.length) return null
 
   return (
-    <div className={`relative w-full h-full overflow-hidden ${className}`}>
+    <div
+      className={`relative w-full h-full overflow-hidden ${className}`}
+      style={{ aspectRatio, maxHeight, background: '#111' }}
+    >
       {slides.map((src, i) => (
         <img
           key={i}
           src={src}
           alt={`Slide ${i + 1}`}
-          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${
+          className={`absolute inset-0 w-full h-full transition-opacity duration-700 shadow-2xl ${
             i === index ? 'opacity-100' : 'opacity-0'
-          }`}
+          } object-cover bg-black`}
         />
       ))}
 

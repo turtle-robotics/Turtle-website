@@ -82,8 +82,8 @@ const ProjectDetail = () => {
         {/* Project Images Gallery under header */}
         {slides && slides.length > 0 && (
           <div className="project-section mb-12">
-            <div className="rounded-2xl overflow-hidden border border-gray-200/50 dark:border-gray-700/50 glass-card" style={{ height: '360px' }}>
-              <ImageCarousel images={slides} autoPlay={true} intervalMs={4500} />
+            <div className="rounded-2xl overflow-hidden border border-gray-200/50 dark:border-gray-700/50 glass-card w-full max-w-7xl mx-auto">
+              <ImageCarousel images={slides} autoPlay={true} intervalMs={4500} aspectRatio="4/3" maxHeight="98vh" />
             </div>
           </div>
         )}

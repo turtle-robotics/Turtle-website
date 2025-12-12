@@ -2,7 +2,7 @@ export const projects = [
   // Alphabetical by title
   {
     id: 'ache',
-    image: 'https://picsum.photos/seed/ache/300/300',
+    image: 'https://picsum.photos/seed/ache/2500/1875',
     title: 'ACHE',
     subtitle: 'Artificial Cardiovascular and Hemodynamics Experiment',
     description: 'Designing a soft total artificial heart that mimics the function of the human heart through compliant actuation and realistic pumping cycles.',
@@ -23,11 +23,14 @@ export const projects = [
       'Controls for flow rates and output',
       'Fluid dynamics and simulation (ANSYS)'
     ],
-    images: ['https://picsum.photos/seed/ache1/800/600']
+    images: [
+      'https://picsum.photos/seed/ache1/2500/1875',
+      '/SCPosters/ACHE_SC_25_11.pptx.jpg'
+    ]
   },
   {
     id: 'amps',
-    image: 'https://picsum.photos/seed/amps/300/300',
+    image: 'https://picsum.photos/seed/amps/2500/1875',
     title: 'AMPS',
     subtitle: 'Adaptive Magnetic Power System',
     description: 'Exploring power electronics by building a modular system that retrofits a manual bicycle to generate and manage power like an e-bike.',
@@ -50,14 +53,15 @@ export const projects = [
       'AC→DC conversion and management, programming/simulation (C, Matlab)'
     ],
     images: [
-      'https://picsum.photos/seed/amps1/1200/600',
-      'https://picsum.photos/seed/amps2/1200/600',
-      'https://picsum.photos/seed/amps3/1200/600'
+      'https://picsum.photos/seed/amps1/2500/1875',
+      'https://picsum.photos/seed/amps2/2500/1875',
+      'https://picsum.photos/seed/amps3/2500/1875',
+      '/SCPosters/AMPS_SC_25_11.pptx.jpg'
     ]
   },
   {
     id: 'ankl',
-    image: 'https://picsum.photos/seed/ankl/300/300',
+    image: 'https://picsum.photos/seed/ankl/2500/1875',
     title: 'ANKL',
     subtitle: '6-DOF Prosthetic Ankle',
     description: 'A Stewart-platform-based prosthetic ankle to restore full range of motion to below-the-knee amputees.',
@@ -80,11 +84,14 @@ export const projects = [
       'GitHub experience',
       'Dynamic systems and controls'
     ],
-    images: ['https://picsum.photos/seed/ankl1/800/600']
+    images: [
+      'https://picsum.photos/seed/ankl1/2500/1875',
+      '/SCPosters/ANKL_SC_25_11.pptx.jpg'
+    ]
   },
   {
     id: 'beest',
-    image: 'https://picsum.photos/seed/beest/300/300',
+    image: 'https://picsum.photos/seed/beest/2500/1875',
     title: 'BEEST',
     subtitle: 'Electromechanical Strandbeest',
     description: 'Raspberry-Pi-powered Strandbeest robot using Jansen linkages with automated turtle-like exterior shell.',
@@ -105,11 +112,14 @@ export const projects = [
       'Raspberry Pi interest/experience',
       '3D printing and laser cutting'
     ],
-    images: ['https://picsum.photos/seed/beest1/800/600']
+    images: [
+      'https://picsum.photos/seed/beest1/2500/1875',
+      '/SCPosters/BEEST_SC_25_11.pptx.jpg'
+    ]
   },
   {
     id: 'blnc',
-    image: 'https://picsum.photos/seed/blnc/300/300',
+    image: 'https://picsum.photos/seed/blnc/2500/1875',
     title: 'BLNC',
     subtitle: 'Self-Balancing Rovers for Extreme Terrain',
     description: 'Autonomous, self-balancing robots exploring unstable rover architectures on two wheels and a sphere.',
@@ -129,11 +139,14 @@ export const projects = [
       'System design and SolidWorks CAD',
       'Robotics programming with Python'
     ],
-    images: ['https://picsum.photos/seed/blnc1/800/600']
+    images: [
+      'https://picsum.photos/seed/blnc1/2500/1875',
+      '/SCPosters/BLNC_SC_25_11.pptx.jpg'
+    ]
   },
   {
     id: 'cmbt',
-    image: 'https://picsum.photos/seed/cmbt/300/300',
+    image: 'https://picsum.photos/seed/cmbt/2500/1875',
     title: 'CMBT',
     subtitle: 'Combat Robotics',
     description: 'Designing and competing with kinetic fighting robots, primarily in the 3lb class, plus a 30lb platform.',
@@ -153,11 +166,14 @@ export const projects = [
       'Creative thinking and teamwork',
       'Passion for combat robotics'
     ],
-    images: ['https://picsum.photos/seed/cmbt1/800/600']
+    images: [
+      'https://picsum.photos/seed/cmbt1/2500/1875',
+      '/SCPosters/CMBT_SC_25_11.pptx.jpg'
+    ]
   },
   {
     id: 'cntr',
-    image: 'https://picsum.photos/seed/cntr/300/300',
+    image: 'https://picsum.photos/seed/cntr/2500/1875',
     title: 'CNTR',
     subtitle: 'VR-Controlled Modular Humanoid',
     description: 'A modular, VR-controlled humanoid robot designed for hazardous or inaccessible environments with swappable arm modules.',
@@ -178,11 +194,14 @@ export const projects = [
       'Component selection for efficient power',
       'Unity experience for VR control (nice to have)'
     ],
-    images: ['https://picsum.photos/seed/cntr1/800/600']
+    images: [
+      'https://picsum.photos/seed/cntr1/2500/1875',
+      '/SCPosters/CNTR_SC_25_11.pptx.jpg'
+    ]
   },
   {
     id: 'dron',
-    image: 'https://picsum.photos/seed/dron/300/300',
+    image: 'https://picsum.photos/seed/dron/2500/1875',
     title: 'DRON',
     subtitle: 'Disaster Response Observation Network',
     description: 'UAV swarm platform to assist first responders with visual data, mapping, and minimal human input.',
@@ -203,11 +222,14 @@ export const projects = [
       'Ground control software (QGC) interest',
       'SolidWorks assembly experience'
     ],
-    images: ['https://picsum.photos/seed/dron1/800/600']
+    images: [
+      'https://picsum.photos/seed/dron1/2500/1875',
+      '/SCPosters/DRON_SC_25_11.pptx.jpg'
+    ]
   },
   {
     id: 'eden',
-    image: 'https://picsum.photos/seed/eden/300/300',
+    image: 'https://picsum.photos/seed/eden/2500/1875',
     title: 'EDEN',
     subtitle: 'AI-Enabled Humanoid Research',
     description: 'Building an AI-enabled humanoid with ROS 2 and machine learning for adaptive end-to-end robotic systems.',
@@ -229,11 +251,14 @@ export const projects = [
       'Embedded C++/Python',
       'RL implementation and control theory'
     ],
-    images: ['https://picsum.photos/seed/eden1/800/600']
+    images: [
+      'https://picsum.photos/seed/eden1/2500/1875',
+      '/SCPosters/EDEN_SC_25_11.pptx.jpg'
+    ]
   },
   {
     id: 'fash',
-    image: 'https://picsum.photos/seed/fash/300/300',
+    image: 'https://picsum.photos/seed/fash/2500/1875',
     title: 'FASH',
     subtitle: 'Fashionable Assistive System for Health',
     description: 'Designing assistive robotic garments, starting with a wearable corset for posture, sensing, and biomechanical feedback.',
@@ -255,11 +280,14 @@ export const projects = [
       'Embedded systems, circuit design, sensors',
       'Python or C++ experience'
     ],
-    images: ['https://picsum.photos/seed/fash1/800/600']
+    images: [
+      'https://picsum.photos/seed/fash1/2500/1875',
+      '/SCPosters/FASH_SC_25_11.pptx.jpg'
+    ]
   },
   {
     id: 'germ',
-    image: 'https://picsum.photos/seed/germ/300/300',
+    image: 'https://picsum.photos/seed/germ/2500/1875',
     title: 'GERM',
     subtitle: 'Self-Regulating Aeroponics Box',
     description: 'Automated plant growth box using aeroponics, LEDs, and climate control with redesigned, water-resistant internals.',
@@ -279,11 +307,14 @@ export const projects = [
       'Electrical circuit/PCB design',
       'Controls & algorithms for lighting, fan, and pump'
     ],
-    images: ['https://picsum.photos/seed/germ1/800/600']
+    images: [
+      'https://picsum.photos/seed/germ1/2500/1875',
+      '/SCPosters/GERM_SC_25_11.pptx.jpg'
+    ]
   },
   {
     id: 'larm',
-    image: 'https://picsum.photos/seed/larm/300/300',
+    image: 'https://picsum.photos/seed/larm/2500/1875',
     title: 'LARM',
     subtitle: 'Lab Assisting Robotic Manipulator',
     description: 'An autonomous 6-DOF arm for wet-lab tasks like injection, pouring, and stirring using IK and motion planning.',
@@ -305,11 +336,14 @@ export const projects = [
       'Interest in kinematics and motion planning',
       'Interest in medical/lab applications'
     ],
-    images: ['https://picsum.photos/seed/larm1/800/600']
+    images: [
+      'https://picsum.photos/seed/larm1/2500/1875',
+      '/SCPosters/LARM_SC_25_11.pptx.jpg'
+    ]
   },
   {
     id: 'maze',
-    image: 'https://picsum.photos/seed/maze/300/300',
+    image: 'https://picsum.photos/seed/maze/2500/1875',
     title: 'MAZE',
     subtitle: 'Autonomous Lidar Maze Robot',
     description: 'Fully autonomous robot that maps and navigates randomly generated mazes using Lidar and fast marching tree algorithms.',
@@ -330,11 +364,14 @@ export const projects = [
       'Controls, path planning, and kinematics',
       'Lidar, microcontrollers, and robotics hardware'
     ],
-    images: ['https://picsum.photos/seed/maze1/800/600']
+    images: [
+      'https://picsum.photos/seed/maze1/2500/1875',
+      '/SCPosters/MAZE_SC_25_11.jpg'
+    ]
   },
   {
     id: 'olsn',
-    image: 'https://picsum.photos/seed/olsn/300/300',
+    image: 'https://picsum.photos/seed/olsn/2500/1875',
     title: 'OLSN',
     subtitle: 'Custom Pediatric Prosthetic Hand',
     description: 'Affordable, custom prosthetic hand for a local child using active EMG mechanism and passive ratcheting backup.',
@@ -356,11 +393,14 @@ export const projects = [
       'Mechanical CAD to parameterize models',
       'Electrical knowledge of EMG sensors'
     ],
-    images: ['https://picsum.photos/seed/olsn1/800/600']
+    images: [
+      'https://picsum.photos/seed/olsn1/2500/1875',
+      '/SCPosters/OLSN_SC_25_11.pptx.jpg'
+    ]
   },
   {
     id: 'orio',
-    image: 'https://picsum.photos/seed/orio/300/300',
+    image: 'https://picsum.photos/seed/orio/2500/1875',
     title: 'ORIO',
     subtitle: '3D-Printed Equatorial Mount',
     description: 'An equatorial star tracker mount to follow celestial targets for long exposures using stepper motors and microcontroller control.',
@@ -382,11 +422,14 @@ export const projects = [
       'Basic circuits and Arduino/Raspberry Pi',
       'Stepper motor knowledge'
     ],
-    images: ['https://picsum.photos/seed/orio1/800/600']
+    images: [
+      'https://picsum.photos/seed/orio1/2500/1875',
+      '/SCPosters/ORIO_SC_25_11.pptx.jpg'
+    ]
   },
   {
     id: 'pobs',
-    image: 'https://picsum.photos/seed/pobs/300/300',
+    image: 'https://picsum.photos/seed/pobs/2500/1875',
     title: 'POBS',
     subtitle: 'Positive Operative Buoyancy Submersible',
     description: 'Surface-floating submersible with motor-driven depth control for aquatic data collection and outreach/competition platforms.',
@@ -394,8 +437,8 @@ export const projects = [
     tags: ['Marine Robotics', 'Submarine', 'Controls', 'Simulation', 'ROS2', 'Waterproofing', 'CAD'],
     status: 'Active',
     duration: 'Fall 2025',
-    lead: 'Malcolm Ferguson',
-    leadEmail: 'malcolm@tamu.edu',
+    lead: 'Aidan Briggs',
+    leadEmail: 'aidanbriggs@tamu.edu',
     goals: [
       'Launch POBS research vessel and outreach Mini-Turtle',
       'Advance racing submarine toward launch',
@@ -409,11 +452,14 @@ export const projects = [
       'Advanced CAD (SolidWorks 2024)',
       'Fluid simulation experience (Ansys, etc.)'
     ],
-    images: ['https://picsum.photos/seed/pobs1/800/600']
+    images: [
+      'https://picsum.photos/seed/pobs1/2500/1875',
+      '/SCPosters/POBS_SC_25_11.pptx.jpg'
+    ]
   },
   {
     id: 'quad',
-    image: 'https://picsum.photos/seed/quad/300/300',
+    image: 'https://picsum.photos/seed/quad/2500/1875',
     title: 'QUAD',
     subtitle: 'Quadruped Walking Robot',
     description: 'A legged quadruped using brushless motors and cycloidal gearboxes to explore dynamic locomotion and balance.',
@@ -433,11 +479,14 @@ export const projects = [
       'Control systems and algorithms',
       'Robotics programming (Python)'
     ],
-    images: ['https://picsum.photos/seed/quad1/800/600']
+    images: [
+      'https://picsum.photos/seed/quad1/2500/1875',
+      '/SCPosters/QUAD Poster Fall 2025_page-0001.jpg'
+    ]
   },
   {
     id: 'snout',
-    image: 'https://picsum.photos/seed/snout/300/300',
+    image: 'https://picsum.photos/seed/snout/2500/1875',
     title: 'SNOUT',
     subtitle: 'Olfactory Sensing Robot',
     description: 'A robotic vehicle equipped with advanced olfactory sensors to detect and identify scents in varied applications.',
@@ -462,13 +511,14 @@ export const projects = [
       'Students in CHEN, ECEN, ESET, CSCE, or related majors'
     ],
     images: [
-      'https://picsum.photos/seed/snout1/800/600',
-      'https://picsum.photos/seed/snout2/800/600'
+      'https://picsum.photos/seed/snout1/2500/1875',
+      'https://picsum.photos/seed/snout2/2500/1875',
+      '/SCPosters/SNOUT_SC_25_11.pptx.jpg'
     ]
   },
   {
     id: 'swrm',
-    image: 'https://picsum.photos/seed/swrm/300/300',
+    image: 'https://picsum.photos/seed/swrm/2500/1875',
     title: 'SWRM',
     subtitle: 'Swarm Robotics for Collective Behavior',
     description: 'Exploring ground-level swarm robotics operating as single units and synchronized collectives for art and functional tasks.',
@@ -488,11 +538,14 @@ export const projects = [
       'ESET/CPEN/CSCE/ECEN or microcontroller + Python/C++ background',
       'Interest and willingness to learn'
     ],
-    images: ['https://picsum.photos/seed/swrm1/800/600']
+    images: [
+      'https://picsum.photos/seed/swrm1/2500/1875',
+      '/SCPosters/SWRM_SC_25_11.pptx.jpg'
+    ]
   },
   {
     id: 'vest',
-    image: 'https://picsum.photos/seed/vest/300/300',
+    image: 'https://picsum.photos/seed/vest/2500/1875',
     title: 'VEST',
     subtitle: 'Canine Vital Signs Wearable',
     description: 'Autonomous wearable monitoring canine vitals with alerts, GPS, and smartphone connectivity.',
@@ -516,11 +569,14 @@ export const projects = [
       'Interest in animal health and wearables',
       'Signal processing and data filtering'
     ],
-    images: ['https://picsum.photos/seed/vest1/800/600']
+    images: [
+      'https://picsum.photos/seed/vest1/2500/1875',
+      '/SCPosters/REVISED_VEST_POSTER.pptx.jpg'
+    ]
   },
   {
     id: 'virt',
-    image: 'https://picsum.photos/seed/virt/300/300',
+    image: 'https://picsum.photos/seed/virt/2500/1875',
     title: 'VIRT',
     subtitle: 'Vision-Integrated Robotic Turret',
     description: 'A harmless sentry turret that uses an FPGA-driven CV system to find, track, and follow a target.',
@@ -540,7 +596,10 @@ export const projects = [
       'Mechanical design with motor system knowledge',
       'Motor controls'
     ],
-    images: ['https://picsum.photos/seed/virt1/800/600']
+    images: [
+      'https://picsum.photos/seed/virt1/2500/1875',
+      '/SCPosters/VIRT_SC_25_11_v2_PRINT_THIS.jpg'
+    ]
   }
 ]
 
