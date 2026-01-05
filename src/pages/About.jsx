@@ -31,7 +31,7 @@ const About = () => {
 
   const currentLeadership = [
     // Executive roles
-    { role: 'President', name: 'Sam Woravka', period: 'Fall 2025 - Spring 2026', description: 'Leading Turtle Robotics into its next chapter of innovation and growth' },
+    { role: 'President', name: 'Samantha Woravka', period: 'Fall 2025 - Spring 2026', description: 'Leading Turtle Robotics into its next chapter of innovation and growth' },
     { role: 'External Vice President', name: 'Yousuf Shafiu', period: 'Fall 2025 - Spring 2026', description: 'Overseeing external relations and partnerships' },
     { role: 'Internal Vice President', name: 'Ian Wilhite', period: 'Fall 2025 - Spring 2026', description: 'Managing internal operations and team coordination' },
     { role: 'Project Vice President', name: 'Emily Tredemeyer', period: 'Fall 2025 - Spring 2026', description: 'Leading project development and technical initiatives' },
