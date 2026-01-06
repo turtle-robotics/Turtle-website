@@ -492,8 +492,8 @@ export const projects = [
     description: 'A legged quadruped using brushless motors and cycloidal gearboxes to explore dynamic locomotion and balance.',
     category: 'Legged Robotics',
     tags: ['Quadruped', 'Legged Locomotion', 'Control', 'BLDC', 'Cycloidal Gearbox', 'Python', 'CAD'],
-    status: 'Active',
-    duration: 'Fall 2025',
+    status: 'Archived',
+    duration: '',
     lead: 'Ian Lansdowne',
     leadEmail: 'ianl@tamu.edu',
     goals: [
