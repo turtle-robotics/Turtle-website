@@ -477,11 +477,11 @@ export const projects = [
       'Fluid simulation experience (Ansys, etc.)'
     ],
     images: [
-      '/assets/POBS/Copy of DSC07470.JPG',
-      '/assets/POBS/Copy of DSC07471.JPG',
-      '/assets/POBS/Copy of DSC_0007 (1).JPG',
-      '/assets/POBS/Copy of DSC_0048 (1).JPG',
-      '/SCPosters/POBS_SC_25_11.pptx.jpg'
+      '/assets/POBS/POBS-Cover.webp',
+      '/SCPosters/POBS_SC_25_11.pptx.webp',
+      '/assets/POBS/POBS-Hero-1.webp',
+      '/assets/POBS/POBS-Hero-2.webp',
+      '/assets/POBS/POBS-Hero-3.webp'
     ]
   },
   {
