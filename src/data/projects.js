@@ -239,9 +239,9 @@ export const projects = [
       'SolidWorks assembly experience'
     ],
     images: [
-      '/assets/DRON/Copy of DSC07431.JPG',
-      '/assets/DRON/Copy of DSC07721.JPG',
-      '/SCPosters/DRON_SC_25_11.pptx.jpg'
+      '/SCPosters/DRON_SC_25_11.pptx.webp',
+      '/assets/DRON/DRON-Hero-1.webp',
+      '/assets/DRON/DRON-Hero-2.webp'
     ]
   },
   {
