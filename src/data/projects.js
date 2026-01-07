@@ -269,7 +269,7 @@ export const projects = [
       'RL implementation and control theory'
     ],
     images: [
-      '/SCPosters/EDEN_SC_25_11.pptx.jpg'
+      '/SCPosters/EDEN_SC_25_11.pptx.webp'
     ]
   },
   {
@@ -297,7 +297,7 @@ export const projects = [
       'Python or C++ experience'
     ],
     images: [
-      '/SCPosters/FASH_SC_25_11.jpg'
+      '/SCPosters/FASH_SC_25_11.webp'
     ]
   },
   {
