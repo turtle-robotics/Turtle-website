@@ -24,11 +24,11 @@ export const projects = [
       'Fluid dynamics and simulation (ANSYS)'
     ],
     images: [
+      '/assets/ACHE/Hero-Cover.webp',
+      '/SCPosters/ACHE_SC_25_11.pptx.webp',
       '/assets/ACHE/Ache-Hero-1.webp',
-      '/assets/ACHE/Copy of DSC07522.JPG',
-      '/assets/ACHE/Copy of DSC07526.JPG',
-      '/assets/ACHE/Cover.jpg',
-      '/SCPosters/ACHE_SC_25_11.pptx.jpg'
+      '/assets/ACHE/Ache-Hero-2.webp',
+      '/assets/ACHE/Ache-Hero-3.webp'
     ]
   },
   {
