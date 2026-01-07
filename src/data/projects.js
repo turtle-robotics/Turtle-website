@@ -24,7 +24,7 @@ export const projects = [
       'Fluid dynamics and simulation (ANSYS)'
     ],
     images: [
-      '/assets/ACHE/Copy of DSC07408.JPG',
+      '/assets/ACHE/Ache-Hero-1.webp',
       '/assets/ACHE/Copy of DSC07522.JPG',
       '/assets/ACHE/Copy of DSC07526.JPG',
       '/assets/ACHE/Cover.jpg',
