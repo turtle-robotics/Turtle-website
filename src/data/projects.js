@@ -385,10 +385,10 @@ export const projects = [
       'Lidar, microcontrollers, and robotics hardware'
     ],
     images: [
-      '/assets/MAZE/Copy of DSC07447.JPG',
-      '/assets/MAZE/Copy of DSC_0076.JPG',
-      '/assets/MAZE/Copy of DSC_0079 (1).JPG',
-      '/SCPosters/MAZE_SC_25_11.jpg'
+      '/assets/MAZE/MAZE-Cover.webp',
+      '/SCPosters/MAZE_SC_25_11.webp',
+      '/assets/MAZE/MAZE-Hero-1.webp',
+      '/assets/MAZE/MAZE-Hero-2.webp'
     ]
   },
   {
