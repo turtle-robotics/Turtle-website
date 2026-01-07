@@ -569,7 +569,10 @@ export const projects = [
       'Interest and willingness to learn'
     ],
     images: [
-      '/SCPosters/SWRM_SC_25_11.pptx.jpg'
+      '/assets/SWRM/SWRM-Cover.webp',
+      '/SCPosters/SWRM_SC_25_11.pptx.webp',
+      '/assets/SWRM/SWRM-Hero-1.webp',
+      '/assets/SWRM/SWRM-Hero-2.webp'
     ]
   },
   {
