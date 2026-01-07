@@ -24,7 +24,7 @@ export const projects = [
       'Fluid dynamics and simulation (ANSYS)'
     ],
     images: [
-      '/assets/ACHE/Hero-Cover.webp',
+      '/assets/ACHE/Ache-Cover.webp',
       '/SCPosters/ACHE_SC_25_11.pptx.webp',
       '/assets/ACHE/Ache-Hero-1.webp',
       '/assets/ACHE/Ache-Hero-2.webp',
@@ -56,11 +56,11 @@ export const projects = [
       'AC→DC conversion and management, programming/simulation (C, Matlab)'
     ],
     images: [
-      '/assets/AMPS/Copy of DSC07404.JPG',
-      '/assets/AMPS/Copy of DSC_0083.JPG',
-      '/assets/AMPS/Copy of DSC_0089.JPG',
-      '/assets/AMPS/Cover.jpg',
-      '/SCPosters/AMPS_SC_25_11.pptx.jpg'
+      '/assets/AMPS/Amps-Cover.webp',
+      '/SCPosters/AMPS_SC_25_11.pptx.webp',
+      '/assets/AMPS/Amps-Hero-1.webp',
+      '/assets/AMPS/Amps-Hero-2.webp',
+      '/assets/AMPS/Amps-Hero-3.webp'
     ]
   },
   {
