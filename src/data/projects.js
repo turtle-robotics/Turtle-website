@@ -541,10 +541,9 @@ export const projects = [
       'Students in CHEN, ECEN, ESET, CSCE, or related majors'
     ],
     images: [
-      '/assets/SNOUT/Copy of DSC07426.JPG',
-      '/assets/SNOUT/Copy of DSC07482.JPG',
-      '/assets/SNOUT/Copy of DSC_0011.JPG',
-      '/SCPosters/SNOUT_SC_25_11.pptx.jpg'
+      '/SCPosters/SNOUT_SC_25_11.pptx.webp',
+      '/assets/SNOUT/SNOUT-Hero-1.webp',
+      '/assets/SNOUT/SNOUT-Hero-2.webp'
     ]
   },
   {
