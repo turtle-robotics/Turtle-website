@@ -416,7 +416,7 @@ export const projects = [
       'Electrical knowledge of EMG sensors'
     ],
     images: [
-      '/SCPosters/OLSN_SC_25_11.pptx.jpg'
+      '/SCPosters/OLSN_SC_25_11.pptx.webp'
     ]
   },
   {
@@ -444,11 +444,11 @@ export const projects = [
       'Stepper motor knowledge'
     ],
     images: [
-      '/assets/ORIO/Copy of DSC07480.JPG',
-      '/assets/ORIO/Copy of DSC07493.JPG',
-      '/assets/ORIO/Copy of DSC_0018.JPG',
-      '/assets/ORIO/Copy of DSC_0035.JPG',
-      '/SCPosters/ORIO_SC_25_11.pptx.jpg'
+      '/assets/ORIO/ORIO-Cover.webp',
+      '/SCPosters/ORIO_SC_25_11.pptx.webp',
+      '/assets/ORIO/ORIO-Hero-1.webp',
+      '/assets/ORIO/ORIO-Hero-2.webp',
+      '/assets/ORIO/ORIO-Hero-3.webp'
     ]
   },
   {
