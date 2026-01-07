@@ -602,7 +602,7 @@ export const projects = [
       'Signal processing and data filtering'
     ],
     images: [
-      '/SCPosters/REVISDED_VEST_POSTER.pptx.jpg'
+      '/SCPosters/REVISDED_VEST_POSTER.pptx.webp'
     ]
   },
   {
@@ -628,7 +628,7 @@ export const projects = [
       'Motor controls'
     ],
     images: [
-      '/SCPosters/VIRT_SC_25_11_v2_PRINT_THIS.pptx.jpg'
+      '/SCPosters/VIRT_SC_25_11_v2_PRINT_THIS.pptx.webp'
     ]
   }
 ]
