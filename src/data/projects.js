@@ -119,11 +119,11 @@ export const projects = [
       '3D printing and laser cutting'
     ],
     images: [
-      '/assets/BEEST/Copy of DSC07416.JPG',
-      '/assets/BEEST/Copy of DSC_0015 (1).JPG',
-      '/assets/BEEST/Copy of DSC_0030.JPG',
-      '/assets/BEEST/Cover.jpg',
-      '/SCPosters/BEEST_SC_25_11.pptx.jpg'
+      '/assets/BEEST/BEEST-Cover.webp',
+      '/SCPosters/BEEST_SC_25_11.pptx.webp',
+      '/assets/BEEST/BEEST-Hero-1.webp',
+      '/assets/BEEST/BEEST-Hero-2.webp',
+      '/assets/BEEST/BEEST-Hero-3.webp'
     ]
   },
   {
