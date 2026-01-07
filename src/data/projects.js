@@ -179,11 +179,11 @@ export const projects = [
       'Passion for combat robotics'
     ],
     images: [
-      '/assets/CMBT/Copy of DSC07387.JPG',
-      '/assets/CMBT/Copy of DSC07531.JPG',
-      '/assets/CMBT/Copy of DSC_0050.JPG',
-      '/assets/CMBT/Copy of DSC_0080.JPG',
-      '/SCPosters/CMBT_SC_25_11.pptx.jpg'
+      '/SCPosters/CMBT_SC_25_11.pptx.webp',
+      '/assets/CMBT/CMBT-Hero-1.webp',
+      '/assets/CMBT/CMBT-Hero-2.webp',
+      '/assets/CMBT/CMBT-Hero-3.webp',
+      '/assets/CMBT/CMBT-Hero-4.webp'
     ]
   },
   {
