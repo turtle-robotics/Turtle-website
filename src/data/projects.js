@@ -89,10 +89,10 @@ export const projects = [
       'Dynamic systems and controls'
     ],
     images: [
-      '/assets/ANKL/Copy of DSC07463.JPG',
-      '/assets/ANKL/Copy of DSC_0014.JPG',
-      '/assets/ANKL/Copy of DSC_0056.JPG',
-      '/SCPosters/ANKL_SC_25_11.pptx.jpg'
+      '/SCPosters/ANKL_SC_25_11.pptx.webp',
+      '/assets/ANKL/Ankl-Hero-1.webp',
+      '/assets/ANKL/Ankl-Hero-2.webp',
+      '/assets/ANKL/Ankl-Hero-3.webp'
     ]
   },
   {
