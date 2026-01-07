@@ -210,9 +210,9 @@ export const projects = [
       'Unity experience for VR control (nice to have)'
     ],
     images: [
-      '/assets/CNTR/Copy of DSC07462.JPG',
-      '/assets/CNTR/Cover.jpg',
-      '/SCPosters/CNTR_SC_25_11.pptx.jpg'
+      '/assets/CNTR/CNTR-Cover.webp',
+      '/SCPosters/CNTR_SC_25_11.pptx.webp',
+      '/assets/CNTR/CNTR-Hero-1.webp'
     ]
   },
   {
