@@ -507,15 +507,11 @@ export const projects = [
       'Robotics programming (Python)'
     ],
     images: [
-      '/assets/QUAD/Copy of DSC07414.JPG',
-      '/assets/QUAD/Copy of DSC_0030 (1).JPG',
-      '/assets/QUAD/Copy of DSC_0058 (1).JPG',
-      '/assets/QUAD/Copy of DSC_0095.JPG',
-      '/assets/QUAD/DSC07414.JPG',
-      '/assets/QUAD/DSC_0030 (1).JPG',
-      '/assets/QUAD/DSC_0058 (1).JPG',
-      '/assets/QUAD/DSC_0095.JPG',
-      '/SCPosters/QUAD Poster Fall 2025_page-0001.jpg'
+      '/SCPosters/QUAD Poster Fall 2025_page-0001.webp',
+      '/assets/QUAD/QUAD-Hero-1.webp',
+      '/assets/QUAD/QUAD-Hero-2.webp',
+      '/assets/QUAD/QUAD-Hero-3.webp',
+      '/assets/QUAD/QUAD-Hero-4.webp'
     ]
   },
   {
