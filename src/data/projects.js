@@ -354,11 +354,11 @@ export const projects = [
       'Interest in medical/lab applications'
     ],
     images: [
-      '/assets/LARM/Copy of DSC07516.JPG',
-      '/assets/LARM/Copy of DSC_0042.JPG',
-      '/assets/LARM/Copy of DSC_0062 (1).JPG',
-      '/assets/LARM/Copy of DSC_0074 (1).JPG',
-      '/SCPosters/LARM_SC_25_11.pptx.jpg'
+      '/SCPosters/LARM_SC_25_11.pptx.webp',
+      '/assets/LARM/LARM-Hero-1.webp',
+      '/assets/LARM/LARM-Hero-2.webp',
+      '/assets/LARM/LARM-Hero-3.webp',
+      '/assets/LARM/LARM-Hero-4.webp'
     ]
   },
   {
