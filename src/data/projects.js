@@ -323,10 +323,10 @@ export const projects = [
       'Controls & algorithms for lighting, fan, and pump'
     ],
     images: [
-      '/assets/GERM/Copy of DSC07449.JPG',
-      '/assets/GERM/Copy of DSC_0019.JPG',
-      '/assets/GERM/Copy of DSC_0081 (1).JPG',
-      '/SCPosters/GERM_SC_25_11.pptx.jpg'
+      '/SCPosters/GERM_SC_25_11.pptx.webp',
+      '/assets/GERM/GERM-Hero-1.webp',
+      '/assets/GERM/GERM-Hero-2.webp',
+      '/assets/GERM/GERM-Hero-3.webp'
     ]
   },
   {
