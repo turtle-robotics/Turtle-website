@@ -149,11 +149,11 @@ export const projects = [
       'Robotics programming with Python'
     ],
     images: [
-      '/assets/BLNC/Copy of DSC07435.JPG',
-      '/assets/BLNC/Copy of DSC07438.JPG',
-      '/assets/BLNC/Copy of DSC_0016 (1).JPG',
-      '/assets/BLNC/Cover.jpg',
-      '/SCPosters/BLNC_SC_25_11.pptx.jpg'
+      '/assets/BLNC/BLNC-Cover.webp',
+      '/SCPosters/BLNC_SC_25_11.pptx.webp',
+      '/assets/BLNC/BLNC-Hero-1.webp',
+      '/assets/BLNC/BLNC-Hero-2.webp',
+      '/assets/BLNC/BLNC-Hero-3.webp'
     ]
   },
   {
