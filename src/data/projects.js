@@ -362,7 +362,7 @@ export const projects = [
   },
   {
     id: 'maze',
-    image: 'https://picsum.photos/seed/maze/2500/1875',
+    image: '/assets/MAZE/MAZE-Card.webp',
     title: 'MAZE',
     subtitle: 'Autonomous Lidar Maze Robot',
     description: 'Fully autonomous robot that maps and navigates randomly generated mazes using Lidar and fast marching tree algorithms.',
@@ -392,7 +392,7 @@ export const projects = [
   },
   {
     id: 'olsn',
-    image: 'https://picsum.photos/seed/olsn/2500/1875',
+    image: '/assets/OLSN/OLSN-Card.webp',
     title: 'OLSN',
     subtitle: 'Custom Pediatric Prosthetic Hand',
     description: 'Affordable, custom prosthetic hand for a local child using active EMG mechanism and passive ratcheting backup.',
@@ -452,7 +452,7 @@ export const projects = [
   },
   {
     id: 'pobs',
-    image: 'https://picsum.photos/seed/pobs/2500/1875',
+    image: '/assets/POBS/POBS-Card.webp',
     title: 'POBS',
     subtitle: 'Positive Operative Buoyancy Submersible',
     description: 'Surface-floating submersible with motor-driven depth control for aquatic data collection and outreach/competition platforms.',
@@ -485,7 +485,7 @@ export const projects = [
   },
   {
     id: 'quad',
-    image: 'https://picsum.photos/seed/quad/2500/1875',
+    image: '/assets/QUAD/QUAD-Card.webp',
     title: 'QUAD',
     subtitle: 'Quadruped Walking Robot',
     description: 'A legged quadruped using brushless motors and cycloidal gearboxes to explore dynamic locomotion and balance.',
@@ -509,13 +509,12 @@ export const projects = [
       '/SCPosters/QUAD Poster Fall 2025_page-0001.webp',
       '/assets/QUAD/QUAD-Hero-1.webp',
       '/assets/QUAD/QUAD-Hero-2.webp',
-      '/assets/QUAD/QUAD-Hero-3.webp',
-      '/assets/QUAD/QUAD-Hero-4.webp'
+      '/assets/QUAD/QUAD-Hero-3.webp'
     ]
   },
   {
     id: 'snout',
-    image: 'https://picsum.photos/seed/snout/2500/1875',
+    image: '/assets/SNOUT/SNOUT-Card.webp',
     title: 'SNOUT',
     subtitle: 'Olfactory Sensing Robot',
     description: 'A robotic vehicle equipped with advanced olfactory sensors to detect and identify scents in varied applications.',
@@ -576,7 +575,7 @@ export const projects = [
   },
   {
     id: 'vest',
-    image: 'https://picsum.photos/seed/vest/2500/1875',
+    image: '/assets/VEST/VEST-Card.webp',
     title: 'VEST',
     subtitle: 'Canine Vital Signs Wearable',
     description: 'Autonomous wearable monitoring canine vitals with alerts, GPS, and smartphone connectivity.',
