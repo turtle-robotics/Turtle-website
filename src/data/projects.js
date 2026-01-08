@@ -2,7 +2,7 @@ export const projects = [
   // Alphabetical by title
   {
     id: 'ache',
-    image: '/assets/ACHE/Ache-Cover.webp',
+    image: '/assets/ACHE/Ache-Card.webp',
     title: 'ACHE',
     subtitle: 'Artificial Cardiovascular and Hemodynamics Experiment',
     description: 'Designing a soft total artificial heart that mimics the function of the human heart through compliant actuation and realistic pumping cycles.',
@@ -24,6 +24,7 @@ export const projects = [
       'Fluid dynamics and simulation (ANSYS)'
     ],
     images: [
+      '/assets/ACHE/Ache-Cover.webp',
       '/SCPosters/ACHE_SC_25_11.pptx.webp',
       '/assets/ACHE/Ache-Hero-1.webp',
       '/assets/ACHE/Ache-Hero-2.webp',
