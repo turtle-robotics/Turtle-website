@@ -97,7 +97,7 @@ export const projects = [
   },
   {
     id: 'beest',
-    image: 'https://picsum.photos/seed/beest/2500/1875',
+    image: '/assets/BEEST/BEEST-Card.webp',
     title: 'BEEST',
     subtitle: 'Electromechanical Strandbeest',
     description: 'Raspberry-Pi-powered Strandbeest robot using Jansen linkages with automated turtle-like exterior shell.',
@@ -128,7 +128,7 @@ export const projects = [
   },
   {
     id: 'blnc',
-    image: 'https://picsum.photos/seed/blnc/2500/1875',
+    image: '/assets/BLNC/BLNC-Card.webp',
     title: 'BLNC',
     subtitle: 'Self-Balancing Rovers for Extreme Terrain',
     description: 'Autonomous, self-balancing robots exploring unstable rover architectures on two wheels and a sphere.',
@@ -152,13 +152,12 @@ export const projects = [
       '/assets/BLNC/BLNC-Cover.webp',
       '/SCPosters/BLNC_SC_25_11.pptx.webp',
       '/assets/BLNC/BLNC-Hero-1.webp',
-      '/assets/BLNC/BLNC-Hero-2.webp',
-      '/assets/BLNC/BLNC-Hero-3.webp'
+      '/assets/BLNC/BLNC-Hero-2.webp'
     ]
   },
   {
     id: 'cmbt',
-    image: 'https://picsum.photos/seed/cmbt/2500/1875',
+    image: '/assets/CMBT/CMBT-Card.webp',
     title: 'CMBT',
     subtitle: 'Combat Robotics',
     description: 'Designing and competing with kinetic fighting robots, primarily in the 3lb class, plus a 30lb platform.',
@@ -188,7 +187,7 @@ export const projects = [
   },
   {
     id: 'cntr',
-    image: 'https://picsum.photos/seed/cntr/2500/1875',
+    image: '/assets/CNTR/CNTR-Card.webp',
     title: 'CNTR',
     subtitle: 'VR-Controlled Modular Humanoid',
     description: 'A modular, VR-controlled humanoid robot designed for hazardous or inaccessible environments with swappable arm modules.',
@@ -217,7 +216,7 @@ export const projects = [
   },
   {
     id: 'dron',
-    image: 'https://picsum.photos/seed/dron/2500/1875',
+    image: '/assets/DRON/DRON-Card.webp',
     title: 'DRON',
     subtitle: 'Disaster Response Observation Network',
     description: 'UAV swarm platform to assist first responders with visual data, mapping, and minimal human input.',
@@ -246,7 +245,7 @@ export const projects = [
   },
   {
     id: 'eden',
-    image: 'https://picsum.photos/seed/eden/2500/1875',
+    image: '/assets/EDEN/EDEN-Card.webp',
     title: 'EDEN',
     subtitle: 'AI-Enabled Humanoid Research',
     description: 'Building an AI-enabled humanoid with ROS 2 and machine learning for adaptive end-to-end robotic systems.',
