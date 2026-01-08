@@ -546,7 +546,7 @@ export const projects = [
   },
   {
     id: 'swrm',
-    image: 'https://picsum.photos/seed/swrm/2500/1875',
+    image: '/assets/SWRM/SWRM-Card.webp',
     title: 'SWRM',
     subtitle: 'Swarm Robotics for Collective Behavior',
     description: 'Exploring ground-level swarm robotics operating as single units and synchronized collectives for art and functional tasks.',
@@ -605,7 +605,7 @@ export const projects = [
   },
   {
     id: 'virt',
-    image: 'https://picsum.photos/seed/virt/2500/1875',
+    image: '/assets/VIRT/VIRT-Card.webp',
     title: 'VIRT',
     subtitle: 'Vision-Integrated Robotic Turret',
     description: 'A harmless sentry turret that uses an FPGA-driven CV system to find, track, and follow a target.',
