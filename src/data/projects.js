@@ -273,7 +273,7 @@ export const projects = [
   },
   {
     id: 'fash',
-    image: 'https://picsum.photos/seed/fash/2500/1875',
+    image: '/assets/FASH/FASH-Card.webp',
     title: 'FASH',
     subtitle: 'Fashionable Assistive System for Health',
     description: 'Designing assistive robotic garments, starting with a wearable corset for posture, sensing, and biomechanical feedback.',
@@ -301,7 +301,7 @@ export const projects = [
   },
   {
     id: 'germ',
-    image: 'https://picsum.photos/seed/germ/2500/1875',
+    image: '/assets/GERM/GERM-Card.webp',
     title: 'GERM',
     subtitle: 'Self-Regulating Aeroponics Box',
     description: 'Automated plant growth box using aeroponics, LEDs, and climate control with redesigned, water-resistant internals.',
@@ -330,7 +330,7 @@ export const projects = [
   },
   {
     id: 'larm',
-    image: 'https://picsum.photos/seed/larm/2500/1875',
+    image: '/assets/LARM/LARM-Card.webp',
     title: 'LARM',
     subtitle: 'Lab Assisting Robotic Manipulator',
     description: 'An autonomous 6-DOF arm for wet-lab tasks like injection, pouring, and stirring using IK and motion planning.',
