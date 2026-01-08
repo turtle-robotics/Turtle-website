@@ -420,7 +420,7 @@ export const projects = [
   },
   {
     id: 'orio',
-    image: 'https://picsum.photos/seed/orio/2500/1875',
+    image: '/assets/ORIO/ORIO-Card.webp',
     title: 'ORIO',
     subtitle: '3D-Printed Equatorial Mount',
     description: 'An equatorial star tracker mount to follow celestial targets for long exposures using stepper motors and microcontroller control.',
