@@ -76,7 +76,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link to="/hatchling" className="text-yellow-600 dark:text-yellow-400 hover:text-yellow-500 dark:hover:text-yellow-300 transition-colors duration-200">
-                  Accelerator Program
+                  Hatchling Program
                 </Link>
               </li>
               <li>
