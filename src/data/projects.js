@@ -33,7 +33,7 @@ export const projects = [
   },
   {
     id: 'amps',
-    image: 'https://picsum.photos/seed/amps/2500/1875',
+    image: '/assets/AMPS/AMPS-Card.webp',
     title: 'AMPS',
     subtitle: 'Adaptive Magnetic Power System',
     description: 'Exploring power electronics by building a modular system that retrofits a manual bicycle to generate and manage power like an e-bike.',
@@ -60,7 +60,8 @@ export const projects = [
       '/SCPosters/AMPS_SC_25_11.pptx.webp',
       '/assets/AMPS/Amps-Hero-1.webp',
       '/assets/AMPS/Amps-Hero-2.webp',
-      '/assets/AMPS/Amps-Hero-3.webp'
+      '/assets/AMPS/Amps-Hero-3.webp',
+      '/assets/AMPS/Amps-Hero-4.webp'
     ]
   },
   {
