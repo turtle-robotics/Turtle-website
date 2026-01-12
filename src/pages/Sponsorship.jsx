@@ -76,7 +76,7 @@ const Sponsorship = () => {
       benefits: [
         "All Bronze benefits",
         "Resume Bank",
-        "Recuiter Paneling",
+        "Recruiter Workshop",
         "Annual report recognition",
         "Exclusive workshop access"
       ]
@@ -88,9 +88,6 @@ const Sponsorship = () => {
       benefits: [
         "All Bronze benefits",
         "All Silver benefits",
-        "Direct team collaboration",
-        "Priority recruitment access",
-        "Custom research opportunities",
         "Recruiter Table at Showcase"
       ]
     },
@@ -103,18 +100,15 @@ const Sponsorship = () => {
         "All Silver benefits",
         "All Gold benefits",
         "Logo on an Advanced Project",
-        "Custom internship programs",
-        "Industry conference speaking",
-        "Patent collaboration rights"
       ]
     }
   ]
 
   const impactStats = [
-    { number: "50+", label: "Students Impacted" },
+    { number: "1000+", label: "Students Impacted" },
     { number: "15+", label: "Projects Completed" },
     { number: "8", label: "Industry Partners" },
-    { number: "3", label: "Years of Innovation" }
+    { number: "13", label: "Years of Innovation" }
   ]
 
   const copyEmailToClipboard = () => {
