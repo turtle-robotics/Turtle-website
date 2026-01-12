@@ -66,7 +66,7 @@ export const projects = [
   },
   {
     id: 'ankl',
-    image: 'https://picsum.photos/seed/ankl/2500/1875',
+    image: '/assets/ANKL/Anklecoverpic.jpg',
     title: 'ANKL',
     subtitle: '6-DOF Prosthetic Ankle',
     description: 'A Stewart-platform-based prosthetic ankle to restore full range of motion to below-the-knee amputees.',
@@ -281,7 +281,7 @@ export const projects = [
     image: '/assets/FASH/FASH-Card.webp',
     title: 'FASH',
     subtitle: 'Fashionable Assistive System for Health',
-    description: 'Designing assistive robotic garments, starting with a wearable corset for posture, sensing, and biomechanical feedback.',
+    description: 'To explore how fashion design can be integrated into wearable engineering and robotics as a means of expression and performance',
     category: 'Wearable Robotics',
     tags: ['Wearables', 'Sensors', 'Embedded', 'Biomechanics', 'PyBullet', 'Fashion Tech', 'CAD'],
     status: 'Active',
@@ -289,9 +289,9 @@ export const projects = [
     lead: 'Aarathi Devakumar',
     leadEmail: 'aarathi_devakumar13@tamu.edu',
     goals: [
-      'Research sensors and materials',
-      'Create an embedded testbed',
-      'Develop a PyBullet simulation of the back/corset system'
+     "Develop a full scale model of our wing prototype from last semester",
+"Research linear actuators for potential flying/lifting capabilities",
+"Develop wing lighting system with bluetooth controls"
     ],
     lookingFor: [
       'MEEN, ECEN, ESET, MXET, BMEN (all interested welcome)',
@@ -301,7 +301,11 @@ export const projects = [
       'Python or C++ experience'
     ],
     images: [
-      '/SCPosters/FASH_SC_25_11.webp'
+      '/SCPosters/FASH_SC_25_11.webp',
+      '/assets/FASH/FashAarathiPic.jpg',
+      '/assets/FASH/FASHGroupPic.jpg',
+      '/assets/FASH/FashgroupPic2.jpg',
+      '/assets/FASH/FashPolaroidPIc.jpg',
     ]
   },
   {

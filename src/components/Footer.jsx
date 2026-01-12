@@ -23,15 +23,6 @@ const Footer = () => {
             {/* Social Media Icons */}
             <div className="flex space-x-4">
               <a
-                href="https://www.facebook.com/turtlerobotics"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 bg-gradient-to-r from-yellow-500 to-amber-500 rounded-full flex items-center justify-center text-white hover:scale-110 transition-all duration-300"
-              >
-                <span className="text-sm font-bold">f</span>
-              </a>
-
-              <a
                 href="https://www.instagram.com/turtle_robotics/?hl=en"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -47,15 +38,6 @@ const Footer = () => {
                 className="w-10 h-10 bg-gradient-to-r from-yellow-500 to-amber-500 rounded-lg flex items-center justify-center text-white hover:scale-110 transition-all duration-300"
               >
                 <span className="text-sm font-bold">in</span>
-              </a>
-
-              <a
-                href="https://x.com/turtle_robotics"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 bg-gradient-to-r from-yellow-500 to-amber-500 rounded-lg flex items-center justify-center text-white hover:scale-110 transition-all duration-300"
-              >
-                <span className="text-sm">🐦</span>
               </a>
             </div>
           </div>
