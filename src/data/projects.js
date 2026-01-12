@@ -244,34 +244,38 @@ export const projects = [
       '/assets/DRON/DRON-Hero-2.webp'
     ]
   },
-  {
-    id: 'eden',
-    image: '/assets/EDEN/EDEN-Card.webp',
-    title: 'EDEN',
-    subtitle: 'AI-Enabled Humanoid Research',
-    description: 'Building an AI-enabled humanoid with ROS 2 and machine learning for adaptive end-to-end robotic systems.',
-    category: 'Humanoids',
-    tags: ['Humanoid', 'ROS2', 'Reinforcement Learning', 'IMU', 'Actuators', 'Machine Learning', 'C++', 'Python'],
-    status: 'Active',
-    duration: 'Fall 2025',
-    lead: 'Vedant Soni',
-    leadEmail: 'ved.soni@tamu.edu',
-    goals: [
-      'Build a simple test/training chassis and establish software stack',
-      'Integrate actuators and IMU on Ubuntu 22.04 + ROS 2',
-      'Implement deep RL for fundamental movement patterns'
-    ],
-    lookingFor: [
-      'CAD & 3D printing prototyping',
-      'Electronics integration & troubleshooting',
-      'ROS 2 control loop development and sensors',
-      'Embedded C++/Python',
-      'RL implementation and control theory'
-    ],
-    images: [
-      '/SCPosters/EDEN_SC_25_11.pptx.webp'
-    ]
+{
+  id: 'eden',
+  image: '/assets/EDEN/EDEN-Card.webp',
+  title: 'EDEN',
+  subtitle: 'AI-Enabled Humanoid Research',
+  description: 'Building an AI-enabled humanoid with ROS 2 and machine learning for adaptive end-to-end robotic systems.',
+  category: 'Humanoids',
+  tags: ['Humanoid', 'ROS2', 'Reinforcement Learning', 'IMU', 'Actuators', 'Machine Learning', 'C++', 'Python'],
+  status: 'Active',
+  duration: 'Fall 2025',
+  lead: 'Vedant Soni',
+  leadEmail: 'ved.soni@tamu.edu',
+  website: {
+    url: 'https://eden-orpin.vercel.app/',
+    label: 'Visit our website'
   },
+  goals: [
+    'Build a simple test/training chassis and establish software stack',
+    'Integrate actuators and IMU on Ubuntu 22.04 + ROS 2',
+    'Implement deep RL for fundamental movement patterns'
+  ],
+  lookingFor: [
+    'CAD & 3D printing prototyping',
+    'Electronics integration & troubleshooting',
+    'ROS 2 control loop development and sensors',
+    'Embedded C++/Python',
+    'RL implementation and control theory'
+  ],
+  images: [
+    '/SCPosters/EDEN_SC_25_11.pptx.webp'
+  ]
+},
   {
     id: 'fash',
     image: '/assets/FASH/FASH-Card.webp',

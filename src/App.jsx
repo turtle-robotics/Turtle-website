@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Projects from './pages/Projects'
 import ProjectDetail from './pages/ProjectDetail'
+import DevelopmentPrograms from './pages/DevelopmentPrograms'
 import Hatchling from './pages/Hatchling'
 import WorkshopSeries from './pages/WorkshopSeries'
 import Apply from './pages/Apply'
@@ -22,6 +23,7 @@ function App(Component, pageProps) {
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/projects/:projectId" element={<ProjectDetail />} />
+          <Route path="/development-programs" element={<DevelopmentPrograms />} />
           <Route path="/hatchling" element={<Hatchling />} />
           <Route path="/workshop-series" element={<WorkshopSeries />} />
           <Route path="/showcase" element={<Showcase />} />
