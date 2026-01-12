@@ -29,16 +29,16 @@ const DevelopmentPrograms = () => {
       title: 'Hatchling',
       tagline: 'Hatchling',
       year: 'Founded 2015',
-      description: 'Founded in the fall of 2015, Hatchling is our premier development program that introduces foundational technical, soft, and engineering skills.',
+      description: 'Our premier development program that introduces foundational technical, soft, and engineering skills.',
       link: '/hatchling',
       image: '/public/assets/hatchling_development.jpg'
     },
     {
       id: 'workshop-series',
       title: 'Workshop Series',
-      tagline: 'Specialized Learning',
+      tagline: 'Workship Series',
       year: 'Coming Soon',
-      description: 'Founded in the fall of 2025, the Workshop Series provides a platform for members to gain presentation experience and learn new technical and leadership skills',
+      description: 'A platform for members to gain presentation experience and learn new technical and leadership skills',
       link: '/workshop-series',
       image: '/public/assets/Workshop_Photo.jpg'
     }
