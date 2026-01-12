@@ -27,9 +27,9 @@ const DevelopmentPrograms = () => {
     {
       id: 'hatchling',
       title: 'Hatchling',
-      tagline: 'Development Program',
+      tagline: 'Hatchling',
       year: 'Founded 2015',
-      description: 'Build foundational robotics skills through hands-on mentorship and competition.',
+      description: 'Founded in the fall of 2015, Hatchling is our premier development program that introduces foundational technical, soft, and engineering skills.',
       link: '/hatchling',
       image: '/public/assets/hatchling_development.jpg'
     },
@@ -38,7 +38,7 @@ const DevelopmentPrograms = () => {
       title: 'Workshop Series',
       tagline: 'Specialized Learning',
       year: 'Coming Soon',
-      description: 'Intensive workshops in advanced robotics domains and technical skills.',
+      description: 'Founded in the fall of 2025, the Workshop Series provides a platform for members to gain presentation experience and learn new technical and leadership skills',
       link: '/workshop-series',
       image: '/public/assets/Workshop_Photo.jpg'
     }
@@ -72,7 +72,7 @@ const DevelopmentPrograms = () => {
             <span className="block text-yellow-400">PROGRAMS</span>
           </h1>
           <p className="hero-subtitle text-xl md:text-2xl font-light tracking-wide text-gray-400 mb-12 max-w-3xl mx-auto">
-            Empowering the next generation of roboticists
+            To provide the resources and environment that enables undergraduate engineers to grow outside the classroom through technical lectures and collaborative,and hands-on semester projects
           </p>
         </div>
       </section>
