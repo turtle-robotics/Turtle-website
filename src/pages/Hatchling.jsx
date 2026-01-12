@@ -757,7 +757,7 @@ const Hatchling = () => {
               {/* Embedded PDF Viewer */}
               <div className="w-full h-96 rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700">
                 <iframe
-                  src="public/pdfs/Fall 2025 (10th year) Hatchling Impact Report.pptx.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                  src="/pdfs/Fall 2025 (10th year) Hatchling Impact Report.pptx.pdf#toolbar=0&navpanes=0&scrollbar=0"
                   className="w-full h-full"
                   title="Hatchling Impact Report"
                   frameBorder="0"
