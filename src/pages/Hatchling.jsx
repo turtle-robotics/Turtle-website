@@ -57,7 +57,7 @@ const Hatchling = () => {
 >
   {/* Background Image */}
   <img
-    src="/assets/hatchling.jpg" 
+    src="public/assets/GeneralPhotos/Fall_2025_CSTAT_Hatchling_Group_Photo.JPG" 
     alt="Hatchling Program Background"
     className="absolute inset-0 w-full h-full object-cover object-center brightness-110 dark:brightness-95"
   />
@@ -757,7 +757,7 @@ const Hatchling = () => {
               {/* Embedded PDF Viewer */}
               <div className="w-full h-96 rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700">
                 <iframe
-                  src="/pdfs/hatchling-impact-report.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                  src="public/pdfs/Fall 2025 (10th year) Hatchling Impact Report.pptx.pdf#toolbar=0&navpanes=0&scrollbar=0"
                   className="w-full h-full"
                   title="Hatchling Impact Report"
                   frameBorder="0"
