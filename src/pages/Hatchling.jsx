@@ -91,12 +91,7 @@ const Hatchling = () => {
 
           <div className="glass-card p-12 rounded-2xl text-center">
             <p className="text-xl md:text-2xl font-light text-gray-600 dark:text-gray-400 leading-relaxed max-w-4xl mx-auto">
-              Fostering growth in undergraduate engineers by providing the
-              tools, support, and real-world experience they need to build
-              strong communication, problem-solving, and engineering skills. We
-              achieve this through carefully designed technical lectures paired
-              with a collaborative, hands-on, semester-long project that
-              encourages teamwork and practical application of knowledge.
+             Founded in the fall of 2015, Hatchling is our premier development program that introduces foundational technical, soft, and engineering skills
             </p>
           </div>
         </div>
@@ -113,7 +108,7 @@ const Hatchling = () => {
             <div className="glass-card p-8 rounded-2xl text-center hover:scale-105 transition-all duration-300 bg-gradient-to-br from-yellow-400/20 to-amber-400/20 dark:from-yellow-500/20 dark:to-amber-500/20 border-2 border-yellow-400/30 dark:border-yellow-500/30">
               <div className="text-5xl mb-4">🏢</div>
               <h3 className="text-3xl font-light text-gray-800 dark:text-gray-200 mb-2">
-                4
+                3
               </h3>
               <p className="text-lg font-light text-gray-600 dark:text-gray-400">
                 Organizations
@@ -268,7 +263,7 @@ const Hatchling = () => {
                 <ul className="space-y-3 text-gray-600 dark:text-gray-400 font-light">
                   <li className="flex items-start">
                     <span className="text-accent mr-3 mt-1">•</span>
-                    <span>Soldering</span>
+                    <span>Soldering and Crimping</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-accent mr-3 mt-1">•</span>
@@ -676,7 +671,7 @@ const Hatchling = () => {
                 New Engineers
               </div>
               <div className="text-sm text-gray-600 dark:text-gray-400">
-                70% of members enter without prior engineering skills
+                70% of members enter without prior robotics experience
               </div>
             </div>
 
@@ -730,7 +725,7 @@ const Hatchling = () => {
               <ul className="space-y-3 text-gray-600 dark:text-gray-400 font-light">
                 <li className="flex items-start">
                   <span className="text-accent mr-3 mt-1">•</span>
-                  <span>Student Orginization Presidents & Officers</span>
+                  <span>Student Organization Presidents & Officers</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-accent mr-3 mt-1">•</span>
