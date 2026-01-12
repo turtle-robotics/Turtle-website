@@ -56,7 +56,7 @@ const Apply = () => {
 
           <p className="hero-subtitle text-xl md:text-2xl font-light tracking-wide text-gray-600 dark:text-gray-400 mb-12 max-w-3xl mx-auto">
             {applicationsOpen
-              ? "Fill out this form to join Hatchlings or Advanced Project teams at Turtle Robotics."
+              ? "Fill out this form to join Hatchling or Advanced Project teams at Turtle Robotics."
               : "Applications are currently closed. Please check back soon for future openings."}
           </p>
         </div>
