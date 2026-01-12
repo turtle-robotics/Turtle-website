@@ -31,7 +31,7 @@ const DevelopmentPrograms = () => {
       year: 'Founded 2015',
       description: 'Our premier development program that introduces foundational technical, soft, and engineering skills.',
       link: '/hatchling',
-      image: '/public/assets/hatchling_development.jpg'
+      image: '/assets/hatchling_development.jpg'
     },
     {
       id: 'workshop-series',
@@ -40,7 +40,7 @@ const DevelopmentPrograms = () => {
       year: 'Coming Soon',
       description: 'A platform for members to gain presentation experience and learn new technical and leadership skills',
       link: '/workshop-series',
-      image: '/public/assets/Workshop_Photo.jpg'
+      image: '/assets/Workshop_Photo.jpg'
     }
   ];
 
