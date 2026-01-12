@@ -7,7 +7,7 @@ const Apply = () => {
   const heroRef = useRef(null)
 
   // ✅ Toggle this to open/close applications
-  const applicationsOpen = false // change to false when clsoed
+  const applicationsOpen = true // change to false when clsoed
 
   useEffect(() => {
     const hero = heroRef.current
@@ -128,7 +128,7 @@ const Apply = () => {
 
           {applicationsOpen ? (
             <a 
-              href="https://forms.gle/8md4HbE4LCMRBf6UA"
+              href="https://forms.gle/59pUiPUCpDrgBCqn7"
               className="inline-block bg-gradient-to-r from-yellow-500 to-amber-500 text-white px-16 py-6 rounded-xl text-xl font-light tracking-wide hover:scale-105 transition-all duration-300 shadow-premium"
             >
               APPLY NOW

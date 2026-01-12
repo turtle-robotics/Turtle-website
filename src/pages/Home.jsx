@@ -124,7 +124,7 @@ const Home = () => {
           </h2>
           
           <a 
-            href="https://forms.gle/8md4HbE4LCMRBf6UA"
+            href="https://forms.gle/59pUiPUCpDrgBCqn7"
             className="inline-block bg-gradient-to-r from-yellow-500 to-amber-500 text-white px-16 py-6 rounded-xl text-xl font-light tracking-wide hover:scale-105 transition-all duration-300 shadow-premium"
           >
             APPLY NOW
@@ -183,6 +183,26 @@ const Home = () => {
           </div>
         </a>
       )}
+      
+      {/* Calendar Section */}
+      <section className="py-24 px-4">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-10 text-gray-800 dark:text-gray-200">
+            Calendar
+          </h2>
+          <div className="flex justify-center">
+            <iframe
+              src="https://calendar.google.com/calendar/embed?src=turtlerobotics%40gmail.com&ctz=America%2FChicago"
+              style={{ border: 0 }}
+              width="1300"
+              height="1200"
+              frameBorder="0"
+              scrolling="no"
+              title="Turtle Robotics Google Calendar"
+            ></iframe>
+          </div>
+        </div>
+      </section>
       
     </div>
   )

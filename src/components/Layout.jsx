@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
-import ThemeToggleButton from './ThemeToggleButton'
+// import ThemeToggleButton from './ThemeToggleButton'
 import Footer from './Footer'
 
 const Layout = ({ children }) => {
@@ -117,7 +117,7 @@ const Layout = ({ children }) => {
               </Link>
             </div>
 
-            <ThemeToggleButton />
+            {/* ThemeToggleButton removed: dark mode is permanent */}
           </div>
         </div>
       </nav>

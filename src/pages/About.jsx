@@ -93,74 +93,74 @@ const About = () => {
     { role: 'Hatchling Director', name: 'McKenzie McCain', period: 'Fall 2025 - Spring 2026', description: 'Hatchling leadership and mentorship' },
   ]
 
-  const historicalLeadership = {
-    president: [
-      'Fall 2013',
-      'Fall 2013 - Spring 2015: Kenny Chour',
-      'Fall 2015 - Spring 2016: Mark Wager',
-      'Fall 2016 - Spring 2017: Sam Terrill',
-      'Fall 2017: Josh Vancura -> Hatchling',
-      'Spring 2018: Ahmad Jawad',
-      'Fall 2018 - Spring 2020: Krishna Vamsi -> Hatchling',
-      'Fall 2020 - Spring 2023: Bret Topham',
-      'Fall 2023 - Spring 2025: Zachary Bucknor-Smartt -> Hatchling',
-      'Fall 2025: Ian Lansdowne',
-    ],
-    internalVP: [
-      'Fall 2013',
-      'Fall 2013 - Spring 2015: Ivan Cortes',
-      'Fall 2015 - Spring 2016: Jim McCabe',
-      'Fall 2016 - Spring 2017: Abigail Dowd -> Hatchling',
-      'Fall 2017: Ahmad Jawad',
-      'Spring 2018: Olawale Salaudeen',
-      'Fall 2018: Joanna Steele',
-      'Spring 2019 - Spring 2020: Chris Geisheker',
-      'Fall 2020 - Spring 2022: Jordan Nunn -> Hatchling',
-      'Fall 2022 - Spring 2023: Rishi Jangale -> Hatchling',
-      'Fall 2023 - Spring 2024: Brendan Wyatt',
-      'Fall 2024 - Spring 2025: Ian Lansdowne',
-      'Fall 2025 - : Ian Wilhite -> Hatchling',
-    ],
-    externalVP: [
-      'Fall 2013',
-      'Fall 2013 - Spring 2015: Deepak Dhankani',
-      'Fall 2015 - Spring 2016: Nathan Glaser',
-      'Fall 2016 - Spring 2017: Josh VanCura -> Hatchling',
-      'Fall 2017: Olawale Salaudeen',
-      'Spring 2018: Connor Landrum',
-      'Fall 2018 - Spring 2019: Praneeth Nagula -> Hatchling',
-      'Fall 2019: Adam Armendariz -> Hatchling',
-      'Spring 2020 - Spring 2022: Colin Sander -> Hatchling',
-      'Fall 2022 - Spring 2023: Amrit Nanda',
-      'Fall 2023 - Spring 2025: Ian Farrar -> Hatchling',
-      'Fall 2025 - : Malcolm Ferguson',
-    ],
-    projectVP: [
-      'Fall 2022: Brendan Wyatt',
-      'Fall 2022 - Spring 2023: Brendan Wyatt',
-      'Fall 2023 - Spring 2024: Reagan Hoffmann',
-      'Fall 2024 - Spring 2025: Willem Bannick -> Hatchling',
-      'Fall 2025 - : Samantha Woravka',
-    ],
-    developmentVP: [
-      'Fall 2025: Kalen Jaroszewski -> Hatchling',
-    ],
-    treasurer: [
-      'Spring 2013 - Spring 2015: Deepak Dhankani',
-      'Fall 2015: Ivan Cortez',
-      'Spring 2016 - Spring 2017: Spencer Capps -> Hatchling',
-      'Fall 2017 - Spring 2018: Kurtis Davis -> Hatchling',
-      'Fall 2018 - Spring 2020: Nicholas Arackal -> Hatchling',
-      'Fall 2020 - Spring 2021: Osmani Perez -> Hatchling',
-      'Fall 2021 - Spring 2024: Thomas Dawson -> Hatchling',
-      'Fall 2024 - : Raquel Garcia -> Hatchling',
-    ],
-    facultyAdvisor: [
-      'Aaron Ames: Fall 2013 - Fall 2014',
-      'Pilwon Hur: Spring 2015 - Fall 2020',
-      'Sivakumar Rathinam: Spring 2021 - Present',
-    ]
-  }
+  // const historicalLeadership = {
+  //   president: [
+  //     'Fall 2013',
+  //     'Fall 2013 - Spring 2015: Kenny Chour',
+  //     'Fall 2015 - Spring 2016: Mark Wager',
+  //     'Fall 2016 - Spring 2017: Sam Terrill',
+  //     'Fall 2017: Josh Vancura -> Hatchling',
+  //     'Spring 2018: Ahmad Jawad',
+  //     'Fall 2018 - Spring 2020: Krishna Vamsi -> Hatchling',
+  //     'Fall 2020 - Spring 2023: Bret Topham',
+  //     'Fall 2023 - Spring 2025: Zachary Bucknor-Smartt -> Hatchling',
+  //     'Fall 2025: Ian Lansdowne',
+  //   ],
+  //   internalVP: [
+  //     'Fall 2013',
+  //     'Fall 2013 - Spring 2015: Ivan Cortes',
+  //     'Fall 2015 - Spring 2016: Jim McCabe',
+  //     'Fall 2016 - Spring 2017: Abigail Dowd -> Hatchling',
+  //     'Fall 2017: Ahmad Jawad',
+  //     'Spring 2018: Olawale Salaudeen',
+  //     'Fall 2018: Joanna Steele',
+  //     'Spring 2019 - Spring 2020: Chris Geisheker',
+  //     'Fall 2020 - Spring 2022: Jordan Nunn -> Hatchling',
+  //     'Fall 2022 - Spring 2023: Rishi Jangale -> Hatchling',
+  //     'Fall 2023 - Spring 2024: Brendan Wyatt',
+  //     'Fall 2024 - Spring 2025: Ian Lansdowne',
+  //     'Fall 2025 - : Ian Wilhite -> Hatchling',
+  //   ],
+  //   externalVP: [
+  //     'Fall 2013',
+  //     'Fall 2013 - Spring 2015: Deepak Dhankani',
+  //     'Fall 2015 - Spring 2016: Nathan Glaser',
+  //     'Fall 2016 - Spring 2017: Josh VanCura -> Hatchling',
+  //     'Fall 2017: Olawale Salaudeen',
+  //     'Spring 2018: Connor Landrum',
+  //     'Fall 2018 - Spring 2019: Praneeth Nagula -> Hatchling',
+  //     'Fall 2019: Adam Armendariz -> Hatchling',
+  //     'Spring 2020 - Spring 2022: Colin Sander -> Hatchling',
+  //     'Fall 2022 - Spring 2023: Amrit Nanda',
+  //     'Fall 2023 - Spring 2025: Ian Farrar -> Hatchling',
+  //     'Fall 2025 - : Malcolm Ferguson',
+  //   ],
+  //   projectVP: [
+  //     'Fall 2022: Brendan Wyatt',
+  //     'Fall 2022 - Spring 2023: Brendan Wyatt',
+  //     'Fall 2023 - Spring 2024: Reagan Hoffmann',
+  //     'Fall 2024 - Spring 2025: Willem Bannick -> Hatchling',
+  //     'Fall 2025 - : Samantha Woravka',
+  //   ],
+  //   developmentVP: [
+  //     'Fall 2025: Kalen Jaroszewski -> Hatchling',
+  //   ],
+  //   treasurer: [
+  //     'Spring 2013 - Spring 2015: Deepak Dhankani',
+  //     'Fall 2015: Ivan Cortez',
+  //     'Spring 2016 - Spring 2017: Spencer Capps -> Hatchling',
+  //     'Fall 2017 - Spring 2018: Kurtis Davis -> Hatchling',
+  //     'Fall 2018 - Spring 2020: Nicholas Arackal -> Hatchling',
+  //     'Fall 2020 - Spring 2021: Osmani Perez -> Hatchling',
+  //     'Fall 2021 - Spring 2024: Thomas Dawson -> Hatchling',
+  //     'Fall 2024 - : Raquel Garcia -> Hatchling',
+  //   ],
+  //   facultyAdvisor: [
+  //     'Aaron Ames: Fall 2013 - Fall 2014',
+  //     'Pilwon Hur: Spring 2015 - Fall 2020',
+  //     'Sivakumar Rathinam: Spring 2021 - Present',
+  //   ]
+  // }
 
   const [openSection, setOpenSection] = useState({
     executive: true,
@@ -226,15 +226,24 @@ const About = () => {
       </section>
 
       {/* Leadership Section */}
-      <section className="py-24 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-20 text-gray-800 dark:text-gray-200">
+      <section className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
+        {/* Background Image */}
+        <img
+          src="/assets/GeneralPhotos/OfficerPhoto.JPG" // You can change this to another image if you want a different team background
+          alt="Team Background"
+          className="absolute inset-0 w-full h-full object-fill brightness-110 dark:brightness-95"
+          style={{background: '#000'}}
+        />
+        {/* Overlay for contrast */}
+        <div className="absolute inset-0 bg-black/25 dark:bg-black/25"></div>
+        <div className="relative z-10 max-w-7xl mx-auto w-full py-24">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-20 text-white drop-shadow-2xl">
             OUR <span className="text-accent">TEAM</span>
           </h2>
 
           {/* Executive Roles Accordion */}
           <div className="mb-12">
-            <button onClick={() => toggleSection('executive')} className="w-full text-left font-light text-xl text-gray-800 dark:text-gray-200 mb-4">
+            <button onClick={() => toggleSection('executive')} className="w-full text-left font-light text-xl text-white mb-4">
               Executive Roles {openSection.executive ? '▲' : '▼'}
             </button>
             {openSection.executive && <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">{renderLeadership(['President','External Vice President','Internal Vice President','Project Vice President','Development Vice President'])}</div>}
@@ -242,7 +251,7 @@ const About = () => {
 
           {/* External Branch Accordion */}
           <div className="mb-12">
-            <button onClick={() => toggleSection('external')} className="w-full text-left font-light text-xl text-gray-800 dark:text-gray-200 mb-4">
+            <button onClick={() => toggleSection('external')} className="w-full text-left font-light text-xl text-white mb-4">
               External Branch {openSection.external ? '▲' : '▼'}
             </button>
             {openSection.external && <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">{renderLeadership(['Corporate Relations Officer','Public Relations Officer','Sponsorship Committee','Public Relations Committee'])}</div>}
@@ -250,7 +259,7 @@ const About = () => {
 
           {/* Internal Branch Accordion */}
           <div className="mb-12">
-            <button onClick={() => toggleSection('internal')} className="w-full text-left font-light text-xl text-gray-800 dark:text-gray-200 mb-4">
+            <button onClick={() => toggleSection('internal')} className="w-full text-left font-light text-xl text-white mb-4">
               Internal Branch {openSection.internal ? '▲' : '▼'}
             </button>
             {openSection.internal && <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">{renderLeadership(['Logistics Officer', 'Finance Officer', 'Treasurer', 'Lab Quality Officer', 'Lab Quality Committee'])}</div>}
@@ -283,6 +292,7 @@ const About = () => {
       </section>
 
       {/* Historical Leadership Accordion */}
+      {/**
       <section className="py-24 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-20 text-gray-800 dark:text-gray-200">
@@ -305,6 +315,7 @@ const About = () => {
           ))}
         </div>
       </section>
+      */}
 
     </div>
   )
