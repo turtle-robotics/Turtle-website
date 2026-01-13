@@ -31,7 +31,7 @@ const DevelopmentPrograms = () => {
       year: 'Founded 2015',
       description: 'Our premier development program that introduces foundational technical, soft, and engineering skills.',
       link: '/hatchling',
-      image: '/assets/HATCHLING/Hatchling.jpg'
+      image: '/public/assets/hatchling_development.JPG'
     },
     {
       id: 'workshop-series',
@@ -72,7 +72,7 @@ const DevelopmentPrograms = () => {
             <span className="block text-yellow-400">PROGRAMS</span>
           </h1>
           <p className="hero-subtitle text-xl md:text-2xl font-light tracking-wide text-gray-400 mb-12 max-w-3xl mx-auto">
-            To provide the resources and environment that enables undergraduate engineers to grow outside the classroom through technical lectures and collaborative,and hands-on semester projects
+            To provide the resources and environment that enables undergraduate engineers to grow outside the classroom through technical lectures and collaborative, hands-on semester projects
           </p>
         </div>
       </section>
