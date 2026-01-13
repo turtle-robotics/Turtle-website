@@ -31,7 +31,7 @@ const DevelopmentPrograms = () => {
       year: 'Founded 2015',
       description: 'Our premier development program that introduces foundational technical, soft, and engineering skills.',
       link: '/hatchling',
-      image: '/assets/hatchling_development.JPG'
+      image: '/assets/HATCHLING/Hatchling.JPG'
     },
     {
       id: 'workshop-series',
@@ -95,9 +95,7 @@ const DevelopmentPrograms = () => {
               <div 
                 className="absolute inset-0 bg-cover bg-center"
                 style={{ backgroundImage: `url(${program.image})` }}
-              >
-                <div className="absolute inset-0 bg-black/40 dark:bg-black/60"></div>
-              </div>
+              />
 
               {/* Glass Overlay Content */}
               <div className="absolute inset-0 flex items-end p-8 md:p-12">

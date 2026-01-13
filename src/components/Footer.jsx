@@ -73,25 +73,22 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="font-bold text-gray-800 dark:text-gray-200">Resources</h3>
             <ul className="space-y-2">
-              <li>
-                <a href="#" className="text-yellow-600 dark:text-yellow-400 hover:text-yellow-500 dark:hover:text-yellow-300 transition-colors duration-200">
-                  Publications
-                </a>
+              {/* Publications and Research Blog hidden */}
+              <li style={{display: 'none'}}>
+                <a href="#">Publications</a>
+              </li>
+              <li style={{display: 'none'}}>
+                <a href="#">Research Blog</a>
               </li>
               <li>
-                <a href="#" className="text-yellow-600 dark:text-yellow-400 hover:text-yellow-500 dark:hover:text-yellow-300 transition-colors duration-200">
-                  Research Blog
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-yellow-600 dark:text-yellow-400 hover:text-yellow-500 dark:hover:text-yellow-300 transition-colors duration-200">
+                <Link to="/apply" className="text-yellow-600 dark:text-yellow-400 hover:text-yellow-500 dark:hover:text-yellow-300 transition-colors duration-200">
                   Student Opportunities
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-yellow-600 dark:text-yellow-400 hover:text-yellow-500 dark:hover:text-yellow-300 transition-colors duration-200">
+                <Link to="/sponsorship" className="text-yellow-600 dark:text-yellow-400 hover:text-yellow-500 dark:hover:text-yellow-300 transition-colors duration-200">
                   Industry Partnerships
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
