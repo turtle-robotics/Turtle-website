@@ -31,7 +31,7 @@ const DevelopmentPrograms = () => {
       year: 'Founded 2015',
       description: 'Our premier development program that introduces foundational technical, soft, and engineering skills.',
       link: '/hatchling',
-      image: '/public/assets/hatchling_development.JPG'
+      image: '/assets/hatchling_development.JPG'
     },
     {
       id: 'workshop-series',
