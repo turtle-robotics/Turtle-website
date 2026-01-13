@@ -39,12 +39,20 @@ const Apply = () => {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section ref={heroRef} className="relative min-h-screen flex items-center justify-center px-4">
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900"></div>
+      {/* Hero Section with Background Image */}
+      <section ref={heroRef} className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
+        {/* Background Image */}
+        <img
+          src="public\assets\GeneralPhotos\ApplyNowJpg.JPG"
+          alt="Apply Now Background"
+          className="absolute inset-0 w-full h-full object-cover object-center brightness-110 dark:brightness-95 z-0"
+        />
+        {/* Overlay for contrast */}
+        <div className="absolute inset-0 bg-black/25 dark:bg-black/25 z-0"></div>
         <div className="relative text-center max-w-6xl mx-auto z-10">
+          {/* Removed glass-card wrapper */}
           {applicationsOpen ? (
-            <h1 className="text-6xl md:text-8xl lg:text-9xl font-extralight tracking-tight text-gray-800 dark:text-gray-200 mb-8">
+            <h1 className="text-6xl md:text-8xl lg:text-9xl font-extralight tracking-tight text-white drop-shadow-2xl mb-8">
               <span className="block">APPLY</span>
               <span className="block text-accent">NOW</span>
             </h1>
@@ -54,7 +62,7 @@ const Apply = () => {
             </h1>
           )}
 
-          <p className="hero-subtitle text-xl md:text-2xl font-light tracking-wide text-gray-600 dark:text-gray-400 mb-12 max-w-3xl mx-auto">
+          <p className="hero-subtitle text-xl md:text-2xl font-light tracking-wide text-gray-100 dark:text-gray-200 mb-12 max-w-3xl mx-auto drop-shadow-md">
             {applicationsOpen
               ? "Fill out this form to join Hatchling or Advanced Project teams at TURTLE."
               : "Applications are currently closed. Please check back soon for future openings."}
@@ -67,7 +75,7 @@ const Apply = () => {
             >
               APPLY NOW
             </a>
-            )}
+          )}
         </div>
       </section>
 
@@ -91,7 +99,7 @@ const Apply = () => {
             </div>
             <div className="glass-card pop-card p-10 rounded-2xl text-center hover:scale-[1.03] transition-all duration-300">
               <div className="text-5xl mb-6">🚀</div>
-              <h3 className="text-xl font-light mb-4 text-gray-800 dark:text-gray-200">Start Contributing</h3>
+              <h3 className="text-xl font-light mb-4 text-gray-800 dark:  text-gray-200">Start Contributing</h3>
               <p className="text-gray-600 dark:text-gray-400 font-light leading-relaxed">Begin working on exciting robotics projects with TURTLE.</p>
             </div>
           </div>
@@ -101,8 +109,8 @@ const Apply = () => {
       {/* Contact Section */}
       <section className="py-24 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight mb-12 text-gray-800 dark:text-gray-200">
-            READY TO <span className="text-yellow-600 dark:text-yellow-400">JOIN US</span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight mb-12 text-white drop-shadow-2xl">
+            READY TO <span className="text-yellow-400 dark:text-yellow-300">JOIN US</span>
           </h2>
 
           {applicationsOpen ? (

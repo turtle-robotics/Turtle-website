@@ -118,15 +118,23 @@ const About = () => {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section ref={heroRef} className="relative min-h-screen flex items-center justify-center px-4">
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900"></div>
+      {/* Hero Section with Officer Photo Background */}
+      <section ref={heroRef} className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
+        {/* Officer Photo Background */}
+        <img
+          src="/assets/GeneralPhotos/OfficerPhoto.JPG"
+          alt="Officer Group Photo"
+          className="absolute inset-0 w-full h-full object-cover object-center brightness-110 dark:brightness-95 z-0"
+        />
+        {/* Overlay for contrast */}
+        <div className="absolute inset-0 bg-black/25 dark:bg-black/25 z-0"></div>
         <div className="relative text-center max-w-6xl mx-auto z-10">
+          {/* No glass effect */}
           <h1 className="text-6xl md:text-8xl lg:text-9xl font-extralight tracking-tight text-gray-200 mb-8">
             <span className="block">ABOUT</span>
             <span className="block text-yellow-400">TURTLE</span>
           </h1>
-          <p className="hero-subtitle text-xl md:text-2xl font-light tracking-wide text-gray-400 mb-12 max-w-3xl mx-auto">
+          <p className="hero-subtitle text-xl md:text-2xl font-light tracking-wide text-white mb-12 max-w-3xl mx-auto">
             TURTLE is a student-led research lab at Texas A&M University, pioneering innovative robotics solutions and developing the next generation of robotics leaders.
           </p>
         </div>
