@@ -62,7 +62,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <a href="mailto:turtlerobotics@gmail.com?subject=General%20Inquiry&body=Hello,%20I%20have%20a%20question%20about%20TURTLE%20Robotics.%20Please%20contact%20me%20back." className="text-yellow-600 dark:text-yellow-400 hover:text-yellow-500 dark:hover:text-yellow-300 transition-colors duration-200">
+                <a href="mailto:turtlerobotics@gmail.com?subject=General%20Inquiry&body=Hello,%20I%20have%20a%20question%20about%20TURTLE.%20Please%20contact%20me%20back." className="text-yellow-600 dark:text-yellow-400 hover:text-yellow-500 dark:hover:text-yellow-300 transition-colors duration-200">
                   Contact
                 </a>
               </li>
@@ -97,7 +97,7 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="font-bold text-gray-800 dark:text-gray-200">Contact Info</h3>
             <div className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
-              <p>TURTLE Robotics</p>
+              <p>TURTLE</p>
               <p>Texas A&M University</p>
               <p>College Station, TX 77845</p>
               <p>
@@ -117,7 +117,7 @@ const Footer = () => {
             </h3>
             <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
               <a 
-                href="mailto:turtlerobotics@gmail.com?subject=General%20Inquiry&body=Hello,%20I%20have%20a%20question%20about%20TURTLE%20Robotics.%20Please%20contact%20me%20back."
+                href="mailto:turtlerobotics@gmail.com?subject=General%20Inquiry&body=Hello,%20I%20have%20a%20question%20about%20TURTLE.%20Please%20contact%20me%20back."
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-500/10 to-amber-500/10 hover:from-yellow-500/20 hover:to-amber-500/20 text-yellow-600 dark:text-yellow-400 px-4 py-2 rounded-lg text-sm font-light transition-all duration-300 border border-yellow-200 dark:border-yellow-700/30"
               >
                 <span>📧</span>
@@ -125,7 +125,7 @@ const Footer = () => {
               </a>
               <span className="text-gray-400 dark:text-gray-500 text-sm">or</span>
               <a 
-                href="mailto:turtlerobotics@gmail.com?subject=Join%20TURTLE%20Robotics&body=Hello,%20I'm%20interested%20in%20joining%20TURTLE%20Robotics.%20Please%20provide%20more%20information%20about%20how%20to%20get%20involved."
+                href="mailto:turtlerobotics@gmail.com?subject=Join%20TURTLE&body=Hello,%20I'm%20interested%20in%20joining%20TURTLE.%20Please%20provide%20more%20information%20about%20how%20to%20get%20involved."
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-500/10 to-amber-500/10 hover:from-yellow-500/20 hover:to-amber-500/20 text-yellow-600 dark:text-yellow-400 px-4 py-2 rounded-lg text-sm font-light transition-all duration-300 border border-yellow-200 dark:border-yellow-700/30"
               >
                 <span>🤖</span>
@@ -140,7 +140,7 @@ const Footer = () => {
       <div className="border-t border-gray-200 dark:border-gray-700">
         <div className="max-w-7xl mx-auto px-4 py-6">
           <p className="text-center text-gray-500 dark:text-gray-400 text-sm">
-            © 2024 Turtle Robotics. All rights reserved.
+            © 2024 TURTLE. All rights reserved.
           </p>
         </div>
       </div>

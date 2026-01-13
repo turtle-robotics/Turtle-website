@@ -31,10 +31,10 @@ const About = () => {
 
   const currentLeadership = [
     // Executive roles
-    { role: 'President', name: 'Samantha Woravka', period: 'Fall 2025 - Spring 2026', description: 'Leading Turtle Robotics into its next chapter of innovation and growth' },
+    { role: 'President', name: 'Samantha Woravka', period: 'Spring 2026 - Fall 2026', description: 'Leading TURTLE into its next chapter of innovation and growth' },
     { role: 'External Vice President', name: 'Yousuf Shafiu', period: 'Fall 2025 - Spring 2026', description: 'Overseeing external relations and partnerships' },
     { role: 'Internal Vice President', name: 'Ian Wilhite', period: 'Fall 2025 - Spring 2026', description: 'Managing internal operations and team coordination' },
-    { role: 'Project Vice President', name: 'Emily Tredemeyer', period: 'Fall 2025 - Spring 2026', description: 'Leading project development and technical initiatives' },
+    { role: 'Project Vice President', name: 'Emily Tredemeyer', period: 'Spring 2026 - Fall 2026', description: 'Leading project development and technical initiatives' },
     { role: 'Development Vice President', name: 'Kalen Jaroszewski', period: 'Fall 2025 - Spring 2026', description: 'Driving innovation and research advancement' },
 
     // External Branch — officers then committee members
@@ -127,7 +127,7 @@ const About = () => {
             <span className="block text-yellow-400">TURTLE</span>
           </h1>
           <p className="hero-subtitle text-xl md:text-2xl font-light tracking-wide text-gray-400 mb-12 max-w-3xl mx-auto">
-            Turtle Robotics is a student-led research lab at Texas A&M University, pioneering innovative robotics solutions and developing the next generation of robotics leaders.
+            TURTLE is a student-led research lab at Texas A&M University, pioneering innovative robotics solutions and developing the next generation of robotics leaders.
           </p>
         </div>
       </section>

@@ -198,7 +198,7 @@ const Home = () => {
               height="1200"
               frameBorder="0"
               scrolling="no"
-              title="Turtle Robotics Google Calendar"
+              title="TURTLE Google Calendar"
             ></iframe>
           </div>
         </div>

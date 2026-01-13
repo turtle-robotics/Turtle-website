@@ -132,7 +132,7 @@ const DevelopmentPrograms = () => {
             Ready to Start Your <span className="text-yellow-400">Journey?</span>
           </h2>
           <p className="text-xl font-light text-gray-400 mb-12 max-w-2xl mx-auto">
-            Join TURTLE Robotics and gain the skills needed to excel in robotics
+            Join TURTLE and gain the skills needed to excel in robotics
           </p>
           <button
             onClick={() => navigate('/apply')}

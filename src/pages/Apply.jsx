@@ -56,9 +56,18 @@ const Apply = () => {
 
           <p className="hero-subtitle text-xl md:text-2xl font-light tracking-wide text-gray-600 dark:text-gray-400 mb-12 max-w-3xl mx-auto">
             {applicationsOpen
-              ? "Fill out this form to join Hatchling or Advanced Project teams at Turtle Robotics."
+              ? "Fill out this form to join Hatchling or Advanced Project teams at TURTLE."
               : "Applications are currently closed. Please check back soon for future openings."}
           </p>
+          {applicationsOpen && (
+            <a 
+              href="https://forms.gle/59pUiPUCpDrgBCqn7"
+              className="inline-block bg-gradient-to-r from-yellow-500 to-amber-500 text-white px-16 py-6 rounded-xl text-xl font-light tracking-wide hover:scale-105 transition-all duration-300 shadow-premium mb-6"
+              style={{marginTop: '2rem'}}
+            >
+              APPLY NOW
+            </a>
+            )}
         </div>
       </section>
 
@@ -66,7 +75,7 @@ const Apply = () => {
       <section className="py-24 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-20 text-gray-800 dark:text-gray-200">
-            JOIN TURTLE <span className="text-accent">ROBOTICS</span>
+            JOIN TURTLE
           </h2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
@@ -83,9 +92,31 @@ const Apply = () => {
             <div className="glass-card pop-card p-10 rounded-2xl text-center hover:scale-[1.03] transition-all duration-300">
               <div className="text-5xl mb-6">🚀</div>
               <h3 className="text-xl font-light mb-4 text-gray-800 dark:text-gray-200">Start Contributing</h3>
-              <p className="text-gray-600 dark:text-gray-400 font-light leading-relaxed">Begin working on exciting robotics projects with Turtle Robotics.</p>
+              <p className="text-gray-600 dark:text-gray-400 font-light leading-relaxed">Begin working on exciting robotics projects with TURTLE.</p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-24 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight mb-12 text-gray-800 dark:text-gray-200">
+            READY TO <span className="text-yellow-600 dark:text-yellow-400">JOIN US</span>
+          </h2>
+
+          {applicationsOpen ? (
+            <a 
+              href="https://forms.gle/59pUiPUCpDrgBCqn7"
+              className="inline-block bg-gradient-to-r from-yellow-500 to-amber-500 text-white px-16 py-6 rounded-xl text-xl font-light tracking-wide hover:scale-105 transition-all duration-300 shadow-premium"
+            >
+              APPLY NOW
+            </a>
+          ) : (
+            <div className="inline-block bg-gray-300 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-16 py-6 rounded-xl text-xl font-light tracking-wide cursor-not-allowed shadow-inner">
+              APPLICATIONS CLOSED
+            </div>
+          )}
         </div>
       </section>
 
@@ -116,28 +147,6 @@ const Apply = () => {
               </ul>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section className="py-24 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight mb-12 text-gray-800 dark:text-gray-200">
-            READY TO <span className="text-yellow-600 dark:text-yellow-400">JOIN US</span>
-          </h2>
-
-          {applicationsOpen ? (
-            <a 
-              href="https://forms.gle/59pUiPUCpDrgBCqn7"
-              className="inline-block bg-gradient-to-r from-yellow-500 to-amber-500 text-white px-16 py-6 rounded-xl text-xl font-light tracking-wide hover:scale-105 transition-all duration-300 shadow-premium"
-            >
-              APPLY NOW
-            </a>
-          ) : (
-            <div className="inline-block bg-gray-300 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-16 py-6 rounded-xl text-xl font-light tracking-wide cursor-not-allowed shadow-inner">
-              APPLICATIONS CLOSED
-            </div>
-          )}
         </div>
       </section>
     </div>

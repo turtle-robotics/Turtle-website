@@ -35,7 +35,7 @@ const Layout = ({ children }) => {
                 className="h-12 w-auto hidden sm:inline align-middle"
               />
               <span className="hidden sm:inline text-2xl font-extralight tracking-tight align-middle leading-none ml-2">
-                <span className="text-yellow-400">TURTLE</span> ROBOTICS
+                <span className="text-yellow-400">TURTLE</span>
               </span>
             </Link>
             

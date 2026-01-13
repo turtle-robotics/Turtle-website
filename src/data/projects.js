@@ -101,7 +101,7 @@ export const projects = [
     image: '/assets/BEEST/BEEST-Card.webp',
     title: 'BEEST',
     subtitle: 'Electromechanical Strandbeest',
-    description: 'Raspberry-Pi-powered Strandbeest robot using Jansen linkages with automated turtle-like exterior shell.',
+    description: 'Raspberry-Pi-powered Strandbeest robot using Jansen linkages with automated TURTLE-like exterior shell.',
     category: 'Mechatronics',
     tags: ['Raspberry Pi', 'Python', 'Mechanisms', 'Jansen Linkage', 'Mechatronics', '3D Printing'],
     status: 'Active',
@@ -472,7 +472,7 @@ export const projects = [
     lead: 'Aidan Briggs',
     leadEmail: 'aidanbriggs@tamu.edu',
     goals: [
-      'Launch POBS research vessel and outreach Mini-Turtle',
+      'Launch POBS research vessel and outreach Mini-TURTLE',
       'Advance racing submarine toward launch',
       'Develop aquatic simulation environments in Ansys'
     ],
