@@ -43,7 +43,7 @@ const Apply = () => {
       <section ref={heroRef} className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
         {/* Background Image */}
         <img
-          src="\assets\GeneralPhotos\ApplyNowJpg.JPG"
+          src="/assets/GeneralPhotos/ApplyNowJpg.JPG"
           alt="Apply Now Background"
           className="absolute inset-0 w-full h-full object-cover object-center brightness-110 dark:brightness-95 z-0"
         />
@@ -99,7 +99,7 @@ const Apply = () => {
             </div>
             <div className="glass-card pop-card p-10 rounded-2xl text-center hover:scale-[1.03] transition-all duration-300">
               <div className="text-5xl mb-6">🚀</div>
-              <h3 className="text-xl font-light mb-4 text-gray-800 dark:  text-gray-200">Start Contributing</h3>
+              <h3 className="text-xl font-light mb-4 text-gray-800 dark:text-gray-200">Start Contributing</h3>
               <p className="text-gray-600 dark:text-gray-400 font-light leading-relaxed">Begin working on exciting robotics projects with TURTLE.</p>
             </div>
           </div>
