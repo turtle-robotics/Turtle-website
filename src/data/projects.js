@@ -1,4 +1,32 @@
 export const projects = [
+  {
+    id: 'dirt',
+    image: '/assets/DIRT/DirtTtempCoverpic.webp',
+    title: 'DIRT',
+    subtitle: 'Diagnostic Inspection Robot for Terrain',
+    description: "To ensure that A&M continues to prosper in agriculture research and technology, soil quality must be ensured. DIRT aims to design a robust rover that can traverse varying terrains to take more frequent and more accurate soil measurements. DIRT will perform tests using a deep spectroscopy probe to get the most thorough reading of soil quality.",
+    category: 'Agricultural Robotics',
+    tags: ['Agriculture', 'Rover', 'Spectroscopy', 'Soil Science', 'Robotics', 'CAD', 'PCB', 'Embedded'],
+    status: 'Active',
+    duration: 'Spring 2026',
+    lead: 'Anagha Dharmavaram',
+    leadEmail: 'anagha2325@tamu.edu',
+    goals: [
+      'Design a robust rover chassis for varied terrain',
+      'Develop deep spectroscopy probe integration',
+      'Enable frequent and accurate soil measurements',
+      'Support A&M agricultural research with advanced data',
+      'Iterate on mechanical, software, and electrical subsystems'
+    ],
+    lookingFor: [
+      'Mechanical: CAD, chassis design, mechanical prototyping (~4 positions)',
+      'Software: Rover coding, data handling, automation (~2-3 positions)',
+      'Electrical: PCB design, wiring, sensor integration (~1-2 positions)'
+    ],
+    images: [
+      '/assets/DIRT/DirtTtempCoverpic.webp'
+    ]
+  },
   // Alphabetical by title
   {
     id: 'ache',
