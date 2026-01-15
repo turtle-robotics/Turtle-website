@@ -36,7 +36,7 @@ const DevelopmentPrograms = () => {
     {
       id: 'workshop-series',
       title: 'Workshop Series',
-      tagline: 'Workship Series',
+      tagline: 'Workshop Series',
       year: 'Coming Soon',
       description: 'A platform for members to gain presentation experience and learn new technical and leadership skills',
       link: '/workshop-series',

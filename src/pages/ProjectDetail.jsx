@@ -109,6 +109,12 @@ const ProjectDetail = () => {
           <p className="text-gray-300 leading-relaxed">
             {project.fullDescription || project.description}
           </p>
+            {/* Early Application Box for VEST project */}
+            {project.id === 'vest' && project.earlyApplication && (
+              <div className="mt-8 p-4 rounded-xl bg-yellow-100 dark:bg-yellow-900/40 border border-yellow-400 text-yellow-900 dark:text-yellow-200 text-base font-medium text-center shadow-soft">
+                <span className="font-semibold">Early Application:</span> {project.earlyApplication}
+              </div>
+            )}
         </div>
 
         {/* Goals */}

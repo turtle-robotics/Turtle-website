@@ -586,32 +586,70 @@ export const projects = [
     id: 'vest',
     image: '/assets/VEST/VEST-Card.webp',
     title: 'VEST',
-    subtitle: 'Canine Vital Signs Wearable',
-    description: 'Autonomous wearable monitoring canine vitals with alerts, GPS, and smartphone connectivity.',
-    category: 'Wearable Robotics',
-    tags: ['Wearables', 'Biosensors', 'Signal Processing', 'Wireless', 'Mobile App', 'JavaScript', 'Python'],
-    status: 'Active',
-    duration: 'Fall 2025',
-    lead: 'Ethan Guerrero',
-    leadEmail: 'ethanjg2814@tamu.edu',
-    goals: [
-      'Study canine physiology and signal processing basics',
-      'Design vest to meet user (dog) needs and perform literature reviews',
-      'Iterative prototyping and hardware testing',
-      'Develop detection/alert algorithms and sensor circuits',
-      'Learn JavaScript for app and interface design'
-    ],
-    lookingFor: [
-      'Biomedical engineering (biosensors, physiology)',
-      'Electrical engineering (circuits, microcontrollers)',
-      'Python and/or JavaScript',
-      'Interest in animal health and wearables',
-      'Signal processing and data filtering'
-    ],
-    images: [
-      '/SCPosters/REVISDED_VEST_POSTER.pptx.webp'
-    ]
-  },
+      subtitle: 'Noninvasive Canine Health Monitoring Vest',
+      description: "The VEST project is a noninvasive wearable vest for dogs that enables continuous monitoring of health and physiological condition across breeds and sizes. It tracks body temperature, respiratory rate, and heart rate, and uses a robotics-based auto-tightening mechanism for proper sensor contact. Data is sent in real time to a mobile app for owners and veterinarians, enabling early detection of health issues.",
+        description: "The VEST project is a noninvasive wearable vest for dogs that enables continuous monitoring of health and physiological condition across breeds and sizes. It tracks body temperature, respiratory rate, and heart rate, and uses a robotics-based auto-tightening mechanism for proper sensor contact. Data is sent in real time to a mobile app for owners and veterinarians, enabling early detection of health issues.\n\nMotivation: Inspired by real cases—a team member's Pomeranian with tracheomalacia, where early respiratory monitoring could have enabled timely intervention, and the loss of Reveille IX, Texas A&M's mascot, to pneumonia, where continuous vital sign tracking could have provided unmistakable evidence for earlier treatment. These experiences highlight the need for objective, real-time monitoring to improve canine health outcomes.",
+      purpose: "Develop a vest that provides reliable, real-time vital sign monitoring for dogs, ensuring comfort and adaptability for all breeds and sizes, and supporting early intervention for health complications.",
+      background: "Inspired by: 1) A team member's Pomeranian with tracheomalacia (early respiratory monitoring could have helped). 2) The passing of Reveille IX, Texas A&M mascot, from pneumonia (continuous vital sign tracking could have enabled earlier intervention).",
+      motivation: "This project was motivated by personal experiences with canine health challenges, including a team member's Pomeranian diagnosed with tracheomalacia and the loss of Reveille IX, Texas A&M's mascot, to pneumonia. Both cases highlighted the need for continuous, objective monitoring of vital signs to enable earlier intervention and better outcomes for dogs.",
+      problem: "Owners and vets rely on subjective observation and periodic exams, missing real-time data. VEST enables continuous monitoring, early warnings, and accessible health data for all breeds and sizes.",
+      roles: [
+        'Project Leader: Oversees operations, budget, design reviews, meetings, networking, recruitment.',
+        'Front-End Team: Mobile app UI, data visualization, API integration.',
+        'Back-End Team: Vital sign monitoring, data management, machine learning, wireless protocols.',
+        'Electrical Team: Hardware, signal processing, PCB, battery optimization, validation.',
+        'Design Team: Vest structure, auto-tightening, comfort, durability, hardware integration.'
+      ],
+      positionsAvailable: [
+        'Front-End Coder (1 position)',
+        'Electrical Member (1 position)',
+        'Design Members (2 positions)'
+      ],
+      requirements: [
+        'Passion for animals and impact',
+        'Independent learning',
+        'Leadership and collaboration',
+        'Problem-solving mindset',
+        'Evidence-based thinking',
+        '12–14 hours/week commitment',
+        'Open to all grade levels and majors',
+        'Official TURTLE club membership required for project credit'
+      ],
+      qualifications: [
+        'Front-End: Mobile/web app experience, UI interest, data presentation',
+        'Back-End: Coding experience, data management, software integration',
+        'Electrical: Circuits/electronics experience, sensor interest, troubleshooting',
+        'Design: Sewing/3D printing/materials experience, prototyping, ergonomic design'
+      ],
+      application: "Contact Ethan Guerrero (ethanjg2814@tamu.edu) with: Brief statement of interest, preferred team(s) and relevant experience, resume, confirmation of 12–14 hour/week availability, commitment to TURTLE. Applications reviewed on a rolling basis; early applications encouraged.",
+        earlyApplication: "Interested or have questions? Reach out to Ethan Guerrero (ethanjg2814@tamu.edu) any time to learn more or express your interest—early contact is encouraged!",
+      category: 'Wearable Robotics',
+      tags: ['Wearables', 'Biosensors', 'Signal Processing', 'Wireless', 'Mobile App', 'JavaScript', 'Python', 'Animal Health', 'Robotics', 'Hardware', 'Machine Learning'],
+      status: 'Active',
+      duration: 'Fall 2025',
+      lead: 'Ethan Guerrero',
+      leadEmail: 'ethanjg2814@tamu.edu',
+      goals: [
+        'Develop a noninvasive vest for continuous canine vital sign monitoring',
+        'Implement robotics-based auto-tightening for sensor contact',
+        'Transmit real-time data to a mobile app for owners/vets',
+        'Enable early detection of health complications',
+        'Ensure comfort and adaptability for all breeds and sizes',
+        'Integrate hardware, software, and design for robust system',
+        'Conduct literature reviews and evidence-based design decisions'
+      ],
+      lookingFor: [
+        'Front-End: Mobile/web app development, UI/UX, data visualization',
+        'Back-End: Coding, data management, software integration, machine learning',
+        'Electrical: Circuits, electronics, sensor integration, troubleshooting',
+        'Design: Sewing, 3D printing, prototyping, ergonomic design',
+        'Passion for animal health and technology',
+        'Open to all majors and grade levels'
+      ],
+      images: [
+        '/SCPosters/REVISDED_VEST_POSTER.pptx.webp'
+        ]
+    },
   {
     id: 'virt',
     image: '/assets/VIRT/VIRT-Card.webp',
