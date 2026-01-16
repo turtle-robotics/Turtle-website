@@ -122,7 +122,7 @@ const About = () => {
       <section ref={heroRef} className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
         {/* Officer Photo Background */}
         <img
-          src="/assets/GeneralPhotos/OfficerPhoto.JPG"
+          src="/assets/GeneralPhotos/OfficerPhoto.webp"
           alt="Officer Group Photo"
           className="absolute inset-0 w-full h-full object-cover object-center brightness-110 dark:brightness-95 z-0"
         />
