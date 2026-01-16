@@ -87,7 +87,7 @@ function Showcase() {
       <div
         className="relative w-full aspect-[5/4] bg-contain bg-top bg-no-repeat flex items-center justify-center"
         style={{
-          backgroundImage: "url('/assets/turtlerobotcollage.png')",
+          backgroundImage: "url('/assets/turtlerobotcollage.webp')",
         }}
       >
         {/* Stronger gradient overlay for better readability */}
