@@ -43,7 +43,7 @@ const Apply = () => {
       <section ref={heroRef} className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
         {/* Background Image */}
         <img
-          src="/assets/GeneralPhotos/ApplyNowJpg.JPG"
+          src="/assets/GeneralPhotos/ApplyNowJpg.webp"
           alt="Apply Now Background"
           className="absolute inset-0 w-full h-full object-cover object-center brightness-110 dark:brightness-95 z-0"
         />

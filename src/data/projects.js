@@ -274,7 +274,7 @@ export const projects = [
   },
 {
   id: 'eden',
-  image: '/assets/EDEN/EDENcover.png',
+  image: '/assets/EDEN/EDEN-Card.png',
   title: 'EDEN',
   subtitle: 'AI-Enabled Humanoid Research',
   description: 'Building an AI-enabled humanoid with ROS 2 and machine learning for adaptive end-to-end robotic systems.',
