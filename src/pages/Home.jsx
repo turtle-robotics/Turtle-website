@@ -70,13 +70,13 @@ const Home = () => {
     <div className="flex flex-col sm:flex-row gap-6 justify-center items-center relative z-50">
       <Link 
         to="/projects" 
-        className="hero-button bg-gradient-to-r from-yellow-500 to-amber-500 text-white px-10 py-5 rounded-xl font-light tracking-wide hover:scale-105 transition-all duration-300 shadow-premium relative z-50"
+        className="hero-button bg-gradient-to-r from-yellow-500 to-amber-500 text-white px-10 py-5 rounded-xl font-medium hover:scale-105 transition-all duration-300 shadow-lg relative z-50"
       >
         EXPLORE PROJECTS
       </Link>
       <Link 
         to="/about" 
-        className="hero-button glass-card text-gray-800 dark:text-gray-200 px-10 py-5 rounded-xl font-light tracking-wide hover:scale-105 transition-all duration-300 relative z-50"
+        className="hero-button border-2 border-yellow-500 text-yellow-600 dark:text-yellow-400 px-10 py-5 rounded-xl font-medium hover:bg-yellow-500 hover:text-white transition-all duration-300 relative z-50"
       >
         LEARN MORE
       </Link>

@@ -140,7 +140,7 @@ const Sponsorship = () => {
             </a>
             <button 
               onClick={() => setShowContactForm(true)}
-              className="border-2 border-yellow-500 text-yellow-600 dark:text-yellow-400 px-8 py-4 rounded-xl font-medium hover:bg-yellow-500 hover:text-white transition-all duration-300"
+              className="border-2 border-yellow-500 text-yellow-600 dark:text-yellow-400 px-8 py-4 rounded-xl font-medium hover:scale-105 transition-all duration-300"
             >
               Contact Us
             </button>
@@ -310,7 +310,7 @@ const Sponsorship = () => {
             </button>
             <button 
               onClick={() => setShowEmailPopup(true)}
-              className="border-2 border-yellow-500 text-yellow-600 dark:text-yellow-400 px-8 py-4 rounded-xl font-medium hover:bg-yellow-500 hover:text-white transition-all duration-300"
+              className="border-2 border-yellow-500 text-yellow-600 dark:text-yellow-400 px-8 py-4 rounded-xl font-medium hover:scale-105 transition-all duration-300"
             >
               Email Us
             </button>

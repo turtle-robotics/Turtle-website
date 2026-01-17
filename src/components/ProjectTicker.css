@@ -1,3 +1,13 @@
+.not-clickable {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.not-clickable:hover {
+  background: inherit;
+  box-shadow: none;
+  color: inherit;
+}
 /* ENHANCED GLASSMORPHISM TICKER STYLES */
 .project-ticker-wrapper {
   position: absolute;
@@ -5,9 +15,9 @@
   left: 0;
   right: 0;
   width: 100%;
-  overflow: hidden;
+  overflow: visible; /* allow glow overflow */
   padding: 2rem 0;
-  z-index: 1;
+  z-index: 10; /* higher to show glow */
   pointer-events: none;
 }
 
@@ -53,12 +63,12 @@
 }
 
 .project-ticker-block:hover {
-  background: rgba(255, 255, 255, 0.12);
+  background: #ffe066; /* yellow bg on hover */
   backdrop-filter: blur(32px);
   -webkit-backdrop-filter: blur(32px);
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  border: 1px solid #ffe066;
   box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.6),
-              0 0 40px rgba(251, 146, 60, 0.3);
+              0 0 40px #ffe06699;
   transform: translateY(-6px) scale(1.05);
   z-index: 5;
 }
@@ -78,34 +88,38 @@
 .project-ticker-acronym {
   font-size: 1.4rem;
   font-weight: 700;
-  color: #ffffff;
+  color: #222222;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   pointer-events: none;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.3);
   position: relative;
   z-index: 2;
 }
 
 .project-ticker-block:hover .project-ticker-acronym {
-  color: #ffffff;
-  text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  color: #222222; /* black/charcoal text on yellow */
+  text-shadow: 0 0 20px #ffe06699;
 }
 
 /* LIGHT MODE STYLES */
+
+/* Remove maroon, use yellow/grey/black/white palette */
 :root:not(.dark) .project-ticker-acronym {
-  color: #000000;
+  color: #222222;
   text-shadow: 0 2px 8px rgba(255, 255, 255, 0.3);
 }
 
+
 :root:not(.dark) .project-ticker-block:hover {
   box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.6),
-              0 0 40px rgba(128, 0, 32, 0.4);
+              0 0 40px #ffe06699;
 }
 
+
 :root:not(.dark) .project-ticker-block:hover .project-ticker-acronym {
-  color: #000000;
-  text-shadow: 0 0 20px rgba(128, 0, 32, 0.3);
+  color: #222222;
+  text-shadow: 0 0 20px #ffe06699;
 }
 
 /* DARK MODE STYLES (explicit for clarity) */

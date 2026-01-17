@@ -153,7 +153,7 @@ const Projects = () => {
                   <span> — type what you enjoy and we’ll match a project for you.</span>
                   <span className="opacity-90"> e.g. “I want to learn reinforcement learning”</span>
                 </p>
-                <span className="text-lg leading-none animate-pulse select-none">✨</span>
+                <span className="text-lg leading-none select-none">✨</span>
               </div>
             </div>
             <div className="flex items-center gap-3">

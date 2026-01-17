@@ -21,19 +21,30 @@ export default function ProjectTicker({ projects }) {
           className="project-ticker-track"
           style={{ animationPlayState }}
         >
-          {multipliedProjects.map((project, index) => (
-            <div
-              key={`${project.id}-${index}`}
-              className="project-ticker-block glass-effect"
-              onClick={(e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                navigate(`/projects/${project.id}`);
-              }}
-            >
-              <span className="project-ticker-acronym">{project.title}</span>
-            </div>
-          ))}
+          {multipliedProjects.map((project, index) => {
+            // Only clickable if project.id exists
+            const isClickable = !!project.id;
+            return (
+              <div
+                key={`${project.id}-${index}`}
+                className={`project-ticker-block glass-effect${isClickable ? '' : ' not-clickable'}`}
+                {...(isClickable ? {
+                  onClick: (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    navigate(`/projects/${project.id}`);
+                  },
+                  role: 'button',
+                  tabIndex: 0
+                } : {
+                  'aria-disabled': true,
+                  style: { pointerEvents: 'none', opacity: 0.6 }
+                })}
+              >
+                <span className="project-ticker-acronym">{project.title}</span>
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>
