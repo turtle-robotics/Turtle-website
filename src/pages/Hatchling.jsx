@@ -328,7 +328,7 @@ const Hatchling = () => {
                   <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400 font-light">
                     <li>• Learn about Hatchling and learning objectives</li>
                     <li>• Meet the Director team</li>
-                    <li>• Meet Hatchling Piers</li>
+                    <li>• Meet Hatchling Peers</li>
                     <li>• Install software</li>
                   </ul>
                 </div>
@@ -537,10 +537,10 @@ const Hatchling = () => {
                   1: "/pdfs/Hatchling Week 1 - Introduction.pptx.pdf",
                   2: "/pdfs/Hatchling Week 2 - SolidWorks (CAD) Foundation.pptx.pdf",
                   3: "/pdfs/Hatchling Week 3 - SolidWorks 3D.pptx.pdf",
-                  4: "/pdfs/Hatchling Week 4 -Tools, Project, and Process.pptx.pdf",
-                  5: "/pdfs/Hatchling Week 5 - Design Review and Cpp.pptx.pdf",
+                  4: "/pdfs/Hatchling Week 4 - Tools, Project, and Process.pptx.pdf",
+                  5: "/pdfs/Hatchling Week 5 - Design Review and C++.pptx.pdf",
                   6: "/pdfs/Hatchling Week 6 - SolidWorks Assembly.pptx.pdf",
-                  7: "/pdfs/Hatchling Week 7 - Programming and Git GitHub.pptx (1).pdf",
+                  7: "/pdfs/Hatchling Week 7 - Programming and Git GitHub.pptx.pdf",
                   8: "/pdfs/Hatchling Week 8 - Electronics and Soldering.pptx.pdf",
                 };
 
@@ -563,12 +563,6 @@ const Hatchling = () => {
                       <option value="">Select a week...</option>
                       <option value="1">Week 1: Introductions</option>
                       <option value="2">Week 2: SolidWorks Foundation</option>
-                      <option value="3">Week 3: SolidWorks 3D</option>
-                      <option value="4">Week 4: Tools & Process</option>
-                      <option value="5">Week 5: Design Review & C++</option>
-                      <option value="6">Week 6: SolidWorks Assembly</option>
-                      <option value="7">Week 7: Programming & Git</option>
-                      <option value="8">Week 8: Electronics & Soldering</option>
                     </select>
 
                     <a
@@ -631,7 +625,7 @@ const Hatchling = () => {
             <div className="glass-card p-8 rounded-2xl text-center hover:scale-105 transition-all duration-300">
               <div className="text-5xl mb-6">⚡</div>
               <h3 className="text-xl font-light text-gray-800 dark:text-gray-200 mb-4">
-                Controller Info & Code
+                Project Tips & Controller Resources
               </h3>
               <p className="text-gray-600 dark:text-gray-400 font-light leading-relaxed mb-4">
                 Microcontroller documentation and sample code
