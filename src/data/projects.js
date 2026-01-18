@@ -573,6 +573,8 @@ export const projects = [
       'CAD Designing',
       'Python/C++ programming',
       'Machine Learning',
+      'Background or interest in chemistry or related fields',
+      'Familiarity with chemical properties (including aromatic compounds) is a plus',
       'Students in CHEN, ECEN, ESET, CSCE, or related majors'
     ],
     images: [
