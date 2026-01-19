@@ -285,7 +285,7 @@ export const projects = [
   lead: 'Vedant Soni',
   leadEmail: 'ved.soni@tamu.edu',
   website: {
-    url: 'https://eden-orpin.vercel.app/',
+    url: 'https://eden-robotics.github.io/Eden/',
     label: 'Visit our website'
   },
   goals: [

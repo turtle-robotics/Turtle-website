@@ -586,61 +586,52 @@ const Hatchling = () => {
             </div>
           </div>
 
-          {/* Additional Materials */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="glass-card p-8 rounded-2xl text-center hover:scale-105 transition-all duration-300">
-              <div className="text-5xl mb-6">📝</div>
-              <h3 className="text-xl font-light text-gray-800 dark:text-gray-200 mb-4">
-                Hatchling Syllabus
-              </h3>
-              <p className="text-gray-600 dark:text-gray-400 font-light leading-relaxed mb-4">
-                Comprehensive program notes and reference materials
-              </p>
-              <a
-                href="/pdfs/Hatchling_Syllabus.pdf"
-                download
-                className="inline-block bg-gradient-to-r from-yellow-500 to-amber-500 text-white px-6 py-3 rounded-lg text-sm font-light hover:from-yellow-600 hover:to-amber-600 transition-all duration-300"
-              >
-                Download Notes
-              </a>
-            </div>
+{/* Additional Materials */}
+<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+  <div className="glass-card p-8 rounded-2xl text-center hover:scale-105 transition-all duration-300">
+    <div className="text-5xl mb-6">📝</div>
+    <h3 className="text-xl font-light text-gray-800 dark:text-gray-200 mb-6">
+      Hatchling Syllabus
+    </h3>
+    <a
+      href="/pdfs/Hatchling_Syllabus.pdf"
+      download
+      className="inline-block bg-gradient-to-r from-yellow-500 to-amber-500 text-white px-6 py-3 rounded-lg text-sm font-light hover:from-yellow-600 hover:to-amber-600 transition-all duration-300"
+    >
+      Download Notes
+    </a>
+  </div>
 
-            <div className="glass-card p-8 rounded-2xl text-center hover:scale-105 transition-all duration-300">
-              <div className="text-5xl mb-6">🎨</div>
-              <h3 className="text-xl font-light text-gray-800 dark:text-gray-200 mb-4">
-                CAD Examples
-              </h3>
-              <p className="text-gray-600 dark:text-gray-400 font-light leading-relaxed mb-4">
-                Sample SolidWorks models and design examples
-              </p>
-              <a
-                href="/pdfs/Hatchling CAD Examples.zip"
-                download
-                className="inline-block bg-gradient-to-r from-yellow-500 to-amber-500 text-white px-6 py-3 rounded-lg text-sm font-light hover:from-yellow-600 hover:to-amber-600 transition-all duration-300"
-              >
-                Download Examples
-              </a>
-            </div>
+  <div className="glass-card p-8 rounded-2xl text-center hover:scale-105 transition-all duration-300">
+    <div className="text-5xl mb-6">🎨</div>
+    <h3 className="text-xl font-light text-gray-800 dark:text-gray-200 mb-6">
+      CAD Examples
+    </h3>
+    <a
+      href="/pdfs/Hatchling CAD Examples.zip"
+      download
+      className="inline-block bg-gradient-to-r from-yellow-500 to-amber-500 text-white px-6 py-3 rounded-lg text-sm font-light hover:from-yellow-600 hover:to-amber-600 transition-all duration-300"
+    >
+      Download Examples
+    </a>
+  </div>
 
-            <div className="glass-card p-8 rounded-2xl text-center hover:scale-105 transition-all duration-300">
-              <div className="text-5xl mb-6">⚡</div>
-              <h3 className="text-xl font-light text-gray-800 dark:text-gray-200 mb-4">
-                Project Tips & Controller Resources
-              </h3>
-              <p className="text-gray-600 dark:text-gray-400 font-light leading-relaxed mb-4">
-                Microcontroller documentation and sample code
-              </p>
-              <a
-                href="/pdfs/controller-info-code.pdf"
-                download
-                className="inline-block bg-gradient-to-r from-yellow-500 to-amber-500 text-white px-6 py-3 rounded-lg text-sm font-light hover:from-yellow-600 hover:to-amber-600 transition-all duration-300"
-              >
-                Download Guide
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+  <div className="glass-card p-8 rounded-2xl text-center hover:scale-105 transition-all duration-300">
+    <div className="text-5xl mb-6">⚡</div>
+    <h3 className="text-xl font-light text-gray-800 dark:text-gray-200 mb-6">
+      Project Tips & Controller Resources
+    </h3>
+    <a
+      href="/pdfs/controller-info-code.pdf"
+      download
+      className="inline-block bg-gradient-to-r from-yellow-500 to-amber-500 text-white px-6 py-3 rounded-lg text-sm font-light hover:from-yellow-600 hover:to-amber-600 transition-all duration-300"
+    >
+      Download Guide
+    </a>
+  </div>
+  </div>             
+</div>
+</section>
 
       {/* Stats and Impact Section */}
       <section className="py-24 px-4 bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900">
