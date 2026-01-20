@@ -173,7 +173,7 @@ const Footer = () => {
       <div className="border-t border-gray-200 dark:border-gray-700">
         <div className="max-w-7xl mx-auto px-4 py-6">
           <p className="text-center text-gray-500 dark:text-gray-400 text-sm">
-            © 2024 TURTLE. All rights reserved.
+            © 2026 TURTLE. All rights reserved.
           </p>
         </div>
       </div>
