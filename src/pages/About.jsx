@@ -137,6 +137,10 @@ const About = () => {
           <p className="hero-subtitle text-xl md:text-2xl font-light tracking-wide text-white mb-12 max-w-3xl mx-auto">
             TURTLE is a student-led research lab at Texas A&M University, pioneering innovative robotics solutions and developing the next generation of robotics leaders.
           </p>
+          <div className="mb-8">
+            <span className="text-lg text-gray-200">Contact us: </span>
+            <a href="mailto:turtlerobotics@gmaill.com" className="text-accent underline ml-2">turtlerobotics@gmaill.com</a>
+          </div>
         </div>
       </section>
 

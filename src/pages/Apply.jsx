@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
-import ContactForm from '../components/ContactForm'
+
 
 const Apply = () => {
   const heroRef = useRef(null)
@@ -106,13 +106,12 @@ const Apply = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
+      {/* Contact Section (previous version, commented for future use)
       <section className="py-24 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight mb-12 text-white drop-shadow-2xl">
             READY TO <span className="text-yellow-400 dark:text-yellow-300">JOIN US</span>
           </h2>
-
           {applicationsOpen ? (
             <a 
               href="https://forms.gle/59pUiPUCpDrgBCqn7"
@@ -125,6 +124,19 @@ const Apply = () => {
               APPLICATIONS CLOSED
             </div>
           )}
+        </div>
+      </section>
+      */}
+      {/* Contact Section (current) */}
+      <section className="py-24 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight mb-12 text-white drop-shadow-2xl">
+            CONTACT <span className="text-yellow-400 dark:text-yellow-300">TURTLE</span>
+          </h2>
+          <p className="text-xl text-gray-200 dark:text-gray-300 mb-8">
+            For any questions, email us at
+            <a href="mailto:turtlerobotics@gmaill.com" className="text-accent underline ml-2">turtlerobotics@gmaill.com</a>
+          </p>
         </div>
       </section>
 
