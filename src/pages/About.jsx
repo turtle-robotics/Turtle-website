@@ -51,13 +51,6 @@ const About = () => {
     { role: 'Public Relations Committee', name: 'Wenrui Xu', period: 'Fall 2025 - Spring 2026', description: 'Content and media support' },
     { role: 'Public Relations Committee', name: 'Matthew Elizalde', period: 'Fall 2025 - Spring 2026', description: 'Content and media support' },
     { role: 'Public Relations Committee', name: 'Renee Zhu', period: 'Fall 2025 - Spring 2026', description: 'Content and media support' },
-    
-    // Web Branch — officer then committee
-    { role: 'Webmaster', name: 'Saksham Mohan', period: 'Fall 2025 - Spring 2026', description: "Maintaining and developing the organization's web presence" },
-    { role: 'Web Development Committee', name: 'Jackson Marshall', period: 'Fall 2025 - Spring 2026', description: 'Full-stack development and site maintenance' },
-    { role: 'Web Development Committee', name: 'Zhengye Chen', period: 'Fall 2025 - Spring 2026', description: 'Full-stack development and site maintenance' },
-    { role: 'Web Development Committee', name: 'Yann Deshpande', period: 'Fall 2025 - Spring 2026', description: 'Full-stack development and site maintenance' },
-    { role: 'Web Development Committee', name: 'Dhruv Bhambhani', period: 'Fall 2025 - Spring 2026', description: 'Full-stack development and site maintenance' },
 
     // Internal Branch — officers then committees
     { role: 'Logistics Officer', name: 'Ryo Kato', period: 'Fall 2025 - Spring 2026', description: 'Events, scheduling, and operations' },
@@ -95,7 +88,6 @@ const About = () => {
     executive: true,
     external: true,
     internal: true,
-    web: true,
     projects: true,
     development: true,
   })
@@ -187,14 +179,6 @@ const About = () => {
               Internal Branch {openSection.internal ? '▲' : '▼'}
             </button>
             {openSection.internal && <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">{renderLeadership(['Logistics Officer', 'Finance Officer', 'Treasurer', 'Lab Quality Officer', 'Lab Quality Committee'])}</div>}
-          </div>
-
-          {/* Web Development Branch Accordion */}
-          <div className="mb-12">
-            <button onClick={() => toggleSection('web')} className="w-full text-left font-light text-xl text-gray-200 mb-4">
-              Web Branch {openSection.web ? '▲' : '▼'}
-            </button>
-            {openSection.web && <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">{renderLeadership(['Webmaster','Web Development Committee'])}</div>}
           </div>
 
           {/* Projects Branch Accordion */}
