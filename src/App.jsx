@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom'
+import NotFound from './pages/NotFound'
 import { ThemeProvider } from './contexts/ThemeContext'
 import Layout from './components/Layout'
 import Home from './pages/Home'
@@ -30,6 +31,7 @@ function App(Component, pageProps) {
           <Route path="/apply" element={<Apply />} />
           <Route path="/sponsorship" element={<Sponsorship />} />
           <Route path="/admin" element={<AdminDashboard />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Layout>
     </ThemeProvider>
