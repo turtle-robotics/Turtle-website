@@ -98,11 +98,11 @@ const Footer = () => {
 
           {/* Right Column - Contact Info */}
           <div className="space-y-4">
-            <h3 className="font-bold text-gray-800 dark:text-gray-200">Contact Info</h3>
+            <h3 className="font-bold text-gray-800 dark:text-gray-200">Visit Us</h3>
             <div className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
-              <p>TURTLE</p>
-              <p>Texas A&M University</p>
-              <p>College Station, TX 77845</p>
+              <p>Haynes Engineering Building - Room 023</p>
+              <p>727 Ross St</p>
+              <p>College Station, TX 77840</p>
               {/* Email removed, use contact form instead */}
             </div>
           </div>
