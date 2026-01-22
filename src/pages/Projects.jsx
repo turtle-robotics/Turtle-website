@@ -229,7 +229,7 @@ const Projects = () => {
                       {project.category}
                     </span>
                     {project.tags?.slice(0, 2).map((tag, tagIndex) => (
-                      <span key={tagIndex} className="text-xs font-light text-white bg-accent/80 px-2 py-1 rounded-full">
+                      <span key={tagIndex} className="text-xs font-light text-white bg-gray-500/80 px-2 py-1 rounded-full">
                         {tag}
                       </span>
                     ))}
