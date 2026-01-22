@@ -32,7 +32,7 @@ const Footer = () => {
                 className="w-10 h-10 bg-gradient-to-r from-yellow-500 to-amber-500 rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300"
               >
                 <img
-                  src="/assets/icons/Instagram_Glyph_Gradient.png"
+                  src="/assets/Instagram_Glyph_Gradient.png"
                   alt="Instagram"
                   className="w-7 h-7 object-contain"
                   style={{ filter: 'drop-shadow(0 1px 2px rgba(0,0,0,0.10))' }}
@@ -46,7 +46,7 @@ const Footer = () => {
                 className="w-10 h-10 bg-gradient-to-r from-yellow-500 to-amber-500 rounded-lg flex items-center justify-center hover:scale-110 transition-all duration-300"
               >
                 <img
-                  src="/assets/icons/LI-In-Bug.png"
+                  src="/assets/LI-In-Bug.png"
                   alt="LinkedIn"
                   className="w-7 h-7 object-contain"
                   style={{ filter: 'drop-shadow(0 1px 2px rgba(0,0,0,0.10))' }}
