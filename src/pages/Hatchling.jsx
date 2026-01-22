@@ -316,7 +316,7 @@ const Hatchling = () => {
             </h3>
             <div className="relative">
               {/* Scrollable Timeline Container */}
-              <div className="flex gap-4 overflow-x-auto pb-6 scrollbar-hide">
+              <div className="flex gap-4 overflow-x-auto pb-6 custom-scrollbar">
                 {/* Week 1 */}
                 <div className="glass-card p-6 rounded-xl min-w-[280px] flex-shrink-0">
                   <div className="text-2xl font-light text-accent mb-3">
@@ -741,10 +741,11 @@ const Hatchling = () => {
               </p>
 
               {/* Embedded PDF Viewer */}
-              <div className="w-full h-96 rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700">
+
+              <div className="w-full h-96 rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 custom-scrollbar">
                 <iframe
-                  src="/pdfs/Fall 2025 (10th year) Hatchling Impact Report.pptx.pdf#toolbar=0&navpanes=0&scrollbar=0"
-                  className="w-full h-full"
+                  src="/pdfs/Fall 2025 (10th year) Hatchling Impact Report.pptx.pdf#toolbar=0&navpanes=0&scrollbar=1"
+                  className="w-full h-full custom-scrollbar"
                   title="Hatchling Impact Report"
                   frameBorder="0"
                 >
