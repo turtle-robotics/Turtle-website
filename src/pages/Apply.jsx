@@ -7,7 +7,7 @@ const Apply = () => {
   const heroRef = useRef(null)
 
   // ✅ Toggle this to open/close applications
-  const applicationsOpen = true // change to false when clsoed
+  const applicationsOpen = true // change to false when closed
 
   useEffect(() => {
     const hero = heroRef.current
@@ -165,7 +165,6 @@ const Apply = () => {
             <h3 className="text-2xl md:text-3xl font-light text-gray-800 dark:text-gray-200 mb-12 text-center">
               Advanced Projects
             </h3>
-
             <div className="grid md:grid-cols-2 gap-12">
               <div>
                 <h4 className="text-xl font-light text-gray-800 dark:text-gray-200 mb-6">
@@ -193,8 +192,6 @@ const Apply = () => {
           </div>
         </div>
       </section>
-
-
     </div>
   )
 }
