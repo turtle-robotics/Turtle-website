@@ -159,7 +159,7 @@ const Projects = () => {
             <div className="flex items-center gap-3">
               <button
                 onClick={handleAIRecommend}
-                className="bg-gradient-to-r from-yellow-500 to-amber-500 text-white px-4 py-2 rounded-lg text-sm font-light tracking-wide hover:scale-105 transition-all duration-300 shadow-premium disabled:opacity-60"
+                className="bg-gradient-to-r from-yellow-500 to-amber-500 text-black px-4 py-2 rounded-lg text-sm font-light tracking-wide hover:scale-105 transition-all duration-300 shadow-premium disabled:opacity-60"
                 disabled={isLoadingAI}
               >
                 {isLoadingAI ? 'Thinking…' : 'Ask AI to Match Me'}
@@ -274,7 +274,7 @@ const Projects = () => {
                     {project.status !== 'Archived' && (
                       <a
                         href="/apply"
-                        className="inline-block mt-2 bg-gradient-to-r from-yellow-500 to-amber-500 text-white px-4 py-2 rounded-lg text-sm font-light tracking-wide hover:scale-105 transition-all duration-300 shadow-premium"
+                        className="inline-block mt-2 bg-gradient-to-r from-yellow-500 to-amber-500 text-black px-4 py-2 rounded-lg text-sm font-light tracking-wide hover:scale-105 transition-all duration-300 shadow-premium"
                       >
                         Apply
                       </a>

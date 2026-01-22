@@ -134,7 +134,7 @@ const Sponsorship = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
               href="#sponsorship-tiers"
-              className="bg-gradient-to-r from-yellow-500 to-amber-500 text-white px-8 py-4 rounded-xl font-medium hover:scale-105 transition-all duration-300 shadow-lg"
+              className="bg-gradient-to-r from-yellow-500 to-amber-500 text-black px-8 py-4 rounded-xl font-medium hover:scale-105 transition-all duration-300 shadow-lg"
             >
               View Sponsorship Tiers
             </a>
@@ -304,7 +304,7 @@ const Sponsorship = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button 
               onClick={() => setShowContactForm(true)}
-              className="bg-gradient-to-r from-yellow-500 to-amber-500 text-white px-8 py-4 rounded-xl font-medium hover:scale-105 transition-all duration-300 shadow-lg"
+              className="bg-gradient-to-r from-yellow-500 to-amber-500 text-black px-8 py-4 rounded-xl font-medium hover:scale-105 transition-all duration-300 shadow-lg"
             >
               Contact Our Team
             </button>
@@ -430,7 +430,7 @@ const Sponsorship = () => {
             {/* Button */}
             <button
               onClick={copyEmailToClipboard}
-              className="w-full bg-gradient-to-r from-yellow-500 to-amber-500 text-white px-6 py-3 rounded-xl font-medium hover:scale-105 transition-all duration-300 shadow-lg flex items-center justify-center gap-2"
+              className="w-full bg-gradient-to-r from-yellow-500 to-amber-500 text-black px-6 py-3 rounded-xl font-medium hover:scale-105 transition-all duration-300 shadow-lg flex items-center justify-center gap-2"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />

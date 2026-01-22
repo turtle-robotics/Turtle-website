@@ -70,7 +70,7 @@ const Apply = () => {
           {applicationsOpen && (
             <a 
               href="https://forms.gle/59pUiPUCpDrgBCqn7"
-              className="inline-block bg-gradient-to-r from-yellow-500 to-amber-500 text-white px-16 py-6 rounded-xl text-xl font-light tracking-wide hover:scale-105 transition-all duration-300 shadow-premium mb-6"
+              className="inline-block bg-gradient-to-r from-yellow-500 to-amber-500 text-black px-16 py-6 rounded-xl text-xl font-light tracking-wide hover:scale-105 transition-all duration-300 shadow-premium mb-6"
               style={{marginTop: '2rem'}}
             >
               APPLY NOW

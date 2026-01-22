@@ -49,39 +49,37 @@ const Hatchling = () => {
   }, []);
 
   return (
-
     <div className="min-h-screen">
-     {/* Hero Section */}
-<section
-  ref={heroRef}
-  className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden"
->
-  {/* Background Image */}
-  <img
-    src="/assets/GeneralPhotos/Fall_2025_CSTAT_Hatchling_Group_Photo.webp"
-    alt="Hatchling Program Background"
-    className="absolute inset-0 w-full h-full object-cover object-center brightness-110 dark:brightness-95"
-  />
+      {/* Hero Section */}
+      <section
+        ref={heroRef}
+        className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden"
+      >
+        {/* Background Image */}
+        <img
+          src="/assets/GeneralPhotos/Fall_2025_CSTAT_Hatchling_Group_Photo.webp"
+          alt="Hatchling Program Background"
+          className="absolute inset-0 w-full h-full object-cover object-center brightness-110 dark:brightness-95"
+        />
 
-  {/* Overlay for light contrast */}
-  <div className="absolute inset-0 bg-black/25 dark:bg-black/25"></div>
+        {/* Overlay for light contrast */}
+        <div className="absolute inset-0 bg-black/25 dark:bg-black/25"></div>
 
-  {/* Text only — no box */}
-  <div className="relative text-center z-10 max-w-6xl mx-auto -translate-y-36">
-    <h1 className="text-5xl md:text-7xl lg:text-8xl font-extralight tracking-tight text-white drop-shadow-2xl">
-      <span className="block">HATCHLING</span>
-      <span className="block">DEVELOPMENT</span>
-      <span className="block text-accent">PROGRAM</span>
-    </h1>
+        {/* Text only — no box */}
+        <div className="relative text-center z-10 max-w-6xl mx-auto -translate-y-36">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-extralight tracking-tight text-black drop-shadow-2xl">
+            <span className="block">HATCHLING</span>
+            <span className="block">DEVELOPMENT</span>
+            <span className="block text-accent">PROGRAM</span>
+          </h1>
 
-    <div className="founding-info mt-8">
-      <p className="text-lg md:text-xl font-light text-gray-100 drop-shadow-md">
-        Founded 2015 • External Expansion 2025
-      </p>
-    </div>
-  </div>
-</section>
-
+          <div className="founding-info mt-8">
+            <p className="text-lg md:text-xl font-light text-gray-800 drop-shadow-md">
+              Founded 2015 • External Expansion 2025
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* Mission Statement Section */}
       <section className="py-24 px-4">
@@ -92,7 +90,9 @@ const Hatchling = () => {
 
           <div className="glass-card p-12 rounded-2xl text-center">
             <p className="text-xl md:text-2xl font-light text-gray-600 dark:text-gray-400 leading-relaxed max-w-4xl mx-auto">
-             Founded in the fall of 2015, Hatchling is our premier development program that introduces foundational technical, soft, and engineering skills
+              Founded in the fall of 2015, Hatchling is our premier development
+              program that introduces foundational technical, soft, and engineering
+              skills
             </p>
           </div>
         </div>
@@ -132,9 +132,7 @@ const Hatchling = () => {
           </div>
 
           <div className="text-center">
-            <p className="text-lg font-light text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-12">
-
-            </p>
+            <p className="text-lg font-light text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-12"></p>
 
             {/* Bring Hatchling to Your Organization */}
             <div className="glass-card p-8 rounded-2xl max-w-2xl mx-auto">
@@ -148,7 +146,7 @@ const Hatchling = () => {
               </p>
               <a
                 href="mailto:turtlerobotics@gmail.com?subject=Hatchling%20Program%20Inquiry&body=Hello,%20I'm%20interested%20in%20bringing%20the%20Hatchling%20program%20to%20my%20student%20organization.%20Please%20provide%20more%20information%20about%20partnership%20opportunities."
-                className="inline-block bg-gradient-to-r from-yellow-500 to-amber-500 text-white px-8 py-3 rounded-xl text-lg font-light tracking-wide hover:scale-105 transition-all duration-300 shadow-lg"
+                className="inline-block bg-gradient-to-r from-yellow-500 to-amber-500 text-black px-8 py-3 rounded-xl text-lg font-light tracking-wide hover:scale-105 transition-all duration-300 shadow-lg"
               >
                 Inquire Now
               </a>
@@ -164,27 +162,25 @@ const Hatchling = () => {
             HATCHLING <span className="text-accent">GALLERY</span>
           </h2>
 
-        <div className="rounded-2xl overflow-hidden border border-gray-200/50 dark:border-gray-700/50 glass-card w-full max-w-7xl mx-auto">
-  <ImageCarousel
-    images={[
-      "/assets/20250427_202459_BFD66E.JPEG",
-      "/assets/20250426_155351.jpg",
-      "/assets/image_2025-09-30_002708253.png",
-      "/assets/image_2025-09-30_002910095.png",
-      "/assets/image_2025-09-30_002458601.png",
-    ]}
-    autoPlay={true}
-    intervalMs={4000}
-    aspectRatio="4/3"
-    maxHeight="98vh"
-  />
-</div>
-
-
+          <div className="rounded-2xl overflow-hidden border border-gray-200/50 dark:border-gray-700/50 glass-card w-full max-w-7xl mx-auto">
+            <ImageCarousel
+              images={[
+                "/assets/20250427_202459_BFD66E.JPEG",
+                "/assets/20250426_155351.jpg",
+                "/assets/image_2025-09-30_002708253.png",
+                "/assets/image_2025-09-30_002910095.png",
+                "/assets/image_2025-09-30_002458601.png",
+              ]}
+              autoPlay={true}
+              intervalMs={4000}
+              aspectRatio="4/3"
+              maxHeight="98vh"
+            />
+          </div>
         </div>
       </section>
 
-       {/* Learning Objectives and Schedule Section */}
+      {/* Learning Objectives and Schedule Section */}
       <section className="py-24 px-4 bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-20 text-gray-800 dark:text-gray-200">
@@ -558,7 +554,6 @@ const Hatchling = () => {
                           downloadBtn.style.display = "inline-block";
                         }
                       }}
-
                     >
                       <option value="">Select a week...</option>
                       <option value="1">Week 1: Introductions</option>
@@ -569,7 +564,7 @@ const Hatchling = () => {
                       id="downloadBtn"
                       href="#"
                       download
-                      className="bg-gradient-to-r from-yellow-500 to-amber-500 text-white px-6 py-3 rounded-lg text-sm font-light hover:from-yellow-600 hover:to-amber-600 transition-all duration-300 hidden"
+                      className="bg-gradient-to-r from-yellow-500 to-amber-500 text-black px-6 py-3 rounded-lg text-sm font-light hover:from-yellow-600 hover:to-amber-600 transition-all duration-300 hidden"
                     >
                       Download PDF
                     </a>
@@ -586,52 +581,52 @@ const Hatchling = () => {
             </div>
           </div>
 
-{/* Additional Materials */}
-<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-  <div className="glass-card p-8 rounded-2xl text-center hover:scale-105 transition-all duration-300">
-    <div className="text-5xl mb-6">📝</div>
-    <h3 className="text-xl font-light text-gray-800 dark:text-gray-200 mb-6">
-      Hatchling Syllabus
-    </h3>
-    <a
-      href="/pdfs/Hatchling_Syllabus.pdf"
-      download
-      className="inline-block bg-gradient-to-r from-yellow-500 to-amber-500 text-white px-6 py-3 rounded-lg text-sm font-light hover:from-yellow-600 hover:to-amber-600 transition-all duration-300"
-    >
-      Download Notes
-    </a>
-  </div>
+          {/* Additional Materials */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="glass-card p-8 rounded-2xl text-center hover:scale-105 transition-all duration-300">
+              <div className="text-5xl mb-6">📝</div>
+              <h3 className="text-xl font-light text-gray-800 dark:text-gray-200 mb-6">
+                Hatchling Syllabus
+              </h3>
+              <a
+                href="/pdfs/Hatchling_Syllabus.pdf"
+                download
+                className="inline-block bg-gradient-to-r from-yellow-500 to-amber-500 text-black px-6 py-3 rounded-lg text-sm font-light hover:from-yellow-600 hover:to-amber-600 transition-all duration-300"
+              >
+                Download Notes
+              </a>
+            </div>
 
-  <div className="glass-card p-8 rounded-2xl text-center hover:scale-105 transition-all duration-300">
-    <div className="text-5xl mb-6">🎨</div>
-    <h3 className="text-xl font-light text-gray-800 dark:text-gray-200 mb-6">
-      CAD Examples
-    </h3>
-    <a
-      href="/pdfs/Hatchling CAD Examples.zip"
-      download
-      className="inline-block bg-gradient-to-r from-yellow-500 to-amber-500 text-white px-6 py-3 rounded-lg text-sm font-light hover:from-yellow-600 hover:to-amber-600 transition-all duration-300"
-    >
-      Download Examples
-    </a>
-  </div>
+            <div className="glass-card p-8 rounded-2xl text-center hover:scale-105 transition-all duration-300">
+              <div className="text-5xl mb-6">🎨</div>
+              <h3 className="text-xl font-light text-gray-800 dark:text-gray-200 mb-6">
+                CAD Examples
+              </h3>
+              <a
+                href="/pdfs/Hatchling CAD Examples.zip"
+                download
+                className="inline-block bg-gradient-to-r from-yellow-500 to-amber-500 text-black px-6 py-3 rounded-lg text-sm font-light hover:from-yellow-600 hover:to-amber-600 transition-all duration-300"
+              >
+                Download Examples
+              </a>
+            </div>
 
-  <div className="glass-card p-8 rounded-2xl text-center hover:scale-105 transition-all duration-300">
-    <div className="text-5xl mb-6">⚡</div>
-    <h3 className="text-xl font-light text-gray-800 dark:text-gray-200 mb-6">
-      Project Tips & Controller Resources
-    </h3>
-    <a
-      href="/pdfs/controller-info-code.pdf"
-      download
-      className="inline-block bg-gradient-to-r from-yellow-500 to-amber-500 text-white px-6 py-3 rounded-lg text-sm font-light hover:from-yellow-600 hover:to-amber-600 transition-all duration-300"
-    >
-      Download Guide
-    </a>
-  </div>
-  </div>             
-</div>
-</section>
+            <div className="glass-card p-8 rounded-2xl text-center hover:scale-105 transition-all duration-300">
+              <div className="text-5xl mb-6">⚡</div>
+              <h3 className="text-xl font-light text-gray-800 dark:text-gray-200 mb-6">
+                Project Tips & Controller Resources
+              </h3>
+              <a
+                href="/pdfs/controller-info-code.pdf"
+                download
+                className="inline-block bg-gradient-to-r from-yellow-500 to-amber-500 text-black px-6 py-3 rounded-lg text-sm font-light hover:from-yellow-600 hover:to-amber-600 transition-all duration-300"
+              >
+                Download Guide
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Stats and Impact Section */}
       <section className="py-24 px-4 bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900">
@@ -767,7 +762,7 @@ const Hatchling = () => {
                 <a
                   href="/pdfs/hatchling-impact-report.pdf"
                   download
-                  className="inline-block bg-gradient-to-r from-yellow-500 to-amber-500 text-white px-6 py-3 rounded-lg text-sm font-light hover:from-yellow-600 hover:to-amber-600 transition-all duration-300"
+                  className="inline-block bg-gradient-to-r from-yellow-500 to-amber-500 text-black px-6 py-3 rounded-lg text-sm font-light hover:from-yellow-600 hover:to-amber-600 transition-all duration-300"
                 >
                   Download Full Report
                 </a>
@@ -792,13 +787,20 @@ const Hatchling = () => {
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <Link
               to="/apply"
-              className="bg-gradient-turtle text-white px-12 py-5 rounded-xl text-lg font-light tracking-wide hover:scale-105 transition-all duration-300 shadow-premium"
+              className="bg-gradient-turtle text-black px-12 py-5 rounded-xl text-lg font-light tracking-wide hover:scale-105 transition-all duration-300 shadow-premium"
             >
               APPLY NOW
             </Link>
+            <a
+              href="/pdfs/hatchling-impact-report.pdf"
+              download
+              className="inline-block bg-gradient-to-r from-yellow-500 to-amber-500 text-black px-6 py-3 rounded-lg text-sm font-light hover:from-yellow-600 hover:to-amber-600 transition-all duration-300"
+            >
+              Download Full Report
+            </a>
             <Link
               to="/about"
-              className="glass-card text-gray-800 dark:text-gray-200 px-12 py-5 rounded-xl text-lg font-light tracking-wide hover:scale-105 transition-all duration-300"
+              className="bg-gradient-turtle text-black px-12 py-5 rounded-xl text-lg font-light tracking-wide hover:scale-105 transition-all duration-300 shadow-premium"
             >
               LEARN MORE
             </Link>

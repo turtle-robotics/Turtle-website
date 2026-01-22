@@ -60,8 +60,8 @@ const Layout = ({ children }) => {
                 to={sponsorItem.path}
                 className={`text-sm font-medium tracking-wide transition-all duration-300 px-4 py-2 rounded-lg ${
                   location.pathname === sponsorItem.path
-                    ? 'bg-gradient-to-r from-yellow-500 to-amber-500 text-white shadow-lg'
-                    : 'bg-gradient-to-r from-yellow-400 to-amber-400 text-white hover:from-yellow-500 hover:to-amber-500 shadow-md hover:shadow-lg'
+                    ? 'bg-gradient-to-r from-yellow-500 to-amber-500 text-black shadow-lg'
+                    : 'bg-gradient-to-r from-yellow-400 to-amber-400 text-black hover:from-yellow-500 hover:to-amber-500 shadow-md hover:shadow-lg'
                 }`}
               >
                 {sponsorItem.label}
@@ -96,7 +96,7 @@ const Layout = ({ children }) => {
               className={`flex flex-col items-center justify-center w-12 h-12 rounded-lg transition-all duration-300 ${
                 location.pathname === item.path ||
                 (item.path === '/development-programs' && (location.pathname === '/hatchling' || location.pathname === '/workshop-series'))
-                  ? 'bg-yellow-500 text-white'
+                  ? 'bg-yellow-500 text-black'
                   : 'text-gray-300 hover:bg-gray-800'
               }`}
             >
@@ -111,7 +111,7 @@ const Layout = ({ children }) => {
             to="/admin"
             className={`flex flex-col items-center justify-center w-12 h-12 rounded-lg transition-all duration-300 ${
               location.pathname === '/admin'
-                ? 'bg-yellow-500 text-white'
+                ? 'bg-yellow-500 text-black'
                 : 'text-gray-300 hover:bg-gray-800'
             }`}
             title="Admin"

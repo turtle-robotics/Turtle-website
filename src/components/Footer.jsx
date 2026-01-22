@@ -14,7 +14,7 @@ const Footer = () => {
           <div className="space-y-6">
             <Link 
               to="/hatchling" 
-              className="inline-block bg-gradient-to-r from-yellow-500 to-amber-500 text-white px-6 py-3 rounded-lg font-medium hover:scale-105 transition-all duration-300"
+              className="inline-block bg-gradient-to-r from-yellow-500 to-amber-500 text-black px-6 py-3 rounded-lg font-medium hover:scale-105 transition-all duration-300"
             >
               Explore Program
             </Link>
