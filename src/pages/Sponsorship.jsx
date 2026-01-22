@@ -270,9 +270,9 @@ const Sponsorship = () => {
                 Advanced robotic vehicle equipped with olfactory sensors for chemical detection and identification.
               </p>
               <div className="flex flex-wrap gap-2">
-                <span className="text-xs bg-yellow-200 text-yellow-800 px-3 py-1 rounded-full">IMS Sensors</span>
-                <span className="text-xs bg-yellow-200 text-yellow-800 px-3 py-1 rounded-full">Machine Learning</span>
-                <span className="text-xs bg-yellow-200 text-yellow-800 px-3 py-1 rounded-full">Robotics</span>
+                <span className="text-xs bg-yellow-600 text-yellow-800 px-3 py-1 rounded-full">IMS Sensors</span>
+                <span className="text-xs bg-yellow-600 text-yellow-800 px-3 py-1 rounded-full">Machine Learning</span>
+                <span className="text-xs bg-yellow-600 text-yellow-800 px-3 py-1 rounded-full">Robotics</span>
               </div>
             </div>
 
@@ -282,9 +282,9 @@ const Sponsorship = () => {
                 Development of advanced pathfinding and obstacle avoidance algorithms for mobile robots.
               </p>
               <div className="flex flex-wrap gap-2">
-                <span className="text-xs bg-yellow-200 text-yellow-800 px-3 py-1 rounded-full">Computer Vision</span>
-                <span className="text-xs bg-yellow-200 text-yellow-800 px-3 py-1 rounded-full">SLAM</span>
-                <span className="text-xs bg-yellow-200 text-yellow-800 px-3 py-1 rounded-full">Control Systems</span>
+                <span className="text-xs bg-yellow-600 text-yellow-800 px-3 py-1 rounded-full">Computer Vision</span>
+                <span className="text-xs bg-yellow-600 text-yellow-800 px-3 py-1 rounded-full">SLAM</span>
+                <span className="text-xs bg-yellow-600 text-yellow-800 px-3 py-1 rounded-full">Control Systems</span>
               </div>
             </div>
           </div>
