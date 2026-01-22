@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import ShowcaseProjectInterestForm from '../components/ShowcaseProjectInterestForm';
+// import ShowcaseProjectInterestForm from '../components/ShowcaseProjectInterestForm';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -220,8 +220,20 @@ function Showcase() {
         </div>
       </section>
 
-      {/* SHOWCASE PROJECT INTEREST FORM SECTION */}
-      <ShowcaseProjectInterestForm />
+      {/* SHOWCASE PROJECT INTEREST FORM SECTION (deprecated Jan 2026, replaced with email link) */}
+      <section className="py-16 px-4 bg-white dark:bg-gray-800">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-extralight text-gray-800 dark:text-gray-200 mb-4">
+            Showcase Project Interest
+          </h2>
+          <p className="text-xl font-light text-gray-600 dark:text-gray-400 mb-6">
+            To express your interest in a project, please email us directly at:
+          </p>
+          <a href="mailto:turtlerobotics@gmail.com" className="text-xl text-accent underline hover:text-accent/80 transition-colors duration-200">
+            turtlerobotics@gmail.com
+          </a>
+        </div>
+      </section>
 
       <style jsx>{`
         @keyframes confetti-fall {

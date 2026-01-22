@@ -1,4 +1,6 @@
-// src/components/SponsorContactForm.jsx
+// SPONSOR CONTACT FORM DEPRECATED JAN 2026
+// Commented out as per migration to email link only
+/*
 import { useState } from 'react';
 import { supabase } from '../utils/supabaseClient';
 
@@ -203,3 +205,4 @@ const SponsorContactForm = ({ onClose }) => {
 };
 
 export default SponsorContactForm;
+*/

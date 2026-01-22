@@ -1,3 +1,6 @@
+// CONTACT FORM DEPRECATED JAN 2026
+// Commented out as per migration to email link only
+/*
 import { useState } from 'react'
 
 const ContactForm = () => {
@@ -167,3 +170,4 @@ const ContactForm = () => {
 }
 
 export default ContactForm 
+*/

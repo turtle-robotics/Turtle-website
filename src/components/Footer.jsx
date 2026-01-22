@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useState } from 'react';
-import SponsorContactForm from './SponsorContactForm';
+// import SponsorContactForm from './SponsorContactForm';
 
 const Footer = () => {
   const [showContactForm, setShowContactForm] = useState(false);
@@ -152,7 +152,14 @@ const Footer = () => {
                               Fill out the form below and we'll get back to you shortly.
                             </p>
                           </div>
+                          {/*
                           <SponsorContactForm onClose={() => setShowContactForm(false)} />
+                          */}
+                          <div className="text-center my-8">
+                            <a href="mailto:turtlerobotics@gmail.com" className="text-xl text-accent underline hover:text-accent/80 transition-colors duration-200">
+                              turtlerobotics@gmail.com
+                            </a>
+                          </div>
                         </div>
                       </div>
                     )}
