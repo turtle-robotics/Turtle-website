@@ -140,35 +140,61 @@ const Apply = () => {
         </div>
       </section>
 
-      {/* Requirements Section */}
+      {/* What We Look For Section */}
       <section className="py-24 px-4 bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-20 text-gray-800 dark:text-gray-200">
+
+          {/* Main Heading */}
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-16 text-gray-800 dark:text-gray-200">
             WHAT WE <span className="text-accent">LOOK FOR</span>
           </h2>
-          
-          <div className="grid md:grid-cols-2 gap-12">
-            <div>
-              <h3 className="text-2xl font-light text-gray-800 dark:text-gray-200 mb-6">Technical Skills</h3>
-              <ul className="space-y-4">
-                <li className="flex items-start"><span className="text-accent mr-3">•</span><span className="text-gray-600 dark:text-gray-400 font-light">Programming experience (Python, C++, ROS)</span></li>
-                <li className="flex items-start"><span className="text-accent mr-3">•</span><span className="text-gray-600 dark:text-gray-400 font-light">Understanding of robotics fundamentals</span></li>
-                <li className="flex items-start"><span className="text-accent mr-3">•</span><span className="text-gray-600 dark:text-gray-400 font-light">Experience with hardware and electronics</span></li>
-                <li className="flex items-start"><span className="text-accent mr-3">•</span><span className="text-gray-600 dark:text-gray-400 font-light">Knowledge of control systems and algorithms</span></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-2xl font-light text-gray-800 dark:text-gray-200 mb-6">Personal Qualities</h3>
-              <ul className="space-y-4">
-                <li className="flex items-start"><span className="text-accent mr-3">•</span><span className="text-gray-600 dark:text-gray-400 font-light">Strong problem-solving abilities</span></li>
-                <li className="flex items-start"><span className="text-accent mr-3">•</span><span className="text-gray-600 dark:text-gray-400 font-light">Excellent teamwork and communication</span></li>
-                <li className="flex items-start"><span className="text-accent mr-3">•</span><span className="text-gray-600 dark:text-gray-400 font-light">Passion for robotics and innovation</span></li>
-                <li className="flex items-start"><span className="text-accent mr-3">•</span><span className="text-gray-600 dark:text-gray-400 font-light">Commitment to learning and growth</span></li>
-              </ul>
+
+          {/* Hatchling Subsection */}
+          <div className="mb-20 text-center max-w-4xl mx-auto">
+            <h3 className="text-2xl md:text-3xl font-light text-gray-800 dark:text-gray-200 mb-6">
+              Hatchling
+            </h3>
+            <p className="text-lg font-light text-gray-600 dark:text-gray-400 leading-relaxed">
+              No skills or prior experience required. The Hatchling Program is designed for students of all
+              backgrounds who are eager to learn, explore robotics, and grow alongside a supportive team.
+            </p>
+          </div>
+
+          {/* Advanced Projects Subsection */}
+          <div>
+            <h3 className="text-2xl md:text-3xl font-light text-gray-800 dark:text-gray-200 mb-12 text-center">
+              Advanced Projects
+            </h3>
+
+            <div className="grid md:grid-cols-2 gap-12">
+              <div>
+                <h4 className="text-xl font-light text-gray-800 dark:text-gray-200 mb-6">
+                  Technical Skills
+                </h4>
+                <ul className="space-y-4">
+                  <li className="flex items-start"><span className="text-accent mr-3">•</span><span className="text-gray-600 dark:text-gray-400 font-light">Programming experience (Python, C++, ROS)</span></li>
+                  <li className="flex items-start"><span className="text-accent mr-3">•</span><span className="text-gray-600 dark:text-gray-400 font-light">Understanding of robotics fundamentals</span></li>
+                  <li className="flex items-start"><span className="text-accent mr-3">•</span><span className="text-gray-600 dark:text-gray-400 font-light">Experience with hardware and electronics</span></li>
+                  <li className="flex items-start"><span className="text-accent mr-3">•</span><span className="text-gray-600 dark:text-gray-400 font-light">Knowledge of control systems and algorithms</span></li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="text-xl font-light text-gray-800 dark:text-gray-200 mb-6">
+                  Personal Qualities
+                </h4>
+                <ul className="space-y-4">
+                  <li className="flex items-start"><span className="text-accent mr-3">•</span><span className="text-gray-600 dark:text-gray-400 font-light">Strong problem-solving abilities</span></li>
+                  <li className="flex items-start"><span className="text-accent mr-3">•</span><span className="text-gray-600 dark:text-gray-400 font-light">Excellent teamwork and communication</span></li>
+                  <li className="flex items-start"><span className="text-accent mr-3">•</span><span className="text-gray-600 dark:text-gray-400 font-light">Passion for robotics and innovation</span></li>
+                  <li className="flex items-start"><span className="text-accent mr-3">•</span><span className="text-gray-600 dark:text-gray-400 font-light">Commitment to learning and growth</span></li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </section>
+
+
     </div>
   )
 }
