@@ -28,6 +28,7 @@
 // export { supabase };
 
 // Temporary placeholder export while Supabase is archived
+// This mock provides enough interface to prevent the AdminDashboard from crashing
 export const supabase = {
   from: () => ({
     insert: async () => {
@@ -35,7 +36,13 @@ export const supabase = {
       return { error: new Error('Supabase is archived') };
     },
     select: () => ({
-      order: () => Promise.resolve({ data: [], error: null })
+      order: () => Promise.resolve({ data: [], error: null }),
+      eq: () => ({
+        single: () => Promise.resolve({ data: null, error: null })
+      })
+    }),
+    delete: () => ({
+      eq: () => Promise.resolve({ data: null, error: null })
     })
   }),
   auth: {
