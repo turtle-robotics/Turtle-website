@@ -29,18 +29,28 @@ const Footer = () => {
                 href="https://www.instagram.com/turtle_robotics/?hl=en"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-gradient-to-r from-yellow-500 to-amber-500 rounded-full flex items-center justify-center text-white hover:scale-110 transition-all duration-300"
+                className="w-10 h-10 bg-gradient-to-r from-yellow-500 to-amber-500 rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300"
               >
-                <span className="text-sm">📷</span>
+                <img
+                  src="/assets/icons/Instagram_Glyph_Gradient.png"
+                  alt="Instagram"
+                  className="w-7 h-7 object-contain"
+                  style={{ filter: 'drop-shadow(0 1px 2px rgba(0,0,0,0.10))' }}
+                />
               </a>
 
               <a
                 href="https://www.linkedin.com/company/tamu-turtle"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-gradient-to-r from-yellow-500 to-amber-500 rounded-lg flex items-center justify-center text-white hover:scale-110 transition-all duration-300"
+                className="w-10 h-10 bg-gradient-to-r from-yellow-500 to-amber-500 rounded-lg flex items-center justify-center hover:scale-110 transition-all duration-300"
               >
-                <span className="text-sm font-bold">in</span>
+                <img
+                  src="/assets/icons/LI-In-Bug.png"
+                  alt="LinkedIn"
+                  className="w-7 h-7 object-contain"
+                  style={{ filter: 'drop-shadow(0 1px 2px rgba(0,0,0,0.10))' }}
+                />
               </a>
             </div>
           </div>

@@ -271,6 +271,14 @@ const Projects = () => {
                     <button className="inline-block text-accent hover:text-accent/80 transition-colors duration-200 text-sm font-light border border-accent/30 hover:border-accent px-4 py-2 rounded-lg">
                       View Details →
                     </button>
+                    {project.status !== 'Archived' && (
+                      <a
+                        href="/apply"
+                        className="inline-block mt-2 bg-gradient-to-r from-yellow-500 to-amber-500 text-white px-4 py-2 rounded-lg text-sm font-light tracking-wide hover:scale-105 transition-all duration-300 shadow-premium"
+                      >
+                        Apply
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
