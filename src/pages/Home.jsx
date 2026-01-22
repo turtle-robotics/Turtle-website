@@ -70,7 +70,7 @@ const Home = () => {
     <div className="flex flex-col sm:flex-row gap-6 justify-center items-center relative z-50">
       <Link 
         to="/projects" 
-        className="hero-button bg-gradient-to-r from-yellow-500 to-amber-500 text-black px-10 py-5 rounded-xl font-medium hover:scale-105 transition-all duration-300 shadow-lg relative z-50"
+        className="hero-button bg-yellow-500 text-black px-10 py-5 rounded-xl font-medium hover:scale-105 transition-all duration-300 shadow-lg relative z-50"
       >
         EXPLORE PROJECTS
       </Link>
@@ -125,7 +125,7 @@ const Home = () => {
           
           <a 
             href="https://forms.gle/59pUiPUCpDrgBCqn7"
-            className="inline-block bg-gradient-to-r from-yellow-500 to-amber-500 text-black px-16 py-6 rounded-xl text-xl font-light tracking-wide hover:scale-105 transition-all duration-300 shadow-premium"
+            className="inline-block bg-yellow-500 text-black px-16 py-6 rounded-xl text-xl font-light tracking-wide hover:scale-105 transition-all duration-300 shadow-premium"
           >
             APPLY NOW
           </a>
@@ -159,7 +159,7 @@ const Home = () => {
               <div className="text-xl font-light text-gray-600 dark:text-gray-400 mb-2">November 21, 2025</div>
               <div className="text-xl font-light text-gray-600 dark:text-gray-400 mb-2">1:00 PM - 5:00 PM</div>
               <div className="text-base font-light text-gray-600 dark:text-gray-400 mb-6">Zachry Engineering Building<br/>Virginia C Brown Atrium</div>
-              <div className="bg-gradient-to-r from-yellow-500 to-amber-500 text-white px-8 py-3 rounded-xl font-light tracking-wide inline-block">
+              <div className="bg-yellow-500 text-black px-8 py-3 rounded-xl font-light tracking-wide inline-block">
                 Learn More →
               </div>
             </a>

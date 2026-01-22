@@ -146,7 +146,7 @@ const Hatchling = () => {
               </p>
               <a
                 href="mailto:turtlerobotics@gmail.com?subject=Hatchling%20Program%20Inquiry&body=Hello,%20I'm%20interested%20in%20bringing%20the%20Hatchling%20program%20to%20my%20student%20organization.%20Please%20provide%20more%20information%20about%20partnership%20opportunities."
-                className="inline-block bg-gradient-to-r from-yellow-500 to-amber-500 text-black px-8 py-3 rounded-xl text-lg font-light tracking-wide hover:scale-105 transition-all duration-300 shadow-lg"
+                className="inline-block bg-yellow-500 text-black px-8 py-3 rounded-xl text-lg font-light tracking-wide hover:scale-105 transition-all duration-300 shadow-lg"
               >
                 Inquire Now
               </a>
@@ -564,7 +564,7 @@ const Hatchling = () => {
                       id="downloadBtn"
                       href="#"
                       download
-                      className="bg-gradient-to-r from-yellow-500 to-amber-500 text-black px-6 py-3 rounded-lg text-sm font-light hover:from-yellow-600 hover:to-amber-600 transition-all duration-300 hidden"
+                      className="bg-yellow-500 text-black px-6 py-3 rounded-lg text-sm font-light transition-all duration-300 hidden"
                     >
                       Download PDF
                     </a>
@@ -591,7 +591,7 @@ const Hatchling = () => {
               <a
                 href="/pdfs/Hatchling_Syllabus.pdf"
                 download
-                className="inline-block bg-gradient-to-r from-yellow-500 to-amber-500 text-black px-6 py-3 rounded-lg text-sm font-light hover:from-yellow-600 hover:to-amber-600 transition-all duration-300"
+                className="inline-block bg-yellow-500 text-black px-6 py-3 rounded-lg text-sm font-light hover:bg-yellow-600 transition-all duration-300"
               >
                 Download Notes
               </a>
@@ -605,7 +605,7 @@ const Hatchling = () => {
               <a
                 href="/pdfs/Hatchling CAD Examples.zip"
                 download
-                className="inline-block bg-gradient-to-r from-yellow-500 to-amber-500 text-black px-6 py-3 rounded-lg text-sm font-light hover:from-yellow-600 hover:to-amber-600 transition-all duration-300"
+                className="inline-block bg-yellow-500 text-black px-6 py-3 rounded-lg text-sm font-light transition-all duration-300"
               >
                 Download Examples
               </a>
@@ -619,7 +619,7 @@ const Hatchling = () => {
               <a
                 href="/pdfs/controller-info-code.pdf"
                 download
-                className="inline-block bg-gradient-to-r from-yellow-500 to-amber-500 text-black px-6 py-3 rounded-lg text-sm font-light hover:from-yellow-600 hover:to-amber-600 transition-all duration-300"
+                className="inline-block bg-yellow-500 text-black px-6 py-3 rounded-lg text-sm font-light hover:bg-yellow-600 transition-all duration-300"
               >
                 Download Guide
               </a>
@@ -762,7 +762,7 @@ const Hatchling = () => {
                 <a
                   href="/pdfs/hatchling-impact-report.pdf"
                   download
-                  className="inline-block bg-gradient-to-r from-yellow-500 to-amber-500 text-black px-6 py-3 rounded-lg text-sm font-light hover:from-yellow-600 hover:to-amber-600 transition-all duration-300"
+                  className="inline-block bg-yellow-500 text-black px-6 py-3 rounded-lg text-sm font-light hover:bg-yellow-600 transition-all duration-300"
                 >
                   Download Full Report
                 </a>
@@ -794,13 +794,13 @@ const Hatchling = () => {
             <a
               href="/pdfs/hatchling-impact-report.pdf"
               download
-              className="inline-block bg-gradient-to-r from-yellow-500 to-amber-500 text-black px-6 py-3 rounded-lg text-sm font-light hover:from-yellow-600 hover:to-amber-600 transition-all duration-300"
+              className="inline-block bg-yellow-500 text-black px-6 py-3 rounded-lg text-sm font-light hover:bg-yellow-600 transition-all duration-300"
             >
               Download Full Report
             </a>
             <Link
               to="/about"
-              className="bg-gradient-turtle text-black px-12 py-5 rounded-xl text-lg font-light tracking-wide hover:scale-105 transition-all duration-300 shadow-premium"
+              className="bg-yellow-500 text-black px-12 py-5 rounded-xl text-lg font-light tracking-wide hover:scale-105 transition-all duration-300 shadow-premium"
             >
               LEARN MORE
             </Link>

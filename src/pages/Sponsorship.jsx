@@ -61,7 +61,7 @@ const Sponsorship = () => {
     {
       name: "Bronze Sponsor",
       amount: "$500",
-      color: "from-yellow-600 to-amber-600",
+      color: "bg-[#cd7f32]", // Bronze
       benefits: [
         "Logo placement on website",
         "Recognition at events",
@@ -72,7 +72,7 @@ const Sponsorship = () => {
     {
       name: "Silver Sponsor",
       amount: "$1,500",
-      color: "from-yellow-500 to-amber-500",
+      color: "bg-gray-300", // Silver
       benefits: [
         "All Bronze benefits",
         "Resume Bank",
@@ -84,7 +84,7 @@ const Sponsorship = () => {
     {
       name: "Gold Sponsor",
       amount: "$3,000",
-      color: "from-yellow-400 to-yellow-500",
+      color: "bg-[#FFD700]", // Gold (deeper gold)
       benefits: [
         "All Bronze benefits",
         "All Silver benefits",
@@ -94,7 +94,7 @@ const Sponsorship = () => {
     {
       name: "Platinum Sponsor",
       amount: "$5,000",
-      color: "from-yellow-300 to-yellow-400",
+      color: "bg-gradient-to-br from-gray-200 via-white to-gray-400", // Platinum
       benefits: [
         "All Bronze benefits",
         "All Silver benefits",
@@ -134,7 +134,7 @@ const Sponsorship = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
               href="#sponsorship-tiers"
-              className="bg-gradient-to-r from-yellow-500 to-amber-500 text-black px-8 py-4 rounded-xl font-medium hover:scale-105 transition-all duration-300 shadow-lg"
+              className="bg-yellow-500 text-black px-8 py-4 rounded-xl font-medium hover:scale-105 transition-all duration-300 shadow-lg"
             >
               View Sponsorship Tiers
             </a>
@@ -233,7 +233,7 @@ const Sponsorship = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {sponsorshipTiers.map((tier, index) => (
               <div key={index} className="sponsor-section group">
-                <div className={`bg-gradient-to-br ${tier.color} p-8 rounded-2xl text-white shadow-lg hover:scale-105 transition-all duration-300`}>
+                <div className={`${tier.color} p-8 rounded-2xl text-black shadow-lg hover:scale-105 transition-all duration-300`}>
                   <h3 className="text-2xl font-light mb-2">{tier.name}</h3>
                   <div className="text-3xl font-bold mb-6">{tier.amount}</div>
                   <ul className="space-y-3">
@@ -304,7 +304,7 @@ const Sponsorship = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button 
               onClick={() => setShowContactForm(true)}
-              className="bg-gradient-to-r from-yellow-500 to-amber-500 text-black px-8 py-4 rounded-xl font-medium hover:scale-105 transition-all duration-300 shadow-lg"
+              className="bg-yellow-500 text-black px-8 py-4 rounded-xl font-medium hover:scale-105 transition-all duration-300 shadow-lg"
             >
               Contact Our Team
             </button>
@@ -418,7 +418,7 @@ const Sponsorship = () => {
             </p>
             
             {/* Email display */}
-            <div className="bg-gradient-to-r from-yellow-50 to-amber-50 dark:from-gray-700 dark:to-gray-600 rounded-xl p-6 mb-6 border-2 border-yellow-200 dark:border-yellow-600">
+            <div className="bg-yellow-50 dark:bg-gray-700 rounded-xl p-6 mb-6 border-2 border-yellow-200 dark:border-yellow-600">
               <p className="text-xs font-medium text-gray-500 dark:text-gray-400 mb-2 uppercase tracking-wide text-center">
                 Email Address
               </p>

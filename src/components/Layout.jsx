@@ -60,8 +60,8 @@ const Layout = ({ children }) => {
                 to={sponsorItem.path}
                 className={`text-sm font-medium tracking-wide transition-all duration-300 px-4 py-2 rounded-lg ${
                   location.pathname === sponsorItem.path
-                    ? 'bg-gradient-to-r from-yellow-500 to-amber-500 text-black shadow-lg'
-                    : 'bg-gradient-to-r from-yellow-400 to-amber-400 text-black hover:from-yellow-500 hover:to-amber-500 shadow-md hover:shadow-lg'
+                    ? 'bg-yellow-500 text-black shadow-lg'
+                    : 'bg-yellow-400 text-black hover:bg-yellow-500 shadow-md hover:shadow-lg'
                 }`}
               >
                 {sponsorItem.label}

@@ -176,7 +176,7 @@ const ProjectDetail = () => {
         <div className="mt-12 pt-8 border-t border-gray-700">
           <Link 
             to="/apply" 
-            className="inline-block bg-gradient-to-r from-yellow-500 to-amber-500 text-white px-8 py-3 rounded-lg font-medium hover:scale-105 transition-all duration-300"
+            className="inline-block bg-yellow-500 text-black px-8 py-3 rounded-lg font-medium hover:scale-105 transition-all duration-300"
           >
             Apply to Join This Project
           </Link>

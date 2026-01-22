@@ -55,7 +55,7 @@ const WorkshopSeries = () => {
           </h1>
           
           <div className="launching-text mb-8">
-            <div className="inline-block bg-gradient-to-r from-yellow-500 to-amber-500 text-black px-8 py-4 rounded-2xl text-2xl md:text-3xl font-light">
+            <div className="inline-block bg-yellow-500 text-black px-8 py-4 rounded-2xl text-2xl md:text-3xl font-light">
               Launching Fall 2025
             </div>
           </div>
@@ -105,7 +105,7 @@ const WorkshopSeries = () => {
           
           <a 
             href="mailto:turtlerobotics@gmail.com?subject=Workshop%20Series%20Updates&body=Hello,%20I'm%20interested%20in%20receiving%20updates%20about%20the%20Workshop%20Series%20launching%20in%20Fall%202025.%20Please%20add%20me%20to%20your%20notification%20list."
-            className="inline-block bg-gradient-to-r from-yellow-500 to-amber-500 text-black px-12 py-5 rounded-xl text-lg font-light tracking-wide hover:scale-105 transition-all duration-300 shadow-lg"
+            className="inline-block bg-yellow-500 text-black px-12 py-5 rounded-xl text-lg font-light tracking-wide hover:scale-105 transition-all duration-300 shadow-lg"
           >
             GET UPDATES
           </a>

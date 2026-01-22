@@ -14,7 +14,7 @@ const Footer = () => {
           <div className="space-y-6">
             <Link 
               to="/hatchling" 
-              className="inline-block bg-gradient-to-r from-yellow-500 to-amber-500 text-black px-6 py-3 rounded-lg font-medium hover:scale-105 transition-all duration-300"
+              className="inline-block bg-yellow-500 text-black px-6 py-3 rounded-lg font-medium hover:scale-105 transition-all duration-300"
             >
               Explore Program
             </Link>
@@ -29,7 +29,7 @@ const Footer = () => {
                 href="https://www.instagram.com/turtle_robotics/?hl=en"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-gradient-to-r from-yellow-500 to-amber-500 rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300"
+                className="w-10 h-10 bg-yellow-500 rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300"
               >
                 <img
                   src="/assets/Instagram_Glyph_Gradient.png"
@@ -43,7 +43,7 @@ const Footer = () => {
                 href="https://www.linkedin.com/company/tamu-turtle"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-gradient-to-r from-yellow-500 to-amber-500 rounded-lg flex items-center justify-center hover:scale-110 transition-all duration-300"
+                className="w-10 h-10 bg-yellow-500 rounded-lg flex items-center justify-center hover:scale-110 transition-all duration-300"
               >
                 <img
                   src="/assets/LI-In-Bug.png"
@@ -150,7 +150,7 @@ const Footer = () => {
                             </svg>
                           </button>
                           <div className="text-center mb-8">
-                            <div className="w-20 h-20 bg-gradient-to-r from-yellow-500 to-amber-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                            <div className="w-20 h-20 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
                               <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
                               </svg>
