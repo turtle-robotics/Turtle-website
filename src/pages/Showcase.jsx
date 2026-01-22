@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import ShowcaseProjectInterestForm from '../components/ShowcaseProjectInterestForm';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -220,8 +219,45 @@ function Showcase() {
         </div>
       </section>
 
-      {/* SHOWCASE PROJECT INTEREST FORM SECTION */}
-      <ShowcaseProjectInterestForm />
+      {/* SHOWCASE PROJECT INTEREST SECTION */}
+      <section className="py-16 px-4 bg-white dark:bg-gray-800">
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-extralight text-gray-800 dark:text-gray-200 mb-4">
+              Interested in <span className="text-yellow-600 dark:text-yellow-400">Showcase Projects</span>?
+            </h2>
+            <p className="text-xl font-light text-gray-600 dark:text-gray-400">
+              Let us know which projects you're most excited to see!
+            </p>
+          </div>
+
+          <div className="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700 dark:to-gray-600 p-8 md:p-12 rounded-3xl shadow-xl border border-gray-200 dark:border-gray-700 text-center">
+            <div className="w-20 h-20 bg-gradient-to-r from-yellow-500 to-amber-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+              <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            
+            <h3 className="text-2xl font-light text-gray-800 dark:text-gray-200 mb-4">
+              Get In Touch
+            </h3>
+            
+            <p className="text-gray-600 dark:text-gray-400 mb-8 font-light">
+              Have questions about showcase projects? Send us an email!
+            </p>
+            
+            <a
+              href="mailto:turtlerobotics@gmail.com"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-500 to-amber-500 text-white px-8 py-4 rounded-xl font-medium hover:scale-105 transition-all duration-300 shadow-lg"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              turtlerobotics@gmail.com
+            </a>
+          </div>
+        </div>
+      </section>
 
       <style jsx>{`
         @keyframes confetti-fall {
