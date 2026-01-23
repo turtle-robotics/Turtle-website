@@ -87,17 +87,17 @@ const Apply = () => {
           </h2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            <div className="glass-card pop-card p-10 rounded-2xl text-center hover:scale-[1.03] transition-all duration-300">
+            <div className="glass-card p-10 rounded-2xl text-center transition-all duration-300">
               <div className="text-5xl mb-6">📝</div>
               <h3 className="text-xl font-light mb-4 text-gray-800 dark:text-gray-200">Submit Application</h3>
               <p className="text-gray-600 dark:text-gray-400 font-light leading-relaxed">Complete our online application form to join Hatchlings or Advanced Project teams.</p>
             </div>
-            <div className="glass-card pop-card p-10 rounded-2xl text-center hover:scale-[1.03] transition-all duration-300">
+            <div className="glass-card p-10 rounded-2xl text-center transition-all duration-300">
               <div className="text-5xl mb-6">🤝</div>
               <h3 className="text-xl font-light mb-4 text-gray-800 dark:text-gray-200">Open House</h3>
               <p className="text-gray-600 dark:text-gray-400 font-light leading-relaxed">Meet with our team leaders to discuss your goals and project preferences.</p>
             </div>
-            <div className="glass-card pop-card p-10 rounded-2xl text-center hover:scale-[1.03] transition-all duration-300">
+            <div className="glass-card p-10 rounded-2xl text-center transition-all duration-300">
               <div className="text-5xl mb-6">🚀</div>
               <h3 className="text-xl font-light mb-4 text-gray-800 dark:text-gray-200">Start Contributing</h3>
               <p className="text-gray-600 dark:text-gray-400 font-light leading-relaxed">Begin working on exciting robotics projects with TURTLE.</p>
