@@ -63,7 +63,7 @@
 }
 
 .project-ticker-block:hover {
-  background: #ffe066; /* yellow bg on hover */
+  background: #FFD800; /* yellow bg on hover */
   backdrop-filter: blur(32px);
   -webkit-backdrop-filter: blur(32px);
   border: 1px solid #ffe066;
