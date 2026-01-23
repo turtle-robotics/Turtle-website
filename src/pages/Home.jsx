@@ -4,6 +4,7 @@ import { gsap } from 'gsap'
 import SponsorTicker from '../components/SponsorTicker'
 import ProjectTicker from '../components/ProjectTicker'
 import { projects } from '../data/projects'
+import ButtonLink from '../components/ButtonLink'
 
 const ENABLE_SHOWCASE_POPUPS = false;
 
@@ -123,13 +124,7 @@ const Home = () => {
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight mb-12 text-gray-800 dark:text-gray-200">
             READY TO <span className="text-yellow-600 dark:text-yellow-400">JOIN US</span>
           </h2>
-          
-          <a 
-            href="https://forms.gle/59pUiPUCpDrgBCqn7"
-            className="inline-block bg-yellow-500 text-black px-16 py-6 rounded-xl text-xl font-light tracking-wide hover:scale-105 transition-all duration-300 shadow-premium"
-          >
-            APPLY NOW
-          </a>
+          <ButtonLink  sizeVariant="xl" color="primary" linkURL="https://forms.gle/59pUiPUCpDrgBCqn7">APPLY NOW</ButtonLink>
         </div>
       </section>
 
