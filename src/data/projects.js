@@ -522,7 +522,7 @@ export const projects = [
   },
   {
     id: 'quad',
-    image: '/assets/QUAD/QUAD-Card.webp',
+    image: '/assets/QUAD/Quadrender4.png',
     title: 'QUAD',
     subtitle: 'Quadruped Walking Robot',
     description: 'A legged quadruped using brushless motors and cycloidal gearboxes to explore dynamic locomotion and balance.',
@@ -546,7 +546,11 @@ export const projects = [
       '/SCPosters/QUAD Poster Fall 2025_page-0001.webp',
       '/assets/QUAD/QUAD-Hero-1.webp',
       '/assets/QUAD/QUAD-Hero-2.webp',
-      '/assets/QUAD/QUAD-Hero-3.webp'
+      '/assets/QUAD/QUAD-Hero-3.webp',
+      '/assets/QUAD/Quadrender.png',
+      '/assets/QUAD/Quadrender2.png',
+      '/assets/QUAD/Quadrender3.png',
+      '/assets/QUAD/Quadrender4.png'
     ]
   },
   {
