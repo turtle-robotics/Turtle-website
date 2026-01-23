@@ -106,7 +106,7 @@ const Hatchling = () => {
           </h2>
 
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-8">
-            <div className="glass-card p-8 rounded-2xl text-center hover:scale-105 transition-all duration-300 bg-gradient-to-br from-yellow-400/20 to-amber-400/20 dark:from-yellow-500/20 dark:to-amber-500/20 border-2 border-yellow-400/30 dark:border-yellow-500/30">
+            <div className="glass-card p-8 rounded-2xl text-center transition-all duration-300 bg-gradient-to-br from-yellow-400/20 to-amber-400/20 dark:from-yellow-500/20 dark:to-amber-500/20 border-2 border-yellow-400/30 dark:border-yellow-500/30">
               <div className="text-5xl mb-4">🏢</div>
               <h3 className="text-3xl font-light text-gray-800 dark:text-gray-200 mb-2">
                 3
@@ -120,7 +120,7 @@ const Hatchling = () => {
               across
             </div>
 
-            <div className="glass-card p-8 rounded-2xl text-center hover:scale-105 transition-all duration-300 bg-gradient-to-br from-yellow-400/20 to-amber-400/20 dark:from-yellow-500/20 dark:to-amber-500/20 border-2 border-yellow-400/30 dark:border-yellow-500/30">
+            <div className="glass-card p-8 rounded-2xl text-center transition-all duration-300 bg-gradient-to-br from-yellow-400/20 to-amber-400/20 dark:from-yellow-500/20 dark:to-amber-500/20 border-2 border-yellow-400/30 dark:border-yellow-500/30">
               <div className="text-5xl mb-4">🎓</div>
               <h3 className="text-3xl font-light text-gray-800 dark:text-gray-200 mb-2">
                 2
@@ -583,7 +583,7 @@ const Hatchling = () => {
 
           {/* Additional Materials */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="glass-card p-8 rounded-2xl text-center hover:scale-105 transition-all duration-300">
+            <div className="glass-card p-8 rounded-2xl text-center transition-all duration-300">
               <div className="text-5xl mb-6">📝</div>
               <h3 className="text-xl font-light text-gray-800 dark:text-gray-200 mb-6">
                 Hatchling Syllabus
@@ -591,13 +591,13 @@ const Hatchling = () => {
               <a
                 href="/pdfs/Hatchling_Syllabus.pdf"
                 download
-                className="inline-block bg-yellow-500 text-black px-6 py-3 rounded-lg text-sm font-light hover:bg-yellow-600 transition-all duration-300"
+                className="inline-block bg-yellow-500 text-black px-6 py-3 rounded-lg text-sm font-light  hover:scale-105 transition-all duration-300"
               >
                 Download Notes
               </a>
             </div>
 
-            <div className="glass-card p-8 rounded-2xl text-center hover:scale-105 transition-all duration-300">
+            <div className="glass-card p-8 rounded-2xl text-center transition-all duration-300">
               <div className="text-5xl mb-6">🎨</div>
               <h3 className="text-xl font-light text-gray-800 dark:text-gray-200 mb-6">
                 CAD Examples
@@ -605,13 +605,13 @@ const Hatchling = () => {
               <a
                 href="/pdfs/Hatchling CAD Examples.zip"
                 download
-                className="inline-block bg-yellow-500 text-black px-6 py-3 rounded-lg text-sm font-light transition-all duration-300"
+                className="inline-block bg-yellow-500 text-black px-6 py-3 rounded-lg text-sm font-light  hover:scale-105 transition-all duration-300"
               >
                 Download Examples
               </a>
             </div>
 
-            <div className="glass-card p-8 rounded-2xl text-center hover:scale-105 transition-all duration-300">
+            <div className="glass-card p-8 rounded-2xl text-center transition-all duration-300">
               <div className="text-5xl mb-6">⚡</div>
               <h3 className="text-xl font-light text-gray-800 dark:text-gray-200 mb-6">
                 Project Tips & Controller Resources
@@ -619,7 +619,7 @@ const Hatchling = () => {
               <a
                 href="/pdfs/controller-info-code.pdf"
                 download
-                className="inline-block bg-yellow-500 text-black px-6 py-3 rounded-lg text-sm font-light hover:bg-yellow-600 transition-all duration-300"
+                className="inline-block bg-yellow-500 text-black px-6 py-3 rounded-lg text-sm font-light hover:scale-105 transition-all duration-300"
               >
                 Download Guide
               </a>
@@ -636,7 +636,7 @@ const Hatchling = () => {
           </h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            <div className="glass-card p-8 rounded-2xl text-center hover:scale-105 transition-all duration-300">
+            <div className="glass-card p-8 rounded-2xl text-center transition-all duration-300">
               <div className="text-4xl font-light text-accent mb-2">75%</div>
               <div className="text-lg font-light text-gray-800 dark:text-gray-200 mb-2">
                 Weekly Attendance
@@ -646,7 +646,7 @@ const Hatchling = () => {
               </div>
             </div>
 
-            <div className="glass-card p-8 rounded-2xl text-center hover:scale-105 transition-all duration-300">
+            <div className="glass-card p-8 rounded-2xl text-center transition-all duration-300">
               <div className="text-4xl font-light text-accent mb-2">70%</div>
               <div className="text-lg font-light text-gray-800 dark:text-gray-200 mb-2">
                 New Engineers
@@ -656,7 +656,7 @@ const Hatchling = () => {
               </div>
             </div>
 
-            <div className="glass-card p-8 rounded-2xl text-center hover:scale-105 transition-all duration-300">
+            <div className="glass-card p-8 rounded-2xl text-center transition-all duration-300">
               <div className="text-4xl font-light text-accent mb-2">95%</div>
               <div className="text-lg font-light text-gray-800 dark:text-gray-200 mb-2">
                 Recommendation Rate
@@ -666,7 +666,7 @@ const Hatchling = () => {
               </div>
             </div>
 
-            <div className="glass-card p-8 rounded-2xl text-center hover:scale-105 transition-all duration-300">
+            <div className="glass-card p-8 rounded-2xl text-center transition-all duration-300">
               <div className="text-4xl font-light text-accent mb-2">782</div>
               <div className="text-lg font-light text-gray-800 dark:text-gray-200 mb-2">
                 Social Connection
@@ -762,7 +762,7 @@ const Hatchling = () => {
                 <a
                   href="/pdfs/hatchling-impact-report.pdf"
                   download
-                  className="inline-block bg-yellow-500 text-black px-6 py-3 rounded-lg text-sm font-light hover:bg-yellow-600 transition-all duration-300"
+                  className="inline-block bg-yellow-500 text-black px-6 py-3 rounded-lg text-sm font-light  hover:scale-105 transition-all duration-300"
                 >
                   Download Full Report
                 </a>
@@ -791,13 +791,6 @@ const Hatchling = () => {
             >
               APPLY NOW
             </Link>
-            <a
-              href="/pdfs/hatchling-impact-report.pdf"
-              download
-              className="inline-block bg-yellow-500 text-black px-6 py-3 rounded-lg text-sm font-light hover:bg-yellow-600 transition-all duration-300"
-            >
-              Download Full Report
-            </a>
             <Link
               to="/about"
               className="bg-yellow-500 text-black px-12 py-5 rounded-xl text-lg font-light tracking-wide hover:scale-105 transition-all duration-300 shadow-premium"
