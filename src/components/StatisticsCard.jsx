@@ -58,8 +58,8 @@ const StatisticsCard = ({ count, label, description }) => {
         <div className="text-5xl font-extralight text-accent mb-6" ref={counterRef}>
           {displayCount}+
         </div>
-        <h3 className="text-xl font-light text-gray-800 mb-3">{label}</h3>
-        <p className="text-sm font-light text-gray-600 leading-relaxed">{description}</p>
+        <h3 className="text-xl font-light text-gray-800 dark:text-gray-200 mb-3">{label}</h3>
+        <p className="text-sm font-light text-gray-600 dark:text-gray-400 leading-relaxed">{description}</p>
       </div>
       
       {/* Border glow on hover */}
