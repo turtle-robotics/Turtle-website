@@ -46,7 +46,8 @@ const Home = () => {
         duration: 0.8, 
         stagger: 0.2, 
         delay: 1.2, 
-        ease: "power3.out" 
+        ease: "power3.out",
+        clearProps: "transform"
       }
     )
   }, [])
@@ -76,7 +77,7 @@ const Home = () => {
       </Link>
       <Link 
         to="/about" 
-        className="hero-button border-2 border-yellow-500 text-yellow-600 dark:text-yellow-400 px-10 py-5 rounded-xl font-medium hover:bg-yellow-500 hover:text-black transition-all duration-300 relative z-50"
+        className="hero-button border-2 border-yellow-500 text-yellow-600 dark:text-yellow-400 px-10 py-5 rounded-xl font-medium hover:scale-105 hover:text-black transition-all duration-300 relative z-50"
       >
         LEARN MORE
       </Link>
