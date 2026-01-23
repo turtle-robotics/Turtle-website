@@ -48,10 +48,8 @@ const StatisticsCard = ({ count, label, description }) => {
   return (
     <div
       ref={cardRef}
-      className="group relative p-10 rounded-2xl glass-card border border-gray-200/50 hover:border-accent/30 transition-all duration-300 hover:scale-105 spotlight"
+      className="group relative p-10 rounded-2xl glass-card border border-gray-200/50 transition-all duration-300 hover:scale-105 spotlight"
     >
-      {/* Spotlight effect */}
-      <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-br from-accent/5 to-transparent" />
       
       {/* Content */}
       <div className="relative z-10">
@@ -61,9 +59,6 @@ const StatisticsCard = ({ count, label, description }) => {
         <h3 className="text-xl font-light text-gray-800 dark:text-gray-200 mb-3">{label}</h3>
         <p className="text-sm font-light text-gray-600 dark:text-gray-400 leading-relaxed">{description}</p>
       </div>
-      
-      {/* Border glow on hover */}
-      <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 border border-accent/20 shadow-soft" />
     </div>
   )
 }
