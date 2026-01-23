@@ -97,17 +97,17 @@ const Home = () => {
           </h2>
           
           <div className="grid md:grid-cols-3 gap-8 mb-16">
-            <div className="glass-card pop-card p-10 rounded-2xl text-center hover:scale-[1.03] transition-all duration-300">
+            <div className="glass-card p-10 rounded-2xl text-center transition-all duration-300">
               <div className="text-5xl mb-6">🎓</div>
               <h3 className="text-xl font-light mb-4 text-gray-800 dark:text-gray-200">Student Leadership</h3>
               <p className="text-gray-600 dark:text-gray-400 font-light leading-relaxed">Developing the next generation of robotics leaders through hands-on experience and mentorship.</p>
             </div>
-            <div className="glass-card pop-card p-10 rounded-2xl text-center hover:scale-[1.03] transition-all duration-300">
+            <div className="glass-card p-10 rounded-2xl text-center transition-all duration-300">
               <div className="text-5xl mb-6">🔬</div>
               <h3 className="text-xl font-light mb-4 text-gray-800 dark:text-gray-200">Research Excellence</h3>
               <p className="text-gray-600 dark:text-gray-400 font-light leading-relaxed">Cutting-edge robotics research across multiple domains and applications.</p>
             </div>
-            <div className="glass-card pop-card p-10 rounded-2xl text-center hover:scale-[1.03] transition-all duration-300">
+            <div className="glass-card p-10 rounded-2xl text-center transition-all duration-300">
               <div className="text-5xl mb-6">🏆</div>
               <h3 className="text-xl font-light mb-4 text-gray-800 dark:text-gray-200">Competition Success</h3>
               <p className="text-gray-600 dark:text-gray-400 font-light leading-relaxed">Competing and winning in prestigious robotics competitions.</p>
