@@ -103,6 +103,11 @@ const Footer = () => {
                   Industry Partnerships
                 </Link>
               </li>
+              <li>
+                <a href="https://docs.turtlerobotics.org/" className="text-yellow-600 dark:text-yellow-400 hover:text-yellow-500 dark:hover:text-yellow-300 transition-colors duration-200" target="blank" rel="noopener noreferrer">
+                  Knowledge Base
+                </a>
+              </li>
             </ul>
           </div>
 
