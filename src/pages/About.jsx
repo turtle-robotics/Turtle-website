@@ -100,7 +100,7 @@ const About = () => {
     currentLeadership
       .filter(l => roles.includes(l.role))
       .map((leader, index) => (
-        <div key={index} className="glass-card p-6 rounded-2xl hover:scale-105 transition-all duration-300">
+        <div key={index} className="glass-card p-6 rounded-2xl transition-all duration-300">
           <h3 className="text-lg font-light text-yellow-400 mb-2">{leader.role}</h3>
           <h4 className="text-base font-light text-gray-200 mb-2">{leader.name}</h4>
           <p className="text-xs font-light text-gray-400 mb-3">{leader.period}</p>
