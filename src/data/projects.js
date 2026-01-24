@@ -97,7 +97,7 @@ export const projects = [
     image: '/assets/ANKL/Anklecoverpic.jpg',
     title: 'ANKL',
     subtitle: '6-DOF Prosthetic Ankle',
-    description: 'A Stewart-platform-based prosthetic ankle to restore full range of motion to below-the-knee amputees.',
+    description: 'The inspiration from this project came from wanting to gain a better understanding of fundamental robotics principles and combine that with an area of study that both excites students and can lead to an increase in the quality of life of those missing appendages. Many lower-leg prosthetic devices on the market currently have two main issues: asymmetric gait patterns and decreased mobility. Asymmetric gait patterns come about from the prosthesis not being able to replicate the energy output of the biological ankle, thus making the user exert more energy to walk and compensate using other parts of the body. This gait asymmetry can lead to fatigue, discomfort, and in many cases, lead to additional medical complications. Most prostheses also significantly limit the Range of Motion (RoM) of the user (roll, pitch, yaw), which could limit the user from being able to participate in certain activities. \n\nANKL was founded to develop a novel active ankle prosthesis to try and tackle these gait and mobility issues for below-the-knee amputees. To achieve this goal, this project must first and foremost be comfortable and easy to integrate with current prosthesis mounts on the market. In addition to this comfort, this prosthesis needs to function whilst moving across various types of terrain (slopes, level walking, stairs, etc.) that a typical person encounters in their daily life. This prosthesis must also mimic the gait patterns of able-bodied individuals within a range of uncertainty. For the prosthesis to be successful, it must have a RoM within ±10% of the total RoM of a biological ankle.',
     category: 'Biomedical Robotics',
     tags: ['Prosthetics', 'Controls', 'Stewart Platform', 'CAD', 'Simulation', 'Python', 'C++'],
     status: 'Active',
@@ -110,12 +110,15 @@ export const projects = [
       'Complete a functional Stewart Platform for showcase'
     ],
     lookingFor: [
-      '3D CAD (SolidWorks or equivalent)',
-      'Electronics hardware and wiring',
-      'Machining',
-      'Robotics programming (Python/C++)',
-      'GitHub experience',
-      'Dynamic systems and controls'
+      'ECEN, MEEN, BMEN',
+      'Electrical circuit design and power distribution',
+      'Wiring and cable management',
+      'Python',
+      'Dynamics and controls algorithm creation',
+      'Understanding of forces and force distributions',
+      'Interest in prosthetics',
+      'Self-learners in researching fundamental biomechanics and concepts',
+      '10-12 hours of time commitment per week'
     ],
     images: [
       '/SCPosters/ANKL_SC_25_11.pptx.webp',
