@@ -70,18 +70,8 @@ const Home = () => {
     </p>
     
     <div className="flex flex-col sm:flex-row gap-6 justify-center items-center relative z-50">
-      <Link 
-        to="/projects" 
-        className="hero-button bg-yellow-500 text-black px-10 py-5 rounded-xl font-medium hover:scale-105 transition-all duration-300 shadow-lg relative z-50"
-      >
-        EXPLORE PROJECTS
-      </Link>
-      <Link 
-        to="/about" 
-        className="hero-button border-2 border-yellow-500 text-yellow-600 dark:text-yellow-400 px-10 py-5 rounded-xl font-medium hover:scale-105 hover:text-black transition-all duration-300 relative z-50"
-      >
-        LEARN MORE
-      </Link>
+      <ButtonLink className="hero-button" linkURL="/projects" sizeVariant="large" style="primary">EXPLORE PROJECTS</ButtonLink>
+      <ButtonLink className="hero-button" linkURL="/about" sizeVariant="large" style="primary-outline">LEARN MORE</ButtonLink>
     </div>
   </div>
   
@@ -124,7 +114,7 @@ const Home = () => {
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight mb-12 text-gray-800 dark:text-gray-200">
             READY TO <span className="text-yellow-600 dark:text-yellow-400">JOIN US</span>
           </h2>
-          <ButtonLink  sizeVariant="xl" color="primary" linkURL="https://forms.gle/59pUiPUCpDrgBCqn7">APPLY NOW</ButtonLink>
+          <ButtonLink  sizeVariant="xl" style="primary-outline" linkURL="https://forms.gle/59pUiPUCpDrgBCqn7">APPLY NOW</ButtonLink>
         </div>
       </section>
 

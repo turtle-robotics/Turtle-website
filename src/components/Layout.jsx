@@ -1,6 +1,7 @@
 import { Link, useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
 import Footer from './Footer'
+import ButtonLink from './ButtonLink'
 
 const Layout = ({ children }) => {
   const location = useLocation()
@@ -56,16 +57,7 @@ const Layout = ({ children }) => {
               ))}
               
               {/* Special Sponsor Link */}
-              <Link
-                to={sponsorItem.path}
-                className={`text-sm font-medium tracking-wide transition-all duration-300 px-4 py-2 rounded-lg ${
-                  location.pathname === sponsorItem.path
-                    ? 'bg-yellow-500 text-black shadow-lg'
-                    : 'bg-yellow-400 text-black hover:bg-yellow-500 shadow-md hover:shadow-lg'
-                }`}
-              >
-                {sponsorItem.label}
-              </Link>
+              <ButtonLink linkURL="/sponsorship" style="primary" sizeVariant="small">Looking to Sponsor?</ButtonLink>                
 
               {/* Admin Link */}
               <Link

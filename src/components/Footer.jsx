@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useState } from 'react';
+import ButtonLink from './ButtonLink';
 // import SponsorContactForm from './SponsorContactForm';
 
 const Footer = () => {
@@ -12,12 +13,7 @@ const Footer = () => {
           
           {/* Left Column - Program Information & Social Media */}
           <div className="space-y-6">
-            <Link 
-              to="/hatchling" 
-              className="inline-block bg-yellow-500 text-black px-6 py-3 rounded-lg font-medium hover:scale-105 transition-all duration-300"
-            >
-              Explore Program
-            </Link>
+            <ButtonLink linkURL='/hatchling'>Explore Program</ButtonLink>
             
             <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
               Advancing the future of robotics through cutting-edge research and innovation at Texas A&M University.
@@ -179,13 +175,10 @@ const Footer = () => {
                       </div>
                     )}
               <span className="text-gray-400 dark:text-gray-500 text-sm">or</span>
-              <Link 
-                to="/apply"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-500/10 to-amber-500/10 hover:from-yellow-500/20 hover:to-amber-500/20 text-yellow-600 dark:text-yellow-400 px-4 py-2 rounded-lg text-sm font-light transition-all duration-300 border border-yellow-200 dark:border-yellow-700/30"
-              >
+              <ButtonLink linkURL="/apply" style="primary-muted" sizeVariant="small">                
                 <span>🤖</span>
                 Join our team
-              </Link>
+              </ButtonLink>
             </div>
           </div>
         </div>
