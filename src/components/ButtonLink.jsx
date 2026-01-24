@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 export default function ButtonLink({
   children,
-  linkURL,
+  to,
   sizeVariant = "default",
   style = "primary",
   transparent = "true",
@@ -23,7 +23,7 @@ export default function ButtonLink({
 
   return (
     <Link
-      to={linkURL}
+      to={to}
       className={`${className} ${colorStyles[style]} ${sizeVariantStyles[sizeVariant]} inline-block font-medium hover:scale-105 transition-all duration-300`}
     >
       {children}

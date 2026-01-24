@@ -175,7 +175,7 @@ const ProjectDetail = () => {
 
         {/* Apply Button */}
         <div className="mt-12 pt-8 border-t border-gray-700">
-          <ButtonLink linkURL="/apply" style="primary" sizeVariant="default">
+          <ButtonLink to="/apply" style="primary" sizeVariant="default">
             Apply to Join This Project
           </ButtonLink>
         </div>

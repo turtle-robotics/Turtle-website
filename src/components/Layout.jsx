@@ -57,7 +57,7 @@ const Layout = ({ children }) => {
               ))}
               
               {/* Special Sponsor Link */}
-              <ButtonLink linkURL="/sponsorship" style="primary" sizeVariant="small">Looking to Sponsor?</ButtonLink>                
+              <ButtonLink to="/sponsorship" style="primary" sizeVariant="small">Looking to Sponsor?</ButtonLink>                
 
               {/* Admin Link */}
               <Link

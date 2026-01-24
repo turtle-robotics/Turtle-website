@@ -13,7 +13,7 @@ const Footer = () => {
           
           {/* Left Column - Program Information & Social Media */}
           <div className="space-y-6">
-            <ButtonLink linkURL='/hatchling'>Explore Program</ButtonLink>
+            <ButtonLink to='/hatchling'>Explore Program</ButtonLink>
             
             <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
               Advancing the future of robotics through cutting-edge research and innovation at Texas A&M University.
@@ -175,7 +175,7 @@ const Footer = () => {
                       </div>
                     )}
               <span className="text-gray-400 dark:text-gray-500 text-sm">or</span>
-              <ButtonLink linkURL="/apply" style="primary-muted" sizeVariant="small">                
+              <ButtonLink to="/apply" style="primary-muted" sizeVariant="small">                
                 <span>🤖</span>
                 Join our team
               </ButtonLink>

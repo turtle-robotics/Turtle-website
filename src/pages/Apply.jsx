@@ -69,7 +69,7 @@ const Apply = () => {
               : "Applications are currently closed. Please check back soon for future openings."}
           </p>
           {applicationsOpen && (
-          <ButtonLink sizeVariant='xl' linkURL='https://forms.gle/59pUiPUCpDrgBCqn7'>APPLY NOW</ButtonLink>
+          <ButtonLink sizeVariant='xl' to='https://forms.gle/59pUiPUCpDrgBCqn7'>APPLY NOW</ButtonLink>
           )}
         </div>
       </section>
