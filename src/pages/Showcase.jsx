@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import TextLink from '../components/TextLink';
 // import ShowcaseProjectInterestForm from '../components/ShowcaseProjectInterestForm';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -229,9 +230,7 @@ function Showcase() {
           <p className="text-xl font-light text-gray-600 dark:text-gray-400 mb-6">
             To express your interest in a project, please email us directly at:
           </p>
-          <a href="mailto:turtlerobotics@gmail.com" className="text-xl text-accent underline hover:text-accent/80 transition-colors duration-200">
-            turtlerobotics@gmail.com
-          </a>
+          <TextLink to="mailto:turtlerobotics@gmail.com">turtlerobotics@gmail.com</TextLink>
         </div>
       </section>
 
