@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
+import ButtonLink from '../components/ButtonLink'
 
 
 const Apply = () => {
@@ -68,13 +69,7 @@ const Apply = () => {
               : "Applications are currently closed. Please check back soon for future openings."}
           </p>
           {applicationsOpen && (
-            <a 
-              href="https://forms.gle/59pUiPUCpDrgBCqn7"
-              className="inline-block bg-yellow-500 text-black px-16 py-6 rounded-xl text-xl font-light tracking-wide hover:scale-105 transition-all duration-300 shadow-premium mb-6"
-              style={{marginTop: '2rem'}}
-            >
-              APPLY NOW
-            </a>
+          <ButtonLink sizeVariant='xl' to='https://forms.gle/59pUiPUCpDrgBCqn7'>APPLY NOW</ButtonLink>
           )}
         </div>
       </section>

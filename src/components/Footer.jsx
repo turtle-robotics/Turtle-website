@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useState } from 'react';
+import ButtonLink from './ButtonLink';
+import TextLink from './TextLink';
 // import SponsorContactForm from './SponsorContactForm';
 
 const Footer = () => {
@@ -12,12 +14,7 @@ const Footer = () => {
           
           {/* Left Column - Program Information & Social Media */}
           <div className="space-y-6">
-            <Link 
-              to="/hatchling" 
-              className="inline-block bg-yellow-500 text-black px-6 py-3 rounded-lg font-medium hover:scale-105 transition-all duration-300"
-            >
-              Explore Program
-            </Link>
+            <ButtonLink to='/hatchling'>Explore Program</ButtonLink>
             
             <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
               Advancing the future of robotics through cutting-edge research and innovation at Texas A&M University.
@@ -60,24 +57,16 @@ const Footer = () => {
             <h3 className="font-bold text-gray-800 dark:text-gray-200">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/about" className="text-yellow-600 dark:text-yellow-400 hover:text-yellow-500 dark:hover:text-yellow-300 transition-colors duration-200">
-                  About
-                </Link>
+                <TextLink to="/about">About</TextLink>
               </li>
               <li>
-                <Link to="/projects" className="text-yellow-600 dark:text-yellow-400 hover:text-yellow-500 dark:hover:text-yellow-300 transition-colors duration-200">
-                  Research Projects
-                </Link>
+                <TextLink to="/projects">Research Projects</TextLink>
               </li>
               <li>
-                <Link to="/hatchling" className="text-yellow-600 dark:text-yellow-400 hover:text-yellow-500 dark:hover:text-yellow-300 transition-colors duration-200">
-                  Hatchling Program
-                </Link>
+                <TextLink to="/hatchling">Hatchling Program</TextLink>
               </li>
               <li>
-                <Link to="/contact" className="text-yellow-600 dark:text-yellow-400 hover:text-yellow-500 dark:hover:text-yellow-300 transition-colors duration-200">
-                  Contact
-                </Link>
+                <TextLink to="/contact">Contact</TextLink>
               </li>
             </ul>
           </div>
@@ -86,27 +75,14 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="font-bold text-gray-800 dark:text-gray-200">Resources</h3>
             <ul className="space-y-2">
-              {/* Publications and Research Blog hidden */}
-              <li style={{display: 'none'}}>
-                <a href="#">Publications</a>
-              </li>
-              <li style={{display: 'none'}}>
-                <a href="#">Research Blog</a>
+              <li>
+                <TextLink to="/apply">Student Opportunities</TextLink>
               </li>
               <li>
-                <Link to="/apply" className="text-yellow-600 dark:text-yellow-400 hover:text-yellow-500 dark:hover:text-yellow-300 transition-colors duration-200">
-                  Student Opportunities
-                </Link>
+                <TextLink to="/sponsorship">Industry Partnerships</TextLink>
               </li>
               <li>
-                <Link to="/sponsorship" className="text-yellow-600 dark:text-yellow-400 hover:text-yellow-500 dark:hover:text-yellow-300 transition-colors duration-200">
-                  Industry Partnerships
-                </Link>
-              </li>
-              <li>
-                <a href="https://docs.turtlerobotics.org/" className="text-yellow-600 dark:text-yellow-400 hover:text-yellow-500 dark:hover:text-yellow-300 transition-colors duration-200" target="blank" rel="noopener noreferrer">
-                  Knowledge Base
-                </a>
+                <TextLink to="https://docs.turtlerobotics.org/">Knowledge Base</TextLink>
               </li>
             </ul>
           </div>
@@ -171,21 +147,16 @@ const Footer = () => {
                           <SponsorContactForm onClose={() => setShowContactForm(false)} />
                           */}
                           <div className="text-center my-8">
-                            <a href="mailto:turtlerobotics@gmail.com" className="text-xl text-accent underline hover:text-accent/80 transition-colors duration-200">
-                              turtlerobotics@gmail.com
-                            </a>
+                            <TextLink to="mailto:turtlerobotics@gmail.com">turtlerobotics@gmail.com</TextLink>
                           </div>
                         </div>
                       </div>
                     )}
               <span className="text-gray-400 dark:text-gray-500 text-sm">or</span>
-              <Link 
-                to="/apply"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-500/10 to-amber-500/10 hover:from-yellow-500/20 hover:to-amber-500/20 text-yellow-600 dark:text-yellow-400 px-4 py-2 rounded-lg text-sm font-light transition-all duration-300 border border-yellow-200 dark:border-yellow-700/30"
-              >
+              <ButtonLink to="/apply" style="primary-muted" sizeVariant="small">                
                 <span>🤖</span>
                 Join our team
-              </Link>
+              </ButtonLink>
             </div>
           </div>
         </div>

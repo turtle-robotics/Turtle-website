@@ -3,6 +3,7 @@ import { useEffect, useState, useMemo } from 'react'
 import { gsap } from 'gsap'
 import { getProjectById } from '../data/projects'
 import ImageCarousel from '../components/ImageCarousel'
+import ButtonLink from '../components/ButtonLink'
 
 const ProjectDetail = () => {
   const { projectId } = useParams()
@@ -174,12 +175,9 @@ const ProjectDetail = () => {
 
         {/* Apply Button */}
         <div className="mt-12 pt-8 border-t border-gray-700">
-          <Link 
-            to="/apply" 
-            className="inline-block bg-yellow-500 text-black px-8 py-3 rounded-lg font-medium hover:scale-105 transition-all duration-300"
-          >
+          <ButtonLink to="/apply" style="primary" sizeVariant="default">
             Apply to Join This Project
-          </Link>
+          </ButtonLink>
         </div>
       </div>
     </div>

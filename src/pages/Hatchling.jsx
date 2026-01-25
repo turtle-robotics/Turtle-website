@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import ImageCarousel from "../components/ImageCarousel";
+import ButtonLink from "../components/ButtonLink";
 
 const Hatchling = () => {
   const heroRef = useRef(null);
@@ -785,18 +786,8 @@ const Hatchling = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <Link
-              to="/apply"
-              className="bg-gradient-turtle text-black px-12 py-5 rounded-xl text-lg font-light tracking-wide hover:scale-105 transition-all duration-300 shadow-premium"
-            >
-              APPLY NOW
-            </Link>
-            <Link
-              to="/about"
-              className="bg-yellow-500 text-black px-12 py-5 rounded-xl text-lg font-light tracking-wide hover:scale-105 transition-all duration-300 shadow-premium"
-            >
-              LEARN MORE
-            </Link>
+            <ButtonLink to="/apply" style="primary" sizeVariant="large">APPLY NOW</ButtonLink>
+            <ButtonLink to="/about" style="primary" sizeVariant="large">LEARN MORE</ButtonLink>
           </div>
         </div>
       </section>

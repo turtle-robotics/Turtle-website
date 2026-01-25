@@ -4,6 +4,7 @@ import { gsap } from 'gsap'
 import SponsorTicker from '../components/SponsorTicker'
 import ProjectTicker from '../components/ProjectTicker'
 import { projects } from '../data/projects'
+import ButtonLink from '../components/ButtonLink'
 
 const ENABLE_SHOWCASE_POPUPS = false;
 
@@ -69,18 +70,8 @@ const Home = () => {
     </p>
     
     <div className="flex flex-col sm:flex-row gap-6 justify-center items-center relative z-50">
-      <Link 
-        to="/projects" 
-        className="hero-button bg-yellow-500 text-black px-10 py-5 rounded-xl font-medium hover:scale-105 transition-all duration-300 shadow-lg relative z-50"
-      >
-        EXPLORE PROJECTS
-      </Link>
-      <Link 
-        to="/about" 
-        className="hero-button border-2 border-yellow-500 text-yellow-600 dark:text-yellow-400 px-10 py-5 rounded-xl font-medium hover:scale-105 hover:text-black transition-all duration-300 relative z-50"
-      >
-        LEARN MORE
-      </Link>
+      <ButtonLink className="hero-button" to="/projects" sizeVariant="large" style="primary">EXPLORE PROJECTS</ButtonLink>
+      <ButtonLink className="hero-button" to="/about" sizeVariant="large" style="primary-outline">LEARN MORE</ButtonLink>
     </div>
   </div>
   
@@ -123,13 +114,7 @@ const Home = () => {
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight mb-12 text-gray-800 dark:text-gray-200">
             READY TO <span className="text-yellow-600 dark:text-yellow-400">JOIN US</span>
           </h2>
-          
-          <a 
-            href="https://forms.gle/59pUiPUCpDrgBCqn7"
-            className="inline-block bg-yellow-500 text-black px-16 py-6 rounded-xl text-xl font-light tracking-wide hover:scale-105 transition-all duration-300 shadow-premium"
-          >
-            APPLY NOW
-          </a>
+          <ButtonLink  sizeVariant="xl" style="primary" to="https://forms.gle/59pUiPUCpDrgBCqn7">APPLY NOW</ButtonLink>
         </div>
       </section>
 
