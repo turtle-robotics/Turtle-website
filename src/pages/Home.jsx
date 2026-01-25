@@ -114,7 +114,7 @@ const Home = () => {
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight mb-12 text-gray-800 dark:text-gray-200">
             READY TO <span className="text-yellow-600 dark:text-yellow-400">JOIN US</span>
           </h2>
-          <ButtonLink  sizeVariant="xl" style="primary-outline" to="https://forms.gle/59pUiPUCpDrgBCqn7">APPLY NOW</ButtonLink>
+          <ButtonLink  sizeVariant="xl" style="primary" to="https://forms.gle/59pUiPUCpDrgBCqn7">APPLY NOW</ButtonLink>
         </div>
       </section>
 
