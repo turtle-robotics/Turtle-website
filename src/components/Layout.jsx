@@ -27,42 +27,40 @@ const Layout = ({ children }) => {
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-gray-900/80 backdrop-blur-xl border-b border-gray-700/50 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
-            <Link to="/" className="flex items-center gap-3 text-gray-200 h-full">
+          <div className="flex flex-col sm:flex-row w-full items-center sm:items-center justify-between h-20 gap-2 sm:gap-0">
+            <Link to="/" className="flex flex-col sm:flex-row items-center gap-1 sm:gap-3 text-gray-200 min-w-0">
               {/* Logo spot */}
               <img
                 src="/assets/white_logo.png"
                 alt="Logo"
-                className="h-12 w-auto hidden sm:inline align-middle"
+                className="h-8 w-auto sm:h-12 align-middle"
               />
-              <span className="hidden sm:inline text-2xl font-extralight tracking-tight align-middle leading-none ml-2">
-                <span className="text-yellow-400">TURTLE</span>
+              <span className="text-yellow-400 text-base sm:text-2xl font-extralight tracking-tight align-middle leading-none ml-0 sm:ml-2 whitespace-nowrap">
+                TURTLE
               </span>
             </Link>
-            
-            <div className="hidden md:flex items-center space-x-8">
+            <div className="flex flex-wrap justify-center items-center gap-2 sm:gap-8 w-full sm:w-auto">
               {navItems.map((item) => (
                 <Link
                   key={item.path}
                   to={item.path}
-                  className={`flex items-center text-sm font-light tracking-wide transition-all duration-300 ${
+                  className={`flex items-center text-xs sm:text-sm font-light tracking-wide transition-all duration-300 ${
                     location.pathname === item.path || 
                     (item.path === '/development-programs' && (location.pathname === '/hatchling' || location.pathname === '/workshop-series'))
                       ? 'text-yellow-400 border-b-2 border-yellow-400'
                       : 'text-gray-300 hover:text-yellow-400 hover:border-b-2 hover:border-yellow-400/50'
                   }`}
+                  style={{ minWidth: 0, overflow: 'hidden', textOverflow: 'ellipsis' }}
                 >
                   {item.label}
                 </Link>
               ))}
-              
               {/* Special Sponsor Link */}
-              <ButtonLink to="/sponsorship" style="primary" sizeVariant="small">Looking to Sponsor?</ButtonLink>                
-
+              <ButtonLink to="/sponsorship" style="primary" sizeVariant="small">Looking to Sponsor?</ButtonLink>
               {/* Admin Link */}
               <Link
                 to="/admin"
-                className={`flex items-center gap-1 text-sm font-light tracking-wide transition-all duration-300 ${
+                className={`flex items-center gap-1 text-xs sm:text-sm font-light tracking-wide transition-all duration-300 ${
                   location.pathname === '/admin'
                     ? 'text-yellow-400'
                     : 'text-gray-400 hover:text-yellow-400'
@@ -77,7 +75,6 @@ const Layout = ({ children }) => {
           </div>
         </div>
       </nav>
-
       {/* Mobile Navigation */}
       <nav className="fixed bottom-0 left-0 right-0 z-50 bg-gray-900/90 backdrop-blur-xl border-t border-gray-700/50 shadow-lg md:hidden">
         <div className="flex justify-around items-center h-16 px-4">
