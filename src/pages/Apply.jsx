@@ -8,7 +8,7 @@ const Apply = () => {
   const heroRef = useRef(null)
 
   // ✅ Toggle this to open/close applications
-  const applicationsOpen = true // change to false when closed
+  const applicationsOpen = false // change to false when closed
 
   useEffect(() => {
     const hero = heroRef.current
