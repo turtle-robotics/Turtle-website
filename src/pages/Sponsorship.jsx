@@ -132,18 +132,23 @@ const Sponsorship = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="#sponsorship-tiers"
-              className="bg-yellow-500 text-black px-8 py-4 rounded-xl font-medium hover:scale-105 transition-all duration-300 shadow-lg"
+            <ButtonLink 
+              to="#sponsorship-tiers" 
+              style="primary" 
+              sizeVariant="large"
+              className="shadow-lg"
             >
               View Sponsorship Tiers
-            </a>
-            <button 
+            </ButtonLink>
+            <ButtonLink 
+              to="#" 
+              style="primary-outline" 
+              sizeVariant="large"
+              className=""
               onClick={() => setShowEmailPopup(true)}
-              className="border-2 border-yellow-500 text-yellow-600 dark:text-yellow-400 px-8 py-4 rounded-xl font-medium hover:scale-105 transition-all duration-300"
             >
               Contact Us
-            </button>
+            </ButtonLink>
           </div>
         </div>
       </section>
