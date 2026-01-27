@@ -9,7 +9,7 @@ export default function TextLink({
   return (
     <Link
       to={to}
-      className={`${className} text-yellow-400 hover:text-white hover:underline`}
+      className={`${className} text-yellow-400 hover:text-white underline`}
     >
       {children}
     </Link>

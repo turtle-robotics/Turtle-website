@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { gsap } from 'gsap'
 import StatisticsCard from '../components/StatisticsCard'
+import TextLink from '../components/TextLink'
 
 const About = () => {
   const heroRef = useRef(null)
