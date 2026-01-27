@@ -78,30 +78,32 @@ const Layout = ({ children }) => {
       {/* Mobile Navigation */}
       <nav className="fixed bottom-0 left-0 right-0 z-50 bg-gray-900/90 backdrop-blur-xl border-t border-gray-700/50 shadow-lg md:hidden">
         <div className="flex justify-around items-center h-16 px-4">
-          {navItems.map((item) => (
-            <Link
-              key={item.path}
-              to={item.path}
-              className={`flex flex-col items-center justify-center w-12 h-12 rounded-lg transition-all duration-300 ${
-                location.pathname === item.path ||
-                (item.path === '/development-programs' && (location.pathname === '/hatchling' || location.pathname === '/workshop-series'))
-                  ? 'bg-yellow-500 text-black'
-                  : 'text-gray-300 hover:bg-gray-800'
-              }`}
-            >
-              <span className="text-xs font-light text-center">
-                {item.label === 'Development Programs' ? 'Dev' : item.label}
-              </span>
-            </Link>
-          ))}
-          
+          {navItems.map((item) => {
+            const isActive = location.pathname === item.path ||
+              (item.path === '/development-programs' && (location.pathname === '/hatchling' || location.pathname === '/workshop-series'));
+            return (
+              <Link
+                key={item.path}
+                to={item.path}
+                className={`flex flex-col items-center justify-center w-12 h-12 rounded-lg transition-all duration-300 border-b-2 ${
+                  isActive
+                    ? 'text-yellow-400 border-yellow-400 bg-transparent'
+                    : 'text-gray-300 border-transparent hover:text-yellow-400 hover:border-yellow-400/50 hover:bg-gray-800'
+                }`}
+              >
+                <span className="text-xs font-light text-center">
+                  {item.label === 'Development Programs' ? 'Dev' : item.label}
+                </span>
+              </Link>
+            );
+          })}
           {/* Admin Link for Mobile */}
           <Link
             to="/admin"
-            className={`flex flex-col items-center justify-center w-12 h-12 rounded-lg transition-all duration-300 ${
+            className={`flex flex-col items-center justify-center w-12 h-12 rounded-lg transition-all duration-300 border-b-2 ${
               location.pathname === '/admin'
-                ? 'bg-yellow-500 text-black'
-                : 'text-gray-300 hover:bg-gray-800'
+                ? 'text-yellow-400 border-yellow-400 bg-transparent'
+                : 'text-gray-300 border-transparent hover:text-yellow-400 hover:border-yellow-400/50 hover:bg-gray-800'
             }`}
             title="Admin"
           >
