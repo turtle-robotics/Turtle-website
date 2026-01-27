@@ -131,7 +131,7 @@ const About = () => {
           </p>
           <div className="mb-8">
             <span className="text-lg text-gray-200">Contact us: </span>
-            <a href="mailto:turtlerobotics@gmaill.com" className="text-accent underline ml-2">turtlerobotics@gmaill.com</a>
+            <TextLink to="mailto:turtlerobotics@gmail.com">turtlerobotics@gmail.com</TextLink>
           </div>
         </div>
       </section>
