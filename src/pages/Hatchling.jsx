@@ -60,7 +60,7 @@ const Hatchling = () => {
         <img
           src="/assets/GeneralPhotos/Fall_2025_CSTAT_Hatchling_Group_Photo.webp"
           alt="Hatchling Program Background"
-          className="absolute inset-0 w-full h-full object-cover object-center brightness-110 dark:brightness-95"
+          className="absolute inset-0 w-full h-full object-cover object-center brightness-50"
         />
 
         {/* Overlay for light contrast */}

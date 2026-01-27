@@ -46,7 +46,7 @@ const Apply = () => {
         <img
           src="/assets/GeneralPhotos/ApplyNowJpg.webp"
           alt="Apply Now Background"
-          className="absolute inset-0 w-full h-full object-cover object-center brightness-110 dark:brightness-95 z-0"
+          className="absolute inset-0 w-full h-full object-cover object-center brightness-50 z-0"
         />
         {/* Overlay for contrast */}
         <div className="absolute inset-0 bg-black/25 dark:bg-black/25 z-0"></div>
