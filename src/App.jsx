@@ -1,6 +1,5 @@
 import { Routes, Route } from 'react-router-dom'
 import NotFound from './pages/NotFound'
-import Contact from './pages/Contact'
 import { ThemeProvider } from './contexts/ThemeContext'
 import Layout from './components/Layout'
 import Home from './pages/Home'
@@ -32,7 +31,6 @@ function App(Component, pageProps) {
           <Route path="/apply" element={<Apply />} />
           <Route path="/sponsorship" element={<Sponsorship />} />
           <Route path="/admin" element={<AdminDashboard />} />
-          <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Layout>
