@@ -14,7 +14,7 @@ const Footer = () => {
           
           {/* Left Column - Connect With Us */}
           <div className="space-y-4">
-            <h3 className="font-bold text-gray-800 dark:text-gray-200">Quick Links</h3>
+            <h3 className="font-bold text-gray-800 dark:text-gray-200">Connect With Us</h3>
             <ul className="space-y-2">
               <li>
                 <TextLink to="mailto:turtlerobotics@gmail.com">turtlerobotics@gmail.com</TextLink>
