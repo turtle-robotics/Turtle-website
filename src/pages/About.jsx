@@ -23,10 +23,10 @@ const About = () => {
   }, [])
 
   const statistics = [
-    { count: 21, label: 'Advanced Research Projects', description: 'Cutting-edge robotics initiatives' },
-    { count: 2, label: 'Competition Teams', description: 'Robotics competition teams' },
-    { count: 250, label: 'Student Researchers', description: '250+ active researchers' },
-    { count: 110, label: 'Hatchling Members', description: 'Program participants' },
+    { count: 21, label: 'Advanced Research Projects'},
+    { count: 2, label: 'Competition Teams'},
+    { count: 250, label: 'Student Researchers'},
+    { count: 110, label: 'Hatchling Members'},
   ]
 
   const currentLeadership = [

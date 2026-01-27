@@ -57,7 +57,7 @@ const StatisticsCard = ({ count, label, description }) => {
           {displayCount}+
         </div>
         <h3 className="text-xl font-light text-gray-800 dark:text-gray-200 mb-3">{label}</h3>
-        <p className="text-sm font-light text-gray-600 dark:text-gray-400 leading-relaxed">{description}</p>
+        {description && <p className="text-sm font-light text-gray-600 dark:text-gray-400 leading-relaxed">{description}</p>}
       </div>
     </div>
   )
