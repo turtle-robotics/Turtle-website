@@ -163,12 +163,6 @@ const ProjectDetail = () => {
           ) : (
             <div className="glass-card rounded-2xl p-6 text-center">
               <p className="text-gray-300 mb-3">No updates have been posted yet.</p>
-              <a
-                href={`mailto:turtlerobotics@gmail.com?subject=Project%20Update%20-%20${encodeURIComponent(project.title)}&body=Title:%20%0ADate:%20YYYY-MM-DD%0ADescription:%20`}
-                className="inline-block text-yellow-400 hover:text-yellow-300 border border-yellow-400/30 hover:border-yellow-400 rounded-lg px-4 py-2 text-sm"
-              >
-                Submit an update
-              </a>
             </div>
           )}
         </div>
