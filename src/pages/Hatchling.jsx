@@ -172,7 +172,7 @@ const Hatchling = () => {
                 "/assets/image_2025-09-30_002910095.png",
                 "/assets/image_2025-09-30_002458601.png",
               ]}
-              autoPlay={true}
+              autoPlay={false}
               intervalMs={4000}
               aspectRatio="4/3"
               maxHeight="98vh"

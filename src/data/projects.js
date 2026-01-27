@@ -84,8 +84,8 @@ export const projects = [
       'AC→DC conversion and management, programming/simulation (C, Matlab)'
     ],
     images: [
-      '/assets/AMPS/Amps-Cover.webp',
       '/SCPosters/AMPS_SC_25_11.pptx.webp',
+      '/assets/AMPS/Amps-Cover.webp',
       '/assets/AMPS/Amps-Hero-1.webp',
       '/assets/AMPS/Amps-Hero-2.webp',
       '/assets/AMPS/Amps-Hero-3.webp',
@@ -151,8 +151,8 @@ export const projects = [
       '3D printing and laser cutting'
     ],
     images: [
-      '/assets/BEEST/BEEST-Cover.webp',
       '/SCPosters/BEEST_SC_25_11.pptx.webp',
+      '/assets/BEEST/BEEST-Cover.webp',
       '/assets/BEEST/BEEST-Hero-1.webp',
       '/assets/BEEST/BEEST-Hero-2.webp',
       '/assets/BEEST/BEEST-Hero-3.webp'
@@ -181,8 +181,8 @@ export const projects = [
       'Robotics programming with Python'
     ],
     images: [
-      '/assets/BLNC/BLNC-Cover.webp',
       '/SCPosters/BLNC_SC_25_11.pptx.webp',
+      '/assets/BLNC/BLNC-Cover.webp',
       '/assets/BLNC/BLNC-Hero-1.webp',
       '/assets/BLNC/BLNC-Hero-2.webp'
     ]
@@ -241,8 +241,8 @@ export const projects = [
       'Unity experience for VR control (nice to have)'
     ],
     images: [
-      '/assets/CNTR/CNTR-Cover.webp',
       '/SCPosters/CNTR_SC_25_11.pptx.webp',
+      '/assets/CNTR/CNTR-Cover.webp',
       '/assets/CNTR/CNTR-Hero-1.webp'
     ]
   },
@@ -424,8 +424,8 @@ export const projects = [
       'Lidar, microcontrollers, and robotics hardware'
     ],
     images: [
-      '/assets/MAZE/MAZE-Cover.webp',
       '/SCPosters/MAZE_SC_25_11.webp',
+      '/assets/MAZE/MAZE-Cover.webp',
       '/assets/MAZE/MAZE-Hero-1.webp',
       '/assets/MAZE/MAZE-Hero-2.webp'
     ]
@@ -483,8 +483,8 @@ export const projects = [
       'Stepper motor knowledge'
     ],
     images: [
-      '/assets/ORIO/ORIO-Cover.webp',
       '/SCPosters/ORIO_SC_25_11.pptx.webp',
+      '/assets/ORIO/ORIO-Cover.webp',
       '/assets/ORIO/ORIO-Hero-1.webp',
       '/assets/ORIO/ORIO-Hero-2.webp',
       '/assets/ORIO/ORIO-Hero-3.webp'
@@ -516,8 +516,8 @@ export const projects = [
       'Fluid simulation experience (Ansys, etc.)'
     ],
     images: [
-      '/assets/POBS/POBS-Cover.webp',
       '/SCPosters/POBS_SC_25_11.pptx.webp',
+      '/assets/POBS/POBS-Cover.webp',
       '/assets/POBS/POBS-Hero-1.webp',
       '/assets/POBS/POBS-Hero-2.webp',
       '/assets/POBS/POBS-Hero-3.webp'
@@ -613,8 +613,8 @@ export const projects = [
       'Interest and willingness to learn'
     ],
     images: [
-      '/assets/SWRM/SWRM-Cover.webp',
       '/SCPosters/SWRM_SC_25_11.pptx.webp',
+      '/assets/SWRM/SWRM-Cover.webp',
       '/assets/SWRM/SWRM-Hero-1.webp',
       '/assets/SWRM/SWRM-Hero-2.webp'
     ]
