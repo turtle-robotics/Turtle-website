@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import ButtonLink from '../components/ButtonLink'
 // import SponsorContactForm from '../components/SponsorContactForm'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -66,7 +67,8 @@ const Sponsorship = () => {
         "Logo placement on website",
         "Recognition at events",
         "Showcase Advertisement",
-        "Social media post"
+        "Social media post",
+        "Annual report recognition"
       ]
     },
     {
@@ -77,7 +79,6 @@ const Sponsorship = () => {
         "All Bronze benefits",
         "Resume Bank",
         "Recruiter Workshop",
-        "Annual report recognition",
         "Exclusive workshop access"
       ]
     },
