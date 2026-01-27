@@ -87,7 +87,6 @@ const Home = () => {
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-20 text-gray-800 dark:text-gray-200">
             ABOUT <span className="text-yellow-600 dark:text-yellow-400">TURTLE</span>
           </h2>
-          
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             <div className="glass-card p-10 rounded-2xl text-center transition-all duration-300">
               <div className="text-5xl mb-6">🎓</div>
@@ -100,11 +99,21 @@ const Home = () => {
               <p className="text-gray-600 dark:text-gray-400 font-light leading-relaxed">Cutting-edge robotics research across multiple domains and applications.</p>
             </div>
             <div className="glass-card p-10 rounded-2xl text-center transition-all duration-300">
-              <div className="text-5xl mb-6">🏆</div>
-              <h3 className="text-xl font-light mb-4 text-gray-800 dark:text-gray-200">Competition Success</h3>
-              <p className="text-gray-600 dark:text-gray-400 font-light leading-relaxed">Competing and winning in prestigious robotics competitions.</p>
+              <div className="text-5xl mb-6">⚙️</div>
+              <h3 className="text-xl font-light mb-4 text-gray-800 dark:text-gray-200">Engineering Development</h3>
+              <p className="text-gray-600 dark:text-gray-400 font-light leading-relaxed">Hands-on engineering experience through real-world robotics projects, technical workshops, and collaborative problem solving.</p>
             </div>
           </div>
+        </div>
+        {/* Competition Accolades - Large Rectangle */}
+        <div className="glass-card p-10 rounded-2xl text-center transition-all duration-300 mt-8 max-w-3xl mx-auto">
+          <div className="text-5xl mb-6">🏆</div>
+          <h3 className="text-2xl font-light mb-4 text-gray-800 dark:text-gray-200">Competition Accolades</h3>
+          <ul className="text-gray-600 dark:text-gray-400 font-light leading-relaxed space-y-3 flex flex-col items-center justify-center max-w-xl mx-auto pl-0">
+            <li className="flex items-center justify-center"><span className="text-yellow-600 dark:text-yellow-400 mr-3 text-lg">&#8226;</span><span className="text-center">1st Place at TAMU Project Showcase '21</span></li>
+            <li className="flex items-center justify-center"><span className="text-yellow-600 dark:text-yellow-400 mr-3 text-lg">&#8226;</span><span className="text-center">3rd Place at TAMU Innovation Expo '25</span></li>
+            <li className="flex items-center justify-center"><span className="text-yellow-600 dark:text-yellow-400 mr-3 text-lg">&#8226;</span><span className="text-center">Awardee at Texas Robot Combat Texas Cup '25</span></li>
+          </ul>
         </div>
       </section>
 
