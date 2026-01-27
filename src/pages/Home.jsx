@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import { Analytics } from '@vercel/analytics/react'
 import { Link } from 'react-router-dom'
 import { gsap } from 'gsap'
 import SponsorTicker from '../components/SponsorTicker'
@@ -54,7 +55,9 @@ const Home = () => {
   }, [])
 
   return (
-    <div className="min-h-screen">
+    <>
+      <Analytics />
+      <div className="min-h-screen">
       {/* Hero Section */}
 <section ref={heroRef} className="relative min-h-screen flex items-center justify-center px-4">
   <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900"></div>
@@ -201,7 +204,8 @@ const Home = () => {
         </div>
       </section>
       
-    </div>
+      </div>
+    </>
   )
 }
 
