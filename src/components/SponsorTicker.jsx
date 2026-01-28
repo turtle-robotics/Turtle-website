@@ -8,37 +8,43 @@ const SponsorTicker = () => {
       id: 1,
       name: "14 & Elm",
       url: "/assets/sponsors/14elmtlogo.jpeg",
-      alt: "14 & Elm Logo"
+      alt: "14 & Elm Logo",
+      link: "https://www.14andelm.com/"
     },
     {
       id: 2,
       name: "L3 Harris",
       url: "/assets/sponsors/l3harrislogo.png",
-      alt: "L3 Harris Logo"
+      alt: "L3 Harris Logo",
+      link: "https://www.l3harris.com/"
     },
     {
       id: 3,
       name: "Phillips 66",
       url: "/assets/sponsors/phillips66logo.png",
-      alt: "Phillips 66 Logo"
+      alt: "Phillips 66 Logo",
+      link: "https://www.phillips66.com/"
     },
     {
       id: 4,
       name: "Polymaker",
       url: "/assets/sponsors/polymaker-full-logo.svg",
-      alt: "Polymaker Logo"
+      alt: "Polymaker Logo",
+      link: "https://www.polymaker.com/"
     },
     {
       id: 5,
       name: "TC Energy",
       url: "/assets/sponsors/tcenergylogo.png",
-      alt: "TC Energy Logo"
+      alt: "TC Energy Logo",
+      link: "https://www.tcenergy.com/"
     },
     {
       id: 6,
       name: "Williams Energy Partners",
       url: "/assets/sponsors/williams-energy-partners-logo-png-transparent.png",
-      alt: "Williams Energy Partners Logo"
+      alt: "Williams Energy Partners Logo",
+      link: "https://www.williams.com/"
     }
   ];
 
@@ -76,25 +82,30 @@ const SponsorTicker = () => {
               customImgStyle.maxWidth = 480;
             }
             return (
-              <div
+              <a
                 key={`${logo.id}-${index}`}
                 className="project-ticker-block glass-effect flex items-center justify-center"
-                        style={{
-                          width: 200,
-                          height: 110, 
-                          background: '#fff',
-                          borderRadius: '999px',
-                          padding: 0,
-                          boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.10)',
-                          border: '1.5px solid #e5e7eb',
-                          margin: '0 0.5rem',
-                          transition: 'transform 0.3s cubic-bezier(0.4,0,0.2,1), box-shadow 0.3s cubic-bezier(0.4,0,0.2,1)',
-                          display: 'flex',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          backgroundClip: 'padding-box',
-                          overflow: 'hidden',
-                        }}
+                style={{
+                  width: 200,
+                  height: 110,
+                  background: '#fff',
+                  borderRadius: '999px',
+                  padding: 0,
+                  boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.10)',
+                  border: '1.5px solid #e5e7eb',
+                  margin: '0 0.5rem',
+                  transition: 'transform 0.3s cubic-bezier(0.4,0,0.2,1), box-shadow 0.3s cubic-bezier(0.4,0,0.2,1)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  backgroundClip: 'padding-box',
+                  overflow: 'hidden',
+                }}
+                href={logo.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                tabIndex={0}
+                aria-label={`Visit ${logo.name} website`}
               >
                 <img
                   src={logo.url}
@@ -102,7 +113,7 @@ const SponsorTicker = () => {
                   style={customImgStyle}
                   className="sponsor-logo"
                 />
-              </div>
+              </a>
             );
           })}
         </div>
