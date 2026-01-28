@@ -1,6 +1,7 @@
 import { Link, useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
 import Footer from './Footer'
+import SponsorTicker from './SponsorTicker'
 import ButtonLink from './ButtonLink'
 
 const Layout = ({ children }) => {
@@ -118,6 +119,13 @@ const Layout = ({ children }) => {
       <main className="pt-16 pb-16 md:pb-0">
         {children}
       </main>
+
+      {/* Sponsor Ticker - above Footer */}
+      <div
+        className={`w-full flex justify-center ${location.pathname === '/' ? 'mt-0' : 'mt-6'} mb-6`}
+      >
+        <SponsorTicker />
+      </div>
 
       {/* Footer */}
       <Footer />

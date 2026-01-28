@@ -79,9 +79,12 @@ const Home = () => {
   </div>
   
 {/* Project Ticker - positioned at bottom */}
-<div className="absolute bottom-0 left-0 right-0 z-10">
-  <ProjectTicker projects={projects} />
-</div>
+  <div className="absolute bottom-0 left-0 right-0 z-10">
+    <ProjectTicker projects={projects} />
+  </div>
+
+  {/* Sponsor Ticker - positioned above project ticker */}
+  {/* ...existing code... */}
 </section>
 
       {/* About Section */}

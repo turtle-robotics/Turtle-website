@@ -1,74 +1,114 @@
 import { motion } from 'framer-motion'
+import './ProjectTicker.css';
 
 const SponsorTicker = () => {
-  // Sample sponsor logos - white logos on black background
+  // Actual sponsor logos from public/assets/sponsors
   const logos = [
     {
       id: 1,
-      name: "Discord",
-      url: "https://picsum.photos/seed/discord/200/100",
-      alt: "Discord Logo"
+      name: "14 & Elm",
+      url: "/assets/sponsors/14elmtlogo.jpeg",
+      alt: "14 & Elm Logo"
     },
     {
       id: 2,
-      name: "TAMU", 
-      url: "https://picsum.photos/seed/tamu/200/100",
-      alt: "TAMU Logo"
+      name: "L3 Harris",
+      url: "/assets/sponsors/l3harrislogo.png",
+      alt: "L3 Harris Logo"
     },
     {
       id: 3,
-      name: "Instagram",
-      url: "https://picsum.photos/seed/instagram/200/100", 
-      alt: "Instagram Logo"
+      name: "Phillips 66",
+      url: "/assets/sponsors/phillips66logo.png",
+      alt: "Phillips 66 Logo"
     },
     {
       id: 4,
-      name: "LinkedIn",
-      url: "https://picsum.photos/seed/linkedin/200/100",
-      alt: "LinkedIn Logo"
+      name: "Polymaker",
+      url: "/assets/sponsors/polymaker-full-logo.svg",
+      alt: "Polymaker Logo"
     },
     {
       id: 5,
-      name: "GitHub",
-      url: "https://picsum.photos/seed/github/200/100",
-      alt: "GitHub Logo"
+      name: "TC Energy",
+      url: "/assets/sponsors/tcenergylogo.png",
+      alt: "TC Energy Logo"
     },
     {
       id: 6,
-      name: "YouTube",
-      url: "https://picsum.photos/seed/youtube/200/100",
-      alt: "YouTube Logo"
+      name: "Williams Energy Partners",
+      url: "/assets/sponsors/williams-energy-partners-logo-png-transparent.png",
+      alt: "Williams Energy Partners Logo"
     }
-  ]
+  ];
 
-  // Duplicate the logos array multiple times for seamless infinite scrolling
-  const duplicatedLogos = [...logos, ...logos, ...logos, ...logos, ...logos, ...logos]
+  // smotoh lop
+  const duplicatedLogos = [...logos, ...logos, ...logos, ...logos];
 
   return (
-    <div className="w-full py-4 overflow-hidden">
-      <motion.div
-        className="flex items-center"
-        style={{ width: `${duplicatedLogos.length * 200}px` }}
-        animate={{ x: ['0%', '-100%'] }}
-        transition={{ repeat: Infinity, duration: 250, ease: 'linear' }}  // Adjust duration as needed
-      >
-        {duplicatedLogos.map((logo, index) => (
-          <div
-            key={`${logo.id}-${index}`}
-            className="flex-shrink-0 px-8"
-          >
-            <div className="h-9 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300">
-              <img
-                src={logo.url}
-                alt={logo.alt}
-                className="h-full w-auto object-contain filter brightness-0 dark:invert"
-              />
-            </div>
-          </div>
-        ))}
-      </motion.div>
+    <div className="project-ticker-wrapper" style={{ pointerEvents: 'auto', position: 'relative', zIndex: 10, marginBottom: 0 }}>
+      <div className="project-ticker-container">
+        <div className="project-ticker-track" style={{ animationDuration: '90s' }}>
+          {duplicatedLogos.map((logo, index) => {
+            // Custom scaling and rectangle size for specific logos
+            let customImgStyle = {
+              maxHeight: 60,
+              maxWidth: 180,
+              width: 'auto',
+              height: 'auto',
+              objectFit: 'contain',
+              background: '#fff',
+              borderRadius: '999px',
+              padding: 2,
+              margin: '0 auto',
+              display: 'block',
+            };
+            if (logo.name === '14 & Elm') {
+              customImgStyle.maxHeight = 72;
+              customImgStyle.maxWidth = 220;
+            }
+            if (logo.name === 'L3 Harris') {
+              customImgStyle.maxHeight = 170; // match Williams Energy Partners
+              customImgStyle.maxWidth = 480;
+            }
+            if (logo.name === 'Williams Energy Partners') {
+              customImgStyle.maxHeight = 170; // a bit more
+              customImgStyle.maxWidth = 480;
+            }
+            return (
+              <div
+                key={`${logo.id}-${index}`}
+                className="project-ticker-block glass-effect flex items-center justify-center"
+                        style={{
+                          width: 200,
+                          height: 110, 
+                          background: '#fff',
+                          borderRadius: '999px',
+                          padding: 0,
+                          boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.10)',
+                          border: '1.5px solid #e5e7eb',
+                          margin: '0 0.5rem',
+                          transition: 'transform 0.3s cubic-bezier(0.4,0,0.2,1), box-shadow 0.3s cubic-bezier(0.4,0,0.2,1)',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          backgroundClip: 'padding-box',
+                          overflow: 'hidden',
+                        }}
+              >
+                <img
+                  src={logo.url}
+                  alt={logo.alt}
+                  style={customImgStyle}
+                  className="sponsor-logo"
+                />
+              </div>
+            );
+          })}
+        </div>
+      </div>
     </div>
-  )
+  );
 }
 
 export default SponsorTicker 
