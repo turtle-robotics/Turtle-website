@@ -7,7 +7,7 @@ import ProjectTicker from '../components/ProjectTicker'
 import { projects } from '../data/projects'
 import ButtonLink from '../components/ButtonLink'
 
-const ENABLE_SHOWCASE_POPUPS = false;
+const ENABLE_SHOWCASE_POPUPS = true;
 
 const Home = () => {
   const heroRef = useRef(null)
@@ -133,7 +133,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Showcase Popup - Mobile */}
+      {/* Kung Fu Tea Profit Share Popup - Mobile */}
       {ENABLE_SHOWCASE_POPUPS && showMobilePopup && (
         <div className="md:hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
           <div className="relative bg-gradient-to-br from-yellow-50 to-amber-50 dark:from-gray-800 dark:to-gray-700 p-8 rounded-2xl shadow-2xl border-2 border-yellow-400 dark:border-yellow-600 max-w-sm w-full">
@@ -148,39 +148,39 @@ const Home = () => {
             >
               ×
             </button>
-            
             <a 
-              href="/showcase"
+              href="https://maps.app.goo.gl/2Qn6Qn6Qn6Qn6Qn6A" target="_blank" rel="noopener noreferrer"
               className="block text-center"
               onClick={() => setShowMobilePopup(false)}
             >
               <div className="mx-auto mb-4 w-8 h-8 bg-red-900 dark:bg-yellow-600 rounded-full shadow-md"></div>
-              <div className="text-sm font-bold text-yellow-600 dark:text-yellow-400 mb-3 uppercase tracking-wide">📌 Don't Miss This Event!</div>
-              <div className="text-4xl font-extralight text-gray-800 dark:text-gray-200 mb-4 leading-tight">TURTLE Showcase</div>
-              <div className="text-xl font-light text-gray-600 dark:text-gray-400 mb-2">November 21, 2025</div>
-              <div className="text-xl font-light text-gray-600 dark:text-gray-400 mb-2">1:00 PM - 5:00 PM</div>
-              <div className="text-base font-light text-gray-600 dark:text-gray-400 mb-6">Zachry Engineering Building<br/>Virginia C Brown Atrium</div>
+              <div className="text-sm font-bold text-yellow-600 dark:text-yellow-400 mb-3 uppercase tracking-wide">📌 Profit Share!</div>
+              <div className="text-3xl font-extralight text-gray-800 dark:text-gray-200 mb-4 leading-tight">Kung Fu Tea</div>
+              <div className="text-xl font-light text-gray-600 dark:text-gray-400 mb-2">February 19, 2026</div>
+              <div className="text-xl font-light text-gray-600 dark:text-gray-400 mb-2">723 S Texas Ave, College Station, TX 77840</div>
+              <div className="text-base font-light text-gray-600 dark:text-gray-400 mb-6">Just put your receipt in the bucket at checkout.</div>
               <div className="bg-yellow-500 text-black px-8 py-3 rounded-xl font-light tracking-wide inline-block">
-                Learn More →
+                Get Directions →
               </div>
             </a>
           </div>
         </div>
       )}
       
-      {/* Showcase Popup - Desktop */}
+      {/* Kung Fu Tea Profit Share Popup - Desktop */}
       {ENABLE_SHOWCASE_POPUPS && (
         <a 
-          href="/showcase"
+          href="https://maps.app.goo.gl/r19F5aBQCkxuHWxd9" target="_blank" rel="noopener noreferrer"
           className="hidden md:block fixed bottom-8 right-8 z-40 group"
         >
           <div className="relative bg-gradient-to-br from-yellow-50 to-amber-50 dark:from-gray-800 dark:to-gray-700 p-6 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 rotate-2 hover:rotate-0 w-64 border-2 border-yellow-400 dark:border-yellow-600">
             <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 w-7 h-7 bg-red-900 dark:bg-yellow-600 rounded-full shadow-md"></div>
-            <div className="text-xs font-bold text-yellow-600 dark:text-yellow-400 mb-2 uppercase tracking-wide">📌 Don't Miss!</div>
-            <div className="text-2xl font-extralight text-gray-800 dark:text-gray-200 mb-2">TURTLE Showcase</div>
-            <div className="text-base font-light text-gray-600 dark:text-gray-400 mb-1">November 21, 2025</div>
-            <div className="text-base font-light text-gray-600 dark:text-gray-400 mb-3">1:00-5:00 PM</div>
-            <div className="text-xs text-yellow-600 dark:text-yellow-400 underline group-hover:text-yellow-700 dark:group-hover:text-yellow-300 font-medium">Click for more info →</div>
+            <div className="text-xs font-bold text-yellow-600 dark:text-yellow-400 mb-2 uppercase tracking-wide">📌 Profit Share!</div>
+            <div className="text-2xl font-extralight text-gray-800 dark:text-gray-200 mb-2">Kung Fu Tea</div>
+            <div className="text-base font-light text-gray-600 dark:text-gray-400 mb-1">February 19, 2026</div>
+            <div className="text-base font-light text-gray-600 dark:text-gray-400 mb-3">723 S Texas Ave, College Station, TX 77840</div>
+            <div className="text-xs text-yellow-600 dark:text-yellow-400 underline group-hover:text-yellow-700 dark:group-hover:text-yellow-300 font-medium">Put your receipt in the bucket at checkout!</div>
+            <div className="text-xs text-yellow-600 dark:text-yellow-400 underline group-hover:text-yellow-700 dark:group-hover:text-yellow-300 font-medium mt-2">Get Directions →</div>
           </div>
         </a>
       )}
