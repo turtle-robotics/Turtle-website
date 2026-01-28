@@ -9,7 +9,7 @@ const SponsorTicker = () => {
       name: "14 & Elm",
       url: "/assets/sponsors/14elmtlogo.jpeg",
       alt: "14 & Elm Logo",
-      link: "https://www.14andelm.com/"
+      link: "https://14elmt.com"
     },
     {
       id: 2,
