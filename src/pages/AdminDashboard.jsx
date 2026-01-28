@@ -3,6 +3,15 @@ import { useState, useEffect } from 'react';
 import { supabase } from '../utils/supabaseClient';
 
 const AdminDashboard = () => {
+  // Local toggle for Hatchling slides visibility
+  const [hatchlingSlidesVisible, setHatchlingSlidesVisible] = useState(() => {
+    const stored = localStorage.getItem('hatchlingSlidesVisible');
+    return stored === null ? true : stored === 'true';
+  });
+
+  useEffect(() => {
+    localStorage.setItem('hatchlingSlidesVisible', hatchlingSlidesVisible);
+  }, [hatchlingSlidesVisible]);
   const [sponsorContacts, setSponsorContacts] = useState([]);
   const [showcaseRegistrations, setShowcaseRegistrations] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -260,7 +269,18 @@ const AdminDashboard = () => {
           </button>
         </div>
 
-        {/* Stats Cards */}
+        {/* Hatchling Slides Toggle */}
+        <div className="mb-8">
+          <label className="flex items-center gap-3 cursor-pointer">
+            <input
+              type="checkbox"
+              checked={hatchlingSlidesVisible}
+              onChange={e => setHatchlingSlidesVisible(e.target.checked)}
+              className="w-5 h-5 accent-yellow-500"
+            />
+            <span className="text-lg text-gray-800 dark:text-gray-200">Hatchling Slides Viewable</span>
+          </label>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
           <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700">
             <div className="flex items-center justify-between mb-2">

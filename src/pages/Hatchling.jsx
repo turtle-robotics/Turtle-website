@@ -49,6 +49,21 @@ const Hatchling = () => {
     );
   }, []);
 
+  // Check localStorage for slides visibility
+  const [slidesVisible, setSlidesVisible] = useState(() => {
+    const stored = localStorage.getItem('hatchlingSlidesVisible');
+    return stored === null ? true : stored === 'true';
+  });
+
+  useEffect(() => {
+    const handler = () => {
+      const stored = localStorage.getItem('hatchlingSlidesVisible');
+      setSlidesVisible(stored === null ? true : stored === 'true');
+    };
+    window.addEventListener('storage', handler);
+    return () => window.removeEventListener('storage', handler);
+  }, []);
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -512,75 +527,76 @@ const Hatchling = () => {
             PUBLISHED <span className="text-accent">MATERIALS</span>
           </h2>
 
-          {/* Weekly Content PDFs */}
-          <div className="mb-16">
-            <h3 className="text-3xl font-light text-gray-800 dark:text-gray-200 mb-8 text-center">
-              Weekly Content Materials
-            </h3>
-            <div className="glass-card p-8 rounded-2xl max-w-2xl mx-auto">
-              <div className="text-center mb-6">
-                <div className="text-5xl mb-4">📚</div>
-                <h4 className="text-xl font-light text-gray-800 dark:text-gray-200 mb-2">
-                  Select Week to Download
-                </h4>
-                <p className="text-gray-600 dark:text-gray-400 font-light">
-                  Choose a week to download the corresponding content materials
-                </p>
-              </div>
+          {/* Weekly Content PDFs (toggleable) */}
+          {slidesVisible && (
+            <div className="mb-16">
+              <h3 className="text-3xl font-light text-gray-800 dark:text-gray-200 mb-8 text-center">
+                Weekly Content Materials
+              </h3>
+              <div className="glass-card p-8 rounded-2xl max-w-2xl mx-auto">
+                <div className="text-center mb-6">
+                  <div className="text-5xl mb-4">📚</div>
+                  <h4 className="text-xl font-light text-gray-800 dark:text-gray-200 mb-2">
+                    Select Week to Download
+                  </h4>
+                  <p className="text-gray-600 dark:text-gray-400 font-light">
+                    Choose a week to download the corresponding content materials
+                  </p>
+                </div>
 
-              {/** PDF file map */}
-              {(() => {
-                const pdfMap = {
-                  1: "/pdfs/Hatchling Week 1 - Introduction.pptx.pdf",
-                  2: "/pdfs/Hatchling Week 2 - SolidWorks (CAD) Foundation.pptx.pdf",
-                  3: "/pdfs/Hatchling Week 3 - SolidWorks 3D.pptx.pdf",
-                  4: "/pdfs/Hatchling Week 4 - Tools, Project, and Process.pptx.pdf",
-                  5: "/pdfs/Hatchling Week 5 - Design Review and C++.pptx.pdf",
-                  6: "/pdfs/Hatchling Week 6 - SolidWorks Assembly.pptx.pdf",
-                  7: "/pdfs/Hatchling Week 7 - Programming and Git GitHub.pptx.pdf",
-                  8: "/pdfs/Hatchling Week 8 - Electronics and Soldering.pptx.pdf",
-                };
+                {(() => {
+                  const pdfMap = {
+                    1: "/pdfs/Hatchling Week 1 - Introduction.pptx.pdf",
+                    2: "/pdfs/Hatchling Week 2 - SolidWorks (CAD) Foundation.pptx.pdf",
+                    3: "/pdfs/Hatchling Week 3 - SolidWorks 3D.pptx.pdf",
+                    4: "/pdfs/Hatchling Week 4 - Tools, Project, and Process.pptx.pdf",
+                    5: "/pdfs/Hatchling Week 5 - Design Review and C++.pptx.pdf",
+                    6: "/pdfs/Hatchling Week 6 - SolidWorks Assembly.pptx.pdf",
+                    7: "/pdfs/Hatchling Week 7 - Programming and Git GitHub.pptx.pdf",
+                    8: "/pdfs/Hatchling Week 8 - Electronics and Soldering.pptx.pdf",
+                  };
 
-                return (
-                  <div className="flex flex-col sm:flex-row gap-4 items-center justify-center mb-6">
-                    <select
-                      id="weekSelector"
-                      className="glass-card border border-gray-200 dark:border-gray-700 px-4 py-3 rounded-lg text-gray-800 dark:text-gray-200 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
-                      onChange={(e) => {
-                        const selectedWeek = e.target.value;
-                        const downloadBtn = document.getElementById("downloadBtn");
-                        if (selectedWeek && downloadBtn) {
-                          const filePath = pdfMap[selectedWeek];
-                          downloadBtn.href = encodeURI(filePath); // 👈 Encodes spaces and '+'
-                          downloadBtn.style.display = "inline-block";
-                        }
-                      }}
-                    >
-                      <option value="">Select a week...</option>
-                      <option value="1">Week 1: Introductions</option>
-                      <option value="2">Week 2: SolidWorks Foundation</option>
-                    </select>
+                  return (
+                    <div className="flex flex-col sm:flex-row gap-4 items-center justify-center mb-6">
+                      <select
+                        id="weekSelector"
+                        className="glass-card border border-gray-200 dark:border-gray-700 px-4 py-3 rounded-lg text-gray-800 dark:text-gray-200 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
+                        onChange={(e) => {
+                          const selectedWeek = e.target.value;
+                          const downloadBtn = document.getElementById("downloadBtn");
+                          if (selectedWeek && downloadBtn) {
+                            const filePath = pdfMap[selectedWeek];
+                            downloadBtn.href = encodeURI(filePath); // 👈 Encodes spaces and '+'
+                            downloadBtn.style.display = "inline-block";
+                          }
+                        }}
+                      >
+                        <option value="">Select a week...</option>
+                        <option value="1">Week 1: Introductions</option>
+                        <option value="2">Week 2: SolidWorks Foundation</option>
+                      </select>
 
-                    <a
-                      id="downloadBtn"
-                      href="#"
-                      download
-                      className="bg-yellow-500 text-black px-6 py-3 rounded-lg text-sm font-light transition-all duration-300 hidden"
-                    >
-                      Download PDF
-                    </a>
-                  </div>
-                );
-              })()}
+                      <a
+                        id="downloadBtn"
+                        href="#"
+                        download
+                        className="bg-yellow-500 text-black px-6 py-3 rounded-lg text-sm font-light transition-all duration-300 hidden"
+                      >
+                        Download PDF
+                      </a>
+                    </div>
+                  );
+                })()}
 
-              <div className="text-center">
-                <p className="text-sm text-gray-500 dark:text-gray-400">
-                  Available for weeks 1–8 • Each PDF contains comprehensive
-                  content for that week
-                </p>
+                <div className="text-center">
+                  <p className="text-sm text-gray-500 dark:text-gray-400">
+                    Available for weeks 1–8 • Each PDF contains comprehensive
+                    content for that week
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
+          )}
 
           {/* Additional Materials */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

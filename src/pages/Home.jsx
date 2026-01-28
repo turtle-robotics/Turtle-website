@@ -114,7 +114,7 @@ const Home = () => {
         {/* Competition Accolades - Large Rectangle */}
         <div className="glass-card p-10 rounded-2xl text-center transition-all duration-300 mt-8 max-w-3xl mx-auto">
           <div className="text-5xl mb-6">🏆</div>
-          <h3 className="text-2xl font-light mb-4 text-gray-800 dark:text-gray-200">Competition Accolades</h3>
+          <h3 className="text-2xl font-light mb-4 text-gray-800 dark:text-gray-200">Event Accolades</h3>
           <ul className="text-gray-600 dark:text-gray-400 font-light leading-relaxed space-y-3 flex flex-col items-center justify-center max-w-xl mx-auto pl-0">
             <li className="flex items-center justify-center"><span className="text-yellow-600 dark:text-yellow-400 mr-3 text-lg">&#8226;</span><span className="text-center">1st Place at TAMU Project Showcase '21</span></li>
             <li className="flex items-center justify-center"><span className="text-yellow-600 dark:text-yellow-400 mr-3 text-lg">&#8226;</span><span className="text-center">3rd Place at TAMU Innovation Expo '25</span></li>
