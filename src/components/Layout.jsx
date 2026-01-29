@@ -121,11 +121,13 @@ const Layout = ({ children }) => {
       </main>
 
       {/* Sponsor Ticker - above Footer */}
-      <div
-        className={`w-full flex justify-center ${location.pathname === '/' ? 'mt-0' : 'mt-6'} mb-6`}
-      >
-        <SponsorTicker />
-      </div>
+      {(location.pathname === '/' || location.pathname === '/sponsorship') && (
+        <div
+          className={`w-full flex justify-center ${location.pathname === '/' ? 'mt-0' : 'mt-6'} mb-6`}
+        >
+          <SponsorTicker />
+        </div>
+      )}
 
       {/* Footer */}
       <Footer />
