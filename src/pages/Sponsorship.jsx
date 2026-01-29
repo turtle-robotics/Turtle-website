@@ -129,27 +129,31 @@ const Sponsorship = () => {
           </h1>
           
           <p className="hero-subtitle text-xl md:text-2xl font-light tracking-wide text-gray-600 dark:text-gray-400 mb-12 max-w-3xl mx-auto">
-            Partner with the next generation of robotics innovators. Support cutting-edge research and shape the future of autonomous systems.
+            Partner with the next generation of robotics innovators. Support cutting-edge research and shape the future of OLSN.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <ButtonLink 
-              to="#sponsorship-tiers" 
-              style="primary" 
-              sizeVariant="large"
-              className="shadow-lg"
+            <button
+              type="button"
+              className="shadow-lg bg-yellow-500 text-black px-10 py-5 rounded-xl font-medium hover:scale-105 transition-all duration-300"
+              onClick={() => {
+                const section = document.getElementById('sponsorship-tiers');
+                if (section) section.scrollIntoView({ behavior: 'smooth' });
+              }}
             >
               View Sponsorship Tiers
-            </ButtonLink>
-            <ButtonLink 
-              to="#" 
-              style="primary-outline" 
-              sizeVariant="large"
-              className=""
-              onClick={() => setShowEmailPopup(true)}
+            </button>
+            <button
+              type="button"
+              className="border-2 border-yellow-500 text-yellow-600 px-10 py-5 rounded-xl font-medium hover:scale-105 transition-all duration-300"
+              onClick={() => {
+                const section = document.getElementById('contact-section');
+                if (section) section.scrollIntoView({ behavior: 'smooth' });
+                setShowEmailPopup(true);
+              }}
             >
               Contact Us
-            </ButtonLink>
+            </button>
           </div>
         </div>
       </section>
@@ -273,7 +277,7 @@ const Sponsorship = () => {
             <div className="sponsor-section p-8 rounded-2xl bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700 dark:to-gray-600">
               <h3 className="text-2xl font-light text-gray-800 dark:text-gray-200 mb-4">SNOUT - Olfactory Sensing Robot</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-4">
-                Advanced robotic vehicle equipped with olfactory sensors for chemical detection and identification.
+                SNOUT is an advanced robotic platform equipped with olfactory sensors for detecting and identifying chemical compounds. It enables real-time environmental monitoring and hazardous material detection in diverse settings.
               </p>
               <div className="flex flex-wrap gap-2">
                 <span className="text-xs bg-yellow-500 text-yellow-900 px-3 py-1 rounded-full">IMS Sensors</span>
@@ -283,14 +287,14 @@ const Sponsorship = () => {
             </div>
 
             <div className="sponsor-section p-8 rounded-2xl bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700 dark:to-gray-600">
-              <h3 className="text-2xl font-light text-gray-800 dark:text-gray-200 mb-4">Autonomous Navigation Systems</h3>
+              <h3 className="text-2xl font-light text-gray-800 dark:text-gray-200 mb-4">OLSN</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-4">
-                Development of advanced pathfinding and obstacle avoidance algorithms for mobile robots.
+                Design and development of a low-cost, 3D-printed prosthetic hand with advanced biomechanical functionality. The project aims to improve accessibility and usability for individuals in need of affordable prosthetic solutions.
               </p>
               <div className="flex flex-wrap gap-2">
-                <span className="text-xs bg-yellow-500 text-yellow-900 px-3 py-1 rounded-full">Computer Vision</span>
-                <span className="text-xs bg-yellow-500 text-yellow-900 px-3 py-1 rounded-full">SLAM</span>
-                <span className="text-xs bg-yellow-500 text-yellow-900 px-3 py-1 rounded-full">Control Systems</span>
+                <span className="text-xs bg-yellow-500 text-yellow-900 px-3 py-1 rounded-full">Prosthetics</span>
+                <span className="text-xs bg-yellow-500 text-yellow-900 px-3 py-1 rounded-full">Biomechanics</span>
+                <span className="text-xs bg-yellow-500 text-yellow-900 px-3 py-1 rounded-full">3D Printing</span>
               </div>
             </div>
           </div>
@@ -298,7 +302,7 @@ const Sponsorship = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-16 px-4">
+      <section id="contact-section" className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-extralight text-gray-800 dark:text-gray-200 mb-8">
             Ready to <span className="text-yellow-600 dark:text-yellow-400">Partner</span>?
