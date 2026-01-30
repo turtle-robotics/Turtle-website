@@ -149,7 +149,7 @@ const Home = () => {
               ×
             </button>
             <a 
-              href="https://maps.app.goo.gl/2Qn6Qn6Qn6Qn6Qn6A" target="_blank" rel="noopener noreferrer"
+              href="https://www.google.com/maps/search/?api=1&query=Kung+Fu+Tea+College+Station+TX" target="_blank" rel="noopener noreferrer"
               className="block text-center"
               onClick={() => setShowMobilePopup(false)}
             >
