@@ -32,57 +32,45 @@ const About = () => {
 
   const currentLeadership = [
     // Executive roles
-    { role: 'President', name: 'Samantha Woravka', period: 'Spring 2026 - Fall 2026', description: 'Leading TURTLE into its next chapter of innovation and growth' },
-    { role: 'External Vice President', name: 'Yousuf Shafiu', period: 'Fall 2025 - Spring 2026', description: 'Overseeing external relations and partnerships' },
-    { role: 'Internal Vice President', name: 'Ian Wilhite', period: 'Fall 2025 - Spring 2026', description: 'Managing internal operations and team coordination' },
-    { role: 'Project Vice President', name: 'Emily Tredemeyer', period: 'Spring 2026 - Fall 2026', description: 'Leading project development and technical initiatives' },
-    { role: 'Development Vice President', name: 'Kalen Jaroszewski', period: 'Fall 2025 - Spring 2026', description: 'Driving innovation and research advancement' },
+    { role: 'President', name: 'Sam Woravka', period: 'Spring 2026', description: 'Leading TURTLE into its next chapter of innovation and growth' },
+    { role: 'Internal VP', name: 'Ian Wilhite', period: 'Spring 2026', description: 'Managing internal operations and team coordination' },
+    { role: 'External VP', name: 'Yousuf Shafiu', period: 'Spring 2026', description: 'Overseeing external relations and partnerships' },
+    { role: 'Project VP', name: 'Emily Tredemeyer', period: 'Spring 2026', description: 'Leading project development and technical initiatives' },
+    { role: 'Development VP', name: 'Kalen Jaroszewski', period: 'Spring 2026', description: 'Driving innovation and research advancement' },
 
-    // External Branch — officers then committee members
-    { role: 'Public Relations Officer', name: 'Isaac Cabello', period: 'Fall 2025 - Spring 2026', description: 'Managing club communications and public presence' },
-    { role: 'Sponsorship Committee', name: 'Jacob Fuerst', period: 'Fall 2025 - Spring 2026', description: 'Sponsorship strategy and outreach' },
-    { role: 'Sponsorship Committee', name: 'Julia Sopala', period: 'Fall 2025 - Spring 2026', description: 'Sponsorship strategy and outreach' },
-    { role: 'Sponsorship Committee', name: 'Preston Nguyen', period: 'Fall 2025 - Spring 2026', description: 'Sponsorship strategy and outreach' },
-    { role: 'Sponsorship Committee', name: 'Om Bhatt', period: 'Fall 2025 - Spring 2026', description: 'Sponsorship strategy and outreach' },
-    { role: 'Sponsorship Committee', name: 'William Donaldson', period: 'Fall 2025 - Spring 2026', description: 'Sponsorship strategy and outreach' },
-    { role: 'Public Relations Committee', name: 'Alexis Bunta', period: 'Fall 2025 - Spring 2026', description: 'Content and media support' },
-    { role: 'Public Relations Committee', name: 'Noah Sherman', period: 'Fall 2025 - Spring 2026', description: 'Content and media support' },
-    { role: 'Public Relations Committee', name: 'Som Datta', period: 'Fall 2025 - Spring 2026', description: 'Content and media support' },
-    { role: 'Public Relations Committee', name: 'Saksham Mohan', period: 'Fall 2025 - Spring 2026', description: 'Content and media support' },
-    { role: 'Public Relations Committee', name: 'Wenrui Xu', period: 'Fall 2025 - Spring 2026', description: 'Content and media support' },
-    { role: 'Public Relations Committee', name: 'Matthew Elizalde', period: 'Fall 2025 - Spring 2026', description: 'Content and media support' },
-    { role: 'Public Relations Committee', name: 'Renee Zhu', period: 'Fall 2025 - Spring 2026', description: 'Content and media support' },
+    // Internal Branch
+    { role: 'Internal VP', name: 'Ian Wilhite', period: 'Spring 2026', description: 'Managing internal operations and team coordination' },
+    { role: 'Finance', name: 'Raquel Garcia', period: 'Spring 2026', description: 'Managing financial operations and budgeting' },
+    { role: 'Finance', name: 'Eddy Silva', period: 'Spring 2026', description: 'Financial planning and reimbursements' },
+    { role: 'Logistics', name: 'Ryo Kato', period: 'Spring 2026', description: 'Events, scheduling, and operations' },
+    { role: 'Lab Quality Chair', name: 'Haider Mahdi', period: 'Spring 2026', description: 'Safety and quality standards in the lab' },
 
-    // Internal Branch — officers then committees
-    { role: 'Logistics Officer', name: 'Ryo Kato', period: 'Fall 2025 - Spring 2026', description: 'Events, scheduling, and operations' },
-    { role: 'Finance Officer', name: 'Eddy Silva', period: 'Fall 2025 - Spring 2026', description: 'Financial planning and reimbursements' },
-    { role: 'Treasurer', name: 'Raquel Garcia', period: 'Fall 2025 - Spring 2026', description: 'Managing financial operations and budgeting' },
-    { role: 'Lab Quality Officer', name: 'Haider Mahdi', period: 'Fall 2025 - Spring 2026', description: 'Safety and quality standards in the lab' },
-    { role: 'Lab Quality Committee', name: 'Caleb Santiago', period: 'Fall 2025 - Spring 2026', description: 'Lab quality and safety support' },
-    { role: 'Lab Quality Committee', name: 'Dalys Guajardo', period: 'Fall 2025 - Spring 2026', description: 'Lab quality and safety support' },
-    { role: 'Lab Quality Committee', name: 'Mya Tinsay', period: 'Fall 2025 - Spring 2026', description: 'Lab quality and safety support' },
-    { role: 'Lab Quality Committee', name: 'Thomas Lopez', period: 'Fall 2025 - Spring 2026', description: 'Lab quality and safety support' },
-    { role: 'Lab Quality Committee', name: 'Victor Cardona', period: 'Fall 2025 - Spring 2026', description: 'Lab quality and safety support' },
+    // External Branch
+    { role: 'External VP', name: 'Yousuf Shafiu', period: 'Spring 2026', description: 'Overseeing external relations and partnerships' },
+    { role: 'Public Relations', name: 'Isaac Cabello', period: 'Spring 2026', description: 'Managing club communications and public presence' },
+    { role: 'Webmaster', name: 'Saksham Mohan', period: 'Spring 2026', description: 'Website and technical support' },
+    { role: 'Corporate Relations', name: 'Will Donaldson', period: 'Spring 2026', description: 'Corporate partnerships and outreach' },
+    { role: 'Events', name: 'Renee Zhu', period: 'Spring 2026', description: 'Events and scheduling' },
 
-    // Projects Branch — officers then committees
-    { role: 'Documentation Officer', name: 'N/A', period: 'Fall 2025 - Spring 2026', description: 'Documentation standards and archives' },
-    { role: 'Design Review Officer', name: 'Aidan Briggs', period: 'Fall 2025 - Spring 2026', description: 'Project design reviews and guidance' },
-    { role: 'Design Review Officer', name: 'Evan Chan', period: 'Fall 2025 - Spring 2026', description: 'Project design reviews and guidance' },
-    { role: 'Design Review Officer', name: 'Jonathon Foltyn', period: 'Fall 2025 - Spring 2026', description: 'Project design reviews and guidance' },
-    { role: 'Design Review Officer', name: 'Micah Guttman', period: 'Fall 2025 - Spring 2026', description: 'Project design reviews and guidance' },
-    { role: 'Design Review Officer', name: 'Will McGarity', period: 'Fall 2025 - Spring 2026', description: 'Project design reviews and guidance' },
+    // Project Branch
+    { role: 'Project VP', name: 'Emily Tredemeyer', period: 'Spring 2026', description: 'Leading project development and technical initiatives' },
+    { role: 'Design Review Chair', name: 'Will McGarity', period: 'Spring 2026', description: 'Project design reviews and guidance' },
+    { role: 'Design Review Chair', name: 'Evan Chan', period: 'Spring 2026', description: 'Project design reviews and guidance' },
 
-    // Development Branch — officers then directors
-    { role: 'Workshop Officer', name: 'Vedant Soni', period: 'Fall 2025 - Spring 2026', description: 'Workshops and technical training' },
-    { role: 'Hatchling Director', name: 'Alejandro Avila', period: 'Fall 2025 - Spring 2026', description: 'Hatchling leadership and mentorship' },
-    { role: 'Hatchling Director', name: 'Ethan Real', period: 'Fall 2025 - Spring 2026', description: 'Hatchling leadership and mentorship' },
-    { role: 'Hatchling Director', name: 'Gael Mamenta', period: 'Fall 2025 - Spring 2026', description: 'Hatchling leadership and mentorship' },
-    { role: 'Hatchling Director', name: 'Thomas Lopez', period: 'Fall 2025 - Spring 2026', description: 'Hatchling leadership and mentorship' },
-    { role: 'Hatchling Director', name: 'Karthik Jayakumar', period: 'Fall 2025 - Spring 2026', description: 'Hatchling leadership and mentorship' },
-    { role: 'Hatchling Director', name: 'Mohid Ismail', period: 'Fall 2025 - Spring 2026', description: 'Hatchling leadership and mentorship' },
-    { role: 'Hatchling Director', name: 'Nathan Mersino', period: 'Fall 2025 - Spring 2026', description: 'Hatchling leadership and mentorship' },
-    { role: 'Hatchling Director', name: 'William Shan', period: 'Fall 2025 - Spring 2026', description: 'Hatchling leadership and mentorship' },
-    { role: 'Hatchling Director', name: 'McKenzie McCain', period: 'Fall 2025 - Spring 2026', description: 'Hatchling leadership and mentorship' },
+    // Development Branch
+    { role: 'Development VP', name: 'Kalen Jaroszewski', period: 'Spring 2026', description: 'Driving innovation and research advancement' },
+    { role: 'Workshops', name: 'Vedant Soni', period: 'Spring 2026', description: 'Workshops and technical training' },
+    { role: 'Hatchling Director', name: 'Alejandro Avila', period: 'Spring 2026', description: 'Hatchling leadership and mentorship' },
+    { role: 'Hatchling Director', name: 'Ethan Real', period: 'Spring 2026', description: 'Hatchling leadership and mentorship' },
+    { role: 'Hatchling Director', name: 'Gael Mamenta', period: 'Spring 2026', description: 'Hatchling leadership and mentorship' },
+    { role: 'Hatchling Director', name: 'Karthik Jayakumar', period: 'Spring 2026', description: 'Hatchling leadership and mentorship' },
+    { role: 'Hatchling Director', name: 'McKenzie McCain', period: 'Spring 2026', description: 'Hatchling leadership and mentorship' },
+    { role: 'Hatchling Director', name: 'Mohid Ismail', period: 'Spring 2026', description: 'Hatchling leadership and mentorship' },
+    { role: 'Hatchling Director', name: 'Nathan Mersino', period: 'Spring 2026', description: 'Hatchling leadership and mentorship' },
+    { role: 'Hatchling Director', name: 'Thomas Lopez', period: 'Spring 2026', description: 'Hatchling leadership and mentorship' },
+    { role: 'Hatchling Director', name: 'William Shan', period: 'Spring 2026', description: 'Hatchling leadership and mentorship' },
+    { role: 'Hatchling Director', name: 'Julia Sopala', period: 'Spring 2026', description: 'Hatchling leadership and mentorship' },
+    { role: 'Hatchling Director', name: 'Drew Wheaton', period: 'Spring 2026', description: 'Hatchling leadership and mentorship' },
   ]
 
   const [openSection, setOpenSection] = useState({
@@ -99,7 +87,7 @@ const About = () => {
 
   const renderLeadership = (roles) =>
     currentLeadership
-      .filter(l => roles.includes(l.role))
+      .filter((l, idx, arr) => roles.includes(l.role) && arr.findIndex(x => x.role === l.role && x.name === l.name) === idx)
       .map((leader, index) => (
         <div key={index} className="glass-card p-6 rounded-2xl transition-all duration-300">
           <h3 className="text-lg font-light text-yellow-400 mb-2">{leader.role}</h3>
@@ -163,15 +151,15 @@ const About = () => {
             <button onClick={() => toggleSection('executive')} className="w-full text-left font-light text-xl text-gray-200 mb-4">
               Executive Roles {openSection.executive ? '▲' : '▼'}
             </button>
-            {openSection.executive && <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">{renderLeadership(['President','External Vice President','Internal Vice President','Project Vice President','Development Vice President'])}</div>}
-          </div>
-
-          {/* External Branch Accordion */}
-          <div className="mb-12">
-            <button onClick={() => toggleSection('external')} className="w-full text-left font-light text-xl text-gray-200 mb-4">
-              External Branch {openSection.external ? '▲' : '▼'}
-            </button>
-            {openSection.external && <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">{renderLeadership(['Corporate Relations Officer','Public Relations Officer','Sponsorship Committee','Public Relations Committee'])}</div>}
+            {openSection.executive && <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">{
+              renderLeadership(['President'])
+            }
+            {renderLeadership(['Internal VP'])}
+            {renderLeadership(['External VP'])}
+            {renderLeadership(['Project VP'])}
+            {renderLeadership(['Development VP'])}
+            }
+          </div>}
           </div>
 
           {/* Internal Branch Accordion */}
@@ -179,7 +167,15 @@ const About = () => {
             <button onClick={() => toggleSection('internal')} className="w-full text-left font-light text-xl text-gray-200 mb-4">
               Internal Branch {openSection.internal ? '▲' : '▼'}
             </button>
-            {openSection.internal && <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">{renderLeadership(['Logistics Officer', 'Finance Officer', 'Treasurer', 'Lab Quality Officer', 'Lab Quality Committee'])}</div>}
+            {openSection.internal && <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">{renderLeadership(['Internal VP','Finance','Logistics','Lab Quality Chair'])}</div>}
+          </div>
+
+          {/* External Branch Accordion */}
+          <div className="mb-12">
+            <button onClick={() => toggleSection('external')} className="w-full text-left font-light text-xl text-gray-200 mb-4">
+              External Branch {openSection.external ? '▲' : '▼'}
+            </button>
+            {openSection.external && <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">{renderLeadership(['External VP','Public Relations','Webmaster','Corporate Relations','Events'])}</div>}
           </div>
 
           {/* Projects Branch Accordion */}
@@ -187,7 +183,7 @@ const About = () => {
             <button onClick={() => toggleSection('projects')} className="w-full text-left font-light text-xl text-gray-200 mb-4">
               Projects Branch {openSection.projects ? '▲' : '▼'}
             </button>
-            {openSection.projects && <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">{renderLeadership(['Documentation Officer','Design Review Officer'])}</div>}
+            {openSection.projects && <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">{renderLeadership(['Project VP','Design Review Chair'])}</div>}
           </div>
 
           {/* Development Branch Accordion */}
@@ -195,7 +191,7 @@ const About = () => {
             <button onClick={() => toggleSection('development')} className="w-full text-left font-light text-xl text-gray-200 mb-4">
               Development Branch {openSection.development ? '▲' : '▼'}
             </button>
-            {openSection.development && <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">{renderLeadership(['Workshop Officer','Hatchling Director'])}</div>}
+            {openSection.development && <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">{renderLeadership(['Development VP','Workshops','Hatchling Director'])}</div>}
           </div>
         </div>
       </section>
