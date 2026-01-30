@@ -27,6 +27,18 @@ const Layout = ({ children }) => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
       {/* Navigation */}
+      {!showHeader && (
+        <button
+          className="fixed top-4 left-4 z-[100] bg-yellow-500 text-black rounded-full p-3 shadow-lg md:hidden animate-bounce"
+          style={{ fontSize: 22, lineHeight: 1 }}
+          onClick={() => setShowHeader(true)}
+          aria-label="Open header"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      )}
       {showHeader && (
         <nav className="fixed top-0 left-0 right-0 z-50 bg-gray-900/80 backdrop-blur-xl border-b border-gray-700/50 shadow-sm">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
@@ -79,7 +91,7 @@ const Layout = ({ children }) => {
             {/* Mobile Header Close Button */}
             <button
               className="absolute top-2 right-4 z-[100] bg-gray-800 text-gray-200 rounded-full p-2 shadow-lg md:hidden"
-              style={{ fontSize: 24, lineHeight: 1, display: 'block' }}
+              style={{ fontSize: 24, lineHeight: 1 }}
               onClick={() => setShowHeader(false)}
               aria-label="Close header"
             >
