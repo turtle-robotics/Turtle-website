@@ -192,16 +192,17 @@ const Home = () => {
             Calendar
           </h2>
           <div className="flex justify-center">
-            <div className="rounded-2xl border-4 border-gray-300 dark:border-gray-700 shadow-xl bg-white/60 dark:bg-gray-900/60 p-4">
-              <iframe
-                src="https://calendar.google.com/calendar/embed?src=turtlerobotics%40gmail.com&ctz=America%2FChicago"
-                style={{ border: 0, borderRadius: '1rem', background: 'transparent' }}
-                width="1300"
-                height="1200"
-                frameBorder="0"
-                scrolling="no"
-                title="TURTLE Google Calendar"
-              ></iframe>
+            <div className="rounded-2xl border-4 border-gray-300 dark:border-gray-700 shadow-xl bg-white/60 dark:bg-gray-900/60 p-4 w-full max-w-[1300px]">
+              <div className="relative w-full" style={{ paddingBottom: '120%', height: 0 }}>
+                <iframe
+                  src="https://calendar.google.com/calendar/embed?src=turtlerobotics%40gmail.com&ctz=America%2FChicago"
+                  style={{ border: 0, borderRadius: '1rem', background: 'transparent', position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+                  frameBorder="0"
+                  scrolling="no"
+                  title="TURTLE Google Calendar"
+                  allowFullScreen
+                ></iframe>
+              </div>
             </div>
           </div>
         </div>
