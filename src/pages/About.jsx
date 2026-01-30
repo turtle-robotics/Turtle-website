@@ -42,7 +42,7 @@ const About = () => {
     { role: 'Internal VP', name: 'Ian Wilhite', period: 'Spring 2026', description: 'Managing internal operations and team coordination' },
     { role: 'Finance', name: 'Raquel Garcia', period: 'Spring 2026', description: 'Managing financial operations and budgeting' },
     { role: 'Finance', name: 'Eddy Silva', period: 'Spring 2026', description: 'Financial planning and reimbursements' },
-    { role: 'Logistics', name: 'Ryo Kato', period: 'Spring 2026', description: 'Events, scheduling, and operations' },
+    { role: 'Documentation', name: 'Ryo Kato', period: 'Spring 2026', description: 'Documentation standards and archives' },
     { role: 'Lab Quality Chair', name: 'Haider Mahdi', period: 'Spring 2026', description: 'Safety and quality standards in the lab' },
 
     // External Branch
@@ -151,15 +151,9 @@ const About = () => {
             <button onClick={() => toggleSection('executive')} className="w-full text-left font-light text-xl text-gray-200 mb-4">
               Executive Roles {openSection.executive ? '▲' : '▼'}
             </button>
-            {openSection.executive && <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">{
-              renderLeadership(['President'])
-            }
-            {renderLeadership(['Internal VP'])}
-            {renderLeadership(['External VP'])}
-            {renderLeadership(['Project VP'])}
-            {renderLeadership(['Development VP'])}
-            }
-          </div>}
+            {openSection.executive && <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              {renderLeadership(['President','Internal VP','External VP','Project VP','Development VP'])}
+            </div>}
           </div>
 
           {/* Internal Branch Accordion */}
@@ -167,7 +161,7 @@ const About = () => {
             <button onClick={() => toggleSection('internal')} className="w-full text-left font-light text-xl text-gray-200 mb-4">
               Internal Branch {openSection.internal ? '▲' : '▼'}
             </button>
-            {openSection.internal && <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">{renderLeadership(['Internal VP','Finance','Logistics','Lab Quality Chair'])}</div>}
+            {openSection.internal && <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">{renderLeadership(['Internal VP','Finance','Logistics','Lab Quality Chair','Documentation'])}</div>}
           </div>
 
           {/* External Branch Accordion */}
