@@ -19,7 +19,7 @@ const ArrowButton = ({ onClick, direction = 'left' }) => (
   </button>
 )
 
-export default function ImageCarousel({ images = [], autoPlay = true, intervalMs = 4000, className = '', aspectRatio = '4/3', maxHeight = '98vh' }) {
+export default function ImageCarousel({ images = [], autoPlay = false, intervalMs = 4000, className = '', aspectRatio = '4/3', maxHeight = '98vh' }) {
   const slides = useMemo(() => (images && images.length ? images : []), [images])
   const [index, setIndex] = useState(0)
   const timerRef = useRef(null)

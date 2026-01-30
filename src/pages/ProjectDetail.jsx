@@ -99,7 +99,7 @@ const ProjectDetail = () => {
         {slides && slides.length > 0 && (
           <div className="project-section mb-12">
             <div className="rounded-2xl overflow-hidden border border-gray-700/50 glass-card w-full max-w-7xl mx-auto">
-              <ImageCarousel images={slides} autoPlay={true} intervalMs={4500} aspectRatio="4/3" maxHeight="98vh" />
+              <ImageCarousel images={slides} autoPlay={false} intervalMs={4500} aspectRatio="4/3" maxHeight="98vh" />
             </div>
           </div>
         )}
