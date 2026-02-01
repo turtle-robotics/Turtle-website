@@ -59,7 +59,7 @@ const ProjectDetail = () => {
 
         {/* Project Header */}
         <div className="mb-12 text-center">
-          <h1 className="project-title text-4xl md:text-6xl font-extralight tracking-tight text-white mb-3">
+          <h1 className="project-title text-4xl md:text-6xl tracking-tight text-white mb-3">
             {project.title}
           </h1>
           <p className="text-lg md:text-xl font-light text-yellow-400 mb-4">

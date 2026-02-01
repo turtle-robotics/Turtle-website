@@ -123,7 +123,7 @@ const Sponsorship = () => {
       <section ref={heroRef} className="relative min-h-screen flex items-center justify-center px-4">
         <div className="absolute inset-0 bg-gradient-to-br from-gray-100/50 via-white to-gray-100/50 dark:from-gray-900/50 dark:via-gray-800/50 dark:to-gray-900/50"></div>
         <div className="relative text-center max-w-6xl mx-auto z-10">
-          <h1 className="text-6xl md:text-8xl lg:text-9xl font-extralight tracking-tight text-gray-800 dark:text-gray-200 mb-8">
+          <h1 className="text-6xl md:text-8xl lg:text-9xl tracking-tight text-gray-800 dark:text-gray-200 mb-8">
             <span className="block">SPONSOR</span>
             <span className="block text-yellow-600 dark:text-yellow-400">TURTLE</span>
           </h1>
@@ -180,7 +180,7 @@ const Sponsorship = () => {
       <section className="py-16 px-4 bg-white dark:bg-gray-800">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-extralight text-gray-800 dark:text-gray-200 mb-8">
+            <h2 className="text-4xl md:text-5xl text-gray-800 dark:text-gray-200 mb-8">
               Why Sponsor <span className="text-yellow-600 dark:text-yellow-400">TURTLE</span>?
             </h2>
             <p className="text-xl font-light text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
@@ -232,7 +232,7 @@ const Sponsorship = () => {
       <section id="sponsorship-tiers" className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-extralight text-gray-800 dark:text-gray-200 mb-8">
+            <h2 className="text-4xl md:text-5xl text-gray-800 dark:text-gray-200 mb-8">
               Sponsorship <span className="text-yellow-600 dark:text-yellow-400">Tiers</span>
             </h2>
             <p className="text-xl font-light text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
@@ -265,7 +265,7 @@ const Sponsorship = () => {
       <section className="py-16 px-4 bg-white dark:bg-gray-800">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-extralight text-gray-800 dark:text-gray-200 mb-8">
+            <h2 className="text-4xl md:text-5xl text-gray-800 dark:text-gray-200 mb-8">
               Current <span className="text-yellow-600 dark:text-yellow-400">Projects</span>
             </h2>
             <p className="text-xl font-light text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
@@ -304,7 +304,7 @@ const Sponsorship = () => {
       {/* Contact Section */}
       <section id="contact-section" className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-extralight text-gray-800 dark:text-gray-200 mb-8">
+          <h2 className="text-4xl md:text-5xl text-gray-800 dark:text-gray-200 mb-8">
             Ready to <span className="text-yellow-600 dark:text-yellow-400">Partner</span>?
           </h2>
           <p className="text-xl font-light text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
@@ -376,7 +376,7 @@ const Sponsorship = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
                 </svg>
               </div>
-              <h3 className="text-3xl font-extralight text-gray-800 dark:text-gray-200 mb-3">
+              <h3 className="text-3xl text-gray-800 dark:text-gray-200 mb-3">
                 Contact TURTLE
               </h3>
               <p className="text-gray-600 dark:text-gray-400 font-light mb-4">
@@ -414,7 +414,7 @@ const Sponsorship = () => {
               </svg>
             </div>
 
-            <h3 className="text-3xl font-extralight text-gray-800 dark:text-gray-200 mb-3 text-center">
+            <h3 className="text-3xl text-gray-800 dark:text-gray-200 mb-3 text-center">
               Get In Touch
             </h3>
             <p className="text-gray-600 dark:text-gray-400 mb-8 text-center font-light">

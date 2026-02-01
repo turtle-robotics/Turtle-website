@@ -180,7 +180,7 @@ const AdminDashboard = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
               </svg>
             </div>
-            <h1 className="text-3xl font-extralight text-gray-800 dark:text-gray-200 mb-2">
+            <h1 className="text-3xl text-gray-800 dark:text-gray-200 mb-2">
               TURTLE Admin Portal
             </h1>
             <p className="text-gray-600 dark:text-gray-400 font-light">
@@ -251,7 +251,7 @@ const AdminDashboard = () => {
         {/* Header */}
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8">
           <div>
-            <h1 className="text-4xl font-extralight text-gray-800 dark:text-gray-200 mb-2">
+            <h1 className="text-4xl text-gray-800 dark:text-gray-200 mb-2">
               TURTLE Admin Dashboard
             </h1>
             <p className="text-gray-600 dark:text-gray-400 font-light">

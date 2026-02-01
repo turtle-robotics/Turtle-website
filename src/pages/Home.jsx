@@ -63,7 +63,7 @@ const Home = () => {
   <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900"></div>
   
   <div className="relative text-center max-w-6xl mx-auto z-10">
-    <h1 className="text-6xl md:text-8xl lg:text-9xl font-extralight tracking-tight text-gray-800 dark:text-gray-200 mb-8">
+    <h1 className="text-6xl md:text-8xl lg:text-9xl tracking-tight text-gray-800 dark:text-gray-200 mb-8">
       <span className="block">TURTLE</span>
       <span className="block text-yellow-600 dark:text-yellow-400">ROBOTICS</span>
     </h1>
@@ -90,7 +90,7 @@ const Home = () => {
       {/* About Section */}
       <section className="py-24 px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-20 text-gray-800 dark:text-gray-200">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl text-center mb-20 text-gray-800 dark:text-gray-200">
             ABOUT <span className="text-yellow-600 dark:text-yellow-400">TURTLE</span>
           </h2>
           <div className="grid md:grid-cols-3 gap-8 mb-16">
@@ -126,7 +126,7 @@ const Home = () => {
       {/* Contact Section */}
       <section className="py-24 px-4 bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight mb-12 text-gray-800 dark:text-gray-200">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl mb-12 text-gray-800 dark:text-gray-200">
             READY TO <span className="text-yellow-600 dark:text-yellow-400">JOIN US</span>
           </h2>
           <ButtonLink  sizeVariant="xl" style="primary" to="https://forms.gle/59pUiPUCpDrgBCqn7">APPLY NOW</ButtonLink>
@@ -155,7 +155,7 @@ const Home = () => {
             >
               <div className="mx-auto mb-4 w-8 h-8 bg-red-900 dark:bg-yellow-600 rounded-full shadow-md"></div>
               <div className="text-sm font-bold text-yellow-600 dark:text-yellow-400 mb-3 uppercase tracking-wide">📌 Profit Share!</div>
-              <div className="text-3xl font-extralight text-gray-800 dark:text-gray-200 mb-4 leading-tight">Kung Fu Tea</div>
+              <div className="text-3xl text-gray-800 dark:text-gray-200 mb-4 leading-tight">Kung Fu Tea</div>
               <div className="text-xl font-light text-gray-600 dark:text-gray-400 mb-2">February 19, 2026</div>
               <div className="text-xl font-light text-gray-600 dark:text-gray-400 mb-2">723 S Texas Ave, College Station, TX 77840</div>
               <div className="text-base font-light text-gray-600 dark:text-gray-400 mb-6">Just put your receipt in the bucket at checkout.</div>
@@ -176,7 +176,7 @@ const Home = () => {
           <div className="relative bg-gradient-to-br from-yellow-50 to-amber-50 dark:from-gray-800 dark:to-gray-700 p-6 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 rotate-2 hover:rotate-0 w-64 border-2 border-yellow-400 dark:border-yellow-600">
             <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 w-7 h-7 bg-red-900 dark:bg-yellow-600 rounded-full shadow-md"></div>
             <div className="text-xs font-bold text-yellow-600 dark:text-yellow-400 mb-2 uppercase tracking-wide">📌 Profit Share!</div>
-            <div className="text-2xl font-extralight text-gray-800 dark:text-gray-200 mb-2">Kung Fu Tea</div>
+            <div className="text-2xl text-gray-800 dark:text-gray-200 mb-2">Kung Fu Tea</div>
             <div className="text-base font-light text-gray-600 dark:text-gray-400 mb-1">February 19, 2026</div>
             <div className="text-base font-light text-gray-600 dark:text-gray-400 mb-3">723 S Texas Ave, College Station, TX 77840</div>
             <div className="text-xs text-yellow-600 dark:text-yellow-400 underline group-hover:text-yellow-700 dark:group-hover:text-yellow-300 font-medium">Put your receipt in the bucket at checkout!</div>
@@ -188,7 +188,7 @@ const Home = () => {
       {/* Calendar Section */}
       <section className="py-24 px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-10 text-gray-800 dark:text-gray-200">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl text-center mb-10 text-gray-800 dark:text-gray-200">
             Calendar
           </h2>
           <div className="flex justify-center">

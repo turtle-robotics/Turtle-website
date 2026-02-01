@@ -53,7 +53,7 @@ const StatisticsCard = ({ count, label, description }) => {
       
       {/* Content */}
       <div className="relative z-10">
-        <div className="text-5xl font-extralight text-accent mb-6" ref={counterRef}>
+        <div className="text-5xl text-accent mb-6" ref={counterRef}>
           {displayCount}+
         </div>
         <h3 className="text-xl font-light text-gray-800 dark:text-gray-200 mb-3">{label}</h3>

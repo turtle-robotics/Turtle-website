@@ -104,7 +104,7 @@ function Showcase() {
         ">
 
           {/* Title with text shadow for better readability */}
-          <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-extralight tracking-tight mb-6 text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">
+          <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl tracking-tight mb-6 text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">
             TURTLE Showcase
           </h1>
 
@@ -140,7 +140,7 @@ function Showcase() {
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 md:gap-6 max-w-3xl mx-auto mb-8">
                 {['Days', 'Hours', 'Minutes', 'Seconds'].map((label, index) => (
                   <div key={label} className="bg-black/60 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-6 border border-yellow-500/30 shadow-2xl">
-                    <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extralight text-yellow-400 mb-1 sm:mb-2">
+                    <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-yellow-400 mb-1 sm:mb-2">
                       {String(Object.values(timeLeft)[index]).padStart(2, '0')}
                     </div>
                     <div className="text-xs sm:text-sm font-light text-white uppercase tracking-wide">
@@ -167,7 +167,7 @@ function Showcase() {
       {/* FAQ SECTION */}
       <section className="py-10 px-4 bg-white dark:bg-gray-800">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-extralight text-center mb-10 text-gray-800 dark:text-gray-200">
+          <h2 className="text-4xl md:text-5xl text-center mb-10 text-gray-800 dark:text-gray-200">
             Frequently Asked <span className="text-yellow-600 dark:text-yellow-400">Questions</span>
           </h2>
 
@@ -224,7 +224,7 @@ function Showcase() {
       {/* SHOWCASE PROJECT INTEREST FORM SECTION (deprecated Jan 2026, replaced with email link) */}
       <section className="py-16 px-4 bg-white dark:bg-gray-800">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-extralight text-gray-800 dark:text-gray-200 mb-4">
+          <h2 className="text-4xl md:text-5xl text-gray-800 dark:text-gray-200 mb-4">
             Showcase Project Interest
           </h2>
           <p className="text-xl font-light text-gray-600 dark:text-gray-400 mb-6">
