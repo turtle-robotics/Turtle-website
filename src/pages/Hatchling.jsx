@@ -83,7 +83,7 @@ const Hatchling = () => {
 
         {/* Text only — no box */}
         <div className="relative text-center z-10 max-w-6xl mx-auto -translate-y-36">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-extralight tracking-tight text-white drop-shadow-2xl">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl tracking-tight text-white drop-shadow-2xl">
             <span className="block">HATCHLING</span>
             <span className="block">DEVELOPMENT</span>
             <span className="block text-accent">PROGRAM</span>
@@ -100,7 +100,7 @@ const Hatchling = () => {
       {/* Mission Statement Section */}
       <section className="py-24 px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-20 text-gray-800 dark:text-gray-200">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl text-center mb-20 text-gray-800 dark:text-gray-200">
             OUR <span className="text-accent">MISSION</span>
           </h2>
 
@@ -117,7 +117,7 @@ const Hatchling = () => {
       {/* Trusted Organizations Section */}
       <section className="py-24 px-4 bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-20 text-gray-800 dark:text-gray-200">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl text-center mb-20 text-gray-800 dark:text-gray-200">
             CURRENTLY <span className="text-accent">TRUSTED AT</span>
           </h2>
 
@@ -174,7 +174,7 @@ const Hatchling = () => {
       {/* Scrolling Pictures Section */}
       <section className="py-24 px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-20 text-gray-800 dark:text-gray-200">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl text-center mb-20 text-gray-800 dark:text-gray-200">
             HATCHLING <span className="text-accent">GALLERY</span>
           </h2>
 
@@ -199,7 +199,7 @@ const Hatchling = () => {
       {/* Learning Objectives and Schedule Section */}
       <section className="py-24 px-4 bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-20 text-gray-800 dark:text-gray-200">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl text-center mb-20 text-gray-800 dark:text-gray-200">
             LEARNING <span className="text-accent">OBJECTIVES</span> & SCHEDULE
           </h2>
 
@@ -523,7 +523,7 @@ const Hatchling = () => {
       {/* Published Materials Section */}
       <section className="py-24 px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-20 text-gray-800 dark:text-gray-200">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl text-center mb-20 text-gray-800 dark:text-gray-200">
             PUBLISHED <span className="text-accent">MATERIALS</span>
           </h2>
 
@@ -649,7 +649,7 @@ const Hatchling = () => {
       {/* Stats, Impact, and Accolades Section */}
       <section className="py-24 px-4 bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-20 text-gray-800 dark:text-gray-200">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl text-center mb-20 text-gray-800 dark:text-gray-200">
             STATS & <span className="text-accent">IMPACT</span>
           </h2>
 
@@ -795,7 +795,7 @@ const Hatchling = () => {
       {/* Call to Action */}
       <section className="py-24 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight mb-12 text-gray-800 dark:text-gray-200">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl mb-12 text-gray-800 dark:text-gray-200">
             READY TO <span className="text-accent">JOIN</span>?
           </h2>
 

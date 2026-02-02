@@ -50,7 +50,7 @@ const Layout = ({ children }) => {
                   alt="Logo"
                   className="h-8 w-auto sm:h-12 align-middle"
                 />
-                <span className="text-yellow-400 text-base sm:text-2xl font-extralight tracking-tight align-middle leading-none ml-0 sm:ml-2 whitespace-nowrap">
+                <span className="text-yellow-400 text-base sm:text-2xl tracking-tight align-middle leading-none ml-0 sm:ml-2 whitespace-nowrap">
                   TURTLE
                 </span>
               </Link>

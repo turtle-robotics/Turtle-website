@@ -67,7 +67,7 @@ const DevelopmentPrograms = () => {
       <section ref={heroRef} className="relative min-h-screen flex items-center justify-center px-4 pt-20">
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900"></div>
         <div className="relative text-center max-w-6xl mx-auto z-10">
-          <h1 className="text-6xl md:text-8xl lg:text-9xl font-extralight tracking-tight text-gray-200 mb-8">
+          <h1 className="text-6xl md:text-8xl lg:text-9xl tracking-tight text-gray-200 mb-8">
             <span className="block">DEVELOPMENT</span>
             <span className="block text-yellow-400">PROGRAMS</span>
           </h1>
@@ -85,7 +85,7 @@ const DevelopmentPrograms = () => {
         >
           <div className="max-w-7xl mx-auto">
             {/* Section Title */}
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-12 text-gray-200">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl text-center mb-12 text-gray-200">
               {program.title.toUpperCase()}
             </h2>
 
@@ -104,7 +104,7 @@ const DevelopmentPrograms = () => {
                     {program.year}
                   </p>
                   
-                  <h3 className="text-4xl md:text-5xl font-extralight text-white mb-3">
+                  <h3 className="text-4xl md:text-5xl text-white mb-3">
                     {program.tagline}
                   </h3>
                   
@@ -128,7 +128,7 @@ const DevelopmentPrograms = () => {
       {/* Call to Action Section */}
       <section className="py-24 px-4 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-5xl md:text-7xl font-extralight text-gray-200 mb-6">
+          <h2 className="text-5xl md:text-7xl text-gray-200 mb-6">
             Ready to Start Your <span className="text-yellow-400">Journey?</span>
           </h2>
           <p className="text-xl font-light text-gray-400 mb-12 max-w-2xl mx-auto">

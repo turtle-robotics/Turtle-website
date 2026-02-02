@@ -111,7 +111,7 @@ const About = () => {
         <div className="absolute inset-0 bg-black/25 dark:bg-black/25 z-0"></div>
         <div className="relative text-center max-w-6xl mx-auto z-10">
           {/* No glass effect */}
-          <h1 className="text-6xl md:text-8xl lg:text-9xl font-extralight tracking-tight text-gray-200 mb-8">
+          <h1 className="text-6xl md:text-8xl lg:text-9xl tracking-tight text-gray-200 mb-8">
             <span className="block">ABOUT</span>
             <span className="block text-yellow-400">TURTLE</span>
           </h1>
@@ -128,7 +128,7 @@ const About = () => {
       {/* Statistics Section */}
       <section className="py-24 px-4 bg-gradient-to-br from-gray-800 to-gray-900">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-20 text-gray-200">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl text-center mb-20 text-gray-200">
             OUR <span className="text-yellow-400">IMPACT</span>
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -142,7 +142,7 @@ const About = () => {
       {/* Leadership Section */}
       <section className="py-24 px-4 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-20 text-gray-200">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl text-center mb-20 text-gray-200">
             OUR <span className="text-yellow-400">TEAM</span>
           </h2>
 

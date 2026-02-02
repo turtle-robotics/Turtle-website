@@ -32,8 +32,8 @@ A modern React website for T.U.R.T.L.E Robotics, a student robotics research lab
 
 ### Typography
 - **Primary Font**: Inter with weights 100-900
-- **Hero Text**: 8xl-9xl, font-extralight, tracking-tight
-- **Section Headers**: 5xl-6xl, font-extralight
+- **Hero Text**: 8xl-9xl, tracking-tight
+- **Section Headers**: 5xl-6xl
 - **Body Text**: font-light, tracking-wide
 
 ## 📁 Project Structure

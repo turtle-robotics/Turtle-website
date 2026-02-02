@@ -49,7 +49,7 @@ const WorkshopSeries = () => {
       <section ref={heroRef} className="relative min-h-screen flex items-center justify-center px-4">
         <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900"></div>
         <div className="relative text-center max-w-6xl mx-auto z-10">
-          <h1 className="text-6xl md:text-8xl lg:text-9xl font-extralight tracking-tight text-gray-800 dark:text-gray-200 mb-8">
+          <h1 className="text-6xl md:text-8xl lg:text-9xl tracking-tight text-gray-800 dark:text-gray-200 mb-8">
             <span className="block">WORKSHOP</span>
             <span className="block text-accent">SERIES</span>
           </h1>
@@ -70,7 +70,7 @@ const WorkshopSeries = () => {
       {/* Coming Soon Section */}
       <section className="py-24 px-4">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight mb-20 text-gray-800 dark:text-gray-200">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl mb-20 text-gray-800 dark:text-gray-200">
             COMING <span className="text-accent">SOON</span>
           </h2>
           
@@ -94,7 +94,7 @@ const WorkshopSeries = () => {
       {/* Contact Section */}
       <section className="py-24 px-4 bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight mb-12 text-gray-800 dark:text-gray-200">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl mb-12 text-gray-800 dark:text-gray-200">
             GET <span className="text-accent">NOTIFIED</span>
           </h2>
           

@@ -53,12 +53,12 @@ const Apply = () => {
         <div className="relative text-center max-w-6xl mx-auto z-10">
           {/* Removed glass-card wrapper */}
           {applicationsOpen ? (
-            <h1 className="text-6xl md:text-8xl lg:text-9xl font-extralight tracking-tight text-white drop-shadow-2xl mb-8">
+            <h1 className="text-6xl md:text-8xl lg:text-9xl tracking-tight text-white drop-shadow-2xl mb-8">
               <span className="block">APPLY</span>
               <span className="block text-accent">NOW</span>
             </h1>
           ) : (
-            <h1 className="text-6xl md:text-8xl lg:text-9xl font-extralight tracking-tight text-red-500 dark:text-red-400 mb-8">
+            <h1 className="text-6xl md:text-8xl lg:text-9xl tracking-tight text-red-500 dark:text-red-400 mb-8">
               <span className="block">APPLICATIONS CLOSED</span>
             </h1>
           )}
@@ -77,7 +77,7 @@ const Apply = () => {
       {/* Application Process */}
       <section className="py-24 px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-20 text-gray-800 dark:text-gray-200">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl text-center mb-20 text-gray-800 dark:text-gray-200">
             JOIN TURTLE
           </h2>
           
@@ -125,7 +125,7 @@ const Apply = () => {
       {/* Contact Section (current) */}
       <section className="py-24 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight mb-12 text-white drop-shadow-2xl">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl mb-12 text-white drop-shadow-2xl">
             CONTACT <span className="text-yellow-400 dark:text-yellow-300">TURTLE</span>
           </h2>
           <p className="text-xl text-gray-200 dark:text-gray-300 mb-8">
@@ -140,7 +140,7 @@ const Apply = () => {
         <div className="max-w-6xl mx-auto">
 
           {/* Main Heading */}
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-center mb-16 text-gray-800 dark:text-gray-200">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl text-center mb-16 text-gray-800 dark:text-gray-200">
             WHAT WE <span className="text-accent">LOOK FOR</span>
           </h2>
 
