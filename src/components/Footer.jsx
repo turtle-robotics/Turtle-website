@@ -10,7 +10,7 @@ const Footer = () => {
     <footer className="bg-gray-900">
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 py-12">
-        <div className="grid md:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-3 gap-8">
           
           {/* Left Column - Connect With Us */}
           <div className="space-y-4">
@@ -54,31 +54,12 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Second Column - Quick Links */}
+          {/* Middle Column - Quick Links */}
           <div className="space-y-4">
             <h3 className="font-bold text-gray-800 dark:text-gray-200">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <TextLink to="/about">About</TextLink>
-              </li>
-              <li>
-                <TextLink to="/projects">Research Projects</TextLink>
-              </li>
-              <li>
-                <TextLink to="/hatchling">Hatchling Program</TextLink>
-              </li>
-            </ul>
-          </div>
-
-          {/* Third Column - Resources */}
-          <div className="space-y-4">
-            <h3 className="font-bold text-gray-800 dark:text-gray-200">Resources</h3>
-            <ul className="space-y-2">
-              <li>
                 <TextLink to="/apply">Apply</TextLink>
-              </li>
-              <li>
-                <TextLink to="/sponsorship">Industry Partnerships</TextLink>
               </li>
               <li>
                 <TextLink to="https://docs.turtlerobotics.org/">Knowledge Base</TextLink>
