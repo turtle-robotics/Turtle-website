@@ -197,7 +197,7 @@ const Sponsorship = () => {
               </div>
               <h3 className="text-2xl font-light text-gray-800 dark:text-gray-200 mb-4">Innovation Access</h3>
               <p className="text-gray-600 dark:text-gray-400">
-                Get early access to cutting-edge robotics research and potential patent opportunities.
+                Gain early insight into the latest in robotics development as our diverse and talented teams work to innovate and change the world.
               </p>
             </div>
 
@@ -209,7 +209,7 @@ const Sponsorship = () => {
               </div>
               <h3 className="text-2xl font-light text-gray-800 dark:text-gray-200 mb-4">Talent Pipeline</h3>
               <p className="text-gray-600 dark:text-gray-400">
-                Connect with top engineering students for internships and full-time positions.
+                As one of the largest student-led robotics organizations in Texas, we provide a unique opportunity to connect with future engineers and recruit students for internships and co-ops from our vast catalogue of projects.
               </p>
             </div>
 
@@ -221,7 +221,7 @@ const Sponsorship = () => {
               </div>
               <h3 className="text-2xl font-light text-gray-800 dark:text-gray-200 mb-4">Brand Recognition</h3>
               <p className="text-gray-600 dark:text-gray-400">
-                Enhance your brand visibility among future engineers and industry leaders.
+                With a platinum level sponsorship, your products and logo can be featured directly on our projects, reaching tens of thousands of students and engineers across Texas and beyond.
               </p>
             </div>
           </div>
