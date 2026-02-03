@@ -32,45 +32,45 @@ const About = () => {
 
   const currentLeadership = [
     // Executive roles
-    { role: 'President', name: 'Sam Woravka', period: 'Spring 2026', description: 'Leading TURTLE into its next chapter of innovation and growth' },
-    { role: 'Internal VP', name: 'Ian Wilhite', period: 'Spring 2026', description: 'Managing internal operations and team coordination' },
-    { role: 'External VP', name: 'Yousuf Shafiu', period: 'Spring 2026', description: 'Overseeing external relations and partnerships' },
-    { role: 'Project VP', name: 'Emily Tredemeyer', period: 'Spring 2026', description: 'Leading project development and technical initiatives' },
-    { role: 'Development VP', name: 'Kalen Jaroszewski', period: 'Spring 2026', description: 'Driving innovation and research advancement' },
+    { role: 'President', name: 'Sam Woravka', period: 'Spring 2026' },
+    { role: 'Internal VP', name: 'Ian Wilhite', period: 'Spring 2026'},
+    { role: 'External VP', name: 'Yousuf Shafiu', period: 'Spring 2026'},
+    { role: 'Project VP', name: 'Emily Tredemeyer', period: 'Spring 2026'},
+    { role: 'Development VP', name: 'Kalen Jaroszewski', period: 'Spring 2026'},
 
     // Internal Branch
-    { role: 'Internal VP', name: 'Ian Wilhite', period: 'Spring 2026', description: 'Managing internal operations and team coordination' },
-    { role: 'Finance', name: 'Raquel Garcia', period: 'Spring 2026', description: 'Managing financial operations and budgeting' },
-    { role: 'Finance', name: 'Eddy Silva', period: 'Spring 2026', description: 'Financial planning and reimbursements' },
-    { role: 'Documentation', name: 'Ryo Kato', period: 'Spring 2026', description: 'Documentation standards and archives' },
-    { role: 'Lab Quality Chair', name: 'Haider Mahdi', period: 'Spring 2026', description: 'Safety and quality standards in the lab' },
+    { role: 'Internal VP', name: 'Ian Wilhite', period: 'Spring 2026'},
+    { role: 'Finance', name: 'Raquel Garcia', period: 'Spring 2026'},
+    { role: 'Finance', name: 'Eddy Silva', period: 'Spring 2026'},
+    { role: 'Documentation', name: 'Ryo Kato', period: 'Spring 2026'},
+    { role: 'Lab Quality Chair', name: 'Haider Mahdi', period: 'Spring 2026'},
 
     // External Branch
-    { role: 'External VP', name: 'Yousuf Shafiu', period: 'Spring 2026', description: 'Overseeing external relations and partnerships' },
-    { role: 'Public Relations', name: 'Isaac Cabello', period: 'Spring 2026', description: 'Managing club communications and public presence' },
-    { role: 'Webmaster', name: 'Saksham Mohan', period: 'Spring 2026', description: 'Website and technical support' },
-    { role: 'Corporate Relations', name: 'Will Donaldson', period: 'Spring 2026', description: 'Corporate partnerships and outreach' },
-    { role: 'Events', name: 'Renee Zhu', period: 'Spring 2026', description: 'Events and scheduling' },
+    { role: 'External VP', name: 'Yousuf Shafiu', period: 'Spring 2026'},
+    { role: 'Public Relations', name: 'Isaac Cabello', period: 'Spring 2026'},
+    { role: 'Webmaster', name: 'Saksham Mohan', period: 'Spring 2026'},
+    { role: 'Corporate Relations', name: 'Will Donaldson', period: 'Spring 2026'},
+    { role: 'Events', name: 'Renee Zhu', period: 'Spring 2026'},
 
     // Project Branch
-    { role: 'Project VP', name: 'Emily Tredemeyer', period: 'Spring 2026', description: 'Leading project development and technical initiatives' },
-    { role: 'Design Review Chair', name: 'Will McGarity', period: 'Spring 2026', description: 'Project design reviews and guidance' },
-    { role: 'Design Review Chair', name: 'Evan Chan', period: 'Spring 2026', description: 'Project design reviews and guidance' },
+    { role: 'Project VP', name: 'Emily Tredemeyer', period: 'Spring 2026' },
+    { role: 'Design Review Chair', name: 'Will McGarity', period: 'Spring 2026' },
+    { role: 'Design Review Chair', name: 'Evan Chan', period: 'Spring 2026' },
 
     // Development Branch
-    { role: 'Development VP', name: 'Kalen Jaroszewski', period: 'Spring 2026', description: 'Driving innovation and research advancement' },
-    { role: 'Workshops', name: 'Vedant Soni', period: 'Spring 2026', description: 'Workshops and technical training' },
-    { role: 'Hatchling Director', name: 'Alejandro Avila', period: 'Spring 2026', description: 'Hatchling leadership and mentorship' },
+    { role: 'Development VP', name: 'Kalen Jaroszewski', period: 'Spring 2026' },
+    { role: 'Workshops', name: 'Vedant Soni', period: 'Spring 2026' },
+    { role: 'Hatchling Director', name: 'Alejandro Avila', period: 'Spring 2026' },
     { role: 'Hatchling Director', name: 'Ethan Real', period: 'Spring 2026', description: 'Hatchling leadership and mentorship' },
     { role: 'Hatchling Director', name: 'Gael Mamenta', period: 'Spring 2026', description: 'Hatchling leadership and mentorship' },
     { role: 'Hatchling Director', name: 'Karthik Jayakumar', period: 'Spring 2026', description: 'Hatchling leadership and mentorship' },
     { role: 'Hatchling Director', name: 'McKenzie McCain', period: 'Spring 2026', description: 'Hatchling leadership and mentorship' },
     { role: 'Hatchling Director', name: 'Mohid Ismail', period: 'Spring 2026', description: 'Hatchling leadership and mentorship' },
-    { role: 'Hatchling Director', name: 'Nathan Mersino', period: 'Spring 2026', description: 'Hatchling leadership and mentorship' },
-    { role: 'Hatchling Director', name: 'Thomas Lopez', period: 'Spring 2026', description: 'Hatchling leadership and mentorship' },
-    { role: 'Hatchling Director', name: 'William Shan', period: 'Spring 2026', description: 'Hatchling leadership and mentorship' },
-    { role: 'Hatchling Director', name: 'Julia Sopala', period: 'Spring 2026', description: 'Hatchling leadership and mentorship' },
-    { role: 'Hatchling Director', name: 'Drew Wheaton', period: 'Spring 2026', description: 'Hatchling leadership and mentorship' },
+    { role: 'Hatchling Director', name: 'Nathan Mersino', period: 'Spring 2026' },
+    { role: 'Hatchling Director', name: 'Thomas Lopez', period: 'Spring 2026' },
+    { role: 'Hatchling Director', name: 'William Shan', period: 'Spring 2026' },
+    { role: 'Hatchling Director', name: 'Julia Sopala', period: 'Spring 2026' },
+    { role: 'Hatchling Director', name: 'Drew Wheaton', period: 'Spring 2026' },
   ]
 
   const [openSection, setOpenSection] = useState({
@@ -93,7 +93,6 @@ const About = () => {
           <h3 className="text-lg font-light text-yellow-400 mb-2">{leader.role}</h3>
           <h4 className="text-base font-light text-gray-200 mb-2">{leader.name}</h4>
           <p className="text-xs font-light text-gray-400 mb-3">{leader.period}</p>
-          <p className="text-xs font-light text-gray-400 leading-relaxed">{leader.description}</p>
         </div>
       ))
 
