@@ -124,27 +124,6 @@ const Apply = () => {
         </div>
       </section>
 
-      {/* Contact Section (previous version, commented for future use)
-      <section className="py-24 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight mb-12 text-white drop-shadow-2xl">
-            READY TO <span className="text-yellow-400 dark:text-yellow-300">JOIN US</span>
-          </h2>
-          {applicationsOpen ? (
-            <a 
-              href="https://forms.gle/59pUiPUCpDrgBCqn7"
-              className="inline-block bg-yellow-500 text-white px-16 py-6 rounded-xl text-xl font-light tracking-wide hover:scale-105 transition-all duration-300 shadow-premium"
-            >
-              APPLY NOW
-            </a>
-          ) : (
-            <div className="inline-block bg-gray-300 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-16 py-6 rounded-xl text-xl font-light tracking-wide cursor-not-allowed shadow-inner">
-              APPLICATIONS CLOSED
-            </div>
-          )}
-        </div>
-      </section>
-      */}
       {/* Contact Section (current) */}
       <section className="py-24 px-4">
         <div className="max-w-4xl mx-auto text-center">
