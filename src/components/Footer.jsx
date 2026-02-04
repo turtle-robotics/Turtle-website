@@ -1,11 +1,6 @@
-import { Link } from 'react-router-dom'
-import { useState } from 'react';
-import ButtonLink from './ButtonLink';
 import TextLink from './TextLink';
-// import SponsorContactForm from './SponsorContactForm';
 
 const Footer = () => {
-  const [showContactForm, setShowContactForm] = useState(false);
   return (
     <footer className="bg-gray-900">
       {/* Main Footer Content */}
