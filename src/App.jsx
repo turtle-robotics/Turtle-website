@@ -12,7 +12,6 @@ import WorkshopSeries from "./pages/WorkshopSeries";
 import Apply from "./pages/Apply";
 import Sponsorship from "./pages/Sponsorship";
 import Showcase from "./pages/Showcase";
-import AdminDashboard from "./pages/AdminDashboard";
 
 function App(Component, pageProps) {
   return (
@@ -32,7 +31,6 @@ function App(Component, pageProps) {
           <Route path="/showcase" element={<Showcase />} />
           <Route path="/apply" element={<Apply />} />
           <Route path="/sponsorship" element={<Sponsorship />} />
-          <Route path="/admin" element={<AdminDashboard />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Layout>
