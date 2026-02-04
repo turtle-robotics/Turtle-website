@@ -106,7 +106,7 @@ const DevelopmentPrograms = () => {
 
               {/* Glass Overlay Content */}
               <div className="absolute inset-0 flex items-end p-8 md:p-12">
-                <div className="backdrop-blur-xl bg-white/10 dark:bg-gray-900/30 border border-white/20 dark:border-gray-700/50 rounded-2xl p-8 md:p-10 w-full max-w-2xl">
+                <div className="backdrop-blur-xl bg-gray-900/30 border border-gray-700/50 rounded-2xl p-8 md:p-10 w-full max-w-2xl">
                   <p className="text-xs font-light tracking-widest text-yellow-400 mb-3 uppercase">
                     {program.year}
                   </p>

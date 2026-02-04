@@ -8,9 +8,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8">
           {/* Left Column - Connect With Us */}
           <div className="space-y-4">
-            <h3 className="font-bold text-gray-800 dark:text-gray-200">
-              Connect With Us
-            </h3>
+            <h3 className="font-bold text-gray-200">Connect With Us</h3>
             <ul className="space-y-2">
               <li>
                 <TextLink to="mailto:turtlerobotics@gmail.com">
@@ -58,9 +56,7 @@ const Footer = () => {
 
           {/* Middle Column - Quick Links */}
           <div className="space-y-4">
-            <h3 className="font-bold text-gray-800 dark:text-gray-200">
-              Quick Links
-            </h3>
+            <h3 className="font-bold text-gray-200">Quick Links</h3>
             <ul className="space-y-2">
               <li>
                 <TextLink to="/apply">Apply</TextLink>
@@ -75,10 +71,8 @@ const Footer = () => {
 
           {/* Right Column - Contact Info */}
           <div className="space-y-4">
-            <h3 className="font-bold text-gray-800 dark:text-gray-200">
-              Visit Us
-            </h3>
-            <div className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+            <h3 className="font-bold text-gray-200">Visit Us</h3>
+            <div className="space-y-2 text-sm text-gray-400">
               <p>Haynes Engineering Building - Room 023</p>
               <p>727 Ross St</p>
               <p>College Station, TX 77840</p>

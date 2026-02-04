@@ -53,9 +53,9 @@ const WorkshopSeries = () => {
         ref={heroRef}
         className="relative min-h-screen flex items-center justify-center px-4"
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900"></div>
         <div className="relative text-center max-w-6xl mx-auto z-10">
-          <h1 className="text-6xl md:text-8xl lg:text-9xl tracking-tight text-gray-800 dark:text-gray-200 mb-8">
+          <h1 className="text-6xl md:text-8xl lg:text-9xl tracking-tight text-gray-200 mb-8">
             <span className="block">WORKSHOP</span>
             <span className="block text-accent">SERIES</span>
           </h1>
@@ -66,7 +66,7 @@ const WorkshopSeries = () => {
             </div>
           </div>
 
-          <p className="description text-xl md:text-2xl font-light tracking-wide text-gray-600 dark:text-gray-400 mb-12 max-w-3xl mx-auto">
+          <p className="description text-xl md:text-2xl font-light tracking-wide text-gray-400 mb-12 max-w-3xl mx-auto">
             Our upcoming series of intensive robotics workshops designed to
             provide focused, hands-on learning experiences in specific robotics
             domains.
@@ -77,22 +77,22 @@ const WorkshopSeries = () => {
       {/* Coming Soon Section */}
       <section className="py-24 px-4">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl mb-20 text-gray-800 dark:text-gray-200">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl mb-20 text-gray-200">
             COMING <span className="text-accent">SOON</span>
           </h2>
 
           <div className="glass-card p-16 rounded-2xl max-w-4xl mx-auto">
             <div className="text-8xl mb-8">🚀</div>
-            <h3 className="text-3xl font-light text-gray-800 dark:text-gray-200 mb-6">
+            <h3 className="text-3xl font-light text-gray-200 mb-6">
               Workshop Series in Development
             </h3>
-            <p className="text-xl font-light text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
+            <p className="text-xl font-light text-gray-400 leading-relaxed mb-8">
               We're currently designing a comprehensive workshop series that
               will complement our existing Hatchling program. These workshops
               will focus on specialized robotics topics and provide intensive,
               focused learning experiences.
             </p>
-            <p className="text-lg font-light text-gray-600 dark:text-gray-400">
+            <p className="text-lg font-light text-gray-400">
               Stay tuned for announcements about workshop topics, schedules, and
               registration details.
             </p>
@@ -101,13 +101,13 @@ const WorkshopSeries = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-24 px-4 bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900">
+      <section className="py-24 px-4 bg-gradient-to-br from-gray-800 to-gray-900">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl mb-12 text-gray-800 dark:text-gray-200">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl mb-12 text-gray-200">
             GET <span className="text-accent">NOTIFIED</span>
           </h2>
 
-          <p className="text-xl font-light text-gray-600 dark:text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xl font-light text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed">
             Want to be among the first to know when our Workshop Series
             launches? Send us a message and we'll keep you updated.
           </p>

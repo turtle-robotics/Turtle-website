@@ -192,18 +192,15 @@ function Showcase() {
       </div>
 
       {/* FAQ SECTION */}
-      <section className="py-10 px-4 bg-white dark:bg-gray-800">
+      <section className="py-10 px-4 bg-gray-800">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl text-center mb-10 text-gray-800 dark:text-gray-200">
-            Frequently Asked{" "}
-            <span className="text-yellow-600 dark:text-yellow-400">
-              Questions
-            </span>
+          <h2 className="text-4xl md:text-5xl text-center mb-10 text-gray-200">
+            Frequently Asked <span className="text-yellow-400">Questions</span>
           </h2>
 
           <div className="space-y-4">
-            <details className="group bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700 dark:to-gray-600 rounded-2xl p-6 cursor-pointer">
-              <summary className="flex justify-between items-center font-light text-xl text-gray-800 dark:text-gray-200 list-none">
+            <details className="group bg-gradient-to-br from-gray-700 to-gray-600 rounded-2xl p-6 cursor-pointer">
+              <summary className="flex justify-between items-center font-light text-xl text-gray-200 list-none">
                 <span>What is Showcase?</span>
                 <span className="transition group-open:rotate-180">
                   <svg
@@ -221,7 +218,7 @@ function Showcase() {
                   </svg>
                 </span>
               </summary>
-              <p className="mt-4 text-gray-600 dark:text-gray-400 font-light leading-relaxed">
+              <p className="mt-4 text-gray-400 font-light leading-relaxed">
                 Project Showcase is a several hour come-and-go event for
                 presenting what TURTLE has accomplished this semester. At
                 showcase all 21 advanced projects as well as HATCHLING set up
@@ -230,8 +227,8 @@ function Showcase() {
               </p>
             </details>
 
-            <details className="group bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700 dark:to-gray-600 rounded-2xl p-6 cursor-pointer">
-              <summary className="flex justify-between items-center font-light text-xl text-gray-800 dark:text-gray-200 list-none">
+            <details className="group bg-gradient-to-br from-gray-700 to-gray-600 rounded-2xl p-6 cursor-pointer">
+              <summary className="flex justify-between items-center font-light text-xl text-gray-200 list-none">
                 <span>Who is invited to Project Showcase?</span>
                 <span className="transition group-open:rotate-180">
                   <svg
@@ -249,7 +246,7 @@ function Showcase() {
                   </svg>
                 </span>
               </summary>
-              <p className="mt-4 text-gray-600 dark:text-gray-400 font-light leading-relaxed">
+              <p className="mt-4 text-gray-400 font-light leading-relaxed">
                 Everyone is welcome! Project Showcase is a public event open to
                 all — students, professors, families, friends, and anyone
                 interested in robotics or engineering.
@@ -258,8 +255,8 @@ function Showcase() {
 
             {/* FAQ about where showcase location is */}
             {ENABLE_SHOWCASE_COUNTDOWN && (
-              <details className="group bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700 dark:to-gray-600 rounded-2xl p-6 cursor-pointer">
-                <summary className="flex justify-between items-center font-light text-xl text-gray-800 dark:text-gray-200 list-none">
+              <details className="group bg-gradient-to-br from-gray-700 to-gray-600 rounded-2xl p-6 cursor-pointer">
+                <summary className="flex justify-between items-center font-light text-xl text-gray-200 list-none">
                   <span>Where is the Virginia Brown Atrium?</span>
                   <span className="transition group-open:rotate-180">
                     <svg
@@ -277,7 +274,7 @@ function Showcase() {
                     </svg>
                   </span>
                 </summary>
-                <p className="mt-4 text-gray-600 dark:text-gray-400 font-light leading-relaxed">
+                <p className="mt-4 text-gray-400 font-light leading-relaxed">
                   This is the seating area just inside the first floor Zachry
                   entrance, across from the E-Quad.
                 </p>
@@ -288,12 +285,12 @@ function Showcase() {
       </section>
 
       {/* SHOWCASE PROJECT INTEREST FORM SECTION (deprecated Jan 2026, replaced with email link) */}
-      <section className="py-16 px-4 bg-white dark:bg-gray-800">
+      <section className="py-16 px-4 bg-gray-800">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl text-gray-800 dark:text-gray-200 mb-4">
+          <h2 className="text-4xl md:text-5xl text-gray-200 mb-4">
             Showcase Project Interest
           </h2>
-          <p className="text-xl font-light text-gray-600 dark:text-gray-400 mb-6">
+          <p className="text-xl font-light text-gray-400 mb-6">
             To express your interest in a project, please email us directly at:
           </p>
           <TextLink to="mailto:turtlerobotics@gmail.com">

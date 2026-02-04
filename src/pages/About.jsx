@@ -172,7 +172,7 @@ const About = () => {
           className="absolute inset-0 w-full h-full object-cover object-center brightness-50 z-0"
         />
         {/* Overlay for contrast */}
-        <div className="absolute inset-0 bg-black/25 dark:bg-black/25 z-0"></div>
+        <div className="absolute inset-0 bg-black/25 z-0"></div>
         <div className="relative text-center max-w-6xl mx-auto z-10">
           {/* No glass effect */}
           <h1 className="text-6xl md:text-8xl lg:text-9xl tracking-tight text-gray-200 mb-8">

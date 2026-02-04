@@ -118,22 +118,20 @@ const Sponsorship = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
       {/* Hero Section */}
       <section
         ref={heroRef}
         className="relative min-h-screen flex items-center justify-center px-4"
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-100/50 via-white to-gray-100/50 dark:from-gray-900/50 dark:via-gray-800/50 dark:to-gray-900/50"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900/50 via-gray-800/50 to-gray-900/50"></div>
         <div className="relative text-center max-w-6xl mx-auto z-10">
-          <h1 className="text-6xl md:text-8xl lg:text-9xl tracking-tight text-gray-800 dark:text-gray-200 mb-8">
+          <h1 className="text-6xl md:text-8xl lg:text-9xl tracking-tight text-gray-200 mb-8">
             <span className="block">SPONSOR</span>
-            <span className="block text-yellow-600 dark:text-yellow-400">
-              TURTLE
-            </span>
+            <span className="block text-yellow-400">TURTLE</span>
           </h1>
 
-          <p className="hero-subtitle text-xl md:text-2xl font-light tracking-wide text-gray-600 dark:text-gray-400 mb-12 max-w-3xl mx-auto">
+          <p className="hero-subtitle text-xl md:text-2xl font-light tracking-wide text-gray-400 mb-12 max-w-3xl mx-auto">
             Partner with the next generation of robotics innovators. Support
             cutting-edge research and shape the future of OLSN.
           </p>
@@ -170,10 +168,10 @@ const Sponsorship = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {impactStats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-yellow-600 dark:text-yellow-400 mb-2">
+                <div className="text-4xl md:text-5xl font-bold text-yellow-400 mb-2">
                   {stat.number}
                 </div>
-                <div className="text-sm font-light text-gray-600 dark:text-gray-400">
+                <div className="text-sm font-light text-gray-400">
                   {stat.label}
                 </div>
               </div>
@@ -183,24 +181,20 @@ const Sponsorship = () => {
       </section>
 
       {/* Why Sponsor Section */}
-      <section className="py-16 px-4 bg-white dark:bg-gray-800">
+      <section className="py-16 px-4 bg-gray-800">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl text-gray-800 dark:text-gray-200 mb-8">
-              Why Sponsor{" "}
-              <span className="text-yellow-600 dark:text-yellow-400">
-                TURTLE
-              </span>
-              ?
+            <h2 className="text-4xl md:text-5xl text-gray-200 mb-8">
+              Why Sponsor <span className="text-yellow-400">TURTLE</span>?
             </h2>
-            <p className="text-xl font-light text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+            <p className="text-xl font-light text-gray-400 max-w-3xl mx-auto">
               Join us in advancing robotics technology while gaining access to
               top engineering talent and innovative research opportunities.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="sponsor-section text-center p-8 rounded-2xl bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700 dark:to-gray-600">
+            <div className="sponsor-section text-center p-8 rounded-2xl bg-gradient-to-br from-gray-700 to-gray-600">
               <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-amber-500 rounded-full flex items-center justify-center mx-auto mb-6">
                 <svg
                   className="w-8 h-8 text-white"
@@ -216,17 +210,17 @@ const Sponsorship = () => {
                   />
                 </svg>
               </div>
-              <h3 className="text-2xl font-light text-gray-800 dark:text-gray-200 mb-4">
+              <h3 className="text-2xl font-light text-gray-200 mb-4">
                 Innovation Access
               </h3>
-              <p className="text-gray-600 dark:text-gray-400">
+              <p className="text-gray-400">
                 Gain early insight into the latest in robotics development as
                 our diverse and talented teams work to innovate and change the
                 world.
               </p>
             </div>
 
-            <div className="sponsor-section text-center p-8 rounded-2xl bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700 dark:to-gray-600">
+            <div className="sponsor-section text-center p-8 rounded-2xl bg-gradient-to-br from-gray-700 to-gray-600">
               <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-amber-500 rounded-full flex items-center justify-center mx-auto mb-6">
                 <svg
                   className="w-8 h-8 text-white"
@@ -242,10 +236,10 @@ const Sponsorship = () => {
                   />
                 </svg>
               </div>
-              <h3 className="text-2xl font-light text-gray-800 dark:text-gray-200 mb-4">
+              <h3 className="text-2xl font-light text-gray-200 mb-4">
                 Talent Pipeline
               </h3>
-              <p className="text-gray-600 dark:text-gray-400">
+              <p className="text-gray-400">
                 As one of the largest student-led robotics organizations in
                 Texas, we provide a unique opportunity to connect with future
                 engineers and recruit students for internships and co-ops from
@@ -253,7 +247,7 @@ const Sponsorship = () => {
               </p>
             </div>
 
-            <div className="sponsor-section text-center p-8 rounded-2xl bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700 dark:to-gray-600">
+            <div className="sponsor-section text-center p-8 rounded-2xl bg-gradient-to-br from-gray-700 to-gray-600">
               <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-amber-500 rounded-full flex items-center justify-center mx-auto mb-6">
                 <svg
                   className="w-8 h-8 text-white"
@@ -269,10 +263,10 @@ const Sponsorship = () => {
                   />
                 </svg>
               </div>
-              <h3 className="text-2xl font-light text-gray-800 dark:text-gray-200 mb-4">
+              <h3 className="text-2xl font-light text-gray-200 mb-4">
                 Brand Recognition
               </h3>
-              <p className="text-gray-600 dark:text-gray-400">
+              <p className="text-gray-400">
                 With a platinum level sponsorship, your products and logo can be
                 featured directly on our projects, reaching tens of thousands of
                 students and engineers across Texas and beyond.
@@ -286,13 +280,10 @@ const Sponsorship = () => {
       <section id="sponsorship-tiers" className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl text-gray-800 dark:text-gray-200 mb-8">
-              Sponsorship{" "}
-              <span className="text-yellow-600 dark:text-yellow-400">
-                Tiers
-              </span>
+            <h2 className="text-4xl md:text-5xl text-gray-200 mb-8">
+              Sponsorship <span className="text-yellow-400">Tiers</span>
             </h2>
-            <p className="text-xl font-light text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+            <p className="text-xl font-light text-gray-400 max-w-3xl mx-auto">
               Choose the sponsorship level that best fits your organization's
               goals and budget.
             </p>
@@ -322,27 +313,24 @@ const Sponsorship = () => {
       </section>
 
       {/* Current Projects */}
-      <section className="py-16 px-4 bg-white dark:bg-gray-800">
+      <section className="py-16 px-4 bg-gray-800">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl text-gray-800 dark:text-gray-200 mb-8">
-              Current{" "}
-              <span className="text-yellow-600 dark:text-yellow-400">
-                Projects
-              </span>
+            <h2 className="text-4xl md:text-5xl text-gray-200 mb-8">
+              Current <span className="text-yellow-400">Projects</span>
             </h2>
-            <p className="text-xl font-light text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+            <p className="text-xl font-light text-gray-400 max-w-3xl mx-auto">
               Your sponsorship directly supports these innovative robotics
               projects.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="sponsor-section p-8 rounded-2xl bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700 dark:to-gray-600">
-              <h3 className="text-2xl font-light text-gray-800 dark:text-gray-200 mb-4">
+            <div className="sponsor-section p-8 rounded-2xl bg-gradient-to-br from-gray-700 to-gray-600">
+              <h3 className="text-2xl font-light text-gray-200 mb-4">
                 SNOUT - Olfactory Sensing Robot
               </h3>
-              <p className="text-gray-600 dark:text-gray-400 mb-4">
+              <p className="text-gray-400 mb-4">
                 SNOUT is an advanced robotic platform equipped with olfactory
                 sensors for detecting and identifying chemical compounds. It
                 enables real-time environmental monitoring and hazardous
@@ -361,11 +349,9 @@ const Sponsorship = () => {
               </div>
             </div>
 
-            <div className="sponsor-section p-8 rounded-2xl bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700 dark:to-gray-600">
-              <h3 className="text-2xl font-light text-gray-800 dark:text-gray-200 mb-4">
-                OLSN
-              </h3>
-              <p className="text-gray-600 dark:text-gray-400 mb-4">
+            <div className="sponsor-section p-8 rounded-2xl bg-gradient-to-br from-gray-700 to-gray-600">
+              <h3 className="text-2xl font-light text-gray-200 mb-4">OLSN</h3>
+              <p className="text-gray-400 mb-4">
                 Design and development of a low-cost, 3D-printed prosthetic hand
                 with advanced biomechanical functionality. The project aims to
                 improve accessibility and usability for individuals in need of
@@ -390,14 +376,10 @@ const Sponsorship = () => {
       {/* Contact Section */}
       <section id="contact-section" className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl text-gray-800 dark:text-gray-200 mb-8">
-            Ready to{" "}
-            <span className="text-yellow-600 dark:text-yellow-400">
-              Partner
-            </span>
-            ?
+          <h2 className="text-4xl md:text-5xl text-gray-200 mb-8">
+            Ready to <span className="text-yellow-400">Partner</span>?
           </h2>
-          <p className="text-xl font-light text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl font-light text-gray-400 mb-8 max-w-2xl mx-auto">
             Let's discuss how your organization can support the future of
             robotics innovation while gaining valuable benefits.
           </p>
@@ -419,12 +401,12 @@ const Sponsorship = () => {
           onClick={() => setShowEmailPopup(false)}
         >
           <div
-            className="relative bg-gradient-to-br from-white via-gray-50 to-white dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 rounded-3xl p-8 md:p-12 max-w-3xl w-full mx-4 my-8 shadow-2xl border border-gray-200 dark:border-gray-700"
+            className="relative bg-gradient-to-br from-gray-800 via-gray-900 to-gray-800 rounded-3xl p-8 md:p-12 max-w-3xl w-full mx-4 my-8 shadow-2xl border border-gray-700"
             onClick={(e) => e.stopPropagation()}
           >
             <button
               onClick={() => setShowEmailPopup(false)}
-              className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 transition-colors z-10"
+              className="absolute top-4 right-4 text-gray-400 hover:text-gray-200 transition-colors z-10"
             >
               <svg
                 className="w-6 h-6"
@@ -456,10 +438,8 @@ const Sponsorship = () => {
                   />
                 </svg>
               </div>
-              <h3 className="text-3xl text-gray-800 dark:text-gray-200 mb-3">
-                Contact TURTLE
-              </h3>
-              <p className="text-gray-600 dark:text-gray-400 font-light mb-4">
+              <h3 className="text-3xl text-gray-200 mb-3">Contact TURTLE</h3>
+              <p className="text-gray-400 font-light mb-4">
                 Please email us directly at:
               </p>
               <a
@@ -480,13 +460,13 @@ const Sponsorship = () => {
           onClick={() => setShowEmailPopup(false)}
         >
           <div
-            className="relative bg-gradient-to-br from-white via-gray-50 to-white dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 rounded-3xl p-10 max-w-lg mx-4 shadow-2xl border border-gray-200 dark:border-gray-700 transform transition-all"
+            className="relative bg-gradient-to-br from-gray-800 via-gray-900 to-gray-800 rounded-3xl p-10 max-w-lg mx-4 shadow-2xl border border-gray-700 transform transition-all"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close button */}
             <button
               onClick={() => setShowEmailPopup(false)}
-              className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 transition-colors"
+              className="absolute top-4 right-4 text-gray-400 hover:text-gray-200 transition-colors"
             >
               <svg
                 className="w-6 h-6"
@@ -520,20 +500,20 @@ const Sponsorship = () => {
               </svg>
             </div>
 
-            <h3 className="text-3xl text-gray-800 dark:text-gray-200 mb-3 text-center">
+            <h3 className="text-3xl text-gray-200 mb-3 text-center">
               Get In Touch
             </h3>
-            <p className="text-gray-600 dark:text-gray-400 mb-8 text-center font-light">
+            <p className="text-gray-400 mb-8 text-center font-light">
               We'd love to hear from you! Reach out to discuss sponsorship
               opportunities.
             </p>
 
             {/* Email display */}
-            <div className="bg-yellow-50 dark:bg-gray-700 rounded-xl p-6 mb-6 border-2 border-yellow-200 dark:border-yellow-600">
-              <p className="text-xs font-medium text-gray-500 dark:text-gray-400 mb-2 uppercase tracking-wide text-center">
+            <div className="bg-gray-700 rounded-xl p-6 mb-6 border-2 border-yellow-600">
+              <p className="text-xs font-medium text-gray-400 mb-2 uppercase tracking-wide text-center">
                 Email Address
               </p>
-              <p className="text-xl font-medium text-yellow-600 dark:text-yellow-400 text-center break-all">
+              <p className="text-xl font-medium text-yellow-400 text-center break-all">
                 turtlerobotics@gmail.com
               </p>
             </div>
