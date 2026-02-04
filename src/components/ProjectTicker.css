@@ -107,38 +107,18 @@
   text-shadow: 0 0 20px #ffe06699;
 }
 
-/* LIGHT MODE STYLES */
-
-/* Remove maroon, use yellow/grey/black/white palette */
-:root:not(.dark) .project-ticker-acronym {
-  color: #222222;
-  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.3);
-}
-
-:root:not(.dark) .project-ticker-block:hover {
-  box-shadow:
-    0 30px 60px -15px rgba(0, 0, 0, 0.6),
-    0 0 40px #ffe06699;
-}
-
-:root:not(.dark) .project-ticker-block:hover .project-ticker-acronym {
-  color: #222222;
-  text-shadow: 0 0 20px #ffe06699;
-}
-
-/* DARK MODE STYLES (explicit for clarity) */
-:root.dark .project-ticker-acronym {
+:root .project-ticker-acronym {
   color: #ffffff;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
-:root.dark .project-ticker-block:hover {
+:root .project-ticker-block:hover {
   box-shadow:
     0 30px 60px -15px rgba(0, 0, 0, 0.6),
     0 0 40px rgba(251, 146, 60, 0.3);
 }
 
-:root.dark .project-ticker-block:hover .project-ticker-acronym {
+:root .project-ticker-block:hover .project-ticker-acronym {
   color: #ffffff;
   text-shadow: 0 0 20px rgba(251, 146, 60, 0.5);
 }
