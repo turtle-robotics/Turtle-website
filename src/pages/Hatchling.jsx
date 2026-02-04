@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useEffect, useRef , useState} from "react";
+import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import ImageCarousel from "../components/ImageCarousel";
 import ButtonLink from "../components/ButtonLink";
@@ -21,7 +21,7 @@ const Hatchling = () => {
         duration: 1.2,
         stagger: 0.2,
         ease: "power3.out",
-      }
+      },
     );
 
     gsap.fromTo(
@@ -33,7 +33,7 @@ const Hatchling = () => {
         duration: 1,
         delay: 0.8,
         ease: "power3.out",
-      }
+      },
     );
 
     gsap.fromTo(
@@ -45,23 +45,23 @@ const Hatchling = () => {
         duration: 1,
         delay: 1.2,
         ease: "power3.out",
-      }
+      },
     );
   }, []);
 
   // Check localStorage for slides visibility
   const [slidesVisible, setSlidesVisible] = useState(() => {
-    const stored = localStorage.getItem('hatchlingSlidesVisible');
-    return stored === null ? true : stored === 'true';
+    const stored = localStorage.getItem("hatchlingSlidesVisible");
+    return stored === null ? true : stored === "true";
   });
 
   useEffect(() => {
     const handler = () => {
-      const stored = localStorage.getItem('hatchlingSlidesVisible');
-      setSlidesVisible(stored === null ? true : stored === 'true');
+      const stored = localStorage.getItem("hatchlingSlidesVisible");
+      setSlidesVisible(stored === null ? true : stored === "true");
     };
-    window.addEventListener('storage', handler);
-    return () => window.removeEventListener('storage', handler);
+    window.addEventListener("storage", handler);
+    return () => window.removeEventListener("storage", handler);
   }, []);
 
   return (
@@ -107,8 +107,8 @@ const Hatchling = () => {
           <div className="glass-card p-12 rounded-2xl text-center">
             <p className="text-xl md:text-2xl font-light text-gray-600 dark:text-gray-400 leading-relaxed max-w-4xl mx-auto">
               Founded in the fall of 2015, Hatchling is our premier development
-              program that introduces foundational technical, soft, and engineering
-              skills
+              program that introduces foundational technical, soft, and
+              engineering skills
             </p>
           </div>
         </div>
@@ -540,7 +540,8 @@ const Hatchling = () => {
                     Select Week to Download
                   </h4>
                   <p className="text-gray-600 dark:text-gray-400 font-light">
-                    Choose a week to download the corresponding content materials
+                    Choose a week to download the corresponding content
+                    materials
                   </p>
                 </div>
 
@@ -563,7 +564,8 @@ const Hatchling = () => {
                         className="glass-card border border-gray-200 dark:border-gray-700 px-4 py-3 rounded-lg text-gray-800 dark:text-gray-200 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
                         onChange={(e) => {
                           const selectedWeek = e.target.value;
-                          const downloadBtn = document.getElementById("downloadBtn");
+                          const downloadBtn =
+                            document.getElementById("downloadBtn");
                           if (selectedWeek && downloadBtn) {
                             const filePath = pdfMap[selectedWeek];
                             downloadBtn.href = encodeURI(filePath); // 👈 Encodes spaces and '+'
@@ -645,7 +647,6 @@ const Hatchling = () => {
         </div>
       </section>
 
-
       {/* Stats, Impact, and Accolades Section */}
       <section className="py-24 px-4 bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900">
         <div className="max-w-6xl mx-auto">
@@ -694,8 +695,6 @@ const Hatchling = () => {
               </div>
             </div>
           </div>
-
-          
 
           {/* Impact Stories */}
           <div className="grid md:grid-cols-2 gap-8 mb-16">
@@ -805,8 +804,12 @@ const Hatchling = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <ButtonLink to="/apply" style="primary" sizeVariant="large">APPLY NOW</ButtonLink>
-            <ButtonLink to="/about" style="primary" sizeVariant="large">LEARN MORE</ButtonLink>
+            <ButtonLink to="/apply" style="primary" sizeVariant="large">
+              APPLY NOW
+            </ButtonLink>
+            <ButtonLink to="/about" style="primary" sizeVariant="large">
+              LEARN MORE
+            </ButtonLink>
           </div>
         </div>
       </section>

@@ -51,7 +51,8 @@
 .dark .custom-scrollbar ::-webkit-scrollbar-thumb:hover {
   background: #e5e5e5;
 }
-html, body {
+html,
+body {
   overflow-x: hidden !important;
 }
 /* Custom Scrollbar Styles */
@@ -85,24 +86,24 @@ body {
 @layer base {
   :root {
     /* Light Theme */
-    --color-bg: #FFFFFF;
-    --color-text: #1F2937;
+    --color-bg: #ffffff;
+    --color-text: #1f2937;
     /* In light mode, accent becomes red */
-    --color-accent: #A60000; /* red */
-    --color-secondary: #A60000;
-    --color-gradient-start: #7B0000;
-    --color-gradient-end: #A60000;
+    --color-accent: #a60000; /* red */
+    --color-secondary: #a60000;
+    --color-gradient-start: #7b0000;
+    --color-gradient-end: #a60000;
   }
 
   .dark {
     /* Dark Theme */
     --color-bg: #111218;
-    --color-text: #E5E7EB;
+    --color-text: #e5e7eb;
     /* In dark mode, accent becomes yellow */
-    --color-accent: #FFD700; /* yellow */
-    --color-secondary: #FFD700;
-    --color-gradient-start: #F59E0B; /* amber-500 */
-    --color-gradient-end: #FBBF24;   /* amber-400 */
+    --color-accent: #ffd700; /* yellow */
+    --color-secondary: #ffd700;
+    --color-gradient-start: #f59e0b; /* amber-500 */
+    --color-gradient-end: #fbbf24; /* amber-400 */
   }
 
   * {
@@ -116,10 +117,12 @@ body {
   }
 
   body {
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     background-color: var(--color-bg);
     color: var(--color-text);
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease;
   }
 }
 
@@ -144,7 +147,10 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
     transform: translateZ(0);
-    transition: transform 250ms cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 250ms ease, border-color 250ms ease;
+    transition:
+      transform 250ms cubic-bezier(0.2, 0.8, 0.2, 1),
+      box-shadow 250ms ease,
+      border-color 250ms ease;
   }
 
   .dark .glass-card {
@@ -157,7 +163,7 @@ body {
   /* Elevated pop on hover */
   .pop-card:hover {
     transform: translateY(-6px) scale(1.03);
-    box-shadow: 0 18px 50px rgba(0,0,0,0.18);
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.18);
     border-color: rgba(255, 107, 107, 0.35);
   }
 
@@ -166,7 +172,11 @@ body {
   }
 
   .bg-gradient-turtle {
-    background: linear-gradient(135deg, var(--color-gradient-start), var(--color-gradient-end));
+    background: linear-gradient(
+      135deg,
+      var(--color-gradient-start),
+      var(--color-gradient-end)
+    );
   }
 
   .bg-gradient-premium {
@@ -174,18 +184,26 @@ body {
   }
 
   .hero-gradient {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0.05) 100%
+    );
     backdrop-filter: blur(10px);
   }
 
   .dark .hero-gradient {
-    background: linear-gradient(135deg, rgba(17, 18, 24, 0.1) 0%, rgba(17, 18, 24, 0.05) 100%);
+    background: linear-gradient(
+      135deg,
+      rgba(17, 18, 24, 0.1) 0%,
+      rgba(17, 18, 24, 0.05) 100%
+    );
     backdrop-filter: blur(10px);
   }
 }
 
 @layer utilities {
-    .text-shadow {
+  .text-shadow {
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
 
@@ -230,4 +248,4 @@ body {
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
-} 
+}

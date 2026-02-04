@@ -1,59 +1,62 @@
-import { useEffect, useRef, useState } from 'react'
-import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useEffect, useRef, useState } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(ScrollTrigger);
 
 const Sponsorship = () => {
-  const heroRef = useRef(null)
-  const [showEmailPopup, setShowEmailPopup] = useState(false)
+  const heroRef = useRef(null);
+  const [showEmailPopup, setShowEmailPopup] = useState(false);
 
   useEffect(() => {
-    const hero = heroRef.current
-    if (!hero) return
+    const hero = heroRef.current;
+    if (!hero) return;
 
     // Hero animations
-    gsap.fromTo(hero.querySelectorAll('h1 span'),
+    gsap.fromTo(
+      hero.querySelectorAll("h1 span"),
       { y: 100, opacity: 0 },
-      { 
-        y: 0, 
-        opacity: 1, 
-        duration: 1.2, 
-        stagger: 0.2, 
-        ease: "power3.out" 
-      }
-    )
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1.2,
+        stagger: 0.2,
+        ease: "power3.out",
+      },
+    );
 
-    gsap.fromTo(hero.querySelector('.hero-subtitle'),
+    gsap.fromTo(
+      hero.querySelector(".hero-subtitle"),
       { y: 50, opacity: 0 },
-      { 
-        y: 0, 
-        opacity: 1, 
-        duration: 1, 
-        delay: 0.8, 
-        ease: "power3.out" 
-      }
-    )
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        delay: 0.8,
+        ease: "power3.out",
+      },
+    );
 
     // Animate sections on scroll
-    const sections = document.querySelectorAll('.sponsor-section')
+    const sections = document.querySelectorAll(".sponsor-section");
     sections.forEach((section) => {
-      gsap.fromTo(section,
+      gsap.fromTo(
+        section,
         { y: 50, opacity: 0 },
-        { 
-          y: 0, 
-          opacity: 1, 
+        {
+          y: 0,
+          opacity: 1,
           duration: 0.8,
           ease: "power2.out",
           scrollTrigger: {
             trigger: section,
-            start: 'top 80%',
-            once: true
-          }
-        }
-      )
-    })
-  }, [])
+            start: "top 80%",
+            once: true,
+          },
+        },
+      );
+    });
+  }, []);
 
   const sponsorshipTiers = [
     {
@@ -65,8 +68,8 @@ const Sponsorship = () => {
         "Recognition at events",
         "Showcase Advertisement",
         "Social media post",
-        "Annual report recognition"
-      ]
+        "Annual report recognition",
+      ],
     },
     {
       name: "Silver Sponsor",
@@ -76,8 +79,8 @@ const Sponsorship = () => {
         "All Bronze benefits",
         "Resume Bank",
         "Recruiter Workshop",
-        "Exclusive workshop access"
-      ]
+        "Exclusive workshop access",
+      ],
     },
     {
       name: "Gold Sponsor",
@@ -86,8 +89,8 @@ const Sponsorship = () => {
       benefits: [
         "All Bronze benefits",
         "All Silver benefits",
-        "Recruiter Table at Showcase"
-      ]
+        "Recruiter Table at Showcase",
+      ],
     },
     {
       name: "Platinum Sponsor",
@@ -98,35 +101,41 @@ const Sponsorship = () => {
         "All Silver benefits",
         "All Gold benefits",
         "Logo on an Advanced Project",
-      ]
-    }
-  ]
+      ],
+    },
+  ];
 
   const impactStats = [
     { number: "1000+", label: "Students Impacted" },
     { number: "15+", label: "Projects Completed" },
     { number: "8", label: "Industry Partners" },
-    { number: "13", label: "Years of Innovation" }
-  ]
+    { number: "13", label: "Years of Innovation" },
+  ];
 
   const copyEmailToClipboard = () => {
-    navigator.clipboard.writeText('turtlerobotics@gmail.com')
-    alert('Email copied to clipboard!')
-  }
+    navigator.clipboard.writeText("turtlerobotics@gmail.com");
+    alert("Email copied to clipboard!");
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       {/* Hero Section */}
-      <section ref={heroRef} className="relative min-h-screen flex items-center justify-center px-4">
+      <section
+        ref={heroRef}
+        className="relative min-h-screen flex items-center justify-center px-4"
+      >
         <div className="absolute inset-0 bg-gradient-to-br from-gray-100/50 via-white to-gray-100/50 dark:from-gray-900/50 dark:via-gray-800/50 dark:to-gray-900/50"></div>
         <div className="relative text-center max-w-6xl mx-auto z-10">
           <h1 className="text-6xl md:text-8xl lg:text-9xl tracking-tight text-gray-800 dark:text-gray-200 mb-8">
             <span className="block">SPONSOR</span>
-            <span className="block text-yellow-600 dark:text-yellow-400">TURTLE</span>
+            <span className="block text-yellow-600 dark:text-yellow-400">
+              TURTLE
+            </span>
           </h1>
-          
+
           <p className="hero-subtitle text-xl md:text-2xl font-light tracking-wide text-gray-600 dark:text-gray-400 mb-12 max-w-3xl mx-auto">
-            Partner with the next generation of robotics innovators. Support cutting-edge research and shape the future of OLSN.
+            Partner with the next generation of robotics innovators. Support
+            cutting-edge research and shape the future of OLSN.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -134,8 +143,8 @@ const Sponsorship = () => {
               type="button"
               className="shadow-lg bg-yellow-500 text-black px-10 py-5 rounded-xl font-medium hover:scale-105 transition-all duration-300"
               onClick={() => {
-                const section = document.getElementById('sponsorship-tiers');
-                if (section) section.scrollIntoView({ behavior: 'smooth' });
+                const section = document.getElementById("sponsorship-tiers");
+                if (section) section.scrollIntoView({ behavior: "smooth" });
               }}
             >
               View Sponsorship Tiers
@@ -144,8 +153,8 @@ const Sponsorship = () => {
               type="button"
               className="border-2 border-yellow-500 text-yellow-600 px-10 py-5 rounded-xl font-medium hover:scale-105 transition-all duration-300"
               onClick={() => {
-                const section = document.getElementById('contact-section');
-                if (section) section.scrollIntoView({ behavior: 'smooth' });
+                const section = document.getElementById("contact-section");
+                if (section) section.scrollIntoView({ behavior: "smooth" });
                 setShowEmailPopup(true);
               }}
             >
@@ -178,47 +187,95 @@ const Sponsorship = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl text-gray-800 dark:text-gray-200 mb-8">
-              Why Sponsor <span className="text-yellow-600 dark:text-yellow-400">TURTLE</span>?
+              Why Sponsor{" "}
+              <span className="text-yellow-600 dark:text-yellow-400">
+                TURTLE
+              </span>
+              ?
             </h2>
             <p className="text-xl font-light text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-              Join us in advancing robotics technology while gaining access to top engineering talent and innovative research opportunities.
+              Join us in advancing robotics technology while gaining access to
+              top engineering talent and innovative research opportunities.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="sponsor-section text-center p-8 rounded-2xl bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700 dark:to-gray-600">
               <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-amber-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                <svg
+                  className="w-8 h-8 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                  />
                 </svg>
               </div>
-              <h3 className="text-2xl font-light text-gray-800 dark:text-gray-200 mb-4">Innovation Access</h3>
+              <h3 className="text-2xl font-light text-gray-800 dark:text-gray-200 mb-4">
+                Innovation Access
+              </h3>
               <p className="text-gray-600 dark:text-gray-400">
-                Gain early insight into the latest in robotics development as our diverse and talented teams work to innovate and change the world.
+                Gain early insight into the latest in robotics development as
+                our diverse and talented teams work to innovate and change the
+                world.
               </p>
             </div>
 
             <div className="sponsor-section text-center p-8 rounded-2xl bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700 dark:to-gray-600">
               <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-amber-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                <svg
+                  className="w-8 h-8 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                  />
                 </svg>
               </div>
-              <h3 className="text-2xl font-light text-gray-800 dark:text-gray-200 mb-4">Talent Pipeline</h3>
+              <h3 className="text-2xl font-light text-gray-800 dark:text-gray-200 mb-4">
+                Talent Pipeline
+              </h3>
               <p className="text-gray-600 dark:text-gray-400">
-                As one of the largest student-led robotics organizations in Texas, we provide a unique opportunity to connect with future engineers and recruit students for internships and co-ops from our vast catalogue of projects.
+                As one of the largest student-led robotics organizations in
+                Texas, we provide a unique opportunity to connect with future
+                engineers and recruit students for internships and co-ops from
+                our vast catalogue of projects.
               </p>
             </div>
 
             <div className="sponsor-section text-center p-8 rounded-2xl bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700 dark:to-gray-600">
               <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-amber-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                <svg
+                  className="w-8 h-8 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M13 10V3L4 14h7v7l9-11h-7z"
+                  />
                 </svg>
               </div>
-              <h3 className="text-2xl font-light text-gray-800 dark:text-gray-200 mb-4">Brand Recognition</h3>
+              <h3 className="text-2xl font-light text-gray-800 dark:text-gray-200 mb-4">
+                Brand Recognition
+              </h3>
               <p className="text-gray-600 dark:text-gray-400">
-                With a platinum level sponsorship, your products and logo can be featured directly on our projects, reaching tens of thousands of students and engineers across Texas and beyond.
+                With a platinum level sponsorship, your products and logo can be
+                featured directly on our projects, reaching tens of thousands of
+                students and engineers across Texas and beyond.
               </p>
             </div>
           </div>
@@ -230,17 +287,23 @@ const Sponsorship = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl text-gray-800 dark:text-gray-200 mb-8">
-              Sponsorship <span className="text-yellow-600 dark:text-yellow-400">Tiers</span>
+              Sponsorship{" "}
+              <span className="text-yellow-600 dark:text-yellow-400">
+                Tiers
+              </span>
             </h2>
             <p className="text-xl font-light text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-              Choose the sponsorship level that best fits your organization's goals and budget.
+              Choose the sponsorship level that best fits your organization's
+              goals and budget.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {sponsorshipTiers.map((tier, index) => (
               <div key={index} className="sponsor-section group">
-                <div className={`${tier.color} p-8 rounded-2xl text-black shadow-lg hover:scale-105 transition-all duration-300`}>
+                <div
+                  className={`${tier.color} p-8 rounded-2xl text-black shadow-lg hover:scale-105 transition-all duration-300`}
+                >
                   <h3 className="text-2xl font-light mb-2">{tier.name}</h3>
                   <div className="text-3xl font-bold mb-6">{tier.amount}</div>
                   <ul className="space-y-3">
@@ -263,35 +326,61 @@ const Sponsorship = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl text-gray-800 dark:text-gray-200 mb-8">
-              Current <span className="text-yellow-600 dark:text-yellow-400">Projects</span>
+              Current{" "}
+              <span className="text-yellow-600 dark:text-yellow-400">
+                Projects
+              </span>
             </h2>
             <p className="text-xl font-light text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-              Your sponsorship directly supports these innovative robotics projects.
+              Your sponsorship directly supports these innovative robotics
+              projects.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             <div className="sponsor-section p-8 rounded-2xl bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700 dark:to-gray-600">
-              <h3 className="text-2xl font-light text-gray-800 dark:text-gray-200 mb-4">SNOUT - Olfactory Sensing Robot</h3>
+              <h3 className="text-2xl font-light text-gray-800 dark:text-gray-200 mb-4">
+                SNOUT - Olfactory Sensing Robot
+              </h3>
               <p className="text-gray-600 dark:text-gray-400 mb-4">
-                SNOUT is an advanced robotic platform equipped with olfactory sensors for detecting and identifying chemical compounds. It enables real-time environmental monitoring and hazardous material detection in diverse settings.
+                SNOUT is an advanced robotic platform equipped with olfactory
+                sensors for detecting and identifying chemical compounds. It
+                enables real-time environmental monitoring and hazardous
+                material detection in diverse settings.
               </p>
               <div className="flex flex-wrap gap-2">
-                <span className="text-xs bg-yellow-500 text-yellow-900 px-3 py-1 rounded-full">IMS Sensors</span>
-                <span className="text-xs bg-yellow-500 text-yellow-900 px-3 py-1 rounded-full">Machine Learning</span>
-                <span className="text-xs bg-yellow-500 text-yellow-900 px-3 py-1 rounded-full">Robotics</span>
+                <span className="text-xs bg-yellow-500 text-yellow-900 px-3 py-1 rounded-full">
+                  IMS Sensors
+                </span>
+                <span className="text-xs bg-yellow-500 text-yellow-900 px-3 py-1 rounded-full">
+                  Machine Learning
+                </span>
+                <span className="text-xs bg-yellow-500 text-yellow-900 px-3 py-1 rounded-full">
+                  Robotics
+                </span>
               </div>
             </div>
 
             <div className="sponsor-section p-8 rounded-2xl bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700 dark:to-gray-600">
-              <h3 className="text-2xl font-light text-gray-800 dark:text-gray-200 mb-4">OLSN</h3>
+              <h3 className="text-2xl font-light text-gray-800 dark:text-gray-200 mb-4">
+                OLSN
+              </h3>
               <p className="text-gray-600 dark:text-gray-400 mb-4">
-                Design and development of a low-cost, 3D-printed prosthetic hand with advanced biomechanical functionality. The project aims to improve accessibility and usability for individuals in need of affordable prosthetic solutions.
+                Design and development of a low-cost, 3D-printed prosthetic hand
+                with advanced biomechanical functionality. The project aims to
+                improve accessibility and usability for individuals in need of
+                affordable prosthetic solutions.
               </p>
               <div className="flex flex-wrap gap-2">
-                <span className="text-xs bg-yellow-500 text-yellow-900 px-3 py-1 rounded-full">Prosthetics</span>
-                <span className="text-xs bg-yellow-500 text-yellow-900 px-3 py-1 rounded-full">Biomechanics</span>
-                <span className="text-xs bg-yellow-500 text-yellow-900 px-3 py-1 rounded-full">3D Printing</span>
+                <span className="text-xs bg-yellow-500 text-yellow-900 px-3 py-1 rounded-full">
+                  Prosthetics
+                </span>
+                <span className="text-xs bg-yellow-500 text-yellow-900 px-3 py-1 rounded-full">
+                  Biomechanics
+                </span>
+                <span className="text-xs bg-yellow-500 text-yellow-900 px-3 py-1 rounded-full">
+                  3D Printing
+                </span>
               </div>
             </div>
           </div>
@@ -302,14 +391,19 @@ const Sponsorship = () => {
       <section id="contact-section" className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl text-gray-800 dark:text-gray-200 mb-8">
-            Ready to <span className="text-yellow-600 dark:text-yellow-400">Partner</span>?
+            Ready to{" "}
+            <span className="text-yellow-600 dark:text-yellow-400">
+              Partner
+            </span>
+            ?
           </h2>
           <p className="text-xl font-light text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
-            Let's discuss how your organization can support the future of robotics innovation while gaining valuable benefits.
+            Let's discuss how your organization can support the future of
+            robotics innovation while gaining valuable benefits.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button 
+            <button
               onClick={() => setShowEmailPopup(true)}
               className="bg-yellow-500 text-black px-8 py-4 rounded-xl font-medium hover:scale-105 transition-all duration-300 shadow-lg"
             >
@@ -320,23 +414,46 @@ const Sponsorship = () => {
       </section>
 
       {showEmailPopup && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-md px-4 py-8 overflow-y-auto" onClick={() => setShowEmailPopup(false)}>
-          <div 
-            className="relative bg-gradient-to-br from-white via-gray-50 to-white dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 rounded-3xl p-8 md:p-12 max-w-3xl w-full mx-4 my-8 shadow-2xl border border-gray-200 dark:border-gray-700" 
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-md px-4 py-8 overflow-y-auto"
+          onClick={() => setShowEmailPopup(false)}
+        >
+          <div
+            className="relative bg-gradient-to-br from-white via-gray-50 to-white dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 rounded-3xl p-8 md:p-12 max-w-3xl w-full mx-4 my-8 shadow-2xl border border-gray-200 dark:border-gray-700"
             onClick={(e) => e.stopPropagation()}
           >
             <button
               onClick={() => setShowEmailPopup(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 transition-colors z-10"
             >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
               </svg>
             </button>
             <div className="text-center mb-8">
               <div className="w-20 h-20 bg-gradient-to-r from-yellow-500 to-amber-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
-                <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                <svg
+                  className="w-10 h-10 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"
+                  />
                 </svg>
               </div>
               <h3 className="text-3xl text-gray-800 dark:text-gray-200 mb-3">
@@ -345,7 +462,10 @@ const Sponsorship = () => {
               <p className="text-gray-600 dark:text-gray-400 font-light mb-4">
                 Please email us directly at:
               </p>
-              <a href="mailto:turtlerobotics@gmail.com" className="text-xl text-accent underline hover:text-accent/80 transition-colors duration-200">
+              <a
+                href="mailto:turtlerobotics@gmail.com"
+                className="text-xl text-accent underline hover:text-accent/80 transition-colors duration-200"
+              >
                 turtlerobotics@gmail.com
               </a>
             </div>
@@ -355,9 +475,12 @@ const Sponsorship = () => {
 
       {/* Email Popup Modal */}
       {showEmailPopup && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-md" onClick={() => setShowEmailPopup(false)}>
-          <div 
-            className="relative bg-gradient-to-br from-white via-gray-50 to-white dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 rounded-3xl p-10 max-w-lg mx-4 shadow-2xl border border-gray-200 dark:border-gray-700 transform transition-all" 
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-md"
+          onClick={() => setShowEmailPopup(false)}
+        >
+          <div
+            className="relative bg-gradient-to-br from-white via-gray-50 to-white dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 rounded-3xl p-10 max-w-lg mx-4 shadow-2xl border border-gray-200 dark:border-gray-700 transform transition-all"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close button */}
@@ -365,15 +488,35 @@ const Sponsorship = () => {
               onClick={() => setShowEmailPopup(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 transition-colors"
             >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
               </svg>
             </button>
 
             {/* Icon */}
             <div className="w-20 h-20 bg-gradient-to-r from-yellow-500 to-amber-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
-              <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              <svg
+                className="w-10 h-10 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                />
               </svg>
             </div>
 
@@ -381,9 +524,10 @@ const Sponsorship = () => {
               Get In Touch
             </h3>
             <p className="text-gray-600 dark:text-gray-400 mb-8 text-center font-light">
-              We'd love to hear from you! Reach out to discuss sponsorship opportunities.
+              We'd love to hear from you! Reach out to discuss sponsorship
+              opportunities.
             </p>
-            
+
             {/* Email display */}
             <div className="bg-yellow-50 dark:bg-gray-700 rounded-xl p-6 mb-6 border-2 border-yellow-200 dark:border-yellow-600">
               <p className="text-xs font-medium text-gray-500 dark:text-gray-400 mb-2 uppercase tracking-wide text-center">
@@ -393,14 +537,24 @@ const Sponsorship = () => {
                 turtlerobotics@gmail.com
               </p>
             </div>
-            
+
             {/* Button */}
             <button
               onClick={copyEmailToClipboard}
               className="w-full bg-gradient-to-r from-yellow-500 to-amber-500 text-black px-6 py-3 rounded-xl font-medium hover:scale-105 transition-all duration-300 shadow-lg flex items-center justify-center gap-2"
             >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+              <svg
+                className="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
+                />
               </svg>
               Copy Email
             </button>
@@ -408,7 +562,7 @@ const Sponsorship = () => {
         </div>
       )}
     </div>
-  )
-}
+  );
+};
 
-export default Sponsorship
+export default Sponsorship;
