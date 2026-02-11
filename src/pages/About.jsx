@@ -196,7 +196,7 @@ const About = () => {
       {/* Statistics Section */}
       <section className="py-24 px-4 bg-gradient-to-br from-gray-800 to-gray-900">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl text-center mb-20 text-gray-200">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl text-center mb-20 text-gray-200">
             OUR <span className="text-yellow-400">IMPACT</span>
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
