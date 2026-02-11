@@ -56,7 +56,6 @@ export const projects = [
       '/SCPosters/ACHE_SC_25_11.pptx.webp',
       '/assets/ACHE/Ache-Hero-1.webp',
       '/assets/ACHE/Ache-Hero-2.webp',
-      '/assets/ACHE/Ache-Hero-3.webp'
     ]
   },
   {
