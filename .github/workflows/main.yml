@@ -2,7 +2,7 @@ name: Code Formatting Check
 on: [push, pull_request]
 
 jobs:
-  check format:
+  check-format:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
