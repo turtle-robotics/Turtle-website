@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useEffect, useRef , useState} from "react";
+import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import ImageCarousel from "../components/ImageCarousel";
 import ButtonLink from "../components/ButtonLink";
@@ -21,7 +21,7 @@ const Hatchling = () => {
         duration: 1.2,
         stagger: 0.2,
         ease: "power3.out",
-      }
+      },
     );
 
     gsap.fromTo(
@@ -33,7 +33,7 @@ const Hatchling = () => {
         duration: 1,
         delay: 0.8,
         ease: "power3.out",
-      }
+      },
     );
 
     gsap.fromTo(
@@ -45,23 +45,23 @@ const Hatchling = () => {
         duration: 1,
         delay: 1.2,
         ease: "power3.out",
-      }
+      },
     );
   }, []);
 
   // Check localStorage for slides visibility
   const [slidesVisible, setSlidesVisible] = useState(() => {
-    const stored = localStorage.getItem('hatchlingSlidesVisible');
-    return stored === null ? true : stored === 'true';
+    const stored = localStorage.getItem("hatchlingSlidesVisible");
+    return stored === null ? true : stored === "true";
   });
 
   useEffect(() => {
     const handler = () => {
-      const stored = localStorage.getItem('hatchlingSlidesVisible');
-      setSlidesVisible(stored === null ? true : stored === 'true');
+      const stored = localStorage.getItem("hatchlingSlidesVisible");
+      setSlidesVisible(stored === null ? true : stored === "true");
     };
-    window.addEventListener('storage', handler);
-    return () => window.removeEventListener('storage', handler);
+    window.addEventListener("storage", handler);
+    return () => window.removeEventListener("storage", handler);
   }, []);
 
   return (
@@ -79,7 +79,7 @@ const Hatchling = () => {
         />
 
         {/* Overlay for light contrast */}
-        <div className="absolute inset-0 bg-black/25 dark:bg-black/25"></div>
+        <div className="absolute inset-0 bg-black/25"></div>
 
         {/* Text only — no box */}
         <div className="relative text-center z-10 max-w-6xl mx-auto -translate-y-36">
@@ -100,62 +100,52 @@ const Hatchling = () => {
       {/* Mission Statement Section */}
       <section className="py-24 px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl text-center mb-20 text-gray-800 dark:text-gray-200">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl text-center mb-20 text-gray-200">
             OUR <span className="text-accent">MISSION</span>
           </h2>
 
           <div className="glass-card p-12 rounded-2xl text-center">
-            <p className="text-xl md:text-2xl font-light text-gray-600 dark:text-gray-400 leading-relaxed max-w-4xl mx-auto">
+            <p className="text-xl md:text-2xl font-light text-gray-400 leading-relaxed max-w-4xl mx-auto">
               Founded in the fall of 2015, Hatchling is our premier development
-              program that introduces foundational technical, soft, and engineering
-              skills
+              program that introduces foundational technical, soft, and
+              engineering skills
             </p>
           </div>
         </div>
       </section>
 
       {/* Trusted Organizations Section */}
-      <section className="py-24 px-4 bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900">
+      <section className="py-24 px-4 bg-gradient-to-br from-gray-800 to-gray-900">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl text-center mb-20 text-gray-800 dark:text-gray-200">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl text-center mb-20 text-gray-200">
             CURRENTLY <span className="text-accent">TRUSTED AT</span>
           </h2>
 
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-8">
-            <div className="glass-card p-8 rounded-2xl text-center transition-all duration-300 bg-gradient-to-br from-yellow-400/20 to-amber-400/20 dark:from-yellow-500/20 dark:to-amber-500/20 border-2 border-yellow-400/30 dark:border-yellow-500/30">
+            <div className="glass-card p-8 rounded-2xl text-center transition-all duration-300">
               <div className="text-5xl mb-4">🏢</div>
-              <h3 className="text-3xl font-light text-gray-800 dark:text-gray-200 mb-2">
-                3
-              </h3>
-              <p className="text-lg font-light text-gray-600 dark:text-gray-400">
-                Organizations
-              </p>
+              <h3 className="text-3xl font-light text-gray-200 mb-2">3</h3>
+              <p className="text-lg font-light text-gray-400">Organizations</p>
             </div>
 
-            <div className="text-2xl font-light text-gray-600 dark:text-gray-400">
-              across
-            </div>
+            <div className="text-2xl font-light text-gray-400">across</div>
 
-            <div className="glass-card p-8 rounded-2xl text-center transition-all duration-300 bg-gradient-to-br from-yellow-400/20 to-amber-400/20 dark:from-yellow-500/20 dark:to-amber-500/20 border-2 border-yellow-400/30 dark:border-yellow-500/30">
+            <div className="glass-card p-8 rounded-2xl text-center transition-all duration-300">
               <div className="text-5xl mb-4">🎓</div>
-              <h3 className="text-3xl font-light text-gray-800 dark:text-gray-200 mb-2">
-                2
-              </h3>
-              <p className="text-lg font-light text-gray-600 dark:text-gray-400">
-                Universities
-              </p>
+              <h3 className="text-3xl font-light text-gray-200 mb-2">2</h3>
+              <p className="text-lg font-light text-gray-400">Universities</p>
             </div>
           </div>
 
           <div className="text-center">
-            <p className="text-lg font-light text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-12"></p>
+            <p className="text-lg font-light text-gray-400 max-w-3xl mx-auto mb-12"></p>
 
             {/* Bring Hatchling to Your Organization */}
             <div className="glass-card p-8 rounded-2xl max-w-2xl mx-auto">
-              <h3 className="text-2xl font-light text-gray-800 dark:text-gray-200 mb-4">
+              <h3 className="text-2xl font-light text-gray-200 mb-4">
                 Bring the Hatchling Mission to Your Student Organization
               </h3>
-              <p className="text-gray-600 dark:text-gray-400 font-light mb-6">
+              <p className="text-gray-400 font-light mb-6">
                 Interested in expanding robotics education at your university?
                 Let's discuss how we can bring the Hatchling program to your
                 campus.
@@ -174,11 +164,11 @@ const Hatchling = () => {
       {/* Scrolling Pictures Section */}
       <section className="py-24 px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl text-center mb-20 text-gray-800 dark:text-gray-200">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl text-center mb-20 text-gray-200">
             HATCHLING <span className="text-accent">GALLERY</span>
           </h2>
 
-          <div className="rounded-2xl overflow-hidden border border-gray-200/50 dark:border-gray-700/50 glass-card w-full max-w-7xl mx-auto">
+          <div className="rounded-2xl overflow-hidden border border-gray-700/50 glass-card w-full max-w-7xl mx-auto">
             <ImageCarousel
               images={[
                 "/assets/20250427_202459_BFD66E.JPEG",
@@ -197,18 +187,18 @@ const Hatchling = () => {
       </section>
 
       {/* Learning Objectives and Schedule Section */}
-      <section className="py-24 px-4 bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900">
+      <section className="py-24 px-4 bg-gradient-to-br from-gray-800 to-gray-900">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl text-center mb-20 text-gray-800 dark:text-gray-200">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl text-center mb-20 text-gray-200">
             LEARNING <span className="text-accent">OBJECTIVES</span> & SCHEDULE
           </h2>
 
           {/* Learning Objectives - Full Width on Top */}
           <div className="mb-16">
-            <h3 className="text-3xl font-light text-gray-800 dark:text-gray-200 mb-8 text-center">
+            <h3 className="text-3xl font-light text-gray-200 mb-8 text-center">
               Core Learning Objectives
             </h3>
-            <p className="text-lg text-gray-600 dark:text-gray-400 text-center mb-8 max-w-4xl mx-auto">
+            <p className="text-lg text-gray-400 text-center mb-8 max-w-4xl mx-auto">
               Hatchlings graduate from the program with a community, passion for
               engineering, and the following skills:
             </p>
@@ -217,7 +207,7 @@ const Hatchling = () => {
                 <h4 className="text-xl font-light text-accent mb-4">
                   SolidWorks (CAD) Competency
                 </h4>
-                <ul className="space-y-3 text-gray-600 dark:text-gray-400 font-light">
+                <ul className="space-y-3 text-gray-400 font-light">
                   <li className="flex items-start">
                     <span className="text-accent mr-3 mt-1">•</span>
                     <span>Design custom parts and modify assemblies</span>
@@ -235,7 +225,7 @@ const Hatchling = () => {
                 <h4 className="text-xl font-light text-accent mb-4">
                   Electronics
                 </h4>
-                <ul className="space-y-3 text-gray-600 dark:text-gray-400 font-light">
+                <ul className="space-y-3 text-gray-400 font-light">
                   <li className="flex items-start">
                     <span className="text-accent mr-3 mt-1">•</span>
                     <span>
@@ -253,7 +243,7 @@ const Hatchling = () => {
                 <h4 className="text-xl font-light text-accent mb-4">
                   Programming
                 </h4>
-                <ul className="space-y-3 text-gray-600 dark:text-gray-400 font-light">
+                <ul className="space-y-3 text-gray-400 font-light">
                   <li className="flex items-start">
                     <span className="text-accent mr-3 mt-1">•</span>
                     <span>Utilize Git/GitHub</span>
@@ -273,7 +263,7 @@ const Hatchling = () => {
                 <h4 className="text-xl font-light text-accent mb-4">
                   Manufacturing
                 </h4>
-                <ul className="space-y-3 text-gray-600 dark:text-gray-400 font-light">
+                <ul className="space-y-3 text-gray-400 font-light">
                   <li className="flex items-start">
                     <span className="text-accent mr-3 mt-1">•</span>
                     <span>Soldering and Crimping</span>
@@ -289,7 +279,7 @@ const Hatchling = () => {
                 <h4 className="text-xl font-light text-accent mb-4">
                   Problem Solving & Critical Thinking
                 </h4>
-                <ul className="space-y-3 text-gray-600 dark:text-gray-400 font-light">
+                <ul className="space-y-3 text-gray-400 font-light">
                   <li className="flex items-start">
                     <span className="text-accent mr-3 mt-1">•</span>
                     <span>
@@ -304,7 +294,7 @@ const Hatchling = () => {
                 <h4 className="text-xl font-light text-accent mb-4">
                   Community & Passion
                 </h4>
-                <ul className="space-y-3 text-gray-600 dark:text-gray-400 font-light">
+                <ul className="space-y-3 text-gray-400 font-light">
                   <li className="flex items-start">
                     <span className="text-accent mr-3 mt-1">•</span>
                     <span>Build lasting connections with fellow engineers</span>
@@ -323,7 +313,7 @@ const Hatchling = () => {
 
           {/* Program Schedule - Horizontal Scrollable Timeline */}
           <div>
-            <h3 className="text-3xl font-light text-gray-800 dark:text-gray-200 mb-8 text-center">
+            <h3 className="text-3xl font-light text-gray-200 mb-8 text-center">
               10-Week Program Schedule
             </h3>
             <div className="relative">
@@ -334,10 +324,10 @@ const Hatchling = () => {
                   <div className="text-2xl font-light text-accent mb-3">
                     Week 1
                   </div>
-                  <h4 className="text-lg font-light text-gray-800 dark:text-gray-200 mb-3">
+                  <h4 className="text-lg font-light text-gray-200 mb-3">
                     Introductions
                   </h4>
-                  <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400 font-light">
+                  <ul className="space-y-2 text-sm text-gray-400 font-light">
                     <li>• Learn about Hatchling and learning objectives</li>
                     <li>• Meet the Director team</li>
                     <li>• Meet Hatchling Peers</li>
@@ -350,10 +340,10 @@ const Hatchling = () => {
                   <div className="text-2xl font-light text-accent mb-3">
                     Week 2
                   </div>
-                  <h4 className="text-lg font-light text-gray-800 dark:text-gray-200 mb-3">
+                  <h4 className="text-lg font-light text-gray-200 mb-3">
                     SolidWorks (CAD) Foundation
                   </h4>
-                  <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400 font-light">
+                  <ul className="space-y-2 text-sm text-gray-400 font-light">
                     <li>• What is CAD?</li>
                     <li>• Engineering Drawing navigation</li>
                     <li>• Navigating SolidWorks</li>
@@ -366,10 +356,10 @@ const Hatchling = () => {
                   <div className="text-2xl font-light text-accent mb-3">
                     Week 3
                   </div>
-                  <h4 className="text-lg font-light text-gray-800 dark:text-gray-200 mb-3">
+                  <h4 className="text-lg font-light text-gray-200 mb-3">
                     SolidWorks 3D
                   </h4>
-                  <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400 font-light">
+                  <ul className="space-y-2 text-sm text-gray-400 font-light">
                     <li>
                       • SolidWorks big 3 features: extrude, revolve, and
                       finishing operations
@@ -384,10 +374,10 @@ const Hatchling = () => {
                   <div className="text-2xl font-light text-accent mb-3">
                     Week 4
                   </div>
-                  <h4 className="text-lg font-light text-gray-800 dark:text-gray-200 mb-3">
+                  <h4 className="text-lg font-light text-gray-200 mb-3">
                     Tools, Project, and Process
                   </h4>
-                  <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400 font-light">
+                  <ul className="space-y-2 text-sm text-gray-400 font-light">
                     <li>• Design Process</li>
                     <li>• Additive Manufacturing with best practices</li>
                     <li>• Tool safety and usage</li>
@@ -403,10 +393,10 @@ const Hatchling = () => {
                   <div className="text-2xl font-light text-accent mb-3">
                     Week 5
                   </div>
-                  <h4 className="text-lg font-light text-gray-800 dark:text-gray-200 mb-3">
+                  <h4 className="text-lg font-light text-gray-200 mb-3">
                     Design Review and C++
                   </h4>
-                  <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400 font-light">
+                  <ul className="space-y-2 text-sm text-gray-400 font-light">
                     <li>
                       • Syntax, variables, loops, if-else statements, and
                       classes
@@ -424,10 +414,10 @@ const Hatchling = () => {
                   <div className="text-2xl font-light text-accent mb-3">
                     Week 6
                   </div>
-                  <h4 className="text-lg font-light text-gray-800 dark:text-gray-200 mb-3">
+                  <h4 className="text-lg font-light text-gray-200 mb-3">
                     SolidWorks Assembly
                   </h4>
-                  <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400 font-light">
+                  <ul className="space-y-2 text-sm text-gray-400 font-light">
                     <li>• Mates</li>
                     <li>• Sub-Assemblies</li>
                     <li>• Component states and configurations</li>
@@ -442,10 +432,10 @@ const Hatchling = () => {
                   <div className="text-2xl font-light text-accent mb-3">
                     Week 7
                   </div>
-                  <h4 className="text-lg font-light text-gray-800 dark:text-gray-200 mb-3">
+                  <h4 className="text-lg font-light text-gray-200 mb-3">
                     Programming and Git/GitHub
                   </h4>
-                  <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400 font-light">
+                  <ul className="space-y-2 text-sm text-gray-400 font-light">
                     <li>• Importance of Git</li>
                     <li>• Git commands and VSCODE integration</li>
                     <li>• Documentation reading for hardware control</li>
@@ -460,10 +450,10 @@ const Hatchling = () => {
                   <div className="text-2xl font-light text-accent mb-3">
                     Week 8
                   </div>
-                  <h4 className="text-lg font-light text-gray-800 dark:text-gray-200 mb-3">
+                  <h4 className="text-lg font-light text-gray-200 mb-3">
                     Electronics and Soldering
                   </h4>
-                  <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400 font-light">
+                  <ul className="space-y-2 text-sm text-gray-400 font-light">
                     <li>• Circuit components and terminology</li>
                     <li>• Pulse Width Modulation</li>
                     <li>
@@ -481,10 +471,10 @@ const Hatchling = () => {
                   <div className="text-2xl font-light text-accent mb-3">
                     Week 9
                   </div>
-                  <h4 className="text-lg font-light text-gray-800 dark:text-gray-200 mb-3">
+                  <h4 className="text-lg font-light text-gray-200 mb-3">
                     Prototype Week
                   </h4>
-                  <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400 font-light">
+                  <ul className="space-y-2 text-sm text-gray-400 font-light">
                     <li>• Project work week</li>
                     <li className="text-accent font-medium">
                       • Project Milestone: Prototype Review
@@ -497,10 +487,10 @@ const Hatchling = () => {
                   <div className="text-2xl font-light text-accent mb-3">
                     Week 10
                   </div>
-                  <h4 className="text-lg font-light text-gray-800 dark:text-gray-200 mb-3">
+                  <h4 className="text-lg font-light text-gray-200 mb-3">
                     Build Week
                   </h4>
-                  <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400 font-light">
+                  <ul className="space-y-2 text-sm text-gray-400 font-light">
                     <li>• Project work week</li>
                     <li className="text-accent font-medium">
                       • Project Milestone: Build
@@ -511,7 +501,7 @@ const Hatchling = () => {
 
               {/* Scroll Indicator */}
               <div className="text-center mt-4">
-                <p className="text-sm text-gray-500 dark:text-gray-400">
+                <p className="text-sm text-gray-400">
                   ← Scroll to see all 10 weeks →
                 </p>
               </div>
@@ -523,24 +513,25 @@ const Hatchling = () => {
       {/* Published Materials Section */}
       <section className="py-24 px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl text-center mb-20 text-gray-800 dark:text-gray-200">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl text-center mb-20 text-gray-200">
             PUBLISHED <span className="text-accent">MATERIALS</span>
           </h2>
 
           {/* Weekly Content PDFs (toggleable) */}
           {slidesVisible && (
             <div className="mb-16">
-              <h3 className="text-3xl font-light text-gray-800 dark:text-gray-200 mb-8 text-center">
+              <h3 className="text-3xl font-light text-gray-200 mb-8 text-center">
                 Weekly Content Materials
               </h3>
               <div className="glass-card p-8 rounded-2xl max-w-2xl mx-auto">
                 <div className="text-center mb-6">
                   <div className="text-5xl mb-4">📚</div>
-                  <h4 className="text-xl font-light text-gray-800 dark:text-gray-200 mb-2">
+                  <h4 className="text-xl font-light text-gray-200 mb-2">
                     Select Week to Download
                   </h4>
-                  <p className="text-gray-600 dark:text-gray-400 font-light">
-                    Choose a week to download the corresponding content materials
+                  <p className="text-gray-400 font-light">
+                    Choose a week to download the corresponding content
+                    materials
                   </p>
                 </div>
 
@@ -560,10 +551,11 @@ const Hatchling = () => {
                     <div className="flex flex-col sm:flex-row gap-4 items-center justify-center mb-6">
                       <select
                         id="weekSelector"
-                        className="glass-card border border-gray-200 dark:border-gray-700 px-4 py-3 rounded-lg text-gray-800 dark:text-gray-200 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
+                        className="glass-card border border-gray-700 px-4 py-3 rounded-lg text-gray-200 bg-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
                         onChange={(e) => {
                           const selectedWeek = e.target.value;
-                          const downloadBtn = document.getElementById("downloadBtn");
+                          const downloadBtn =
+                            document.getElementById("downloadBtn");
                           if (selectedWeek && downloadBtn) {
                             const filePath = pdfMap[selectedWeek];
                             downloadBtn.href = encodeURI(filePath); // 👈 Encodes spaces and '+'
@@ -589,7 +581,7 @@ const Hatchling = () => {
                 })()}
 
                 <div className="text-center">
-                  <p className="text-sm text-gray-500 dark:text-gray-400">
+                  <p className="text-sm text-gray-400">
                     Available for weeks 1–8 • Each PDF contains comprehensive
                     content for that week
                   </p>
@@ -602,7 +594,7 @@ const Hatchling = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="glass-card p-8 rounded-2xl text-center transition-all duration-300">
               <div className="text-5xl mb-6">📝</div>
-              <h3 className="text-xl font-light text-gray-800 dark:text-gray-200 mb-6">
+              <h3 className="text-xl font-light text-gray-200 mb-6">
                 Hatchling Syllabus
               </h3>
               <a
@@ -616,7 +608,7 @@ const Hatchling = () => {
 
             <div className="glass-card p-8 rounded-2xl text-center transition-all duration-300">
               <div className="text-5xl mb-6">🎨</div>
-              <h3 className="text-xl font-light text-gray-800 dark:text-gray-200 mb-6">
+              <h3 className="text-xl font-light text-gray-200 mb-6">
                 CAD Examples
               </h3>
               <a
@@ -630,7 +622,7 @@ const Hatchling = () => {
 
             <div className="glass-card p-8 rounded-2xl text-center transition-all duration-300">
               <div className="text-5xl mb-6">⚡</div>
-              <h3 className="text-xl font-light text-gray-800 dark:text-gray-200 mb-6">
+              <h3 className="text-xl font-light text-gray-200 mb-6">
                 Project Tips & Controller Resources
               </h3>
               <a
@@ -645,65 +637,60 @@ const Hatchling = () => {
         </div>
       </section>
 
-
       {/* Stats, Impact, and Accolades Section */}
-      <section className="py-24 px-4 bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900">
+      <section className="py-24 px-4 bg-gradient-to-br from-gray-800 to-gray-900">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl text-center mb-20 text-gray-800 dark:text-gray-200">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl text-center mb-20 text-gray-200">
             STATS & <span className="text-accent">IMPACT</span>
           </h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             <div className="glass-card p-8 rounded-2xl text-center transition-all duration-300">
               <div className="text-4xl font-light text-accent mb-2">75%</div>
-              <div className="text-lg font-light text-gray-800 dark:text-gray-200 mb-2">
+              <div className="text-lg font-light text-gray-200 mb-2">
                 Weekly Attendance
               </div>
-              <div className="text-sm text-gray-600 dark:text-gray-400">
+              <div className="text-sm text-gray-400">
                 Through 8 weeks of lecture
               </div>
             </div>
 
             <div className="glass-card p-8 rounded-2xl text-center transition-all duration-300">
               <div className="text-4xl font-light text-accent mb-2">70%</div>
-              <div className="text-lg font-light text-gray-800 dark:text-gray-200 mb-2">
+              <div className="text-lg font-light text-gray-200 mb-2">
                 New Engineers
               </div>
-              <div className="text-sm text-gray-600 dark:text-gray-400">
+              <div className="text-sm text-gray-400">
                 70% of members enter without prior robotics experience
               </div>
             </div>
 
             <div className="glass-card p-8 rounded-2xl text-center transition-all duration-300">
               <div className="text-4xl font-light text-accent mb-2">95%</div>
-              <div className="text-lg font-light text-gray-800 dark:text-gray-200 mb-2">
+              <div className="text-lg font-light text-gray-200 mb-2">
                 Recommendation Rate
               </div>
-              <div className="text-sm text-gray-600 dark:text-gray-400">
+              <div className="text-sm text-gray-400">
                 Would recommend to others
               </div>
             </div>
 
             <div className="glass-card p-8 rounded-2xl text-center transition-all duration-300">
               <div className="text-4xl font-light text-accent mb-2">782</div>
-              <div className="text-lg font-light text-gray-800 dark:text-gray-200 mb-2">
+              <div className="text-lg font-light text-gray-200 mb-2">
                 Social Connection
               </div>
-              <div className="text-sm text-gray-600 dark:text-gray-400">
-                All time Members
-              </div>
+              <div className="text-sm text-gray-400">All time Members</div>
             </div>
           </div>
-
-          
 
           {/* Impact Stories */}
           <div className="grid md:grid-cols-2 gap-8 mb-16">
             <div className="glass-card p-8 rounded-2xl">
-              <h3 className="text-2xl font-light text-gray-800 dark:text-gray-200 mb-6">
+              <h3 className="text-2xl font-light text-gray-200 mb-6">
                 Professional Development
               </h3>
-              <ul className="space-y-3 text-gray-600 dark:text-gray-400 font-light">
+              <ul className="space-y-3 text-gray-400 font-light">
                 <li className="flex items-start">
                   <span className="text-accent mr-3 mt-1">•</span>
                   <span>Internships and Research Positions</span>
@@ -720,10 +707,10 @@ const Hatchling = () => {
             </div>
 
             <div className="glass-card p-8 rounded-2xl">
-              <h3 className="text-2xl font-light text-gray-800 dark:text-gray-200 mb-6">
+              <h3 className="text-2xl font-light text-gray-200 mb-6">
                 Leadership & Growth
               </h3>
-              <ul className="space-y-3 text-gray-600 dark:text-gray-400 font-light">
+              <ul className="space-y-3 text-gray-400 font-light">
                 <li className="flex items-start">
                   <span className="text-accent mr-3 mt-1">•</span>
                   <span>Student Organization Presidents & Officers</span>
@@ -742,29 +729,29 @@ const Hatchling = () => {
 
           {/* More Info Section with Embedded PDF */}
           <div className="text-center">
-            <h3 className="text-3xl font-light text-gray-800 dark:text-gray-200 mb-8">
+            <h3 className="text-3xl font-light text-gray-200 mb-8">
               More Info
             </h3>
             <div className="glass-card p-8 rounded-2xl max-w-4xl mx-auto">
               <div className="text-5xl mb-6">📊</div>
-              <h4 className="text-xl font-light text-gray-800 dark:text-gray-200 mb-4">
+              <h4 className="text-xl font-light text-gray-200 mb-4">
                 Detailed Program Impact Report
               </h4>
-              <p className="text-gray-600 dark:text-gray-400 font-light mb-6">
+              <p className="text-gray-400 font-light mb-6">
                 View our comprehensive impact report with detailed statistics,
                 success stories, and program outcomes.
               </p>
 
               {/* Embedded PDF Viewer */}
 
-              <div className="w-full h-96 rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 custom-scrollbar">
+              <div className="w-full h-96 rounded-xl overflow-hidden border border-gray-700 custom-scrollbar">
                 <iframe
                   src="/pdfs/Fall 2025 (10th year) Hatchling Impact Report.pptx.pdf#toolbar=0&navpanes=0&scrollbar=1"
                   className="w-full h-full custom-scrollbar"
                   title="Hatchling Impact Report"
                   frameBorder="0"
                 >
-                  <p className="p-4 text-gray-600 dark:text-gray-400">
+                  <p className="p-4 text-gray-400">
                     Your browser does not support PDF embedding.
                     <a
                       href="/pdfs/hatchling-impact-report.pdf"
@@ -795,18 +782,22 @@ const Hatchling = () => {
       {/* Call to Action */}
       <section className="py-24 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl mb-12 text-gray-800 dark:text-gray-200">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl mb-12 text-gray-200">
             READY TO <span className="text-accent">JOIN</span>?
           </h2>
 
-          <p className="text-xl font-light text-gray-600 dark:text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xl font-light text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed">
             Become part of the next generation of robotics innovators. Apply now
             to join the Hatchling Program and accelerate your robotics journey.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <ButtonLink to="/apply" style="primary" sizeVariant="large">APPLY NOW</ButtonLink>
-            <ButtonLink to="/about" style="primary" sizeVariant="large">LEARN MORE</ButtonLink>
+            <ButtonLink to="/apply" style="primary" sizeVariant="large">
+              APPLY NOW
+            </ButtonLink>
+            <ButtonLink to="/about" style="primary" sizeVariant="large">
+              LEARN MORE
+            </ButtonLink>
           </div>
         </div>
       </section>

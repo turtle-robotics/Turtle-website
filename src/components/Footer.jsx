@@ -1,23 +1,19 @@
-import { Link } from 'react-router-dom'
-import { useState } from 'react';
-import ButtonLink from './ButtonLink';
-import TextLink from './TextLink';
-// import SponsorContactForm from './SponsorContactForm';
+import TextLink from "./TextLink";
 
 const Footer = () => {
-  const [showContactForm, setShowContactForm] = useState(false);
   return (
     <footer className="bg-gray-900">
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="grid md:grid-cols-3 gap-8">
-          
           {/* Left Column - Connect With Us */}
           <div className="space-y-4">
-            <h3 className="font-bold text-gray-800 dark:text-gray-200">Connect With Us</h3>
+            <h3 className="font-bold text-gray-200">Connect With Us</h3>
             <ul className="space-y-2">
               <li>
-                <TextLink to="mailto:turtlerobotics@gmail.com">turtlerobotics@gmail.com</TextLink>
+                <TextLink to="mailto:turtlerobotics@gmail.com">
+                  turtlerobotics@gmail.com
+                </TextLink>
               </li>
               <li class="pt-4">
                 {/* Social Media Icons */}
@@ -32,7 +28,9 @@ const Footer = () => {
                       src="/assets/Instagram_Glyph_Gradient.png"
                       alt="Instagram"
                       className="w-7 h-7 object-contain"
-                      style={{ filter: 'drop-shadow(0 1px 2px rgba(0,0,0,0.10))' }}
+                      style={{
+                        filter: "drop-shadow(0 1px 2px rgba(0,0,0,0.10))",
+                      }}
                     />
                   </a>
 
@@ -46,42 +44,44 @@ const Footer = () => {
                       src="/assets/LI-In-Bug.png"
                       alt="LinkedIn"
                       className="w-7 h-7 object-contain"
-                      style={{ filter: 'drop-shadow(0 1px 2px rgba(0,0,0,0.10))' }}
+                      style={{
+                        filter: "drop-shadow(0 1px 2px rgba(0,0,0,0.10))",
+                      }}
                     />
                   </a>
-                </div>              
+                </div>
               </li>
             </ul>
           </div>
 
           {/* Middle Column - Quick Links */}
           <div className="space-y-4">
-            <h3 className="font-bold text-gray-800 dark:text-gray-200">Quick Links</h3>
+            <h3 className="font-bold text-gray-200">Quick Links</h3>
             <ul className="space-y-2">
               <li>
                 <TextLink to="/apply">Apply</TextLink>
               </li>
               <li>
-                <TextLink to="https://docs.turtlerobotics.org/">Knowledge Base</TextLink>
+                <TextLink to="https://docs.turtlerobotics.org/">
+                  Knowledge Base
+                </TextLink>
               </li>
             </ul>
           </div>
 
           {/* Right Column - Contact Info */}
           <div className="space-y-4">
-            <h3 className="font-bold text-gray-800 dark:text-gray-200">Visit Us</h3>
-            <div className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+            <h3 className="font-bold text-gray-200">Visit Us</h3>
+            <div className="space-y-2 text-sm text-gray-400">
               <p>Haynes Engineering Building - Room 023</p>
               <p>727 Ross St</p>
               <p>College Station, TX 77840</p>
             </div>
           </div>
         </div>
-
-
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 export default function ButtonLink({
   children,
@@ -6,12 +6,13 @@ export default function ButtonLink({
   sizeVariant = "default",
   style = "primary",
   transparent = "true",
-  className
+  className,
 }) {
   const colorStyles = {
-    "primary": "bg-yellow-500 text-black",
+    primary: "bg-yellow-500 text-black",
     "primary-outline": "border-2 border-yellow-500 text-yellow-600",
-    "primary-muted": "bg-gradient-to-r from-yellow-500/10 to-amber-500/10 hover:from-yellow-500/20 hover:to-amber-500/20 text-yellow-600 font-light border border-yellow-700/30",
+    "primary-muted":
+      "bg-gradient-to-r from-yellow-500/10 to-amber-500/10 hover:from-yellow-500/20 hover:to-amber-500/20 text-yellow-600 font-light border border-yellow-700/30",
   };
 
   const sizeVariantStyles = {

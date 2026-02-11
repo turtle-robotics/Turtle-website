@@ -1,42 +1,58 @@
 import { useEffect, useState, useRef } from "react";
 import { motion, useMotionValue, useTransform } from "framer-motion";
-import { FiCalendar, FiCode, FiUsers, FiTool, FiBookOpen } from "react-icons/fi";
+import {
+  FiCalendar,
+  FiCode,
+  FiUsers,
+  FiTool,
+  FiBookOpen,
+} from "react-icons/fi";
 
 import "./Carousel.css";
 
 const PROGRAM_ITEMS = [
   {
     title: "Week 1-3",
-    description: "Foundational skills: Introduction to robotics, programming basics, and safety protocols.",
-    details: "Learn Python programming fundamentals, Arduino basics, electrical safety, and team collaboration. Hands-on workshops with basic sensors and actuators.",
+    description:
+      "Foundational skills: Introduction to robotics, programming basics, and safety protocols.",
+    details:
+      "Learn Python programming fundamentals, Arduino basics, electrical safety, and team collaboration. Hands-on workshops with basic sensors and actuators.",
     id: 1,
     icon: <FiBookOpen className="carousel-icon" />,
   },
   {
     title: "Week 4-6",
-    description: "Intermediate modules: Electronics, soldering, and solid modeling in Solidworks.",
-    details: "Master circuit design, component soldering, PCB layout, and 3D modeling. Build functional electronic circuits and create mechanical designs.",
+    description:
+      "Intermediate modules: Electronics, soldering, and solid modeling in Solidworks.",
+    details:
+      "Master circuit design, component soldering, PCB layout, and 3D modeling. Build functional electronic circuits and create mechanical designs.",
     id: 2,
     icon: <FiTool className="carousel-icon" />,
   },
   {
     title: "Week 7-8",
-    description: "Project initiation: Students form teams and begin planning their capstone projects.",
-    details: "Form interdisciplinary teams, brainstorm project ideas, create project proposals, and develop timelines. Learn project management and documentation.",
+    description:
+      "Project initiation: Students form teams and begin planning their capstone projects.",
+    details:
+      "Form interdisciplinary teams, brainstorm project ideas, create project proposals, and develop timelines. Learn project management and documentation.",
     id: 3,
     icon: <FiUsers className="carousel-icon" />,
   },
   {
     title: "Week 9-10",
-    description: "Project development: Hands-on building and coding of the final robotics project.",
-    details: "Implement full robotics systems, integrate hardware and software, conduct testing and optimization, and prepare for final demonstrations.",
+    description:
+      "Project development: Hands-on building and coding of the final robotics project.",
+    details:
+      "Implement full robotics systems, integrate hardware and software, conduct testing and optimization, and prepare for final demonstrations.",
     id: 4,
     icon: <FiCode className="carousel-icon" />,
   },
   {
     title: "Ongoing",
-    description: "Mentorship and career guidance from faculty and industry partners.",
-    details: "Regular mentorship sessions, industry networking events, career workshops, and ongoing support for continued learning and professional development.",
+    description:
+      "Mentorship and career guidance from faculty and industry partners.",
+    details:
+      "Regular mentorship sessions, industry networking events, career workshops, and ongoing support for continued learning and professional development.",
     id: 5,
     icon: <FiCalendar className="carousel-icon" />,
   },
@@ -138,11 +154,11 @@ export default function Carousel({
   const dragProps = loop
     ? {}
     : {
-      dragConstraints: {
-        left: -trackItemOffset * (carouselItems.length - 1),
-        right: 0,
-      },
-    };
+        dragConstraints: {
+          left: -trackItemOffset * (carouselItems.length - 1),
+          right: 0,
+        },
+      };
 
   return (
     <div
@@ -191,9 +207,7 @@ export default function Carousel({
               transition={effectiveTransition}
             >
               <div className={`carousel-item-header ${round ? "round" : ""}`}>
-                <span className="carousel-icon-container">
-                  {item.icon}
-                </span>
+                <span className="carousel-icon-container">{item.icon}</span>
               </div>
               <div className="carousel-item-content">
                 <div className="carousel-item-title">{item.title}</div>
@@ -209,8 +223,9 @@ export default function Carousel({
           {items.map((_, index) => (
             <motion.div
               key={index}
-              className={`carousel-indicator ${currentIndex % items.length === index ? "active" : "inactive"
-                }`}
+              className={`carousel-indicator ${
+                currentIndex % items.length === index ? "active" : "inactive"
+              }`}
               animate={{
                 scale: currentIndex % items.length === index ? 1.2 : 1,
               }}
@@ -222,4 +237,4 @@ export default function Carousel({
       </div>
     </div>
   );
-} 
+}

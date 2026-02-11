@@ -6,7 +6,6 @@ A modern React website for T.U.R.T.L.E Robotics, a student robotics research lab
 
 - **Modern React 18** with Vite for fast development
 - **Responsive Design** with mobile-first approach
-- **Dark/Light Theme** toggle with system preference detection
 - **GSAP Animations** with ScrollTrigger for smooth scroll animations
 - **Interactive ChromaGrid** with mouse-following spotlight effects
 - **Animated Statistics** with counter animations
@@ -26,8 +25,6 @@ A modern React website for T.U.R.T.L.E Robotics, a student robotics research lab
 ## 🎨 Design System
 
 ### Color Scheme
-- **Light Theme**: Clean white background with Turtle Red (#A60000) accents
-- **Dark Theme**: Deep dark background with the same accent colors
 - **Gradients**: Turtle Red gradient from #7B0000 to #A60000
 
 ### Typography

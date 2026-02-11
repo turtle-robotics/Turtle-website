@@ -31,10 +31,6 @@
 .carousel-container {
   scrollbar-color: #fff #222222;
   scrollbar-width: thin;
-}
-}
-
-.dark .carousel-container {
   background: rgba(17, 18, 24, 0.95);
   backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -54,19 +50,12 @@
   justify-content: space-between;
   border: 1px solid #555;
   border-radius: calc(var(--outer-r) - var(--p-distance));
-  background-color: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
-  overflow: hidden;
-  cursor: grab;
-}
-
-.dark .carousel-item {
   background-color: rgba(17, 18, 24, 0.9);
   backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  cursor: grab;
 }
 
 .carousel-item:active {
@@ -78,17 +67,13 @@
 }
 
 .carousel-item.round {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(17, 18, 24, 0.9);
   position: relative;
-  bottom: .1em;
+  bottom: 0.1em;
   border: 1px solid #555;
   justify-content: center;
   align-items: center;
   text-align: center;
-}
-
-.dark .carousel-item.round {
-  background-color: rgba(17, 18, 24, 0.9);
 }
 
 .carousel-item-header.round {
@@ -105,7 +90,7 @@
 }
 
 .carousel-indicator.active {
-  background-color: #A60000;
+  background-color: #a60000;
 }
 
 .carousel-indicator.inactive {
@@ -125,7 +110,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background-color: #A60000;
+  background-color: #a60000;
 }
 
 .carousel-icon {
@@ -143,34 +128,22 @@
   margin-bottom: 8px;
   font-weight: 900;
   font-size: 20px;
-  color: #1F2937;
-}
-
-.dark .carousel-item-title {
   color: #fff;
 }
 
 .carousel-item-description {
   font-size: 16px;
-  color: #4B5563;
+  color: #e5e7eb;
   line-height: 1.5;
   margin-bottom: 12px;
   font-weight: 500;
 }
 
-.dark .carousel-item-description {
-  color: #E5E7EB;
-}
-
 .carousel-item-details {
   font-size: 14px;
-  color: #6B7280;
+  color: #d1d5db;
   line-height: 1.6;
   font-weight: 400;
-}
-
-.dark .carousel-item-details {
-  color: #D1D5DB;
 }
 
 .carousel-indicators-container {
@@ -196,13 +169,9 @@
 }
 
 .carousel-indicator.active {
-  background-color: #A60000;
+  background-color: #a60000;
 }
 
 .carousel-indicator.inactive {
-  background-color: #D1D5DB;
-}
-
-.dark .carousel-indicator.inactive {
   background-color: #555;
-} 
+}
