@@ -52,7 +52,7 @@ const StatisticsCard = ({ count, label, description }) => {
   return (
     <div
       ref={cardRef}
-      className="group relative p-10 rounded-2xl glass-card border border-gray-200/50 transition-all duration-300 hover:scale-105 spotlight"
+      className="group relative p-10 rounded-2xl glass-card transition-all duration-300 hover:scale-105 spotlight"
     >
       {/* Content */}
       <div className="relative z-10">
