@@ -61,11 +61,11 @@ export const projects = [
       "Fluid dynamics and simulation (ANSYS)",
     ],
     images: [
-      '/assets/ACHE/Ache-Cover.webp',
-      '/SCPosters/ACHE_SC_25_11.pptx.webp',
-      '/assets/ACHE/Ache-Hero-1.webp',
-      '/assets/ACHE/Ache-Hero-2.webp',
-    ]
+      "/assets/ACHE/Ache-Cover.webp",
+      "/SCPosters/ACHE_SC_25_11.pptx.webp",
+      "/assets/ACHE/Ache-Hero-1.webp",
+      "/assets/ACHE/Ache-Hero-2.webp",
+    ],
   },
   {
     id: "amps",
