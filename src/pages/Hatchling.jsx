@@ -122,7 +122,7 @@ const Hatchling = () => {
           </h2>
 
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-8">
-            <div className="glass-card p-8 rounded-2xl text-center transition-all duration-300 bg-gradient-to-br from-yellow-500/20 to-amber-500/20 border-2 border-yellow-500/30">
+            <div className="glass-card p-8 rounded-2xl text-center transition-all duration-300">
               <div className="text-5xl mb-4">🏢</div>
               <h3 className="text-3xl font-light text-gray-200 mb-2">3</h3>
               <p className="text-lg font-light text-gray-400">Organizations</p>
@@ -130,7 +130,7 @@ const Hatchling = () => {
 
             <div className="text-2xl font-light text-gray-400">across</div>
 
-            <div className="glass-card p-8 rounded-2xl text-center transition-all duration-300 bg-gradient-to-br from-yellow-500/20 to-amber-500/20 border-2 border-yellow-500/30">
+            <div className="glass-card p-8 rounded-2xl text-center transition-all duration-300">
               <div className="text-5xl mb-4">🎓</div>
               <h3 className="text-3xl font-light text-gray-200 mb-2">2</h3>
               <p className="text-lg font-light text-gray-400">Universities</p>
