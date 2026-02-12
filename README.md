@@ -1,17 +1,12 @@
 # The T.U.R.T.L.E Robotics Website
 
-A modern React website for T.U.R.T.L.E Robotics, a student robotics research lab at Texas A&M University. This website showcases their 13+ advanced research projects, competition teams, and student leadership development programs.
-
 ## 🚀 Features
 
-- **Modern React 18** with Vite for fast development
 - **Responsive Design** with mobile-first approach
 - **GSAP Animations** with ScrollTrigger for smooth scroll animations
 - **Interactive ChromaGrid** with mouse-following spotlight effects
 - **Animated Statistics** with counter animations
 - **Glass Morphism** design elements
-- **Tailwind CSS** with custom design system
-- **React Router** for seamless navigation
 
 ## 🛠️ Tech Stack
 
@@ -39,7 +34,6 @@ A modern React website for T.U.R.T.L.E Robotics, a student robotics research lab
 src/
 ├── components/
 │   ├── Layout.jsx              # Main layout with navigation
-│   ├── ThemeToggleButton.jsx   # Theme toggle component
 │   ├── ChromaGrid.jsx          # Interactive project grid
 │   ├── StatisticsCard.jsx      # Animated statistics cards
 │   └── AnimatedBackground.jsx  # Canvas particle background
@@ -52,8 +46,6 @@ src/
 ├── hooks/
 │   ├── useScrollAnimation.js   # Custom scroll animation hook
 │   └── useCounter.js           # Animated counter hook
-├── contexts/
-│   └── ThemeContext.jsx        # Theme management context
 ├── data/
 │   └── projects.js             # Project and statistics data
 ├── App.jsx                     # Main app component
@@ -196,35 +188,9 @@ The website is fully responsive with:
 - Efficient re-renders with React.memo
 - Minimal bundle size
 
-## 🚀 Deployment
-
-### Vercel (Recommended)
-1. Connect your GitHub repository
-2. Install Vercel CLI: `npm i -g vercel`
-3. Deploy: `vercel`
-
-### Netlify
-1. Build the project: `npm run build`
-2. Drag the `dist` folder to Netlify
-
-### Other Platforms
-The project uses Vite, so it's compatible with any static hosting platform.
-
 ## 📄 License
 
 This project is licensed under the MIT License.
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
-
-## 📞 Contact
-
-For questions or support, contact the TURTLE Robotics team at Texas A&M University.
 
 ---
 
