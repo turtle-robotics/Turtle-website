@@ -133,7 +133,7 @@ const Sponsorship = () => {
 
           <p className="hero-subtitle text-xl md:text-2xl font-light tracking-wide text-gray-400 mb-12 max-w-3xl mx-auto">
             Partner with the next generation of robotics innovators. Support
-            cutting-edge research and shape the future of OLSN.
+            cutting-edge research and shape the future of TURTLE.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
