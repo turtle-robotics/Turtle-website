@@ -22,7 +22,7 @@ const Footer = () => {
                     href="https://www.instagram.com/turtle_robotics/?hl=en"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-md"
+                    className="w-10 h-10 flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-md"
                   >
                     <img
                       src="/assets/Instagram_Glyph_Gradient.png"
@@ -38,7 +38,7 @@ const Footer = () => {
                     href="https://www.linkedin.com/company/tamu-turtle"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-md"
+                    className="w-10 h-10 flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-md"
                   >
                     <img
                       src="/assets/LI-In-Bug.png"

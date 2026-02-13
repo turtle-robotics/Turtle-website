@@ -32,7 +32,7 @@ const About = () => {
 
   const currentLeadership = [
     // Executive roles
-    { role: "President", name: "Sam Woravka", period: "Spring 2026" },
+    { role: "President", name: "Samantha Woravka", period: "Spring 2026" },
     { role: "Internal VP", name: "Ian Wilhite", period: "Spring 2026" },
     { role: "External VP", name: "Yousuf Shafiu", period: "Spring 2026" },
     { role: "Project VP", name: "Emily Tredemeyer", period: "Spring 2026" },

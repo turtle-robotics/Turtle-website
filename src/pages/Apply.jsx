@@ -62,7 +62,7 @@ const Apply = () => {
               <span className="block text-accent">NOW</span>
             </h1>
           ) : (
-            <h1 className="text-6xl md:text-8xl lg:text-9xl tracking-tight text-red-400 mb-8">
+            <h1 className="text-6xl md:text-8xl lg:text-9xl tracking-tight mb-8">
               <span className="block">APPLICATIONS CLOSED</span>
             </h1>
           )}
