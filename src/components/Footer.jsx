@@ -15,7 +15,7 @@ const Footer = () => {
                   turtlerobotics@gmail.com
                 </TextLink>
               </li>
-              <li class="pt-4">
+              <li className="pt-4">
                 {/* Social Media Icons */}
                 <div className="flex space-x-4">
                   <a
