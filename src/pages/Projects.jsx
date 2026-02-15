@@ -3,6 +3,7 @@ import { useState, useEffect, useRef, useMemo } from "react";
 import { gsap } from "gsap";
 import { projects } from "../data/projects";
 import { recommendProjects } from "../utils/aiRecommender";
+import ButtonLink from "../components/ButtonLink";
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -101,11 +102,6 @@ const Projects = () => {
       },
     );
   }, []);
-
-  const handleProjectClick = (project) => {
-    // Navigate directly to detail page
-    window.location.href = `/projects/${project.id}`;
-  };
 
   const closeModal = () => {
     setSelectedProject(null);
@@ -267,10 +263,10 @@ const Projects = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {filteredProjects.map((project, index) => (
-              <div
+              <Link
                 key={index}
                 className="group glass-card pop-card rounded-2xl overflow-hidden hover:scale-[1.02] transition-all duration-500 shadow-soft cursor-pointer transform hover:rotate-[0.5deg] hover:shadow-xl"
-                onClick={() => handleProjectClick(project)}
+                to={"/projects/" + project.id}
               >
                 {/* Image */}
                 <div className="relative h-56 overflow-hidden">
@@ -334,21 +330,27 @@ const Projects = () => {
                   </div>
 
                   {/* View Details Button */}
-                  <div className="text-center">
-                    <button className="inline-block text-accent hover:text-accent/80 transition-colors duration-200 text-sm font-light border border-accent/30 hover:border-accent px-4 py-2 rounded-lg">
+                  <div className="flex gap-1">
+                    <ButtonLink
+                      className="flex-none"
+                      style="primary-outline"
+                      sizeVariant="small"
+                      to={"/projects/" + project.id}
+                    >
                       View Details →
-                    </button>
+                    </ButtonLink>
                     {project.status !== "Archived" && (
-                      <a
-                        href="/apply"
-                        className="inline-block mt-2 bg-yellow-500 text-black px-4 py-2 rounded-lg text-sm font-light tracking-wide hover:scale-105 transition-all duration-300 shadow-premium"
+                      <ButtonLink
+                        className="flex-none"
+                        sizeVariant="small"
+                        to="/apply"
                       >
                         Apply
-                      </a>
+                      </ButtonLink>
                     )}
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
