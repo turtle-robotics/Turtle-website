@@ -293,15 +293,14 @@ const Sponsorship = () => {
             {sponsorshipTiers.map((tier, index) => (
               <div key={index} className="sponsor-section group">
                 <div
-                  className={`${tier.color} p-8 rounded-2xl text-black shadow-lg hover:scale-105 transition-all duration-300`}
+                  className={`${tier.color} p-8 rounded-2xl text-black shadow-lg`}
                 >
                   <h3 className="text-2xl font-light mb-2">{tier.name}</h3>
                   <div className="text-3xl font-bold mb-6">{tier.amount}</div>
-                  <ul className="space-y-3">
+                  <ul className="space-y-3 list-disc list-outside pl-5">
                     {tier.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="flex items-start">
-                        <span className="text-yellow-200 mr-3 mt-1">✓</span>
-                        <span className="text-sm">{benefit}</span>
+                      <li key={benefitIndex} className="text-sm">
+                        {benefit}
                       </li>
                     ))}
                   </ul>
