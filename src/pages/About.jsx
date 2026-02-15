@@ -184,12 +184,6 @@ const About = () => {
             pioneering innovative robotics solutions and developing the next
             generation of robotics leaders.
           </p>
-          <div className="mb-8">
-            <span className="text-lg text-gray-200">Contact us: </span>
-            <TextLink to="mailto:turtlerobotics@gmail.com">
-              turtlerobotics@gmail.com
-            </TextLink>
-          </div>
         </div>
       </section>
 
