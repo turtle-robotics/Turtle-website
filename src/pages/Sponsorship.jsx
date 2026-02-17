@@ -199,7 +199,7 @@ const Sponsorship = () => {
                 <svg
                   className="w-8 h-8 text-white"
                   fill="none"
-                  stroke="currentColor"
+                  stroke="black"
                   viewBox="0 0 24 24"
                 >
                   <path
@@ -225,7 +225,7 @@ const Sponsorship = () => {
                 <svg
                   className="w-8 h-8 text-white"
                   fill="none"
-                  stroke="currentColor"
+                  stroke="black"
                   viewBox="0 0 24 24"
                 >
                   <path
@@ -252,7 +252,7 @@ const Sponsorship = () => {
                 <svg
                   className="w-8 h-8 text-white"
                   fill="none"
-                  stroke="currentColor"
+                  stroke="black"
                   viewBox="0 0 24 24"
                 >
                   <path
@@ -311,69 +311,8 @@ const Sponsorship = () => {
         </div>
       </section>
 
-      {/* Current Projects */}
-      <section className="py-16 px-4 bg-gray-800">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl text-gray-200 mb-8">
-              Current <span className="text-yellow-400">Projects</span>
-            </h2>
-            <p className="text-xl font-light text-gray-400 max-w-3xl mx-auto">
-              Your sponsorship directly supports these innovative robotics
-              projects.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="sponsor-section p-8 rounded-2xl bg-gradient-to-br from-gray-700 to-gray-600">
-              <h3 className="text-2xl font-light text-gray-200 mb-4">
-                SNOUT - Olfactory Sensing Robot
-              </h3>
-              <p className="text-gray-400 mb-4">
-                SNOUT is an advanced robotic platform equipped with olfactory
-                sensors for detecting and identifying chemical compounds. It
-                enables real-time environmental monitoring and hazardous
-                material detection in diverse settings.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                <span className="text-xs bg-yellow-500 text-yellow-900 px-3 py-1 rounded-full">
-                  IMS Sensors
-                </span>
-                <span className="text-xs bg-yellow-500 text-yellow-900 px-3 py-1 rounded-full">
-                  Machine Learning
-                </span>
-                <span className="text-xs bg-yellow-500 text-yellow-900 px-3 py-1 rounded-full">
-                  Robotics
-                </span>
-              </div>
-            </div>
-
-            <div className="sponsor-section p-8 rounded-2xl bg-gradient-to-br from-gray-700 to-gray-600">
-              <h3 className="text-2xl font-light text-gray-200 mb-4">OLSN</h3>
-              <p className="text-gray-400 mb-4">
-                Design and development of a low-cost, 3D-printed prosthetic hand
-                with advanced biomechanical functionality. The project aims to
-                improve accessibility and usability for individuals in need of
-                affordable prosthetic solutions.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                <span className="text-xs bg-yellow-500 text-yellow-900 px-3 py-1 rounded-full">
-                  Prosthetics
-                </span>
-                <span className="text-xs bg-yellow-500 text-yellow-900 px-3 py-1 rounded-full">
-                  Biomechanics
-                </span>
-                <span className="text-xs bg-yellow-500 text-yellow-900 px-3 py-1 rounded-full">
-                  3D Printing
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Contact Section */}
-      <section id="contact-section" className="py-16 px-4">
+      <section id="contact-section" className="py-16 px-4 bg-gray-800">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl text-gray-200 mb-8">
             Ready to <span className="text-yellow-400">Partner</span>?
