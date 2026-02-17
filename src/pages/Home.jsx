@@ -66,7 +66,7 @@ const Home = () => {
           ref={heroRef}
           className="relative min-h-screen flex items-center justify-center px-4"
         >
-          <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900"></div>
+          <div className="absolute inset-0"></div>
 
           <div className="relative text-center max-w-6xl mx-auto z-10">
             <h1 className="text-6xl md:text-8xl lg:text-9xl tracking-tight text-gray-200 mb-8">
@@ -98,6 +98,34 @@ const Home = () => {
               </ButtonLink>
             </div>
           </div>
+          {ENABLE_SHOWCASE_POPUPS && (
+            <a
+              href="https://maps.app.goo.gl/r19F5aBQCkxuHWxd9"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden md:block absolute bottom-12 right-8 z-40 group"
+            >
+              <div className="relative bg-gradient-to-br from-gray-800 to-gray-700 p-6 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 rotate-2 hover:rotate-0 w-64 border-2 border-yellow-600">
+                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 w-7 h-7 bg-yellow-600 rounded-full shadow-md"></div>
+                <div className="text-xs font-bold text-yellow-400 mb-2 uppercase tracking-wide">
+                  📌 Profit Share!
+                </div>
+                <div className="text-2xl text-gray-200 mb-2">Kung Fu Tea</div>
+                <div className="text-base font-light text-gray-400 mb-1">
+                  February 19, 2026
+                </div>
+                <div className="text-base font-light text-gray-400 mb-3">
+                  723 S Texas Ave, College Station, TX 77840
+                </div>
+                <div className="text-xs text-yellow-400 underline group-hover:text-yellow-300 font-medium">
+                  Put your receipt in the bucket at checkout!
+                </div>
+                <div className="text-xs text-yellow-400 underline group-hover:text-yellow-300 font-medium mt-2">
+                  Get Directions →
+                </div>
+              </div>
+            </a>
+          )}
 
           {/* Project Ticker - positioned at bottom */}
           <div className="absolute bottom-0 left-0 right-0 z-10">
@@ -178,7 +206,7 @@ const Home = () => {
         </section>
 
         {/* Contact Section */}
-        <section className="py-24 px-4 bg-gradient-to-br from-gray-800 to-gray-900">
+        <section className="py-24 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl lg:text-6xl mb-12 text-gray-200">
               READY TO <span className="text-yellow-400">JOIN US</span>
@@ -193,81 +221,9 @@ const Home = () => {
           </div>
         </section>
 
-        {/* Kung Fu Tea Profit Share Popup - Mobile */}
-        {ENABLE_SHOWCASE_POPUPS && showMobilePopup && (
-          <div className="md:hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-            <div className="relative bg-gradient-to-br from-gray-800 to-gray-700 p-8 rounded-2xl shadow-2xl border-2 border-yellow-600 max-w-sm w-full">
-              <button
-                onClick={(e) => {
-                  e.preventDefault();
-                  e.stopPropagation();
-                  setShowMobilePopup(false);
-                }}
-                className="absolute top-4 right-4 w-8 h-8 bg-gray-200 text-gray-800 rounded-full flex items-center justify-center hover:bg-gray-300 transition-colors shadow-lg text-xl font-light"
-                aria-label="Close"
-              >
-                ×
-              </button>
-              <a
-                href="https://www.google.com/maps/search/?api=1&query=Kung+Fu+Tea+College+Station+TX"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block text-center"
-                onClick={() => setShowMobilePopup(false)}
-              >
-                <div className="mx-auto mb-4 w-8 h-8 bg-yellow-600 rounded-full shadow-md"></div>
-                <div className="text-sm font-bold text-yellow-400 mb-3 uppercase tracking-wide">
-                  📌 Profit Share!
-                </div>
-                <div className="text-3xl text-gray-200 mb-4 leading-tight">
-                  Kung Fu Tea
-                </div>
-                <div className="text-xl font-light text-gray-400 mb-2">
-                  February 19, 2026
-                </div>
-                <div className="text-xl font-light text-gray-400 mb-2">
-                  723 S Texas Ave, College Station, TX 77840
-                </div>
-                <div className="text-base font-light text-gray-400 mb-6">
-                  Just put your receipt in the bucket at checkout.
-                </div>
-                <div className="bg-yellow-500 text-black px-8 py-3 rounded-xl font-light tracking-wide inline-block">
-                  Get Directions →
-                </div>
-              </a>
-            </div>
-          </div>
-        )}
 
         {/* Kung Fu Tea Profit Share Popup - Desktop */}
-        {ENABLE_SHOWCASE_POPUPS && (
-          <a
-            href="https://maps.app.goo.gl/r19F5aBQCkxuHWxd9"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden md:block fixed bottom-8 right-8 z-40 group"
-          >
-            <div className="relative bg-gradient-to-br from-gray-800 to-gray-700 p-6 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 rotate-2 hover:rotate-0 w-64 border-2 border-yellow-600">
-              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 w-7 h-7 bg-yellow-600 rounded-full shadow-md"></div>
-              <div className="text-xs font-bold text-yellow-400 mb-2 uppercase tracking-wide">
-                📌 Profit Share!
-              </div>
-              <div className="text-2xl text-gray-200 mb-2">Kung Fu Tea</div>
-              <div className="text-base font-light text-gray-400 mb-1">
-                February 19, 2026
-              </div>
-              <div className="text-base font-light text-gray-400 mb-3">
-                723 S Texas Ave, College Station, TX 77840
-              </div>
-              <div className="text-xs text-yellow-400 underline group-hover:text-yellow-300 font-medium">
-                Put your receipt in the bucket at checkout!
-              </div>
-              <div className="text-xs text-yellow-400 underline group-hover:text-yellow-300 font-medium mt-2">
-                Get Directions →
-              </div>
-            </div>
-          </a>
-        )}
+        { }
 
         {/* Calendar Section */}
         <section className="py-24 px-4">

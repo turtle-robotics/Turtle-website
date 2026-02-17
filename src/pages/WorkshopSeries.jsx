@@ -53,7 +53,7 @@ const WorkshopSeries = () => {
         ref={heroRef}
         className="relative min-h-screen flex items-center justify-center px-4"
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900"></div>
+        <div className="absolute inset-0"></div>
         <div className="relative text-center max-w-6xl mx-auto z-10">
           <h1 className="text-6xl md:text-8xl lg:text-9xl tracking-tight text-gray-200 mb-8">
             <span className="block">WORKSHOP</span>
@@ -101,7 +101,7 @@ const WorkshopSeries = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-24 px-4 bg-gradient-to-br from-gray-800 to-gray-900">
+      <section className="py-24 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl lg:text-6xl mb-12 text-gray-200">
             GET <span className="text-accent">NOTIFIED</span>

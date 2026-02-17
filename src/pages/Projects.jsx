@@ -114,7 +114,7 @@ const Projects = () => {
         ref={heroRef}
         className="relative min-h-screen flex items-center justify-center px-4"
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900"></div>
+        <div className="absolute inset-0"></div>
         <div className="relative text-center max-w-6xl mx-auto z-10">
           <h1 className="text-6xl md:text-8xl lg:text-9xl tracking-tight text-gray-200 mb-8">
             <span className="block">OUR</span>
@@ -129,7 +129,7 @@ const Projects = () => {
       </section>
 
       {/* Search Section */}
-      <section className="py-8 px-4 bg-gradient-to-br from-gray-800 to-gray-900">
+      <section className="py-8 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col items-center gap-4 mb-8">
             <div className="flex-1 max-w-md">
@@ -217,7 +217,7 @@ const Projects = () => {
                   Recommendation Source: {aiResult.source}
                 </div>
                 {aiResult.recommendations &&
-                aiResult.recommendations.length > 0 ? (
+                  aiResult.recommendations.length > 0 ? (
                   <div className="space-y-2">
                     {aiResult.recommendations.map((r, i) => {
                       const p = projects.find((pr) => pr.id === r.id);
@@ -316,11 +316,10 @@ const Projects = () => {
                   {/* Status and Duration */}
                   <div className="flex justify-between items-center mb-4">
                     <span
-                      className={`text-xs font-light px-2 py-1 rounded-full ${
-                        project.status === "Active"
-                          ? "bg-green-900/20 text-green-300"
-                          : "bg-yellow-900/20 text-yellow-300"
-                      }`}
+                      className={`text-xs font-light px-2 py-1 rounded-full ${project.status === "Active"
+                        ? "bg-green-900/20 text-green-300"
+                        : "bg-yellow-900/20 text-yellow-300"
+                        }`}
                     >
                       {project.status}
                     </span>

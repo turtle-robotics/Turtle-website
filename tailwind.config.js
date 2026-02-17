@@ -15,9 +15,9 @@ export default {
         secondary: '#FFD700',
         'turtle-red': '#A60000',
         'turtle-gold': '#FFD700',
-        gradients: {
+        /*gradients: {
           turtle: 'linear-gradient(135deg, #7B0000, #A60000)',
-        }
+        }*/
       },
       fontSize: {
         'hero': ['clamp(3rem, 8vw, 8rem)', { lineHeight: '0.9', letterSpacing: '-0.02em' }],

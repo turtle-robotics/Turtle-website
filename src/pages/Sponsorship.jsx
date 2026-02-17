@@ -118,13 +118,13 @@ const Sponsorship = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
+    <div className="min-h-screen">
       {/* Hero Section */}
       <section
         ref={heroRef}
         className="relative min-h-screen flex items-center justify-center px-4"
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-900/50 via-gray-800/50 to-gray-900/50"></div>
+        <div className="absolute inset-0"></div>
         <div className="relative text-center max-w-6xl mx-auto z-10">
           <h1 className="text-6xl md:text-8xl lg:text-9xl tracking-tight text-gray-200 mb-8">
             <span className="block">SPONSOR</span>
@@ -181,10 +181,10 @@ const Sponsorship = () => {
       </section>
 
       {/* Why Sponsor Section */}
-      <section className="py-16 px-4 bg-gray-800">
+      <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl text-gray-200 mb-8">
+            <h2 className="text-4xl md:text-5xl mb-8">
               Why Sponsor <span className="text-yellow-400">TURTLE</span>?
             </h2>
             <p className="text-xl font-light text-gray-400 max-w-3xl mx-auto">
@@ -280,7 +280,7 @@ const Sponsorship = () => {
       <section id="sponsorship-tiers" className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl text-gray-200 mb-8">
+            <h2 className="text-4xl md:text-5xl mb-8">
               Sponsorship <span className="text-yellow-400">Tiers</span>
             </h2>
             <p className="text-xl font-light text-gray-400 max-w-3xl mx-auto">
@@ -312,7 +312,7 @@ const Sponsorship = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact-section" className="py-16 px-4 bg-gray-800">
+      <section id="contact-section" className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl text-gray-200 mb-8">
             Ready to <span className="text-yellow-400">Partner</span>?

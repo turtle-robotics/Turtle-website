@@ -25,11 +25,11 @@ const Layout = ({ children }) => {
   const sponsorItem = { path: "/sponsorship", label: "Looking to Sponsor?" };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
+    <div className="min-h-screen">
       {/* Navigation */}
       {!showHeader && (
         <button
-          className="fixed top-4 left-4 z-[100] bg-yellow-500 text-black rounded-full p-3 shadow-lg md:hidden animate-bounce"
+          className="fixed top-4 left-4 z-[100] text-black rounded-full p-3 shadow-lg md:hidden animate-bounce"
           style={{ fontSize: 22, lineHeight: 1 }}
           onClick={() => setShowHeader(true)}
           aria-label="Open header"
@@ -51,7 +51,7 @@ const Layout = ({ children }) => {
         </button>
       )}
       {showHeader && (
-        <nav className="fixed top-0 left-0 right-0 z-50 bg-gray-900/80 backdrop-blur-xl border-b border-gray-700/50 shadow-sm">
+        <nav className="fixed top-0 left-0 right-0 z-50 bg-gray-900/80 backdrop-blur-xl shadow-sm">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
             <div className="flex flex-col sm:flex-row w-full items-center sm:items-center justify-between min-h-20 gap-2 sm:gap-0">
               <Link
@@ -73,14 +73,13 @@ const Layout = ({ children }) => {
                   <Link
                     key={item.path}
                     to={item.path}
-                    className={`flex items-center text-xs sm:text-sm font-light tracking-wide transition-all duration-300 ${
-                      location.pathname === item.path ||
+                    className={`flex items-center text-xs sm:text-sm font-light tracking-wide transition-all duration-300 ${location.pathname === item.path ||
                       (item.path === "/development-programs" &&
                         (location.pathname === "/hatchling" ||
                           location.pathname === "/workshop-series"))
-                        ? "text-yellow-400 border-b-2 border-yellow-400"
-                        : "text-gray-300 hover:text-yellow-400 hover:border-b-2 hover:border-yellow-400/50"
-                    }`}
+                      ? "text-yellow-400 border-b-2 border-yellow-400"
+                      : "text-gray-300 hover:text-yellow-400 hover:border-b-2 hover:border-yellow-400/50"
+                      }`}
                     style={{
                       minWidth: 0,
                       overflow: "hidden",
