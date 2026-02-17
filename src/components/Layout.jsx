@@ -73,13 +73,14 @@ const Layout = ({ children }) => {
                   <Link
                     key={item.path}
                     to={item.path}
-                    className={`flex items-center text-xs sm:text-sm font-light tracking-wide transition-all duration-300 ${location.pathname === item.path ||
+                    className={`flex items-center text-xs sm:text-sm font-light tracking-wide transition-all duration-300 ${
+                      location.pathname === item.path ||
                       (item.path === "/development-programs" &&
                         (location.pathname === "/hatchling" ||
                           location.pathname === "/workshop-series"))
-                      ? "text-yellow-400 border-b-2 border-yellow-400"
-                      : "text-gray-300 hover:text-yellow-400 hover:border-b-2 hover:border-yellow-400/50"
-                      }`}
+                        ? "text-yellow-400 border-b-2 border-yellow-400"
+                        : "text-gray-300 hover:text-yellow-400 hover:border-b-2 hover:border-yellow-400/50"
+                    }`}
                     style={{
                       minWidth: 0,
                       overflow: "hidden",

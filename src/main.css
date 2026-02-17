@@ -67,8 +67,8 @@ body {
 
 @layer base {
   :root {
-    --color-bg: #1B2538;
-    --color-text: #F2F2F2;
+    --color-bg: #1b2538;
+    --color-text: #f2f2f2;
 
     --color-accent: #f3d127;
     /* yellow */

@@ -217,7 +217,7 @@ const Projects = () => {
                   Recommendation Source: {aiResult.source}
                 </div>
                 {aiResult.recommendations &&
-                  aiResult.recommendations.length > 0 ? (
+                aiResult.recommendations.length > 0 ? (
                   <div className="space-y-2">
                     {aiResult.recommendations.map((r, i) => {
                       const p = projects.find((pr) => pr.id === r.id);
@@ -316,10 +316,11 @@ const Projects = () => {
                   {/* Status and Duration */}
                   <div className="flex justify-between items-center mb-4">
                     <span
-                      className={`text-xs font-light px-2 py-1 rounded-full ${project.status === "Active"
-                        ? "bg-green-900/20 text-green-300"
-                        : "bg-yellow-900/20 text-yellow-300"
-                        }`}
+                      className={`text-xs font-light px-2 py-1 rounded-full ${
+                        project.status === "Active"
+                          ? "bg-green-900/20 text-green-300"
+                          : "bg-yellow-900/20 text-yellow-300"
+                      }`}
                     >
                       {project.status}
                     </span>

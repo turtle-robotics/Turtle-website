@@ -221,9 +221,8 @@ const Home = () => {
           </div>
         </section>
 
-
         {/* Kung Fu Tea Profit Share Popup - Desktop */}
-        { }
+        {}
 
         {/* Calendar Section */}
         <section className="py-24 px-4">

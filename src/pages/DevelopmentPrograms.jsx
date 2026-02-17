@@ -86,10 +86,7 @@ const DevelopmentPrograms = () => {
 
       {/* Program Sections */}
       {programs.map((program, index) => (
-        <section
-          key={program.id}
-          className="py-24 px-4"
-        >
+        <section key={program.id} className="py-24 px-4">
           <div className="max-w-7xl mx-auto">
             {/* Section Title */}
             <h2 className="text-4xl md:text-5xl lg:text-6xl text-center mb-12 text-gray-200">
