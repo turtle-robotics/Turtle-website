@@ -188,7 +188,7 @@ const About = () => {
       </section>
 
       {/* Statistics Section */}
-      <section className="py-24 px-4 bg-gradient-to-br from-gray-800 to-gray-900">
+      <section className="py-24">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl md:text-5xl lg:text-6xl text-center mb-20 text-gray-200">
             OUR <span className="text-yellow-400">IMPACT</span>
@@ -202,7 +202,7 @@ const About = () => {
       </section>
 
       {/* Leadership Section */}
-      <section className="py-24 px-4 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
+      <section className="py-24 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl md:text-5xl lg:text-6xl text-center mb-20 text-gray-200">
             OUR <span className="text-yellow-400">TEAM</span>

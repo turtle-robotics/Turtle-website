@@ -199,7 +199,7 @@ function Showcase() {
           </h2>
 
           <div className="space-y-4">
-            <details className="group bg-gradient-to-br from-gray-700 to-gray-600 rounded-2xl p-6 cursor-pointer">
+            <details className="group rounded-2xl p-6 cursor-pointer">
               <summary className="flex justify-between items-center font-light text-xl text-gray-200 list-none">
                 <span>What is Showcase?</span>
                 <span className="transition group-open:rotate-180">
@@ -227,7 +227,7 @@ function Showcase() {
               </p>
             </details>
 
-            <details className="group bg-gradient-to-br from-gray-700 to-gray-600 rounded-2xl p-6 cursor-pointer">
+            <details className="group rounded-2xl p-6 cursor-pointer">
               <summary className="flex justify-between items-center font-light text-xl text-gray-200 list-none">
                 <span>Who is invited to Project Showcase?</span>
                 <span className="transition group-open:rotate-180">
@@ -255,7 +255,7 @@ function Showcase() {
 
             {/* FAQ about where showcase location is */}
             {ENABLE_SHOWCASE_COUNTDOWN && (
-              <details className="group bg-gradient-to-br from-gray-700 to-gray-600 rounded-2xl p-6 cursor-pointer">
+              <details className="group rounded-2xl p-6 cursor-pointer">
                 <summary className="flex justify-between items-center font-light text-xl text-gray-200 list-none">
                   <span>Where is the Virginia Brown Atrium?</span>
                   <span className="transition group-open:rotate-180">

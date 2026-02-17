@@ -9,25 +9,31 @@
   scrollbar-width: thin;
   scrollbar-color: #fff #18181b;
 }
+
 .custom-scrollbar ::-webkit-scrollbar {
   width: 12px;
   height: 12px;
 }
+
 .custom-scrollbar ::-webkit-scrollbar-track {
   background: #18181b;
 }
+
 .custom-scrollbar ::-webkit-scrollbar-thumb {
   background: #fff;
   border: 2px solid #18181b;
   border-radius: 6px;
 }
+
 .custom-scrollbar ::-webkit-scrollbar-thumb:hover {
   background: #e5e5e5;
 }
+
 html,
 body {
   overflow-x: hidden !important;
 }
+
 /* Custom Scrollbar Styles */
 ::-webkit-scrollbar {
   width: 12px;
@@ -35,11 +41,13 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #222222; /* site bg color, adjust as needed */
+  background: #222222;
+  /* site bg color, adjust as needed */
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #fff; /* white slider */
+  background: #ffffff;
+  /* white slider */
   border-radius: 6px;
   border: 2px solid #222222;
 }
@@ -52,23 +60,28 @@ body {
   scrollbar-color: #fff #222222;
   scrollbar-width: thin;
 }
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --color-bg: #111218;
-    --color-text: #e5e7eb;
+    --color-bg: #1b2538;
+    --color-text: #f2f2f2;
 
-    --color-accent: #ffd700; /* yellow */
+    --color-accent: #f3d127;
+    /* yellow */
     --color-secondary: #ffd700;
-    --color-gradient-start: #f59e0b; /* amber-500 */
-    --color-gradient-end: #fbbf24; /* amber-400 */
+    --color-gradient-start: #f59e0b;
+    /* amber-500 */
+    --color-gradient-end: #fbbf24;
+    /* amber-400 */
   }
 
   * {
     margin: 0;
+
     padding: 0;
     box-sizing: border-box;
   }
@@ -81,9 +94,9 @@ body {
     font-family: "Inter", sans-serif;
     background-color: var(--color-bg);
     color: var(--color-text);
-    transition:
+    /*transition:
       background-color 0.3s ease,
-      color 0.3s ease;
+      color 0.3s ease;*/
   }
 }
 
@@ -116,27 +129,6 @@ body {
 
   .text-accent {
     color: var(--color-accent) !important;
-  }
-
-  .bg-gradient-turtle {
-    background: linear-gradient(
-      135deg,
-      var(--color-gradient-start),
-      var(--color-gradient-end)
-    );
-  }
-
-  .bg-gradient-premium {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  }
-
-  .hero-gradient {
-    background: linear-gradient(
-      135deg,
-      rgba(17, 18, 24, 0.1) 0%,
-      rgba(17, 18, 24, 0.05) 100%
-    );
-    backdrop-filter: blur(10px);
   }
 }
 
