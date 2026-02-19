@@ -1,0 +1,32 @@
+.rbc-today {
+  background-color: rgba(59, 130, 246, 0.18) !important; /* soft blue */
+}
+
+.rbc-today .rbc-date-cell {
+  color: #60a5fa;
+  font-weight: 600;
+}
+
+.rbc-btn-group button{
+  color: var(--color-text);
+}
+
+.rbc-toolbar button:active, .rbc-toolbar button.rbc-active, .rbc-toolbar button.rbc-active:hover, .rbc-toolbar button:hover,button.rbc-active:focus, .rbc-toolbar button.rbc-active:focus {
+  color: #000000;
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.rbc-toolbar button:focus, .rbc-toolbar button:active:focus{
+  color:var(--color-text);
+  background-color: transparent;
+  border-color: var(--color-text);
+} 
+
+.rbc-off-range-bg {
+  background: #202020;
+}
+
+.rbc-off-range{
+  color:var(--color-text);
+}
