@@ -64,7 +64,7 @@ export default function CalendarSection() {
                             events={events}
                             startAccessor="start"
                             endAccessor="end"
-                            views={["month", "week", "agenda"]}
+                            views={["month", "agenda"]}
                             defaultView="month"
                             onRangeChange={(newRange) => {
                             if (Array.isArray(newRange)) {
