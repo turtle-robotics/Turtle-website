@@ -92,7 +92,7 @@ function EventModal({ event, onClose }) {
           href={buildGoogleCalendarUrl(event)}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block w-full text-center bg-blue-600 hover:bg-blue-700 transition rounded-lg py-2 font-medium"
+          className="inline-block w-full text-center hero-button border-2 border-yellow-500 text-yellow-600 px-10 py-5 rounded-xl font-medium hover:scale-105 transition-all duration-300"
         >
           Add to Google Calendar
         </a>
@@ -125,11 +125,13 @@ export default function CalendarSection() {
         const data = await res.json();
 
         const formatted = (data.items || []).map((event) => ({
-        title: event.summary,
-        start: new Date(event.start.dateTime || event.start.date),
-        end: new Date(event.end.dateTime || event.end.date),
-        allDay: !event.start.dateTime,
-        }));
+            title: event.summary,
+            start: new Date(event.start.dateTime || event.start.date),
+            end: new Date(event.end.dateTime || event.end.date),
+            allDay: !event.start.dateTime,
+            description: event.description || "",
+            location: event.location || "",
+            }));
 
         setEvents(formatted);
     }, [API_KEY]);
