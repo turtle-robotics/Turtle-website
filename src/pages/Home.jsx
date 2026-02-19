@@ -6,6 +6,7 @@ import SponsorTicker from "../components/SponsorTicker";
 import ProjectTicker from "../components/ProjectTicker";
 import { projects } from "../data/projects";
 import ButtonLink from "../components/ButtonLink";
+import CalendarSection from "../components/Calendar";
 
 const ENABLE_SHOWCASE_POPUPS = true;
 
@@ -270,38 +271,9 @@ const Home = () => {
         )}
 
         {/* Calendar Section */}
+        
         <section className="py-24 px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl text-center mb-10 text-gray-200">
-              Calendar
-            </h2>
-            <div className="flex justify-center">
-              <div className="rounded-2xl border-4 border-gray-700 shadow-xl bg-gray-900/60 p-4 w-full max-w-[1300px]">
-                <div
-                  className="relative w-full"
-                  style={{ paddingBottom: "120%", height: 0 }}
-                >
-                  <iframe
-                    src="https://calendar.google.com/calendar/embed?src=turtlerobotics%40gmail.com&ctz=America%2FChicago"
-                    style={{
-                      border: 0,
-                      borderRadius: "1rem",
-                      background: "transparent",
-                      position: "absolute",
-                      top: 0,
-                      left: 0,
-                      width: "100%",
-                      height: "100%",
-                    }}
-                    frameBorder="0"
-                    scrolling="no"
-                    title="TURTLE Google Calendar"
-                    allowFullScreen
-                  ></iframe>
-                </div>
-              </div>
-            </div>
-          </div>
+          <CalendarSection></CalendarSection>
         </section>
       </div>
     </>
