@@ -194,6 +194,7 @@ const Home = () => {
         </section>
 
         {/* Kung Fu Tea Profit Share Popup - Mobile */}
+        {/*         
         {ENABLE_SHOWCASE_POPUPS && showMobilePopup && (
           <div className="md:hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
             <div className="relative bg-gradient-to-br from-gray-800 to-gray-700 p-8 rounded-2xl shadow-2xl border-2 border-yellow-600 max-w-sm w-full">
@@ -237,9 +238,10 @@ const Home = () => {
               </a>
             </div>
           </div>
-        )}
+        )} */}
 
         {/* Kung Fu Tea Profit Share Popup - Desktop */}
+        {/*         
         {ENABLE_SHOWCASE_POPUPS && (
           <a
             href="https://maps.app.goo.gl/r19F5aBQCkxuHWxd9"
@@ -267,7 +269,7 @@ const Home = () => {
               </div>
             </div>
           </a>
-        )}
+        )} */}
 
         {/* Calendar Section */}
         <section className="py-24 px-4">
