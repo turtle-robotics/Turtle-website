@@ -541,7 +541,7 @@ const Hatchling = () => {
                     2: "/pdfs/Hatchling Week 2 - SolidWorks (CAD) Foundation.pptx.pdf",
                     3: "/pdfs/Hatchling Week 3 - SolidWorks 3D.pptx.pdf",
                     4: "/pdfs/Hatchling Week 4 - Tools, Project, and Process.pptx.pdf",
-                    5: "/pdfs/Hatchling Week 5 - Design Review and C%2b%2b.pptx.pdf",
+                    5: "/pdfs/Hatchling Week 5 - Design Review and CPP.pptx.pdf",
                     6: "/pdfs/Hatchling Week 6 - SolidWorks Assembly.pptx.pdf",
                     7: "/pdfs/Hatchling Week 7 - Programming and Git GitHub.pptx.pdf",
                     8: "/pdfs/Hatchling Week 8 - Electronics and Soldering.pptx.pdf",
@@ -558,7 +558,7 @@ const Hatchling = () => {
                             document.getElementById("downloadBtn");
                           if (selectedWeek && downloadBtn) {
                             const filePath = pdfMap[selectedWeek];
-                            downloadBtn.href = encodeURI(filePath); // 👈 Encodes spaces and '+'
+                            downloadBtn.href = encodeURI(filePath); // 👈 Encodes spaces and '+' (this does not actually encode '+')
                             downloadBtn.style.display = "inline-block";
                           }
                         }}
