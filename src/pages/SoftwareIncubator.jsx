@@ -1,53 +1,24 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { gsap } from "gsap";
 import ImageCarousel from "../components/ImageCarousel";
 import ButtonLink from "../components/ButtonLink";
 import TextLink from "../components/TextLink";
+import SectionHeading from "../components/SectionHeading";
+import { useHeroAnimation } from "../hooks/useHeroAnimation";
 
 const SoftwareIncubator = () => {
-  const heroRef = useRef(null);
+  const heroRef = useHeroAnimation();
 
   useEffect(() => {
     const hero = heroRef.current;
     if (!hero) return;
 
-    // Hero animations
-    gsap.fromTo(
-      hero.querySelectorAll("h1 span"),
-      { y: 100, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 1.2,
-        stagger: 0.2,
-        ease: "power3.out",
-      },
-    );
-
-    gsap.fromTo(
-      hero.querySelector(".hero-subtitle"),
-      { y: 50, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 1,
-        delay: 0.8,
-        ease: "power3.out",
-      },
-    );
-
     gsap.fromTo(
       hero.querySelector(".founding-info"),
       { y: 30, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 1,
-        delay: 1.2,
-        ease: "power3.out",
-      },
+      { y: 0, opacity: 1, duration: 1, delay: 1.2, ease: "power3.out" },
     );
-  }, []);
+  }, [heroRef]);
 
   const learningObjectiveGroups = [
     {
@@ -198,9 +169,9 @@ const SoftwareIncubator = () => {
       {/* Mission Statement Section */}
       <section className="py-24 px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl text-center mb-20 text-gray-200">
+          <SectionHeading>
             PREVIEW <span className="text-accent">WORKSHOP</span>
-          </h2>
+          </SectionHeading>
 
           <div className="glass-card p-12 rounded-2xl text-center">
             <p className="text-xl md:text-2xl font-light text-gray-400 leading-relaxed max-w-4xl mx-auto">
@@ -219,9 +190,9 @@ const SoftwareIncubator = () => {
       {/* Learning Objectives and Schedule Section */}
       <section className="py-24 px-4 bg-gradient-to-br from-gray-800 to-gray-900">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl text-center mb-20 text-gray-200">
+          <SectionHeading>
             LEARNING <span className="text-accent">OBJECTIVES</span> & SCHEDULE
-          </h2>
+          </SectionHeading>
 
           {/* Learning Objectives - Full Width on Top */}
           <div className="mb-16">

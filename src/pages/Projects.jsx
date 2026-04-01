@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect, useRef, useMemo } from "react";
-import { gsap } from "gsap";
 import { projects } from "../data/projects";
 import { recommendProjects } from "../utils/aiRecommender";
 import ButtonLink from "../components/ButtonLink";
+import { useHeroAnimation } from "../hooks/useHeroAnimation";
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -12,7 +12,7 @@ const Projects = () => {
   const [isLoadingAI, setIsLoadingAI] = useState(false);
   const [aiAutoMode, setAiAutoMode] = useState(false);
   const debounceRef = useRef(null);
-  const heroRef = useRef(null);
+  const heroRef = useHeroAnimation();
 
   // Filter and sort projects
   const filteredProjects = useMemo(() => {
@@ -72,36 +72,6 @@ const Projects = () => {
       if (debounceRef.current) clearTimeout(debounceRef.current);
     };
   }, [searchTerm, filteredProjects.length]);
-
-  useEffect(() => {
-    const hero = heroRef.current;
-    if (!hero) return;
-
-    // Hero animations
-    gsap.fromTo(
-      hero.querySelectorAll("h1 span"),
-      { y: 100, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 1.2,
-        stagger: 0.2,
-        ease: "power3.out",
-      },
-    );
-
-    gsap.fromTo(
-      hero.querySelector(".hero-subtitle"),
-      { y: 50, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 1,
-        delay: 0.8,
-        ease: "power3.out",
-      },
-    );
-  }, []);
 
   const closeModal = () => {
     setSelectedProject(null);

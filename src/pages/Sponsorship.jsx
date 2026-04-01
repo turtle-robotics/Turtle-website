@@ -1,42 +1,15 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useHeroAnimation } from "../hooks/useHeroAnimation";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Sponsorship = () => {
-  const heroRef = useRef(null);
+  const heroRef = useHeroAnimation();
   const [showEmailPopup, setShowEmailPopup] = useState(false);
 
   useEffect(() => {
-    const hero = heroRef.current;
-    if (!hero) return;
-
-    // Hero animations
-    gsap.fromTo(
-      hero.querySelectorAll("h1 span"),
-      { y: 100, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 1.2,
-        stagger: 0.2,
-        ease: "power3.out",
-      },
-    );
-
-    gsap.fromTo(
-      hero.querySelector(".hero-subtitle"),
-      { y: 50, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 1,
-        delay: 0.8,
-        ease: "power3.out",
-      },
-    );
-
     // Animate sections on scroll
     const sections = document.querySelectorAll(".sponsor-section");
     sections.forEach((section) => {

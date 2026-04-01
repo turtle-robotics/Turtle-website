@@ -1,52 +1,23 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { gsap } from "gsap";
 import ImageCarousel from "../components/ImageCarousel";
 import ButtonLink from "../components/ButtonLink";
+import SectionHeading from "../components/SectionHeading";
+import { useHeroAnimation } from "../hooks/useHeroAnimation";
 
 const Hatchling = () => {
-  const heroRef = useRef(null);
+  const heroRef = useHeroAnimation();
 
   useEffect(() => {
     const hero = heroRef.current;
     if (!hero) return;
 
-    // Hero animations
-    gsap.fromTo(
-      hero.querySelectorAll("h1 span"),
-      { y: 100, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 1.2,
-        stagger: 0.2,
-        ease: "power3.out",
-      },
-    );
-
-    gsap.fromTo(
-      hero.querySelector(".hero-subtitle"),
-      { y: 50, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 1,
-        delay: 0.8,
-        ease: "power3.out",
-      },
-    );
-
     gsap.fromTo(
       hero.querySelector(".founding-info"),
       { y: 30, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 1,
-        delay: 1.2,
-        ease: "power3.out",
-      },
+      { y: 0, opacity: 1, duration: 1, delay: 1.2, ease: "power3.out" },
     );
-  }, []);
+  }, [heroRef]);
 
   // Check localStorage for slides visibility
   const [slidesVisible, setSlidesVisible] = useState(() => {
@@ -240,9 +211,9 @@ const Hatchling = () => {
       {/* Mission Statement Section */}
       <section className="py-24 px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl text-center mb-20 text-gray-200">
+          <SectionHeading>
             OUR <span className="text-accent">MISSION</span>
-          </h2>
+          </SectionHeading>
 
           <div className="glass-card p-12 rounded-2xl text-center">
             <p className="text-xl md:text-2xl font-light text-gray-400 leading-relaxed max-w-4xl mx-auto">
@@ -257,9 +228,9 @@ const Hatchling = () => {
       {/* Trusted Organizations Section */}
       <section className="py-24 px-4 bg-gradient-to-br from-gray-800 to-gray-900">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl text-center mb-20 text-gray-200">
+          <SectionHeading>
             CURRENTLY <span className="text-accent">TRUSTED AT</span>
-          </h2>
+          </SectionHeading>
 
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-8">
             <div className="glass-card p-8 rounded-2xl text-center transition-all duration-300">
@@ -304,9 +275,9 @@ const Hatchling = () => {
       {/* Scrolling Pictures Section */}
       <section className="py-24 px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl text-center mb-20 text-gray-200">
+          <SectionHeading>
             HATCHLING <span className="text-accent">GALLERY</span>
-          </h2>
+          </SectionHeading>
 
           <div className="rounded-2xl overflow-hidden border border-gray-700/50 glass-card w-full max-w-7xl mx-auto">
             <ImageCarousel
@@ -329,9 +300,9 @@ const Hatchling = () => {
       {/* Learning Objectives and Schedule Section */}
       <section className="py-24 px-4 bg-gradient-to-br from-gray-800 to-gray-900">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl text-center mb-20 text-gray-200">
+          <SectionHeading>
             LEARNING <span className="text-accent">OBJECTIVES</span> & SCHEDULE
-          </h2>
+          </SectionHeading>
 
           {/* Learning Objectives - Full Width on Top */}
           <div className="mb-16">
@@ -406,9 +377,9 @@ const Hatchling = () => {
       {/* Published Materials Section */}
       <section className="py-24 px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl text-center mb-20 text-gray-200">
+          <SectionHeading>
             PUBLISHED <span className="text-accent">MATERIALS</span>
-          </h2>
+          </SectionHeading>
 
           {/* Weekly Content PDFs (toggleable) */}
           {slidesVisible && (
@@ -519,9 +490,9 @@ const Hatchling = () => {
       {/* Stats, Impact, and Accolades Section */}
       <section className="py-24 px-4 bg-gradient-to-br from-gray-800 to-gray-900">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl text-center mb-20 text-gray-200">
+          <SectionHeading>
             STATS & <span className="text-accent">IMPACT</span>
-          </h2>
+          </SectionHeading>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             <div className="glass-card p-8 rounded-2xl text-center transition-all duration-300">

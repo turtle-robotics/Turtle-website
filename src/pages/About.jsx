@@ -1,27 +1,11 @@
-import { useEffect, useRef, useState } from "react";
-import { gsap } from "gsap";
+import { useState } from "react";
 import StatisticsCard from "../components/StatisticsCard";
 import TextLink from "../components/TextLink";
+import SectionHeading from "../components/SectionHeading";
+import { useHeroAnimation } from "../hooks/useHeroAnimation";
 
 const About = () => {
-  const heroRef = useRef(null);
-
-  useEffect(() => {
-    const hero = heroRef.current;
-    if (!hero) return;
-
-    gsap.fromTo(
-      hero.querySelectorAll("h1 span"),
-      { y: 100, opacity: 0 },
-      { y: 0, opacity: 1, duration: 1.2, stagger: 0.2, ease: "power3.out" },
-    );
-
-    gsap.fromTo(
-      hero.querySelector(".hero-subtitle"),
-      { y: 50, opacity: 0 },
-      { y: 0, opacity: 1, duration: 1, delay: 0.8, ease: "power3.out" },
-    );
-  }, []);
+  const heroRef = useHeroAnimation();
 
   const statistics = [
     { count: 21, label: "Advanced Research Projects" },
@@ -190,9 +174,9 @@ const About = () => {
       {/* Statistics Section */}
       <section className="py-24 px-4 bg-gradient-to-br from-gray-800 to-gray-900">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl text-center mb-20 text-gray-200">
+          <SectionHeading>
             OUR <span className="text-yellow-400">IMPACT</span>
-          </h2>
+          </SectionHeading>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {statistics.map((stat, index) => (
               <StatisticsCard key={index} {...stat} />
@@ -204,9 +188,9 @@ const About = () => {
       {/* Leadership Section */}
       <section className="py-24 px-4 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl text-center mb-20 text-gray-200">
+          <SectionHeading>
             OUR <span className="text-yellow-400">TEAM</span>
-          </h2>
+          </SectionHeading>
 
           {/* Executive Roles Accordion */}
           <div className="mb-12">
