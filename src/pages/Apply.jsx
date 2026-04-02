@@ -1,51 +1,14 @@
 import { Link } from "react-router-dom";
-import { useEffect, useRef } from "react";
-import { gsap } from "gsap";
 import ButtonLink from "../components/ButtonLink";
 
 const Apply = () => {
-  const heroRef = useRef(null);
-
   // ✅ Toggle this to open/close applications
   const applicationsOpen = false; // change to false when closed
-
-  useEffect(() => {
-    const hero = heroRef.current;
-    if (!hero) return;
-
-    // Hero animations
-    gsap.fromTo(
-      hero.querySelectorAll("h1 span"),
-      { y: 100, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 1.2,
-        stagger: 0.2,
-        ease: "power3.out",
-      },
-    );
-
-    gsap.fromTo(
-      hero.querySelector(".hero-subtitle"),
-      { y: 50, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 1,
-        delay: 0.8,
-        ease: "power3.out",
-      },
-    );
-  }, []);
 
   return (
     <div className="min-h-screen">
       {/* Hero Section with Background Image */}
-      <section
-        ref={heroRef}
-        className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden"
-      >
+      <section className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
         {/* Background Image */}
         <img
           src="/assets/GeneralPhotos/ApplyNowJpg.webp"

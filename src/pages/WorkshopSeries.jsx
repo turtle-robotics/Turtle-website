@@ -1,58 +1,8 @@
-import { useEffect, useRef } from "react";
-import { gsap } from "gsap";
-
 const WorkshopSeries = () => {
-  const heroRef = useRef(null);
-
-  useEffect(() => {
-    const hero = heroRef.current;
-    if (!hero) return;
-
-    // Hero animations
-    gsap.fromTo(
-      hero.querySelectorAll("h1 span"),
-      { y: 100, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 1.2,
-        stagger: 0.2,
-        ease: "power3.out",
-      },
-    );
-
-    gsap.fromTo(
-      hero.querySelector(".launching-text"),
-      { y: 50, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 1,
-        delay: 0.8,
-        ease: "power3.out",
-      },
-    );
-
-    gsap.fromTo(
-      hero.querySelector(".description"),
-      { y: 30, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 1,
-        delay: 1.2,
-        ease: "power3.out",
-      },
-    );
-  }, []);
-
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section
-        ref={heroRef}
-        className="relative min-h-screen flex items-center justify-center px-4"
-      >
+      <section className="relative min-h-screen flex items-center justify-center px-4">
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900"></div>
         <div className="relative text-center max-w-6xl mx-auto z-10">
           <h1 className="text-6xl md:text-8xl lg:text-9xl tracking-tight text-gray-200 mb-8">

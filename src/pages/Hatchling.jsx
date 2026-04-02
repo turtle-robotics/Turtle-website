@@ -1,53 +1,8 @@
-import { useEffect, useRef, useState } from "react";
-import { gsap } from "gsap";
+import { useEffect, useState } from "react";
 import ImageCarousel from "../components/ImageCarousel";
 import ButtonLink from "../components/ButtonLink";
 
 const Hatchling = () => {
-  const heroRef = useRef(null);
-
-  useEffect(() => {
-    const hero = heroRef.current;
-    if (!hero) return;
-
-    // Hero animations
-    gsap.fromTo(
-      hero.querySelectorAll("h1 span"),
-      { y: 100, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 1.2,
-        stagger: 0.2,
-        ease: "power3.out",
-      },
-    );
-
-    gsap.fromTo(
-      hero.querySelector(".hero-subtitle"),
-      { y: 50, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 1,
-        delay: 0.8,
-        ease: "power3.out",
-      },
-    );
-
-    gsap.fromTo(
-      hero.querySelector(".founding-info"),
-      { y: 30, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 1,
-        delay: 1.2,
-        ease: "power3.out",
-      },
-    );
-  }, []);
-
   // Check localStorage for slides visibility
   const [slidesVisible, setSlidesVisible] = useState(() => {
     const stored = localStorage.getItem("hatchlingSlidesVisible");
@@ -207,10 +162,7 @@ const Hatchling = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section
-        ref={heroRef}
-        className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden"
-      >
+      <section className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
         {/* Background Image */}
         <img
           src="/assets/GeneralPhotos/Fall_2025_CSTAT_Hatchling_Group_Photo.webp"
