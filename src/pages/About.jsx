@@ -32,7 +32,7 @@ const About = () => {
     // External Branch
     { role: "External VP", name: "Yousuf Shafiu", period: "Spring 2026" },
     { role: "Public Relations", name: "Isaac Cabello", period: "Spring 2026" },
-    { role: "Webmaster", name: "Saksham Mohan", period: "Spring 2026" },
+    { role: "Webmaster", name: "Micah Guttman", period: "Spring 2026" },
     {
       role: "Corporate Relations",
       name: "Will Donaldson",
