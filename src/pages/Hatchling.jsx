@@ -255,7 +255,7 @@ const Hatchling = () => {
       </section>
 
       {/* Trusted Organizations Section */}
-      <section className="py-24 px-4 bg-gradient-to-br from-gray-800 to-gray-900">
+      <section className="py-24 px-4 from-gray-800 to-gray-900">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl lg:text-6xl text-center mb-20 text-gray-200">
             CURRENTLY <span className="text-accent">TRUSTED AT</span>
@@ -327,7 +327,7 @@ const Hatchling = () => {
       </section>
 
       {/* Learning Objectives and Schedule Section */}
-      <section className="py-24 px-4 bg-gradient-to-br from-gray-800 to-gray-900">
+      <section className="py-24 px-4 from-gray-800 to-gray-900">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl lg:text-6xl text-center mb-20 text-gray-200">
             LEARNING <span className="text-accent">OBJECTIVES</span> & SCHEDULE
@@ -517,7 +517,7 @@ const Hatchling = () => {
       </section>
 
       {/* Stats, Impact, and Accolades Section */}
-      <section className="py-24 px-4 bg-gradient-to-br from-gray-800 to-gray-900">
+      <section className="py-24 px-4 from-gray-800 to-gray-900">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl lg:text-6xl text-center mb-20 text-gray-200">
             STATS & <span className="text-accent">IMPACT</span>
