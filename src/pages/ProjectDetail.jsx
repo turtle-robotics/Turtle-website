@@ -1,6 +1,5 @@
 import { useParams, Link } from "react-router-dom";
 import { useEffect, useState, useMemo } from "react";
-import { gsap } from "gsap";
 import { getProjectById } from "../data/projects";
 import ImageCarousel from "../components/ImageCarousel";
 import ButtonLink from "../components/ButtonLink";
@@ -10,27 +9,6 @@ const ProjectDetail = () => {
   const [activeImageIndex, setActiveImageIndex] = useState(0);
 
   const project = getProjectById(projectId);
-
-  useEffect(() => {
-    // GSAP animations
-    gsap.fromTo(
-      ".project-title",
-      { opacity: 0, y: -50 },
-      { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" },
-    );
-
-    gsap.fromTo(
-      ".project-lead",
-      { opacity: 0, y: -30 },
-      { opacity: 1, y: 0, duration: 0.8, delay: 0.2, ease: "power2.out" },
-    );
-
-    gsap.fromTo(
-      ".project-section",
-      { opacity: 0, y: 30 },
-      { opacity: 1, y: 0, duration: 0.8, delay: 0.4, ease: "power2.out" },
-    );
-  }, [projectId]);
 
   const formatDate = (dateString) => {
     const date = new Date(dateString);

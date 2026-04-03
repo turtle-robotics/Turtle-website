@@ -1,28 +1,8 @@
-import { useEffect, useRef, useState } from "react";
-import { gsap } from "gsap";
+import { useState } from "react";
 import StatisticsCard from "../components/StatisticsCard";
 import TextLink from "../components/TextLink";
 
 const About = () => {
-  const heroRef = useRef(null);
-
-  useEffect(() => {
-    const hero = heroRef.current;
-    if (!hero) return;
-
-    gsap.fromTo(
-      hero.querySelectorAll("h1 span"),
-      { y: 100, opacity: 0 },
-      { y: 0, opacity: 1, duration: 1.2, stagger: 0.2, ease: "power3.out" },
-    );
-
-    gsap.fromTo(
-      hero.querySelector(".hero-subtitle"),
-      { y: 50, opacity: 0 },
-      { y: 0, opacity: 1, duration: 1, delay: 0.8, ease: "power3.out" },
-    );
-  }, []);
-
   const statistics = [
     { count: 21, label: "Advanced Research Projects" },
     { count: 2, label: "Competition Teams" },
@@ -161,10 +141,7 @@ const About = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section with Officer Photo Background */}
-      <section
-        ref={heroRef}
-        className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden"
-      >
+      <section className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
         {/* Officer Photo Background */}
         <img
           src="/assets/GeneralPhotos/OfficerPhoto.webp"

@@ -1,7 +1,6 @@
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import { Analytics } from "@vercel/analytics/react";
 import { Link } from "react-router-dom";
-import { gsap } from "gsap";
 import SponsorTicker from "../components/SponsorTicker";
 import ProjectTicker from "../components/ProjectTicker";
 import { projects } from "../data/projects";
@@ -10,62 +9,14 @@ import ButtonLink from "../components/ButtonLink";
 const ENABLE_SHOWCASE_POPUPS = true;
 
 const Home = () => {
-  const heroRef = useRef(null);
   const [showMobilePopup, setShowMobilePopup] = useState(true);
-
-  useEffect(() => {
-    const hero = heroRef.current;
-    if (!hero) return;
-
-    // Hero animations
-    gsap.fromTo(
-      hero.querySelectorAll("h1 span"),
-      { y: 100, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 1.2,
-        stagger: 0.2,
-        ease: "power3.out",
-      },
-    );
-
-    gsap.fromTo(
-      hero.querySelector(".hero-subtitle"),
-      { y: 50, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 1,
-        delay: 0.8,
-        ease: "power3.out",
-      },
-    );
-
-    gsap.fromTo(
-      hero.querySelectorAll(".hero-button"),
-      { y: 30, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 0.8,
-        stagger: 0.2,
-        delay: 1.2,
-        ease: "power3.out",
-        clearProps: "transform",
-      },
-    );
-  }, []);
 
   return (
     <>
       <Analytics />
       <div className="min-h-screen">
         {/* Hero Section */}
-        <section
-          ref={heroRef}
-          className="relative min-h-screen flex items-center justify-center px-4"
-        >
+        <section className="relative min-h-screen flex items-center justify-center px-4">
           <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900"></div>
 
           <div className="relative text-center max-w-6xl mx-auto z-10">

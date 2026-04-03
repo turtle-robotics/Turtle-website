@@ -17,7 +17,6 @@
     "@google/generative-ai": "^0.24.1",
     "@vercel/analytics": "^1.5.0",
     "framer-motion": "^12.23.12",
-    "gsap": "^3.12.2",
     "jsdom": "^27.2.0",
     "ogl": "^1.0.11",
     "react": "^18.2.0",
