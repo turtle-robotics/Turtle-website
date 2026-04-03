@@ -3,7 +3,6 @@ import { useState, useEffect, useRef, useMemo } from "react";
 import { projects } from "../data/projects";
 import { recommendProjects } from "../utils/aiRecommender";
 import ButtonLink from "../components/ButtonLink";
-import { useHeroAnimation } from "../hooks/useHeroAnimation";
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -12,7 +11,6 @@ const Projects = () => {
   const [isLoadingAI, setIsLoadingAI] = useState(false);
   const [aiAutoMode, setAiAutoMode] = useState(false);
   const debounceRef = useRef(null);
-  const heroRef = useHeroAnimation();
 
   // Filter and sort projects
   const filteredProjects = useMemo(() => {
@@ -80,10 +78,7 @@ const Projects = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section
-        ref={heroRef}
-        className="relative min-h-screen flex items-center justify-center px-4"
-      >
+      <section className="relative min-h-screen flex items-center justify-center px-4">
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900"></div>
         <div className="relative text-center max-w-6xl mx-auto z-10">
           <h1 className="text-6xl md:text-8xl lg:text-9xl tracking-tight text-gray-200 mb-8">

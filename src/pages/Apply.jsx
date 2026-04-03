@@ -1,22 +1,14 @@
 import { Link } from "react-router-dom";
 import ButtonLink from "../components/ButtonLink";
-import SectionHeading from "../components/SectionHeading";
-import IconCard from "../components/IconCard";
-import { useHeroAnimation } from "../hooks/useHeroAnimation";
 
 const Apply = () => {
-  const heroRef = useHeroAnimation();
-
   // ✅ Toggle this to open/close applications
   const applicationsOpen = false; // change to false when closed
 
   return (
     <div className="min-h-screen">
       {/* Hero Section with Background Image */}
-      <section
-        ref={heroRef}
-        className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden"
-      >
+      <section className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
         {/* Background Image */}
         <img
           src="/assets/GeneralPhotos/ApplyNowJpg.webp"
@@ -57,24 +49,40 @@ const Apply = () => {
       {/* Application Process */}
       <section className="py-24 px-4">
         <div className="max-w-6xl mx-auto">
-          <SectionHeading>JOIN TURTLE</SectionHeading>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl text-center mb-20 text-gray-200">
+            JOIN TURTLE
+          </h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            <IconCard
-              icon="📝"
-              title="Submit Application"
-              description="Complete our online application form to join Hatchlings or Advanced Project teams."
-            />
-            <IconCard
-              icon="🤝"
-              title="Open House"
-              description="Meet with our team leaders to discuss your goals and project preferences."
-            />
-            <IconCard
-              icon="🚀"
-              title="Start Contributing"
-              description="Begin working on exciting robotics projects with TURTLE."
-            />
+            <div className="glass-card p-10 rounded-2xl text-center transition-all duration-300">
+              <div className="text-5xl mb-6">📝</div>
+              <h3 className="text-xl font-light mb-4 text-gray-200">
+                Submit Application
+              </h3>
+              <p className="text-gray-400 font-light leading-relaxed">
+                Complete our online application form to join Hatchlings or
+                Advanced Project teams.
+              </p>
+            </div>
+            <div className="glass-card p-10 rounded-2xl text-center transition-all duration-300">
+              <div className="text-5xl mb-6">🤝</div>
+              <h3 className="text-xl font-light mb-4 text-gray-200">
+                Open House
+              </h3>
+              <p className="text-gray-400 font-light leading-relaxed">
+                Meet with our team leaders to discuss your goals and project
+                preferences.
+              </p>
+            </div>
+            <div className="glass-card p-10 rounded-2xl text-center transition-all duration-300">
+              <div className="text-5xl mb-6">🚀</div>
+              <h3 className="text-xl font-light mb-4 text-gray-200">
+                Start Contributing
+              </h3>
+              <p className="text-gray-400 font-light leading-relaxed">
+                Begin working on exciting robotics projects with TURTLE.
+              </p>
+            </div>
           </div>
         </div>
       </section>

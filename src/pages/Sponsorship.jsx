@@ -1,35 +1,7 @@
-import { useEffect, useState } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useHeroAnimation } from "../hooks/useHeroAnimation";
-
-gsap.registerPlugin(ScrollTrigger);
+import { useState } from "react";
 
 const Sponsorship = () => {
-  const heroRef = useHeroAnimation();
   const [showEmailPopup, setShowEmailPopup] = useState(false);
-
-  useEffect(() => {
-    // Animate sections on scroll
-    const sections = document.querySelectorAll(".sponsor-section");
-    sections.forEach((section) => {
-      gsap.fromTo(
-        section,
-        { y: 50, opacity: 0 },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 0.8,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: section,
-            start: "top 80%",
-            once: true,
-          },
-        },
-      );
-    });
-  }, []);
 
   const sponsorshipTiers = [
     {
@@ -93,10 +65,7 @@ const Sponsorship = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
       {/* Hero Section */}
-      <section
-        ref={heroRef}
-        className="relative min-h-screen flex items-center justify-center px-4"
-      >
+      <section className="relative min-h-screen flex items-center justify-center px-4">
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900/50 via-gray-800/50 to-gray-900/50"></div>
         <div className="relative text-center max-w-6xl mx-auto z-10">
           <h1 className="text-6xl md:text-8xl lg:text-9xl tracking-tight text-gray-200 mb-8">

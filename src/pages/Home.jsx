@@ -1,49 +1,22 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Analytics } from "@vercel/analytics/react";
 import { Link } from "react-router-dom";
-import { gsap } from "gsap";
 import SponsorTicker from "../components/SponsorTicker";
 import ProjectTicker from "../components/ProjectTicker";
 import { projects } from "../data/projects";
 import ButtonLink from "../components/ButtonLink";
-import SectionHeading from "../components/SectionHeading";
-import IconCard from "../components/IconCard";
-import { useHeroAnimation } from "../hooks/useHeroAnimation";
 
 const ENABLE_SHOWCASE_POPUPS = true;
 
 const Home = () => {
-  const heroRef = useHeroAnimation();
   const [showMobilePopup, setShowMobilePopup] = useState(true);
-
-  useEffect(() => {
-    const hero = heroRef.current;
-    if (!hero) return;
-
-    gsap.fromTo(
-      hero.querySelectorAll(".hero-button"),
-      { y: 30, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 0.8,
-        stagger: 0.2,
-        delay: 1.2,
-        ease: "power3.out",
-        clearProps: "transform",
-      },
-    );
-  }, [heroRef]);
 
   return (
     <>
       <Analytics />
       <div className="min-h-screen">
         {/* Hero Section */}
-        <section
-          ref={heroRef}
-          className="relative min-h-screen flex items-center justify-center px-4"
-        >
+        <section className="relative min-h-screen flex items-center justify-center px-4">
           <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900"></div>
 
           <div className="relative text-center max-w-6xl mx-auto z-10">
@@ -89,25 +62,41 @@ const Home = () => {
         {/* About Section */}
         <section className="py-24 px-4">
           <div className="max-w-6xl mx-auto">
-            <SectionHeading>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl text-center mb-20 text-gray-200">
               ABOUT <span className="text-yellow-400">TURTLE</span>
-            </SectionHeading>
+            </h2>
             <div className="grid md:grid-cols-3 gap-8 mb-16">
-              <IconCard
-                icon="🎓"
-                title="Student Leadership"
-                description="Developing the next generation of robotics leaders through hands-on experience and mentorship."
-              />
-              <IconCard
-                icon="🔬"
-                title="Research Excellence"
-                description="Cutting-edge robotics research across multiple domains and applications."
-              />
-              <IconCard
-                icon="⚙️"
-                title="Engineering Development"
-                description="Hands-on engineering experience through real-world robotics projects, technical workshops, and collaborative problem solving."
-              />
+              <div className="glass-card p-10 rounded-2xl text-center transition-all duration-300">
+                <div className="text-5xl mb-6">🎓</div>
+                <h3 className="text-xl font-light mb-4 text-gray-200">
+                  Student Leadership
+                </h3>
+                <p className="text-gray-400 font-light leading-relaxed">
+                  Developing the next generation of robotics leaders through
+                  hands-on experience and mentorship.
+                </p>
+              </div>
+              <div className="glass-card p-10 rounded-2xl text-center transition-all duration-300">
+                <div className="text-5xl mb-6">🔬</div>
+                <h3 className="text-xl font-light mb-4 text-gray-200">
+                  Research Excellence
+                </h3>
+                <p className="text-gray-400 font-light leading-relaxed">
+                  Cutting-edge robotics research across multiple domains and
+                  applications.
+                </p>
+              </div>
+              <div className="glass-card p-10 rounded-2xl text-center transition-all duration-300">
+                <div className="text-5xl mb-6">⚙️</div>
+                <h3 className="text-xl font-light mb-4 text-gray-200">
+                  Engineering Development
+                </h3>
+                <p className="text-gray-400 font-light leading-relaxed">
+                  Hands-on engineering experience through real-world robotics
+                  projects, technical workshops, and collaborative problem
+                  solving.
+                </p>
+              </div>
             </div>
           </div>
           {/* Competition Accolades - Large Rectangle */}

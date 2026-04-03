@@ -1,12 +1,8 @@
 import { useState } from "react";
 import StatisticsCard from "../components/StatisticsCard";
 import TextLink from "../components/TextLink";
-import SectionHeading from "../components/SectionHeading";
-import { useHeroAnimation } from "../hooks/useHeroAnimation";
 
 const About = () => {
-  const heroRef = useHeroAnimation();
-
   const statistics = [
     { count: 21, label: "Advanced Research Projects" },
     { count: 2, label: "Competition Teams" },
@@ -36,7 +32,7 @@ const About = () => {
     // External Branch
     { role: "External VP", name: "Yousuf Shafiu", period: "Spring 2026" },
     { role: "Public Relations", name: "Isaac Cabello", period: "Spring 2026" },
-    { role: "Webmaster", name: "Saksham Mohan", period: "Spring 2026" },
+    { role: "Webmaster", name: "Micah Guttman", period: "Spring 2026" },
     {
       role: "Corporate Relations",
       name: "Will Donaldson",
@@ -145,10 +141,7 @@ const About = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section with Officer Photo Background */}
-      <section
-        ref={heroRef}
-        className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden"
-      >
+      <section className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
         {/* Officer Photo Background */}
         <img
           src="/assets/GeneralPhotos/OfficerPhoto.webp"
@@ -174,9 +167,9 @@ const About = () => {
       {/* Statistics Section */}
       <section className="py-24 px-4 bg-gradient-to-br from-gray-800 to-gray-900">
         <div className="max-w-7xl mx-auto">
-          <SectionHeading>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl text-center mb-20 text-gray-200">
             OUR <span className="text-yellow-400">IMPACT</span>
-          </SectionHeading>
+          </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {statistics.map((stat, index) => (
               <StatisticsCard key={index} {...stat} />
@@ -188,9 +181,9 @@ const About = () => {
       {/* Leadership Section */}
       <section className="py-24 px-4 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
         <div className="max-w-7xl mx-auto">
-          <SectionHeading>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl text-center mb-20 text-gray-200">
             OUR <span className="text-yellow-400">TEAM</span>
-          </SectionHeading>
+          </h2>
 
           {/* Executive Roles Accordion */}
           <div className="mb-12">

@@ -1,11 +1,7 @@
 import { useEffect, useState } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import TextLink from "../components/TextLink";
 
-gsap.registerPlugin(ScrollTrigger);
-
-const ENABLE_SHOWCASE_COUNTDOWN = false;
+const ENABLE_SHOWCASE_COUNTDOWN = true;
 
 function Showcase() {
   const [timeLeft, setTimeLeft] = useState({
@@ -17,16 +13,10 @@ function Showcase() {
   const [showConfetti, setShowConfetti] = useState(false);
 
   useEffect(() => {
-    gsap.fromTo(
-      ".showcase-hero",
-      { opacity: 0, y: 50 },
-      { opacity: 1, y: 0, duration: 1, ease: "power3.out" },
-    );
-
     // Local time: Nov 21, 2025 at 1 PM
-    const showcaseYear = 2025;
-    const showcaseMonth = 10; // November (0-indexed)
-    const showcaseDay = 21;
+    const showcaseYear = 2026;
+    const showcaseMonth = 3; // April (0-indexed)
+    const showcaseDay = 17;
     const showcaseHour = 13;
     const showcaseMinute = 0;
     const showcaseSecond = 0;
@@ -120,7 +110,7 @@ function Showcase() {
             <>
               {/* Date with better contrast */}
               <p className="inline-block text-2xl sm:text-3xl md:text-4xl font-light text-yellow-400 mb-4 px-3 py-1 bg-black/70 rounded-lg drop-shadow-lg">
-                November 21, 2025
+                April 17, 2026
               </p>
 
               {/* Time with text shadow */}

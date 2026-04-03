@@ -29,7 +29,7 @@ const Layout = ({ children }) => {
       {/* Navigation */}
       {!showHeader && (
         <button
-          className="fixed top-4 left-4 z-[100] bg-yellow-500 text-black rounded-full p-3 shadow-lg md:hidden animate-bounce"
+          className="fixed top-4 left-4 z-[100] bg-yellow-500 text-black rounded-full p-3 shadow-lg md:hidden"
           style={{ fontSize: 22, lineHeight: 1 }}
           onClick={() => setShowHeader(true)}
           aria-label="Open header"

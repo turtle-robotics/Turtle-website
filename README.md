@@ -3,9 +3,6 @@
 ## 🚀 Features
 
 - **Responsive Design** with mobile-first approach
-- **GSAP Animations** with ScrollTrigger for smooth scroll animations
-- **Interactive ChromaGrid** with mouse-following spotlight effects
-- **Animated Statistics** with counter animations
 - **Glass Morphism** design elements
 
 ## 🛠️ Tech Stack
@@ -13,7 +10,6 @@
 - **Framework**: React 18 with Vite
 - **Routing**: React Router DOM
 - **Styling**: Tailwind CSS with custom CSS variables
-- **Animations**: GSAP (GreenSock) with ScrollTrigger
 - **Font**: Inter (Google Fonts) - weights 100-900
 - **Package Manager**: npm
 
@@ -34,18 +30,14 @@
 src/
 ├── components/
 │   ├── Layout.jsx              # Main layout with navigation
-│   ├── ChromaGrid.jsx          # Interactive project grid
-│   ├── StatisticsCard.jsx      # Animated statistics cards
+│   ├── StatisticsCard.jsx      # Statistics cards
 │   └── AnimatedBackground.jsx  # Canvas particle background
 ├── pages/
 │   ├── Home.jsx                # Home page with hero and sections
 │   ├── About.jsx               # About page with statistics
-│   ├── Projects.jsx            # Projects page with ChromaGrid
 │   ├── Hatchling.jsx           # Hatchling program page
 │   └── Apply.jsx               # Application page
 ├── hooks/
-│   ├── useScrollAnimation.js   # Custom scroll animation hook
-│   └── useCounter.js           # Animated counter hook
 ├── data/
 │   └── projects.js             # Project and statistics data
 ├── App.jsx                     # Main app component
@@ -94,16 +86,8 @@ npm run preview
 
 ## 🎯 Key Components
 
-### ChromaGrid
-Interactive grid component with:
-- Mouse-following spotlight effects
-- GSAP animations for smooth interactions
-- Custom gradients for each project card
-- Responsive grid layout
-
 ### StatisticsCard
-Animated statistics with:
-- Scroll-triggered counter animations
+Statistics with:
 - Spotlight hover effects
 - Glass morphism design
 
@@ -124,17 +108,6 @@ Edit CSS variables in `src/main.css`:
   --color-accent: #A60000;
   --color-secondary: #FFD700;
 }
-```
-
-### Animations
-Modify GSAP animations in components or use the `useScrollAnimation` hook:
-```javascript
-const elementRef = useScrollAnimation({
-  trigger: "top 80%",
-  y: 50,
-  opacity: 0,
-  duration: 1
-})
 ```
 
 ### Projects Data
@@ -160,14 +133,6 @@ The website is fully responsive with:
 - Flexible grid layouts
 - Touch-friendly interactions
 
-## 🎭 Animations
-
-### GSAP Animations
-- Hero text staggered animations
-- Scroll-triggered fade-in-up effects
-- Counter animations
-- Smooth theme transitions
-
 ### CSS Animations
 - Pulse glow effects
 - Bounce animations
@@ -184,7 +149,6 @@ The website is fully responsive with:
 
 ### Performance
 - Lazy loading for images
-- Optimized GSAP animations
 - Efficient re-renders with React.memo
 - Minimal bundle size
 

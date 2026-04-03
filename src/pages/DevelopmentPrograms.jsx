@@ -1,10 +1,8 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
-import { useHeroAnimation } from "../hooks/useHeroAnimation";
+import ButtonLink from "../components/ButtonLink";
 
 const DevelopmentPrograms = () => {
   const navigate = useNavigate();
-  const heroRef = useHeroAnimation();
 
   const programs = [
     {
@@ -72,10 +70,7 @@ const DevelopmentPrograms = () => {
       </div>
 
       {/* Hero Section */}
-      <section
-        ref={heroRef}
-        className="relative min-h-screen flex items-center justify-center px-4 pt-20"
-      >
+      <section className="relative min-h-screen flex items-center justify-center px-4 pt-20">
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900"></div>
         <div className="relative text-center max-w-6xl mx-auto z-10">
           <h1 className="text-6xl md:text-8xl lg:text-9xl tracking-tight text-gray-200 mb-8">
@@ -127,12 +122,7 @@ const DevelopmentPrograms = () => {
                   </p>
 
                   {!program.disabled && (
-                    <button
-                      onClick={() => navigate(program.link)}
-                      className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-light py-3 px-8 rounded-lg transition-all duration-300 hover:shadow-xl"
-                    >
-                      Learn More
-                    </button>
+                    <ButtonLink to={program.link}>Learn More</ButtonLink>
                   )}
                 </div>
               </div>
@@ -140,6 +130,148 @@ const DevelopmentPrograms = () => {
           </div>
         </section>
       ))}
+
+      {/* Stats, Impact, and Accolades Section */}
+      <section className="py-24 px-4 bg-gradient-to-br from-gray-800 to-gray-900">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl text-center mb-20 text-gray-200">
+            STATS & <span className="text-accent">IMPACT</span>
+          </h2>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            <div className="glass-card p-8 rounded-2xl text-center transition-all duration-300">
+              <div className="text-4xl font-light text-accent mb-2">75%</div>
+              <div className="text-lg font-light text-gray-200 mb-2">
+                Weekly Attendance
+              </div>
+              <div className="text-sm text-gray-400">
+                Through 8 weeks of lecture
+              </div>
+            </div>
+
+            <div className="glass-card p-8 rounded-2xl text-center transition-all duration-300">
+              <div className="text-4xl font-light text-accent mb-2">70%</div>
+              <div className="text-lg font-light text-gray-200 mb-2">
+                New Engineers
+              </div>
+              <div className="text-sm text-gray-400">
+                70% of members enter without prior robotics experience
+              </div>
+            </div>
+
+            <div className="glass-card p-8 rounded-2xl text-center transition-all duration-300">
+              <div className="text-4xl font-light text-accent mb-2">95%</div>
+              <div className="text-lg font-light text-gray-200 mb-2">
+                Recommendation Rate
+              </div>
+              <div className="text-sm text-gray-400">
+                Would recommend to others
+              </div>
+            </div>
+
+            <div className="glass-card p-8 rounded-2xl text-center transition-all duration-300">
+              <div className="text-4xl font-light text-accent mb-2">782</div>
+              <div className="text-lg font-light text-gray-200 mb-2">
+                Social Connection
+              </div>
+              <div className="text-sm text-gray-400">All time Members</div>
+            </div>
+          </div>
+
+          {/* Impact Stories */}
+          <div className="grid md:grid-cols-2 gap-8 mb-16">
+            <div className="glass-card p-8 rounded-2xl">
+              <h3 className="text-2xl font-light text-gray-200 mb-6">
+                Professional Development
+              </h3>
+              <ul className="space-y-3 text-gray-400 font-light">
+                <li className="flex items-start">
+                  <span className="text-accent mr-3 mt-1">•</span>
+                  <span>Internships and Research Positions</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-accent mr-3 mt-1">•</span>
+                  <span>SolidWorks certifications (CSWA and CSWP)</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-accent mr-3 mt-1">•</span>
+                  <span>Project Leads and Sub-Team Leads</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="glass-card p-8 rounded-2xl">
+              <h3 className="text-2xl font-light text-gray-200 mb-6">
+                Leadership & Growth
+              </h3>
+              <ul className="space-y-3 text-gray-400 font-light">
+                <li className="flex items-start">
+                  <span className="text-accent mr-3 mt-1">•</span>
+                  <span>Student Organization Presidents & Officers</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-accent mr-3 mt-1">•</span>
+                  <span>Hatchling Directors</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-accent mr-3 mt-1">•</span>
+                  <span>Social connection with peers</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* More Info Section with Embedded PDF */}
+          <div className="text-center">
+            <h3 className="text-3xl font-light text-gray-200 mb-8">
+              More Info
+            </h3>
+            <div className="glass-card p-8 rounded-2xl max-w-4xl mx-auto">
+              <div className="text-5xl mb-6">📊</div>
+              <h4 className="text-xl font-light text-gray-200 mb-4">
+                Detailed Program Impact Report
+              </h4>
+              <p className="text-gray-400 font-light mb-6">
+                View our comprehensive impact report with detailed statistics,
+                success stories, and program outcomes.
+              </p>
+
+              {/* Embedded PDF Viewer */}
+
+              <div className="w-full h-96 rounded-xl overflow-hidden border border-gray-700 custom-scrollbar">
+                <iframe
+                  src="/pdfs/Fall 2025 (10th year) Hatchling Impact Report.pptx.pdf#toolbar=0&navpanes=0&scrollbar=1"
+                  className="w-full h-full custom-scrollbar"
+                  title="Hatchling Impact Report"
+                  frameBorder="0"
+                >
+                  <p className="p-4 text-gray-400">
+                    Your browser does not support PDF embedding.
+                    <a
+                      href="/pdfs/hatchling-impact-report.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-accent hover:underline ml-2"
+                    >
+                      Click here to view the PDF
+                    </a>
+                  </p>
+                </iframe>
+              </div>
+
+              <div className="mt-4">
+                <a
+                  href="/pdfs/hatchling-impact-report.pdf"
+                  download
+                  className="inline-block bg-yellow-500 text-black px-6 py-3 rounded-lg text-sm font-light  hover:scale-105 transition-all duration-300"
+                >
+                  Download Full Report
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Call to Action Section */}
       <section className="py-24 px-4 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
@@ -151,12 +283,9 @@ const DevelopmentPrograms = () => {
           <p className="text-xl font-light text-gray-400 mb-12 max-w-2xl mx-auto">
             Join TURTLE and gain the skills needed to excel in robotics
           </p>
-          <button
-            onClick={() => navigate("/apply")}
-            className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-light py-4 px-12 rounded-lg transition-all duration-300 hover:shadow-xl text-lg"
-          >
+          <ButtonLink sizeVariant="large" to="/apply">
             Apply Now
-          </button>
+          </ButtonLink>
         </div>
       </section>
     </div>
