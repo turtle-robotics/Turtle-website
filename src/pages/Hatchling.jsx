@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import ImageCarousel from "../components/ImageCarousel";
 import ButtonLink from "../components/ButtonLink";
+import Hero from "../components/Hero";
 
 const Hatchling = () => {
   // Check localStorage for slides visibility
@@ -161,33 +162,12 @@ const Hatchling = () => {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
-        {/* Background Image */}
-        <img
-          src="/assets/GeneralPhotos/Fall_2025_CSTAT_Hatchling_Group_Photo.webp"
-          alt="Hatchling Program Background"
-          className="absolute inset-0 w-full h-full object-cover object-center brightness-50"
-        />
-
-        {/* Overlay for light contrast */}
-        <div className="absolute inset-0 bg-black/25"></div>
-
-        {/* Text only — no box */}
-        <div className="relative text-center z-10 max-w-6xl mx-auto -translate-y-36">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl tracking-tight text-white drop-shadow-2xl">
-            <span className="block">HATCHLING</span>
-            <span className="block">DEVELOPMENT</span>
-            <span className="block text-accent">PROGRAM</span>
-          </h1>
-
-          <div className="founding-info mt-8">
-            <p className="text-lg md:text-xl font-light text-gray-200 drop-shadow-md">
-              Founded 2015 • External Expansion 2025
-            </p>
-          </div>
-        </div>
-      </section>
+      <Hero
+        heading="HATCHLING DEVELOPMENT PROGRAM"
+        subheading="Founded 2015 • External Expansion 2025"
+        backgroundImage="/assets/GeneralPhotos/Fall_2025_CSTAT_Hatchling_Group_Photo.webp"
+        backgroundAltText="Hatchling Program Background"
+      ></Hero>
 
       {/* Mission Statement Section */}
       <section className="py-24 px-4">
