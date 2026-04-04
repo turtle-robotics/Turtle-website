@@ -2,9 +2,8 @@ import { useState } from "react";
 import { Analytics } from "@vercel/analytics/react";
 import { Link } from "react-router-dom";
 import SponsorTicker from "../components/SponsorTicker";
-import ProjectTicker from "../components/ProjectTicker";
-import { projects } from "../data/projects";
 import ButtonLink from "../components/ButtonLink";
+import Hero from "../components/Hero";
 
 const ENABLE_SHOWCASE_POPUPS = true;
 
@@ -15,49 +14,30 @@ const Home = () => {
     <>
       <Analytics />
       <div className="min-h-screen">
-        {/* Hero Section */}
-        <section className="relative min-h-screen flex items-center justify-center px-4">
-          <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900"></div>
-
-          <div className="relative text-center max-w-6xl mx-auto z-10">
-            <h1 className="text-6xl md:text-8xl lg:text-9xl tracking-tight text-gray-200 mb-8">
-              <span className="block">TURTLE</span>
-              <span className="block text-yellow-400">ROBOTICS</span>
-            </h1>
-
-            <p className="hero-subtitle text-xl md:text-2xl font-light tracking-wide text-gray-400 mb-12 max-w-3xl mx-auto">
-              Pioneering robotics solutions and student leadership development
-              at Texas A&M University
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center relative z-50">
-              <ButtonLink
-                className="hero-button"
-                to="/projects"
-                sizeVariant="large"
-                style="primary"
-              >
-                EXPLORE PROJECTS
-              </ButtonLink>
-              <ButtonLink
-                className="hero-button"
-                to="/about"
-                sizeVariant="large"
-                style="primary-outline"
-              >
-                LEARN MORE
-              </ButtonLink>
-            </div>
+        <Hero
+          heading="TURTLE ROBOTICS"
+          subheading="Pioneering robotics solutions and student leadership development
+              at Texas A&M University"
+        >
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center relative z-50">
+            <ButtonLink
+              className="hero-button"
+              to="/projects"
+              sizeVariant="large"
+              style="primary"
+            >
+              EXPLORE PROJECTS
+            </ButtonLink>
+            <ButtonLink
+              className="hero-button"
+              to="/about"
+              sizeVariant="large"
+              style="primary-outline"
+            >
+              LEARN MORE
+            </ButtonLink>
           </div>
-
-          {/* Project Ticker - positioned at bottom */}
-          <div className="absolute bottom-0 left-0 right-0 z-10">
-            <ProjectTicker projects={projects} />
-          </div>
-
-          {/* Sponsor Ticker - positioned above project ticker */}
-          {/* ...existing code... */}
-        </section>
+        </Hero>
 
         {/* About Section */}
         <section className="py-24 px-4">
