@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import ButtonLink from "../components/ButtonLink";
+import Hero from "../components/Hero";
 
 const Apply = () => {
   // ✅ Toggle this to open/close applications
@@ -7,44 +8,22 @@ const Apply = () => {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section with Background Image */}
-      <section className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
-        {/* Background Image */}
-        <img
-          src="/assets/GeneralPhotos/ApplyNowJpg.webp"
-          alt="Apply Now Background"
-          className="absolute inset-0 w-full h-full object-cover object-center brightness-50 z-0"
-        />
-        {/* Overlay for contrast */}
-        <div className="absolute inset-0 bg-black/25 z-0"></div>
-        <div className="relative text-center max-w-6xl mx-auto z-10">
-          {/* Removed glass-card wrapper */}
-          {applicationsOpen ? (
-            <h1 className="text-6xl md:text-8xl lg:text-9xl tracking-tight text-white drop-shadow-2xl mb-8">
-              <span className="block">APPLY</span>
-              <span className="block text-accent">NOW</span>
-            </h1>
-          ) : (
-            <h1 className="text-6xl md:text-8xl lg:text-9xl tracking-tight mb-8">
-              <span className="block">APPLICATIONS CLOSED</span>
-            </h1>
-          )}
-
-          <p className="hero-subtitle text-xl md:text-2xl font-light tracking-wide text-gray-200 mb-12 max-w-3xl mx-auto drop-shadow-md">
-            {applicationsOpen
-              ? "Fill out this form to join Hatchling or Advanced Project teams at TURTLE."
-              : "Applications are currently closed. Please check back soon for future openings."}
-          </p>
-          {applicationsOpen && (
-            <ButtonLink
-              sizeVariant="xl"
-              to="https://forms.gle/59pUiPUCpDrgBCqn7"
-            >
-              APPLY NOW
-            </ButtonLink>
-          )}
-        </div>
-      </section>
+      <Hero
+        heading={applicationsOpen ? "APPLY NOW" : "APPLICATIONS CLOSED"}
+        subheading={
+          applicationsOpen
+            ? "Fill out this form to join Hatchling or Advanced Project teams at TURTLE."
+            : "Applications are currently closed. Please check back soon for future openings."
+        }
+        backgroundImage="/assets/GeneralPhotos/ApplyNowJpg.webp"
+        backgroundAltTextalt="Apply Now Background"
+      >
+        {applicationsOpen && (
+          <ButtonLink sizeVariant="xl" to="https://forms.gle/59pUiPUCpDrgBCqn7">
+            APPLY NOW
+          </ButtonLink>
+        )}
+      </Hero>
 
       {/* Application Process */}
       <section className="py-24 px-4">

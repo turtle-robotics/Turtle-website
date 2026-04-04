@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import ButtonLink from "../components/ButtonLink";
+import Hero from "../components/Hero";
 
 const DevelopmentPrograms = () => {
   const navigate = useNavigate();
@@ -69,21 +70,12 @@ const DevelopmentPrograms = () => {
         </div>
       </div>
 
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center px-4 pt-20">
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900"></div>
-        <div className="relative text-center max-w-6xl mx-auto z-10">
-          <h1 className="text-6xl md:text-8xl lg:text-9xl tracking-tight text-gray-200 mb-8">
-            <span className="block">DEVELOPMENT</span>
-            <span className="block text-yellow-400">PROGRAMS</span>
-          </h1>
-          <p className="hero-subtitle text-xl md:text-2xl font-light tracking-wide text-gray-400 mb-12 max-w-3xl mx-auto">
-            To provide the resources and environment that enables undergraduate
+      <Hero
+        heading="DEVELOPMENT PROGRAMS"
+        subheading="To provide the resources and environment that enables undergraduate
             engineers to grow outside the classroom through technical lectures
-            and collaborative, hands-on semester projects
-          </p>
-        </div>
-      </section>
+            and collaborative, hands-on semester projects"
+      ></Hero>
 
       {/* Program Sections */}
       {programs.map((program, index) => (

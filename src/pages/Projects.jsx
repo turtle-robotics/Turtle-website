@@ -3,6 +3,7 @@ import { useState, useEffect, useRef, useMemo } from "react";
 import { projects } from "../data/projects";
 import { recommendProjects } from "../utils/aiRecommender";
 import ButtonLink from "../components/ButtonLink";
+import Hero from "../components/Hero";
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -77,21 +78,11 @@ const Projects = () => {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center px-4">
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900"></div>
-        <div className="relative text-center max-w-6xl mx-auto z-10">
-          <h1 className="text-6xl md:text-8xl lg:text-9xl tracking-tight text-gray-200 mb-8">
-            <span className="block">OUR</span>
-            <span className="block text-yellow-400">PROJECTS</span>
-          </h1>
-
-          <p className="hero-subtitle text-xl md:text-2xl font-light tracking-wide text-gray-400 mb-12 max-w-3xl mx-auto">
-            Explore our cutting-edge robotics research projects that are pushing
-            the boundaries of innovation and technology.
-          </p>
-        </div>
-      </section>
+      <Hero
+        heading="OUR PROJECTS"
+        subheading="Explore our cutting-edge robotics research projects that are pushing
+            the boundaries of innovation and technology."
+      ></Hero>
 
       {/* Search Section */}
       <section className="py-8 px-4 bg-gradient-to-br from-gray-800 to-gray-900">
