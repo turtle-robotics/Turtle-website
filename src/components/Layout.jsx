@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Footer from "./Footer";
 import SponsorTicker from "./SponsorTicker";
 import ButtonLink from "./ButtonLink";
+import { Analytics } from "@vercel/analytics/react";
 
 const Layout = ({ children }) => {
   const location = useLocation();
@@ -26,6 +27,7 @@ const Layout = ({ children }) => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
+      <Analytics />
       {/* Navigation */}
       {!showHeader && (
         <button

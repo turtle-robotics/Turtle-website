@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Analytics } from "@vercel/analytics/react";
 import { Link } from "react-router-dom";
 import SponsorTicker from "../components/SponsorTicker";
 import ButtonLink from "../components/ButtonLink";
@@ -12,7 +11,6 @@ const Home = () => {
 
   return (
     <>
-      <Analytics />
       <div className="min-h-screen">
         <Hero
           heading="TURTLE ROBOTICS"
