@@ -28,11 +28,14 @@ export default function Hero({
       )}
 
       <div className="relative text-center max-w-6xl mx-auto z-10">
-        <h1 className="text-6xl md:text-8xl lg:text-9xl tracking-tight text-gray-200 mb-8">
+        <h1
+          className="text-4xl sm:text-5xl md:text-8xl lg:text-9xl tracking-tight text-gray-200 mb-8"
+          style={{ overflowWrap: "anywhere" }}
+        >
           <span className="block">{headingWithoutLastWord}</span>
           <span className="block text-yellow-400">{headingLastWord}</span>
         </h1>
-        <p className="text-xl md:text-2xl font-light tracking-wide text-gray-200 mb-12 max-w-3xl mx-auto">
+        <p className="text-lg sm:text-xl md:text-2xl font-light tracking-wide text-gray-200 mb-12 max-w-3xl mx-auto">
           {subheading}
         </p>
         {children}
