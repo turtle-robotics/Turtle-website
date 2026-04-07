@@ -1,4 +1,5 @@
 import { useState } from "react";
+import SponsorTicker from "../components/SponsorTicker";
 
 const Sponsorship = () => {
   const [showEmailPopup, setShowEmailPopup] = useState(false);
@@ -274,6 +275,7 @@ const Sponsorship = () => {
           </div>
         </div>
       </section>
+      <SponsorTicker />
 
       {showEmailPopup && (
         <div

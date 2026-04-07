@@ -234,6 +234,7 @@ const Home = () => {
             </div>
           </div>
         </section>
+        <SponsorTicker />
       </div>
     </>
   );

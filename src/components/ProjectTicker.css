@@ -10,8 +10,6 @@
 }
 /* ENHANCED GLASSMORPHISM TICKER STYLES */
 .project-ticker-wrapper {
-  position: absolute;
-  bottom: -4rem;
   left: 0;
   right: 0;
   width: 100%;
