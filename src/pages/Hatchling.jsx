@@ -23,7 +23,7 @@ const Hatchling = () => {
     {
       groupName: "SolidWorks (CAD) Competency",
       objectives: [
-        "ObjectDesign custom parts and modify assemblies",
+        "Design custom parts and modify assemblies",
         "Design around manufacturing constraints",
       ],
     },
