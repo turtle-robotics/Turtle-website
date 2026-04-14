@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import ButtonLink from "../components/ButtonLink";
 import Hero from "../components/Hero";
 import PageSection from "../components/PageSection";
@@ -60,24 +59,6 @@ const Apply = () => {
           </div>
         </div>
       </PageSection>
-
-      {/* Contact Section (current) */}
-      <section className="py-24 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl mb-12 text-white drop-shadow-2xl">
-            CONTACT <span className="text-yellow-300">TURTLE</span>
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            For any questions, email us at
-            <a
-              href="mailto:turtlerobotics@gmaill.com"
-              className="text-accent underline ml-2"
-            >
-              turtlerobotics@gmaill.com
-            </a>
-          </p>
-        </div>
-      </section>
 
       {/* What We Look For Section */}
       <PageSection heading="WHAT WE LOOK FOR" colorVariant="A">
