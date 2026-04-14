@@ -42,7 +42,7 @@ const Layout = ({ children }) => {
             to="/showcase"
             className={`text-black hover:text-white underline`}
           >
-            click here for more informtion
+            click here for more information
           </Link>
         </Banner>
       )}
