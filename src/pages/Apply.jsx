@@ -20,7 +20,7 @@ const Apply = () => {
       >
         {applicationsOpen && (
           <ButtonLink sizeVariant="xl" to="https://forms.gle/59pUiPUCpDrgBCqn7">
-            APPLY NOW
+            Apply Now
           </ButtonLink>
         )}
       </Hero>

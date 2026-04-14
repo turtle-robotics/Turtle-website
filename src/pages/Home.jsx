@@ -25,7 +25,7 @@ const Home = () => {
               sizeVariant="large"
               style="primary"
             >
-              EXPLORE PROJECTS
+              Explore Projects
             </ButtonLink>
             <ButtonLink
               className="hero-button"
@@ -33,7 +33,7 @@ const Home = () => {
               sizeVariant="large"
               style="primary-outline"
             >
-              LEARN MORE
+              Learn More
             </ButtonLink>
           </div>
         </Hero>
@@ -109,7 +109,7 @@ const Home = () => {
               style="primary"
               to="https://forms.gle/59pUiPUCpDrgBCqn7"
             >
-              APPLY NOW
+              Apply Now
             </ButtonLink>
           </div>
         </PageSection>

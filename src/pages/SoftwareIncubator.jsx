@@ -222,10 +222,10 @@ const SoftwareIncubator = () => {
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <ButtonLink to="/apply" style="primary" sizeVariant="large">
-              APPLY NOW
+              Apply Now
             </ButtonLink>
             <ButtonLink to="/about" style="primary" sizeVariant="large">
-              LEARN MORE
+              Learn More
             </ButtonLink>
           </div>
         </div>
