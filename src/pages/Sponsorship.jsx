@@ -250,7 +250,10 @@ const Sponsorship = () => {
           </div>
         </div>
       </PageSection>
-      <SponsorTicker />
+
+      <PageSection heading="OUR SPONSORS" colorVariant="B">
+        <SponsorTicker />
+      </PageSection>
 
       {showEmailPopup && (
         <div

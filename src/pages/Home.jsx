@@ -37,7 +37,6 @@ const Home = () => {
             </ButtonLink>
           </div>
         </Hero>
-
         <PageSection heading="ABOUT TURTLE" colorVariant="B">
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             <div className="glass-card p-10 rounded-2xl text-center transition-all duration-300">
@@ -101,7 +100,6 @@ const Home = () => {
             </ul>
           </div>
         </PageSection>
-
         <PageSection heading="READY TO JOIN US" colorVariant="A">
           <div className="mx-auto text-center">
             <ButtonLink
@@ -113,7 +111,6 @@ const Home = () => {
             </ButtonLink>
           </div>
         </PageSection>
-
         {/* Kung Fu Tea Profit Share Popup - Mobile */}
         {/*         
         {ENABLE_SHOWCASE_POPUPS && showMobilePopup && (
@@ -160,7 +157,6 @@ const Home = () => {
             </div>
           </div>
         )} */}
-
         {/* Kung Fu Tea Profit Share Popup - Desktop */}
         {/*         
         {ENABLE_SHOWCASE_POPUPS && (
@@ -191,7 +187,6 @@ const Home = () => {
             </div>
           </a>
         )} */}
-
         <PageSection heading="CALENDAR" colorVariant="B">
           <div className="flex justify-center">
             <div className="rounded-2xl border-4 border-gray-700 shadow-xl bg-gray-900/60 p-4 w-full max-w-[1300px]">
@@ -221,7 +216,9 @@ const Home = () => {
           </div>
         </PageSection>
 
-        <SponsorTicker />
+        <PageSection heading="OUR SPONSORS" colorVariant="A">
+          <SponsorTicker />
+        </PageSection>
       </div>
     </>
   );
