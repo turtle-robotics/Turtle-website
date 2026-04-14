@@ -103,7 +103,7 @@ function Showcase() {
         >
           {/* Title with text shadow for better readability */}
           <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl tracking-tight mb-6 text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">
-            TURTLE Showcase
+            TURTLE <span className="block text-yellow-400">SHOWCASE</span>
           </h1>
 
           {ENABLE_SHOWCASE_COUNTDOWN ? (
