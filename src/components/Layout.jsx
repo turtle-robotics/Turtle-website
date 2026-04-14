@@ -3,10 +3,12 @@ import { useEffect, useState } from "react";
 import Footer from "./Footer";
 import ButtonLink from "./ButtonLink";
 import { Analytics } from "@vercel/analytics/react";
+import Banner from "./Banner";
 
 const Layout = ({ children }) => {
   const location = useLocation();
   const [showHeader, setShowHeader] = useState(true);
+  const [showSiteBanner, setShowSiteBanner] = useState(true);
 
   // Scroll to top when location changes
   useEffect(() => {
@@ -22,15 +24,33 @@ const Layout = ({ children }) => {
     { path: "/apply", label: "Apply" },
   ];
 
-  const sponsorItem = { path: "/sponsorship", label: "Looking to Sponsor?" };
+  const handleDismissBanner = () => {
+    setShowSiteBanner(false);
+  };
+
+  const navTopClass = showSiteBanner ? "top-12" : "top-0";
+  const mainTopPaddingClass = showSiteBanner ? "pt-32" : "pt-16";
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
       <Analytics />
+
+      {showSiteBanner && (
+        <Banner style="primary" onClose={handleDismissBanner}>
+          See our 21 projects at Showcase on 4/17 in ZACH{" "}
+          <Link
+            to="/showcase"
+            className={`text-black hover:text-white underline`}
+          >
+            click here for more informtion
+          </Link>
+        </Banner>
+      )}
+
       {/* Navigation */}
       {!showHeader && (
         <button
-          className="fixed top-4 left-4 z-[100] bg-yellow-500 text-black rounded-full p-3 shadow-lg md:hidden"
+          className={`fixed ${showSiteBanner ? "top-16" : "top-4"} left-4 z-[100] bg-yellow-500 text-black rounded-full p-3 shadow-lg md:hidden`}
           style={{ fontSize: 22, lineHeight: 1 }}
           onClick={() => setShowHeader(true)}
           aria-label="Open header"
@@ -52,7 +72,9 @@ const Layout = ({ children }) => {
         </button>
       )}
       {showHeader && (
-        <nav className="fixed top-0 left-0 right-0 z-50 bg-gray-900/80 backdrop-blur-xl border-b border-gray-700/50 shadow-sm">
+        <nav
+          className={`fixed ${navTopClass} left-0 right-0 z-50 bg-gray-900/80 backdrop-blur-xl border-b border-gray-700/50 shadow-sm`}
+        >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
             <div className="flex flex-col sm:flex-row w-full items-center sm:items-center justify-between min-h-20 gap-2 sm:gap-0">
               <Link
@@ -117,7 +139,7 @@ const Layout = ({ children }) => {
       {/* ...existing code... */}
 
       {/* Main Content */}
-      <main className="pt-16 pb-0 md:pb-0">{children}</main>
+      <main className={`${mainTopPaddingClass} pb-0 md:pb-0`}>{children}</main>
 
       {/* Footer */}
       <Footer />
