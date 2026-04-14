@@ -1,11 +1,15 @@
 export default function PageSection({ heading, colorVariant, children }) {
   // split heading text so that yellow can be applied to last word only
-  const headingWithoutLastWord =
-    heading.length > 1
-      ? heading.trim().split(/\s+/).slice(0, -1).join(" ")
-      : null;
-  const headingLastWord =
-    heading.length > 1 ? heading.trim().split(/\s+/).pop() : heading;
+  var headingWithoutLastWord;
+  var headingLastWord;
+  if (heading) {
+    headingWithoutLastWord =
+      heading.length > 1
+        ? heading.trim().split(/\s+/).slice(0, -1).join(" ")
+        : null;
+    headingLastWord =
+      heading.length > 1 ? heading.trim().split(/\s+/).pop() : heading;
+  }
 
   const bgColorClasses = {
     A: "",
