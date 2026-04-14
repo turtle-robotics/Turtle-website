@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import SponsorTicker from "../components/SponsorTicker";
 import ButtonLink from "../components/ButtonLink";
 import Hero from "../components/Hero";
+import PageSection from "../components/PageSection";
 
 const ENABLE_SHOWCASE_POPUPS = true;
 
@@ -24,7 +25,7 @@ const Home = () => {
               sizeVariant="large"
               style="primary"
             >
-              EXPLORE PROJECTS
+              Explore Projects
             </ButtonLink>
             <ButtonLink
               className="hero-button"
@@ -32,51 +33,45 @@ const Home = () => {
               sizeVariant="large"
               style="primary-outline"
             >
-              LEARN MORE
+              Learn More
             </ButtonLink>
           </div>
         </Hero>
-
-        {/* About Section */}
-        <section className="py-24 px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl text-center mb-20 text-gray-200">
-              ABOUT <span className="text-yellow-400">TURTLE</span>
-            </h2>
-            <div className="grid md:grid-cols-3 gap-8 mb-16">
-              <div className="glass-card p-10 rounded-2xl text-center transition-all duration-300">
-                <div className="text-5xl mb-6">🎓</div>
-                <h3 className="text-xl font-light mb-4 text-gray-200">
-                  Student Leadership
-                </h3>
-                <p className="text-gray-400 font-light leading-relaxed">
-                  Developing the next generation of robotics leaders through
-                  hands-on experience and mentorship.
-                </p>
-              </div>
-              <div className="glass-card p-10 rounded-2xl text-center transition-all duration-300">
-                <div className="text-5xl mb-6">🔬</div>
-                <h3 className="text-xl font-light mb-4 text-gray-200">
-                  Research Excellence
-                </h3>
-                <p className="text-gray-400 font-light leading-relaxed">
-                  Cutting-edge robotics research across multiple domains and
-                  applications.
-                </p>
-              </div>
-              <div className="glass-card p-10 rounded-2xl text-center transition-all duration-300">
-                <div className="text-5xl mb-6">⚙️</div>
-                <h3 className="text-xl font-light mb-4 text-gray-200">
-                  Engineering Development
-                </h3>
-                <p className="text-gray-400 font-light leading-relaxed">
-                  Hands-on engineering experience through real-world robotics
-                  projects, technical workshops, and collaborative problem
-                  solving.
-                </p>
-              </div>
+        <PageSection heading="ABOUT TURTLE" colorVariant="B">
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
+            <div className="glass-card p-10 rounded-2xl text-center transition-all duration-300">
+              <div className="text-5xl mb-6">🎓</div>
+              <h3 className="text-xl font-light mb-4 text-gray-200">
+                Student Leadership
+              </h3>
+              <p className="text-gray-400 font-light leading-relaxed">
+                Developing the next generation of robotics leaders through
+                hands-on experience and mentorship.
+              </p>
+            </div>
+            <div className="glass-card p-10 rounded-2xl text-center transition-all duration-300">
+              <div className="text-5xl mb-6">🔬</div>
+              <h3 className="text-xl font-light mb-4 text-gray-200">
+                Research Excellence
+              </h3>
+              <p className="text-gray-400 font-light leading-relaxed">
+                Cutting-edge robotics research across multiple domains and
+                applications.
+              </p>
+            </div>
+            <div className="glass-card p-10 rounded-2xl text-center transition-all duration-300">
+              <div className="text-5xl mb-6">⚙️</div>
+              <h3 className="text-xl font-light mb-4 text-gray-200">
+                Engineering Development
+              </h3>
+              <p className="text-gray-400 font-light leading-relaxed">
+                Hands-on engineering experience through real-world robotics
+                projects, technical workshops, and collaborative problem
+                solving.
+              </p>
             </div>
           </div>
+
           {/* Competition Accolades - Large Rectangle */}
           <div className="glass-card p-10 rounded-2xl text-center transition-all duration-300 mt-8 max-w-3xl mx-auto">
             <div className="text-5xl mb-6">🏆</div>
@@ -104,24 +99,18 @@ const Home = () => {
               </li>
             </ul>
           </div>
-        </section>
-
-        {/* Contact Section */}
-        <section className="py-24 px-4 bg-gradient-to-br from-gray-800 to-gray-900">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl mb-12 text-gray-200">
-              READY TO <span className="text-yellow-400">JOIN US</span>
-            </h2>
+        </PageSection>
+        <PageSection heading="READY TO JOIN US" colorVariant="A">
+          <div className="mx-auto text-center">
             <ButtonLink
               sizeVariant="xl"
               style="primary"
               to="https://forms.gle/59pUiPUCpDrgBCqn7"
             >
-              APPLY NOW
+              Apply Now
             </ButtonLink>
           </div>
-        </section>
-
+        </PageSection>
         {/* Kung Fu Tea Profit Share Popup - Mobile */}
         {/*         
         {ENABLE_SHOWCASE_POPUPS && showMobilePopup && (
@@ -168,7 +157,6 @@ const Home = () => {
             </div>
           </div>
         )} */}
-
         {/* Kung Fu Tea Profit Share Popup - Desktop */}
         {/*         
         {ENABLE_SHOWCASE_POPUPS && (
@@ -199,42 +187,38 @@ const Home = () => {
             </div>
           </a>
         )} */}
-
-        {/* Calendar Section */}
-        <section className="py-24 px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl text-center mb-10 text-gray-200">
-              Calendar
-            </h2>
-            <div className="flex justify-center">
-              <div className="rounded-2xl border-4 border-gray-700 shadow-xl bg-gray-900/60 p-4 w-full max-w-[1300px]">
-                <div
-                  className="relative w-full"
-                  style={{ paddingBottom: "120%", height: 0 }}
-                >
-                  <iframe
-                    src="https://calendar.google.com/calendar/embed?src=turtlerobotics%40gmail.com&ctz=America%2FChicago"
-                    style={{
-                      border: 0,
-                      borderRadius: "1rem",
-                      background: "transparent",
-                      position: "absolute",
-                      top: 0,
-                      left: 0,
-                      width: "100%",
-                      height: "100%",
-                    }}
-                    frameBorder="0"
-                    scrolling="no"
-                    title="TURTLE Google Calendar"
-                    allowFullScreen
-                  ></iframe>
-                </div>
+        <PageSection heading="CALENDAR" colorVariant="B">
+          <div className="flex justify-center">
+            <div className="rounded-2xl border-4 border-gray-700 shadow-xl bg-gray-900/60 p-4 w-full max-w-[1300px]">
+              <div
+                className="relative w-full"
+                style={{ paddingBottom: "120%", height: 0 }}
+              >
+                <iframe
+                  src="https://calendar.google.com/calendar/embed?src=turtlerobotics%40gmail.com&ctz=America%2FChicago"
+                  style={{
+                    border: 0,
+                    borderRadius: "1rem",
+                    background: "transparent",
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    width: "100%",
+                    height: "100%",
+                  }}
+                  frameBorder="0"
+                  scrolling="no"
+                  title="TURTLE Google Calendar"
+                  allowFullScreen
+                ></iframe>
               </div>
             </div>
           </div>
-        </section>
-        <SponsorTicker />
+        </PageSection>
+
+        <PageSection heading="OUR SPONSORS" colorVariant="A">
+          <SponsorTicker />
+        </PageSection>
       </div>
     </>
   );

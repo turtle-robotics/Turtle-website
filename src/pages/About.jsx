@@ -2,6 +2,7 @@ import { useState } from "react";
 import StatisticsCard from "../components/StatisticsCard";
 import TextLink from "../components/TextLink";
 import Hero from "../components/Hero";
+import PageSection from "../components/PageSection";
 
 const About = () => {
   const statistics = [
@@ -151,124 +152,113 @@ const About = () => {
       ></Hero>
 
       {/* Statistics Section */}
-      <section className="py-24 px-4 bg-gradient-to-br from-gray-800 to-gray-900">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl text-center mb-20 text-gray-200">
-            OUR <span className="text-yellow-400">IMPACT</span>
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {statistics.map((stat, index) => (
-              <StatisticsCard key={index} {...stat} />
-            ))}
-          </div>
+      <PageSection heading="OUR IMPACT" colorVariant="B">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {statistics.map((stat, index) => (
+            <StatisticsCard key={index} {...stat} />
+          ))}
         </div>
-      </section>
+      </PageSection>
 
       {/* Leadership Section */}
-      <section className="py-24 px-4 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl text-center mb-20 text-gray-200">
-            OUR <span className="text-yellow-400">TEAM</span>
-          </h2>
-
-          {/* Executive Roles Accordion */}
-          <div className="mb-12">
-            <button
-              onClick={() => toggleSection("executive")}
-              className="w-full text-left font-light text-xl text-gray-200 mb-4"
-            >
-              Executive Roles {openSection.executive ? "▲" : "▼"}
-            </button>
-            {openSection.executive && (
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                {renderLeadership([
-                  "President",
-                  "Internal VP",
-                  "External VP",
-                  "Project VP",
-                  "Development VP",
-                ])}
-              </div>
-            )}
-          </div>
-
-          {/* Internal Branch Accordion */}
-          <div className="mb-12">
-            <button
-              onClick={() => toggleSection("internal")}
-              className="w-full text-left font-light text-xl text-gray-200 mb-4"
-            >
-              Internal Branch {openSection.internal ? "▲" : "▼"}
-            </button>
-            {openSection.internal && (
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                {renderLeadership([
-                  "Internal VP",
-                  "Finance",
-                  "Logistics",
-                  "Lab Quality Chair",
-                  "Documentation",
-                ])}
-              </div>
-            )}
-          </div>
-
-          {/* External Branch Accordion */}
-          <div className="mb-12">
-            <button
-              onClick={() => toggleSection("external")}
-              className="w-full text-left font-light text-xl text-gray-200 mb-4"
-            >
-              External Branch {openSection.external ? "▲" : "▼"}
-            </button>
-            {openSection.external && (
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                {renderLeadership([
-                  "External VP",
-                  "Public Relations",
-                  "Webmaster",
-                  "Corporate Relations",
-                  "Events",
-                ])}
-              </div>
-            )}
-          </div>
-
-          {/* Projects Branch Accordion */}
-          <div className="mb-12">
-            <button
-              onClick={() => toggleSection("projects")}
-              className="w-full text-left font-light text-xl text-gray-200 mb-4"
-            >
-              Projects Branch {openSection.projects ? "▲" : "▼"}
-            </button>
-            {openSection.projects && (
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                {renderLeadership(["Project VP", "Design Review Chair"])}
-              </div>
-            )}
-          </div>
-
-          {/* Development Branch Accordion */}
-          <div className="mb-12">
-            <button
-              onClick={() => toggleSection("development")}
-              className="w-full text-left font-light text-xl text-gray-200 mb-4"
-            >
-              Development Branch {openSection.development ? "▲" : "▼"}
-            </button>
-            {openSection.development && (
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                {renderLeadership([
-                  "Development VP",
-                  "Workshops",
-                  "Hatchling Director",
-                ])}
-              </div>
-            )}
-          </div>
+      <PageSection heading="OUR TEAM" colorVariant="A">
+        {/* Executive Roles Accordion */}
+        <div className="mb-12">
+          <button
+            onClick={() => toggleSection("executive")}
+            className="w-full text-left font-light text-xl text-gray-200 mb-4"
+          >
+            Executive Roles {openSection.executive ? "▲" : "▼"}
+          </button>
+          {openSection.executive && (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              {renderLeadership([
+                "President",
+                "Internal VP",
+                "External VP",
+                "Project VP",
+                "Development VP",
+              ])}
+            </div>
+          )}
         </div>
-      </section>
+
+        {/* Internal Branch Accordion */}
+        <div className="mb-12">
+          <button
+            onClick={() => toggleSection("internal")}
+            className="w-full text-left font-light text-xl text-gray-200 mb-4"
+          >
+            Internal Branch {openSection.internal ? "▲" : "▼"}
+          </button>
+          {openSection.internal && (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              {renderLeadership([
+                "Internal VP",
+                "Finance",
+                "Logistics",
+                "Lab Quality Chair",
+                "Documentation",
+              ])}
+            </div>
+          )}
+        </div>
+
+        {/* External Branch Accordion */}
+        <div className="mb-12">
+          <button
+            onClick={() => toggleSection("external")}
+            className="w-full text-left font-light text-xl text-gray-200 mb-4"
+          >
+            External Branch {openSection.external ? "▲" : "▼"}
+          </button>
+          {openSection.external && (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              {renderLeadership([
+                "External VP",
+                "Public Relations",
+                "Webmaster",
+                "Corporate Relations",
+                "Events",
+              ])}
+            </div>
+          )}
+        </div>
+
+        {/* Projects Branch Accordion */}
+        <div className="mb-12">
+          <button
+            onClick={() => toggleSection("projects")}
+            className="w-full text-left font-light text-xl text-gray-200 mb-4"
+          >
+            Projects Branch {openSection.projects ? "▲" : "▼"}
+          </button>
+          {openSection.projects && (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              {renderLeadership(["Project VP", "Design Review Chair"])}
+            </div>
+          )}
+        </div>
+
+        {/* Development Branch Accordion */}
+        <div className="mb-12">
+          <button
+            onClick={() => toggleSection("development")}
+            className="w-full text-left font-light text-xl text-gray-200 mb-4"
+          >
+            Development Branch {openSection.development ? "▲" : "▼"}
+          </button>
+          {openSection.development && (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              {renderLeadership([
+                "Development VP",
+                "Workshops",
+                "Hatchling Director",
+              ])}
+            </div>
+          )}
+        </div>
+      </PageSection>
     </div>
   );
 };

@@ -1,5 +1,7 @@
 import { useState } from "react";
+import PageSection from "../components/PageSection";
 import SponsorTicker from "../components/SponsorTicker";
+import Hero from "../components/Hero";
 
 const Sponsorship = () => {
   const [showEmailPopup, setShowEmailPopup] = useState(false);
@@ -64,202 +66,175 @@ const Sponsorship = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center px-4">
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-900/50 via-gray-800/50 to-gray-900/50"></div>
-        <div className="relative text-center max-w-6xl mx-auto z-10">
-          <h1 className="text-6xl md:text-8xl lg:text-9xl tracking-tight text-gray-200 mb-8">
-            <span className="block">SPONSOR</span>
-            <span className="block text-yellow-400">TURTLE</span>
-          </h1>
-
-          <p className="hero-subtitle text-xl md:text-2xl font-light tracking-wide text-gray-400 mb-12 max-w-3xl mx-auto">
-            Partner with the next generation of robotics innovators. Support
-            cutting-edge research and shape the future of TURTLE.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button
-              type="button"
-              className="shadow-lg bg-yellow-500 text-black px-10 py-5 rounded-xl font-medium hover:scale-105 transition-all duration-300"
-              onClick={() => {
-                const section = document.getElementById("sponsorship-tiers");
-                if (section) section.scrollIntoView({ behavior: "smooth" });
-              }}
-            >
-              View Sponsorship Tiers
-            </button>
-            <button
-              type="button"
-              className="border-2 border-yellow-500 text-yellow-600 px-10 py-5 rounded-xl font-medium hover:scale-105 transition-all duration-300"
-              onClick={() => {
-                const section = document.getElementById("contact-section");
-                if (section) section.scrollIntoView({ behavior: "smooth" });
-                setShowEmailPopup(true);
-              }}
-            >
-              Contact Us
-            </button>
-          </div>
+    <div className="min-h-screen">
+      <Hero
+        heading="SPONSOR TURTLE"
+        subheading="Partner with the next generation of robotics innovators. Support cutting-edge research and shape the future of TURTLE."
+      >
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <button
+            type="button"
+            className="shadow-lg bg-yellow-500 text-black px-10 py-5 rounded-xl font-medium hover:scale-105 transition-all duration-300"
+            onClick={() => {
+              const section = document.getElementById("sponsorship-tiers");
+              if (section) section.scrollIntoView({ behavior: "smooth" });
+            }}
+          >
+            View Sponsorship Tiers
+          </button>
+          <button
+            type="button"
+            className="border-2 border-yellow-500 text-yellow-600 px-10 py-5 rounded-xl font-medium hover:scale-105 transition-all duration-300"
+            onClick={() => {
+              const section = document.getElementById("contact-section");
+              if (section) section.scrollIntoView({ behavior: "smooth" });
+              setShowEmailPopup(true);
+            }}
+          >
+            Contact Us
+          </button>
         </div>
-      </section>
+      </Hero>
 
       {/* Impact Stats */}
-      <section className="py-16 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {impactStats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-yellow-400 mb-2">
-                  {stat.number}
-                </div>
-                <div className="text-sm font-light text-gray-400">
-                  {stat.label}
-                </div>
+      <PageSection colorVariant="B">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          {impactStats.map((stat, index) => (
+            <div key={index} className="text-center">
+              <div className="text-4xl md:text-5xl font-bold text-yellow-400 mb-2">
+                {stat.number}
               </div>
-            ))}
-          </div>
+              <div className="text-sm font-light text-gray-400">
+                {stat.label}
+              </div>
+            </div>
+          ))}
         </div>
-      </section>
+      </PageSection>
 
       {/* Why Sponsor Section */}
-      <section className="py-16 px-4 bg-gray-800">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl text-gray-200 mb-8">
-              Why Sponsor <span className="text-yellow-400">TURTLE</span>?
-            </h2>
-            <p className="text-xl font-light text-gray-400 max-w-3xl mx-auto">
-              Join us in advancing robotics technology while gaining access to
-              top engineering talent and innovative research opportunities.
+      <PageSection heading="WHY SPONSOR TURTLE" colorVariant="A">
+        <div className="text-center mb-16">
+          <p className="text-xl font-light text-gray-400 max-w-3xl mx-auto">
+            Join us in advancing robotics technology while gaining access to top
+            engineering talent and innovative research opportunities.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8">
+          <div className="sponsor-section text-center p-8 rounded-2xl bg-gradient-to-br from-gray-700 to-gray-600">
+            <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-amber-500 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg
+                className="w-8 h-8 text-white"
+                fill="none"
+                stroke="black"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                />
+              </svg>
+            </div>
+            <h3 className="text-2xl font-light text-gray-200 mb-4">
+              Innovation Access
+            </h3>
+            <p className="text-gray-400">
+              Gain early insight into the latest in robotics development as our
+              diverse and talented teams work to innovate and change the world.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="sponsor-section text-center p-8 rounded-2xl bg-gradient-to-br from-gray-700 to-gray-600">
-              <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-amber-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg
-                  className="w-8 h-8 text-white"
-                  fill="none"
-                  stroke="black"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
-                  />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-light text-gray-200 mb-4">
-                Innovation Access
-              </h3>
-              <p className="text-gray-400">
-                Gain early insight into the latest in robotics development as
-                our diverse and talented teams work to innovate and change the
-                world.
-              </p>
+          <div className="sponsor-section text-center p-8 rounded-2xl bg-gradient-to-br from-gray-700 to-gray-600">
+            <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-amber-500 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg
+                className="w-8 h-8 text-white"
+                fill="none"
+                stroke="black"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                />
+              </svg>
             </div>
+            <h3 className="text-2xl font-light text-gray-200 mb-4">
+              Talent Pipeline
+            </h3>
+            <p className="text-gray-400">
+              As one of the largest student-led robotics organizations in Texas,
+              we provide a unique opportunity to connect with future engineers
+              and recruit students for internships and co-ops from our vast
+              catalogue of projects.
+            </p>
+          </div>
 
-            <div className="sponsor-section text-center p-8 rounded-2xl bg-gradient-to-br from-gray-700 to-gray-600">
-              <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-amber-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg
-                  className="w-8 h-8 text-white"
-                  fill="none"
-                  stroke="black"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
-                  />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-light text-gray-200 mb-4">
-                Talent Pipeline
-              </h3>
-              <p className="text-gray-400">
-                As one of the largest student-led robotics organizations in
-                Texas, we provide a unique opportunity to connect with future
-                engineers and recruit students for internships and co-ops from
-                our vast catalogue of projects.
-              </p>
+          <div className="sponsor-section text-center p-8 rounded-2xl bg-gradient-to-br from-gray-700 to-gray-600">
+            <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-amber-500 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg
+                className="w-8 h-8 text-white"
+                fill="none"
+                stroke="black"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M13 10V3L4 14h7v7l9-11h-7z"
+                />
+              </svg>
             </div>
-
-            <div className="sponsor-section text-center p-8 rounded-2xl bg-gradient-to-br from-gray-700 to-gray-600">
-              <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-amber-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg
-                  className="w-8 h-8 text-white"
-                  fill="none"
-                  stroke="black"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M13 10V3L4 14h7v7l9-11h-7z"
-                  />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-light text-gray-200 mb-4">
-                Brand Recognition
-              </h3>
-              <p className="text-gray-400">
-                With a platinum level sponsorship, your products and logo can be
-                featured directly on our projects, reaching tens of thousands of
-                students and engineers across Texas and beyond.
-              </p>
-            </div>
+            <h3 className="text-2xl font-light text-gray-200 mb-4">
+              Brand Recognition
+            </h3>
+            <p className="text-gray-400">
+              With a platinum level sponsorship, your products and logo can be
+              featured directly on our projects, reaching tens of thousands of
+              students and engineers across Texas and beyond.
+            </p>
           </div>
         </div>
-      </section>
+      </PageSection>
 
       {/* Sponsorship Tiers */}
-      <section id="sponsorship-tiers" className="py-16 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl text-gray-200 mb-8">
-              Sponsorship <span className="text-yellow-400">Tiers</span>
-            </h2>
-            <p className="text-xl font-light text-gray-400 max-w-3xl mx-auto">
-              Choose the sponsorship level that best fits your organization's
-              goals and budget.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {sponsorshipTiers.map((tier, index) => (
-              <div key={index} className="sponsor-section group">
-                <div
-                  className={`${tier.color} p-8 rounded-2xl text-black shadow-lg`}
-                >
-                  <h3 className="text-2xl font-light mb-2">{tier.name}</h3>
-                  <div className="text-3xl font-bold mb-6">{tier.amount}</div>
-                  <ul className="space-y-3 list-disc list-outside pl-5">
-                    {tier.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="text-sm">
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            ))}
-          </div>
+      <PageSection heading="SPONSORSHIP TIERS" colorVariant="B">
+        <div id="sponsorship-tiers" className="text-center mb-16">
+          <p className="text-xl font-light text-gray-400 max-w-3xl mx-auto">
+            Choose the sponsorship level that best fits your organization's
+            goals and budget.
+          </p>
         </div>
-      </section>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {sponsorshipTiers.map((tier, index) => (
+            <div key={index} className="sponsor-section group">
+              <div
+                className={`${tier.color} p-8 rounded-2xl text-black shadow-lg`}
+              >
+                <h3 className="text-2xl font-light mb-2">{tier.name}</h3>
+                <div className="text-3xl font-bold mb-6">{tier.amount}</div>
+                <ul className="space-y-3 list-disc list-outside pl-5">
+                  {tier.benefits.map((benefit, benefitIndex) => (
+                    <li key={benefitIndex} className="text-sm">
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
+        </div>
+      </PageSection>
 
       {/* Contact Section */}
-      <section id="contact-section" className="py-16 px-4 bg-gray-800">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl text-gray-200 mb-8">
-            Ready to <span className="text-yellow-400">Partner</span>?
-          </h2>
+      <PageSection heading="READY TO PARTNER" colorVariant="A">
+        <div id="contact-section" className="max-w-4xl mx-auto text-center">
           <p className="text-xl font-light text-gray-400 mb-8 max-w-2xl mx-auto">
             Let's discuss how your organization can support the future of
             robotics innovation while gaining valuable benefits.
@@ -274,8 +249,11 @@ const Sponsorship = () => {
             </button>
           </div>
         </div>
-      </section>
-      <SponsorTicker />
+      </PageSection>
+
+      <PageSection heading="OUR SPONSORS" colorVariant="B">
+        <SponsorTicker />
+      </PageSection>
 
       {showEmailPopup && (
         <div

@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
 import ButtonLink from "../components/ButtonLink";
 import Hero from "../components/Hero";
+import PageSection from "../components/PageSection";
 
 const Apply = () => {
   // ✅ Toggle this to open/close applications
@@ -20,162 +20,131 @@ const Apply = () => {
       >
         {applicationsOpen && (
           <ButtonLink sizeVariant="xl" to="https://forms.gle/59pUiPUCpDrgBCqn7">
-            APPLY NOW
+            Apply Now
           </ButtonLink>
         )}
       </Hero>
 
       {/* Application Process */}
-      <section className="py-24 px-4">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl text-center mb-20 text-gray-200">
-            JOIN TURTLE
-          </h2>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            <div className="glass-card p-10 rounded-2xl text-center transition-all duration-300">
-              <div className="text-5xl mb-6">📝</div>
-              <h3 className="text-xl font-light mb-4 text-gray-200">
-                Submit Application
-              </h3>
-              <p className="text-gray-400 font-light leading-relaxed">
-                Complete our online application form to join Hatchlings or
-                Advanced Project teams.
-              </p>
-            </div>
-            <div className="glass-card p-10 rounded-2xl text-center transition-all duration-300">
-              <div className="text-5xl mb-6">🤝</div>
-              <h3 className="text-xl font-light mb-4 text-gray-200">
-                Open House
-              </h3>
-              <p className="text-gray-400 font-light leading-relaxed">
-                Meet with our team leaders to discuss your goals and project
-                preferences.
-              </p>
-            </div>
-            <div className="glass-card p-10 rounded-2xl text-center transition-all duration-300">
-              <div className="text-5xl mb-6">🚀</div>
-              <h3 className="text-xl font-light mb-4 text-gray-200">
-                Start Contributing
-              </h3>
-              <p className="text-gray-400 font-light leading-relaxed">
-                Begin working on exciting robotics projects with TURTLE.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Section (current) */}
-      <section className="py-24 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl mb-12 text-white drop-shadow-2xl">
-            CONTACT <span className="text-yellow-300">TURTLE</span>
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            For any questions, email us at
-            <a
-              href="mailto:turtlerobotics@gmaill.com"
-              className="text-accent underline ml-2"
-            >
-              turtlerobotics@gmaill.com
-            </a>
-          </p>
-        </div>
-      </section>
-
-      {/* What We Look For Section */}
-      <section className="py-24 px-4 bg-gradient-to-br from-gray-800 to-gray-900">
-        <div className="max-w-6xl mx-auto">
-          {/* Main Heading */}
-          <h2 className="text-4xl md:text-5xl lg:text-6xl text-center mb-16 text-gray-200">
-            WHAT WE <span className="text-accent">LOOK FOR</span>
-          </h2>
-
-          {/* Hatchling Subsection */}
-          <div className="mb-20 text-center max-w-4xl mx-auto">
-            <h3 className="text-2xl md:text-3xl font-light text-gray-200 mb-6">
-              Hatchling
+      <PageSection heading="JOIN TURTLE" colorVariant="B">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="glass-card p-10 rounded-2xl text-center transition-all duration-300">
+            <div className="text-5xl mb-6">📝</div>
+            <h3 className="text-xl font-light mb-4 text-gray-200">
+              Submit Application
             </h3>
-            <p className="text-lg font-light text-gray-400 leading-relaxed">
-              No skills or prior experience required. The Hatchling Program is
-              designed for students of all backgrounds who are eager to learn,
-              explore robotics, and grow alongside a supportive team.
+            <p className="text-gray-400 font-light leading-relaxed">
+              Complete our online application form to join Hatchlings or
+              Advanced Project teams.
             </p>
           </div>
-
-          {/* Advanced Projects Subsection */}
-          <div>
-            <h3 className="text-2xl md:text-3xl font-light text-gray-200 mb-12 text-center">
-              Advanced Projects
+          <div className="glass-card p-10 rounded-2xl text-center transition-all duration-300">
+            <div className="text-5xl mb-6">🤝</div>
+            <h3 className="text-xl font-light mb-4 text-gray-200">
+              Open House
             </h3>
-            <div className="grid md:grid-cols-2 gap-12">
-              <div>
-                <h4 className="text-xl font-light text-gray-200 mb-6">
-                  Technical Skills
-                </h4>
-                <ul className="space-y-4">
-                  <li className="flex items-start">
-                    <span className="text-accent mr-3">•</span>
-                    <span className="text-gray-400 font-light">
-                      Programming experience (Python, C++, ROS)
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-accent mr-3">•</span>
-                    <span className="text-gray-400 font-light">
-                      Understanding of robotics fundamentals
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-accent mr-3">•</span>
-                    <span className="text-gray-400 font-light">
-                      Experience with hardware and electronics
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-accent mr-3">•</span>
-                    <span className="text-gray-400 font-light">
-                      Knowledge of control systems and algorithms
-                    </span>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="text-xl font-light text-gray-200 mb-6">
-                  Personal Qualities
-                </h4>
-                <ul className="space-y-4">
-                  <li className="flex items-start">
-                    <span className="text-accent mr-3">•</span>
-                    <span className="text-gray-400 font-light">
-                      Strong problem-solving abilities
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-accent mr-3">•</span>
-                    <span className="text-gray-400 font-light">
-                      Excellent teamwork and communication
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-accent mr-3">•</span>
-                    <span className="text-gray-400 font-light">
-                      Passion for robotics and innovation
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-accent mr-3">•</span>
-                    <span className="text-gray-400 font-light">
-                      Commitment to learning and growth
-                    </span>
-                  </li>
-                </ul>
-              </div>
+            <p className="text-gray-400 font-light leading-relaxed">
+              Meet with our team leaders to discuss your goals and project
+              preferences.
+            </p>
+          </div>
+          <div className="glass-card p-10 rounded-2xl text-center transition-all duration-300">
+            <div className="text-5xl mb-6">🚀</div>
+            <h3 className="text-xl font-light mb-4 text-gray-200">
+              Start Contributing
+            </h3>
+            <p className="text-gray-400 font-light leading-relaxed">
+              Begin working on exciting robotics projects with TURTLE.
+            </p>
+          </div>
+        </div>
+      </PageSection>
+
+      {/* What We Look For Section */}
+      <PageSection heading="WHAT WE LOOK FOR" colorVariant="A">
+        {" "}
+        {/* Hatchling Subsection */}
+        <div className="mb-20 text-center max-w-4xl mx-auto">
+          <h3 className="text-2xl md:text-3xl font-light text-gray-200 mb-6">
+            Hatchling
+          </h3>
+          <p className="text-lg font-light text-gray-400 leading-relaxed">
+            No skills or prior experience required. The Hatchling Program is
+            designed for students of all backgrounds who are eager to learn,
+            explore robotics, and grow alongside a supportive team.
+          </p>
+        </div>
+        {/* Advanced Projects Subsection */}
+        <div>
+          <h3 className="text-2xl md:text-3xl font-light text-gray-200 mb-12 text-center">
+            Advanced Projects
+          </h3>
+          <div className="grid md:grid-cols-2 gap-12">
+            <div>
+              <h4 className="text-xl font-light text-gray-200 mb-6">
+                Technical Skills
+              </h4>
+              <ul className="space-y-4">
+                <li className="flex items-start">
+                  <span className="text-accent mr-3">•</span>
+                  <span className="text-gray-400 font-light">
+                    Programming experience (Python, C++, ROS)
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-accent mr-3">•</span>
+                  <span className="text-gray-400 font-light">
+                    Understanding of robotics fundamentals
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-accent mr-3">•</span>
+                  <span className="text-gray-400 font-light">
+                    Experience with hardware and electronics
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-accent mr-3">•</span>
+                  <span className="text-gray-400 font-light">
+                    Knowledge of control systems and algorithms
+                  </span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-xl font-light text-gray-200 mb-6">
+                Personal Qualities
+              </h4>
+              <ul className="space-y-4">
+                <li className="flex items-start">
+                  <span className="text-accent mr-3">•</span>
+                  <span className="text-gray-400 font-light">
+                    Strong problem-solving abilities
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-accent mr-3">•</span>
+                  <span className="text-gray-400 font-light">
+                    Excellent teamwork and communication
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-accent mr-3">•</span>
+                  <span className="text-gray-400 font-light">
+                    Passion for robotics and innovation
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-accent mr-3">•</span>
+                  <span className="text-gray-400 font-light">
+                    Commitment to learning and growth
+                  </span>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
-      </section>
+      </PageSection>
     </div>
   );
 };

@@ -100,100 +100,93 @@ const SponsorTicker = () => {
   const duplicatedLogos = [...logos, ...logos, ...logos, ...logos];
 
   return (
-    <section className="pt-24 px-4 bg-gradient-to-br from-gray-800 to-gray-900">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl md:text-5xl lg:text-6xl text-center mb-20 text-gray-200">
-          OUR <span className="text-accent">SPONSORS</span>
-        </h2>
-      </div>
-      <div
-        className="project-ticker-wrapper"
-        style={{
-          pointerEvents: "auto",
-          position: "relative",
-          // zIndex: 10,
-          marginBottom: 0,
-        }}
-      >
-        <div className="project-ticker-container">
-          <div
-            className="project-ticker-track"
-            style={{ animationDuration: "90s" }}
-          >
-            {duplicatedLogos.map((logo, index) => {
-              // Custom scaling and rectangle size for specific logos
-              let customImgStyle = {
-                maxHeight: 40,
-                maxWidth: 120,
-                width: "auto",
-                height: "auto",
-                objectFit: "contain",
-                background: "#fff",
-                borderRadius: "999px",
-                padding: 2,
-                margin: "0 auto",
-                display: "block",
-              };
-              if (logo.name === "14 & Elm") {
-                customImgStyle.maxHeight = 60;
-                customImgStyle.maxWidth = 140;
-              }
-              if (logo.name === "L3 Harris") {
-                customImgStyle.maxHeight = 90;
-                customImgStyle.maxWidth = 220;
-              }
-              if (logo.name === "Williams Energy Partners") {
-                customImgStyle.maxHeight = 90;
-                customImgStyle.maxWidth = 220;
-              }
-              if (logo.name === "TAMU Mechanical Engineering") {
-                customImgStyle.maxHeight = 60;
-                customImgStyle.maxWidth = 220;
-              }
-              if (logo.name === "TAMU SEC") {
-                customImgStyle.maxHeight = 60;
-                customImgStyle.maxWidth = 220;
-              }
-              return (
-                <a
-                  key={`${logo.id}-${index}`}
-                  className="project-ticker-block glass-effect flex items-center justify-center"
-                  style={{
-                    width: 120,
-                    height: 60,
-                    background: "#fff",
-                    borderRadius: "999px",
-                    padding: 0,
-                    boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.10)",
-                    border: "1.5px solid #e5e7eb",
-                    margin: "0 0.25rem",
-                    transition:
-                      "transform 0.3s cubic-bezier(0.4,0,0.2,1), box-shadow 0.3s cubic-bezier(0.4,0,0.2,1)",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    backgroundClip: "padding-box",
-                    overflow: "hidden",
-                  }}
-                  href={logo.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  tabIndex={0}
-                  aria-label={`Visit ${logo.name} website`}
-                >
-                  <img
-                    src={logo.url}
-                    alt={logo.alt}
-                    style={customImgStyle}
-                    className="sponsor-logo"
-                  />
-                </a>
-              );
-            })}
-          </div>
+    <div
+      className="project-ticker-wrapper"
+      style={{
+        pointerEvents: "auto",
+        position: "relative",
+        // zIndex: 10,
+        marginBottom: 0,
+      }}
+    >
+      <div className="project-ticker-container">
+        <div
+          className="project-ticker-track"
+          style={{ animationDuration: "90s" }}
+        >
+          {duplicatedLogos.map((logo, index) => {
+            // Custom scaling and rectangle size for specific logos
+            let customImgStyle = {
+              maxHeight: 40,
+              maxWidth: 120,
+              width: "auto",
+              height: "auto",
+              objectFit: "contain",
+              background: "#fff",
+              borderRadius: "999px",
+              padding: 2,
+              margin: "0 auto",
+              display: "block",
+            };
+            if (logo.name === "14 & Elm") {
+              customImgStyle.maxHeight = 60;
+              customImgStyle.maxWidth = 140;
+            }
+            if (logo.name === "L3 Harris") {
+              customImgStyle.maxHeight = 90;
+              customImgStyle.maxWidth = 220;
+            }
+            if (logo.name === "Williams Energy Partners") {
+              customImgStyle.maxHeight = 90;
+              customImgStyle.maxWidth = 220;
+            }
+            if (logo.name === "TAMU Mechanical Engineering") {
+              customImgStyle.maxHeight = 60;
+              customImgStyle.maxWidth = 220;
+            }
+            if (logo.name === "TAMU SEC") {
+              customImgStyle.maxHeight = 60;
+              customImgStyle.maxWidth = 220;
+            }
+            return (
+              <a
+                key={`${logo.id}-${index}`}
+                className="project-ticker-block glass-effect flex items-center justify-center"
+                style={{
+                  width: 120,
+                  height: 60,
+                  background: "#fff",
+                  borderRadius: "999px",
+                  padding: 0,
+                  boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.10)",
+                  border: "1.5px solid #e5e7eb",
+                  margin: "0 0.25rem",
+                  transition:
+                    "transform 0.3s cubic-bezier(0.4,0,0.2,1), box-shadow 0.3s cubic-bezier(0.4,0,0.2,1)",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  backgroundClip: "padding-box",
+                  overflow: "hidden",
+                }}
+                href={logo.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                tabIndex={0}
+                aria-label={`Visit ${logo.name} website`}
+              >
+                <img
+                  src={logo.url}
+                  alt={logo.alt}
+                  style={customImgStyle}
+                  className="sponsor-logo"
+                />
+              </a>
+            );
+          })}
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

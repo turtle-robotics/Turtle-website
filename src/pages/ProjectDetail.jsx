@@ -28,7 +28,7 @@ const ProjectDetail = () => {
   }, [project]);
 
   return (
-    <div className="min-h-screen bg-gray-900">
+    <div className="min-h-screen">
       <div className="max-w-6xl mx-auto px-4 py-10">
         {/* Back Button */}
         <Link
@@ -60,7 +60,7 @@ const ProjectDetail = () => {
             {project.subtitle}
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3">
-            <span className="text-xs font-light text-white bg-yellow-500 px-3 py-1 rounded-full">
+            <span className="text-xs font-light text-black bg-yellow-500 px-3 py-1 rounded-full">
               {project.category}
             </span>
             {project.tags?.slice(0, 4).map((tag, i) => (
