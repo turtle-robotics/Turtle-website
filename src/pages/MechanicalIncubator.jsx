@@ -150,7 +150,7 @@ const MechanicalIncubator = () => {
       ></Hero>
 
       {/* Mission Statement Section */}
-      <PageSection heading="PREVIEW WORKSHOP" colorVariant="A">
+      <PageSection heading="PREVIEW WORKSHOP" colorVariant="B">
         <div className="glass-card p-12 rounded-2xl text-center">
           <p className="text-xl md:text-2xl font-light text-gray-400 leading-relaxed max-w-4xl mx-auto">
             TURTLE is thrilled to announce the launch of our Mechanical and
@@ -164,7 +164,7 @@ const MechanicalIncubator = () => {
       </PageSection>
 
       {/* Learning Objectives and Schedule Section */}
-      <PageSection heading="LEARNING OBJECTIVES & SCHEDULE" colorVariant="B">
+      <PageSection heading="LEARNING OBJECTIVES & SCHEDULE" colorVariant="A">
         {/* Learning Objectives - Full Width on Top */}
         <div className="mb-16">
           <h3 className="text-3xl font-light text-gray-200 mb-8 text-center">
@@ -235,7 +235,7 @@ const MechanicalIncubator = () => {
       </PageSection>
 
       {/* Call to Action */}
-      <PageSection heading="READY TO JOIN" colorVariant="A">
+      <PageSection heading="READY TO JOIN" colorVariant="B">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-xl font-light text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed">
             Become part of the next generation of robotics innovators. Apply now

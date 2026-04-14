@@ -171,7 +171,7 @@ const Hatchling = () => {
       ></Hero>
 
       {/* Mission Statement Section */}
-      <PageSection heading="OUR MISSION" colorVariant="A">
+      <PageSection heading="OUR MISSION" colorVariant="B">
         <div className="glass-card p-12 rounded-2xl text-center">
           <p className="text-xl md:text-2xl font-light text-gray-400 leading-relaxed max-w-4xl mx-auto">
             Founded in the fall of 2015, Hatchling is our premier development
@@ -182,7 +182,7 @@ const Hatchling = () => {
       </PageSection>
 
       {/* Trusted Organizations Section */}
-      <PageSection heading="CURRENTLY TRUSTED AT" colorVariant="B">
+      <PageSection heading="CURRENTLY TRUSTED AT" colorVariant="A">
         <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-8">
           <div className="glass-card p-8 rounded-2xl text-center transition-all duration-300">
             <div className="text-5xl mb-4">🏢</div>
@@ -223,7 +223,7 @@ const Hatchling = () => {
       </PageSection>
 
       {/* Scrolling Pictures Section */}
-      <PageSection heading="HATCHLING GALLERY" colorVariant="A">
+      <PageSection heading="HATCHLING GALLERY" colorVariant="B">
         <div className="rounded-2xl overflow-hidden border border-gray-700/50 glass-card w-full max-w-7xl mx-auto">
           <ImageCarousel
             images={[
@@ -242,7 +242,7 @@ const Hatchling = () => {
       </PageSection>
 
       {/* Learning Objectives and Schedule Section */}
-      <PageSection heading="LEARNING OBJECTIVES & SCHEDULE" colorVariant="B">
+      <PageSection heading="LEARNING OBJECTIVES & SCHEDULE" colorVariant="A">
         {/* Learning Objectives - Full Width on Top */}
         <div className="mb-16">
           <h3 className="text-3xl font-light text-gray-200 mb-8 text-center">
@@ -313,7 +313,7 @@ const Hatchling = () => {
       </PageSection>
 
       {/* Published Materials Section */}
-      <PageSection heading="PUBLISHED MATERIALS" colorVariant="A">
+      <PageSection heading="PUBLISHED MATERIALS" colorVariant="B">
         {/* Weekly Content PDFs (toggleable) */}
         {slidesVisible && (
           <div className="mb-16">
@@ -420,7 +420,7 @@ const Hatchling = () => {
       </PageSection>
 
       {/* Stats, Impact, and Accolades Section */}
-      <PageSection heading="STATS & IMPACT" colorVariant="B">
+      <PageSection heading="STATS & IMPACT" colorVariant="A">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           <div className="glass-card p-8 rounded-2xl text-center transition-all duration-300">
             <div className="text-4xl font-light text-accent mb-2">75%</div>
@@ -554,7 +554,7 @@ const Hatchling = () => {
       </PageSection>
 
       {/* Call to Action */}
-      <PageSection heading="READY TO JOIN" colorVariant="A">
+      <PageSection heading="READY TO JOIN" colorVariant="B">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-xl font-light text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed">
             Become part of the next generation of robotics innovators. Apply now

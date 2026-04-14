@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import PageSection from "../components/PageSection";
 import TextLink from "../components/TextLink";
 
 const ENABLE_SHOWCASE_COUNTDOWN = true;
@@ -182,12 +183,8 @@ function Showcase() {
       </div>
 
       {/* FAQ SECTION */}
-      <section className="py-10 px-4 bg-gray-800">
+      <PageSection heading="FREQUENTLY ASKED QUESTIONS" colorVariant="B">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl text-center mb-10 text-gray-200">
-            Frequently Asked <span className="text-yellow-400">Questions</span>
-          </h2>
-
           <div className="space-y-4">
             <details className="group bg-gradient-to-br from-gray-700 to-gray-600 rounded-2xl p-6 cursor-pointer">
               <summary className="flex justify-between items-center font-light text-xl text-gray-200 list-none">
@@ -272,14 +269,11 @@ function Showcase() {
             )}
           </div>
         </div>
-      </section>
+      </PageSection>
 
       {/* SHOWCASE PROJECT INTEREST FORM SECTION (deprecated Jan 2026, replaced with email link) */}
-      <section className="py-16 px-4 bg-gray-800">
+      <PageSection heading="SHOWCASE PROJECT INTEREST" colorVariant="A">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl text-gray-200 mb-4">
-            Showcase Project Interest
-          </h2>
           <p className="text-xl font-light text-gray-400 mb-6">
             To express your interest in a project, please email us directly at:
           </p>
@@ -287,7 +281,7 @@ function Showcase() {
             turtlerobotics@gmail.com
           </TextLink>
         </div>
-      </section>
+      </PageSection>
 
       <style jsx>{`
         @keyframes confetti-fall {
