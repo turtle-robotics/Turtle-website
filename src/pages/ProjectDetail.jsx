@@ -28,7 +28,7 @@ const ProjectDetail = () => {
   }, [project]);
 
   return (
-    <div className="min-h-screen bg-gray-900">
+    <div className="min-h-screen">
       <div className="max-w-6xl mx-auto px-4 py-10">
         {/* Back Button */}
         <Link
