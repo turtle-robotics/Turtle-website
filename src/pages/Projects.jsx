@@ -76,7 +76,7 @@ const Projects = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="absolute bottom-4 left-4 flex flex-wrap gap-2">
-                  <span className="text-xs font-light text-white bg-yellow-500/90 px-3 py-1 rounded-full">
+                  <span className="text-xs font-light text-black bg-yellow-500/90 px-3 py-1 rounded-full">
                     {project.category}
                   </span>
                   {project.tags?.slice(0, 2).map((tag, tagIndex) => (

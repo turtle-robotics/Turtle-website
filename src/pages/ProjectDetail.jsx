@@ -60,7 +60,7 @@ const ProjectDetail = () => {
             {project.subtitle}
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3">
-            <span className="text-xs font-light text-white bg-yellow-500 px-3 py-1 rounded-full">
+            <span className="text-xs font-light text-black bg-yellow-500 px-3 py-1 rounded-full">
               {project.category}
             </span>
             {project.tags?.slice(0, 4).map((tag, i) => (
