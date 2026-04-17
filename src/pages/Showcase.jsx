@@ -186,7 +186,7 @@ function Showcase() {
       {ENABLE_SHOWCASE_MAP && (
         <PageSection heading="PROJECT BOOTH MAP">
           <div className="mapSVG">
-            <img src="/public/assets/ShowcaseMap.svg" alt="" />
+            <img src="/assets/ShowcaseMap.svg" alt="" />
           </div>
         </PageSection>
       )}
