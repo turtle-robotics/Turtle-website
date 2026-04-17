@@ -33,7 +33,7 @@ export const projects = [
       "Software: Rover coding, data handling, automation (~2-3 positions)",
       "Electrical: PCB design, wiring, sensor integration (~1-2 positions)",
     ],
-    images: ["/assets/DIRT/DirtTtempCoverpic.webp"],
+    images: ["/SCPosters/DIRT_SC_Spring26.pptx.png"],
   },
   // Alphabetical by title
   {
@@ -62,7 +62,7 @@ export const projects = [
     ],
     images: [
       "/assets/ACHE/Ache-Cover.webp",
-      "/SCPosters/ACHE_SC_25_11.pptx.webp",
+      "/SCPosters/ACHE_SC_Spring26.pptx.png",
       "/assets/ACHE/Ache-Hero-1.webp",
       "/assets/ACHE/Ache-Hero-2.webp",
     ],
@@ -100,7 +100,7 @@ export const projects = [
       "AC→DC conversion and management, programming/simulation (C, Matlab)",
     ],
     images: [
-      "/SCPosters/AMPS_SC_25_11.pptx.webp",
+      "/SCPosters/AMPS_SC_Spring26.pptx.png",
       "/assets/AMPS/Amps-Cover.webp",
       "/assets/AMPS/Amps-Hero-1.webp",
       "/assets/AMPS/Amps-Hero-2.webp",
@@ -146,7 +146,7 @@ export const projects = [
       "10-12 hours of time commitment per week",
     ],
     images: [
-      "/SCPosters/ANKL_SC_25_11.pptx.webp",
+      "/SCPosters/ANKL_SC_Spring26.pptx.png",
       "/assets/ANKL/Ankl-Hero-1.webp",
       "/assets/ANKL/Ankl-Hero-2.webp",
       "/assets/ANKL/Ankl-Hero-3.webp",
@@ -184,7 +184,7 @@ export const projects = [
       "3D printing and laser cutting",
     ],
     images: [
-      "/SCPosters/BEEST_SC_25_11.pptx.webp",
+      "/SCPosters/BEEST_SC_Spring26.pptx.png",
       "/assets/BEEST/BEEST-Cover.webp",
       "/assets/BEEST/BEEST-Hero-1.webp",
       "/assets/BEEST/BEEST-Hero-2.webp",
@@ -221,7 +221,7 @@ export const projects = [
       "Robotics programming with Python",
     ],
     images: [
-      "/SCPosters/BLNC_SC_25_11.pptx.webp",
+      "/SCPosters/BLNC_SC_Spring26.pptx.png",
       "/assets/BLNC/BLNC-Cover.webp",
       "/assets/BLNC/BLNC-Hero-1.webp",
       "/assets/BLNC/BLNC-Hero-2.webp",
@@ -251,7 +251,7 @@ export const projects = [
       "Passion for combat robotics",
     ],
     images: [
-      "/SCPosters/CMBT_SC_25_11.pptx.webp",
+      "/SCPosters/CMBT_SC_Spring26.pptx.png",
       "/assets/CMBT/CMBT-Hero-1.webp",
       "/assets/CMBT/CMBT-Hero-2.webp",
       "/assets/CMBT/CMBT-Hero-3.webp",
@@ -291,7 +291,7 @@ export const projects = [
       "Unity experience for VR control (nice to have)",
     ],
     images: [
-      "/SCPosters/CNTR_SC_25_11.pptx.webp",
+      "/SCPosters/CNTR_SC_Spring26.pptx.png",
       "/assets/CNTR/CNTR-Cover.webp",
       "/assets/CNTR/CNTR-Hero-1.webp",
     ],
@@ -321,7 +321,7 @@ export const projects = [
       "SolidWorks assembly experience",
     ],
     images: [
-      "/SCPosters/DRON_SC_25_11.pptx.webp",
+      "/SCPosters/DRON_SC_Spring26.pptx.png",
       "/assets/DRON/DRON-Hero-1.webp",
       "/assets/DRON/DRON-Hero-2.webp",
     ],
@@ -364,13 +364,13 @@ export const projects = [
       "Embedded C++/Python",
       "RL implementation and control theory",
     ],
-    images: ["/SCPosters/EDEN_SC_25_11.pptx.webp"],
+    images: ["/SCPosters/EDEN_SC_Spring26.pptx.png"],
   },
   {
     id: "fash",
     image: "/assets/FASH/FASH-Card.webp",
     title: "FASH",
-    subtitle: "Fashionable Assistive System for Health",
+    subtitle: "Fashionable Automated Stage Hardware",
     description:
       "To explore how fashion design can be integrated into wearable engineering and robotics as a means of expression and performance",
     category: "Wearable Robotics",
@@ -400,7 +400,7 @@ export const projects = [
       "Python or C++ experience",
     ],
     images: [
-      "/SCPosters/FASH_SC_25_11.webp",
+      "/SCPosters/FASH_SC_Spring26.pptx.png",
       "/assets/FASH/FashAarathiPic.jpg",
       "/assets/FASH/FASHGroupPic.jpg",
       "/assets/FASH/FashgroupPic2.jpg",
@@ -431,7 +431,7 @@ export const projects = [
       "Controls & algorithms for lighting, fan, and pump",
     ],
     images: [
-      "/SCPosters/GERM_SC_25_11.pptx.webp",
+      "/SCPosters/GERM_SC_Spring26.pptx.png",
       "/assets/GERM/GERM-Hero-1.webp",
       "/assets/GERM/GERM-Hero-2.webp",
       "/assets/GERM/GERM-Hero-3.webp",
@@ -470,7 +470,7 @@ export const projects = [
       "Interest in medical/lab applications",
     ],
     images: [
-      "/SCPosters/LARM_SC_25_11.pptx.webp",
+      "/SCPosters/LARM_SC_Spring26.pptx.png",
       "/assets/LARM/LARM-Hero-1.webp",
       "/assets/LARM/LARM-Hero-2.webp",
       "/assets/LARM/LARM-Hero-3.webp",
@@ -502,7 +502,7 @@ export const projects = [
       "Lidar, microcontrollers, and robotics hardware",
     ],
     images: [
-      "/SCPosters/MAZE_SC_25_11.webp",
+      "/SCPosters/MAZE_SC_Spring26.pptx.png",
       "/assets/MAZE/MAZE-Cover.webp",
       "/assets/MAZE/MAZE-Hero-1.webp",
       "/assets/MAZE/MAZE-Hero-2.webp",
@@ -533,7 +533,7 @@ export const projects = [
       "Mechanical CAD to parameterize models",
       "Electrical knowledge of EMG sensors",
     ],
-    images: ["/SCPosters/OLSN_SC_25_11.pptx.webp"],
+    images: ["/SCPosters/OLSN_SC_Spring26.pptx.png"],
   },
   {
     id: "orio",
@@ -568,7 +568,7 @@ export const projects = [
       "Stepper motor knowledge",
     ],
     images: [
-      "/SCPosters/ORIO_SC_25_11.pptx.webp",
+      "/SCPosters/ORIO_SC_Spring26.pptx.png",
       "/assets/ORIO/ORIO-Cover.webp",
       "/assets/ORIO/ORIO-Hero-1.webp",
       "/assets/ORIO/ORIO-Hero-2.webp",
@@ -610,7 +610,7 @@ export const projects = [
       "Fluid simulation experience (Ansys, etc.)",
     ],
     images: [
-      "/SCPosters/POBS_SC_25_11.pptx.webp",
+      "/SCPosters/POBS_SC_Spring26.pptx.png",
       "/assets/POBS/POBS-Cover.webp",
       "/assets/POBS/POBS-Hero-1.webp",
       "/assets/POBS/POBS-Hero-2.webp",
@@ -689,7 +689,7 @@ export const projects = [
       "Students in CHEN, ECEN, ESET, CSCE, or related majors",
     ],
     images: [
-      "/SCPosters/SNOUT_SC_25_11.pptx.webp",
+      "/SCPosters/SNOUT_SC_Spring26.pptx.png",
       "/assets/SNOUT/SNOUT-Hero-1.webp",
       "/assets/SNOUT/SNOUT-Hero-2.webp",
     ],
@@ -726,7 +726,7 @@ export const projects = [
       "Interest and willingness to learn",
     ],
     images: [
-      "/SCPosters/SWRM_SC_25_11.pptx.webp",
+      "/SCPosters/SWRM_SC_Spring26.pptx.png",
       "/assets/SWRM/SWRM-Cover.webp",
       "/assets/SWRM/SWRM-Hero-1.webp",
       "/assets/SWRM/SWRM-Hero-2.webp",
@@ -816,7 +816,7 @@ export const projects = [
       "Passion for animal health and technology",
       "Open to all majors and grade levels",
     ],
-    images: ["/SCPosters/REVISDED_VEST_POSTER.pptx.webp"],
+    images: ["/SCPosters/VEST_SC_Spring26.pptx.png"],
   },
   {
     id: "virt",
@@ -848,7 +848,7 @@ export const projects = [
       "Mechanical design with motor system knowledge",
       "Motor controls",
     ],
-    images: ["/SCPosters/VIRT_SC_25_11_v2_PRINT_THIS.pptx.webp"],
+    images: ["/SCPosters/VIRT_SC_Spring26.pptx.png"],
   },
 ];
 
