@@ -8,7 +8,7 @@ import Banner from "./Banner";
 const Layout = ({ children }) => {
   const location = useLocation();
   const [showHeader, setShowHeader] = useState(true);
-  const [showSiteBanner, setShowSiteBanner] = useState(true);
+  const [showSiteBanner, setShowSiteBanner] = useState(false);
 
   // Scroll to top when location changes
   useEffect(() => {
