@@ -74,10 +74,15 @@ const ProjectDetail = () => {
           </div>
           <div className="project-lead mt-6">
             <p className="text-base md:text-lg text-gray-300">
-              Lead: {project.lead}{" "}
-              <span className="text-yellow-400 ml-2">
-                ({project.leadEmail || project.email})
-              </span>
+              Lead: {project.lead}
+              {project.leadEmail ? (
+                <>
+                  {" "}
+                  <span className="text-yellow-400 ml-2">
+                    ({project.leadEmail})
+                  </span>
+                </>
+              ) : null}
             </p>
           </div>
 
