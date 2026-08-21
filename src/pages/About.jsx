@@ -1,6 +1,5 @@
 import { useState } from "react";
 import StatisticsCard from "../components/StatisticsCard";
-import TextLink from "../components/TextLink";
 import Hero from "../components/Hero";
 import PageSection from "../components/PageSection";
 
@@ -12,133 +11,110 @@ const About = () => {
     { count: 110, label: "Hatchling Members" },
   ];
 
-  const currentLeadership = [
-    // Executive roles
-    { role: "President", name: "Samantha Woravka", period: "Spring 2026" },
-    { role: "Internal VP", name: "Ian Wilhite", period: "Spring 2026" },
-    { role: "External VP", name: "Yousuf Shafiu", period: "Spring 2026" },
-    { role: "Project VP", name: "Emily Tredemeyer", period: "Spring 2026" },
-    {
-      role: "Development VP",
-      name: "Kalen Jaroszewski",
-      period: "Spring 2026",
+  const leadershipCategories = {
+    executive: {
+      title: "Executive Roles",
+      leaders: [
+        { role: "President", name: "Kalen Jaroszewski" },
+        { role: "Internal VP", name: "Ryo Kato" },
+        { role: "External VP", name: "Renee Zhu" },
+        { role: "Project VP", name: "Emily Tredemeyer" },
+        { role: "Development VP", name: "Julia Sopala" },
+      ],
     },
 
-    // Internal Branch
-    { role: "Internal VP", name: "Ian Wilhite", period: "Spring 2026" },
-    { role: "Finance", name: "Raquel Garcia", period: "Spring 2026" },
-    { role: "Finance", name: "Eddy Silva", period: "Spring 2026" },
-    { role: "Documentation", name: "Ryo Kato", period: "Spring 2026" },
-    { role: "Lab Quality Chair", name: "Haider Mahdi", period: "Spring 2026" },
+    internal: {
+      title: "Internal Branch",
+      leaders: [
+        { role: "Internal VP", name: "Ryo Kato" },
+        { role: "Operations Officer", name: "Justin Simms" },
+        { role: "Lab Quality Chair", name: "Rishabh Sadekar" },
+        { role: "Lab Quality Chair", name: "Haider Mahdi" },
+        { role: "Finance Officer", name: "Eddy Silva" },
+        { role: "Finance Officer", name: "Thomas Tran" },
+        { role: "Finance Officer", name: "Edmond Lam" },
+      ],
+    },
 
-    // External Branch
-    { role: "External VP", name: "Yousuf Shafiu", period: "Spring 2026" },
-    { role: "Public Relations", name: "Isaac Cabello", period: "Spring 2026" },
-    { role: "Webmaster", name: "Micah Guttman", period: "Spring 2026" },
-    {
-      role: "Corporate Relations",
-      name: "Will Donaldson",
-      period: "Spring 2026",
+    external: {
+      title: "External Branch",
+      leaders: [
+        { role: "External VP", name: "Renee Zhu" },
+        { role: "Corporate Relations Chair", name: "Will Donaldson" },
+        { role: "PR Chair", name: "Allison Martinez" },
+        { role: "Webmaster", name: "Micah Guttman" },
+      ],
     },
-    { role: "Events", name: "Renee Zhu", period: "Spring 2026" },
 
-    // Project Branch
-    { role: "Project VP", name: "Emily Tredemeyer", period: "Spring 2026" },
-    {
-      role: "Design Review Chair",
-      name: "Will McGarity",
-      period: "Spring 2026",
-    },
-    { role: "Design Review Chair", name: "Evan Chan", period: "Spring 2026" },
+    projects: {
+      title: "Projects Branch",
+      leaders: [
+        { role: "Project VP", name: "Emily Tredemeyer" },
+        { role: "Design Review Chair", name: "Will McGarity" },
+        { role: "Design Review Chair", name: "Chris Ambroziak" },
 
-    // Development Branch
-    {
-      role: "Development VP",
-      name: "Kalen Jaroszewski",
-      period: "Spring 2026",
+        { role: "Project Lead — ACHE", name: "Jacob Fuerst" },
+        { role: "Project Lead — AMPS", name: "Rishabh Sadekar" },
+        { role: "Project Lead — ANKL", name: "Vincent Hoefler" },
+        { role: "Project Lead — BLNC", name: "Jonathon Foltyn" },
+        { role: "Project Lead — CMBT", name: "Kian Dunkin" },
+        { role: "Project Lead — CNTR", name: "Jack Bluethmann" },
+        { role: "Project Lead — DIRT", name: "Anagha Dharmavaram" },
+        { role: "Project Lead — DRON", name: "Chris Ambroziak" },
+        { role: "Project Lead — FASH", name: "Aarathi Devakumar" },
+        { role: "Project Lead — GERM", name: "Jordan Durst" },
+        { role: "Project Lead — MAZE", name: "David Boosi" },
+        { role: "Project Lead — OLSN", name: "Will McGarity" },
+        { role: "Project Lead — ORIO", name: "Dalys Guajardo" },
+        { role: "Project Lead — POBS", name: "Isaac Cabello" },
+        { role: "Project Lead — PRNT", name: "Andrew McBride" },
+        { role: "Project Lead — SHDR", name: "Renee Zhu" },
+        { role: "Project Lead — SNOUT", name: "Anirudh Submaranian" },
+        { role: "Project Lead — SWRM", name: "Bennett Moorman" },
+        { role: "Project Lead — VIRT", name: "Justin Simms" },
+      ],
     },
-    { role: "Workshops", name: "Vedant Soni", period: "Spring 2026" },
-    {
-      role: "Hatchling Director",
-      name: "Alejandro Avila",
-      period: "Spring 2026",
-    },
-    {
-      role: "Hatchling Director",
-      name: "Ethan Real",
-      period: "Spring 2026",
-      description: "Hatchling leadership and mentorship",
-    },
-    {
-      role: "Hatchling Director",
-      name: "Gael Mamenta",
-      period: "Spring 2026",
-      description: "Hatchling leadership and mentorship",
-    },
-    {
-      role: "Hatchling Director",
-      name: "Karthik Jayakumar",
-      period: "Spring 2026",
-      description: "Hatchling leadership and mentorship",
-    },
-    {
-      role: "Hatchling Director",
-      name: "McKenzie McCain",
-      period: "Spring 2026",
-      description: "Hatchling leadership and mentorship",
-    },
-    {
-      role: "Hatchling Director",
-      name: "Mohid Ismail",
-      period: "Spring 2026",
-      description: "Hatchling leadership and mentorship",
-    },
-    {
-      role: "Hatchling Director",
-      name: "Nathan Mersino",
-      period: "Spring 2026",
-    },
-    { role: "Hatchling Director", name: "Thomas Lopez", period: "Spring 2026" },
-    { role: "Hatchling Director", name: "William Shan", period: "Spring 2026" },
-    { role: "Hatchling Director", name: "Julia Sopala", period: "Spring 2026" },
-    { role: "Hatchling Director", name: "Drew Wheaton", period: "Spring 2026" },
-  ];
 
-  const [openSection, setOpenSection] = useState({
-    executive: true,
-    external: true,
-    internal: true,
-    projects: true,
-    development: true,
-  });
+    development: {
+      title: "Development Branch",
+      leaders: [
+        { role: "Development VP", name: "Julia Sopala" },
+        { role: "Hatchling Chair", name: "Isaac Cabello" },
+        { role: "Mechanical Incubator Chair", name: "Drew Wheaton" },
+        { role: "Software Incubator Chair", name: "Kaleb Harris" },
+        { role: "Workshop Director", name: "Som Datta" },
+        { role: "Product Manager", name: "McKenzie McCain" },
 
-  const toggleSection = (section) => {
-    setOpenSection((prev) => ({ ...prev, [section]: !prev[section] }));
+        { role: "Hatchling Director", name: "William Shan" },
+        { role: "Hatchling Director", name: "Lorenzo Hidalgo" },
+        { role: "Hatchling Director", name: "Andrew Sun" },
+        { role: "Hatchling Director", name: "Mohid Ismail" },
+        { role: "Hatchling Director", name: "Kayla Sam" },
+        { role: "Hatchling Director", name: "John Neal" },
+        { role: "Hatchling Director", name: "Thomas Lopez" },
+        { role: "Hatchling Director", name: "Karthik Jayakumar" },
+        { role: "Hatchling Director", name: "Ethan Real" },
+        { role: "Hatchling Director", name: "Nathan Mersino" },
+        { role: "Hatchling Director", name: "Khanhathan Vo" },
+        { role: "Hatchling Director", name: "Grace Wang" },
+        { role: "Hatchling Director", name: "Santiago Yordi" },
+      ],
+    },
   };
 
-  const renderLeadership = (roles) =>
-    currentLeadership
-      .filter(
-        (l, idx, arr) =>
-          roles.includes(l.role) &&
-          arr.findIndex((x) => x.role === l.role && x.name === l.name) === idx,
-      )
-      .map((leader, index) => (
-        <div
-          key={index}
-          className="glass-card p-6 rounded-2xl transition-all duration-300"
-        >
-          <h3 className="text-lg font-light text-yellow-400 mb-2">
-            {leader.role}
-          </h3>
-          <h4 className="text-base font-light text-gray-200 mb-2">
-            {leader.name}
-          </h4>
-          <p className="text-xs font-light text-gray-400 mb-3">
-            {leader.period}
-          </p>
-        </div>
-      ));
+  const renderLeadership = (leaders) =>
+    leaders.map((leader) => (
+      <div
+        key={`${leader.role}-${leader.name}`}
+        className="glass-card p-6 rounded-2xl transition-all duration-300"
+      >
+        <h3 className="text-lg font-light text-yellow-400 mb-2">
+          {leader.role}
+        </h3>
+
+        <h4 className="text-base font-light text-gray-200">{leader.name}</h4>
+      </div>
+    ));
 
   return (
     <div className="min-h-screen">
@@ -146,118 +122,28 @@ const About = () => {
         heading="ABOUT TURTLE"
         backgroundImage="/assets/GeneralPhotos/OfficerPhoto.webp"
         backgroundAltText="Officer Group Photo"
-        subheading="TURTLE is a student-led research lab at Texas A&M University, pioneering
-        innovative robotics solutions and developing the next generation of
-        robotics leaders."
-      ></Hero>
+        subheading="TURTLE is a student-led research lab at Texas A&M University, pioneering innovative robotics solutions and developing the next generation of robotics leaders."
+      />
 
-      {/* Statistics Section */}
       <PageSection heading="OUR IMPACT" colorVariant="B">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {statistics.map((stat, index) => (
-            <StatisticsCard key={index} {...stat} />
+          {statistics.map((stat) => (
+            <StatisticsCard key={stat.label} {...stat} />
           ))}
         </div>
       </PageSection>
 
-      {/* Leadership Section */}
       <PageSection heading="OUR TEAM" colorVariant="A">
-        {/* Executive Roles Accordion */}
-        <div className="mb-12">
-          <button
-            onClick={() => toggleSection("executive")}
-            className="w-full text-left font-light text-xl text-gray-200 mb-4"
-          >
-            Executive Roles {openSection.executive ? "▲" : "▼"}
-          </button>
-          {openSection.executive && (
+        {Object.entries(leadershipCategories).map(([categoryKey, category]) => (
+          <div key={categoryKey} className="mb-12">
+            <h2 class="w-full text-left font-light text-xl text-gray-200 mb-4">
+              {category.title}
+            </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {renderLeadership([
-                "President",
-                "Internal VP",
-                "External VP",
-                "Project VP",
-                "Development VP",
-              ])}
+              {renderLeadership(category.leaders)}
             </div>
-          )}
-        </div>
-
-        {/* Internal Branch Accordion */}
-        <div className="mb-12">
-          <button
-            onClick={() => toggleSection("internal")}
-            className="w-full text-left font-light text-xl text-gray-200 mb-4"
-          >
-            Internal Branch {openSection.internal ? "▲" : "▼"}
-          </button>
-          {openSection.internal && (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {renderLeadership([
-                "Internal VP",
-                "Finance",
-                "Logistics",
-                "Lab Quality Chair",
-                "Documentation",
-              ])}
-            </div>
-          )}
-        </div>
-
-        {/* External Branch Accordion */}
-        <div className="mb-12">
-          <button
-            onClick={() => toggleSection("external")}
-            className="w-full text-left font-light text-xl text-gray-200 mb-4"
-          >
-            External Branch {openSection.external ? "▲" : "▼"}
-          </button>
-          {openSection.external && (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {renderLeadership([
-                "External VP",
-                "Public Relations",
-                "Webmaster",
-                "Corporate Relations",
-                "Events",
-              ])}
-            </div>
-          )}
-        </div>
-
-        {/* Projects Branch Accordion */}
-        <div className="mb-12">
-          <button
-            onClick={() => toggleSection("projects")}
-            className="w-full text-left font-light text-xl text-gray-200 mb-4"
-          >
-            Projects Branch {openSection.projects ? "▲" : "▼"}
-          </button>
-          {openSection.projects && (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {renderLeadership(["Project VP", "Design Review Chair"])}
-            </div>
-          )}
-        </div>
-
-        {/* Development Branch Accordion */}
-        <div className="mb-12">
-          <button
-            onClick={() => toggleSection("development")}
-            className="w-full text-left font-light text-xl text-gray-200 mb-4"
-          >
-            Development Branch {openSection.development ? "▲" : "▼"}
-          </button>
-          {openSection.development && (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {renderLeadership([
-                "Development VP",
-                "Workshops",
-                "Hatchling Director",
-              ])}
-            </div>
-          )}
-        </div>
+          </div>
+        ))}
       </PageSection>
     </div>
   );
