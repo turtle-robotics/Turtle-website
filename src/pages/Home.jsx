@@ -102,11 +102,7 @@ const Home = () => {
         </PageSection>
         <PageSection heading="READY TO JOIN US" colorVariant="A">
           <div className="mx-auto text-center">
-            <ButtonLink
-              sizeVariant="xl"
-              style="primary"
-              to="/apply"
-            >
+            <ButtonLink sizeVariant="xl" style="primary" to="/apply">
               Apply Now
             </ButtonLink>
           </div>

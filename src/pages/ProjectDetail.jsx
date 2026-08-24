@@ -171,7 +171,7 @@ const ProjectDetail = () => {
         </div>
 
         {/* Project Updates */}
-          {/* <div className="project-section mb-12">
+        {/* <div className="project-section mb-12">
             <h2 className="text-2xl font-light text-white mb-6 text-center">
               Project Updates
             </h2>
