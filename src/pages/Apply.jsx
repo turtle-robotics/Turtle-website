@@ -4,7 +4,7 @@ import PageSection from "../components/PageSection";
 
 const Apply = () => {
   // ✅ Toggle this to open/close applications
-  const applicationsOpen = false; // change to false when closed
+  const applicationsOpen = true; // change to false when closed
 
   return (
     <div className="min-h-screen">
@@ -12,16 +12,27 @@ const Apply = () => {
         heading={applicationsOpen ? "APPLY NOW" : "APPLICATIONS CLOSED"}
         subheading={
           applicationsOpen
-            ? "Fill out this form to join Hatchling or Advanced Project teams at TURTLE."
-            : "Applications are currently closed. Please check back soon for future openings."
+            ? "Join one of our 3 development programs or 19 R&D projects to develop technical skills! You can also join a committee to get a taste of TURTLE leadership!"
+            : "Applications are currently closed. Please check back next semester."
         }
         backgroundImage="/assets/GeneralPhotos/ApplyNowJpg.webp"
         backgroundAltTextalt="Apply Now Background"
       >
         {applicationsOpen && (
-          <ButtonLink sizeVariant="xl" to="https://forms.gle/59pUiPUCpDrgBCqn7">
-            Apply Now
-          </ButtonLink>
+          <div className="flex flex-wrap justify-center gap-4">
+            <ButtonLink
+              sizeVariant="large"
+              to="https://forms.gle/FUYAjP4x9Zbi1EdG6"
+            >
+              Development Program & R&D Project Application
+            </ButtonLink>
+            <ButtonLink
+              sizeVariant="large"
+              to="https://forms.gle/wG98E3r7QfcQbbfS7"
+            >
+              Committee Application
+            </ButtonLink>
+          </div>
         )}
       </Hero>
 
@@ -34,8 +45,7 @@ const Apply = () => {
               Submit Application
             </h3>
             <p className="text-gray-400 font-light leading-relaxed">
-              Complete our online application form to join Hatchlings or
-              Advanced Project teams.
+              Complete our online application form.
             </p>
           </div>
           <div className="glass-card p-10 rounded-2xl text-center transition-all duration-300">
