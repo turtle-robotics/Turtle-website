@@ -105,7 +105,7 @@ const Home = () => {
             <ButtonLink
               sizeVariant="xl"
               style="primary"
-              to="https://forms.gle/59pUiPUCpDrgBCqn7"
+              to="/apply"
             >
               Apply Now
             </ButtonLink>

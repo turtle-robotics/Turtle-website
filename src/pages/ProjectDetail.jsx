@@ -171,44 +171,37 @@ const ProjectDetail = () => {
         </div>
 
         {/* Project Updates */}
-        <div className="project-section mb-12">
-          <h2 className="text-2xl font-light text-white mb-6 text-center">
-            Project Updates
-          </h2>
-          {project.updates && project.updates.length > 0 ? (
-            <div className="space-y-6">
-              {project.updates.map((update, index) => (
-                <div key={index} className="glass-card rounded-2xl p-6">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-sm text-gray-400">
-                      {formatDate(update.date)}
-                    </span>
-                    <span className="text-xs font-light text-white bg-yellow-500 px-3 py-1 rounded-full">
-                      Update
-                    </span>
+          {/* <div className="project-section mb-12">
+            <h2 className="text-2xl font-light text-white mb-6 text-center">
+              Project Updates
+            </h2>
+            {project.updates && project.updates.length > 0 ? (
+              <div className="space-y-6">
+                {project.updates.map((update, index) => (
+                  <div key={index} className="glass-card rounded-2xl p-6">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-sm text-gray-400">
+                        {formatDate(update.date)}
+                      </span>
+                      <span className="text-xs font-light text-white bg-yellow-500 px-3 py-1 rounded-full">
+                        Update
+                      </span>
+                    </div>
+                    <h3 className="text-lg font-light text-white mb-2">
+                      {update.title}
+                    </h3>
+                    <p className="text-gray-300">{update.content}</p>
                   </div>
-                  <h3 className="text-lg font-light text-white mb-2">
-                    {update.title}
-                  </h3>
-                  <p className="text-gray-300">{update.content}</p>
-                </div>
-              ))}
-            </div>
-          ) : (
-            <div className="glass-card rounded-2xl p-6 text-center">
-              <p className="text-gray-300 mb-3">
-                No updates have been posted yet.
-              </p>
-            </div>
-          )}
-        </div>
-
-        {/* Apply Button */}
-        <div className="mt-12 pt-8 border-t border-gray-700">
-          <ButtonLink to="/apply" style="primary" sizeVariant="default">
-            Apply to Join This Project
-          </ButtonLink>
-        </div>
+                ))}
+              </div>
+            ) : (
+              <div className="glass-card rounded-2xl p-6 text-center">
+                <p className="text-gray-300 mb-3">
+                  No updates have been posted yet.
+                </p>
+              </div>
+            )}
+          </div> */}
       </div>
     </div>
   );

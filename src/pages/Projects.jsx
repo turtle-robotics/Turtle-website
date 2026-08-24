@@ -138,15 +138,6 @@ const Projects = () => {
                   >
                     View Details →
                   </ButtonLink>
-                  {project.status !== "Archived" && (
-                    <ButtonLink
-                      className="flex-none"
-                      sizeVariant="small"
-                      to="/apply"
-                    >
-                      Apply
-                    </ButtonLink>
-                  )}
                 </div>
               </div>
             </Link>
