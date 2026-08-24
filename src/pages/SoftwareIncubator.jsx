@@ -126,20 +126,6 @@ const SoftwareIncubator = () => {
         backgroundAltText="Hatchling Program Background"
       ></Hero>
 
-      {/* Mission Statement Section */}
-      <PageSection heading="PREVIEW WORKSHOP" colorVariant="B">
-        <div className="glass-card p-12 rounded-2xl text-center">
-          <p className="text-xl md:text-2xl font-light text-gray-400 leading-relaxed max-w-4xl mx-auto">
-            TURTLE is thrilled to announce the launch of our Mechanical and
-            Software Incubator. Building upon the success of the Hatchling
-            Development Program, Incubator will provide hands-on opportunities
-            to learn new technical and leadership skills. Join us at our
-            upcoming preview workshops and RSVP for free{" "}
-            <TextLink to="https://forms.gle/7VkJndrzrwp1askw7">here</TextLink>.
-          </p>
-        </div>
-      </PageSection>
-
       {/* Learning Objectives and Schedule Section */}
       <PageSection heading="LEARNING OBJECTIVES & SCHEDULE" colorVariant="A">
         {/* Learning Objectives - Full Width on Top */}
