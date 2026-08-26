@@ -19,8 +19,8 @@ export const projects = [
     ],
     status: "Active",
     duration: "Spring 2026",
-    lead: "Anagha Dharmavaram",
-    leadEmail: "anagha2325@tamu.edu",
+    lead: "Kaleb Harris",
+    leadEmail: "hkaleb290@tamu.edu",
     goals: [
       "Design a robust rover chassis for varied terrain",
       "Develop deep spectroscopy probe integration",
