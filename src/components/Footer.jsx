@@ -57,7 +57,7 @@ const Footer = () => {
           <h3 className="font-bold text-gray-200">Quick Links</h3>
           <ul className="space-y-2">
             <li>
-              <TextLink to="/apply">Apply</TextLink>
+              <TextLink to="/apply" onClick={() => window.scrollTo(0, 0)}>Apply</TextLink>
             </li>
             <li>
               <TextLink to="https://docs.turtlerobotics.org/">
