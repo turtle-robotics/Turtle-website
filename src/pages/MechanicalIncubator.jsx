@@ -46,37 +46,19 @@ const MechanicalIncubator = () => {
     {
       heading: "Week 1",
       subheading: "Introductions and SolidWorks",
-      objectives: [
+      learning: [
         "MI Overview",
         "Meet the Director Team and Peers",
-        "Intro to Robotics",
+        "Introduction to Combat Robotics and Project",
         "Advanced SolidWorks",
         "Install Software",
       ],
+      project: ["Start Forming Teams", "Brainstorm Robot Ideas"],
     },
     {
       heading: "Week 2",
-      subheading: "Technical Interview Concepts",
-      objectives: [
-        "Free Body Diagrams",
-        "Solid Mechanics",
-        "Thermal Analysis",
-        "Basic Materials",
-      ],
-    },
-    {
-      heading: "Week 3",
-      subheading: "ANSYS (FEA) Foundations",
-      objectives: [
-        "What is Computer-Aided Engineering (CAE)?",
-        "Navigating ANSYS",
-        "Static Analysis Workflow",
-      ],
-    },
-    {
-      heading: "Week 4",
       subheading: "Mechanical Design",
-      objectives: [
+      learning: [
         "Design Requirements (Scoping)",
         "Scoping Your Design (Questions and Common Pitfalls)",
         "Mechanisms/Linkages (how it works, applications)",
@@ -85,58 +67,77 @@ const MechanicalIncubator = () => {
         "Bearings",
         "Screws & Fasteners",
         "Design for Assembly",
-        "Material Selection (metals, polymers & composites)",
-        "More Resources",
       ],
+      project: ["Finalize Teams", "Continue Brainstorming"],
     },
     {
-      heading: "Week 5",
-      subheading: "Electromechanical Systems",
-      objectives: [
+      heading: "Week 3",
+      subheading: "Electromechanical Design",
+      learning: [
         "Actuators",
+        "Motors & Linear Motor Model",
         "Sensors",
         "Batteries",
         "System Integration",
-        "COTS Selection",
+        "Combat Robot Electronics",
       ],
+      project: ["Finalize Robot Concept", "Select Key Components", "Begin CAD"],
+    },
+    {
+      heading: "Week 4",
+      subheading: "Materials & Manufacturing",
+      learning: [
+        "Basic Material Properties",
+        "Selecting Materials",
+        "Manufacturing Processes (emphasis on additive manufacturing)",
+      ],
+      project: ["Continue CAD"],
+    },
+    {
+      heading: "Week 5",
+      subheading: "Technical Interview Concepts",
+      learning: ["Free Body Diagrams", "Solid Mechanics", "Thermal Analysis"],
+      project: ["Finish CAD Assembly", "Begin Building"],
     },
     {
       heading: "Week 6",
-      subheading: "Materials/Manufacturing/GD&T",
-      objectives: [
-        "Materials Continued",
-        "Manufacturing Processes",
-        "Design for Manufacturing (DFM)",
-        "Geometric Design and Manufacturing (GD&T)",
+      subheading: "FEA I",
+      learning: [
+        "What is Computer-Aided Engineering (CAE)",
+        "What is Finite Element Analysis (FEA)",
+        "Navigating Ansys",
+        "Boundary Conditions and Loading",
+        "Static Analysis",
       ],
+      project: ["Continue Building"],
     },
     {
       heading: "Week 7",
-      subheading: "Design Review and Lab Time",
-      objectives: ["Design Review", "Project Work Week"],
+      subheading: "FEA II",
+      learning: [
+        "Boundary Conditions and Loading",
+        "Transient and Dynamic Analysis",
+      ],
+      project: ["Continue Building"],
     },
     {
       heading: "Week 8",
-      subheading: "Lab Time",
-      objectives: ["Project Work Week"],
+      subheading: "Vibrations",
+      learning: [
+        "Spring Mass Damper Model",
+        "Free Vibration Characteristics",
+        "Forced Harmonic Vibration Characteristics",
+        "Multi-Degree of Freedom Vibration",
+        "Modal Analysis (FEA)",
+        "Harmonic Response Analysis (FEA)",
+      ],
+      project: ["Continue Building"],
     },
     {
       heading: "Week 9",
-      subheading: "FEA Continued",
-      objectives: [
-        "Part Simplification",
-        "Advanced Meshing",
-        "Simulation Validation",
-      ],
-    },
-    {
-      heading: "Week 10",
-      subheading: "FEA Transient",
-      objectives: [
-        "Part Simplification",
-        "Advanced Meshing",
-        "Simulation Validation",
-      ],
+      subheading: "Competition Week",
+      learning: ["Nothing!"],
+      project: ["Finish Robot", "Compete ^V^"],
     },
   ];
 
@@ -183,29 +184,51 @@ const MechanicalIncubator = () => {
         {/* Program Schedule - Horizontal Scrollable Timeline */}
         <div>
           <h3 className="text-3xl font-light text-gray-200 mb-8 text-center">
-            10-Week Program Schedule
+            Program Schedule
           </h3>
           <div className="relative">
             {/* Scrollable Timeline Container */}
             <div className="flex gap-4 overflow-x-auto pb-6 custom-scrollbar">
               {programScheduleItems.map((item) => (
-                <div className="glass-card p-6 rounded-xl min-w-[280px] flex-shrink-0">
+                <div
+                  className="glass-card p-6 rounded-xl min-w-[320px] flex-shrink-0"
+                  key={item.heading}
+                >
                   <div className="text-2xl font-light text-accent mb-3">
                     {item.heading}
                   </div>
-                  <h4 className="text-lg font-light text-gray-200 mb-3">
+
+                  <h4 className="text-lg font-light text-gray-200 mb-5">
                     {item.subheading}
                   </h4>
-                  <ul className="space-y-2 text-sm text-gray-400 font-light">
-                    {item.objectives.map((objective) => (
-                      <li>• {objective}</li>
-                    ))}
-                    {item.milestone ? (
-                      <li className="text-accent font-medium">
-                        • Project Milestone: {item.milestone}
-                      </li>
-                    ) : null}
-                  </ul>
+
+                  <div className="mb-5">
+                    <h5 className="text-sm font-medium uppercase tracking-wider text-accent mb-3">
+                      Learning
+                    </h5>
+                    <ul className="space-y-2 text-sm text-gray-400 font-light">
+                      {item.learning.map((objective) => (
+                        <li className="flex items-start" key={objective}>
+                          <span className="text-accent mr-2">•</span>
+                          <span>{objective}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h5 className="text-sm font-medium uppercase tracking-wider text-accent mb-3">
+                      Project
+                    </h5>
+                    <ul className="space-y-2 text-sm text-gray-400 font-light">
+                      {item.project.map((objective) => (
+                        <li className="flex items-start" key={objective}>
+                          <span className="text-accent mr-2">•</span>
+                          <span>{objective}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               ))}
             </div>
@@ -213,7 +236,7 @@ const MechanicalIncubator = () => {
             {/* Scroll Indicator */}
             <div className="text-center mt-4">
               <p className="text-sm text-gray-400">
-                ← Scroll to see all 10 weeks →
+                ← Scroll to see all weeks →
               </p>
             </div>
           </div>
