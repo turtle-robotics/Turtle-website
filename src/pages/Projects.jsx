@@ -64,8 +64,8 @@ const Projects = () => {
           {filteredProjects.map((project, index) => (
             <Link
               key={index}
-              className="group glass-card pop-card rounded-2xl overflow-hidden hover:scale-[1.02] transition-all duration-500 shadow-soft cursor-pointer transform hover:rotate-[0.5deg] hover:shadow-xl"
               to={"/projects/" + project.id}
+              className="group glass-card pop-card flex h-full flex-col overflow-hidden rounded-2xl shadow-soft cursor-pointer transform transition-all duration-500 hover:scale-[1.02] hover:rotate-[0.5deg] hover:shadow-xl"
             >
               {/* Image */}
               <div className="relative h-56 overflow-hidden">
@@ -74,11 +74,14 @@ const Projects = () => {
                   alt={project.title}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-125"
                 />
+
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+
                 <div className="absolute bottom-4 left-4 flex flex-wrap gap-2">
                   <span className="text-xs font-light text-black bg-yellow-500/90 px-3 py-1 rounded-full">
                     {project.category}
                   </span>
+
                   {project.tags?.slice(0, 2).map((tag, tagIndex) => (
                     <span
                       key={tagIndex}
@@ -88,6 +91,7 @@ const Projects = () => {
                     </span>
                   ))}
                 </div>
+
                 <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <span className="text-xs font-light text-white bg-black/70 px-3 py-1 rounded-full">
                     Click to expand
@@ -96,48 +100,58 @@ const Projects = () => {
               </div>
 
               {/* Content */}
-              <div className="p-6">
-                <h3 className="text-xl font-light text-gray-200 mb-2 group-hover:text-accent transition-colors duration-300">
-                  {project.title}
-                </h3>
-                <p className="text-sm font-light text-yellow-400 mb-3">
-                  {project.subtitle}
-                </p>
-                <p className="text-sm font-light text-gray-400 leading-relaxed mb-4 line-clamp-3">
+              <div className="flex flex-1 flex-col p-6">
+                {/* Fixed-height heading area */}
+                <div className="h-[5.5rem]">
+                  <h3 className="text-xl font-light text-gray-200 mb-2 leading-tight group-hover:text-accent transition-colors duration-300 line-clamp-2">
+                    {project.title}
+                  </h3>
+
+                  <p className="text-sm font-light text-yellow-400 leading-snug line-clamp-2">
+                    {project.subtitle}
+                  </p>
+                </div>
+
+                {/* Fixed-height description area */}
+                <p className="h-[4.5rem] text-sm font-light text-gray-400 leading-relaxed line-clamp-3">
                   {project.description}
                 </p>
 
-                {/* Project Lead */}
-                <p className="text-xs font-light text-gray-400 mb-3">
-                  Lead: {project.lead}
-                </p>
+                {/* Bottom-aligned metadata and CTA */}
+                <div className="mt-auto pt-4">
+                  {/* Project Lead */}
+                  <p className="text-xs font-light text-gray-400 mb-3">
+                    Lead: {project.lead}
+                  </p>
 
-                {/* Status and Duration */}
-                <div className="flex justify-between items-center mb-4">
-                  <span
-                    className={`text-xs font-light px-2 py-1 rounded-full ${
-                      project.status === "Active"
-                        ? "bg-green-900/20 text-green-300"
-                        : "bg-yellow-900/20 text-yellow-300"
-                    }`}
-                  >
-                    {project.status}
-                  </span>
-                  <span className="text-xs font-light text-gray-400">
-                    {project.duration}
-                  </span>
-                </div>
+                  {/* Status and Duration */}
+                  <div className="flex items-center justify-between mb-4">
+                    <span
+                      className={`text-xs font-light px-2 py-1 rounded-full ${
+                        project.status === "Active"
+                          ? "bg-green-900/20 text-green-300"
+                          : "bg-yellow-900/20 text-yellow-300"
+                      }`}
+                    >
+                      {project.status}
+                    </span>
+                    
+                    <span className="text-xs font-light text-gray-400">
+                      {project.duration}
+                    </span>
+                  </div>
 
-                {/* View Details Button */}
-                <div className="flex gap-1">
-                  <ButtonLink
-                    className="flex-none"
-                    style="primary-outline"
-                    sizeVariant="small"
-                    to={"/projects/" + project.id}
-                  >
-                    View Details →
-                  </ButtonLink>
+                  {/* View Details Button */}
+                  <div className="flex gap-1">
+                    <ButtonLink
+                      className="flex-none"
+                      style="primary-outline"
+                      sizeVariant="small"
+                      to={"/projects/" + project.id}
+                    >
+                      View Details →
+                    </ButtonLink>
+                  </div>
                 </div>
               </div>
             </Link>
