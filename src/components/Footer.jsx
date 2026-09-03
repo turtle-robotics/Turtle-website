@@ -47,6 +47,22 @@ const Footer = () => {
                     }}
                   />
                 </a>
+
+                <a
+                  href="https://github.com/turtle-robotics"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-md"
+                >
+                  <img
+                    src="/assets/GitHub_Invertocat_White.svg"
+                    alt="LinkedIn"
+                    className="w-7 h-7 object-contain"
+                    style={{
+                      filter: "drop-shadow(0 1px 2px rgba(0,0,0,0.10))",
+                    }}
+                  />
+                </a>
               </div>
             </li>
           </ul>
