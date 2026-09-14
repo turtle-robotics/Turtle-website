@@ -121,7 +121,7 @@ const SoftwareIncubator = () => {
     <div className="min-h-screen">
       <Hero
         heading="SOFTWARE INCUBATOR PROGRAM"
-        subheading="Releasing Fall 2026"
+        subheading="Founded Fall 2026"
         backgroundImage="/assets/GeneralPhotos/Fall_2025_CSTAT_Hatchling_Group_Photo.webp"
         backgroundAltText="Hatchling Program Background"
       ></Hero>

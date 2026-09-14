@@ -21,7 +21,7 @@ const DevelopmentPrograms = () => {
       id: "software-incubator",
       title: "Software Incubator",
       tagline: "tag",
-      year: "Releasing Fall 2026",
+      year: "Founded Fall 2026",
       description:
         "Software Incubator is a sequel to Hatchling, focused on the robotic application of kinematics, sensor fusion, control theory, and more",
       link: "/software-incubator",
@@ -31,7 +31,7 @@ const DevelopmentPrograms = () => {
       id: "mechanical-incubator",
       title: "Mechanical Incubator",
       tagline: "tag",
-      year: "Releasing Fall 2026",
+      year: "Founded Fall 2026",
       description:
         "Mechanical Incubator is a sequel to Hatchling, focused on the robotic application of Ansys FEA, DFMA, GD&T, Electromechanical Design, and more",
       link: "/mechanical-incubator",
