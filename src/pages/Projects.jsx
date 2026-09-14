@@ -135,7 +135,7 @@ const Projects = () => {
                     >
                       {project.status}
                     </span>
-                    
+
                     <span className="text-xs font-light text-gray-400">
                       {project.duration}
                     </span>
