@@ -1,9 +1,16 @@
+import { useState } from "react";
 import ButtonLink from "../components/ButtonLink";
 import TextLink from "../components/TextLink";
 import Hero from "../components/Hero";
 import PageSection from "../components/PageSection";
 
 const SoftwareIncubator = () => {
+  const [selectedWeek, setSelectedWeek] = useState("");
+
+  const pdfMap = {
+    1: "/pdfs/Week1_SO_ARM_Updated.pptx.pdf",
+  };
+
   const learningObjectiveGroups = [
     {
       groupName: "Robotics Environments",
@@ -192,6 +199,41 @@ const SoftwareIncubator = () => {
               <p className="text-sm text-gray-400">
                 ← Scroll to see all 10 weeks →
               </p>
+            </div>
+          </div>
+        </div>
+      </PageSection>
+
+      {/* Published Materials Section */}
+      <PageSection heading="PUBLISHED MATERIALS" colorVariant="B">
+        <div className="mb-16">
+          <div className="glass-card p-8 rounded-2xl max-w-2xl mx-auto">
+            <div className="text-center mb-6">
+              <div className="text-5xl mb-4">📚</div>
+
+              <h4 className="text-xl font-light text-gray-200 mb-2">Slides</h4>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4 items-center justify-center mb-6">
+              <select
+                id="weekSelector"
+                className="glass-card border border-gray-700 px-4 py-3 rounded-lg text-gray-200 bg-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
+                value={selectedWeek}
+                onChange={(e) => setSelectedWeek(e.target.value)}
+              >
+                <option value="">Select a week...</option>
+                <option value="1">Week 1: Introductions</option>
+              </select>
+
+              {selectedWeek && (
+                <a
+                  href={pdfMap[selectedWeek]}
+                  download
+                  className="bg-yellow-500 text-black px-6 py-3 rounded-lg text-sm font-light transition-all duration-300"
+                >
+                  Download PDF
+                </a>
+              )}
             </div>
           </div>
         </div>
