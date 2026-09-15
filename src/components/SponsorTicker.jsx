@@ -58,7 +58,7 @@ const SponsorTicker = () => {
       alt: "Send Cut Send Logo",
       link: "https://sendcutsend.com/",
     },
-    { 
+    {
       id: 8,
       name: "Ansys",
       tier: "Silver",

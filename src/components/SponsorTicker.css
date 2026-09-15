@@ -30,11 +30,13 @@
 .sponsor-card {
   align-items: center;
   /* background: #ffffff; */
+  box-sizing: border-box;
   border: 1px solid rgba(255, 255, 255, 0.8);
   border-radius: 0.75rem;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
   display: flex;
   justify-content: center;
+  min-width: 0;
   max-width: 100%;
   overflow: hidden;
   padding: 1rem;
@@ -55,15 +57,17 @@
 }
 
 .sponsor-logo {
+  box-sizing: border-box;
   display: block;
-  height: auto;
+  height: 100%;
   max-width: 100%;
+  max-height: 100%;
   object-fit: contain;
-  width: auto;
+  width: 100%;
 }
 
 .sponsor-tier-platinum .sponsor-card {
-  min-height: 11rem;
+  height: 11rem;
 }
 
 .sponsor-tier-platinum .sponsor-logo {
@@ -72,7 +76,7 @@
 }
 
 .sponsor-tier-gold .sponsor-card {
-  min-height: 9rem;
+  height: 9rem;
 }
 
 .sponsor-tier-gold .sponsor-logo {
@@ -81,7 +85,7 @@
 }
 
 .sponsor-tier-silver .sponsor-card {
-  min-height: 7.5rem;
+  height: 7.5rem;
 }
 
 .sponsor-tier-silver .sponsor-logo {
@@ -90,7 +94,7 @@
 }
 
 .sponsor-tier-bronze .sponsor-card {
-  min-height: 6rem;
+  height: 6rem;
 }
 
 .sponsor-tier-bronze .sponsor-logo {
