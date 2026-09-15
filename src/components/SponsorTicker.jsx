@@ -117,14 +117,16 @@ const SponsorTicker = () => {
           className={`sponsor-tier sponsor-tier-${tier.toLowerCase()}`}
           key={tier}
         >
-          <h3 className="sponsor-tier-heading">{tier} Sponsors</h3>
+          <h3 className="sponsor-tier-heading text-gray-200">
+            {tier} Sponsors
+          </h3>
           <div className="sponsor-tier-grid">
             {logos
               .filter((logo) => logo.tier === tier)
               .map((logo) => (
                 <a
                   key={logo.id}
-                  className="sponsor-card"
+                  className="sponsor-card glass-card pop-card transform rounded-2xl transition-all duration-500 hover:scale-[1.02] hover:rotate-[0.5deg] hover:shadow-xl"
                   href={logo.link}
                   target="_blank"
                   rel="noopener noreferrer"
