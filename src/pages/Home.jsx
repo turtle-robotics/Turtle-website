@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import SponsorTicker from "../components/SponsorTicker";
+import SponsorsSection from "../components/SponsorsSection";
 import ButtonLink from "../components/ButtonLink";
 import Hero from "../components/Hero";
 import PageSection from "../components/PageSection";
@@ -137,7 +137,7 @@ const Home = () => {
         </PageSection>
 
         <PageSection heading="OUR SPONSORS" colorVariant="A">
-          <SponsorTicker />
+          <SponsorsSection />
         </PageSection>
       </div>
     </>

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import PageSection from "../components/PageSection";
-import SponsorTicker from "../components/SponsorTicker";
+import SponsorsSection from "../components/SponsorsSection";
 import Hero from "../components/Hero";
 
 const Sponsorship = () => {
@@ -252,7 +252,7 @@ const Sponsorship = () => {
       </PageSection>
 
       <PageSection heading="OUR SPONSORS" colorVariant="B">
-        <SponsorTicker />
+        <SponsorsSection />
       </PageSection>
 
       {showEmailPopup && (

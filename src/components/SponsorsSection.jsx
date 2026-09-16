@@ -1,6 +1,6 @@
-import "./SponsorTicker.css";
+import "./SponsorsSection.css";
 
-const SponsorTicker = () => {
+const SponsorsSection = () => {
   const logos = [
     {
       id: 1,
@@ -142,4 +142,4 @@ const SponsorTicker = () => {
   );
 };
 
-export default SponsorTicker;
+export default SponsorsSection;
