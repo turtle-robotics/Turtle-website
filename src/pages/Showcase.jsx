@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Hero from "../components/Hero";
 import PageSection from "../components/PageSection";
 import TextLink from "../components/TextLink";
 
@@ -83,44 +84,22 @@ function Showcase() {
         </div>
       )}
 
-      {/* BACKGROUND SECTION WRAPPER */}
-      <div
-        className="relative w-full aspect-[5/4] bg-contain bg-top bg-no-repeat flex items-center justify-center"
-        style={{
-          backgroundImage: "url('/assets/turtlerobotcollage.webp')",
-        }}
+      <Hero
+        heading="TURTLE SHOWCASE"
+        backgroundImage="/assets/GeneralPhotos/Showcase.png"
+        backgroundAltText="TURTLE Project Showcase"
       >
-        {/* Stronger gradient overlay for better readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60 pointer-events-none rounded-3xl"></div>
-
-        <section
-          className="
-          showcase-hero 
-          relative
-          px-6 py-8 md:py-12 
-          text-center 
-          w-[90%] sm:w-[80%] md:w-[65%] lg:w-[55%] 
-          mx-auto
-        "
-        >
-          {/* Title with text shadow for better readability */}
-          <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl tracking-tight mb-6 text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">
-            TURTLE <span className="block text-yellow-400">SHOWCASE</span>
-          </h1>
-
+        <div className="px-4">
           {ENABLE_SHOWCASE_COUNTDOWN ? (
             <>
-              {/* Date with better contrast */}
               <p className="inline-block text-2xl sm:text-3xl md:text-4xl font-light text-yellow-400 mb-4 px-3 py-1 bg-black/70 rounded-lg drop-shadow-lg">
                 April 17, 2026
               </p>
 
-              {/* Time with text shadow */}
               <p className="text-xl sm:text-2xl md:text-3xl font-light text-white mb-4 drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
                 1:00 PM - 5:00 PM
               </p>
 
-              {/* Location with better contrast */}
               <p className="inline-flex items-center justify-center text-lg sm:text-xl md:text-2xl font-light text-yellow-400 mb-10 px-3 py-1 bg-black/70 rounded-lg mx-auto gap-2 drop-shadow-lg">
                 <svg
                   className="w-5 h-5 text-yellow-400 flex-shrink-0"
@@ -151,7 +130,6 @@ function Showcase() {
                 </a>
               </p>
 
-              {/* Countdown with better mobile handling */}
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 md:gap-6 max-w-3xl mx-auto mb-8">
                 {["Days", "Hours", "Minutes", "Seconds"].map((label, index) => (
                   <div
@@ -168,7 +146,6 @@ function Showcase() {
                 ))}
               </div>
 
-              {/* Description with better readability */}
               <p className="text-base sm:text-lg md:text-xl font-light text-white mt-4 max-w-2xl mx-auto drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] leading-relaxed px-4 py-2 bg-black/40 rounded-lg">
                 The biggest TURTLE event of the semester is right around the
                 corner! Join us to see the amazing robotics projects our teams
@@ -180,8 +157,8 @@ function Showcase() {
               Tune in next semester!
             </p>
           )}
-        </section>
-      </div>
+        </div>
+      </Hero>
 
       {ENABLE_SHOWCASE_MAP && (
         <PageSection heading="PROJECT BOOTH MAP">

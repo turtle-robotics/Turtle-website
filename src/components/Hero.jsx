@@ -14,7 +14,7 @@ export default function Hero({
     heading.length > 1 ? heading.trim().split(/\s+/).pop() : heading;
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center px-4 py-16 md:py-24 overflow-hidden">
       {backgroundImage != null && (
         <>
           <img
@@ -35,9 +35,11 @@ export default function Hero({
           <span className="block">{headingWithoutLastWord}</span>
           <span className="block text-yellow-400">{headingLastWord}</span>
         </h1>
-        <p className="text-lg sm:text-xl md:text-2xl font-light tracking-wide text-gray-200 mb-12 max-w-3xl mx-auto">
-          {subheading}
-        </p>
+        {subheading && (
+          <p className="text-lg sm:text-xl md:text-2xl font-light tracking-wide text-gray-200 mb-12 max-w-3xl mx-auto">
+            {subheading}
+          </p>
+        )}
         {children}
       </div>
     </section>
