@@ -38,6 +38,18 @@ const DevelopmentPrograms = () => {
       image: "/assets/MI_Photo.png",
     },
     {
+      id: "engr-289",
+      title: "ENGR 289",
+      tagline: "tag",
+      year: "Founded 2026",
+      description:
+        "A two-credit-hour course developed by TURTLE in collaboration with Dr. Fletcher and the College of Engineering. TURTLE staffs and teaches the lab component of the course.",
+      link: "https://tamu.simplesyllabus.com/en-US/doc/ggfzklxi2",
+      image: "/assets/engr-289-picture.jpg",
+      ctaLabel: "View Course Syllabus",
+      externalLink: true,
+    },
+    {
       id: "workshop-series",
       title: "Workshop Series",
       tagline: "Workshop Series",
@@ -57,11 +69,23 @@ const DevelopmentPrograms = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-center gap-4 py-4">
             {programs
-              .filter((program) => !program.disabled)
+              .filter(
+                (program) => !program.disabled && program.id !== "engr-289",
+              )
               .map((program) => (
                 <button
                   key={program.id}
-                  onClick={() => navigate(program.link)}
+                  onClick={() => {
+                    if (program.externalLink) {
+                      window.open(
+                        program.link,
+                        "_blank",
+                        "noopener,noreferrer",
+                      );
+                      return;
+                    }
+                    navigate(program.link);
+                  }}
                   className="px-6 py-2 rounded-lg text-sm font-light tracking-wide transition-all duration-300 bg-gray-800/50 hover:bg-gray-700 text-gray-300 hover:text-yellow-400 border border-gray-700 hover:border-yellow-400/50"
                 >
                   {program.title}
@@ -100,7 +124,6 @@ const DevelopmentPrograms = () => {
                 </p>
 
                 <h3 className="text-4xl md:text-5xl text-white mb-3">
-                  {/* {program.tagline} */}
                   {program.title.toUpperCase()}
                 </h3>
 
@@ -109,7 +132,12 @@ const DevelopmentPrograms = () => {
                 </p>
 
                 {!program.disabled && (
-                  <ButtonLink to={program.link}>Learn More</ButtonLink>
+                  <ButtonLink
+                    to={program.link}
+                    reloadDocument={program.externalLink}
+                  >
+                    {program.ctaLabel || "Learn More"}
+                  </ButtonLink>
                 )}
               </div>
             </div>
