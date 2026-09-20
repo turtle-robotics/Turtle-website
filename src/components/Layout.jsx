@@ -24,7 +24,6 @@ const Layout = ({ children }) => {
       label: "Development Programs",
       children: [
         { path: "/hatchling", label: "Hatchling" },
-        { path: "/workshop-series", label: "Workshop Series" },
         { path: "/mechanical-incubator", label: "Mechanical Incubator" },
         { path: "/software-incubator", label: "Software Incubator" },
       ],

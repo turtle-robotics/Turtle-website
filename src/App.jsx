@@ -7,7 +7,6 @@ import Projects from "./pages/Projects";
 import ProjectDetail from "./pages/ProjectDetail";
 import DevelopmentPrograms from "./pages/DevelopmentPrograms";
 import Hatchling from "./pages/Hatchling";
-import WorkshopSeries from "./pages/WorkshopSeries";
 import MechanicalIncubator from "./pages/MechanicalIncubator";
 import SoftwareIncubator from "./pages/SoftwareIncubator";
 import Apply from "./pages/Apply";
@@ -24,7 +23,6 @@ function App(Component, pageProps) {
         <Route path="/projects/:projectId" element={<ProjectDetail />} />
         <Route path="/development-programs" element={<DevelopmentPrograms />} />
         <Route path="/hatchling" element={<Hatchling />} />
-        <Route path="/workshop-series" element={<WorkshopSeries />} />
         <Route path="/mechanical-incubator" element={<MechanicalIncubator />} />
         <Route path="/software-incubator" element={<SoftwareIncubator />} />
         <Route path="/showcase" element={<Showcase />} />
