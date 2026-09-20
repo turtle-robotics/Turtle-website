@@ -94,9 +94,9 @@ const Layout = ({ children }) => {
                   <div key={item.path} className="group relative">
                     <Link
                       to={item.path}
-                      aria-haspopup="menu"
+                      aria-haspopup="true"
                       aria-controls={`desktop-menu-${item.path.slice(1).replaceAll("/", "-")}`}
-                      className={`flex items-center gap-1 text-sm font-light tracking-wide transition-all duration-300 ${
+                      className={`flex items-center gap-1 text-sm font-light tracking-wide transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900 ${
                         isItemActive(item)
                           ? "text-yellow-400"
                           : "text-gray-300 hover:text-yellow-400"
@@ -109,16 +109,15 @@ const Layout = ({ children }) => {
                     </Link>
                     <div
                       id={`desktop-menu-${item.path.slice(1).replaceAll("/", "-")}`}
-                      role="menu"
                       className="invisible absolute left-0 top-full w-56 pt-3 opacity-0 transition-all group-hover:visible group-hover:opacity-100 group-has-[:focus-visible]:visible group-has-[:focus-visible]:opacity-100"
                     >
                       <div className="rounded-lg border border-gray-700/70 bg-gray-900/95 p-2 shadow-xl">
-                        {item.children.map((child) => (
+                        {/* Repeat the parent page for accessibility and a clear, easy navigation target. */}
+                        {[item, ...item.children].map((child) => (
                           <Link
                             key={child.path}
                             to={child.path}
-                            role="menuitem"
-                            className={`block rounded-md px-3 py-2 text-sm transition-colors ${
+                            className={`block rounded-md px-3 py-2 text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400 ${
                               isPathActive(child.path)
                                 ? "bg-yellow-500/15 text-yellow-400"
                                 : "text-gray-300 hover:bg-gray-800 hover:text-yellow-400"
@@ -151,7 +150,7 @@ const Layout = ({ children }) => {
 
             <button
               type="button"
-              className="md:hidden rounded-md p-2 text-gray-200 hover:bg-gray-800 hover:text-yellow-400"
+              className="md:hidden rounded-md p-2 text-gray-200 hover:bg-gray-800 hover:text-yellow-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
               onClick={() => setMobileMenuOpen((open) => !open)}
               aria-label={
                 mobileMenuOpen
@@ -170,25 +169,37 @@ const Layout = ({ children }) => {
               <div className="flex flex-col gap-1">
                 {navItems.map((item) =>
                   item.children ? (
-                    <details key={item.path} className="group">
-                      <summary
-                        className={`flex cursor-pointer list-none items-center justify-between rounded-md px-3 py-3 text-sm tracking-wide [&::-webkit-details-marker]:hidden ${
+                    <div key={item.path}>
+                      <input
+                        id={`mobile-${item.path.slice(1).replaceAll("/", "-")}`}
+                        type="checkbox"
+                        className="peer sr-only"
+                        aria-label={`Toggle ${item.label} menu`}
+                        aria-controls={`mobile-menu-${item.path.slice(1).replaceAll("/", "-")}`}
+                      />
+                      <label
+                        htmlFor={`mobile-${item.path.slice(1).replaceAll("/", "-")}`}
+                        className={`flex cursor-pointer items-center justify-between rounded-md px-3 py-3 text-sm tracking-wide peer-focus-visible:ring-2 peer-focus-visible:ring-yellow-400 peer-focus-visible:ring-offset-2 peer-focus-visible:ring-offset-gray-900 ${
                           isItemActive(item)
                             ? "text-yellow-400"
                             : "text-gray-300 hover:bg-gray-800 hover:text-yellow-400"
                         }`}
                       >
                         {item.label}
-                        <span className="transition-transform group-open:rotate-180">
+                        <span className="block transition-transform peer-checked:rotate-180">
                           ▾
                         </span>
-                      </summary>
-                      <div className="ml-4 border-l border-yellow-500/40 pl-3">
-                        {item.children.map((child) => (
+                      </label>
+                      <div
+                        id={`mobile-menu-${item.path.slice(1).replaceAll("/", "-")}`}
+                        className="ml-4 hidden border-l border-yellow-500/40 pl-3 peer-checked:block"
+                      >
+                        {/* Repeat the parent page for accessibility and user-friendly mobile navigation. */}
+                        {[item, ...item.children].map((child) => (
                           <Link
                             key={child.path}
                             to={child.path}
-                            className={`block rounded-md px-3 py-2 text-sm ${
+                            className={`block rounded-md px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400 ${
                               isPathActive(child.path)
                                 ? "text-yellow-400"
                                 : "text-gray-400 hover:bg-gray-800 hover:text-yellow-400"
@@ -198,12 +209,12 @@ const Layout = ({ children }) => {
                           </Link>
                         ))}
                       </div>
-                    </details>
+                    </div>
                   ) : (
                     <Link
                       key={item.path}
                       to={item.path}
-                      className={`block rounded-md px-3 py-3 text-sm tracking-wide ${
+                      className={`block rounded-md px-3 py-3 text-sm tracking-wide focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400 ${
                         isItemActive(item)
                           ? "text-yellow-400"
                           : "text-gray-300 hover:bg-gray-800 hover:text-yellow-400"
