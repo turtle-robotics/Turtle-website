@@ -1,11 +1,8 @@
-import { useNavigate } from "react-router-dom";
 import ButtonLink from "../components/ButtonLink";
 import Hero from "../components/Hero";
 import PageSection from "../components/PageSection";
 
 const DevelopmentPrograms = () => {
-  const navigate = useNavigate();
-
   const programs = [
     {
       id: "hatchling",
@@ -64,37 +61,6 @@ const DevelopmentPrograms = () => {
 
   return (
     <div className="min-h-screen relative">
-      {/* Sticky Tab Bar */}
-      <div className="fixed top-20 left-0 right-0 z-40 bg-gray-900/90 backdrop-blur-xl border-b border-gray-700/50 shadow-lg">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-center gap-4 py-4">
-            {programs
-              .filter(
-                (program) => !program.disabled && program.id !== "engr-289",
-              )
-              .map((program) => (
-                <button
-                  key={program.id}
-                  onClick={() => {
-                    if (program.externalLink) {
-                      window.open(
-                        program.link,
-                        "_blank",
-                        "noopener,noreferrer",
-                      );
-                      return;
-                    }
-                    navigate(program.link);
-                  }}
-                  className="px-6 py-2 rounded-lg text-sm font-light tracking-wide transition-all duration-300 bg-gray-800/50 hover:bg-gray-700 text-gray-300 hover:text-yellow-400 border border-gray-700 hover:border-yellow-400/50"
-                >
-                  {program.title}
-                </button>
-              ))}
-          </div>
-        </div>
-      </div>
-
       <Hero
         heading="DEVELOPMENT PROGRAMS"
         subheading="To provide the resources and environment that enables undergraduate
