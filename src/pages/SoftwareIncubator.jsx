@@ -8,7 +8,7 @@ const SoftwareIncubator = () => {
   const [selectedWeek, setSelectedWeek] = useState("");
 
   const pdfMap = {
-    1: "/pdfs/Week1_SO_ARM_Updated.pptx.pdf",
+    1: "/pdfs/Week1_SO_ARM.pptx.pdf",
   };
 
   const learningObjectiveGroups = [
