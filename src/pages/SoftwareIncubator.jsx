@@ -9,6 +9,7 @@ const SoftwareIncubator = () => {
 
   const pdfMap = {
     1: "/pdfs/Week1_SO_ARM.pptx.pdf",
+    2: "/pdfs/Week2_SO_ARM.pptx.pdf",
   };
 
   const learningObjectiveGroups = [
@@ -223,6 +224,7 @@ const SoftwareIncubator = () => {
               >
                 <option value="">Select a week...</option>
                 <option value="1">Week 1: Introductions</option>
+                <option value="2">Week 2: Git and Linux</option>
               </select>
 
               {selectedWeek && (
