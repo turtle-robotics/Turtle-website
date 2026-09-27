@@ -11,7 +11,7 @@ const MechanicalIncubator = () => {
     1: "/pdfs/MI Week 1 - Introductions.pptx.pdf",
     2: "/pdfs/MI Week 2 - Mechanical Design.pptx.pdf",
     3: "/pdfs/MI Week 3 - Electromechanical Design.pptx.pdf",
-};
+  };
 
   const learningObjectiveGroups = [
     {
