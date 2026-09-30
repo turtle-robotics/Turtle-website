@@ -329,7 +329,7 @@ const Hatchling = () => {
                 const pdfMap = {
                   1: "/pdfs/Hatchling Week 1 - Introduction.pptx.pdf",
                   2: "/pdfs/Hatchling Week 2 - SolidWorks (CAD) Foundation.pptx.pdf",
-                  //3: "/pdfs/Hatchling Week 3 - SolidWorks 3D.pptx.pdf",
+                  3: "/pdfs/Hatchling Week 3 - SolidWorks 3D.pptx.pdf",
                   //4: "/pdfs/Hatchling Week 4 - Tools, Project, and Process.pptx.pdf",
                   //5: "/pdfs/Hatchling Week 5 - Design Review and Cpp.pptx.pdf",
                   //6: "/pdfs/Hatchling Week 6 - SolidWorks Assembly.pptx.pdf",
@@ -356,8 +356,8 @@ const Hatchling = () => {
                       <option value="">Select a week...</option>
                       <option value="1">Week 1: Introductions</option>
                       <option value="2">Week 2: SolidWorks Foundation</option>
-                      {/* <option value="3">Week 3: SolidWorks 3D</option>
-                      <option value="4">Week 4: Tools, Project, and Process</option>
+                      <option value="3">Week 3: SolidWorks 3D</option>
+                      {/* <option value="4">Week 4: Tools, Project, and Process</option>
                       <option value="5">Week 5: Design Review and C++</option>
                       <option value="6">Week 6: SolidWorks Assembly</option>
                       <option value="7">Week 7: Programming and Git GitHub</option>
