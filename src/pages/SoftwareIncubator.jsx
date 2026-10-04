@@ -83,6 +83,11 @@ const SoftwareIncubator = () => {
     },
     {
       heading: "Week 4",
+      subheading: "Kinematics",
+      objectives: ["Forward", "Inverse", "Velocity"],
+    },
+    {
+      heading: "Week 5",
       subheading: "Embedded Systems",
       objectives: [
         "Microcontrollers",
@@ -90,11 +95,6 @@ const SoftwareIncubator = () => {
         "Low-level Data",
         "IOT",
       ],
-    },
-    {
-      heading: "Week 5",
-      subheading: "Kinematics",
-      objectives: ["Forward", "Inverse", "Velocity"],
     },
     {
       heading: "Week 6",
