@@ -10,7 +10,7 @@ const SoftwareIncubator = () => {
   const pdfMap = {
     1: "/pdfs/Week1_SO_ARM_Introductions.pptx.pdf",
     2: "/pdfs/Week2_SO_ARM_Introduction_to_Linux_and_Git.pptx.pdf",
-    3: "/pdfs/Week3_SO_ARM_Transformations_in_Python.pptx.pdf",
+    3: "/pdfs/Week3_SO_ARM_Transformations_Python.pptx.pdf",
     4: "/pdfs/Week4_SO_ARM_Kinematics.pptx.pdf",
   };
 
