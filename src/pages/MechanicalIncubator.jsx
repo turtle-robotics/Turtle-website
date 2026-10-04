@@ -11,6 +11,7 @@ const MechanicalIncubator = () => {
     1: "/pdfs/MI Week 1 - Introductions.pptx.pdf",
     2: "/pdfs/MI Week 2 - Mechanical Design.pptx.pdf",
     3: "/pdfs/MI Week 3 - Electromechanical Design.pptx.pdf",
+    4: "/pdfs/MI Week 4 - Materials Manufacturing GDT.pdf",
   };
 
   const learningObjectiveGroups = [
@@ -273,6 +274,9 @@ const MechanicalIncubator = () => {
                 <option value="1">Week 1: Introductions</option>
                 <option value="2">Week 2: Mechanical Design</option>
                 <option value="3">Week 3: Electromechanical Design</option>
+                <option value="4">
+                  Week 4: Materials, Manufacturing, GD&T
+                </option>
               </select>
 
               {selectedWeek && (
