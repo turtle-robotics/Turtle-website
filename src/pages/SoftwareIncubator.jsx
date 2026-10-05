@@ -10,6 +10,8 @@ const SoftwareIncubator = () => {
   const pdfMap = {
     1: "/pdfs/Week1_SO_ARM_Introductions.pptx.pdf",
     2: "/pdfs/Week2_SO_ARM_Introduction_to_Linux_and_Git.pptx.pdf",
+    3: "/pdfs/Week3_SO_ARM_Transformations_Python.pptx.pdf",
+    4: "/pdfs/Week4_SO_ARM_Kinematics.pptx.pdf",
   };
 
   const learningObjectiveGroups = [
@@ -81,6 +83,11 @@ const SoftwareIncubator = () => {
     },
     {
       heading: "Week 4",
+      subheading: "Kinematics",
+      objectives: ["Forward", "Inverse", "Velocity"],
+    },
+    {
+      heading: "Week 5",
       subheading: "Embedded Systems",
       objectives: [
         "Microcontrollers",
@@ -88,11 +95,6 @@ const SoftwareIncubator = () => {
         "Low-level Data",
         "IOT",
       ],
-    },
-    {
-      heading: "Week 5",
-      subheading: "Kinematics",
-      objectives: ["Forward", "Inverse", "Velocity"],
     },
     {
       heading: "Week 6",
@@ -225,6 +227,8 @@ const SoftwareIncubator = () => {
                 <option value="">Select a week...</option>
                 <option value="1">Week 1: Introductions</option>
                 <option value="2">Week 2: Git and Linux</option>
+                <option value="3">Week 3: Transformations in Python</option>
+                <option value="4">Week 4: Kinematics</option>
               </select>
 
               {selectedWeek && (
