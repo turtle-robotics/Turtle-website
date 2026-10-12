@@ -231,7 +231,44 @@ const Sponsorship = () => {
           ))}
         </div>
       </PageSection>
+      {/* Sponsorship Packet */}
+      <PageSection heading="SPONSORSHIP PACKET" colorVariant="A">
+        <div className="glass-card p-8 rounded-2xl max-w-4xl mx-auto text-center">
+          <p className="text-xl font-light text-gray-400 mb-8 max-w-2xl mx-auto">
+            Learn about our programs, our impact, and the ways your company can
+            support TURTLE Robotics.
+          </p>
 
+          {/* Embedded PDF viewer (desktop/tablet only) */}
+          <div className="hidden md:block w-full h-[700px] rounded-xl overflow-hidden border border-gray-700">
+            <iframe
+              src="/pdfs/sponsorship-packet.pdf#navpanes=0&scrollbar=1"
+              className="w-full h-full"
+              title="TURTLE Sponsorship Packet"
+              frameBorder="0"
+            />
+          </div>
+
+          {/* Always visible; the only option on phones */}
+          <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/pdfs/sponsorship-packet.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-yellow-500 text-black px-8 py-4 rounded-xl font-medium hover:scale-105 transition-all duration-300 shadow-lg"
+            >
+              Open Packet
+            </a>
+            <a
+              href="/pdfs/sponsorship-packet.pdf"
+              download
+              className="inline-block border-2 border-yellow-500 text-yellow-600 px-8 py-4 rounded-xl font-medium hover:scale-105 transition-all duration-300"
+            >
+              Download PDF
+            </a>
+          </div>
+        </div>
+      </PageSection>
       {/* Contact Section */}
       <PageSection heading="READY TO PARTNER" colorVariant="A">
         <div id="contact-section" className="max-w-4xl mx-auto text-center">
