@@ -933,28 +933,5 @@ export const projects = [
 
 // Helper function to get project by ID
 export const getProjectById = (id) => {
-  return projects.find((project) => project.id === id) || projects[0];
+  return projects.find((project) => project.id === id);
 };
-
-export const statistics = [
-  {
-    count: 13,
-    label: "Advanced Research Projects",
-    description: "Cutting-edge robotics initiatives",
-  },
-  {
-    count: 2,
-    label: "Competition Teams",
-    description: "Robotics competition teams",
-  },
-  {
-    count: 150,
-    label: "Student Researchers",
-    description: "150+ active researchers",
-  },
-  {
-    count: 110,
-    label: "Hatchling Members",
-    description: "Program participants",
-  },
-];
