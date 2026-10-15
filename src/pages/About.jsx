@@ -5,7 +5,7 @@ import PageSection from "../components/PageSection";
 
 const About = () => {
   const statistics = [
-    { count: 21, label: "Advanced Research Projects" },
+    { count: 19, label: "R&D Projects" },
     { count: 2, label: "Competition Teams" },
     { count: 250, label: "Student Researchers" },
     { count: 110, label: "Hatchling Members" },

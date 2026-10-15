@@ -1,14 +1,16 @@
 import { useParams, Link } from "react-router-dom";
-import { useEffect, useState, useMemo } from "react";
+import { useMemo } from "react";
 import { getProjectById } from "../data/projects";
 import ImageCarousel from "../components/ImageCarousel";
-import ButtonLink from "../components/ButtonLink";
+import NotFound from "./NotFound";
 
 const ProjectDetail = () => {
   const { projectId } = useParams();
-  const [activeImageIndex, setActiveImageIndex] = useState(0);
-
   const project = getProjectById(projectId);
+
+  if (!project) {
+    return <NotFound />;
+  }
 
   const formatDate = (dateString) => {
     const date = new Date(dateString);

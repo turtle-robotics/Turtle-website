@@ -194,9 +194,8 @@ function Showcase() {
               <p className="mt-4 text-gray-400 font-light leading-relaxed">
                 Project Showcase is a several hour come-and-go event for
                 presenting what TURTLE has accomplished this semester. At
-                showcase all 21 advanced projects as well as HATCHLING set up
-                tables to present their projects, progress, and plans for the
-                future.
+                showcase all 19 R&D projects as well as HATCHLING set up tables
+                to present their projects, progress, and plans for the future.
               </p>
             </details>
 
