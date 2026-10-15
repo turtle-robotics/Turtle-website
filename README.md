@@ -22,7 +22,7 @@ Website for TURTLE Robotics at Texas A&M University.
 
 ```bash
 # Clone the repository
-git clone https://github.com/theryokato/Turtle-website.git
+git clone https://github.com/turtle-robotics/Turtle-website.git
 
 # Change to the project directory
 cd Turtle-website
