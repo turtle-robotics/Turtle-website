@@ -1,0 +1,43 @@
+name: Feature request
+description: Request a new feature or an improvement
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: change
+    attributes:
+      label: Requested change
+      description: Describe the change that you want.
+    validations:
+      required: true
+  - type: textarea
+    id: reason
+    attributes:
+      label: Reason
+      description: Explain why the website needs this change.
+    validations:
+      required: true
+  - type: textarea
+    id: requirements
+    attributes:
+      label: Requirements
+      description: List what the change must do. Write each item on a new line. Use a checkbox for each item.
+      placeholder: |
+        - [ ] Requirement 1
+        - [ ] Requirement 2
+    validations:
+      required: true
+  - type: textarea
+    id: design
+    attributes:
+      label: Design or implementation information
+      description: Add design notes, examples, or implementation ideas. This field is optional.
+    validations:
+      required: false
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional information
+      description: Add other information about the request. This field is optional.
+    validations:
+      required: false
