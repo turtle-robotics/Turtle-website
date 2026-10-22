@@ -282,9 +282,7 @@ const MechanicalIncubator = () => {
                 <option value="5">
                   Week 5: Statics and Solids Technical Interview Concepts
                 </option>
-                <option value="6">
-                  Week 6: FEA Foundations with ANSYS
-                </option>
+                <option value="6">Week 6: FEA Foundations with ANSYS</option>
               </select>
 
               {selectedWeek && (
