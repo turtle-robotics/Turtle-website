@@ -332,7 +332,7 @@ const Hatchling = () => {
                   3: "/pdfs/Hatchling Week 3 - SolidWorks 3D.pptx.pdf",
                   4: "/pdfs/Hatchling Week 4 - Tools, Project, and Process.pptx.pdf",
                   5: "/pdfs/Hatchling Week 5 - CPP Intro and Design Review.pdf",
-                  //6: "/pdfs/Hatchling Week 6 - SolidWorks Assembly.pptx.pdf",
+                  6: "/pdfs/Hatchling Week 6 - SolidWorks Assembly.pptx.pdf",
                   //7: "/pdfs/Hatchling Week 7 - Programming and Git GitHub.pptx.pdf",
                   //8: "/pdfs/Hatchling Week 8 - Electronics and Soldering.pptx.pdf",
                 };
@@ -363,8 +363,8 @@ const Hatchling = () => {
                       <option value="5">
                         Week 5: C++ Intro and Design Review
                       </option>
-                      {/* <option value="6">Week 6: SolidWorks Assembly</option>
-                      <option value="7">Week 7: Programming and Git GitHub</option>
+                      <option value="6">Week 6: SolidWorks Assembly</option>
+                      {/* <option value="7">Week 7: Programming and Git GitHub</option>
                       <option value="8">Week 8: Electronics and Soldering</option> */}
                     </select>
 
