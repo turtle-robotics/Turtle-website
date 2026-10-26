@@ -16,7 +16,7 @@ const MechanicalIncubator = () => {
     6: "/pdfs/MI Week 6 - Finite Element Analysis.pdf",
     6.5: "/examples/MI Week 6 - Examples.SLDPRT",
     7: "/pdfs/MI Week 7 - Finite Element Analysis.pdf",
-    7.5: "/examples/MI Week 7 - Examples.zip"
+    7.5: "/examples/MI Week 7 - Examples.zip",
   };
 
   const learningObjectiveGroups = [
@@ -265,7 +265,9 @@ const MechanicalIncubator = () => {
             <div className="text-center mb-6">
               <div className="text-5xl mb-4">📚</div>
 
-              <h4 className="text-xl font-light text-gray-200 mb-2">Slides and Examples</h4>
+              <h4 className="text-xl font-light text-gray-200 mb-2">
+                Slides and Examples
+              </h4>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 items-center justify-center mb-6">
@@ -285,9 +287,13 @@ const MechanicalIncubator = () => {
                 <option value="5">
                   Week 5: Statics and Solids Technical Interview Concepts
                 </option>
-                <option value="6">Week 6: Finite Element Analysis Part 1</option>
+                <option value="6">
+                  Week 6: Finite Element Analysis Part 1
+                </option>
                 <option value="6.5">Week 6: Examples</option>
-                <option value="7">Week 7: Finite Element Analysis Part 2</option>
+                <option value="7">
+                  Week 7: Finite Element Analysis Part 2
+                </option>
                 <option value="7.5">Week 7: Examples</option>
               </select>
 
