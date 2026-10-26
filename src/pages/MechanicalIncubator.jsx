@@ -14,6 +14,7 @@ const MechanicalIncubator = () => {
     4: "/pdfs/MI Week 4 - Materials Manufacturing GDT.pdf",
     5: "/pdfs/MI Week 5 - Statics and Solids Technical Interview Concepts.pptx.pdf",
     6: "/pdfs/MI Week 6 - Finite Element Analysis.pdf",
+    7: "/pdfs/MI Week 7 - Finite Element Analysis.pdf"
   };
 
   const learningObjectiveGroups = [
@@ -282,7 +283,8 @@ const MechanicalIncubator = () => {
                 <option value="5">
                   Week 5: Statics and Solids Technical Interview Concepts
                 </option>
-                <option value="6">Week 6: Finite Element Analysis</option>
+                <option value="6">Week 6: Finite Element Analysis Part 1</option>
+                <option value="7">Week 7: Finite Element Analysis Part 2</option>
               </select>
 
               {selectedWeek && (
