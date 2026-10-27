@@ -1,20 +1,10 @@
-import { useState } from "react";
+import ProgramSlides from "../components/ProgramSlides";
 import ButtonLink from "../components/ButtonLink";
 import TextLink from "../components/TextLink";
 import Hero from "../components/Hero";
 import PageSection from "../components/PageSection";
 
 const SoftwareIncubator = () => {
-  const [selectedWeek, setSelectedWeek] = useState("");
-
-  const pdfMap = {
-    1: "/pdfs/Week1_SO_ARM_Introductions.pptx.pdf",
-    2: "/pdfs/Week2_SO_ARM_Introduction_to_Linux_and_Git.pptx.pdf",
-    3: "/pdfs/Week3_SO_ARM_Transformations_Python.pptx.pdf",
-    4: "/pdfs/Week4_SO_ARM_Kinematics.pptx.pdf",
-    5: "/pdfs/Week5_SO_ARM_Embedded_Systems_Hardware_Interfaces.pptx.pdf",
-  };
-
   const learningObjectiveGroups = [
     {
       groupName: "Robotics Environments",
@@ -218,33 +208,7 @@ const SoftwareIncubator = () => {
               <h4 className="text-xl font-light text-gray-200 mb-2">Slides</h4>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 items-center justify-center mb-6">
-              <select
-                id="weekSelector"
-                className="glass-card border border-gray-700 px-4 py-3 rounded-lg text-gray-200 bg-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
-                value={selectedWeek}
-                onChange={(e) => setSelectedWeek(e.target.value)}
-              >
-                <option value="">Select a week...</option>
-                <option value="1">Week 1: Introductions</option>
-                <option value="2">Week 2: Git and Linux</option>
-                <option value="3">Week 3: Transformations in Python</option>
-                <option value="4">Week 4: Kinematics</option>
-                <option value="5">
-                  Week 5: Embedded Systems and Hardware Interfaces
-                </option>
-              </select>
-
-              {selectedWeek && (
-                <a
-                  href={pdfMap[selectedWeek]}
-                  download
-                  className="bg-yellow-500 text-black px-6 py-3 rounded-lg text-sm font-light transition-all duration-300"
-                >
-                  Download PDF
-                </a>
-              )}
-            </div>
+            <ProgramSlides program="software-incubator" />
           </div>
         </div>
       </PageSection>

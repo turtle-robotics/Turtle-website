@@ -1,21 +1,10 @@
-import { useState } from "react";
+import ProgramSlides from "../components/ProgramSlides";
 import ButtonLink from "../components/ButtonLink";
 import TextLink from "../components/TextLink";
 import Hero from "../components/Hero";
 import PageSection from "../components/PageSection";
 
 const MechanicalIncubator = () => {
-  const [selectedWeek, setSelectedWeek] = useState("");
-
-  const pdfMap = {
-    1: "/pdfs/MI Week 1 - Introductions.pptx.pdf",
-    2: "/pdfs/MI Week 2 - Mechanical Design.pptx.pdf",
-    3: "/pdfs/MI Week 3 - Electromechanical Design.pptx.pdf",
-    4: "/pdfs/MI Week 4 - Materials Manufacturing GDT.pdf",
-    5: "/pdfs/MI Week 5 - Statics and Solids Technical Interview Concepts.pptx.pdf",
-    6: "/pdfs/MI Week 6 - Finite Element Analysis.pdf",
-  };
-
   const learningObjectiveGroups = [
     {
       groupName: "ANSYS (FEA) Competency",
@@ -265,36 +254,7 @@ const MechanicalIncubator = () => {
               <h4 className="text-xl font-light text-gray-200 mb-2">Slides</h4>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 items-center justify-center mb-6">
-              <select
-                id="weekSelector"
-                className="glass-card border border-gray-700 px-4 py-3 rounded-lg text-gray-200 bg-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
-                value={selectedWeek}
-                onChange={(e) => setSelectedWeek(e.target.value)}
-              >
-                <option value="">Select a week...</option>
-                <option value="1">Week 1: Introductions</option>
-                <option value="2">Week 2: Mechanical Design</option>
-                <option value="3">Week 3: Electromechanical Design</option>
-                <option value="4">
-                  Week 4: Materials, Manufacturing, GD&T
-                </option>
-                <option value="5">
-                  Week 5: Statics and Solids Technical Interview Concepts
-                </option>
-                <option value="6">Week 6: Finite Element Analysis</option>
-              </select>
-
-              {selectedWeek && (
-                <a
-                  href={pdfMap[selectedWeek]}
-                  download
-                  className="bg-yellow-500 text-black px-6 py-3 rounded-lg text-sm font-light transition-all duration-300"
-                >
-                  Download PDF
-                </a>
-              )}
-            </div>
+            <ProgramSlides program="mechanical-incubator" />
           </div>
         </div>
       </PageSection>
