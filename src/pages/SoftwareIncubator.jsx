@@ -13,6 +13,7 @@ const SoftwareIncubator = () => {
     3: "/pdfs/Week3_SO_ARM_Transformations_Python.pptx.pdf",
     4: "/pdfs/Week4_SO_ARM_Kinematics.pptx.pdf",
     5: "/pdfs/Week5_SO_ARM_Embedded_Systems_Hardware_Interfaces.pptx.pdf",
+    6: "/pdfs/Week6_Control_Systems.pptx.pdf",
   };
 
   const learningObjectiveGroups = [
@@ -233,6 +234,7 @@ const SoftwareIncubator = () => {
                 <option value="5">
                   Week 5: Embedded Systems and Hardware Interfaces
                 </option>
+                <option value="6">Week 6: Control Systems</option>
               </select>
 
               {selectedWeek && (
