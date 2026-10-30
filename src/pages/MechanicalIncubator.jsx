@@ -17,6 +17,8 @@ const MechanicalIncubator = () => {
     6.5: "/examples/MI Week 6 - Examples.SLDPRT",
     7: "/pdfs/MI Week 7 - Finite Element Analysis.pdf",
     7.5: "/examples/MI Week 7 - Examples.zip",
+    8: "/pdfs/MI Week 8 - Vibrations.pdf",
+    8.5: "/examples/MI Week 8 - Examples.zip",
   };
 
   const learningObjectiveGroups = [
@@ -295,6 +297,8 @@ const MechanicalIncubator = () => {
                   Week 7: Finite Element Analysis Part 2
                 </option>
                 <option value="7.5">Week 7: Examples</option>
+                <option value="8">Week 8: Vibrations</option>
+                <option value="8.5">Week 8: Examples</option>
               </select>
 
               {selectedWeek && (
