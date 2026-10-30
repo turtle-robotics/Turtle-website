@@ -101,32 +101,54 @@ const SoftwareIncubator = () => {
     },
     {
       heading: "Week 6",
-      subheading: "Electromechanical Systems",
+      subheading: "Control Systems for Robotics",
       objectives: [
-        "Actuator Control",
-        "Sensor Properties",
-        "System Integration",
+        "PID Controllers",
+        "PID Tuning",
+        "Feedforward Control",
+        "LQR",
       ],
     },
     {
       heading: "Week 7",
-      subheading: "Classic Control Theory",
-      objectives: ["PID Controllers", "Open vs Closed Loop", "LQR"],
+      subheading: "Sensors, Filtering, and State Estimation",
+      objectives: [
+        "Filter Types",
+        "Low-Pass/IIR Filters",
+        "Kalman Filter",
+        "State Estimation",
+      ],
     },
     {
       heading: "Week 8",
-      subheading: "Sensor Fusion and Perception",
-      objectives: ["Filters", "Mapping"],
+      subheading: "Motion Planning and Decision Making",
+      objectives: [
+        "A* Path Planning",
+        "RRT/RRT*",
+        "Trajectory Generation",
+        "Velocity Profiles",
+      ],
     },
     {
       heading: "Week 9",
-      subheading: "Path and Motion Planning",
-      objectives: ["Numerical Methods", "Path Planning"],
+      subheading: "ROS2 Integration",
+      objectives: [
+        "ROS2 CLI",
+        "RViz and RQT",
+        "Rosbag (Record and Replay)",
+        "Docker and Containers",
+        "Gazebo Simulation",
+        "SO-ARM in Docker",
+      ],
     },
     {
       heading: "Week 10",
-      subheading: "ROS and Robotics Softwares",
-      objectives: ["ROS2", "Docker"],
+      subheading: "Final Showcase",
+      objectives: [
+        "Live SO-ARM Demos",
+        "Full Software Stack Demonstration",
+        "Team Presentations",
+      ],
     },
   ];
 
