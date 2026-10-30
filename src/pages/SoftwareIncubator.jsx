@@ -106,48 +106,48 @@ const SoftwareIncubator = () => {
         "PID Controllers",
         "PID Tuning",
         "Feedforward Control",
-        "LQR"
+        "LQR",
       ],
     },
     {
       heading: "Week 7",
       subheading: "Sensors, Filtering, and State Estimation",
       objectives: [
-        "Filter Types", 
-        "Low-Pass/IIR Filters", 
+        "Filter Types",
+        "Low-Pass/IIR Filters",
         "Kalman Filter",
-        "State Estimation"
+        "State Estimation",
       ],
     },
     {
       heading: "Week 8",
       subheading: "Motion Planning and Decision Making",
       objectives: [
-        "A* Path Planning", 
+        "A* Path Planning",
         "RRT/RRT*",
         "Trajectory Generation",
-        "Velocity Profiles"
+        "Velocity Profiles",
       ],
     },
     {
       heading: "Week 9",
       subheading: "ROS2 Integration",
       objectives: [
-        "ROS2 CLI", 
+        "ROS2 CLI",
         "RViz and RQT",
         "Rosbag (Record and Replay)",
         "Docker and Containers",
         "Gazebo Simulation",
-        "SO-ARM in Docker"
+        "SO-ARM in Docker",
       ],
     },
     {
       heading: "Week 10",
       subheading: "Final Showcase",
       objectives: [
-        "Live SO-ARM Demos", 
+        "Live SO-ARM Demos",
         "Full Software Stack Demonstration",
-        "Team Presentations"
+        "Team Presentations",
       ],
     },
   ];
