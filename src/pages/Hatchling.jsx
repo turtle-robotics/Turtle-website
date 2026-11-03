@@ -364,8 +364,12 @@ const Hatchling = () => {
                         Week 5: C++ Intro and Design Review
                       </option>
                       <option value="6">Week 6: SolidWorks Assembly</option>
-                      <option value="7">Week 7: Programming and Git GitHub</option>
-                      <option value="8">Week 8: Electronics and Soldering</option>
+                      <option value="7">
+                        Week 7: Programming and Git GitHub
+                      </option>
+                      <option value="8">
+                        Week 8: Electronics and Soldering
+                      </option>
                     </select>
 
                     <a
