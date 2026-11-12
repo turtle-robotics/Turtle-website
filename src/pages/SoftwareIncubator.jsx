@@ -15,6 +15,8 @@ const SoftwareIncubator = () => {
     5: "/pdfs/Week5_SO_ARM_Embedded_Systems_Hardware_Interfaces.pptx.pdf",
     6: "/pdfs/Week6_Control_Systems.pptx.pdf",
     7: "/pdfs/Week7_Filtering.pptx.pdf",
+    8: "/pdfs/Week8_Motion_Planning_and_Decision_Making.pdf",
+    9: "/pdfs/Week9_ROS2_Integration.pdf",
   };
 
   const learningObjectiveGroups = [
@@ -259,6 +261,10 @@ const SoftwareIncubator = () => {
                 </option>
                 <option value="6">Week 6: Control Systems</option>
                 <option value="7">Week 7: Filtering</option>
+                <option value="8">
+                  Week 8: Motion Planning and Decision Making
+                </option>
+                <option value="9">Week 9: ROS2 Integration</option>
               </select>
 
               {selectedWeek && (
