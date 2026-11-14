@@ -86,7 +86,7 @@ function Showcase() {
 
       <Hero
         heading="TURTLE SHOWCASE"
-        backgroundImage="/assets/GeneralPhotos/Showcase.png"
+        backgroundImage="/assets/GeneralPhotos/Showcase.webp"
         backgroundAltText="TURTLE Project Showcase"
       >
         <div className="px-4">
