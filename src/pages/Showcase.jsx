@@ -247,8 +247,10 @@ function Showcase() {
                   </span>
                 </summary>
                 <p className="mt-4 text-gray-400 font-light leading-relaxed">
-                  The ConocoPhillips Atrium is located on the second floor on the North Side of Zachery where it is also the ground level.
-                  It is near the starbucks and is the area just inside the doors that exit to the Plaza.
+                  The ConocoPhillips Atrium is located on the second floor 
+                  on the North Side of Zachery where it is also the ground level.
+                  It is near the starbucks and is the area just 
+                  inside the doors that exit to the Plaza.
                 </p>
               </details>
             )}
