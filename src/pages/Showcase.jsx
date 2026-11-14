@@ -3,8 +3,8 @@ import Hero from "../components/Hero";
 import PageSection from "../components/PageSection";
 import TextLink from "../components/TextLink";
 
-const ENABLE_SHOWCASE_COUNTDOWN = false;
-const ENABLE_SHOWCASE_MAP = false;
+const ENABLE_SHOWCASE_COUNTDOWN = true;
+const ENABLE_SHOWCASE_MAP = true;
 
 function Showcase() {
   const [timeLeft, setTimeLeft] = useState({
@@ -18,8 +18,8 @@ function Showcase() {
   useEffect(() => {
     // Local time: Nov 21, 2025 at 1 PM
     const showcaseYear = 2026;
-    const showcaseMonth = 3; // April (0-indexed)
-    const showcaseDay = 17;
+    const showcaseMonth = 10; // April (0-indexed)
+    const showcaseDay = 20;
     const showcaseHour = 13;
     const showcaseMinute = 0;
     const showcaseSecond = 0;
@@ -93,7 +93,7 @@ function Showcase() {
           {ENABLE_SHOWCASE_COUNTDOWN ? (
             <>
               <p className="inline-block text-2xl sm:text-3xl md:text-4xl font-light text-yellow-400 mb-4 px-3 py-1 bg-black/70 rounded-lg drop-shadow-lg">
-                April 17, 2026
+                Nov 20, 2026
               </p>
 
               <p className="text-xl sm:text-2xl md:text-3xl font-light text-white mb-4 drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
@@ -126,7 +126,7 @@ function Showcase() {
                   rel="noopener noreferrer"
                   className="hover:text-yellow-300 transition-colors underline decoration-yellow-400"
                 >
-                  Zachry Engineering Education Complex, Virginia C Brown Atrium
+                  Zachry Engineering Education Complex, Conoco Phillips Atrium
                 </a>
               </p>
 
@@ -163,7 +163,7 @@ function Showcase() {
       {ENABLE_SHOWCASE_MAP && (
         <PageSection heading="PROJECT BOOTH MAP">
           <div className="mapSVG">
-            <img src="/assets/ShowcaseMap.svg" alt="" />
+            <img src="/assets/ShowcaseMap.png" alt="" />
           </div>
         </PageSection>
       )}
@@ -229,7 +229,7 @@ function Showcase() {
             {ENABLE_SHOWCASE_COUNTDOWN && (
               <details className="group bg-gradient-to-br from-gray-700 to-gray-600 rounded-2xl p-6 cursor-pointer">
                 <summary className="flex justify-between items-center font-light text-xl text-gray-200 list-none">
-                  <span>Where is the Virginia Brown Atrium?</span>
+                  <span>Where is the Conoco Philips Atrium?</span>
                   <span className="transition group-open:rotate-180">
                     <svg
                       className="w-6 h-6"
@@ -247,8 +247,10 @@ function Showcase() {
                   </span>
                 </summary>
                 <p className="mt-4 text-gray-400 font-light leading-relaxed">
-                  This is the seating area just inside the first floor Zachry
-                  entrance, across from the E-Quad.
+                  The ConocoPhillips Atrium is located on the second floor on
+                  the North Side of Zachery where it is also the ground level.
+                  It is near the starbucks and is the area just inside the doors
+                  that exit to the Plaza.
                 </p>
               </details>
             )}
