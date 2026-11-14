@@ -4,7 +4,7 @@ import PageSection from "../components/PageSection";
 import TextLink from "../components/TextLink";
 
 const ENABLE_SHOWCASE_COUNTDOWN = true;
-const ENABLE_SHOWCASE_MAP = false;
+const ENABLE_SHOWCASE_MAP = true;
 
 function Showcase() {
   const [timeLeft, setTimeLeft] = useState({
@@ -163,7 +163,7 @@ function Showcase() {
       {ENABLE_SHOWCASE_MAP && (
         <PageSection heading="PROJECT BOOTH MAP">
           <div className="mapSVG">
-            <img src="/assets/ShowcaseMap.svg" alt="" />
+            <img src="/assets/ShowcaseMap.png" alt="" />
           </div>
         </PageSection>
       )}
