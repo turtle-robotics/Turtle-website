@@ -127,7 +127,7 @@ export const projects = [
       "C++",
     ],
     status: "Active",
-    duration: "Fall 2025",
+    duration: "Spring 2025",
     lead: "Vincent Hoefler",
     leadEmail: "vincenthoefler@tamu.edu",
     goals: [
@@ -205,7 +205,7 @@ export const projects = [
       "Python",
     ],
     status: "Active",
-    duration: "Fall 2025",
+    duration: "Fall 2024",
     lead: "Jonathon Foltyn",
     leadEmail: "jonathonfoltyn@tamu.edu",
     goals: [
@@ -238,7 +238,7 @@ export const projects = [
     category: "Competition Robotics",
     tags: ["Combat", "CAD", "Manufacturing", "Electronics", "Testing"],
     status: "Active",
-    duration: "Fall 2025",
+    duration: "Fall 2019",
     lead: "Kian Dunkin",
     leadEmail: "kian.dunkin@tamu.edu",
     goals: [
@@ -313,7 +313,7 @@ export const projects = [
     category: "Aerial Robotics",
     tags: ["UAV", "Swarm", "SLAM", "Unity", "ROS2", "OpenCV"],
     status: "Active",
-    duration: "Fall 2025",
+    duration: "Spring 2024",
     lead: "Chris Ambroziak",
     leadEmail: "cambroziak_01@tamu.edu",
     goals: [
@@ -426,7 +426,7 @@ export const projects = [
     category: "Automation",
     tags: ["Automation", "Aeroponics", "PCB", "Controls", "IoT", "Mechanical"],
     status: "Active",
-    duration: "Fall 2025",
+    duration: "Fall 2020",
     lead: "Jordan Durst",
     leadEmail: "jordandurst@tamu.edu",
     goals: [
@@ -498,7 +498,7 @@ export const projects = [
     category: "Autonomy",
     tags: ["Lidar", "Path Planning", "ROS2", "C++", "Kinematics", "Autonomy"],
     status: "Active",
-    duration: "Fall 2025",
+    duration: "Fall 2021",
     lead: "David Boosi",
     leadEmail: "djb2005@tamu.edu",
     goals: [
@@ -532,7 +532,7 @@ export const projects = [
     category: "Biomedical Robotics",
     tags: ["Prosthetics", "EMG", "Biomedical", "CAD", "Embedded"],
     status: "Active",
-    duration: "Fall 2025",
+    duration: "Fall 2023",
     lead: "Will McGarity",
     leadEmail: "wmgarity777@tamu.edu",
     goals: [
@@ -609,7 +609,7 @@ export const projects = [
       "CAD",
     ],
     status: "Active",
-    duration: "Fall 2025",
+    duration: "Fall 2022",
     lead: "Isaac Cabello",
     leadEmail: "isaac.cabello@tamu.edu",
     goals: [
@@ -910,7 +910,7 @@ export const projects = [
       "Embedded",
     ],
     status: "Active",
-    duration: "Fall 2025",
+    duration: "Spring 2024",
     lead: "Justin Simms",
     leadEmail: "JustinBSimms@tamu.edu",
     goals: [
