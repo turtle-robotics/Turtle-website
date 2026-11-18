@@ -12,7 +12,7 @@ const DevelopmentPrograms = () => {
       description:
         "Our premier development program that introduces foundational technical, soft, and engineering skills.",
       link: "/hatchling",
-      image: "/assets/hatchling_development.JPG",
+      image: "/assets/hatchling_development.webp",
     },
     {
       id: "software-incubator",
@@ -42,7 +42,7 @@ const DevelopmentPrograms = () => {
       description:
         "A two-credit-hour course developed by TURTLE in collaboration with Dr. Fletcher and the College of Engineering. TURTLE staffs and teaches the lab component of the course.",
       link: "https://tamu.simplesyllabus.com/en-US/doc/ggfzklxi2",
-      image: "/assets/engr-289-picture.jpg",
+      image: "/assets/engr-289-picture.webp",
       ctaLabel: "View Course Syllabus",
       externalLink: true,
     },

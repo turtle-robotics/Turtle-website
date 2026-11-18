@@ -229,9 +229,9 @@ const Hatchling = () => {
             images={[
               "/assets/20250427_202459_BFD66E.JPEG",
               "/assets/20250426_155351.jpg",
-              "/assets/image_2025-09-30_002708253.png",
-              "/assets/image_2025-09-30_002910095.png",
-              "/assets/image_2025-09-30_002458601.png",
+              "/assets/image_2025-09-30_002708253.webp",
+              "/assets/image_2025-09-30_002910095.webp",
+              "/assets/image_2025-09-30_002458601.webp",
             ]}
             autoPlay={false}
             intervalMs={4000}
