@@ -8,6 +8,7 @@ const Apply = () => {
   const developmentApplicationOpen = false;
   const committeeApplicationOpen = false;
   const officerApplicationOpen = true;
+  const projectProposalOpen = true;
 
   return (
     <div className="min-h-screen">
@@ -46,6 +47,15 @@ const Apply = () => {
               to="https://docs.google.com/forms/d/1PQsyoWRY3tVGwb7-I83IAPAjMVmF4iemAV1Mteig2rY/viewform?edit_requested=true&pli=1"
             >
               Officer Application
+            </ButtonLink>
+          )}
+
+          {projectProposalOpen && (
+            <ButtonLink
+              sizeVariant="large"
+              to="https://docs.google.com/forms/d/e/1FAIpQLSeiSaLPL3sjMt7jMLc0hvybBa4DNDwlj7Ni1pnouciFAmtwEQ/viewform?usp=sharing&ouid=108935124837760011089"
+            >
+              Project Proposal Application
             </ButtonLink>
           )}
         </div>
