@@ -1,7 +1,44 @@
+import { useEffect, useState } from "react";
+
+function HeroVideo({ src, poster }) {
+  const [canLoad, setCanLoad] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [hasError, setHasError] = useState(false);
+
+  useEffect(() => {
+    const enableVideo = () => setCanLoad(true);
+    if (document.readyState === "complete") {
+      enableVideo();
+    } else {
+      window.addEventListener("load", enableVideo, { once: true });
+    }
+    return () => window.removeEventListener("load", enableVideo);
+  }, []);
+
+  if (!canLoad || hasError) return null;
+
+  return (
+    <video
+      src={src}
+      poster={poster}
+      autoPlay
+      muted
+      loop
+      playsInline
+      preload="none"
+      aria-hidden="true"
+      onPlaying={() => setIsPlaying(true)}
+      onError={() => setHasError(true)}
+      className={`absolute inset-0 w-full h-full object-cover object-center brightness-50 z-0 pointer-events-none ${isPlaying ? "opacity-100" : "opacity-0"}`}
+    />
+  );
+}
+
 export default function Hero({
   heading,
   subheading,
   backgroundImage,
+  backgroundVideo,
   backgroundAltText,
   children,
 }) {
@@ -22,9 +59,17 @@ export default function Hero({
             alt={backgroundAltText}
             className="absolute inset-0 w-full h-full object-cover object-center brightness-50 z-0"
           />
-          {/* Image overlay for better text contrast */}
-          <div className="absolute inset-0 bg-black/25 z-0"></div>{" "}
         </>
+      )}
+      {backgroundVideo && (
+        <HeroVideo
+          key={backgroundVideo}
+          src={backgroundVideo}
+          poster={backgroundImage}
+        />
+      )}
+      {(backgroundImage || backgroundVideo) && (
+        <div className="absolute inset-0 bg-black/25 z-0" />
       )}
 
       <div className="relative text-center max-w-6xl mx-auto z-10">
