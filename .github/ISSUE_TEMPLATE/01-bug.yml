@@ -1,0 +1,51 @@
+name: Bug report
+description: Report a problem with the website
+labels:
+  - bug
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: Describe the problem. Write what happens and what you see.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Write the steps that show the problem. Start each step on a new line.
+      placeholder: |
+        1. Go to '...'
+        2. Click '...'
+        3. See the error
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+      description: Describe what you expected to see.
+    validations:
+      required: true
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots or recordings
+      description: Add images or videos that show the problem. This field is optional.
+    validations:
+      required: false
+  - type: input
+    id: browser-device
+    attributes:
+      label: Browser and device
+      description: Write your browser, operating system, and device. For example, Chrome 130, macOS 15, MacBook Pro.
+    validations:
+      required: false
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional information
+      description: Add other information about the problem. This field is optional.
+    validations:
+      required: false

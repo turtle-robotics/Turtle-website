@@ -1,0 +1,45 @@
+name: Content change
+description: Request a change to website content
+labels:
+  - content
+body:
+  - type: dropdown
+    id: change-type
+    attributes:
+      label: Change type
+      description: Select the type of change.
+      options:
+        - Add content
+        - Update content
+        - Remove content
+        - Correct content
+    validations:
+      required: true
+  - type: input
+    id: page
+    attributes:
+      label: Page or section
+      description: Write the page or section that the change affects. For example, Home page, Hero section.
+    validations:
+      required: true
+  - type: textarea
+    id: change
+    attributes:
+      label: Requested change
+      description: Describe the content change that you want.
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Source information
+      description: Add sources or references for the content. This field is optional.
+    validations:
+      required: false
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional information
+      description: Add other information about the request. This field is optional.
+    validations:
+      required: false
