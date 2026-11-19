@@ -37,7 +37,7 @@ const Apply = () => {
               to="https://docs.google.com/forms/d/1PQsyoWRY3tVGwb7-I83IAPAjMVmF4iemAV1Mteig2rY/viewform?edit_requested=true&pli=1"
             >
               Officer Application
-            </ButtonLink>
+            </ButtonLink> 
           </div>
         )}
       </Hero>
