@@ -5,6 +5,9 @@ import PageSection from "../components/PageSection";
 const Apply = () => {
   // ✅ Toggle this to open/close applications
   const applicationsOpen = true; // change to false when closed
+  const developmentApplicationOpen = false;
+  const committeeApplicationOpen = false;
+  const officerApplicationOpen = true;
 
   return (
     <div className="min-h-screen">
@@ -18,28 +21,34 @@ const Apply = () => {
         backgroundImage="/assets/GeneralPhotos/ApplyNowJpg.webp"
         backgroundAltTextalt="Apply Now Background"
       >
-        {applicationsOpen && (
-          <div className="flex flex-wrap justify-center gap-4">
+        <div className="flex flex-wrap justify-center gap-4">
+          {developmentApplicationOpen && (
             <ButtonLink
               sizeVariant="large"
               to="https://forms.gle/FUYAjP4x9Zbi1EdG6"
             >
               Development Program & R&D Project Application
             </ButtonLink>
+          )}
+
+          {committeeApplicationOpen && (
             <ButtonLink
               sizeVariant="large"
               to="https://forms.gle/wG98E3r7QfcQbbfS7"
             >
               Committee Application
             </ButtonLink>
+          )}
+
+          {officerApplicationOpen && (
             <ButtonLink
               sizeVariant="large"
               to="https://docs.google.com/forms/d/1PQsyoWRY3tVGwb7-I83IAPAjMVmF4iemAV1Mteig2rY/viewform?edit_requested=true&pli=1"
             >
               Officer Application
             </ButtonLink>
-          </div>
-        )}
+          )}
+        </div>
       </Hero>
 
       {/* Application Process */}
