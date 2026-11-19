@@ -5,7 +5,7 @@ import PageSection from "../components/PageSection";
 const Apply = () => {
   // ✅ Toggle this to open/close applications
   const applicationsOpen = true; // change to false when closed
-  const developmentApplicationOpen = true;
+  const developmentApplicationOpen = false;
   const committeeApplicationOpen = false;
   const officerApplicationOpen = true;
 
