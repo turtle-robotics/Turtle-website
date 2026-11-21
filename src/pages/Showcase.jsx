@@ -3,8 +3,8 @@ import Hero from "../components/Hero";
 import PageSection from "../components/PageSection";
 import TextLink from "../components/TextLink";
 
-const ENABLE_SHOWCASE_COUNTDOWN = true;
-const ENABLE_SHOWCASE_MAP = true;
+const ENABLE_SHOWCASE_COUNTDOWN = false;
+const ENABLE_SHOWCASE_MAP = false;
 
 function Showcase() {
   const [timeLeft, setTimeLeft] = useState({
