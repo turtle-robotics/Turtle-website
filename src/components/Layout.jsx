@@ -1,14 +1,19 @@
 import { Link, useLocation } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import Footer from "./Footer";
 import ButtonLink from "./ButtonLink";
 import { Analytics } from "@vercel/analytics/react";
 import Banner from "./Banner";
-
+import AnnouncementModal from "./AnnouncementModal";
+import announcement from "../data/announcement";
+const hasAnnouncement = Boolean(announcement?.enabled);
 const Layout = ({ children }) => {
   const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [showSiteBanner, setShowSiteBanner] = useState(false);
+  const [showSiteBanner, setShowSiteBanner] = useState(hasAnnouncement);
+  const [showDetails, setShowDetails] = useState(false);
+  const bannerRef = useRef(null);
+  const [bannerHeight, setBannerHeight] = useState(0);
 
   // Scroll to top when location changes
   useEffect(() => {
@@ -42,34 +47,68 @@ const Layout = ({ children }) => {
 
   useEffect(() => {
     setMobileMenuOpen(false);
+    setShowDetails(false);
   }, [location.pathname]);
+
+  useEffect(() => {
+    const el = bannerRef.current;
+    if (!el) return;
+    const update = () => setBannerHeight(el.offsetHeight);
+    update();
+    const observer = new ResizeObserver(update);
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [showSiteBanner]);
 
   const handleDismissBanner = () => {
     setShowSiteBanner(false);
   };
+  const closeDetails = useCallback(() => setShowDetails(false), []);
 
-  const navTopClass = showSiteBanner ? "top-12" : "top-0";
-  const mainTopPaddingClass = showSiteBanner ? "pt-32" : "pt-16";
+  const bannerOffset = showSiteBanner ? bannerHeight : 0;
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
       <Analytics />
 
-      {showSiteBanner && (
-        <Banner style="primary" onClose={handleDismissBanner}>
-          See our 21 projects at Showcase on 4/17 in ZACH{" "}
-          <Link
-            to="/showcase"
-            className={`text-black hover:text-white underline`}
-          >
-            click here for more information
-          </Link>
+      {showSiteBanner && hasAnnouncement && (
+        <Banner
+          ref={bannerRef}
+          style="primary"
+          onClose={handleDismissBanner}
+          onDetails={
+            announcement.details ? () => setShowDetails(true) : undefined
+          }
+        >
+          {announcement.message}
         </Banner>
+      )}
+
+      {hasAnnouncement && announcement?.details && (
+        <AnnouncementModal
+          open={showDetails}
+          onClose={closeDetails}
+          title={announcement.details.title}
+        >
+          {announcement.details.body.map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
+          {announcement.details.link && (
+            <ButtonLink
+              to={announcement.details.link.to}
+              style="primary"
+              sizeVariant="small"
+            >
+              {announcement.details.link.label}
+            </ButtonLink>
+          )}
+        </AnnouncementModal>
       )}
 
       {/* Navigation */}
       <nav
-        className={`fixed ${navTopClass} left-0 right-0 z-50 bg-gray-900/90 backdrop-blur-xl border-b border-gray-700/50 shadow-sm`}
+        className="fixed left-0 right-0 z-50 bg-gray-900/90 backdrop-blur-xl border-b border-gray-700/50 shadow-sm"
+        style={{ top: bannerOffset }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex min-h-16 items-center justify-between gap-4">
@@ -238,7 +277,12 @@ const Layout = ({ children }) => {
       </nav>
 
       {/* Main Content */}
-      <main className={`${mainTopPaddingClass} pb-0 md:pb-0`}>{children}</main>
+      <main
+        className="pb-0 md:pb-0"
+        style={{ paddingTop: `calc(4rem + ${bannerOffset}px)` }}
+      >
+        {children}
+      </main>
 
       {/* Footer */}
       <Footer />
