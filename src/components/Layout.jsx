@@ -6,11 +6,11 @@ import { Analytics } from "@vercel/analytics/react";
 import Banner from "./Banner";
 import AnnouncementModal from "./AnnouncementModal";
 import announcement from "../data/announcement";
-
+const hasAnnouncement = Boolean(announcement?.enabled);
 const Layout = ({ children }) => {
   const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [showSiteBanner, setShowSiteBanner] = useState(true); // State to control the visibility of the site banner
+  const [showSiteBanner, setShowSiteBanner] = useState(hasAnnouncement);
   const [showDetails, setShowDetails] = useState(false);
   const bannerRef = useRef(null);
   const [bannerHeight, setBannerHeight] = useState(0);
@@ -71,7 +71,7 @@ const Layout = ({ children }) => {
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
       <Analytics />
 
-      {showSiteBanner && announcement && (
+      {showSiteBanner && hasAnnouncement && (
         <Banner
           ref={bannerRef}
           style="primary"
@@ -84,7 +84,7 @@ const Layout = ({ children }) => {
         </Banner>
       )}
 
-      {announcement?.details && (
+      {hasAnnouncement && announcement?.details && (
         <AnnouncementModal
           open={showDetails}
           onClose={closeDetails}

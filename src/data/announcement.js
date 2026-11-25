@@ -1,6 +1,8 @@
-// Set this to `null` to hide the site banner completely.
+// To show the site banner, set `enabled` to true and edit the text below.
+// To hide it, set `enabled` to false. The text can stay in the file.
 const announcement = {
-  message: "Congrats to a Amazing Fall 2026 semester!",
+  enabled: false,
+  message: "Announcement banner text goes here",
   details: {
     title: "Announcement title goes here",
     body: [
