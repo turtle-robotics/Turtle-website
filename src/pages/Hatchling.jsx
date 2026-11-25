@@ -4,9 +4,6 @@ import ButtonLink from "../components/ButtonLink";
 import Hero from "../components/Hero";
 import PageSection from "../components/PageSection";
 
-// Placeholder for video source
-const heroVideo = "";
-
 const Hatchling = () => {
   // Check localStorage for slides visibility
   const [slidesVisible, setSlidesVisible] = useState(() => {
@@ -167,7 +164,6 @@ const Hatchling = () => {
   return (
     <div className="min-h-screen">
       <Hero
-        backgroundVideo={heroVideo}
         heading="HATCHLING DEVELOPMENT PROGRAM"
         subheading="Founded 2015 • External Expansion 2025"
         backgroundImage="/assets/GeneralPhotos/Fall_2025_CSTAT_Hatchling_Group_Photo.webp"

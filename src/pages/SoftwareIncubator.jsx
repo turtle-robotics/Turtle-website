@@ -4,9 +4,6 @@ import TextLink from "../components/TextLink";
 import Hero from "../components/Hero";
 import PageSection from "../components/PageSection";
 
-// Placeholder for video source
-const heroVideo = "";
-
 const SoftwareIncubator = () => {
   const [selectedWeek, setSelectedWeek] = useState("");
 
@@ -160,7 +157,6 @@ const SoftwareIncubator = () => {
   return (
     <div className="min-h-screen">
       <Hero
-        backgroundVideo={heroVideo}
         heading="SOFTWARE INCUBATOR PROGRAM"
         subheading="Founded Fall 2026"
         backgroundImage="/assets/GeneralPhotos/Fall_2025_CSTAT_Hatchling_Group_Photo.webp"
